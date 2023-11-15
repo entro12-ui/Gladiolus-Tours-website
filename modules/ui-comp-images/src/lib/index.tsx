@@ -1,5 +1,5 @@
 import Image0 from './images/buffalo.webp';
-import Image1 from './images/cave_lion.webp.webp';
+import Image1 from './images/cave_lion.webp';
 import Image2 from './images/buffalo_grass.webp';
 import Image3 from './images/cheetah.webp';
 import Image4 from './images/elephant.webp';
