@@ -1,0 +1,31 @@
+import { UiGladiolusToursLayoutWebsite } from '@gladiolus/ui-layout-gladiolus';
+import { Outlet } from 'react-router-dom';
+import { GtToursRoute } from '@gladiolus/ui-routes-gladiolus';
+
+const CommonLayoutChildren = () => {
+  return <Outlet />;
+};
+
+const WebsiteLayout = () => {
+  return (
+    <UiGladiolusToursLayoutWebsite>
+      <CommonLayoutChildren />
+    </UiGladiolusToursLayoutWebsite>
+  );
+};
+
+const EmptyLayout = () => {
+  return <Outlet />;
+};
+
+export const GLADIOLUS_TOURS_ROUTE_TABLE = [
+  {
+    element: <WebsiteLayout />,
+    children: [
+      {
+        path: GtToursRoute.Safaris,
+        element: <EmptyLayout />,
+      },
+    ],
+  },
+];
