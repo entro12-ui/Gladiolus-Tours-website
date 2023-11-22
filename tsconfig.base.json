@@ -18,6 +18,9 @@
       "@gladiolus/ui-layout-gladiolus": [
         "modules/ui-layout-gladiolus/src/index.ts"
       ],
+      "@gladiolus/ui-router-gladiolus": [
+        "modules/ui-router-gladiolus/src/index.ts"
+      ],
       "@gladiolus/ui-routes-gladiolus": [
         "modules/ui-routes-gladiolus/src/index.ts"
       ]
