@@ -9,7 +9,7 @@ describe('App', () => {
   });
 
   it('should have a greeting as the title', () => {
-    const { getByText } = render(<App />);
-    expect(getByText(/Welcome gladiolus/gi)).toBeTruthy();
+    const { findByText } = render(<App />);
+    expect(findByText(/Gladiolus Tours/gi)).toBeTruthy();
   });
 });
