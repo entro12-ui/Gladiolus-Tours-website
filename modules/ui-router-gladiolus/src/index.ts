@@ -1,1 +1,1 @@
-export * from './lib/router';
+export { UiRouterGladiolusTours } from './lib/router';
