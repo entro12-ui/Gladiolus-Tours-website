@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Navbar } from './navbar';
+import { LandingPage } from './landing-page';
 
 interface Props {
   children: ReactNode;
@@ -7,9 +7,9 @@ interface Props {
 
 export const UiGladiolusToursLayoutWebsite = ({ children }: Props) => {
   return (
-    <div className={'min-h-screen max-h-screen overflow-hidden'}>
-      <div className="lg:pl-20">
-        <Navbar />
+    <div>
+      <div>
+        <LandingPage />
         {children}
       </div>
     </div>
