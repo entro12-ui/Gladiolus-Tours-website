@@ -1,12 +1,9 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
+import {UiLayout} from "@gladiolus/ui-layout-gladiolus";
 
-import NxWelcome from './nx-welcome';
-
-export function App() {
+export const App = () => {
   return (
     <div>
-      <NxWelcome title="gladiolus" />
+      <UiLayout/>
     </div>
   );
 }

@@ -1,14 +1,6 @@
-import styles from './ui-layout-gladiolus.module.css';
-
-/* eslint-disable-next-line */
-export interface UiLandingPageProps {}
-
-export function Index(props: UiLandingPageProps) {
+export const UiLayout = () => {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiLandingPage!</h1>
-    </div>
+      <h1>Ui Layout</h1>
   );
 }
 
-export default Index;
