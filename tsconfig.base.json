@@ -23,7 +23,8 @@
       ],
       "@gladiolus/ui-routes-gladiolus": [
         "modules/ui-routes-gladiolus/src/index.ts"
-      ]
+      ],
+      "@gladiolus/ui-utils": ["modules/ui-utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
