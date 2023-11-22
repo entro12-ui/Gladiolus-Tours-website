@@ -15,7 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@gladiolus/ui-layout-gladiolus": ["modules/ui-layout-gladiolus/src/index.ts"]
+      "@gladiolus/ui-layout-gladiolus": [
+        "modules/ui-layout-gladiolus/src/index.ts"
+      ],
+      "@gladiolus/ui-routes-gladiolus": [
+        "modules/ui-routes-gladiolus/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
