@@ -25,6 +25,7 @@ export const GLADIOLUS_TOURS_ROUTE_TABLE = [
       {
         path: GtToursRoute.Safaris,
         element: <EmptyLayout />,
+        children: [],
       },
     ],
   },

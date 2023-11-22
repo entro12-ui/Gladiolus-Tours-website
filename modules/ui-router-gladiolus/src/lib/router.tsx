@@ -1,10 +1,16 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { GLADIOLUS_TOURS_ROUTE_TABLE } from './route-table';
+import { getWebsiteBaseHref } from '@gladiolus/ui-utils';
 
-export const UiRouterGladiolusTours = () => {
+export function UiRouterGladiolusTours() {
   const router = createBrowserRouter(GLADIOLUS_TOURS_ROUTE_TABLE, {
-    basename: '',
+    basename: getWebsiteBaseHref(),
   });
 
-  return <RouterProvider router={router} />;
-};
+  return (
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
+  );
+}

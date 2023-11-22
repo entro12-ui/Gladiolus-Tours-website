@@ -1,4 +1,4 @@
-import {ReactNode} from "react";
+import { ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -6,11 +6,9 @@ interface Props {
 
 export const UiGladiolusToursLayoutWebsite = ({ children }: Props) => {
   return (
-      <div className={"min-h-screen max-h-screen overflow-hidden"}>
-        <div className="lg:pl-20">
-          {children}
-        </div>
-      </div>
+    <div className={'min-h-screen max-h-screen overflow-hidden'}>
+      <h1>Home Page</h1>
+      <div className="lg:pl-20">{children}</div>
+    </div>
   );
-}
-
+};
