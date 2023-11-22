@@ -1,11 +1,5 @@
-import {UiLayout} from "@gladiolus/ui-layout-gladiolus";
+import { UiRouterGladiolusTours } from '@gladiolus/ui-router-gladiolus';
 
-export const App = () => {
-  return (
-    <div>
-      <UiLayout/>
-    </div>
-  );
+export default function App() {
+  return <UiRouterGladiolusTours />;
 }
-
-export default App;
