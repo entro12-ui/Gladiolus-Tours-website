@@ -1,1 +1,1 @@
-export * from './lib/ui-router-gladiolus';
+export * from './lib/index';
