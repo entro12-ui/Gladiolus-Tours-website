@@ -1,7 +1,7 @@
 const DEFAULT_BASE_HREF = '/';
 
 /** the <base .../> tag is set by webpack and defined in the baseHref property of the Nx app's project.json */
-export function getAppBaseHref() {
+export function getWebsiteBaseHref() {
   const baseTags = document.getElementsByTagName('base');
   const baseHref = baseTags.item(0)?.getAttribute('href');
   if (!baseTags || baseTags.length !== 1) {
