@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@loadable/component": "^5.15.3",
     "@swc/helpers": "~0.5.2",
