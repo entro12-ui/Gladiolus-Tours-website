@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@gladiolus/ui-comp-router-lazy-fallback": [
+        "modules/ui-comp-router-lazy-fallback/src/index.ts"
+      ],
       "@gladiolus/ui-layout-gladiolus": [
         "modules/ui-layout-gladiolus/src/index.ts"
       ],
