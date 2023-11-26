@@ -18,6 +18,9 @@
       "@gladiolus/ui-layout-gladiolus": [
         "modules/ui-layout-gladiolus/src/index.ts"
       ],
+      "@gladiolus/ui-page-gladiolus-tours-error-404": [
+        "modules/ui-page-gladiolus-tours-error-404/src/index.ts"
+      ],
       "@gladiolus/ui-router-gladiolus": [
         "modules/ui-router-gladiolus/src/index.ts"
       ],
