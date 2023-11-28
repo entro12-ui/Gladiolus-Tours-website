@@ -1,4 +1,4 @@
-export const GladiolusToursErrorNotFoundPage = () => {
+export default function GladiolusToursErrorNotFoundPage() {
   return (
     <>
       {/*
@@ -32,4 +32,4 @@ export const GladiolusToursErrorNotFoundPage = () => {
       </main>
     </>
   );
-};
+}
