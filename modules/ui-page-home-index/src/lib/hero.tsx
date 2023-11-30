@@ -1,15 +1,10 @@
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import Splash from '../../../../src/assets/Internet/ngorongoro_zebra.jpg';
+import { GladiolusToursImage } from '@gladiolus/ui-comp-images';
 
 export const MainHero = () => {
   return (
     <div className="bg-white-900">
       <div className="relative isolate overflow-hidden pt-14">
-        <img
-          src={Splash}
-          alt={'Gladiolus Tours'}
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
-        />
+        <GladiolusToursImage className="absolute inset-0 -z-10 h-full w-full object-cover" />
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
