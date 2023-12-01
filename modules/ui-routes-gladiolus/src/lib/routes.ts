@@ -4,11 +4,12 @@ export enum GtToursRouteParam {
   SafariId = 'safariId',
 }
 export enum GtToursRoute {
-  HomePage = '/',
+  Home = '/',
   AboutUs = '/about-us',
   Destinations = '/destinations',
   Safaris = '/safaris',
   Accommodation = '/accommodation',
+  itineraries = '/itineraries',
   Contact = '/contact',
   NotFound = '/404',
 }

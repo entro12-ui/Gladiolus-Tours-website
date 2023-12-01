@@ -16,7 +16,7 @@ export const GladiolusToursErrorNotFoundPage = () => {
         </p>
         <div className="mt-10">
           <Link
-            to={generatePath(GtToursRoute.HomePage)}
+            to={generatePath(GtToursRoute.Home)}
             className="text-sm font-semibold leading-7 text-indigo-600"
           >
             <span aria-hidden="true">&larr;</span> Back to home
