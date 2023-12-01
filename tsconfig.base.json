@@ -30,6 +30,9 @@
       "@gladiolus/ui-page-gladiolus-tours-error-404": [
         "modules/ui-page-gladiolus-tours-error-404/src/index.ts"
       ],
+      "@gladiolus/ui-page-home-index": [
+        "modules/ui-page-home-index/src/index.ts"
+      ],
       "@gladiolus/ui-router-gladiolus": [
         "modules/ui-router-gladiolus/src/index.ts"
       ],
