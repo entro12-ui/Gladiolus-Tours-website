@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@gladiolus/ui-comp-banner": ["modules/ui-comp-banner/src/index.ts"],
       "@gladiolus/ui-comp-page-helmet": [
         "modules/ui-comp-page-helmet/src/index.ts"
       ],
