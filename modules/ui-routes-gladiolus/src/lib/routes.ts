@@ -8,7 +8,7 @@ export enum GtToursRoute {
   AboutUs = '/about-us',
   Destinations = '/destinations',
   Safaris = '/safaris',
-  Accommodation = '/accommodation',
+  Accommodation = '/accommodation-activities',
   itineraries = '/itineraries',
   Contact = '/contact',
   NotFound = '/404',
