@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-scroll-to-top';
+export * from './lib/index';
