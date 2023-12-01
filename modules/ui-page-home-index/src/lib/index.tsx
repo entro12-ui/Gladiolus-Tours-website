@@ -1,6 +1,6 @@
 import { EntryPageHelmet } from '@gladiolus/ui-comp-page-helmet';
 
-export const PublicLandingPage = () => {
+export const GladiolusLandingPage = () => {
   return (
     <div className="bg-white">
       <EntryPageHelmet title={'Home'} />
