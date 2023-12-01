@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-page-helmet';
+export * from './lib/index';
