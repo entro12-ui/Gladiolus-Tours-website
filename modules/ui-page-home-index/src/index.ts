@@ -1,1 +1,1 @@
-export * from './lib/ui-page-home-index';
+export * from './lib/index';
