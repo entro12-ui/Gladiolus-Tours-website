@@ -2,15 +2,13 @@ import { UiGladiolusToursLayoutWebsite } from '@gladiolus/ui-layout-gladiolus';
 import { Outlet } from 'react-router-dom';
 import { GtToursRoute } from '@gladiolus/ui-routes-gladiolus';
 import { LazyErrorNotFoundPage } from './lazy-pages';
-
-const CommonLayoutChildren = () => {
-  return <Outlet />;
-};
+import { ScrollToTop } from '@gladiolus/ui-comp-scroll-to-top';
 
 const WebsiteLayout = () => {
   return (
     <UiGladiolusToursLayoutWebsite>
-      <CommonLayoutChildren />
+      <ScrollToTop />
+      <Outlet />
     </UiGladiolusToursLayoutWebsite>
   );
 };
