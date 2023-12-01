@@ -4,7 +4,7 @@ import { GtToursRoute } from '@gladiolus/ui-routes-gladiolus';
 import { LazyErrorNotFoundPage } from './lazy-pages';
 import { ScrollToTop } from '@gladiolus/ui-comp-scroll-to-top';
 
-const WebsiteLayout = () => {
+const TopLevelWebsiteLayout = () => {
   return (
     <UiGladiolusToursLayoutWebsite>
       <ScrollToTop />
@@ -19,7 +19,7 @@ const EmptyLayout = () => {
 
 export const GLADIOLUS_TOURS_ROUTE_TABLE = [
   {
-    element: <WebsiteLayout />,
+    element: <TopLevelWebsiteLayout />,
     children: [
       {
         path: GtToursRoute.HomePage,
