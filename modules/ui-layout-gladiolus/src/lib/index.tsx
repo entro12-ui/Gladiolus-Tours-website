@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
-import { LandingPage } from './landing-page';
+import { GladiolusHeader } from './navbar';
+import { GladiolusFooter } from './footer';
 
 interface Props {
   children: ReactNode;
@@ -7,11 +8,10 @@ interface Props {
 
 export const UiGladiolusToursLayoutWebsite = ({ children }: Props) => {
   return (
-    <div>
-      <div>
-        <LandingPage />
-        {children}
-      </div>
+    <div className="min-h-screen bg-gray-100">
+      <GladiolusHeader />
+      <div className={'min-h-screen'}>{children}</div>
+      <GladiolusFooter />
     </div>
   );
 };
