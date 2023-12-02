@@ -41,6 +41,9 @@
       "@gladiolus/ui-page-home-index": [
         "modules/ui-page-home-index/src/index.ts"
       ],
+      "@gladiolus/ui-page-itineraries": [
+        "modules/ui-page-itineraries/src/index.ts"
+      ],
       "@gladiolus/ui-page-safaris": ["modules/ui-page-safaris/src/index.ts"],
       "@gladiolus/ui-page-services": ["modules/ui-page-services/src/index.ts"],
       "@gladiolus/ui-router-gladiolus": [
