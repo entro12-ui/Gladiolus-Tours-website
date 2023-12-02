@@ -28,6 +28,7 @@
       "@gladiolus/ui-layout-gladiolus": [
         "modules/ui-layout-gladiolus/src/index.ts"
       ],
+      "@gladiolus/ui-page-about-us": ["modules/ui-page-about-us/src/index.ts"],
       "@gladiolus/ui-page-destinations": [
         "modules/ui-page-destinations/src/index.ts"
       ],
