@@ -1,15 +1,16 @@
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
+import { GtToursRoute } from '@gladiolus/ui-routes-gladiolus';
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'Services', href: '#' },
-  { name: 'Destinations', href: '#' },
-  { name: 'About Us', href: '#' },
-  { name: 'Inspiration', href: '#' },
-  { name: 'FAQ', href: '#' },
-  { name: 'Contact Us', href: '#' },
+  { name: 'Home', href: GtToursRoute.Home },
+  { name: 'Services', href: GtToursRoute.Service },
+  { name: 'Safaris', href: GtToursRoute.Safaris },
+  { name: 'Destinations', href: GtToursRoute.Destinations },
+  { name: 'Accommodations', href: GtToursRoute.Accommodation },
+  { name: 'About Us', href: GtToursRoute.AboutUs },
+  { name: 'Contact Us', href: GtToursRoute.Contact },
 ];
 
 export const GladiolusHeader = () => {
