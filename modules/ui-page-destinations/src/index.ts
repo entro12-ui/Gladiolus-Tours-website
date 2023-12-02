@@ -1,1 +1,3 @@
-export * from './lib/ui-page-destinations';
+import { GladiolusDestinations } from './lib/index';
+
+export default GladiolusDestinations;
