@@ -15,3 +15,8 @@ export const LazyServicePage = loadable(
   () => import('@gladiolus/ui-page-services'),
   { fallback: <RouterLazyFallback /> }
 );
+
+export const LazyDestinationsPage = loadable(
+  () => import('@gladiolus/ui-page-destinations'),
+  { fallback: <RouterLazyFallback /> }
+);

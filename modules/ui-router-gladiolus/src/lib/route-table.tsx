@@ -2,6 +2,7 @@ import { UiGladiolusToursLayoutWebsite } from '@gladiolus/ui-layout-gladiolus';
 import { Outlet } from 'react-router-dom';
 import { GtToursRoute } from '@gladiolus/ui-routes-gladiolus';
 import {
+  LazyDestinationsPage,
   LazyErrorNotFoundPage,
   LazyLandingPage,
   LazyServicePage,
@@ -32,12 +33,12 @@ export const GLADIOLUS_TOURS_ROUTE_TABLE = [
         element: <LazyServicePage />,
       },
       {
-        path: GtToursRoute.Safaris,
+        path: GtToursRoute.Destinations,
         index: true,
-        element: <Outlet />,
+        element: <LazyDestinationsPage />,
       },
       {
-        path: GtToursRoute.Destinations,
+        path: GtToursRoute.Safaris,
         index: true,
         element: <Outlet />,
       },
