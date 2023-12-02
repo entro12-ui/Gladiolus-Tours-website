@@ -1,1 +1,3 @@
-export * from './lib/ui-page-contact';
+import { GladiolusToursContactPage } from './lib';
+
+export default GladiolusToursContactPage;
