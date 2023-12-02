@@ -1,1 +1,3 @@
-export * from './lib/ui-page-accomodations';
+import { GladiolusAccommodationsToursPage } from './lib/index';
+
+export default GladiolusAccommodationsToursPage;
