@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@google-cloud/translate": "^8.0.2",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@loadable/component": "^5.15.3",
