@@ -6,6 +6,7 @@ import {
   LazyDestinationsPage,
   LazyErrorNotFoundPage,
   LazyLandingPage,
+  LazySafarisPage,
   LazyServicePage,
 } from './lazy-pages';
 import { ScrollToTop } from '@gladiolus/ui-comp-scroll-to-top';
@@ -46,7 +47,7 @@ export const GLADIOLUS_TOURS_ROUTE_TABLE = [
       {
         path: GtToursRoute.Safaris,
         index: true,
-        element: <Outlet />,
+        element: <LazySafarisPage />,
       },
       {
         path: GtToursRoute.Accommodation,

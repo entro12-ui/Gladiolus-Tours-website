@@ -25,3 +25,8 @@ export const LazyAboutUsPage = loadable(
   () => import('@gladiolus/ui-page-about-us'),
   { fallback: <RouterLazyFallback /> }
 );
+
+export const LazySafarisPage = loadable(
+  () => import('@gladiolus/ui-page-safaris'),
+  { fallback: <RouterLazyFallback /> }
+);
