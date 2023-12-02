@@ -40,3 +40,8 @@ export const LazyItinerariesPage = loadable(
   () => import('@gladiolus/ui-page-itineraries'),
   { fallback: <RouterLazyFallback /> }
 );
+
+export const LazyContactPage = loadable(
+  () => import('@gladiolus/ui-page-contact'),
+  { fallback: <RouterLazyFallback /> }
+);

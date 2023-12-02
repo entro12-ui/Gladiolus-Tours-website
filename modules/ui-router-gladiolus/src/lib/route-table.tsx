@@ -4,6 +4,7 @@ import { GtToursRoute } from '@gladiolus/ui-routes-gladiolus';
 import {
   LazyAboutUsPage,
   LazyAccommodationsPage,
+  LazyContactPage,
   LazyDestinationsPage,
   LazyErrorNotFoundPage,
   LazyItinerariesPage,
@@ -64,7 +65,7 @@ export const GLADIOLUS_TOURS_ROUTE_TABLE = [
       {
         path: GtToursRoute.Contact,
         index: true,
-        element: <Outlet />,
+        element: <LazyContactPage />,
       },
       {
         path: '*',
