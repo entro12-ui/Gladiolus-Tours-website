@@ -35,3 +35,8 @@ export const LazyAccommodationsPage = loadable(
   () => import('@gladiolus/ui-page-accomodations'),
   { fallback: <RouterLazyFallback /> }
 );
+
+export const LazyItinerariesPage = loadable(
+  () => import('@gladiolus/ui-page-itineraries'),
+  { fallback: <RouterLazyFallback /> }
+);
