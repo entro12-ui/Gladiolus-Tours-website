@@ -32,6 +32,7 @@
       "@gladiolus/ui-page-accomodations": [
         "modules/ui-page-accomodations/src/index.ts"
       ],
+      "@gladiolus/ui-page-contact": ["modules/ui-page-contact/src/index.ts"],
       "@gladiolus/ui-page-destinations": [
         "modules/ui-page-destinations/src/index.ts"
       ],
