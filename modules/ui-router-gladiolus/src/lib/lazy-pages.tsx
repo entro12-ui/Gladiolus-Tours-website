@@ -10,3 +10,8 @@ export const LazyLandingPage = loadable(
   () => import('@gladiolus/ui-page-home-index'),
   { fallback: <RouterLazyFallback /> }
 );
+
+export const LazyServicePage = loadable(
+  () => import('@gladiolus/ui-page-services'),
+  { fallback: <RouterLazyFallback /> }
+);
