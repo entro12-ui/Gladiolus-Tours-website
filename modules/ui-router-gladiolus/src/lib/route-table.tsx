@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { GtToursRoute } from '@gladiolus/ui-routes-gladiolus';
 import {
   LazyAboutUsPage,
+  LazyAccommodationsPage,
   LazyDestinationsPage,
   LazyErrorNotFoundPage,
   LazyLandingPage,
@@ -52,7 +53,7 @@ export const GLADIOLUS_TOURS_ROUTE_TABLE = [
       {
         path: GtToursRoute.Accommodation,
         index: true,
-        element: <Outlet />,
+        element: <LazyAccommodationsPage />,
       },
       {
         path: GtToursRoute.itineraries,
