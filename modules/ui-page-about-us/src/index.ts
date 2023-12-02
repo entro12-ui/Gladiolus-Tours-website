@@ -1,1 +1,3 @@
-export * from './lib/ui-page-about-us';
+import { GladiolusToursAboutUs } from './lib';
+
+export default GladiolusToursAboutUs;
