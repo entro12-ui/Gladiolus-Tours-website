@@ -1,1 +1,3 @@
-export * from './lib/ui-page-itineraries';
+import { GladiolusToursItinerariesPage } from './lib/index';
+
+export default GladiolusToursItinerariesPage;
