@@ -13,19 +13,15 @@ export const GladiolusLandingPage = () => {
         <div>
           <MainHero />
         </div>
-        <br />
         <div>
           <GladiolusStats />
         </div>
-        <br />
         <div>
           <GladiolusSafaris />
         </div>
-        <br />
         <div>
           <GladiolusServices />
         </div>
-        <br />
         <div>
           <GladiolusTestimonials />
         </div>
