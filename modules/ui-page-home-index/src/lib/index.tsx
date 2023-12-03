@@ -3,6 +3,7 @@ import { MainHero } from './hero';
 import { GladiolusStats } from './stats';
 import { GladiolusSafaris } from './safaris';
 import { GladiolusServices } from './services';
+import { GladiolusTestimonials } from './testimonials';
 
 export const GladiolusLandingPage = () => {
   return (
@@ -23,6 +24,10 @@ export const GladiolusLandingPage = () => {
         <br />
         <div>
           <GladiolusServices />
+        </div>
+        <br />
+        <div>
+          <GladiolusTestimonials />
         </div>
       </main>
     </div>
