@@ -1,6 +1,8 @@
 import { EntryPageHelmet } from '@gladiolus/ui-comp-page-helmet';
 import { MainHero } from './hero';
 import { GladiolusStats } from './stats';
+import { GladiolusSafaris } from './safaris';
+import { GladiolusServices } from './services';
 
 export const GladiolusLandingPage = () => {
   return (
@@ -15,7 +17,13 @@ export const GladiolusLandingPage = () => {
           <GladiolusStats />
         </div>
         <br />
-        <div></div>
+        <div>
+          <GladiolusSafaris />
+        </div>
+        <br />
+        <div>
+          <GladiolusServices />
+        </div>
       </main>
     </div>
   );
