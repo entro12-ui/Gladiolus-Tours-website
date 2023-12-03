@@ -1,1 +1,3 @@
-export * from './lib/ui-comp-header';
+import { GladiolusHeaderSection } from './lib/index';
+
+export default GladiolusHeaderSection;
