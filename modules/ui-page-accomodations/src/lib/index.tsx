@@ -4,10 +4,10 @@ import GladiolusHeaderSection from '@gladiolus/ui-comp-header';
 export const GladiolusAccommodationsToursPage = () => {
   return (
     <div className="bg-white">
-      <EntryPageHelmet title={'Accommodations'} />
+      <EntryPageHelmet title={'Accommodations & Activities'} />
       <GladiolusHeaderSection
-        header={'Accommodations'}
-        description={'Accommodations Offered by Gladiolus Tours'}
+        header={'Accommodations & Activities'}
+        description={'Accommodations & Activities Offered by Gladiolus Tours'}
       />
     </div>
   );
