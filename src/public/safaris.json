@@ -1,27 +1,92 @@
-[
-  {
-    "id": 1,
-    "name": "Basic Tee 8-Pack",
-    "href": "#",
-    "price": "$256",
-    "description":
-    "Get the full lineup of our Basic Tees. Have a fresh shirt all week, and an extra for laundry day.",
-    "options": "8 colors",
-    "imageSrc":
-    "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-01.jpg",
-    "imageAlt":
-    "Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.",
-  },
-  {
-    "id": 2,
-    "name": "Basic Tee",
-    "href": "#",
-    "price": "$32",
-    "description":
-    "Look like a visionary CEO and wear the same black t-shirt every day.",
-    "options": "Black",
-    "imageSrc":
-    "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-02.jpg",
-    "imageAlt": "Front of plain black t-shirt."
-  }
-]
+{
+  "safaris": [
+    {
+      "id": 1,
+      "name": "Wildlife Safaris",
+      "type": "Wildlife Safaris",
+      "href": "",
+      "price": "",
+      "description": "",
+      "imageSrc": "",
+      "imageAlt": "",
+      "status": "true"
+    },
+    {
+      "id": 2,
+      "name": "Signature Safaris",
+      "type": "Signature Safaris",
+      "href": "",
+      "price": "",
+      "description": "",
+      "imageSrc": "",
+      "imageAlt": "",
+      "status": "true"
+    },
+    {
+      "id": 3,
+      "name": "Group and Incentive Travel",
+      "type": "Group and Incentive Travel",
+      "href": "",
+      "price": "",
+      "description": "",
+      "imageSrc": "",
+      "imageAlt": "",
+      "status": "true"
+    },
+    {
+      "id": 4,
+      "name": "Camping Safaris",
+      "type": "Camping Safaris",
+      "href": "",
+      "price": "",
+      "description": "",
+      "imageSrc": "",
+      "imageAlt": "",
+      "status": "true"
+    },
+    {
+      "id": 5,
+      "name": "Flying Safaris",
+      "type": "Flying Safaris",
+      "href": "",
+      "price": "",
+      "description": "",
+      "imageSrc": "",
+      "imageAlt": "",
+      "status": "true"
+    },
+    {
+      "id": 5,
+      "name": "Mountain Climbing",
+      "type": "Mountain Climbing",
+      "href": "",
+      "price": "",
+      "description": "Tanzania is home to the highest mountain in Africa – Mount Kilimanjaro (5895 metres), which is also the highest free-standing mountain in the world. Despite its height Kilimanjaro is one of the world’s most accessible high summits, with most climbers reaching the peak (Uhuru Peak) with little more than a walking stick, proper clothing and determination",
+      "imageSrc": "",
+      "imageAlt": "Mountain Climbing Safari",
+      "status": "true"
+    },
+    {
+      "id": 6,
+      "name": "Cultural & Historical Tours",
+      "type": "Cultural & Historical Tours",
+      "href": "",
+      "price": "",
+      "description": "",
+      "imageSrc": "",
+      "imageAlt": "",
+      "status": "true"
+    },
+    {
+      "id": 7,
+      "name": "Zanzibar & Beach Holidays",
+      "type": "Zanzibar & Beach Holidays",
+      "href": "",
+      "price": "",
+      "description": "",
+      "imageSrc": "",
+      "imageAlt": "",
+      "status": "true"
+    }
+  ]
+}
