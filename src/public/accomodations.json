@@ -8,7 +8,22 @@
       "description": "",
       "imageSrc": "",
       "imageAlt": "",
-      "status": "true"
+      "status": "true",
+      "hotels": [
+        {
+          "name": ""
+        }
+      ],
+      "lodges": [
+        {
+          "name": ""
+        }
+      ],
+      "camps": [
+        {
+          "name": ""
+        }
+      ]
     },
     {
       "id": 2,
@@ -18,7 +33,22 @@
       "description": "",
       "imageSrc": "",
       "imageAlt": "",
-      "status": "true"
+      "status": "true",
+      "hotels": [
+        {
+          "name": ""
+        }
+      ],
+      "lodges": [
+        {
+          "name": ""
+        }
+      ],
+      "camps": [
+        {
+          "name": ""
+        }
+      ]
     },
     {
       "id": 3,
@@ -28,7 +58,22 @@
       "description": "",
       "imageSrc": "",
       "imageAlt": "",
-      "status": "true"
+      "status": "true",
+      "hotels": [
+        {
+          "name": ""
+        }
+      ],
+      "lodges": [
+        {
+          "name": ""
+        }
+      ],
+      "camps": [
+        {
+          "name": ""
+        }
+      ]
     },
     {
       "id": 4,
@@ -38,7 +83,22 @@
       "description": "",
       "imageSrc": "",
       "imageAlt": "",
-      "status": "true"
+      "status": "true",
+      "hotels": [
+        {
+          "name": ""
+        }
+      ],
+      "lodges": [
+        {
+          "name": ""
+        }
+      ],
+      "camps": [
+        {
+          "name": ""
+        }
+      ]
     }
   ]
 }
