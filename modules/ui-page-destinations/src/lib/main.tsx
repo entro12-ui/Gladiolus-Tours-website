@@ -27,6 +27,8 @@ const products = [
   // More products...
 ];
 
+interface IProps {}
+
 export const GladiolusToursDestinations = () => {
   return (
     <div className="bg-white">
