@@ -1,5 +1,6 @@
 import { EntryPageHelmet } from '@gladiolus/ui-comp-page-helmet';
 import GladiolusHeaderSection from '@gladiolus/ui-comp-header';
+import { GladiolusToursContactBody } from './main';
 
 export const GladiolusToursContactPage = () => {
   return (
@@ -9,6 +10,9 @@ export const GladiolusToursContactPage = () => {
         header={'Contact'}
         description={'Gladiolus Tours Contacts'}
       />
+      <div>
+        <GladiolusToursContactBody />
+      </div>
     </div>
   );
 };
