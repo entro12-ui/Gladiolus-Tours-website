@@ -27,6 +27,9 @@
       "@gladiolus/ui-comp-scroll-to-top": [
         "modules/ui-comp-scroll-to-top/src/index.ts"
       ],
+      "@gladiolus/ui-gladiolus-persistence": [
+        "modules/ui-gladiolus-persistence/src/index.ts"
+      ],
       "@gladiolus/ui-layout-gladiolus": [
         "modules/ui-layout-gladiolus/src/index.ts"
       ],
