@@ -1,168 +1,222 @@
-{
-  "safaris": [
-    {
-      "id": 1,
-      "name": "Wildlife Safaris",
-      "type": "Wildlife Safaris",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true"
-    },
-    {
-      "id": 2,
-      "name": "Signature Safaris",
-      "type": "Signature Safaris",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true"
-    },
-    {
-      "id": 3,
-      "name": "Group and Incentive Travel",
-      "type": "Group and Incentive Travel",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true"
-    },
-    {
-      "id": 4,
-      "name": "Camping Safaris",
-      "type": "Camping Safaris",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true",
-      "types": [
-        {
-          "name": "Standard Camping Safaris",
-          "description": "\n\nStandard Camping, our flagship camping product, is a very popular product in the northern Tanzania game parks. One of the most important features of this product is staying in a private and exclusive campsite, off the beaten track wilderness. The camping crew, together with equipment and provisions, travels separately in a support vehicle ahead of the guests, so that when you arrive at the campsite everything is prepared and waiting – tents up, meals cooking, and hot water ready for a shower.\n\nAccommodation is provided in spacious walk-in tents with twin beds made of fine tropical wood, mattresses, blankets, bed sheets & pillows, and two folding bedside tables. Wash room facilities are set on the far end, inside the guest tent, and include a hot water bucket-shower and a chemical toilet. Each accommodation tent has a hand washbasin, and a verandah with two safari chairs and a safari table allowing you to relax with a book, or just enjoy the different smells, sights and sounds around you.\n\nThe mess tent is spacious and well ventilated, with dining tables and chairs, cutlery, crockery, table cloth and other amenities offered in a standard restaurant. The camp serves three freshly cooked meals a day – breakfast, and 3-course lunch and dinner. Evenings at the campsite are invariably one of the highlights of a game park program, with a crackling campfire in a serene and quiet surrounding interrupted by occasional distant calls of wildlife. The experience of camping in an African bush, as pure as the Serengeti for example, is so special and fulfilling.\n"
-        },
-        {
-          "name": "Budget Camping Safaris",
-          "description": "\n\nBudget camping is the ideal way for those who like to “rough it”. Accommodation is provided in a public campsite in a two-man tent with folding safari beds, mattresses, pillows blankets and bed sheets. The tents are spacious enough for two people and have a mesh on each window to keep off insects.\n\nThe guests’ safari vehicle, invariably a 4-wheel drive (4×4), manned by a driver-guide experienced in camping and accompanied by your cook, tows a custom-built trailer carrying camping equipment and provisions. All preparations for setting up the camp are made on arrival at the campsite. The driver-guide and cook will pitch tents, cook and do cleaning. The cook prepares three meals a day – breakfast, lunch, and dinner (3-course) served on a dining table with chairs. The public campsites provide basic washroom facilities including shared toilets and shower of reasonable hygienic standard for the guests.\n"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Flying Safaris",
-      "type": "Flying Safaris",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true"
-    },
-    {
-      "id": 5,
-      "name": "Mountain Climbing & Trekking",
-      "type": "Mountain Climbing & Trekking",
-      "href": "",
-      "price": "",
-      "description": "Tanzania is home to the highest mountain in Africa – Mount Kilimanjaro (5895 metres), which is also the highest free-standing mountain in the world. Despite its height Kilimanjaro is one of the world’s most accessible high summits, with most climbers reaching the peak (Uhuru Peak) with little more than a walking stick, proper clothing and determination",
-      "imageSrc": "",
-      "imageAlt": "Mountain Climbing Safari",
-      "status": "true",
-      "mountains": [
-        {
-          "name": "Mount Kilimanjaro",
-          "about": ""
-        },
-        {
-          "name": "Mount Meru",
-          "about": ""
-        },
-        {
-          "name": "Ol Donyo Lengai",
-          "about": ""
-        },
-        {
-          "name": "Usambara Mountains",
-          "about": ""
-        },
-        {
-          "name": "Udzungwa Mountains",
-          "about": ""
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Cultural & Historical Tours",
-      "type": "Cultural & Historical Tours",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true"
-    },
-    {
-      "id": 7,
-      "name": "Zanzibar & Beach Holidays",
-      "type": "Zanzibar & Beach Holidays",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true"
-    },
-    {
-      "id": 8,
-      "name": "Walking Safari",
-      "type": "Walking Safari",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true"
-    },
-    {
-      "id": 9,
-      "name": "Boat Safaris",
-      "type": "Boat Safaris",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true"
-    },
-    {
-      "id": 10,
-      "name": "Balloon Safaris in Serengeti and Tarangire",
-      "type": "Balloon Safaris in Serengeti and Tarangire",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true"
-    },
-    {
-      "id": 11,
-      "name": "Walking Safari",
-      "type": "Walking Safari",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true"
-    }
-  ]
+interface SafariTypes {
+  name: string;
+  description: string;
 }
+
+interface Safari {
+  id: number;
+  name: string;
+  type: string;
+  href: string;
+  price: string;
+  description: string;
+  status: boolean;
+  safariTypes: SafariTypes[];
+}
+
+const Safaris: Safari[] = [
+  {
+    id: 1,
+    name: 'Wildlife Safaris',
+    type: 'Wildlife Safaris',
+    href: '',
+    price: '',
+    description: '',
+    status: true,
+    safariTypes: [
+      {
+        name: '',
+        description: '',
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    name: 'Signature Safaris',
+    type: 'Signature Safaris',
+    href: '',
+    price: '',
+    description: '',
+    status: true,
+    safariTypes: [
+      {
+        name: '',
+        description: '',
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Group and Incentive Travel',
+    type: 'Group and Incentive Travel',
+    href: '',
+    price: '',
+    description: '',
+    status: true,
+    safariTypes: [
+      {
+        name: '',
+        description: '',
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Camping Safaris',
+    type: 'Camping Safaris',
+    href: '',
+    price: '',
+    description: '',
+    status: true,
+    safariTypes: [
+      {
+        name: 'Standard Camping Safaris',
+        description:
+          '\n\nStandard Camping, our flagship camping product, is a very popular product in the northern Tanzania game parks. One of the most important features of this product is staying in a private and exclusive campsite, off the beaten track wilderness. The camping crew, together with equipment and provisions, travels separately in a support vehicle ahead of the guests, so that when you arrive at the campsite everything is prepared and waiting – tents up, meals cooking, and hot water ready for a shower.\n\nAccommodation is provided in spacious walk-in tents with twin beds made of fine tropical wood, mattresses, blankets, bed sheets & pillows, and two folding bedside tables. Wash room facilities are set on the far end, inside the guest tent, and include a hot water bucket-shower and a chemical toilet. Each accommodation tent has a hand washbasin, and a verandah with two safari chairs and a safari table allowing you to relax with a book, or just enjoy the different smells, sights and sounds around you.\n\nThe mess tent is spacious and well ventilated, with dining tables and chairs, cutlery, crockery, table cloth and other amenities offered in a standard restaurant. The camp serves three freshly cooked meals a day – breakfast, and 3-course lunch and dinner. Evenings at the campsite are invariably one of the highlights of a game park program, with a crackling campfire in a serene and quiet surrounding interrupted by occasional distant calls of wildlife. The experience of camping in an African bush, as pure as the Serengeti for example, is so special and fulfilling.\n',
+      },
+      {
+        name: 'Budget Camping Safaris',
+        description:
+          '\n\nBudget camping is the ideal way for those who like to “rough it”. Accommodation is provided in a public campsite in a two-man tent with folding safari beds, mattresses, pillows blankets and bed sheets. The tents are spacious enough for two people and have a mesh on each window to keep off insects.\n\nThe guests’ safari vehicle, invariably a 4-wheel drive (4×4), manned by a driver-guide experienced in camping and accompanied by your cook, tows a custom-built trailer carrying camping equipment and provisions. All preparations for setting up the camp are made on arrival at the campsite. The driver-guide and cook will pitch tents, cook and do cleaning. The cook prepares three meals a day – breakfast, lunch, and dinner (3-course) served on a dining table with chairs. The public campsites provide basic washroom facilities including shared toilets and shower of reasonable hygienic standard for the guests.\n',
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: 'Flying Safaris',
+    type: 'Flying Safaris',
+    href: '',
+    price: '',
+    description: '',
+    status: true,
+    safariTypes: [
+      {
+        name: '',
+        description: '',
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: 'Mountain Climbing & Trekking',
+    type: 'Mountain Climbing & Trekking',
+    href: '',
+    price: '',
+    description:
+      'Tanzania is home to the highest mountain in Africa – Mount Kilimanjaro (5895 metres), which is also the highest free-standing mountain in the world. Despite its height Kilimanjaro is one of the world’s most accessible high summits, with most climbers reaching the peak (Uhuru Peak) with little more than a walking stick, proper clothing and determination',
+    status: true,
+    safariTypes: [
+      {
+        name: 'Mount Kilimanjaro',
+        description: '',
+      },
+      {
+        name: 'Mount Meru',
+        description: '',
+      },
+      {
+        name: 'Ol Donyo Lengai',
+        description: '',
+      },
+      {
+        name: 'Usambara Mountains',
+        description: '',
+      },
+      {
+        name: 'Udzungwa Mountains',
+        description: '',
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: 'Cultural & Historical Tours',
+    type: 'Cultural & Historical Tours',
+    href: '',
+    price: '',
+    description: '',
+    status: true,
+    safariTypes: [
+      {
+        name: '',
+        description: '',
+      },
+    ],
+  },
+  {
+    id: 7,
+    name: 'Zanzibar & Beach Holidays',
+    type: 'Zanzibar & Beach Holidays',
+    href: '',
+    price: '',
+    description: '',
+    status: true,
+    safariTypes: [
+      {
+        name: '',
+        description: '',
+      },
+    ],
+  },
+  {
+    id: 8,
+    name: 'Walking Safari',
+    type: 'Walking Safari',
+    href: '',
+    price: '',
+    description: '',
+    status: true,
+    safariTypes: [
+      {
+        name: '',
+        description: '',
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: 'Boat Safaris',
+    type: 'Boat Safaris',
+    href: '',
+    price: '',
+    description: '',
+    status: true,
+    safariTypes: [
+      {
+        name: '',
+        description: '',
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: 'Balloon Safaris in Serengeti and Tarangire',
+    type: 'Balloon Safaris in Serengeti and Tarangire',
+    href: '',
+    price: '',
+    description: '',
+    status: true,
+    safariTypes: [
+      {
+        name: '',
+        description: '',
+      },
+    ],
+  },
+  {
+    id: 11,
+    name: 'Walking Safari',
+    type: 'Walking Safari',
+    href: '',
+    price: '',
+    description: '',
+    status: true,
+    safariTypes: [
+      {
+        name: '',
+        description: '',
+      },
+    ],
+  },
+];
