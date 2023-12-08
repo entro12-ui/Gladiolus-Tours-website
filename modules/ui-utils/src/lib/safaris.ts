@@ -14,7 +14,7 @@ interface Safari {
   safariTypes: SafariTypes[];
 }
 
-const Safaris: Safari[] = [
+export const Safaris: Safari[] = [
   {
     id: 1,
     name: 'Wildlife Safaris',
