@@ -1,0 +1,45 @@
+{
+  "name": "ui-gladiolus-persistence",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "modules/ui-gladiolus-persistence/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "modules/ui-gladiolus-persistence/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/modules/ui-gladiolus-persistence",
+        "tsConfig": "modules/ui-gladiolus-persistence/tsconfig.lib.json",
+        "project": "modules/ui-gladiolus-persistence/package.json",
+        "entryFile": "modules/ui-gladiolus-persistence/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "modules/ui-gladiolus-persistence/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "modules/ui-gladiolus-persistence/jest.config.ts"
+      }
+    }
+  }
+}

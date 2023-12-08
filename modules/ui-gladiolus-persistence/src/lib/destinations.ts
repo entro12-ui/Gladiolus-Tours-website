@@ -1,115 +1,167 @@
-{
-  "destinations": [
-    {
-      "id": 1,
-      "name": "Northern Tanzania",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true",
-      "national_parks": [
-        {
-          "name": "Arusha National Park"
-        },
-        {
-          "name": "Tarangire National Park"
-        },
-        {
-          "name": "Lake Manyara National Park"
-        },
-        {
-          "name": "Ngorongoro Conservation Area"
-        },
-        {
-          "name": "Serengeti National Park"
-        },
-        {
-          "name": "Mkomazi National Park"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Southern Tanzania",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true",
-      "national_parks": [
-        {
-          "name": "Mikumi National Park"
-        },
-        {
-          "name": "Ruaha National Park"
-        },
-        {
-          "name": "Nyerere National Park"
-        },
-        {
-          "name": "Udzunguwa National Park"
-        },
-        {
-          "name": "Kitulo National Park"
-        },
-        {
-          "name": "Katavi National Park"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Western Tanzania",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true",
-      "national_parks": [
-        {
-          "name": "Kigoma Town"
-        },
-        {
-          "name": "Gombe Stream National Park"
-        },
-        {
-          "name": "Mahale Mountains National Park"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "The Coast",
-      "href": "",
-      "price": "",
-      "description": "",
-      "imageSrc": "",
-      "imageAlt": "",
-      "status": "true",
-      "national_parks": [
-        {
-          "name": "Dar Es Salaam City"
-        },
-        {
-          "name": "Bagamoyo"
-        },
-        {
-          "name": "Saadani National Park"
-        },
-        {
-          "name": "Pangani National Park"
-        },
-        {
-          "name": "Mafia Island"
-        },
-        {
-          "name": "Zanzibar Islands (Unguja & Pemba)"
-        }
-      ]
-    }
-  ]
+interface NationalParks {
+  name: string;
+  description: string;
+  status: boolean;
 }
+
+interface IDestinations {
+  id: number;
+  name: string;
+  href: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  status: boolean;
+  nationalParks: NationalParks[];
+}
+export const Destinations: IDestinations[] = [
+  {
+    id: 1,
+    name: 'Northern Tanzania',
+    href: '',
+    description: '',
+    imageSrc: '',
+    imageAlt: '',
+    status: true,
+    nationalParks: [
+      {
+        name: 'Arusha National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Tarangire National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Lake Manyara National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Ngorongoro Conservation Area',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Serengeti National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Mkomazi National Park',
+        description: '',
+        status: true,
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Southern Tanzania',
+    href: '',
+    description: '',
+    imageSrc: '',
+    imageAlt: '',
+    status: true,
+    nationalParks: [
+      {
+        name: 'Mikumi National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Ruaha National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Nyerere National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Udzunguwa National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Kitulo National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Katavi National Park',
+        description: '',
+        status: true,
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Western Tanzania',
+    href: '',
+    description: '',
+    imageSrc: '',
+    imageAlt: '',
+    status: true,
+    nationalParks: [
+      {
+        name: 'Kigoma Town',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Gombe Stream National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Mahale Mountains National Park',
+        description: '',
+        status: true,
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: 'The Coast',
+    href: '',
+    description: '',
+    imageSrc: '',
+    imageAlt: '',
+    status: true,
+    nationalParks: [
+      {
+        name: 'Dar Es Salaam City',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Bagamoyo',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Saadani National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Pangani National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Mafia Island',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Zanzibar Islands (Unguja & Pemba)',
+        description: '',
+        status: true,
+      },
+    ],
+  },
+];
