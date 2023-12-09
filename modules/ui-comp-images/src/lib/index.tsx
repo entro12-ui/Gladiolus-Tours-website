@@ -1,3 +1,11 @@
-export const Images = () => {
-  return <h1>This is an image component</h1>;
+interface IProps {
+  alt: string;
+  src: string;
+}
+export const Images = ({ src, alt }: IProps) => {
+  return <img src={src} alt={alt} />;
+};
+
+export const Logo = ({ src, alt }: IProps) => {
+  return <img src={src} alt={alt} />;
 };
