@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 interface SafariTypes {
   name: string;
   description: string;
@@ -11,6 +13,7 @@ interface Safari {
   price: string;
   description: string;
   status: boolean;
+  image: ReactNode;
   safariTypes: SafariTypes[];
 }
 
@@ -23,6 +26,7 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: '',
@@ -39,6 +43,7 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: '',
@@ -54,6 +59,7 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: '',
@@ -69,6 +75,7 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: 'Standard Camping Safaris',
@@ -90,6 +97,7 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: '',
@@ -106,6 +114,7 @@ export const Safaris: Safari[] = [
     description:
       'Tanzania is home to the highest mountain in Africa – Mount Kilimanjaro (5895 metres), which is also the highest free-standing mountain in the world. Despite its height Kilimanjaro is one of the world’s most accessible high summits, with most climbers reaching the peak (Uhuru Peak) with little more than a walking stick, proper clothing and determination',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: 'Mount Kilimanjaro',
@@ -137,6 +146,7 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: '',
@@ -152,6 +162,7 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: '',
@@ -167,6 +178,7 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: '',
@@ -182,6 +194,7 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: '',
@@ -197,6 +210,7 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: '',
@@ -212,6 +226,7 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
+    image: false,
     safariTypes: [
       {
         name: '',

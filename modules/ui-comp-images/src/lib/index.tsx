@@ -2,10 +2,10 @@ interface IProps {
   alt: string;
   src: string;
 }
-export const Images = ({ src, alt }: IProps) => {
+export const GladiolusToursImage = ({ src, alt }: IProps) => {
   return <img src={src} alt={alt} />;
 };
 
-export const Logo = ({ src, alt }: IProps) => {
+export const GladiolusToursLogo = ({ src, alt }: IProps) => {
   return <img src={src} alt={alt} />;
 };
