@@ -18,6 +18,7 @@
       "@gladiolus/ui-comp-banner": ["modules/ui-comp-banner/src/index.ts"],
       "@gladiolus/ui-comp-chatbot": ["modules/ui-comp-chatbot/src/index.ts"],
       "@gladiolus/ui-comp-header": ["modules/ui-comp-header/src/index.ts"],
+      "@gladiolus/ui-comp-images": ["modules/ui-comp-images/src/index.ts"],
       "@gladiolus/ui-comp-page-helmet": [
         "modules/ui-comp-page-helmet/src/index.ts"
       ],
