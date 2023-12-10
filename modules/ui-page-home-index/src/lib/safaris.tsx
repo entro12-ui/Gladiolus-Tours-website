@@ -1,10 +1,9 @@
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import Splash from '../../../../src/assets/Internet/zebras.jpg';
 import {
   CloudArrowUpIcon,
   LockClosedIcon,
   ServerIcon,
 } from '@heroicons/react/20/solid';
+import { GladiolusToursImage } from '@gladiolus/ui-comp-images';
 
 const features = [
   {
@@ -68,18 +67,12 @@ export const GladiolusSafaris = () => {
                 aria-hidden="true"
               />
               <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
-                <img
-                  src={Splash}
-                  alt="Product screenshot"
-                  width={2432}
-                  height={1442}
-                  className="-mb-12 w-[57rem] max-w-none rounded-tl-xl bg-gray-800 ring-1 ring-white/10"
+                <GladiolusToursImage className="-mb-12 w-[57rem] max-w-none rounded-tl-xl bg-gray-800 ring-1 ring-white/10" />
+                <div
+                  className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 sm:rounded-3xl"
+                  aria-hidden="true"
                 />
               </div>
-              <div
-                className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 sm:rounded-3xl"
-                aria-hidden="true"
-              />
             </div>
           </div>
         </div>
