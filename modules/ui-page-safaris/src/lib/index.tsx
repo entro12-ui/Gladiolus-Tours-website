@@ -3,6 +3,7 @@ import GladiolusHeaderSection from '@gladiolus/ui-comp-header';
 import { Link } from 'react-router-dom';
 import { GtToursRoute } from '@gladiolus/ui-routes-gladiolus';
 import { Safaris } from '@gladiolus/ui-gladiolus-persistence';
+import { GladiolusToursImage } from '@gladiolus/ui-comp-images';
 
 export const GladiolusToursSafarisPage = () => {
   return (
@@ -22,11 +23,7 @@ export const GladiolusToursSafarisPage = () => {
               className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white"
             >
               <div className="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
-                <img
-                  src=""
-                  alt=""
-                  className="h-full w-full object-cover object-center sm:h-full sm:w-full"
-                />
+                <GladiolusToursImage className="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none" />
               </div>
               <div className="flex flex-1 flex-col space-y-2 p-4">
                 <h3 className="text-sm font-medium text-gray-900">
