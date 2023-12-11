@@ -106,7 +106,7 @@ export const Safaris: Safari[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     name: 'Mountain Climbing & Trekking',
     type: 'Mountain Climbing & Trekking',
     href: '',
@@ -139,7 +139,7 @@ export const Safaris: Safari[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     name: 'Cultural & Historical Tours',
     type: 'Cultural & Historical Tours',
     href: '',
@@ -155,7 +155,7 @@ export const Safaris: Safari[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     name: 'Zanzibar & Beach Holidays',
     type: 'Zanzibar & Beach Holidays',
     href: '',
@@ -171,7 +171,7 @@ export const Safaris: Safari[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     name: 'Walking Safari',
     type: 'Walking Safari',
     href: '',
@@ -187,7 +187,7 @@ export const Safaris: Safari[] = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     name: 'Boat Safaris',
     type: 'Boat Safaris',
     href: '',
@@ -203,7 +203,7 @@ export const Safaris: Safari[] = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     name: 'Balloon Safaris in Serengeti and Tarangire',
     type: 'Balloon Safaris in Serengeti and Tarangire',
     href: '',
@@ -219,7 +219,7 @@ export const Safaris: Safari[] = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     name: 'Walking Safari',
     type: 'Walking Safari',
     href: '',
