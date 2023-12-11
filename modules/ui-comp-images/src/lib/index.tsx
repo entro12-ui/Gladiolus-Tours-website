@@ -8,7 +8,9 @@ import Image6 from './images/ngorongoro_zebra.webp';
 import Image7 from './images/lion.webp';
 import Image8 from './images/lioness.webp';
 import Image9 from './images/elephant_family.webp';
+import GtLogo from './images/lioness.webp';
 import { getRandomIntExclusiveUpperBound } from '@gladiolus/ui-utils';
+import { CSSProperties } from 'react';
 
 const images = [
   Image0,
@@ -33,6 +35,19 @@ export const GladiolusToursImage = ({ className }: Props) => {
   );
 };
 
-export const GladiolusToursLogo = () => {
-  return null;
+export const GladiolusToursLogo = ({
+  style,
+  className,
+}: {
+  style?: CSSProperties;
+  className?: string;
+}) => {
+  return (
+    <img
+      alt={'Gladiolus Tours Logo'}
+      src={GtLogo}
+      style={style}
+      className={className || 'inline-block align-text-middle mb-2'}
+    />
+  );
 };
