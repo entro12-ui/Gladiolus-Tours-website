@@ -1,4 +1,4 @@
-import Lion from './images/lion.jpg';
+import Lion from './images/header-image.webp';
 interface IProp {
   header: string;
   description: string;
