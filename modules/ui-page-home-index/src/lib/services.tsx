@@ -1,37 +1,37 @@
 const services = [
   {
-    name: 'Your customized safari',
+    name: 'Unforgettable Adventures Await',
     description:
-      'Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.',
+      'We craft immersive journeys, blending local authenticity with seamless logistics, ensuring every moment is a cherished travel memory.',
   },
   {
-    name: 'Unique experiences',
+    name: 'Tailored Excellence',
     description:
-      'Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.',
+      'Choose Gladiolus Tours for personalized experiences that cater to your unique desires, providing a bespoke adventure where every detail is curated to perfection.',
   },
   {
-    name: 'Private and authentic',
+    name: 'Expertly Guided Explorations',
     description:
-      'Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.',
+      'Opt for Gladiolus Tours and be led by seasoned guides passionate about unlocking the secrets of each destination, creating enriching and insightful travel narratives.',
   },
   {
-    name: 'Responsiveness and flexibility',
+    name: 'Safety Redefined',
     description:
-      'Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.',
+      'At Gladiolus Tours, your well-being is paramount. Our commitment to the highest safety standards ensures you can explore with confidence, focusing solely on your adventure.',
   },
   {
-    name: 'Discovery',
+    name: 'Cultural Immersion Beyond Borders',
     description:
-      'Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.',
+      'With Gladiolus Tours, delve deep into the heart of diverse cultures. Our itineraries offer authentic encounters, fostering a profound connection with the places you visit.',
   },
   {
-    name: 'Security',
+    name: 'Seamless Wanderlust',
     description:
-      'Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.',
+      'Gladiolus Tours transforms your travel dreams into reality. Our commitment to seamless logistics ensures a stress-free journey, allowing you to savor every moment of your exploration.',
   },
 ];
 
-export const GladiolusServices = () => {
+export const WhyGoWithGladiolus = () => {
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -40,8 +40,9 @@ export const GladiolusServices = () => {
             Why go with Gladiolus Tours
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-            voluptatum cupiditate veritatis in accusamus quisquam.
+            Immerse yourself in unparalleled adventures, where every journey is
+            meticulously crafted, creating memories that last a lifetime.
+            Discover the extraordinary with us!
           </p>
         </div>
         <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
