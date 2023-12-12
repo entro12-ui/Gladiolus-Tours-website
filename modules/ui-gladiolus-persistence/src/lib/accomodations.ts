@@ -1,15 +1,18 @@
 interface Hotels {
-  name: '';
-  description: '';
+  name: string;
+  description: string;
 }
+
 interface Lodges {
-  name: '';
-  description: '';
+  name: string;
+  description: string;
 }
+
 interface Camps {
-  name: '';
-  description: '';
+  name: string;
+  description: string;
 }
+
 interface IAccommodations {
   id: number;
   name: string;
