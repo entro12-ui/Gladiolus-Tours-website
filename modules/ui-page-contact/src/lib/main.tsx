@@ -43,9 +43,15 @@ export const GladiolusToursContactBody = () => {
               Get in touch
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Proin volutpat consequat porttitor cras nullam gravida at. Orci
-              molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
-              Arcu sed malesuada et magna.
+              We'd love to hear from you! Whether you have questions about our
+              exciting tours, need assistance in planning your dream vacation,
+              or just want to say hello, we're here for you. Feel free to reach
+              out using the contact form below, and our dedicated team will get
+              back to you as soon as possible.
+            </p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              If you prefer more direct communication, you can also connect with
+              us through the following:
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
               <div className="flex gap-x-4">
