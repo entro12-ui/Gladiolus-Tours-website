@@ -1,5 +1,4 @@
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import Splash from '../../../../src/assets/images/cave_waterfall.jpg';
+import WaterFall from './images/Waterfall.webp';
 
 export const GladiolusTestimonials = () => {
   return (
@@ -10,7 +9,7 @@ export const GladiolusTestimonials = () => {
             <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <img
                 className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
-                src={Splash}
+                src={WaterFall}
                 alt=""
               />
             </div>
@@ -31,16 +30,20 @@ export const GladiolusTestimonials = () => {
               </svg>
               <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
                 <p>
-                  Gravida quam mi erat tortor neque molestie. Auctor aliquet at
-                  porttitor a enim nunc suscipit tincidunt nunc. Et non lorem
-                  tortor posuere. Nunc eu scelerisque interdum eget tellus non
-                  nibh scelerisque bibendum.
+                  Gladiolus Tours exceeded my expectations! From captivating
+                  destinations to seamless logistics, every detail was
+                  meticulously handled. Their passionate guides made the journey
+                  unforgettable, creating not just a trip but a soul-stirring
+                  experience. Highly recommended for those craving exceptional
+                  travel moments!
                 </p>
               </blockquote>
+              {/*
               <figcaption className="mt-8 text-base">
                 <div className="font-semibold text-white">Judith Black</div>
                 <div className="mt-1 text-gray-400">CEO of Workcation</div>
               </figcaption>
+              */}
             </figure>
           </div>
         </div>
