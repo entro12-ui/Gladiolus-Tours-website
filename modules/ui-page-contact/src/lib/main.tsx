@@ -3,8 +3,29 @@ import {
   EnvelopeIcon,
   PhoneIcon,
 } from '@heroicons/react/24/outline';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { classNames } from '@gladiolus/ui-utils';
+import { FORM_VALIDATION_OPTIONS_KW_USER_EMAIL } from '@gladiolus/ui-utils-form';
+
+interface IForm {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  message: string;
+}
 
 export const GladiolusToursContactBody = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IForm>();
+
+  const onSubmit: SubmitHandler<IForm> = (data) => {
+    console.log(data);
+  };
+
   return (
     <div className="relative isolate bg-white">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
@@ -106,9 +127,9 @@ export const GladiolusToursContactBody = () => {
           </div>
         </div>
         <form
-          action="#"
-          method="POST"
+          onSubmit={handleSubmit(onSubmit)}
           className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+          noValidate
         >
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -117,17 +138,38 @@ export const GladiolusToursContactBody = () => {
                   htmlFor="first-name"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  First name
+                  First name *
                 </label>
                 <div className="mt-2.5">
                   <input
                     type="text"
-                    name="first-name"
-                    id="first-name"
                     placeholder="First Name"
-                    autoComplete="given-name"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className={classNames(
+                      'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6',
+                      errors.firstName?.message
+                        ? 'border-red-300 text-red-900 focus:border-red-500 focus:ring-red-500'
+                        : ''
+                    )}
+                    required
+                    {...register('firstName', {
+                      required: 'First Name is required.',
+                      minLength: {
+                        value: 2,
+                        message: 'Minimum length is 2.',
+                      },
+                      maxLength: {
+                        value: 20,
+                        message: 'Maximum length is 20',
+                      },
+                      pattern: {
+                        value: /^[a-zA-Z ]+$/,
+                        message: 'Only letters and spaces are allowed',
+                      },
+                    })}
                   />
+                  {errors?.firstName?.message && (
+                    <p className="text-red-600">{errors.firstName?.message}</p>
+                  )}
                 </div>
               </div>
               <div>
@@ -135,17 +177,38 @@ export const GladiolusToursContactBody = () => {
                   htmlFor="last-name"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  Last name
+                  Last name *
                 </label>
                 <div className="mt-2.5">
                   <input
                     type="text"
-                    name="last-name"
-                    id="last-name"
                     placeholder="Last Name"
-                    autoComplete="family-name"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className={classNames(
+                      'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6',
+                      errors.lastName?.message
+                        ? 'border-red-300 text-red-900 focus:border-red-500 focus:ring-red-500'
+                        : ''
+                    )}
+                    required
+                    {...register('lastName', {
+                      required: 'Last Name is required.',
+                      minLength: {
+                        value: 2,
+                        message: 'Minimum length is 2.',
+                      },
+                      maxLength: {
+                        value: 20,
+                        message: 'Maximum length is 20',
+                      },
+                      pattern: {
+                        value: /^[a-zA-Z ]+$/,
+                        message: 'Only letters and spaces are allowed',
+                      },
+                    })}
                   />
+                  {errors?.lastName?.message && (
+                    <p className="text-red-600">{errors.lastName?.message}</p>
+                  )}
                 </div>
               </div>
               <div className="sm:col-span-2">
@@ -153,17 +216,28 @@ export const GladiolusToursContactBody = () => {
                   htmlFor="email"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  Email
+                  Email *
                 </label>
                 <div className="mt-2.5">
                   <input
                     type="email"
-                    name="email"
                     id="email"
+                    className={classNames(
+                      'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6',
+                      errors.email?.message
+                        ? 'border-red-300 text-red-900 focus:border-red-500 focus:ring-red-500'
+                        : ''
+                    )}
+                    required
+                    {...register(
+                      'email',
+                      FORM_VALIDATION_OPTIONS_KW_USER_EMAIL
+                    )}
                     placeholder="E-Mail"
-                    autoComplete="email"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
+                  {errors?.email?.message && (
+                    <p className="text-red-600">{errors.email?.message}</p>
+                  )}
                 </div>
               </div>
               <div className="sm:col-span-2">
@@ -176,7 +250,7 @@ export const GladiolusToursContactBody = () => {
                 <div className="mt-2.5">
                   <input
                     type="tel"
-                    name="phone-number"
+                    {...register('phoneNumber')}
                     id="phone-number"
                     placeholder="Phone Number"
                     autoComplete="tel"
@@ -189,17 +263,22 @@ export const GladiolusToursContactBody = () => {
                   htmlFor="message"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  Message
+                  Message *
                 </label>
                 <div className="mt-2.5">
                   <textarea
-                    name="message"
                     id="message"
+                    {...register('message', {
+                      required: 'Please provide more details here.',
+                    })}
                     rows={4}
                     placeholder="Message"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     defaultValue={''}
                   />
+                  {errors?.message?.message && (
+                    <p className="text-red-600">{errors.message?.message}</p>
+                  )}
                 </div>
               </div>
             </div>
