@@ -17,6 +17,9 @@
     "paths": {
       "@gladiolus/ui-comp-banner": ["modules/ui-comp-banner/src/index.ts"],
       "@gladiolus/ui-comp-chatbot": ["modules/ui-comp-chatbot/src/index.ts"],
+      "@gladiolus/ui-comp-gladiolus-safaris": [
+        "modules/ui-comp-gladiolus-safaris/src/index.ts"
+      ],
       "@gladiolus/ui-comp-header": ["modules/ui-comp-header/src/index.ts"],
       "@gladiolus/ui-comp-images": ["modules/ui-comp-images/src/index.ts"],
       "@gladiolus/ui-comp-page-helmet": [
