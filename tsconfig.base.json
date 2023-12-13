@@ -22,6 +22,9 @@
       ],
       "@gladiolus/ui-comp-header": ["modules/ui-comp-header/src/index.ts"],
       "@gladiolus/ui-comp-images": ["modules/ui-comp-images/src/index.ts"],
+      "@gladiolus/ui-comp-notifications": [
+        "modules/ui-comp-notifications/src/index.ts"
+      ],
       "@gladiolus/ui-comp-page-helmet": [
         "modules/ui-comp-page-helmet/src/index.ts"
       ],
