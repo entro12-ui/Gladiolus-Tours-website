@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import Img0 from './images/chilling.webp';
 
 interface SafariTypes {
   name: string;
@@ -13,7 +13,8 @@ interface Safari {
   price: string;
   description: string;
   status: boolean;
-  image: ReactNode;
+  imageSrc: string;
+  imageAlt: string;
   safariTypes: SafariTypes[];
 }
 
@@ -24,9 +25,11 @@ export const Safaris: Safari[] = [
     type: 'Wildlife Safaris',
     href: '',
     price: '',
-    description: '',
+    description:
+      'We believe in value for money. Every guest would like to have the most reliable and comfortable vehicles on safari. In response to the clients’ needs, we have a very strict vehicle replacement policy that ensures a young fleet at all times. We have a total fleet of 225 well-maintained motor vehicles, predominantly 4-wheel drives. This does away with the problem of sub-contracting vehicles and driver-guides, which may compromise the quality of services. Our safari vehicles are specifically converted for maximum space and comfort. All of them have hatched roof and sliding windows to facilitate good viewing and convenient photography during game drives and sight seeing, fridge and sockets for charging electronic devices.',
     status: true,
-    image: false,
+    imageSrc: `${Img0}`,
+    imageAlt: 'Wildlife Safaris',
     safariTypes: [
       {
         name: '',
@@ -43,7 +46,8 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
-    image: false,
+    imageSrc: `${Img0}`,
+    imageAlt: 'Signature Safaris',
     safariTypes: [
       {
         name: '',
@@ -59,7 +63,8 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
-    image: false,
+    imageSrc: `${Img0}`,
+    imageAlt: 'Group and Incentive Travel',
     safariTypes: [
       {
         name: '',
@@ -75,7 +80,8 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
-    image: false,
+    imageSrc: `${Img0}`,
+    imageAlt: 'Camping Safaris',
     safariTypes: [
       {
         name: 'Standard Camping Safaris',
@@ -97,7 +103,8 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
-    image: false,
+    imageSrc: `${Img0}`,
+    imageAlt: 'Flying Safaris',
     safariTypes: [
       {
         name: '',
@@ -114,7 +121,8 @@ export const Safaris: Safari[] = [
     description:
       'Tanzania is home to the highest mountain in Africa – Mount Kilimanjaro (5895 metres), which is also the highest free-standing mountain in the world. Despite its height Kilimanjaro is one of the world’s most accessible high summits, with most climbers reaching the peak (Uhuru Peak) with little more than a walking stick, proper clothing and determination',
     status: true,
-    image: false,
+    imageSrc: `${Img0}`,
+    imageAlt: 'Mountain Climbing & Trekking',
     safariTypes: [
       {
         name: 'Mount Kilimanjaro',
@@ -146,7 +154,8 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
-    image: false,
+    imageSrc: `${Img0}`,
+    imageAlt: 'Cultural & Historical Tours',
     safariTypes: [
       {
         name: '',
@@ -162,7 +171,8 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
-    image: false,
+    imageSrc: `${Img0}`,
+    imageAlt: 'Zanzibar & Beach Holidays',
     safariTypes: [
       {
         name: '',
@@ -178,7 +188,8 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
-    image: false,
+    imageSrc: `${Img0}`,
+    imageAlt: 'Walking Safari',
     safariTypes: [
       {
         name: '',
@@ -194,7 +205,8 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
-    image: false,
+    imageSrc: `${Img0}`,
+    imageAlt: 'Boat Safaris',
     safariTypes: [
       {
         name: '',
@@ -210,23 +222,8 @@ export const Safaris: Safari[] = [
     price: '',
     description: '',
     status: true,
-    image: false,
-    safariTypes: [
-      {
-        name: '',
-        description: '',
-      },
-    ],
-  },
-  {
-    id: 12,
-    name: 'Walking Safari',
-    type: 'Walking Safari',
-    href: '',
-    price: '',
-    description: '',
-    status: true,
-    image: false,
+    imageSrc: `${Img0}`,
+    imageAlt: 'Balloon Safaris in Serengeti and Tarangire',
     safariTypes: [
       {
         name: '',
