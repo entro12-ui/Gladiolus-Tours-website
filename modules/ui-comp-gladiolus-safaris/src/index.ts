@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-gladiolus-safaris';
+export * from './lib/index';
