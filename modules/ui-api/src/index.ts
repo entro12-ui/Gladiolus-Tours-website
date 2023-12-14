@@ -1,1 +1,1 @@
-export * from './lib/ui-api';
+export * from './lib/index';
