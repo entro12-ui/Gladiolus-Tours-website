@@ -6,16 +6,14 @@ import {
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { classNames } from '@gladiolus/ui-utils';
 import { FORM_VALIDATION_OPTIONS_KW_USER_EMAIL } from '@gladiolus/ui-utils-form';
-
-interface IForm {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber: string;
-  message: string;
-}
+import { useQueryClient } from '@tanstack/react-query';
+import { IForm, useSendEmail } from '@gladiolus/ui-api';
 
 export const GladiolusToursContactBody = () => {
+  const queryClient = useQueryClient();
+  const { mutate } = useSendEmail(() => {
+    queryClient.invalidateQueries();
+  });
   const {
     register,
     handleSubmit,
@@ -24,6 +22,8 @@ export const GladiolusToursContactBody = () => {
 
   const onSubmit: SubmitHandler<IForm> = (data) => {
     console.log(data);
+    const response = mutate(data);
+    console.log(response);
   };
 
   return (
