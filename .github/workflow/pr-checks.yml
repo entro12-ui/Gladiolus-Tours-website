@@ -1,0 +1,14 @@
+name: Pull-Request-Checks
+run-name: Pull-Request-checks
+on:
+  issue_comment:
+    types: [ created ]
+jobs:
+  frontend-format-lint-build-unit-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: github.event.issue.pull_request && github.event.comment.body == '/test'
+    steps:
+      - name: Run affected NX targets for frontend
+        run: |
+          ./scripts/ci/frontend-format-lint-build-unit-test.sh
