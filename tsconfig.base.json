@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@gladiolus/ui-api": ["modules/ui-api/src/index.ts"],
       "@gladiolus/ui-comp-banner": ["modules/ui-comp-banner/src/index.ts"],
       "@gladiolus/ui-comp-chatbot": ["modules/ui-comp-chatbot/src/index.ts"],
       "@gladiolus/ui-comp-gladiolus-safaris": [
