@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-notifications';
+export * from './lib/index';
