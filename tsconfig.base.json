@@ -15,70 +15,70 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@gladiolus/ui-api": ["libs/modules/ui-api/src/index.ts"],
-      "@gladiolus/ui-comp-banner": ["libs/modules/ui-comp-banner/src/index.ts"],
+      "@gladiolus/ui-api": ["libs/ui-api/src/index.ts"],
+      "@gladiolus/ui-comp-banner": ["libs/ui-comp-banner/src/index.ts"],
       "@gladiolus/ui-comp-chatbot": [
-        "libs/modules/ui-comp-chatbot/src/index.ts"
+        "libs/ui-comp-chatbot/src/index.ts"
       ],
       "@gladiolus/ui-comp-gladiolus-safaris": [
-        "libs/modules/ui-comp-gladiolus-safaris/src/index.ts"
+        "libs/ui-comp-gladiolus-safaris/src/index.ts"
       ],
-      "@gladiolus/ui-comp-header": ["libs/modules/ui-comp-header/src/index.ts"],
-      "@gladiolus/ui-comp-images": ["libs/modules/ui-comp-images/src/index.ts"],
+      "@gladiolus/ui-comp-header": ["libs/ui-comp-header/src/index.ts"],
+      "@gladiolus/ui-comp-images": ["libs/ui-comp-images/src/index.ts"],
       "@gladiolus/ui-comp-notifications": [
-        "libs/modules/ui-comp-notifications/src/index.ts"
+        "libs/ui-comp-notifications/src/index.ts"
       ],
       "@gladiolus/ui-comp-page-helmet": [
-        "libs/modules/ui-comp-page-helmet/src/index.ts"
+        "libs/ui-comp-page-helmet/src/index.ts"
       ],
       "@gladiolus/ui-comp-router-lazy-fallback": [
-        "libs/modules/ui-comp-router-lazy-fallback/src/index.ts"
+        "libs/ui-comp-router-lazy-fallback/src/index.ts"
       ],
       "@gladiolus/ui-comp-scroll-to-top": [
-        "libs/modules/ui-comp-scroll-to-top/src/index.ts"
+        "libs/ui-comp-scroll-to-top/src/index.ts"
       ],
       "@gladiolus/ui-gladiolus-persistence": [
-        "libs/modules/ui-gladiolus-persistence/src/index.ts"
+        "libs/ui-gladiolus-persistence/src/index.ts"
       ],
-      "@gladiolus/ui-i18n": ["libs/modules/ui-i18n/src/index.ts"],
+      "@gladiolus/ui-i18n": ["libs/ui-i18n/src/index.ts"],
       "@gladiolus/ui-layout-gladiolus": [
-        "libs/modules/ui-layout-gladiolus/src/index.ts"
+        "libs/ui-layout-gladiolus/src/index.ts"
       ],
       "@gladiolus/ui-page-about-us": [
-        "libs/modules/ui-page-about-us/src/index.ts"
+        "libs/ui-page-about-us/src/index.ts"
       ],
       "@gladiolus/ui-page-accomodations": [
-        "libs/modules/ui-page-accomodations/src/index.ts"
+        "libs/ui-page-accomodations/src/index.ts"
       ],
       "@gladiolus/ui-page-contact": [
-        "libs/modules/ui-page-contact/src/index.ts"
+        "libs/ui-page-contact/src/index.ts"
       ],
       "@gladiolus/ui-page-destinations": [
-        "libs/modules/ui-page-destinations/src/index.ts"
+        "libs/ui-page-destinations/src/index.ts"
       ],
       "@gladiolus/ui-page-gladiolus-tours-error-404": [
-        "libs/modules/ui-page-gladiolus-tours-error-404/src/index.ts"
+        "libs/ui-page-gladiolus-tours-error-404/src/index.ts"
       ],
       "@gladiolus/ui-page-home-index": [
-        "libs/modules/ui-page-home-index/src/index.ts"
+        "libs/ui-page-home-index/src/index.ts"
       ],
       "@gladiolus/ui-page-itineraries": [
-        "libs/modules/ui-page-itineraries/src/index.ts"
+        "libs/ui-page-itineraries/src/index.ts"
       ],
       "@gladiolus/ui-page-safaris": [
-        "libs/modules/ui-page-safaris/src/index.ts"
+        "libs/ui-page-safaris/src/index.ts"
       ],
       "@gladiolus/ui-page-services": [
-        "libs/modules/ui-page-services/src/index.ts"
+        "libs/ui-page-services/src/index.ts"
       ],
       "@gladiolus/ui-router-gladiolus": [
-        "libs/modules/ui-router-gladiolus/src/index.ts"
+        "libs/ui-router-gladiolus/src/index.ts"
       ],
       "@gladiolus/ui-routes-gladiolus": [
-        "libs/modules/ui-routes-gladiolus/src/index.ts"
+        "libs/ui-routes-gladiolus/src/index.ts"
       ],
-      "@gladiolus/ui-utils": ["libs/modules/ui-utils/src/index.ts"],
-      "@gladiolus/ui-utils-form": ["libs/modules/ui-utils-form/src/index.ts"]
+      "@gladiolus/ui-utils": ["libs/ui-utils/src/index.ts"],
+      "@gladiolus/ui-utils-form": ["libs/ui-utils-form/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

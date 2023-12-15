@@ -1,0 +1,45 @@
+{
+  "name": "ui-comp-gladiolus-safaris",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui-comp-gladiolus-safaris/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ui-comp-gladiolus-safaris/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/modules/ui-comp-gladiolus-safaris",
+        "tsConfig": "libs/ui-comp-gladiolus-safaris/tsconfig.lib.json",
+        "project": "libs/ui-comp-gladiolus-safaris/package.json",
+        "entryFile": "libs/ui-comp-gladiolus-safaris/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/ui-comp-gladiolus-safaris/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/ui-comp-gladiolus-safaris/jest.config.ts"
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "ui-page-gladiolus-tours-error-404",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui-page-gladiolus-tours-error-404/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ui-page-gladiolus-tours-error-404/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/modules/ui-page-gladiolus-tours-error-404",
+        "tsConfig": "libs/ui-page-gladiolus-tours-error-404/tsconfig.lib.json",
+        "project": "libs/ui-page-gladiolus-tours-error-404/package.json",
+        "entryFile": "libs/ui-page-gladiolus-tours-error-404/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/ui-page-gladiolus-tours-error-404/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/ui-page-gladiolus-tours-error-404/jest.config.ts"
+      }
+    }
+  }
+}

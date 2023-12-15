@@ -5,5 +5,16 @@ const { withReact } = require('@nx/react');
 module.exports = composePlugins(withNx(), withReact(), (config) => {
   // Update the webpack config as needed here.
   // e.g. `config.plugins.push(new MyPlugin())`
-  return config;
+  const resourceAssets = {
+    test: /\.(webp)$/,
+    type: "asset/resource"
+  }
+
+  return {
+    ...config,
+    module: {
+      ...config.module,
+      rules: [...config.module.rules, resourceAssets]
+    }
+  }
 });
