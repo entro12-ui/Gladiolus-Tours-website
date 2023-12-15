@@ -1,0 +1,29 @@
+name: Release-To-Production
+run-name: Release-To-Production
+on:
+  issue_comment:
+    types: [ created ]
+jobs:
+  release-production:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@v1
+        with:
+          version: 2
+      - name: Check aws version
+        run: |
+          aws --version
+      - name: Configure AWS Credentials for 1) S3
+        run: |
+          mkdir -p ~/.aws
+          touch ~/.aws/credentials
+          echo "[s3-static-website-deployment]" >> ~/.aws/credentials
+          echo "region=af-south-1" >> ~/.aws/credentials
+          echo "aws_access_key_id = ${{ secrets. }}" >> ~/.aws/credentials
+          echo "aws_secret_access_key = ${{ secrets. }}" >> ~/.aws/credentials
+      - name: Release production to S3 bucket
+        run: |
+          ./scripts/cd/release-production.sh
