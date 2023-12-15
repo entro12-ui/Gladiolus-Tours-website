@@ -1,0 +1,33 @@
+{
+  "name": "e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/e2e/src",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/e2e/**/*.{js,ts}"]
+      }
+    },
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "gladiolus:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "gladiolus:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "gladiolus:serve-static"
+        }
+      }
+    }
+  },
+  "implicitDependencies": ["gladiolus"],
+  "tags": []
+}
