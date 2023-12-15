@@ -1,5 +1,5 @@
-name: Release-To-Production
-run-name: Release-To-Production
+name: release-to-production
+run-name: release-to-production
 on:
   issue_comment:
     types: [ created ]

@@ -1,5 +1,5 @@
-name: Pull-Request-Checks
-run-name: Pull-Request-checks
+name: pull-request-checks
+run-name: pull-request-checks
 on:
   issue_comment:
     types: [ created ]
