@@ -2,7 +2,7 @@ name: release-to-production
 run-name: release-to-production
 on:
   issue_comment:
-    types: [ created ]
+    types: [created]
 jobs:
   release-production:
     permissions: write-all

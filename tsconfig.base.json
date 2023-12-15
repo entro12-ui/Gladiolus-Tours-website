@@ -17,9 +17,7 @@
     "paths": {
       "@gladiolus/ui-api": ["libs/ui-api/src/index.ts"],
       "@gladiolus/ui-comp-banner": ["libs/ui-comp-banner/src/index.ts"],
-      "@gladiolus/ui-comp-chatbot": [
-        "libs/ui-comp-chatbot/src/index.ts"
-      ],
+      "@gladiolus/ui-comp-chatbot": ["libs/ui-comp-chatbot/src/index.ts"],
       "@gladiolus/ui-comp-gladiolus-safaris": [
         "libs/ui-comp-gladiolus-safaris/src/index.ts"
       ],
@@ -44,33 +42,23 @@
       "@gladiolus/ui-layout-gladiolus": [
         "libs/ui-layout-gladiolus/src/index.ts"
       ],
-      "@gladiolus/ui-page-about-us": [
-        "libs/ui-page-about-us/src/index.ts"
-      ],
+      "@gladiolus/ui-page-about-us": ["libs/ui-page-about-us/src/index.ts"],
       "@gladiolus/ui-page-accomodations": [
         "libs/ui-page-accomodations/src/index.ts"
       ],
-      "@gladiolus/ui-page-contact": [
-        "libs/ui-page-contact/src/index.ts"
-      ],
+      "@gladiolus/ui-page-contact": ["libs/ui-page-contact/src/index.ts"],
       "@gladiolus/ui-page-destinations": [
         "libs/ui-page-destinations/src/index.ts"
       ],
       "@gladiolus/ui-page-gladiolus-tours-error-404": [
         "libs/ui-page-gladiolus-tours-error-404/src/index.ts"
       ],
-      "@gladiolus/ui-page-home-index": [
-        "libs/ui-page-home-index/src/index.ts"
-      ],
+      "@gladiolus/ui-page-home-index": ["libs/ui-page-home-index/src/index.ts"],
       "@gladiolus/ui-page-itineraries": [
         "libs/ui-page-itineraries/src/index.ts"
       ],
-      "@gladiolus/ui-page-safaris": [
-        "libs/ui-page-safaris/src/index.ts"
-      ],
-      "@gladiolus/ui-page-services": [
-        "libs/ui-page-services/src/index.ts"
-      ],
+      "@gladiolus/ui-page-safaris": ["libs/ui-page-safaris/src/index.ts"],
+      "@gladiolus/ui-page-services": ["libs/ui-page-services/src/index.ts"],
       "@gladiolus/ui-router-gladiolus": [
         "libs/ui-router-gladiolus/src/index.ts"
       ],

@@ -7,14 +7,14 @@ module.exports = composePlugins(withNx(), withReact(), (config) => {
   // e.g. `config.plugins.push(new MyPlugin())`
   const resourceAssets = {
     test: /\.(webp)$/,
-    type: "asset/resource"
-  }
+    type: 'asset/resource',
+  };
 
   return {
     ...config,
     module: {
       ...config.module,
-      rules: [...config.module.rules, resourceAssets]
-    }
-  }
+      rules: [...config.module.rules, resourceAssets],
+    },
+  };
 });

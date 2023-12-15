@@ -9,9 +9,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/ui-comp-scroll-to-top/**/*.{ts,tsx,js,jsx}"
-        ]
+        "lintFilePatterns": ["libs/ui-comp-scroll-to-top/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "build": {

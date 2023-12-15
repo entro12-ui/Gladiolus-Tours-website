@@ -9,9 +9,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/ui-routes-gladiolus/**/*.{ts,tsx,js,jsx}"
-        ]
+        "lintFilePatterns": ["libs/ui-routes-gladiolus/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "build": {
