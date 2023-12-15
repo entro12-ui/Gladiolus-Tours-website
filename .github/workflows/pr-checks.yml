@@ -9,6 +9,14 @@ jobs:
     timeout-minutes: 30
     if: github.event.issue.pull_request && github.event.comment.body == '/test'
     steps:
+      - name: Get PR branch
+        uses: xt0rted/pull-request-comment-branch@v2
+        id: comment-branch
+      - name: Checkout PR branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
+          fetch-depth: 0 # fetch all branches for Nx
       - name: Run affected NX targets for frontend
         run: |
           ./scripts/ci/frontend-format-lint-build-unit-test.sh
