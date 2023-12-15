@@ -23,7 +23,7 @@
         "scripts": [],
         "isolatedConfig": true,
         "webpackConfig": "apps/gladiolus/webpack.config.js",
-        "postcssConfig": "postcss.config.js"
+        "postcssConfig": "apps/gladiolus/postcss.config.js"
       },
       "configurations": {
         "development": {
