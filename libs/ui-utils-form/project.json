@@ -1,6 +1,6 @@
 {
   "name": "ui-utils-form",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui-utils-form/src",
   "projectType": "library",
   "tags": [],

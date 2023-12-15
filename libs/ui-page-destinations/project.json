@@ -1,6 +1,6 @@
 {
   "name": "ui-page-destinations",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui-page-destinations/src",
   "projectType": "library",
   "tags": [],

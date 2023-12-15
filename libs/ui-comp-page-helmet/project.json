@@ -1,6 +1,6 @@
 {
   "name": "ui-comp-page-helmet",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui-comp-page-helmet/src",
   "projectType": "library",
   "tags": [],

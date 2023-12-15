@@ -1,6 +1,6 @@
 {
   "name": "ui-gladiolus-persistence",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui-gladiolus-persistence/src",
   "projectType": "library",
   "tags": [],

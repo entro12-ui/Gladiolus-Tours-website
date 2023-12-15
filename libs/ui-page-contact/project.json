@@ -1,6 +1,6 @@
 {
   "name": "ui-page-contact",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui-page-contact/src",
   "projectType": "library",
   "tags": [],

@@ -1,7 +1,7 @@
-export const GladiolusToursChatbot = () => {
+export const ToursChatBot = () => {
   return (
     <div>
-      <h1>Gladiolus Tours Chatbot</h1>
+      <h1>Gladiolus Tours Chat Bot</h1>
     </div>
   );
 };

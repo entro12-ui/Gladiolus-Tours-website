@@ -1,6 +1,6 @@
 {
   "name": "ui-page-itineraries",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui-page-itineraries/src",
   "projectType": "library",
   "tags": [],

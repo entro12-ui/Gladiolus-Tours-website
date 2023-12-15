@@ -1,6 +1,6 @@
 {
   "name": "ui-page-gladiolus-tours-error-404",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui-page-gladiolus-tours-error-404/src",
   "projectType": "library",
   "tags": [],

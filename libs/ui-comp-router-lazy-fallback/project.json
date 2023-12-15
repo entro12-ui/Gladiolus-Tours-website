@@ -1,6 +1,6 @@
 {
   "name": "ui-comp-router-lazy-fallback",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui-comp-router-lazy-fallback/src",
   "projectType": "library",
   "tags": [],

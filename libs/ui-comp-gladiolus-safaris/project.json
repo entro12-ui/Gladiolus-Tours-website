@@ -1,6 +1,6 @@
 {
   "name": "ui-comp-gladiolus-safaris",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui-comp-gladiolus-safaris/src",
   "projectType": "library",
   "tags": [],
