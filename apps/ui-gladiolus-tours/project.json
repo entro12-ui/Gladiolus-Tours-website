@@ -21,7 +21,8 @@
         ],
         "styles": ["apps/ui-gladiolus-tours/src/styles.css"],
         "scripts": [],
-        "webpackConfig": "apps/ui-gladiolus-tours/webpack.config.js"
+        "webpackConfig": "apps/ui-gladiolus-tours/webpack.config.js",
+        "postcssConfig": "apps/ui-gladiolus-tours/postcss.config.js"
       },
       "configurations": {
         "development": {
