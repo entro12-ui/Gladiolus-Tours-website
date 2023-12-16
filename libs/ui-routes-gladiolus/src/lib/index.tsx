@@ -1,14 +1,6 @@
-import styles from './ui-routes-gladiolus.module.css';
+import { generatePath, Navigate } from 'react-router-dom';
+import { GtToursRoute } from './routes';
 
-/* eslint-disable-next-line */
-export interface UiRoutesGladiolusProps {}
-
-export function Index(props: UiRoutesGladiolusProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiRoutesGladiolus!</h1>
-    </div>
-  );
-}
-
-export default Index;
+export const NotFoundRedirect = () => {
+  return <Navigate to={generatePath(GtToursRoute.NotFound)} />;
+};

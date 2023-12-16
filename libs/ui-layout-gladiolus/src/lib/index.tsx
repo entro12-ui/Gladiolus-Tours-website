@@ -1,14 +1,19 @@
-import styles from './ui-layout-gladiolus.module.css';
+import { ReactNode } from 'react';
+import { GladiolusHeader } from './navbar';
+import { GladiolusFooter } from './footer';
+import { GladiolusBanner } from '@collo/ui-comp-banner';
 
-/* eslint-disable-next-line */
-export interface UiLayoutGladiolusProps {}
-
-export function Index(props: UiLayoutGladiolusProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiLayoutGladiolus!</h1>
-    </div>
-  );
+interface Props {
+  children: ReactNode;
 }
 
-export default Index;
+export const UiGladiolusToursLayoutWebsite = ({ children }: Props) => {
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <GladiolusBanner />
+      <GladiolusHeader />
+      <div className={'min-h-screen'}>{children}</div>
+      <GladiolusFooter />
+    </div>
+  );
+};

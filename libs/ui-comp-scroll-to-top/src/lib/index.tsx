@@ -1,14 +1,10 @@
-import styles from './ui-comp-scroll-to-top.module.css';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
-/* eslint-disable-next-line */
-export interface UiCompScrollToTopProps {}
-
-export function Index(props: UiCompScrollToTopProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiCompScrollToTop!</h1>
-    </div>
-  );
-}
-
-export default Index;
+export const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};

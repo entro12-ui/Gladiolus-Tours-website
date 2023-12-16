@@ -1,14 +1,43 @@
-import styles from './ui-comp-page-helmet.module.css';
+import { Helmet } from 'react-helmet-async';
 
-/* eslint-disable-next-line */
-export interface UiCompPageHelmetProps {}
-
-export function Index(props: UiCompPageHelmetProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiCompPageHelmet!</h1>
-    </div>
-  );
+export interface PageHelmetProps {
+  title?: string;
+  titleTemplate?: string;
+  description?: string;
 }
 
-export default Index;
+const CorePageHelmet = ({
+                          title,
+                          titleTemplate,
+                          description,
+                        }: PageHelmetProps) => {
+  return (
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>
+        {title} - {titleTemplate}
+      </title>
+      <meta name="description" content={description} />
+    </Helmet>
+  );
+};
+
+export const EntryPageHelmet = (props: PageHelmetProps) => {
+  return <CorePageHelmet {...props} />;
+};
+
+EntryPageHelmet.defaultProps = {
+  title: 'Gladiolus Tours',
+  titleTemplate: 'Gladiolus Tours',
+  description: 'Gladiolus Tours',
+};
+
+export const ToursPageHelmet = (props: PageHelmetProps) => {
+  return <CorePageHelmet {...props} />;
+};
+
+ToursPageHelmet.defaultProps = {
+  title: 'Gladiolus Tours',
+  titleTemplate: 'Gladiolus Tours: Tour Operator',
+  description: 'Gladiolus Tours: Tour Operator',
+};
