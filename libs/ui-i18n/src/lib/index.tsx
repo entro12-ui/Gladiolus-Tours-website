@@ -1,14 +1,24 @@
-import styles from './ui-i18n.module.css';
+import i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import { initReactI18next } from 'react-i18next';
+import enTranslation from './locales/en.json';
+import esTranslation from './locales/es.json';
+import frTranslation from './locales/fr.json';
 
-/* eslint-disable-next-line */
-export interface UiI18nProps {}
+const resources = {
+  en: { translation: enTranslation },
+  es: { translation: esTranslation },
+  fr: { translation: frTranslation },
+};
 
-export function Index(props: UiI18nProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiI18n!</h1>
-    </div>
-  );
-}
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources,
+    fallbackLng: 'en',
+    debug: true,
+    interpolation: { escapeValue: false },
+  });
 
-export default Index;
+export default i18n;
