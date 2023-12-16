@@ -1,8 +1,5 @@
 import '../styles.css'
+import { UiRouterGladiolusTours } from '@collo/ui-router-gladiolus';
 export default function App() {
-  return (
-    <div>
-      <h1>On Development</h1>
-    </div>
-  );
+  return <UiRouterGladiolusTours/>
 }

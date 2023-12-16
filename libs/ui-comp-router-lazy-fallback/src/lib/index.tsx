@@ -1,14 +1,13 @@
-import styles from './ui-comp-router-lazy-fallback.module.css';
+import { InfinitySpin } from 'react-loader-spinner';
 
-/* eslint-disable-next-line */
-export interface UiCompRouterLazyFallbackProps {}
-
-export function Index(props: UiCompRouterLazyFallbackProps) {
+export const RouterLazyFallback = () => {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiCompRouterLazyFallback!</h1>
+    <div className="grid grid-cols-3 grid-rows-3 place-items-center h-screen">
+      <div className="col-start-2 row-start-2 ">
+        <div className={'bg-indigo-100 rounded-md'}>
+          <InfinitySpin width="200" color="#bda6fc" />
+        </div>
+      </div>
     </div>
   );
-}
-
-export default Index;
+};
