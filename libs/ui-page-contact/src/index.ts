@@ -1,1 +1,1 @@
-export * from './lib/ui-page-contact';
+export * from './lib';

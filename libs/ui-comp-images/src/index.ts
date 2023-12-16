@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-images';
+export * from './lib';

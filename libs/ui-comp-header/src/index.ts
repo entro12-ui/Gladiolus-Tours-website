@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-header';
+export * from './lib';

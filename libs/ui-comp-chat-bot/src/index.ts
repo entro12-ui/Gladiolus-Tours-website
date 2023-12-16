@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-chat-bot';
+export * from './lib/index';

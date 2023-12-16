@@ -1,1 +1,1 @@
-export * from './lib/ui-i18n';
+export * from './lib/index';

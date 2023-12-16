@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-safaris';
+export * from './lib/index';

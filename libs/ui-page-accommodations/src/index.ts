@@ -1,1 +1,1 @@
-export * from './lib/ui-page-accommodations';
+export * from './lib/index';

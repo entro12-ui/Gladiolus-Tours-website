@@ -1,1 +1,1 @@
-export * from './lib/ui-page-itineraries';
+export * from './lib/index';
