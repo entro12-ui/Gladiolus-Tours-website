@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@react-monorepo/ui-ai": ["libs/ui-ai/src/index.ts"]
+      "@collo/ui-ai": ["libs/ui-ai/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
