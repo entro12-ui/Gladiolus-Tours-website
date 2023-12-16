@@ -15,7 +15,27 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@collo/ui-ai": ["libs/ui-ai/src/index.ts"]
+      "@collo/ui-api": ["libs/ui-api/src/index.ts"],
+      "@collo/ui-comp-banner": ["libs/ui-comp-banner/src/index.ts"],
+      "@collo/ui-comp-chat-bot": ["libs/ui-comp-chat-bot/src/index.ts"],
+      "@collo/ui-comp-header": ["libs/ui-comp-header/src/index.ts"],
+      "@collo/ui-comp-images": ["libs/ui-comp-images/src/index.ts"],
+      "@collo/ui-comp-notifications": [
+        "libs/ui-comp-notifications/src/index.ts"
+      ],
+      "@collo/ui-comp-page-helmet": ["libs/ui-comp-page-helmet/src/index.ts"],
+      "@collo/ui-comp-router-lazy-fallback": [
+        "libs/ui-comp-router-lazy-fallback/src/index.ts"
+      ],
+      "@collo/ui-comp-safaris": ["libs/ui-comp-safaris/src/index.ts"],
+      "@collo/ui-comp-scroll-to-top": [
+        "libs/ui-comp-scroll-to-top/src/index.ts"
+      ],
+      "@collo/ui-i18n": ["libs/ui-i18n/src/index.ts"],
+      "@collo/ui-router-gladiolus": ["libs/ui-router-gladiolus/src/index.ts"],
+      "@collo/ui-routes-gladiolus": ["libs/ui-routes-gladiolus/src/index.ts"],
+      "@collo/ui-utils": ["libs/ui-utils/src/index.ts"],
+      "@collo/ui-utils-form": ["libs/ui-utils-form/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,5 +1,6 @@
+import "./styles.css";
 
-export const App = () => {
+export default function App() {
   return (
     <div>
       <h1>On Development</h1>
