@@ -1,14 +1,39 @@
-import styles from './ui-page-landing-page.module.css';
+import { EntryPageHelmet } from '@gladiolus/ui-comp-page-helmet';
+import { MainHero } from './hero';
+import { GladiolusSafaris } from './safaris';
+import { GladiolusTestimonials } from './testimonials';
+import { GladiolusTeam } from './team-sections';
+import { WhyGoWithGladiolus } from './services';
+import { GladiolusToursIncentives } from './incentives';
+import { GladiolusOverview } from './overview';
 
-/* eslint-disable-next-line */
-export interface UiPageLandingPageProps {}
-
-export function Index(props: UiPageLandingPageProps) {
+export const GladiolusLandingPage = () => {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiPageLandingPage!</h1>
+    <div className="bg-white">
+      <EntryPageHelmet title={'Home'} />
+      <main>
+        <div>
+          <MainHero />
+        </div>
+        <div>
+          <GladiolusOverview />
+        </div>
+        <div>
+          <GladiolusSafaris />
+        </div>
+        <div>
+          <WhyGoWithGladiolus />
+        </div>
+        <div>
+          <GladiolusTestimonials />
+        </div>
+        <div>
+          <GladiolusTeam />
+        </div>
+        <div>
+          <GladiolusToursIncentives />
+        </div>
+      </main>
     </div>
   );
-}
-
-export default Index;
+};
