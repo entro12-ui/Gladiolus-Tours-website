@@ -1,1 +1,2 @@
-export * from './lib/index';
+import { GladiolusToursErrorNotFoundPage } from './lib/index';
+export default GladiolusToursErrorNotFoundPage;
