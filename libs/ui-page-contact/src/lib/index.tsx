@@ -1,14 +1,18 @@
-import styles from './ui-page-contact.module.css';
+import { EntryPageHelmet } from '@collo/ui-comp-page-helmet';
+import { GladiolusHeaderSection } from '@collo/ui-comp-header';
+import { GladiolusToursContactBody } from './main';
 
-/* eslint-disable-next-line */
-export interface UiPageContactProps {}
-
-export function Index(props: UiPageContactProps) {
+export const GladiolusToursContactPage = () => {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiPageContact!</h1>
+    <div className="bg-white">
+      <EntryPageHelmet title={'Contact'} />
+      <GladiolusHeaderSection
+        header={'Contact'}
+        description={'Gladiolus Tours Contacts'}
+      />
+      <div>
+        <GladiolusToursContactBody />
+      </div>
     </div>
   );
-}
-
-export default Index;
+};
