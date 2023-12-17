@@ -15,7 +15,6 @@ export const GladiolusToursErrorNotFoundPage = () => {
           Sorry, we couldn’t find the page you’re looking for.
         </p>
         <div className="mt-10">
-          {/* eslint-disable-next-line react/jsx-no-undef */}
           <Link
             to={generatePath(GtToursRoute.Home)}
             className="text-sm font-semibold leading-7 text-indigo-600"

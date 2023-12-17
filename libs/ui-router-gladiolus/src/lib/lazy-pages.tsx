@@ -5,3 +5,8 @@ export const LazyLandingPage = loadable(
   () => import('@collo/ui-page-landing-page'),
   { fallback: <RouterLazyFallback /> }
 );
+
+export const LazyErrorNotFoundPage = loadable(
+  () => import('@collo/ui-page-error-404'),
+  { fallback: <RouterLazyFallback /> }
+);
