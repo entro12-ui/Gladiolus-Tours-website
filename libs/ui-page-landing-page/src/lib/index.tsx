@@ -1,4 +1,3 @@
-import { EntryPageHelmet } from '@gladiolus/ui-comp-page-helmet';
 import { MainHero } from './hero';
 import { GladiolusSafaris } from './safaris';
 import { GladiolusTestimonials } from './testimonials';
@@ -6,6 +5,7 @@ import { GladiolusTeam } from './team-sections';
 import { WhyGoWithGladiolus } from './services';
 import { GladiolusToursIncentives } from './incentives';
 import { GladiolusOverview } from './overview';
+import { EntryPageHelmet } from '@collo/ui-comp-page-helmet';
 
 export const GladiolusLandingPage = () => {
   return (

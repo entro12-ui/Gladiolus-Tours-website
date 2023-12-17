@@ -13,7 +13,11 @@ const overview: IStats[] = [
   { id: 4, name: 'Customized Tours', value: '10' },
 ];
 
-const Typewriter: React.FC<{ words: string[] }> = ({ words }) => {
+interface IWords {
+  words: string[]
+}
+
+const Typewriter = ({ words }: IWords) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [currentIndex, setCurrentIndex] = useState(0);

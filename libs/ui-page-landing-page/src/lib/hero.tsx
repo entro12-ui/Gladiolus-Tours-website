@@ -1,6 +1,6 @@
-import { GladiolusToursImage } from '@gladiolus/ui-comp-images';
+import { GladiolusToursImage } from '@collo/ui-comp-images';
 import { Link } from 'react-router-dom';
-import { GtToursRoute } from '@gladiolus/ui-routes-gladiolus';
+import { GtToursRoute } from '@collo/ui-routes-gladiolus';
 
 export const MainHero = () => {
   return (
