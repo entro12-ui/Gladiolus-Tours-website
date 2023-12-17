@@ -32,3 +32,8 @@ export const LazyContactPage = loadable(
   () => import('@collo/ui-page-contact'),
   { fallback: <RouterLazyFallback /> }
 );
+
+export const LazySafarisPage = loadable(
+  () => import('@collo/ui-page-safaris'),
+  { fallback: <RouterLazyFallback /> }
+);

@@ -1,14 +1,20 @@
-import styles from './ui-page-safaris.module.css';
+import { EntryPageHelmet } from '@collo/ui-comp-page-helmet';
+import { GladiolusHeaderSection } from '@collo/ui-comp-header';
+import { GladiolusSafaris } from '@collo/ui-comp-safaris';
 
-/* eslint-disable-next-line */
-export interface UiPageSafarisProps {}
-
-export function Index(props: UiPageSafarisProps) {
+export const GladiolusToursSafarisPage = () => {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiPageSafaris!</h1>
-    </div>
+    <>
+      <div className="bg-white">
+        <EntryPageHelmet title={'Safaris'} />
+        <GladiolusHeaderSection
+          header={'Safaris'}
+          description={'Safaris Offered by Gladiolus Tours'}
+        />
+      </div>
+      <div>
+        <GladiolusSafaris />
+      </div>
+    </>
   );
-}
-
-export default Index;
+};
