@@ -15,3 +15,10 @@ export const LazyAboutUsPage = loadable(
   () => import('@collo/ui-page-about-us'),
   { fallback: <RouterLazyFallback /> }
 );
+
+export const LazyAccommodationsPage = loadable(
+  () => import('@collo/ui-page-accommodations'),
+  {
+    fallback: <RouterLazyFallback />,
+  }
+);
