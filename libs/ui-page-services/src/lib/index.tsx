@@ -1,14 +1,14 @@
-import styles from './ui-page-services.module.css';
+import { EntryPageHelmet } from '@collo/ui-comp-page-helmet';
+import { GladiolusHeaderSection } from '@collo/ui-comp-header';
 
-/* eslint-disable-next-line */
-export interface UiPageServicesProps {}
-
-export function Index(props: UiPageServicesProps) {
+export const GladiolusService = () => {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiPageServices!</h1>
+    <div className="bg-white">
+      <EntryPageHelmet title={'Services'} />
+      <GladiolusHeaderSection
+        header={'Services'}
+        description={'Services Offered by Gladiolus Tours'}
+      />
     </div>
   );
-}
-
-export default Index;
+};

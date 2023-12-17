@@ -6,6 +6,7 @@ import {
   LazyAccommodationsPage,
   LazyErrorNotFoundPage,
   LazyLandingPage,
+  LazyServicePage,
 } from './lazy-pages';
 import { GtToursRoute } from '@collo/ui-routes-gladiolus';
 
@@ -35,6 +36,11 @@ export const GLADIOLUS_TOURS_ROUTE_TABLE = [
         path: GtToursRoute.Accommodation,
         index: true,
         element: <LazyAccommodationsPage />,
+      },
+      {
+        path: GtToursRoute.Service,
+        index: true,
+        element: <LazyServicePage />,
       },
       {
         path: '*',

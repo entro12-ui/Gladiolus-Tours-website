@@ -22,3 +22,8 @@ export const LazyAccommodationsPage = loadable(
     fallback: <RouterLazyFallback />,
   }
 );
+
+export const LazyServicePage = loadable(
+  () => import('@collo/ui-page-services'),
+  { fallback: <RouterLazyFallback /> }
+);
