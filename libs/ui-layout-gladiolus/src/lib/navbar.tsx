@@ -1,8 +1,13 @@
 import { GtToursRoute } from '@collo/ui-routes-gladiolus';
 import { Fragment, useState } from 'react';
-import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/20/solid';
+import {
+  Bars3Icon,
+  ChevronDownIcon,
+  XMarkIcon,
+} from '@heroicons/react/20/solid';
 import { Link } from 'react-router-dom';
 import { Dialog, Popover, Transition } from '@headlessui/react';
+import { Logo } from '@collo/ui-comp-logo';
 
 const navigation = [
   { name: 'Home', href: GtToursRoute.Home },
@@ -50,14 +55,9 @@ export const GladiolusHeader = () => {
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
-        <a href="#" className="-m-1.5 p-1.5">
-          <span className="sr-only">Your Company</span>
-          <img
-            className="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
-        </a>
+        <Link to={GtToursRoute.Home} className="-m-1.5 p-1.5">
+          <Logo style={{ width: '50%' }} className={'mx-auto'} />
+        </Link>
         <div className="flex lg:hidden">
           <button
             type="button"

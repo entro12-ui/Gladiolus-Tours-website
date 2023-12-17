@@ -1,6 +1,7 @@
 import Box from './images/Box.webp';
 import Customer_Loyalty from './images/Customer-Loyalty.webp';
 import Destination from './images/Destination.webp';
+import GtLogo from './images/GtLogo/192 X 192.webp';
 interface IIncentives {
   name: string;
   imageSrc: string;
@@ -46,8 +47,8 @@ export const GladiolusToursIncentives = () => {
             </div>
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
               <img
-                src="https://tailwindui.com/img/ecommerce-images/incentives-07-hero.jpg"
-                alt=""
+                src={GtLogo}
+                alt="Gladiolus Tours"
                 className="object-cover object-center"
               />
             </div>
