@@ -1,1 +1,3 @@
-export * from './lib/index';
+import { GladiolusDestinationsPage } from './lib/index';
+
+export default GladiolusDestinationsPage;

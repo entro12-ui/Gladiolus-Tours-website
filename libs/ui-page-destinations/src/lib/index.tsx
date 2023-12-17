@@ -1,14 +1,18 @@
-import styles from './ui-page-destinations.module.css';
+import { EntryPageHelmet } from '@collo/ui-comp-page-helmet';
+import { GladiolusHeaderSection } from '@collo/ui-comp-header';
+import { GladiolusToursDestinations } from './main';
 
-/* eslint-disable-next-line */
-export interface UiPageDestinationsProps {}
-
-export function Index(props: UiPageDestinationsProps) {
+export const GladiolusDestinationsPage = () => {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiPageDestinations!</h1>
+    <div className="bg-white">
+      <EntryPageHelmet title={'Destinations'} />
+      <GladiolusHeaderSection
+        header={'Destinations'}
+        description={'Destinations Offered by Gladiolus Tours'}
+      />
+      <div>
+        <GladiolusToursDestinations />
+      </div>
     </div>
   );
-}
-
-export default Index;
+};
