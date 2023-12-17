@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-logo';
+export * from './lib/index';
