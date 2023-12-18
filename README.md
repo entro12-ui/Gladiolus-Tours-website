@@ -7,7 +7,7 @@
 
 ## Start the app
 
-To start the development server run `nx serve ui-gladiolus-tours`. Open your browser and navigate to http://localhost:4200/. Happy coding!
+To start the development server run `npx nx serve ui-gladiolus-tours`. Open your browser and navigate to http://localhost:4200/. Happy coding!
 
 
 ## Generate code
@@ -46,7 +46,19 @@ Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provid
 
 ## Ready to deploy?
 
-Just run `nx build demoapp` to build the application. The build artifacts will be stored in the `dist/` directory, ready to be deployed.
+Just run `nx build {Application_Name}` to build the application. The build artifacts will be stored in the `dist/` directory, ready to be deployed.
+
+## Scaffold New App
+
+```
+npx nx g @nx/react:app {Application_Name} --directory=libs/{Application_Name} --dry-run
+```
+
+## Scaffold New Local Library
+
+```
+npx nx g @nx/react:library {Library_Name} --directory=libs/{Library_Name} --unitTestRunner=jest
+```
 
 ## Set up CI!
 
@@ -55,9 +67,3 @@ Nx comes with local caching already built-in (check your `nx.json`). On CI you m
 - [Set up remote caching](https://nx.dev/core-features/share-your-cache)
 - [Set up task distribution across multiple machines](https://nx.dev/nx-cloud/features/distribute-task-execution)
 - [Learn more how to setup CI](https://nx.dev/recipes/ci)
-
-## Connect with us!
-
-- [Join the community](https://nx.dev/community)
-- [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
-- [Follow us on Twitter](https://twitter.com/nxdevtools)
