@@ -1,0 +1,7 @@
+apply plugin: "base"
+apply from: rootProject.file('gradle/node-yarn.gradle')
+
+tasks.register("killAnyExistingNodeProcesses", Exec) {
+    commandLine "pkill", "-f", "-9", "node"
+    ignoreExitValue true
+}
