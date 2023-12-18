@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-status';
+export * from './lib/index';
