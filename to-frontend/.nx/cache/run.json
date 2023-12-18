@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx test ui-gladiolus-tours",
+    "startTime": "2023-12-18T09:55:47.500Z",
+    "endTime": "2023-12-18T09:55:53.907Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "ui-gladiolus-tours:test",
+      "target": "test",
+      "projectName": "ui-gladiolus-tours",
+      "hash": "2108890843633044381",
+      "startTime": "2023-12-18T09:55:47.509Z",
+      "endTime": "2023-12-18T09:55:53.907Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

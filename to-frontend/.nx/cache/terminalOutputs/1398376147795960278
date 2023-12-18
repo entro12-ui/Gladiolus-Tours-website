@@ -1,0 +1,248 @@
+
+[36m>[39m [7m[1m[36m NX [39m[22m[27m [1mWeb Development Server is listening at http://localhost:4200/[22m
+
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.4 MiB (3.09 MiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mvendor.js[39m[22m 2.24 MiB [1m[32mmain.css[39m[22m 27.4 KiB [1m[32mmain.js[39m[22m 82 KiB 4 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 488 KiB (583 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mstyles.css[39m[22m 27.4 KiB [1m[32mstyles.js[39m[22m 405 KiB 3 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m (main) 58.1 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 390 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (1f4d175c4d1c2a83)
+[32mNo errors found.[39m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.4 MiB (3.09 MiB) = 6 assets 6 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 489 KiB (583 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.1f4d175c4d1c2a83.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 27.4 KiB [1m[32mstyles.js[39m[22m 405 KiB [1m[32mstyles.1f4d175c4d1c2a83.hot-update.js[39m[22m 514 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.1f4d175c4d1c2a83.hot-update.js[39m[22m (main) 58.1 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.1f4d175c4d1c2a83.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32mstyles.1f4d175c4d1c2a83.hot-update.js[39m[22m (styles) 390 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (6a2ba3d356bdcadd)
+[32mNo errors found.[39m
+Entrypoint [1mmain[39m[22m = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32mruntime.6a2ba3d356bdcadd.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32mstyles.6a2ba3d356bdcadd.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.6a2ba3d356bdcadd.hot-update.js[39m[22m (main) 9.93 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.6a2ba3d356bdcadd.hot-update.js[39m[22m (runtime) 35 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32mstyles.6a2ba3d356bdcadd.hot-update.js[39m[22m (styles) 390 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m, [1m[32mvendor.6a2ba3d356bdcadd.hot-update.js[39m[22m (vendor) (id hint: vendor) 1.89 MiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m../../libs/ui-router-gladiolus/src/lib/route-table.tsx[39m[22m
+Module build failed (from ../../node_modules/@nx/webpack/src/utils/web-babel-loader.js):
+SyntaxError: /home/collo/org/Tourism/TheOddagen/libs/ui-router-gladiolus/src/lib/route-table.tsx: Unexpected token (28:6)
+
+[0m [90m 26 |[39m         index[33m:[39m [36mtrue[39m[33m,[39m[0m
+[0m [90m 27 |[39m         element[33m:[39m [33m<[39m[33mLazy[39m [33m/[39m[33m>[39m[33m,[39m[0m
+[0m[31m[1m>[22m[39m[90m 28 |[39m       {[0m
+[0m [90m    |[39m       [31m[1m^[22m[39m[0m
+[0m [90m 29 |[39m         path[33m:[39m [32m'*'[39m[33m,[39m[0m
+[0m [90m 30 |[39m         element[33m:[39m [33m<[39m[33mLazyErrorNotFoundPage[39m [33m/[39m[33m>[39m[33m,[39m[0m
+[0m [90m 31 |[39m       }[33m,[39m[0m
+    at constructor (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:356:19)
+    at TypeScriptParserMixin.raise (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:3223:19)
+    at TypeScriptParserMixin.unexpected (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:3253:16)
+    at TypeScriptParserMixin.parsePropertyName (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11858:18)
+    at TypeScriptParserMixin.parsePropertyDefinition (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11721:22)
+    at TypeScriptParserMixin.parseObjectLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11660:21)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11155:23)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:6932:20)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10857:23)
+    at TypeScriptParserMixin.parseUpdate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10840:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10816:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9696:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10654:61)
+    at TypeScriptParserMixin.parseExprOps (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10659:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10636:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10597:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9643:20)
+    at /home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:39
+    at TypeScriptParserMixin.allowInAnd (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:12284:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:17)
+    at TypeScriptParserMixin.parseExprListItem (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:12020:18)
+    at TypeScriptParserMixin.parseExprList (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11992:22)
+    at TypeScriptParserMixin.parseArrayLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11892:26)
+    at TypeScriptParserMixin.parseArrayLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9092:24)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11146:23)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:6932:20)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10857:23)
+    at TypeScriptParserMixin.parseUpdate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10840:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10816:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9696:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10654:61)
+    at TypeScriptParserMixin.parseExprOps (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10659:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10636:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10597:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9643:20)
+    at /home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:39
+    at TypeScriptParserMixin.allowInAnd (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:12284:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:17)
+    at TypeScriptParserMixin.parseObjectProperty (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11784:83)
+    at TypeScriptParserMixin.parseObjPropValue (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11811:100)
+    at TypeScriptParserMixin.parseObjPropValue (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9601:18)
+    at TypeScriptParserMixin.parsePropertyDefinition (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11745:17)
+    at TypeScriptParserMixin.parseObjectLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11660:21)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11155:23)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:6932:20)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10857:23)
+    at TypeScriptParserMixin.parseUpdate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10840:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10816:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9696:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10654:61)
+
+webpack compiled with [1m[31m1 error[39m[22m (a980a0471b5a829b)
+Found [31m[1m1 error[22m[39m in 2367 ms.
+Entrypoint [1mmain[39m[22m = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32mruntime.6a2ba3d356bdcadd.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32mstyles.6a2ba3d356bdcadd.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.6a2ba3d356bdcadd.hot-update.js[39m[22m (main) 9.93 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.6a2ba3d356bdcadd.hot-update.js[39m[22m (runtime) 35 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32mstyles.6a2ba3d356bdcadd.hot-update.js[39m[22m (styles) 390 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m, [1m[32mvendor.6a2ba3d356bdcadd.hot-update.js[39m[22m (vendor) (id hint: vendor) 1.89 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m../../libs/ui-router-gladiolus/src/lib/route-table.tsx[39m[22m
+Module build failed (from ../../node_modules/@nx/webpack/src/utils/web-babel-loader.js):
+SyntaxError: /home/collo/org/Tourism/TheOddagen/libs/ui-router-gladiolus/src/lib/route-table.tsx: Unexpected token (28:6)
+
+[0m [90m 26 |[39m         index[33m:[39m [36mtrue[39m[33m,[39m[0m
+[0m [90m 27 |[39m         element[33m:[39m [33m<[39m[33mLazy[39m [33m/[39m[33m>[39m[33m,[39m[0m
+[0m[31m[1m>[22m[39m[90m 28 |[39m       {[0m
+[0m [90m    |[39m       [31m[1m^[22m[39m[0m
+[0m [90m 29 |[39m         path[33m:[39m [32m'*'[39m[33m,[39m[0m
+[0m [90m 30 |[39m         element[33m:[39m [33m<[39m[33mLazyErrorNotFoundPage[39m [33m/[39m[33m>[39m[33m,[39m[0m
+[0m [90m 31 |[39m       }[33m,[39m[0m
+    at constructor (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:356:19)
+    at TypeScriptParserMixin.raise (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:3223:19)
+    at TypeScriptParserMixin.unexpected (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:3253:16)
+    at TypeScriptParserMixin.parsePropertyName (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11858:18)
+    at TypeScriptParserMixin.parsePropertyDefinition (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11721:22)
+    at TypeScriptParserMixin.parseObjectLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11660:21)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11155:23)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:6932:20)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10857:23)
+    at TypeScriptParserMixin.parseUpdate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10840:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10816:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9696:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10654:61)
+    at TypeScriptParserMixin.parseExprOps (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10659:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10636:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10597:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9643:20)
+    at /home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:39
+    at TypeScriptParserMixin.allowInAnd (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:12284:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:17)
+    at TypeScriptParserMixin.parseExprListItem (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:12020:18)
+    at TypeScriptParserMixin.parseExprList (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11992:22)
+    at TypeScriptParserMixin.parseArrayLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11892:26)
+    at TypeScriptParserMixin.parseArrayLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9092:24)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11146:23)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:6932:20)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10857:23)
+    at TypeScriptParserMixin.parseUpdate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10840:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10816:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9696:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10654:61)
+    at TypeScriptParserMixin.parseExprOps (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10659:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10636:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10597:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9643:20)
+    at /home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:39
+    at TypeScriptParserMixin.allowInAnd (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:12284:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:17)
+    at TypeScriptParserMixin.parseObjectProperty (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11784:83)
+    at TypeScriptParserMixin.parseObjPropValue (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11811:100)
+    at TypeScriptParserMixin.parseObjPropValue (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9601:18)
+    at TypeScriptParserMixin.parsePropertyDefinition (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11745:17)
+    at TypeScriptParserMixin.parseObjectLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11660:21)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11155:23)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:6932:20)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10857:23)
+    at TypeScriptParserMixin.parseUpdate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10840:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10816:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9696:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10654:61)
+
+webpack compiled with [1m[31m1 error[39m[22m (cb9eabf23985be41)
+[36mType-checking in progress...[39m
+Found [31m[1m1 error[22m[39m in 2072 ms.
+Entrypoint [1mmain[39m[22m = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32mruntime.6a2ba3d356bdcadd.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32mstyles.6a2ba3d356bdcadd.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.6a2ba3d356bdcadd.hot-update.js[39m[22m (main) 9.93 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.6a2ba3d356bdcadd.hot-update.js[39m[22m (runtime) 35 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32mstyles.6a2ba3d356bdcadd.hot-update.js[39m[22m (styles) 390 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m, [1m[32mvendor.6a2ba3d356bdcadd.hot-update.js[39m[22m (vendor) (id hint: vendor) 1.89 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m../../libs/ui-router-gladiolus/src/lib/route-table.tsx[39m[22m
+Module build failed (from ../../node_modules/@nx/webpack/src/utils/web-babel-loader.js):
+SyntaxError: /home/collo/org/Tourism/TheOddagen/libs/ui-router-gladiolus/src/lib/route-table.tsx: Unexpected token (28:6)
+
+[0m [90m 26 |[39m         index[33m:[39m [36mtrue[39m[33m,[39m[0m
+[0m [90m 27 |[39m         element[33m:[39m [33m<[39m[33mLazyAboutUsPage[39m [33m/[39m[33m>[39m[33m,[39m[0m
+[0m[31m[1m>[22m[39m[90m 28 |[39m       {[0m
+[0m [90m    |[39m       [31m[1m^[22m[39m[0m
+[0m [90m 29 |[39m         path[33m:[39m [32m'*'[39m[33m,[39m[0m
+[0m [90m 30 |[39m         element[33m:[39m [33m<[39m[33mLazyErrorNotFoundPage[39m [33m/[39m[33m>[39m[33m,[39m[0m
+[0m [90m 31 |[39m       }[33m,[39m[0m
+    at constructor (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:356:19)
+    at TypeScriptParserMixin.raise (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:3223:19)
+    at TypeScriptParserMixin.unexpected (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:3253:16)
+    at TypeScriptParserMixin.parsePropertyName (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11858:18)
+    at TypeScriptParserMixin.parsePropertyDefinition (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11721:22)
+    at TypeScriptParserMixin.parseObjectLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11660:21)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11155:23)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:6932:20)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10857:23)
+    at TypeScriptParserMixin.parseUpdate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10840:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10816:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9696:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10654:61)
+    at TypeScriptParserMixin.parseExprOps (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10659:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10636:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10597:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9643:20)
+    at /home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:39
+    at TypeScriptParserMixin.allowInAnd (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:12284:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:17)
+    at TypeScriptParserMixin.parseExprListItem (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:12020:18)
+    at TypeScriptParserMixin.parseExprList (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11992:22)
+    at TypeScriptParserMixin.parseArrayLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11892:26)
+    at TypeScriptParserMixin.parseArrayLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9092:24)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11146:23)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:6932:20)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10857:23)
+    at TypeScriptParserMixin.parseUpdate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10840:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10816:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9696:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10654:61)
+    at TypeScriptParserMixin.parseExprOps (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10659:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10636:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10597:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9643:20)
+    at /home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:39
+    at TypeScriptParserMixin.allowInAnd (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:12284:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10567:17)
+    at TypeScriptParserMixin.parseObjectProperty (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11784:83)
+    at TypeScriptParserMixin.parseObjPropValue (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11811:100)
+    at TypeScriptParserMixin.parseObjPropValue (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9601:18)
+    at TypeScriptParserMixin.parsePropertyDefinition (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11745:17)
+    at TypeScriptParserMixin.parseObjectLike (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11660:21)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:11155:23)
+    at TypeScriptParserMixin.parseExprAtom (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:6932:20)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10857:23)
+    at TypeScriptParserMixin.parseUpdate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10840:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10816:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:9696:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/collo/org/Tourism/TheOddagen/node_modules/@babel/parser/lib/index.js:10654:61)
+
+webpack compiled with [1m[31m1 error[39m[22m (3098aebcd3112608)
+[32mNo errors found.[39m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.41 MiB (3.09 MiB) = 6 assets 6 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 489 KiB (583 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.6a2ba3d356bdcadd.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 27.4 KiB [1m[32mstyles.js[39m[22m 405 KiB [1m[32mstyles.6a2ba3d356bdcadd.hot-update.js[39m[22m 514 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.6a2ba3d356bdcadd.hot-update.js[39m[22m (main) 58.7 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.6a2ba3d356bdcadd.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32mstyles.6a2ba3d356bdcadd.hot-update.js[39m[22m (styles) 390 KiB (javascript) 27.4 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (072a9af0d038b04a)
+[32mNo errors found.[39m

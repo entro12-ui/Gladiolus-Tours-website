@@ -1,0 +1,190 @@
+
+[36m>[39m [7m[1m[36m NX [39m[22m[27m [1mWeb Development Server is listening at http://localhost:4200/[22m
+
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.41 MiB (3.09 MiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mvendor.js[39m[22m 2.24 MiB [1m[32mmain.css[39m[22m 36.6 KiB [1m[32mmain.js[39m[22m 85.4 KiB 4 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 497 KiB (585 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB 3 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m (main) 59.9 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (016bc29fa9d54603)
+[32mNo errors found.[39m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.41 MiB (3.09 MiB) = 6 assets 6 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 498 KiB (586 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.016bc29fa9d54603.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB [1m[32mstyles.016bc29fa9d54603.hot-update.js[39m[22m 514 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.016bc29fa9d54603.hot-update.js[39m[22m (main) 59.9 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.016bc29fa9d54603.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32mstyles.016bc29fa9d54603.hot-update.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (6b94dcc24586891d)
+[32mNo errors found.[39m
+Entrypoint [1mmain[39m[22m = 6 assets 6 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32mruntime.6b94dcc24586891d.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32mstyles.6b94dcc24586891d.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.6b94dcc24586891d.hot-update.js[39m[22m (main) 60.3 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.6b94dcc24586891d.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32mstyles.6b94dcc24586891d.hot-update.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m../../libs/ui-router-gladiolus/src/lib/lazy-pages.tsx[39m[22m [1m[32m47:53-89[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '@gladiolus/ui-page-contact' in '/home/collo/org/Tourism/TheOddagen/libs/ui-router-gladiolus/src/lib'[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m (c4445208da213ad8)
+Found [31m[1m1 error[22m[39m in 2008 ms.
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.42 MiB (3.1 MiB) = 6 assets 6 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 498 KiB (586 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.6b94dcc24586891d.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB [1m[32mstyles.6b94dcc24586891d.hot-update.js[39m[22m 514 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-contact_src_index_ts.js[39m[22m 12.3 KiB (javascript) 3.78 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.6b94dcc24586891d.hot-update.js[39m[22m (main) 60.3 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.6b94dcc24586891d.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32mstyles.6b94dcc24586891d.hot-update.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (369c3a8326d99891)
+Found [31m[1m2 errors[22m[39m in 2267 ms.
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.41 MiB (3.09 MiB) = 6 assets 6 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 498 KiB (586 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.369c3a8326d99891.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB [1m[32mstyles.369c3a8326d99891.hot-update.js[39m[22m 514 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-contact_src_index_ts.js[39m[22m, [1m[32mlibs_ui-page-contact_src_index_ts.369c3a8326d99891.hot-update.js[39m[22m 1000 bytes [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.369c3a8326d99891.hot-update.js[39m[22m (main) 60.3 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.369c3a8326d99891.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32mstyles.369c3a8326d99891.hot-update.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (d3eb6cc7a5136df1)
+Found [31m[1m2 errors[22m[39m in 1863 ms.
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.41 MiB (3.09 MiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mvendor.js[39m[22m 2.24 MiB [1m[32mmain.css[39m[22m 36.6 KiB [1m[32mmain.js[39m[22m 86.1 KiB 4 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 497 KiB (585 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB 3 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-contact_src_index_ts.js[39m[22m 1000 bytes
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m (main) 60.3 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (d3eb6cc7a5136df1)
+Found [31m[1m2 errors[22m[39m in 570 ms.
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.41 MiB (3.09 MiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.d3eb6cc7a5136df1.hot-update.js[39m[22m 343 bytes [1m[32mvendor.js[39m[22m 2.24 MiB [1m[32mmain.css[39m[22m 36.6 KiB [1m[32mmain.js[39m[22m 86.1 KiB 5 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 497 KiB (586 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.d3eb6cc7a5136df1.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB 4 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-contact_src_index_ts.js[39m[22m, [1m[32mlibs_ui-page-contact_src_index_ts.d3eb6cc7a5136df1.hot-update.js[39m[22m, [1m[32mheader-image.webp[39m[22m 12.3 KiB (javascript) 3.78 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m (main) 60.3 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.d3eb6cc7a5136df1.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (4a55984dfdf7c8a7)
+Found [31m[1m1 error[22m[39m in 490 ms.
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.41 MiB (3.09 MiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.4a55984dfdf7c8a7.hot-update.js[39m[22m 343 bytes [1m[32mvendor.js[39m[22m 2.24 MiB [1m[32mmain.css[39m[22m 36.6 KiB [1m[32mmain.js[39m[22m 86.1 KiB 5 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 497 KiB (586 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.4a55984dfdf7c8a7.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB 4 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-contact_src_index_ts.js[39m[22m, [1m[32mlibs_ui-page-contact_src_index_ts.4a55984dfdf7c8a7.hot-update.js[39m[22m 12.3 KiB (javascript) 3.78 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m (main) 60.3 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.4a55984dfdf7c8a7.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (d2891eb2fea16147)
+Found [31m[1m1 error[22m[39m in 692 ms.
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.41 MiB (3.09 MiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.d2891eb2fea16147.hot-update.js[39m[22m 343 bytes [1m[32mvendor.js[39m[22m 2.24 MiB [1m[32mmain.css[39m[22m 36.6 KiB [1m[32mmain.js[39m[22m 86.1 KiB 5 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 497 KiB (586 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.d2891eb2fea16147.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB 4 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-contact_src_index_ts.js[39m[22m, [1m[32mlibs_ui-page-contact_src_index_ts.d2891eb2fea16147.hot-update.js[39m[22m 12.3 KiB (javascript) 3.78 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m (main) 60.3 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.d2891eb2fea16147.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (4bfabb4eefad6a5f)
+Found [31m[1m1 error[22m[39m in 287 ms.
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.5 MiB (3.18 MiB) = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 497 KiB (586 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.4bfabb4eefad6a5f.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB 4 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-contact_src_index_ts.js[39m[22m, [1m[32mlibs_ui-page-contact_src_index_ts.4bfabb4eefad6a5f.hot-update.js[39m[22m 44.3 KiB (javascript) 3.78 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.4bfabb4eefad6a5f.hot-update.js[39m[22m (main) 60.3 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.4bfabb4eefad6a5f.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m, [1m[32mvendor.4bfabb4eefad6a5f.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+chunk (runtime: runtime) [1m[32mvendors-node_modules_heroicons_react_24_outline_esm_BuildingOffice2Icon_js-node_modules_heroi-b5e441.js[39m[22m (id hint: vendors) 196 KiB [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: defaultVendors)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (6f288a23bf80a4c6)
+[32mNo errors found.[39m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.42 MiB (3.09 MiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.6f288a23bf80a4c6.hot-update.js[39m[22m 343 bytes [1m[32mvendor.js[39m[22m 2.24 MiB [1m[32mmain.css[39m[22m 36.6 KiB [1m[32mmain.js[39m[22m 86.3 KiB 5 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 497 KiB (586 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.6f288a23bf80a4c6.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB 4 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-contact_src_index_ts.js[39m[22m, [1m[32mlibs_ui-page-contact_src_index_ts.6f288a23bf80a4c6.hot-update.js[39m[22m 44.3 KiB (javascript) 3.78 MiB (asset) [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m (main) 60.3 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.6f288a23bf80a4c6.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+chunk (runtime: runtime) [1m[32mvendors-node_modules_heroicons_react_24_outline_esm_BuildingOffice2Icon_js-node_modules_heroi-b5e441.js[39m[22m (id hint: vendors) 196 KiB [1m[33msplit chunk (cache group: defaultVendors)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (189f887b00e8172e)
+[32mNo errors found.[39m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.42 MiB (3.1 MiB) = 6 assets 6 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 498 KiB (586 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.189f887b00e8172e.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB [1m[32mstyles.189f887b00e8172e.hot-update.js[39m[22m 514 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-contact_src_index_ts.js[39m[22m 44.3 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.189f887b00e8172e.hot-update.js[39m[22m (main) 60.5 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.189f887b00e8172e.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32mstyles.189f887b00e8172e.hot-update.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+chunk (runtime: runtime) [1m[32mvendors-node_modules_heroicons_react_24_outline_esm_BuildingOffice2Icon_js-node_modules_heroi-b5e441.js[39m[22m (id hint: vendors) 196 KiB [1m[33msplit chunk (cache group: defaultVendors)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (6d46f0bb0eb2552e)
+[32mNo errors found.[39m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.42 MiB (3.1 MiB) = 6 assets 6 auxiliary assets
+Entrypoint [1mstyles[39m[22m [1m[33m[big][39m[22m 498 KiB (586 KiB) = [1m[32mruntime.js[39m[22m 54.9 KiB [1m[32mruntime.6d46f0bb0eb2552e.hot-update.js[39m[22m 343 bytes [1m[32mstyles.css[39m[22m 36.6 KiB [1m[32mstyles.js[39m[22m 405 KiB [1m[32mstyles.6d46f0bb0eb2552e.hot-update.js[39m[22m 514 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mlibs_ui-page-about-us_src_index_ts.js[39m[22m 45.6 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-accommodations_src_index_ts.js[39m[22m 12.1 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-contact_src_index_ts.js[39m[22m 44.3 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-error-404_src_index_ts.js[39m[22m 8.46 KiB
+chunk (runtime: runtime) [1m[32mlibs_ui-page-landing-page_src_index_ts.js[39m[22m 67.3 KiB (javascript) 57 MiB (asset)
+chunk (runtime: runtime) [1m[32mlibs_ui-page-services_src_index_ts.js[39m[22m 12 KiB (javascript) 3.78 MiB (asset)
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32mmain.6d46f0bb0eb2552e.hot-update.js[39m[22m (main) 60.5 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32mruntime.6d46f0bb0eb2552e.hot-update.js[39m[22m (runtime) 37.1 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32mstyles.6d46f0bb0eb2552e.hot-update.js[39m[22m (styles) 390 KiB (javascript) 36.6 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.15 MiB [1m[33m[initial][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+chunk (runtime: runtime) [1m[32mvendors-node_modules_heroicons_react_24_outline_esm_BuildingOffice2Icon_js-node_modules_heroi-b5e441.js[39m[22m (id hint: vendors) 196 KiB [1m[33msplit chunk (cache group: defaultVendors)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (58900697e131cb75)
+[32mNo errors found.[39m

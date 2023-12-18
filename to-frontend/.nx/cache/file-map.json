@@ -1,0 +1,2189 @@
+{
+  "version": "6.0",
+  "nxVersion": "v17.2.5",
+  "deps": {
+    "@google-cloud/translate": "^8.0.2",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@loadable/component": "^5.15.3",
+    "@swc/helpers": "~0.5.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tanstack/react-query": "^4.10.3",
+    "@types/loadable__component": "^5.13.7",
+    "@types/react-notifications-component": "^3.1.4",
+    "axios": "^1.6.2",
+    "i18next": "^23.7.8",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "react": "18.2.0",
+    "react-chatbot-kit": "^2.1.2",
+    "react-dom": "18.2.0",
+    "react-helmet-async": "^1.3.0",
+    "react-hook-form": "^7.49.0",
+    "react-i18next": "^13.5.0",
+    "react-loader-spinner": "^6.1.0",
+    "react-notifications-component": "^3.1.4",
+    "react-router-dom": "^6.19.0",
+    "tailwindcss": "^3.3.5",
+    "tslib": "^2.3.0",
+    "@babel/core": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "@nx/cypress": "v17.2.5",
+    "@nx/eslint": "v17.2.5",
+    "@nx/eslint-plugin": "v17.2.5",
+    "@nx/jest": "v17.2.5",
+    "@nx/js": "v17.2.5",
+    "@nx/react": "v17.2.5",
+    "@nx/rollup": "v17.2.5",
+    "@nx/webpack": "v17.2.5",
+    "@nx/workspace": "v17.2.5",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+    "@rollup/plugin-url": "^7.0.0",
+    "@svgr/rollup": "^8.0.1",
+    "@svgr/webpack": "^8.0.1",
+    "@swc-node/register": "~1.6.7",
+    "@swc/cli": "~0.1.62",
+    "@swc/core": "~1.3.85",
+    "@testing-library/react": "14.0.0",
+    "@types/jest": "^29.4.0",
+    "@types/node": "18.16.9",
+    "@types/react": "18.2.33",
+    "@types/react-dom": "18.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "autoprefixer": "10.4.13",
+    "babel-jest": "^29.4.1",
+    "cypress": "^13.0.0",
+    "eslint": "~8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^2.13.4",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "nx": "v17.2.5",
+    "postcss": "8.4.21",
+    "prettier": "^2.6.2",
+    "react-refresh": "^0.10.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
+    "typescript": "~5.2.2",
+    "url-loader": "^4.1.1"
+  },
+  "pathMappings": {
+    "@collo/ui-api": [
+      "libs/ui-api/src/index.ts"
+    ],
+    "@collo/ui-comp-banner": [
+      "libs/ui-comp-banner/src/index.ts"
+    ],
+    "@collo/ui-comp-chat-bot": [
+      "libs/ui-comp-chat-bot/src/index.ts"
+    ],
+    "@collo/ui-comp-header": [
+      "libs/ui-comp-header/src/index.ts"
+    ],
+    "@collo/ui-comp-images": [
+      "libs/ui-comp-images/src/index.ts"
+    ],
+    "@collo/ui-comp-logo": [
+      "libs/ui-comp-logo/src/index.ts"
+    ],
+    "@collo/ui-comp-notifications": [
+      "libs/ui-comp-notifications/src/index.ts"
+    ],
+    "@collo/ui-comp-page-helmet": [
+      "libs/ui-comp-page-helmet/src/index.ts"
+    ],
+    "@collo/ui-comp-router-lazy-fallback": [
+      "libs/ui-comp-router-lazy-fallback/src/index.ts"
+    ],
+    "@collo/ui-comp-safaris": [
+      "libs/ui-comp-safaris/src/index.ts"
+    ],
+    "@collo/ui-comp-scroll-to-top": [
+      "libs/ui-comp-scroll-to-top/src/index.ts"
+    ],
+    "@collo/ui-comp-status": [
+      "libs/ui-comp-status/src/index.ts"
+    ],
+    "@collo/ui-i18n": [
+      "libs/ui-i18n/src/index.ts"
+    ],
+    "@collo/ui-layout-gladiolus": [
+      "libs/ui-layout-gladiolus/src/index.ts"
+    ],
+    "@collo/ui-page-about-us": [
+      "libs/ui-page-about-us/src/index.ts"
+    ],
+    "@collo/ui-page-accommodations": [
+      "libs/ui-page-accommodations/src/index.ts"
+    ],
+    "@collo/ui-page-contact": [
+      "libs/ui-page-contact/src/index.ts"
+    ],
+    "@collo/ui-page-destinations": [
+      "libs/ui-page-destinations/src/index.ts"
+    ],
+    "@collo/ui-page-error-404": [
+      "libs/ui-page-error-404/src/index.ts"
+    ],
+    "@collo/ui-page-itineraries": [
+      "libs/ui-page-itineraries/src/index.ts"
+    ],
+    "@collo/ui-page-landing-page": [
+      "libs/ui-page-landing-page/src/index.ts"
+    ],
+    "@collo/ui-page-safaris": [
+      "libs/ui-page-safaris/src/index.ts"
+    ],
+    "@collo/ui-page-services": [
+      "libs/ui-page-services/src/index.ts"
+    ],
+    "@collo/ui-persistance": [
+      "libs/ui-persistence/src/index.ts"
+    ],
+    "@collo/ui-router-gladiolus": [
+      "libs/ui-router-gladiolus/src/index.ts"
+    ],
+    "@collo/ui-routes-gladiolus": [
+      "libs/ui-routes-gladiolus/src/index.ts"
+    ],
+    "@collo/ui-utils": [
+      "libs/ui-utils/src/index.ts"
+    ],
+    "@collo/ui-utils-form": [
+      "libs/ui-utils-form/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "build.gradle",
+        "hash": "15761810539300636867"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
+      },
+      {
+        "file": ".github/workflows/pr-checks.yml",
+        "hash": "8905054784787466047"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": "scripts/ci/frontend-format-lint-build-unit-test.sh",
+        "hash": "3165485359899988156"
+      },
+      {
+        "file": "settings.gradle",
+        "hash": "5848704995483500373"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "16448050467312557263"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "461297063700806727"
+      },
+      {
+        "file": "package.json",
+        "hash": "10157181200857382858"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "3099236027013869492"
+      },
+      {
+        "file": "README.md",
+        "hash": "8130575753428791987"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "1141025437605289421"
+      },
+      {
+        "file": ".github/workflows/release-production.yml",
+        "hash": "5784803996114136538"
+      },
+      {
+        "file": "nx.json",
+        "hash": "5326617318473241777"
+      },
+      {
+        "file": "gradle/wrapper/gradle-wrapper.jar",
+        "hash": "16035346699462390754"
+      },
+      {
+        "file": "gradlew",
+        "hash": "6979324130797723579"
+      },
+      {
+        "file": "scripts/cd/release-production.sh",
+        "hash": "16530846440987444305"
+      },
+      {
+        "file": "gradlew.bat",
+        "hash": "8837338129170646035"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".gitattributes",
+        "hash": "14406647976364820401"
+      },
+      {
+        "file": "gradle/wrapper/gradle-wrapper.properties",
+        "hash": "17997227745157807406"
+      }
+    ],
+    "projectFileMap": {
+      "ui-page-services": [
+        {
+          "file": "libs/ui-page-services/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-services/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-services/README.md",
+          "hash": "15690998980920423925"
+        },
+        {
+          "file": "libs/ui-page-services/jest.config.ts",
+          "hash": "14844683458665124306"
+        },
+        {
+          "file": "libs/ui-page-services/package.json",
+          "hash": "5690875992322572266"
+        },
+        {
+          "file": "libs/ui-page-services/project.json",
+          "hash": "4231437010818681999"
+        },
+        {
+          "file": "libs/ui-page-services/src/index.ts",
+          "hash": "2681606295911889881"
+        },
+        {
+          "file": "libs/ui-page-services/src/lib/index.tsx",
+          "hash": "695513950717518012",
+          "deps": [
+            "ui-comp-page-helmet",
+            "ui-comp-header"
+          ]
+        },
+        {
+          "file": "libs/ui-page-services/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-services/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-services/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-i18n": [
+        {
+          "file": "libs/ui-i18n/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-i18n/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-i18n/README.md",
+          "hash": "1017914486167903239"
+        },
+        {
+          "file": "libs/ui-i18n/jest.config.ts",
+          "hash": "1680340628659068886"
+        },
+        {
+          "file": "libs/ui-i18n/package.json",
+          "hash": "11320476082123891796"
+        },
+        {
+          "file": "libs/ui-i18n/project.json",
+          "hash": "15779320743609453787"
+        },
+        {
+          "file": "libs/ui-i18n/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-i18n/src/lib/index.tsx",
+          "hash": "11341911728025055420",
+          "deps": [
+            "npm:i18next",
+            "npm:i18next-browser-languagedetector",
+            "npm:react-i18next"
+          ]
+        },
+        {
+          "file": "libs/ui-i18n/src/lib/locales/en.json",
+          "hash": "11777463938340860754"
+        },
+        {
+          "file": "libs/ui-i18n/src/lib/locales/es.json",
+          "hash": "9465409152705063874"
+        },
+        {
+          "file": "libs/ui-i18n/src/lib/locales/fr.json",
+          "hash": "17261469685566761339"
+        },
+        {
+          "file": "libs/ui-i18n/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-i18n/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-i18n/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-scroll-to-top": [
+        {
+          "file": "libs/ui-comp-scroll-to-top/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/README.md",
+          "hash": "2500598793807970004"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/jest.config.ts",
+          "hash": "6894402957572070001"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/package.json",
+          "hash": "2352401623203458467"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/project.json",
+          "hash": "7293566032810867795"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/src/lib/index.tsx",
+          "hash": "17937757252694066628",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-banner": [
+        {
+          "file": "libs/ui-comp-banner/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-banner/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-banner/README.md",
+          "hash": "4908622100162720014"
+        },
+        {
+          "file": "libs/ui-comp-banner/jest.config.ts",
+          "hash": "15745426977988696929"
+        },
+        {
+          "file": "libs/ui-comp-banner/package.json",
+          "hash": "6981527180774311013"
+        },
+        {
+          "file": "libs/ui-comp-banner/project.json",
+          "hash": "12429142650980657751"
+        },
+        {
+          "file": "libs/ui-comp-banner/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-banner/src/lib/index.tsx",
+          "hash": "9676171080456034124",
+          "deps": [
+            "npm:@heroicons/react",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-banner/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-banner/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-banner/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-status": [
+        {
+          "file": "libs/ui-comp-status/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-status/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-status/README.md",
+          "hash": "6582286878615926715"
+        },
+        {
+          "file": "libs/ui-comp-status/jest.config.ts",
+          "hash": "13473179359725555208"
+        },
+        {
+          "file": "libs/ui-comp-status/package.json",
+          "hash": "18048606213610949738"
+        },
+        {
+          "file": "libs/ui-comp-status/project.json",
+          "hash": "13547343733612019449"
+        },
+        {
+          "file": "libs/ui-comp-status/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-status/src/lib/ui-status.spec.tsx",
+          "hash": "8540029762651097600",
+          "deps": [
+            "npm:@testing-library/react",
+            "npm:@testing-library/jest-dom"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-status/src/lib/ui-status.tsx",
+          "hash": "8242552775399413512",
+          "deps": [
+            "ui-utils"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-status/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-status/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-status/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-safaris": [
+        {
+          "file": "libs/ui-page-safaris/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-safaris/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-safaris/README.md",
+          "hash": "5003648258178001020"
+        },
+        {
+          "file": "libs/ui-page-safaris/jest.config.ts",
+          "hash": "14696023950841269362"
+        },
+        {
+          "file": "libs/ui-page-safaris/package.json",
+          "hash": "17374258286175510658"
+        },
+        {
+          "file": "libs/ui-page-safaris/project.json",
+          "hash": "14393005016923181828"
+        },
+        {
+          "file": "libs/ui-page-safaris/src/index.ts",
+          "hash": "4310530692465930868"
+        },
+        {
+          "file": "libs/ui-page-safaris/src/lib/index.tsx",
+          "hash": "14410800626883867057",
+          "deps": [
+            "ui-comp-page-helmet",
+            "ui-comp-header",
+            "ui-comp-safaris"
+          ]
+        },
+        {
+          "file": "libs/ui-page-safaris/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-safaris/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-safaris/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-logo": [
+        {
+          "file": "libs/ui-comp-logo/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-logo/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-logo/README.md",
+          "hash": "16412194503063605964"
+        },
+        {
+          "file": "libs/ui-comp-logo/jest.config.ts",
+          "hash": "17022910694781008546"
+        },
+        {
+          "file": "libs/ui-comp-logo/package.json",
+          "hash": "11973801702796309209"
+        },
+        {
+          "file": "libs/ui-comp-logo/project.json",
+          "hash": "13749770199389450633"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/images/192 X 192.webp",
+          "hash": "17450855734345048293"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/images/400 X 400.webp",
+          "hash": "11569914532395058039"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/images/500 X 500.webp",
+          "hash": "1459212749559436217"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/images/672 X 234.webp",
+          "hash": "16185507115590355545"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/images/888 X 499.webp",
+          "hash": "17279780054071903186"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/index.tsx",
+          "hash": "2652759754628249786",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-logo/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-logo/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-logo/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-landing-page": [
+        {
+          "file": "libs/ui-page-landing-page/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-landing-page/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-landing-page/README.md",
+          "hash": "9698525991843523808"
+        },
+        {
+          "file": "libs/ui-page-landing-page/jest.config.ts",
+          "hash": "3820470531015011490"
+        },
+        {
+          "file": "libs/ui-page-landing-page/package.json",
+          "hash": "3297906649171940841"
+        },
+        {
+          "file": "libs/ui-page-landing-page/project.json",
+          "hash": "7483709677332514421"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/index.ts",
+          "hash": "2659711717692480837"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/hero.tsx",
+          "hash": "8336710929649960071",
+          "deps": [
+            "ui-comp-images",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus"
+          ]
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Box.webp",
+          "hash": "1873979285283710165"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Customer-Loyalty.webp",
+          "hash": "15898661729117098244"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Destination.webp",
+          "hash": "5557479420145913851"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/GtLogo/192 X 192.webp",
+          "hash": "17450855734345048293"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/GtLogo/400 X 400.webp",
+          "hash": "11569914532395058039"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/GtLogo/500 X 500.webp",
+          "hash": "1459212749559436217"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/GtLogo/672 X 234.webp",
+          "hash": "16185507115590355545"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/GtLogo/888 X 499.webp",
+          "hash": "17279780054071903186"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Mountain-Sunrise.webp",
+          "hash": "13634852122610290248"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Ngorongoro-Green-View.webp",
+          "hash": "16728564788792733684"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Sunrise.webp",
+          "hash": "12311969117181154544"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Team-Anonymous-pillars.webp",
+          "hash": "4357715187407011999"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Visitors_And_Giraffes.webp",
+          "hash": "3183632566635722814"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Walking.webp",
+          "hash": "15351842618498401831"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Waterfall.webp",
+          "hash": "4067858202672009395"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Zanzibar.webp",
+          "hash": "17369879517520090565"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/incentives.tsx",
+          "hash": "16936351302483791428"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/index.tsx",
+          "hash": "10243148513038523955",
+          "deps": [
+            "ui-comp-page-helmet"
+          ]
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/overview.tsx",
+          "hash": "5837656531939070232",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/safaris.tsx",
+          "hash": "8363564679576882638"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/services.tsx",
+          "hash": "11097367071113529653"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/team-sections.tsx",
+          "hash": "16730455792860277294"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/testimonials.tsx",
+          "hash": "14417896930328270946"
+        },
+        {
+          "file": "libs/ui-page-landing-page/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-landing-page/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-landing-page/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-header": [
+        {
+          "file": "libs/ui-comp-header/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-header/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-header/README.md",
+          "hash": "13260194583170882252"
+        },
+        {
+          "file": "libs/ui-comp-header/jest.config.ts",
+          "hash": "634600509606122786"
+        },
+        {
+          "file": "libs/ui-comp-header/package.json",
+          "hash": "13527600169936829131"
+        },
+        {
+          "file": "libs/ui-comp-header/project.json",
+          "hash": "11749247699786536086"
+        },
+        {
+          "file": "libs/ui-comp-header/src/index.ts",
+          "hash": "14428353282588746736"
+        },
+        {
+          "file": "libs/ui-comp-header/src/lib/images/header-image.webp",
+          "hash": "10594384767581103540"
+        },
+        {
+          "file": "libs/ui-comp-header/src/lib/index.tsx",
+          "hash": "15353471955766940968"
+        },
+        {
+          "file": "libs/ui-comp-header/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-header/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-header/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-gladiolus-tours-e2e": [
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/.eslintrc.json",
+          "hash": "14060216369337943343"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/cypress.config.ts",
+          "hash": "12586416982398116375",
+          "deps": [
+            "npm:@nx/cypress/plugins/cypress-preset",
+            "npm:cypress"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/project.json",
+          "hash": "16140486819826152241"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/src/e2e/app.cy.ts",
+          "hash": "11665767942881401089"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/src/fixtures/example.json",
+          "hash": "11785586596216172004"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/src/support/commands.ts",
+          "hash": "5397443931564808659"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/src/support/e2e.ts",
+          "hash": "1054106023200826784"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/tsconfig.json",
+          "hash": "10740392072068377465"
+        }
+      ],
+      "ui-page-destinations": [
+        {
+          "file": "libs/ui-page-destinations/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-destinations/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-destinations/README.md",
+          "hash": "9062185518788434841"
+        },
+        {
+          "file": "libs/ui-page-destinations/jest.config.ts",
+          "hash": "2634517938759263276"
+        },
+        {
+          "file": "libs/ui-page-destinations/package.json",
+          "hash": "5295328947251148039"
+        },
+        {
+          "file": "libs/ui-page-destinations/project.json",
+          "hash": "7845942737015598743"
+        },
+        {
+          "file": "libs/ui-page-destinations/src/index.ts",
+          "hash": "15604300984608585393"
+        },
+        {
+          "file": "libs/ui-page-destinations/src/lib/index.tsx",
+          "hash": "3734850021288615743",
+          "deps": [
+            "ui-comp-page-helmet",
+            "ui-comp-header"
+          ]
+        },
+        {
+          "file": "libs/ui-page-destinations/src/lib/main.tsx",
+          "hash": "1298563852203435784",
+          "deps": [
+            "ui-persistance"
+          ]
+        },
+        {
+          "file": "libs/ui-page-destinations/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-destinations/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-destinations/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-api": [
+        {
+          "file": "libs/ui-api/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-api/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-api/README.md",
+          "hash": "13047988405604545017"
+        },
+        {
+          "file": "libs/ui-api/jest.config.ts",
+          "hash": "6997849854409942234"
+        },
+        {
+          "file": "libs/ui-api/package.json",
+          "hash": "17743220518808420758"
+        },
+        {
+          "file": "libs/ui-api/project.json",
+          "hash": "4728606463280814579"
+        },
+        {
+          "file": "libs/ui-api/src/index.ts",
+          "hash": "482222558236598012"
+        },
+        {
+          "file": "libs/ui-api/src/lib/index.tsx",
+          "hash": "9901835747260345790",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "libs/ui-api/src/lib/mutations.tsx",
+          "hash": "7169398514245296852",
+          "deps": [
+            "npm:@tanstack/react-query"
+          ]
+        },
+        {
+          "file": "libs/ui-api/src/lib/query.tsx",
+          "hash": "5396672589363382073"
+        },
+        {
+          "file": "libs/ui-api/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-api/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-api/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-persistance": [
+        {
+          "file": "libs/ui-persistence/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-persistence/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-persistence/README.md",
+          "hash": "10191183609284510858"
+        },
+        {
+          "file": "libs/ui-persistence/jest.config.ts",
+          "hash": "9056084064658556746"
+        },
+        {
+          "file": "libs/ui-persistence/package.json",
+          "hash": "5055326284281333798"
+        },
+        {
+          "file": "libs/ui-persistence/project.json",
+          "hash": "3647138159162824472"
+        },
+        {
+          "file": "libs/ui-persistence/src/index.ts",
+          "hash": "14456067030085574976"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/accomodations.ts",
+          "hash": "15840917244545915359"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/culturalActivities.ts",
+          "hash": "9081980231770524721",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/destinations.ts",
+          "hash": "12420099578096830444"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/chilling.webp",
+          "hash": "16644746236367976571"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/cross-over_bridge.webp",
+          "hash": "12796984883282896608"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/elephant.webp",
+          "hash": "2135062303323275943"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/giraffe.webp",
+          "hash": "10462309614638333411"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/giraffes.webp",
+          "hash": "9569284837791291826"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/gladiolus.webp",
+          "hash": "12760263655028331568"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/green_mountain.webp",
+          "hash": "12346397745701958573"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/machame_gate.webp",
+          "hash": "17293921081424227755"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/mount_kilimanjaro.webp",
+          "hash": "3262116218825509605"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/mount_oldonyo_lengai.webp",
+          "hash": "8777544259324445449"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/mountain_cold.webp",
+          "hash": "10569732722150390605"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/mountain_journey.webp",
+          "hash": "4389243549023363745"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/ngorongoro_gate.webp",
+          "hash": "4776279695962913928"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/old_man.webp",
+          "hash": "3128033774334044134"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/sunrise.webp",
+          "hash": "15778588525158873385"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/sunrise_hand.webp",
+          "hash": "17409852800201390312"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/team.webp",
+          "hash": "9974836470360498787"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/itinerary.ts",
+          "hash": "399391761335723773",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/safaris.ts",
+          "hash": "8468799440593997938"
+        },
+        {
+          "file": "libs/ui-persistence/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-persistence/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-persistence/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-routes-gladiolus": [
+        {
+          "file": "libs/ui-routes-gladiolus/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/README.md",
+          "hash": "11732572138960611563"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/jest.config.ts",
+          "hash": "15049907118369323335"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/package.json",
+          "hash": "100085815848628292"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/project.json",
+          "hash": "8445614894240821291"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/src/index.ts",
+          "hash": "9505106575944403756"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/src/lib/index.tsx",
+          "hash": "8157238789585637613",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/src/lib/route-parameter-hooks.ts",
+          "hash": "674869813173101463",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/src/lib/routes.ts",
+          "hash": "15916737053571100578"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-page-helmet": [
+        {
+          "file": "libs/ui-comp-page-helmet/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/README.md",
+          "hash": "16565907895805537469"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/jest.config.ts",
+          "hash": "13777987115481094142"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/package.json",
+          "hash": "16208215985831469460"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/project.json",
+          "hash": "17048099164109540360"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/src/lib/index.tsx",
+          "hash": "364081668730276808",
+          "deps": [
+            "npm:react-helmet-async"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-router-gladiolus": [
+        {
+          "file": "libs/ui-router-gladiolus/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/README.md",
+          "hash": "6193847315711947401"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/jest.config.ts",
+          "hash": "5712545805973665638"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/package.json",
+          "hash": "12050218784274375959"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/project.json",
+          "hash": "12616870308587095206"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/src/index.ts",
+          "hash": "11520655071739251408"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/src/lib/lazy-pages.tsx",
+          "hash": "8759046311989733120",
+          "deps": [
+            "npm:@loadable/component",
+            "ui-comp-router-lazy-fallback",
+            [
+              "ui-page-landing-page",
+              "dynamic"
+            ],
+            [
+              "ui-page-error-404",
+              "dynamic"
+            ],
+            [
+              "ui-page-about-us",
+              "dynamic"
+            ],
+            [
+              "ui-page-accommodations",
+              "dynamic"
+            ],
+            [
+              "ui-page-services",
+              "dynamic"
+            ],
+            [
+              "ui-page-contact",
+              "dynamic"
+            ],
+            [
+              "ui-page-safaris",
+              "dynamic"
+            ],
+            [
+              "ui-page-destinations",
+              "dynamic"
+            ],
+            [
+              "ui-page-itineraries",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "libs/ui-router-gladiolus/src/lib/route-table.tsx",
+          "hash": "695822687587454002",
+          "deps": [
+            "npm:react-router-dom",
+            "ui-comp-scroll-to-top",
+            "ui-layout-gladiolus",
+            "ui-routes-gladiolus"
+          ]
+        },
+        {
+          "file": "libs/ui-router-gladiolus/src/lib/router.tsx",
+          "hash": "7419997702429883310",
+          "deps": [
+            "npm:@tanstack/react-query",
+            "npm:react-router-dom",
+            "npm:react-helmet-async",
+            "ui-utils"
+          ]
+        },
+        {
+          "file": "libs/ui-router-gladiolus/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-safaris": [
+        {
+          "file": "libs/ui-comp-safaris/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-safaris/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-safaris/README.md",
+          "hash": "525528569234810327"
+        },
+        {
+          "file": "libs/ui-comp-safaris/jest.config.ts",
+          "hash": "606029351737764843"
+        },
+        {
+          "file": "libs/ui-comp-safaris/package.json",
+          "hash": "315039228031543366"
+        },
+        {
+          "file": "libs/ui-comp-safaris/project.json",
+          "hash": "4392104756228137160"
+        },
+        {
+          "file": "libs/ui-comp-safaris/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-safaris/src/lib/index.tsx",
+          "hash": "7737585026649247769",
+          "deps": [
+            "ui-persistance",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-safaris/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-safaris/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-safaris/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-accommodations": [
+        {
+          "file": "libs/ui-page-accommodations/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-accommodations/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-accommodations/README.md",
+          "hash": "11385439705639615246"
+        },
+        {
+          "file": "libs/ui-page-accommodations/jest.config.ts",
+          "hash": "4670583305088829602"
+        },
+        {
+          "file": "libs/ui-page-accommodations/package.json",
+          "hash": "1415971717568120034"
+        },
+        {
+          "file": "libs/ui-page-accommodations/project.json",
+          "hash": "4035637472728159419"
+        },
+        {
+          "file": "libs/ui-page-accommodations/src/index.ts",
+          "hash": "13791878416288884841"
+        },
+        {
+          "file": "libs/ui-page-accommodations/src/lib/index.tsx",
+          "hash": "11736292985695109630",
+          "deps": [
+            "ui-comp-page-helmet",
+            "ui-comp-header"
+          ]
+        },
+        {
+          "file": "libs/ui-page-accommodations/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-accommodations/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-accommodations/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-itineraries": [
+        {
+          "file": "libs/ui-page-itineraries/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-itineraries/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-itineraries/README.md",
+          "hash": "16137781298152754550"
+        },
+        {
+          "file": "libs/ui-page-itineraries/jest.config.ts",
+          "hash": "12940952760408693630"
+        },
+        {
+          "file": "libs/ui-page-itineraries/package.json",
+          "hash": "745190156877279828"
+        },
+        {
+          "file": "libs/ui-page-itineraries/project.json",
+          "hash": "10061873378553309772"
+        },
+        {
+          "file": "libs/ui-page-itineraries/src/index.ts",
+          "hash": "10081383661571802480"
+        },
+        {
+          "file": "libs/ui-page-itineraries/src/lib/index.tsx",
+          "hash": "10880876591852933650"
+        },
+        {
+          "file": "libs/ui-page-itineraries/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-itineraries/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-itineraries/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-chat-bot": [
+        {
+          "file": "libs/ui-comp-chat-bot/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/README.md",
+          "hash": "12450617905102091877"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/jest.config.ts",
+          "hash": "14011790291863987533"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/package.json",
+          "hash": "1645629285616278972"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/project.json",
+          "hash": "13957268814996264447"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/src/lib/index.tsx",
+          "hash": "13976126547435111531"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-utils": [
+        {
+          "file": "libs/ui-utils/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-utils/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-utils/README.md",
+          "hash": "2706552009264497341"
+        },
+        {
+          "file": "libs/ui-utils/jest.config.ts",
+          "hash": "14827086550239241779"
+        },
+        {
+          "file": "libs/ui-utils/package.json",
+          "hash": "14639469518456751379"
+        },
+        {
+          "file": "libs/ui-utils/project.json",
+          "hash": "1726060423977309926"
+        },
+        {
+          "file": "libs/ui-utils/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-utils/src/lib/index.ts",
+          "hash": "11732518008817615863"
+        },
+        {
+          "file": "libs/ui-utils/src/lib/persistence-hooks.ts",
+          "hash": "15975873544304792704",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "libs/ui-utils/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-utils/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-utils/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-notifications": [
+        {
+          "file": "libs/ui-comp-notifications/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-notifications/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-notifications/README.md",
+          "hash": "16291847497683733904"
+        },
+        {
+          "file": "libs/ui-comp-notifications/jest.config.ts",
+          "hash": "10621269050250298570"
+        },
+        {
+          "file": "libs/ui-comp-notifications/package.json",
+          "hash": "14468094104801043553"
+        },
+        {
+          "file": "libs/ui-comp-notifications/project.json",
+          "hash": "10608635496576496876"
+        },
+        {
+          "file": "libs/ui-comp-notifications/src/index.ts",
+          "hash": "14428353282588746736"
+        },
+        {
+          "file": "libs/ui-comp-notifications/src/lib/index.tsx",
+          "hash": "2587422013495833532",
+          "deps": [
+            "npm:react-notifications-component"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-notifications/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-notifications/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-notifications/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-images": [
+        {
+          "file": "libs/ui-comp-images/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-images/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-images/README.md",
+          "hash": "5793385573362252241"
+        },
+        {
+          "file": "libs/ui-comp-images/jest.config.ts",
+          "hash": "6225849570142631772"
+        },
+        {
+          "file": "libs/ui-comp-images/package.json",
+          "hash": "3794754489213924585"
+        },
+        {
+          "file": "libs/ui-comp-images/project.json",
+          "hash": "16441071250416278267"
+        },
+        {
+          "file": "libs/ui-comp-images/src/index.ts",
+          "hash": "14428353282588746736"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/buffalo.webp",
+          "hash": "12187944333229060449"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/buffalo_grass.webp",
+          "hash": "2395087257910628400"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/cave_lion.webp",
+          "hash": "16185219334402256404"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/cheetah.webp",
+          "hash": "10474280816604990210"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/cheetah_grass.webp",
+          "hash": "12530176801965839282"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/cheetah_on_tree.webp",
+          "hash": "3632148505194450342"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/convert-to-webp.sh",
+          "hash": "7335691642775702097"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/elephant.webp",
+          "hash": "15717964145558117057"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/elephant_family.webp",
+          "hash": "1073695306548423926"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/giraffe.webp",
+          "hash": "14326787922444279947"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/giraffes.webp",
+          "hash": "14504739803906295485"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/lion.webp",
+          "hash": "15211388694753115492"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/lioness.webp",
+          "hash": "10594384767581103540"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/ngorongoro_zebra.webp",
+          "hash": "4051190098050905102"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/zebras.webp",
+          "hash": "8103585655091947307"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/index.tsx",
+          "hash": "15570253114017242952",
+          "deps": [
+            "ui-utils",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-images/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-images/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-images/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-gladiolus-tours": [
+        {
+          "file": "apps/ui-gladiolus-tours/.babelrc",
+          "hash": "13020124393823981135"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/jest.config.ts",
+          "hash": "1580594082215031123"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/postcss.config.js",
+          "hash": "2759402739052110475",
+          "deps": [
+            "npm:path"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/project.json",
+          "hash": "12171791762129360766"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/app/app.spec.tsx",
+          "hash": "6895743418989114498",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/app/app.tsx",
+          "hash": "17610593646221132521",
+          "deps": [
+            "ui-router-gladiolus"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/index.html",
+          "hash": "765362485572169103"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/main.tsx",
+          "hash": "11721577455813379059",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/styles.css",
+          "hash": "2866083945719690482"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/tailwind.config.js",
+          "hash": "13090734457927965885",
+          "deps": [
+            "npm:@nx/react/tailwind",
+            "npm:path"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/tsconfig.app.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/tsconfig.json",
+          "hash": "9850153468027031608"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/tsconfig.spec.json",
+          "hash": "11378287594513225419"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/webpack.config.js",
+          "hash": "9397115949254193752",
+          "deps": [
+            "npm:@nx/webpack",
+            "npm:@nx/react"
+          ]
+        }
+      ],
+      "ui-layout-gladiolus": [
+        {
+          "file": "libs/ui-layout-gladiolus/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/README.md",
+          "hash": "1215451592879913381"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/jest.config.ts",
+          "hash": "54521830550048199"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/package.json",
+          "hash": "929545512217879861"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/project.json",
+          "hash": "15564216294721794109"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/src/lib/footer.tsx",
+          "hash": "7934123762456963141",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus"
+          ]
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/src/lib/index.tsx",
+          "hash": "18407035475247589458",
+          "deps": [
+            "npm:react",
+            "ui-comp-banner"
+          ]
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/src/lib/navbar.tsx",
+          "hash": "10122717090709553997",
+          "deps": [
+            "ui-routes-gladiolus",
+            "npm:react",
+            "npm:@heroicons/react",
+            "npm:react-router-dom",
+            "npm:@headlessui/react",
+            "ui-comp-logo"
+          ]
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-utils-form": [
+        {
+          "file": "libs/ui-utils-form/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-utils-form/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-utils-form/README.md",
+          "hash": "11363669461802462483"
+        },
+        {
+          "file": "libs/ui-utils-form/jest.config.ts",
+          "hash": "6673820432232427031"
+        },
+        {
+          "file": "libs/ui-utils-form/package.json",
+          "hash": "12587829602839773876"
+        },
+        {
+          "file": "libs/ui-utils-form/project.json",
+          "hash": "5679223672886797410"
+        },
+        {
+          "file": "libs/ui-utils-form/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-utils-form/src/lib/index.ts",
+          "hash": "10340614165101301530"
+        },
+        {
+          "file": "libs/ui-utils-form/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-utils-form/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-utils-form/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-error-404": [
+        {
+          "file": "libs/ui-page-error-404/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-error-404/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-error-404/README.md",
+          "hash": "1696365265769914310"
+        },
+        {
+          "file": "libs/ui-page-error-404/jest.config.ts",
+          "hash": "18286586894267517660"
+        },
+        {
+          "file": "libs/ui-page-error-404/package.json",
+          "hash": "15788775499256039855"
+        },
+        {
+          "file": "libs/ui-page-error-404/project.json",
+          "hash": "6476760050372695309"
+        },
+        {
+          "file": "libs/ui-page-error-404/src/index.ts",
+          "hash": "6980580040178836154"
+        },
+        {
+          "file": "libs/ui-page-error-404/src/lib/index.tsx",
+          "hash": "17132038527317315860",
+          "deps": [
+            "ui-comp-page-helmet",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus"
+          ]
+        },
+        {
+          "file": "libs/ui-page-error-404/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-error-404/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-error-404/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-about-us": [
+        {
+          "file": "libs/ui-page-about-us/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-about-us/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-about-us/README.md",
+          "hash": "389607667003707505"
+        },
+        {
+          "file": "libs/ui-page-about-us/jest.config.ts",
+          "hash": "3006993506392066377"
+        },
+        {
+          "file": "libs/ui-page-about-us/package.json",
+          "hash": "13947095122621382386"
+        },
+        {
+          "file": "libs/ui-page-about-us/project.json",
+          "hash": "13407853995597518126"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/index.ts",
+          "hash": "12433027976528919254"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/index.tsx",
+          "hash": "11189945190103956922",
+          "deps": [
+            "ui-comp-page-helmet",
+            "ui-comp-header"
+          ]
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/main.tsx",
+          "hash": "17015610086892457396"
+        },
+        {
+          "file": "libs/ui-page-about-us/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-about-us/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-about-us/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-contact": [
+        {
+          "file": "libs/ui-page-contact/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-contact/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-contact/README.md",
+          "hash": "9205987546928873986"
+        },
+        {
+          "file": "libs/ui-page-contact/jest.config.ts",
+          "hash": "13062406761653094625"
+        },
+        {
+          "file": "libs/ui-page-contact/package.json",
+          "hash": "2333177002969011386"
+        },
+        {
+          "file": "libs/ui-page-contact/project.json",
+          "hash": "7730001209511085786"
+        },
+        {
+          "file": "libs/ui-page-contact/src/index.ts",
+          "hash": "10425411892941639057"
+        },
+        {
+          "file": "libs/ui-page-contact/src/lib/index.tsx",
+          "hash": "12305130614461552093",
+          "deps": [
+            "ui-comp-page-helmet",
+            "ui-comp-header"
+          ]
+        },
+        {
+          "file": "libs/ui-page-contact/src/lib/main.tsx",
+          "hash": "10599517999218729440",
+          "deps": [
+            "npm:@heroicons/react",
+            "npm:react-hook-form",
+            "ui-utils",
+            "ui-utils-form",
+            "npm:@tanstack/react-query",
+            "ui-api",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "libs/ui-page-contact/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-contact/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-contact/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-router-lazy-fallback": [
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/README.md",
+          "hash": "4637513836296106469"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/jest.config.ts",
+          "hash": "15016330847111727372"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/package.json",
+          "hash": "13263227957475117033"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/project.json",
+          "hash": "6512702113174156730"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/src/index.ts",
+          "hash": "14428353282588746736"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/src/lib/index.tsx",
+          "hash": "14114244119858699713",
+          "deps": [
+            "npm:react-loader-spinner"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ]
+    }
+  }
+}
