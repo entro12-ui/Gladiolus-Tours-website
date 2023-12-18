@@ -32,6 +32,7 @@
       "@collo/ui-comp-scroll-to-top": [
         "libs/ui-comp-scroll-to-top/src/index.ts"
       ],
+      "@collo/ui-comp-status": ["libs/ui-comp-status/src/index.ts"],
       "@collo/ui-i18n": ["libs/ui-i18n/src/index.ts"],
       "@collo/ui-layout-gladiolus": ["libs/ui-layout-gladiolus/src/index.ts"],
       "@collo/ui-page-about-us": ["libs/ui-page-about-us/src/index.ts"],
