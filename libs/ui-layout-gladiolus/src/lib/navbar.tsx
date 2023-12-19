@@ -1,5 +1,6 @@
 import { GtToursRoute } from '@collo/ui-routes-gladiolus';
 import { Fragment, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { US } from 'country-flag-icons/react/3x2';
 import { FR } from 'country-flag-icons/react/3x2';
 import { DE } from 'country-flag-icons/react/3x2';
@@ -25,6 +26,11 @@ const navigation = [
 
 export const GladiolusHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const { i18n } = useTranslation();
+  const changeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
+  };
 
   return (
     <header className="bg-white">
@@ -84,8 +90,8 @@ export const GladiolusHeader = () => {
                 <div className="py-1">
                   <Menu.Item>
                     {({ active }) => (
-                      <Link
-                        to="#"
+                      <button
+                        onClick={() => changeLanguage('en')}
                         className={classNames(
                           active
                             ? 'bg-gray-100 text-gray-900'
@@ -99,13 +105,13 @@ export const GladiolusHeader = () => {
                           aria-hidden="true"
                         />
                         English
-                      </Link>
+                      </button>
                     )}
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <Link
-                        to="#"
+                      <button
+                        onClick={() => changeLanguage('fr')}
                         className={classNames(
                           active
                             ? 'bg-gray-100 text-gray-900'
@@ -119,15 +125,15 @@ export const GladiolusHeader = () => {
                           aria-hidden="true"
                         />
                         French
-                      </Link>
+                      </button>
                     )}
                   </Menu.Item>
                 </div>
                 <div className="py-1">
                   <Menu.Item>
                     {({ active }) => (
-                      <Link
-                        to="#"
+                      <button
+                        onClick={() => changeLanguage('de')}
                         className={classNames(
                           active
                             ? 'bg-gray-100 text-gray-900'
@@ -141,13 +147,13 @@ export const GladiolusHeader = () => {
                           aria-hidden="true"
                         />
                         German
-                      </Link>
+                      </button>
                     )}
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <Link
-                        to="#"
+                      <button
+                        onClick={() => changeLanguage('es')}
                         className={classNames(
                           active
                             ? 'bg-gray-100 text-gray-900'
@@ -161,7 +167,7 @@ export const GladiolusHeader = () => {
                           aria-hidden="true"
                         />
                         Spanish
-                      </Link>
+                      </button>
                     )}
                   </Menu.Item>
                 </div>
@@ -208,115 +214,115 @@ export const GladiolusHeader = () => {
                     {item.name}
                   </Link>
                 ))}
-              </div>
-              <Menu as="div" className="relative inline-block text-left">
-                <div>
-                  <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50">
-                    Languages
-                    <ChevronDownIcon
-                      className="-mr-1 h-5 w-5 text-gray-400"
-                      aria-hidden="true"
-                    />
-                  </Menu.Button>
-                </div>
+                <Menu as="div" className="relative inline-block text-left">
+                  <div>
+                    <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50">
+                      Languages
+                      <ChevronDownIcon
+                        className="-mr-1 h-5 w-5 text-gray-400"
+                        aria-hidden="true"
+                      />
+                    </Menu.Button>
+                  </div>
 
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-100"
-                  enterFrom="transform opacity-0 scale-95"
-                  enterTo="transform opacity-100 scale-100"
-                  leave="transition ease-in duration-75"
-                  leaveFrom="transform opacity-100 scale-100"
-                  leaveTo="transform opacity-0 scale-95"
-                >
-                  <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    <div className="py-1">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <Link
-                            to="#"
-                            className={classNames(
-                              active
-                                ? 'bg-gray-100 text-gray-900'
-                                : 'text-gray-700',
-                              'group flex items-center px-4 py-2 text-sm'
-                            )}
-                          >
-                            <US
-                              title="United States"
-                              className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                              aria-hidden="true"
-                            />
-                            English
-                          </Link>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <Link
-                            to="#"
-                            className={classNames(
-                              active
-                                ? 'bg-gray-100 text-gray-900'
-                                : 'text-gray-700',
-                              'group flex items-center px-4 py-2 text-sm'
-                            )}
-                          >
-                            <FR
-                              title="French"
-                              className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                              aria-hidden="true"
-                            />
-                            French
-                          </Link>
-                        )}
-                      </Menu.Item>
-                    </div>
-                    <div className="py-1">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <Link
-                            to="#"
-                            className={classNames(
-                              active
-                                ? 'bg-gray-100 text-gray-900'
-                                : 'text-gray-700',
-                              'group flex items-center px-4 py-2 text-sm'
-                            )}
-                          >
-                            <DE
-                              title="German"
-                              className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                              aria-hidden="true"
-                            />
-                            German
-                          </Link>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <Link
-                            to="#"
-                            className={classNames(
-                              active
-                                ? 'bg-gray-100 text-gray-900'
-                                : 'text-gray-700',
-                              'group flex items-center px-4 py-2 text-sm'
-                            )}
-                          >
-                            <ES
-                              title="Spanish"
-                              className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                              aria-hidden="true"
-                            />
-                            Spanish
-                          </Link>
-                        )}
-                      </Menu.Item>
-                    </div>
-                  </Menu.Items>
-                </Transition>
-              </Menu>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <div className="py-1">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <button
+                              onClick={() => changeLanguage('en')}
+                              className={classNames(
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700',
+                                'group flex items-center px-4 py-2 text-sm'
+                              )}
+                            >
+                              <US
+                                title="United States"
+                                className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                aria-hidden="true"
+                              />
+                              English
+                            </button>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <button
+                              onClick={() => changeLanguage('fr')}
+                              className={classNames(
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700',
+                                'group flex items-center px-4 py-2 text-sm'
+                              )}
+                            >
+                              <FR
+                                title="French"
+                                className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                aria-hidden="true"
+                              />
+                              French
+                            </button>
+                          )}
+                        </Menu.Item>
+                      </div>
+                      <div className="py-1">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <button
+                              onClick={() => changeLanguage('de')}
+                              className={classNames(
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700',
+                                'group flex items-center px-4 py-2 text-sm'
+                              )}
+                            >
+                              <DE
+                                title="German"
+                                className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                aria-hidden="true"
+                              />
+                              German
+                            </button>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <button
+                              onClick={() => changeLanguage('es')}
+                              className={classNames(
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700',
+                                'group flex items-center px-4 py-2 text-sm'
+                              )}
+                            >
+                              <ES
+                                title="Spanish"
+                                className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                aria-hidden="true"
+                              />
+                              Spanish
+                            </button>
+                          )}
+                        </Menu.Item>
+                      </div>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+              </div>
             </div>
           </div>
         </Dialog.Panel>
