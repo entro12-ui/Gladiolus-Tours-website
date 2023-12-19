@@ -10,7 +10,7 @@ enum Category {
   Safari,
 }
 
-interface Itinerary {
+export interface IItinerary {
   id: number;
   title: string;
   brief: string;
@@ -21,7 +21,9 @@ interface Itinerary {
   description: IDescription[];
 }
 
-export const Itinerary: Itinerary[] = [
+export type GladiolusToursItinerary = IItinerary[];
+
+export const GtItinerary: GladiolusToursItinerary = [
   {
     id: 1,
     title: 'Tanzania Family Safari',

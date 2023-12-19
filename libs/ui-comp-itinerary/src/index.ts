@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-itinerary';
+export * from './lib/index';
