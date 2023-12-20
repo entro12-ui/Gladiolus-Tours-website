@@ -1,4 +1,5 @@
 import { GladiolusToursItinerary } from '@collo/ui-persistance';
+import { Link } from 'react-router-dom';
 
 interface IProps {
   itinerary: GladiolusToursItinerary;
@@ -6,38 +7,33 @@ interface IProps {
 
 export const Itinerary = ({ itinerary }: IProps) => {
   return (
-    <ul
-      role="list"
-      className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-    >
-      {itinerary.map((value) => (
-        <li
-          key={value.id}
-          className="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow"
-        >
-          <div className="flex w-full items-center justify-between space-x-6 p-6">
-            <div className="flex-1 truncate">
-              <div className="flex items-center space-x-3">
-                <h3 className="truncate text-sm font-medium text-gray-900">
-                  {value.status}
-                </h3>
-                <span className="inline-flex flex-shrink-0 items-center rounded-full bg-green-50 px-1.5 py-0.5 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
-                  {value.brief}
-                </span>
-              </div>
-              <p className="mt-1 truncate text-sm text-gray-500">
-                {value.brief}
-              </p>
-            </div>
-            <img
-              className="h-10 w-10 flex-shrink-0 rounded-full bg-gray-300"
-              src={''}
-              alt=""
-            />
+    <section className="bg-gray-100 dark:bg-gray-900 py-10 px-12">
+      <div className="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {itinerary.map((itinerary, index) => (
+          <div
+            key={index}
+            className="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1"
+          >
+            <Link to="link" className="cursor-pointer">
+              <figure>
+                <img
+                  src={`${itinerary.image}?auto=format&fit=crop&w=400&q=50`}
+                  alt={itinerary.title}
+                  className="rounded-t h-72 w-full object-cover"
+                />
+                <figcaption className="p-4">
+                  <p className="text-lg mb-4 font-bold leading-relaxed text-gray-800 dark:text-gray-300">
+                    {itinerary.title}
+                  </p>
+                  <small className="leading-5 text-gray-500 dark:text-gray-400">
+                    {itinerary.brief}
+                  </small>
+                </figcaption>
+              </figure>
+            </Link>
           </div>
-          <div></div>
-        </li>
-      ))}
-    </ul>
+        ))}
+      </div>
+    </section>
   );
 };
