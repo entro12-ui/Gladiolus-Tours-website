@@ -86,7 +86,7 @@ export const GladiolusHeader = () => {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <Menu.Items className="lg:absolute right-0 z-10 mt-2 lg:w-56 w-full origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div className="py-1">
                   <Menu.Item>
                     {({ active }) => (
@@ -96,7 +96,7 @@ export const GladiolusHeader = () => {
                           active
                             ? 'bg-gray-100 text-gray-900'
                             : 'text-gray-700',
-                          'group flex items-center px-4 py-2 text-sm'
+                          'group flex items-center px-4 py-2 text-sm w-full focus:outline-none hover:bg-gray-100'
                         )}
                       >
                         <US
@@ -116,7 +116,7 @@ export const GladiolusHeader = () => {
                           active
                             ? 'bg-gray-100 text-gray-900'
                             : 'text-gray-700',
-                          'group flex items-center px-4 py-2 text-sm'
+                          'group flex items-center px-4 py-2 text-sm w-full focus:outline-none hover:bg-gray-100'
                         )}
                       >
                         <FR
@@ -138,7 +138,7 @@ export const GladiolusHeader = () => {
                           active
                             ? 'bg-gray-100 text-gray-900'
                             : 'text-gray-700',
-                          'group flex items-center px-4 py-2 text-sm'
+                          'group flex items-center px-4 py-2 text-sm w-full focus:outline-none hover:bg-gray-100'
                         )}
                       >
                         <DE
@@ -158,7 +158,7 @@ export const GladiolusHeader = () => {
                           active
                             ? 'bg-gray-100 text-gray-900'
                             : 'text-gray-700',
-                          'group flex items-center px-4 py-2 text-sm'
+                          'group flex items-center px-4 py-2 text-sm w-full focus:outline-none hover:bg-gray-100'
                         )}
                       >
                         <ES
@@ -234,7 +234,7 @@ export const GladiolusHeader = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="lg-w-56 right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <div className="py-1">
                         <Menu.Item>
                           {({ active }) => (
@@ -244,7 +244,7 @@ export const GladiolusHeader = () => {
                                 active
                                   ? 'bg-gray-100 text-gray-900'
                                   : 'text-gray-700',
-                                'group flex items-center px-4 py-2 text-sm'
+                                'group flex items-center px-4 py-2 text-sm w-full focus:outline-none hover:bg-gray-100'
                               )}
                             >
                               <US
@@ -264,7 +264,7 @@ export const GladiolusHeader = () => {
                                 active
                                   ? 'bg-gray-100 text-gray-900'
                                   : 'text-gray-700',
-                                'group flex items-center px-4 py-2 text-sm'
+                                'group flex items-center px-4 py-2 text-sm w-full focus:outline-none hover:bg-gray-100'
                               )}
                             >
                               <FR
@@ -286,7 +286,7 @@ export const GladiolusHeader = () => {
                                 active
                                   ? 'bg-gray-100 text-gray-900'
                                   : 'text-gray-700',
-                                'group flex items-center px-4 py-2 text-sm'
+                                'group flex items-center px-4 py-2 text-sm w-full focus:outline-none hover:bg-gray-100'
                               )}
                             >
                               <DE
@@ -306,7 +306,7 @@ export const GladiolusHeader = () => {
                                 active
                                   ? 'bg-gray-100 text-gray-900'
                                   : 'text-gray-700',
-                                'group flex items-center px-4 py-2 text-sm'
+                                'group flex items-center px-4 py-2 text-sm w-full focus:outline-none hover:bg-gray-100'
                               )}
                             >
                               <ES
