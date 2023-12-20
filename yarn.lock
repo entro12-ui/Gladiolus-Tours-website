@@ -9507,10 +9507,10 @@ raw-body@2.5.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-chatbot-kit@^2.1.2:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/react-chatbot-kit/-/react-chatbot-kit-2.2.1.tgz#9240338875fb63f62cedf8c4c2a4bf2873447b66"
-  integrity sha512-jGmMU2W3cV0mklv3yoHhvodpaVBssDiIYLU6j4kuYXysj3wJLdwPWoUgwKicW/Mj80qauPbv63FgFTR9IqjbIA==
+react-chatbot-kit@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/react-chatbot-kit/-/react-chatbot-kit-2.2.2.tgz#a3a1a9f87159dc20e49a21242bb028369432b874"
+  integrity sha512-8p/i0KkzkhoyG2XsL6Pb6f72k9j7GYNAc5SOa4f9OZwbCD3Q34uEruNPc06qa1wZHKfT6aFna19PA2plFuO2NA==
   dependencies:
     react-conditionally-render "^1.0.2"
 
