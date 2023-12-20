@@ -1,14 +1,14 @@
-import styles from './ui-comp-chat-bot.module.css';
+import { Chatbot } from 'react-chatbot-kit';
+import { ActionProvider } from './action-provider';
+import { MessageParser } from './message-parser';
+import { config } from './config';
 
-/* eslint-disable-next-line */
-export interface UiCompChatBotProps {}
-
-export function Index(props: UiCompChatBotProps) {
+export const GladiolusChatBot = () => {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiCompChatBot!</h1>
-    </div>
+    <Chatbot
+      actionProvider={ActionProvider}
+      messageParser={MessageParser}
+      config={config}
+    />
   );
-}
-
-export default Index;
+};
