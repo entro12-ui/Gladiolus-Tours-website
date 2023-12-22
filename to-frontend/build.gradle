@@ -16,3 +16,9 @@ tasks.register("killAnyExistingNodeProcesses", Exec) {
     commandLine "pkill", "-f", "-9", "node"
     ignoreExitValue true
 }
+
+tasks.register("serveUiGladiolusTours", YarnTask) {
+    dependsOn yarnInstallDev
+    dependsOn killAnyExistingNodeProcesses
+    args = ['nx', 'serve', 'ui-gladiolus-tours']
+}
