@@ -1,0 +1,7 @@
+buildscript {
+
+}
+
+plugins {
+    alias libs.plugins.node apply false // applied individually only by modules that use nodejs/yarn
+}
