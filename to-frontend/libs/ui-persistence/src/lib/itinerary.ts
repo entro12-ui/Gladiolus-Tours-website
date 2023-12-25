@@ -10,13 +10,18 @@ enum Category {
   Safari,
 }
 
+enum Image {
+  Elephant,
+  Lion,
+}
+
 export interface IItinerary {
   id: number;
   title: string;
   brief: string;
   category: Category;
   code: string;
-  image: ReactNode;
+  image: string;
   status: boolean;
   description: IDescription[];
 }
@@ -30,7 +35,7 @@ export const GtItinerary: GladiolusToursItinerary = [
     brief: '8 Days | Take a walk on the wild side in Kenya and Tanzania',
     code: 'GT001',
     category: Category.Safari,
-    image: false,
+    image: '',
     status: true,
     description: [
       {
