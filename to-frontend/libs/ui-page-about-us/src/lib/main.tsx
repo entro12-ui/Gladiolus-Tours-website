@@ -1,40 +1,41 @@
 import { GladiolusTeam } from '@collo/ui-page-landing-page';
 
 const stats = [
-  { label: 'Transactions every 24 hours', value: '44 million' },
-  { label: 'Assets under holding', value: '$119 trillion' },
-  { label: 'New users annually', value: '46,000' },
+  { label: 'Tours conducted annually', value: '10,000' },
+  { label: 'Destinations covered', value: '100+' },
+  { label: 'Satisfied customers', value: '95%' },
 ];
+
 const values = [
   {
-    name: 'Be world-class',
+    name: 'Excellence in Service',
     description:
-      'Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.',
+      'Providing world-class service with attention to detail and personalized experiences for every traveler.',
   },
   {
-    name: 'Share everything you know',
+    name: 'Expert Tour Guides',
     description:
-      'Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.',
+      'Our tour guides are knowledgeable, friendly, and passionate about ensuring you have a memorable and informative journey.',
   },
   {
-    name: 'Always learning',
+    name: 'Continuous Improvement',
     description:
-      'Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.',
+      'We are committed to always learning and improving our services to exceed the expectations of our valued customers.',
   },
   {
-    name: 'Be supportive',
+    name: 'Customer Satisfaction',
     description:
-      'Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.',
+      'We prioritize customer satisfaction and aim to create a supportive and enjoyable travel experience for all our clients.',
   },
   {
-    name: 'Take responsibility',
+    name: 'Responsible Tourism',
     description:
-      'Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.',
+      'Taking responsibility for the impact of our tours on the environment and local communities, promoting sustainable and responsible tourism.',
   },
   {
-    name: 'Enjoy downtime',
+    name: 'Relax and Enjoy',
     description:
-      'Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.',
+      'We believe in providing downtime during your tours, allowing you to relax and enjoy the beauty of each destination at your own pace.',
   },
 ];
 
