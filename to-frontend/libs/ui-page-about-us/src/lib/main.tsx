@@ -354,6 +354,7 @@ export const GladiolusToursAboutPage = () => {
         </div>
 
         {/* Blog section */}
+        {/*
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -410,6 +411,7 @@ export const GladiolusToursAboutPage = () => {
             ))}
           </div>
         </div>
+        */}
       </main>
     </div>
   );
