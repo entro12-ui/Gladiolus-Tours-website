@@ -1,8 +1,8 @@
 import { GladiolusTeam } from '@collo/ui-page-landing-page';
 
 const stats = [
-  { label: 'Tours conducted annually', value: '10,000' },
-  { label: 'Destinations covered', value: '100+' },
+  { label: 'Tours conducted annually', value: '50' },
+  { label: 'Destinations covered', value: '5+' },
   { label: 'Satisfied customers', value: '95%' },
 ];
 
@@ -42,16 +42,16 @@ const values = [
 const blogPosts = [
   {
     id: 1,
-    title: 'Vel expedita assumenda placeat aut nisi optio voluptates quas',
+    title: 'Exploring Hidden Gems: Off the Beaten Path Adventures',
     href: '#',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Discover unique and lesser-known destinations that offer an extraordinary travel experience. Off the beaten path adventures await!',
     imageUrl:
       'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
+    date: 'Jan 2, 2024',
+    datetime: '2024-01-02',
     author: {
-      name: 'Michael Foster',
+      name: 'Tour Operator Team',
       imageUrl:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
@@ -178,7 +178,7 @@ export const GladiolusToursAboutPage = () => {
         <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Our mission
+              Our Commitment to Excellence
             </h2>
             <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
