@@ -1,3 +1,4 @@
+import Team from './images/team.webp';
 import { GladiolusTeam } from '@collo/ui-page-landing-page';
 
 const stats = [
@@ -183,26 +184,31 @@ export const GladiolusToursAboutPage = () => {
             <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
                 <p className="text-xl leading-8 text-gray-600">
-                  Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                  sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
-                  id at vitae feugiat egestas ac. Diam nulla orci at in viverra
-                  scelerisque eget. Eleifend egestas fringilla sapien.
+                  At Gladiolus Tours, we believe in the transformative power of
+                  travel. Our mission is to connect people through unforgettable
+                  journeys that inspire and create lasting memories. Whether
+                  you're exploring vibrant cities, relaxing on pristine beaches,
+                  or embarking on adventurous escapades, we are committed to
+                  providing you with exceptional experiences every step of the
+                  way.
                 </p>
                 <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
                   <p>
-                    Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                    risus enim. Mattis mauris semper sed amet vitae sed turpis
-                    id. Id dolor praesent donec est. Odio penatibus risus
-                    viverra tellus varius sit neque erat velit. Faucibus commodo
-                    massa rhoncus, volutpat. Dignissim sed eget risus enim.
-                    Mattis mauris semper sed amet vitae sed turpis id.
+                    Our commitment to excellence extends beyond traditional
+                    tourism. We strive to make a positive impact on the
+                    destinations we visit, fostering responsible travel
+                    practices and supporting local communities. With Gladiolus
+                    Tours, you embark on a journey that goes beyond sightseeing
+                    – it's a celebration of cultures, a discovery of hidden
+                    gems, and a connection with the world around you.
                   </p>
                   <p className="mt-10">
-                    Et vitae blandit facilisi magna lacus commodo. Vitae sapien
-                    duis odio id et. Id blandit molestie auctor fermentum
-                    dignissim. Lacus diam tincidunt ac cursus in vel. Mauris
-                    varius vulputate et ultrices hac adipiscing egestas. Iaculis
-                    convallis ac tempor et ut. Ac lorem vel integer orci.
+                    Join us in exploring the beauty of our planet while creating
+                    meaningful connections with fellow travelers. We invite you
+                    to be part of our community, where every journey is an
+                    opportunity for personal growth, cultural exchange, and
+                    unforgettable moments. Discover the world with Gladiolus
+                    Tours and let your adventure begin!
                   </p>
                 </div>
               </div>
@@ -230,7 +236,7 @@ export const GladiolusToursAboutPage = () => {
         {/* Image section */}
         <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
           <img
-            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+            src={Team}
             alt=""
             className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
           />
@@ -240,11 +246,13 @@ export const GladiolusToursAboutPage = () => {
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Our values
+              Our Values: Guiding Your Journey with Integrity and Purpose
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-              magnam voluptatum cupiditate veritatis in accusamus quisquam.
+              At Gladiolus Tours, our values are the compass that guides every
+              aspect of your journey. We are committed to delivering exceptional
+              travel experiences while upholding principles that prioritize
+              integrity, sustainability, and genuine connection.
             </p>
           </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
