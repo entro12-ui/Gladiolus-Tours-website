@@ -1,5 +1,10 @@
-import Team from './images/team.webp';
 import { GladiolusTeam } from '@collo/ui-page-landing-page';
+import Team from './images/team.webp';
+import Tanapa from './images/tanappa.webp';
+import Ngorongoro from './images/ngorongoro.webp';
+import TzGovernment from './images/tzgovernment.webp';
+import TWC from './images/twc.webp';
+import KwaWingu from './images/kwawingu.webp';
 
 const stats = [
   { label: 'Tours conducted annually', value: '50' },
@@ -111,15 +116,15 @@ export const GladiolusToursAboutPage = () => {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                    We’re changing the way people connect.
+                    Transforming Connections, One Journey at a Time
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in
-                    quis cupidatat mollit aute velit. Et labore commodo nulla
-                    aliqua proident mollit ullamco exercitation tempor. Sint
-                    aliqua anim nulla sunt mollit id pariatur in voluptate
-                    cillum. Eu voluptate tempor esse minim amet fugiat veniam
-                    occaecat aliqua.
+                    At Gladiolus Tours, we believe in changing the way people
+                    connect through travel. Our mission is to create meaningful
+                    journeys that go beyond the ordinary. We curate experiences
+                    that touch your soul and foster connections with the world
+                    around you. Join us in embracing the transformative power of
+                    exploration and the joy of shared moments.
                   </p>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -301,41 +306,41 @@ export const GladiolusToursAboutPage = () => {
           </div>
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
-              Trusted by the world’s most innovative teams
+              Our Partners
             </h2>
             <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
               <img
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
-                alt="Transistor"
+                src={TzGovernment}
+                alt="Tanzanian Government"
                 width={158}
                 height={48}
               />
               <img
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
-                alt="Reform"
+                src={Tanapa}
+                alt="Tanapa"
                 width={158}
                 height={48}
               />
               <img
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
-                alt="Tuple"
+                src={Ngorongoro}
+                alt="Ngorongoro"
                 width={158}
                 height={48}
               />
               <img
                 className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-                src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
-                alt="SavvyCal"
+                src={TWC}
+                alt="TWC"
                 width={158}
                 height={48}
               />
               <img
                 className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-                src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
-                alt="Statamic"
+                src={KwaWingu}
+                alt="KwaWingu Tours"
                 width={158}
                 height={48}
               />
@@ -352,10 +357,12 @@ export const GladiolusToursAboutPage = () => {
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              From the blog
+              From the blog: Stories That Inspire Wanderlust
             </h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
-              Vel dolorem qui facilis soluta sint aspernatur totam cumque.
+              Immerse yourself in the tales from our adventures. From hidden
+              gems to cultural treasures, our blog is a collection of stories
+              that ignite the spirit of wanderlust.
             </p>
           </div>
           <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
