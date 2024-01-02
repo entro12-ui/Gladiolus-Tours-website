@@ -2,6 +2,7 @@ import { SVGProps } from 'react';
 import { JSX } from 'react/jsx-runtime';
 import { Link } from 'react-router-dom';
 import { GtToursRoute } from '@collo/ui-routes-gladiolus';
+import { toFormData } from 'axios';
 
 const navigation = {
   main: [
@@ -91,7 +92,8 @@ export const GladiolusFooter = () => {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; 2023 Gladiolus Tours, Inc. All rights reserved.
+          &copy; {new Date().getFullYear()} Gladiolus Tours, Inc. All rights
+          reserved.
         </p>
       </div>
     </footer>
