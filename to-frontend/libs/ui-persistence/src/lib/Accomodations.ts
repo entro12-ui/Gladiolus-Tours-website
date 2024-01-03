@@ -32,7 +32,7 @@ export type GladiolusToursAccommodations = IAccommodations[];
 export const GtAccommodations: GladiolusToursAccommodations = [
   {
     id: 1,
-    name: '',
+    name: 'Northern Circuit',
     href: '',
     price: '',
     imageSrc: '',
