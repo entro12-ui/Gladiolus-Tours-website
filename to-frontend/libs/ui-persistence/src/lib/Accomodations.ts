@@ -26,7 +26,10 @@ interface IAccommodations {
   lodges: Lodges[];
   camps: Camps[];
 }
-export const Accommodations: IAccommodations[] = [
+
+export type GladiolusToursAccommodations = IAccommodations[];
+
+export const GtAccommodations: GladiolusToursAccommodations = [
   {
     id: 1,
     name: '',

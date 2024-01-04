@@ -17,7 +17,7 @@ interface IDestinations {
 
 export type GladiolusToursDestinations = IDestinations[];
 
-export const Destinations: GladiolusToursDestinations = [
+export const GtDestinations: GladiolusToursDestinations = [
   {
     id: 1,
     name: 'Northern Circuit',

@@ -1,14 +1,14 @@
-import { ReactNode } from 'react';
-
 interface ICulturalActivities {
   id: number;
   title: string;
   description: string;
   status: boolean;
-  images: ReactNode;
+  images: string;
 }
 
-export const CulturalActivities: ICulturalActivities[] = [
+export type GladiolusToursCulturalActivities = ICulturalActivities[];
+
+export const GtCulturalActivities: GladiolusToursCulturalActivities = [
   {
     id: 1,
     title: 'Tanzanite Museum',
@@ -31,7 +31,7 @@ export const CulturalActivities: ICulturalActivities[] = [
       'Immerse yourself in the fascinating history of this violet-blue gem, and discover how it was discovered and extracted. See for yourself how each expensive gemstone is calibrated and cut. And if you wish, you can even take one of these rare stones home with you by purchasing them on the spot.\n' +
       '\n' +
       'The Tanzanite Museum is a treasure trove of information and opportunities for gem enthusiasts and history buffs alike.\n',
-    images: false,
+    images: '',
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ export const CulturalActivities: ICulturalActivities[] = [
     status: true,
     description:
       'A walking safari in Arusha National Park is an extraordinary experience that plunges visitors into the heart of the wilderness. Nestled in northern Tanzania, this park offers a breathtaking diversity of landscapes, from the majestic snow-capped mountains of Kilimanjaro to vast green plains and sparkling lakes. Accompanied by an experienced, armed guide, adventurers take to the park’s trails in search of iconic wildlife. Majestic elephants, graceful giraffes, striped zebras and imposing buffalo are just a few steps away, while colourful birds light up the sky. But there’s more to Arusha National Park than its remarkable wildlife. It is also home to an incredible diversity of plants and trees, some of which are unique to the region. The enlightened guide shares his knowledge of these species and their crucial role in balancing the local ecosystem. As well as exploring the flora and fauna, a walking safari in Arusha National Park offers an unrivalled cultural experience. Visitors have the opportunity to meet local tribes, immerse themselves in their traditions and way of life, and even take part in traditional activities such as dancing and cooking. All in all, a walking safari in Arusha National Park is a memorable experience that allows visitors to connect with nature, discover wildlife up close, and explore the cultural richness of the region. This is a unique opportunity to experience an authentic adventure in the heart of Tanzania’s wilderness.',
-    images: false,
+    images: '',
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ export const CulturalActivities: ICulturalActivities[] = [
       'But beware, night-time in Tanzania can be unpredictable and full of surprises. You could witness a live hunt, an encounter with rare animals or even a confrontation between predators. It’s an experience that reminds you that nature is both beautiful and merciless.\n' +
       '\n' +
       'As the night safari draws to a close, you return to your camp, filled with stories to tell and unforgettable memories. You fall asleep with the sound of wild animals in the background, knowing you’ve experienced a unique adventure in the heart of wild Tanzania.\n',
-    images: false,
+    images: '',
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ export const CulturalActivities: ICulturalActivities[] = [
     status: true,
     description:
       'In the heart of Tanzania, nestled between the majestic mountains and sparkling waters of Lake Manyara, lies the village of Mto wa Mbu. A place where cultural diversity flourishes like a lush garden, with over 120 tribes living harmoniously together. The lively village square is filled with the cheerful voices of the locals, while the colorful market offers a vibrant display of juicy fruit, fresh vegetables and local handicrafts. Curious visitors can immerse themselves in this spellbinding atmosphere by taking part in safaris, hikes and guided tours through the breathtaking landscapes of Serengeti National Park. But beyond the natural wonders, Mto wa Mbu also offers volunteer opportunities, allowing travelers to connect with the locals and discover their authentic way of life. It’s a place where encounters are enriching, smiles are contagious and every step reveals a new cultural treasure.',
-    images: false,
+    images: '',
   },
   {
     id: 5,
@@ -78,7 +78,7 @@ export const CulturalActivities: ICulturalActivities[] = [
       'You’ll find a wide variety of handicrafts, including wood carvings, beaded jewelry, traditional paintings and vibrantly patterned fabrics. Each piece is unique, reflecting the talent and creativity of local artisans.\n' +
       'As you stroll through the market aisles, you can admire the meticulous detail of the carvings, feel the texture of the fabrics and appreciate the beauty of the handmade jewelry. The vendors will be delighted to explain the history and significance of each object, giving you a better understanding of local culture and traditions.\n' +
       'In addition to handicrafts, you can also find local products such as spices, natural beauty products and traditional clothing. It’s the perfect place to bring home unique gifts for your loved ones or for yourself.',
-    images: false,
+    images: '',
   },
   {
     id: 6,
@@ -94,7 +94,7 @@ export const CulturalActivities: ICulturalActivities[] = [
       'Hadzabe is a click language, using click sounds to communicate. Their culture is rich in oral traditions, with stories and songs handed down from generation to generation. The Hadzabe live in temporary camps built from branches and leaves, and have few material possessions. Because of their traditional way of life and isolation, the Hadzabe have been relatively untouched by outside influence, although they face challenges such as the loss of their territory and the pressure of modern society.\n' +
       '\n' +
       'Visitors have the opportunity to meet the Hadzabe and enjoy a unique cultural experience by taking part in activities such as hunting, gathering and traditional tool-making. Meeting the Hadzabe offers a valuable opportunity to discover an ancient culture and to better understand the diversity of humanity.\n',
-    images: false,
+    images: '',
   },
   {
     id: 7,
@@ -112,7 +112,7 @@ export const CulturalActivities: ICulturalActivities[] = [
       'It’s important to respect Maasai customs and traditions when visiting a village. This includes asking permission before taking photos and buying handicrafts directly from local artisans to support the local economy.\n' +
       '\n' +
       'In conclusion, a visit to a Maasai village in Tanzania offers a fascinating cultural experience for visitors, enabling them to discover the life and traditions of this emblematic tribe. It’s a precious opportunity to connect with an ancient culture and better understand the diversity of humanity.\n',
-    images: false,
+    images: '',
   },
   {
     id: 8,
@@ -120,7 +120,7 @@ export const CulturalActivities: ICulturalActivities[] = [
     status: true,
     description:
       'A market visit to Arusha is an unforgettable experience that will immerse you in Tanzania’s vibrant culture. Discover an explosion of colors, smells and sounds, with stalls brimming with exotic fruits, fresh vegetables and handicrafts. Meet the locals, strike up a conversation and sample the local culinary delights. It’s a total immersion in the daily life of the local people, and an opportunity to support the local economy. Prepare to be amazed, astonished and inspired by this unique and enriching experience.',
-    images: false,
+    images: '',
   },
   {
     id: 9,
@@ -130,7 +130,7 @@ export const CulturalActivities: ICulturalActivities[] = [
       '\n' +
       '\n' +
       'Lake Natron, Tanzania’s natural jewel, reveals itself like a living painting. Its sparkling, crystal-blue waters gracefully reflect the surrounding mountains. Flamingos, graceful dancers, find refuge here, adding a touch of color to this enchanting landscape. The shores of the lake, dotted with striking rock formations, seem to be the fruit of an overflowing imagination. The alkaline waters of the lake create salt sculptures, veritable ephemeral works of art. Walking on these arid lands is like treading on another world, where nature reinvents itself at every turn. Lake Natron, a place where wild beauty meets absolute tranquillity, offering a unique and unforgettable experience.\n',
-    images: false,
+    images: '',
   },
   {
     id: 10,
@@ -144,7 +144,7 @@ export const CulturalActivities: ICulturalActivities[] = [
       'Enjoy breathtaking views of Mount Kilimanjaro, the surrounding national parks and their wildlife. You’ll marvel at the tranquility and serenity that reign in the air, while sunrise and sunset paint the sky with magical colors.\n' +
       '\n' +
       'After the soft landing, you can celebrate this unique experience with a delicious country breakfast. A day in a hot-air balloon in Arusha is an unforgettable adventure that will stay with you forever.\n',
-    images: false,
+    images: '',
   },
   {
     id: 11,
@@ -160,7 +160,7 @@ export const CulturalActivities: ICulturalActivities[] = [
       'Stroll through the bustling streets of the market, where stalls overflow with exotic colors and flavors. Explore the lush botanical gardens, where nature unfolds in all its splendor.\n' +
       '\n' +
       'Finally, round off your day with a delicious meal in one of the town’s picturesque restaurants, where local flavors merge with international influences.\n',
-    images: false,
+    images: '',
   },
   {
     id: 12,
@@ -180,6 +180,6 @@ export const CulturalActivities: ICulturalActivities[] = [
       'The Ndutu area also offers hiking and camping opportunities, allowing visitors to connect more closely with nature and enjoy the tranquility of the savannah.\n' +
       '\n' +
       'In short, the Ndutu region is a jewel of Tanzania, offering breathtaking scenery, abundant wildlife and a unique safari experience. It’s an ideal place for nature lovers and adventure enthusiasts.\n',
-    images: false,
+    images: '',
   },
 ];
