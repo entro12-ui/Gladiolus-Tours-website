@@ -1,5 +1,5 @@
-import { Safaris } from '@collo/ui-persistance';
 import { Link } from 'react-router-dom';
+import { GtSafaris } from '@collo/ui-persistance';
 
 export const GladiolusSafaris = () => {
   return (
@@ -16,7 +16,7 @@ export const GladiolusSafaris = () => {
         </p>
 
         <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
-          {Safaris.map((safari) => (
+          {GtSafaris.map((safari) => (
             <Link key={safari.name} to={'#'} className="group block">
               <div
                 aria-hidden="true"
