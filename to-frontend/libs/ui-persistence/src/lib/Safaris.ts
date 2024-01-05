@@ -5,7 +5,7 @@ interface SafariTypes {
   description: string;
 }
 
-interface Safari {
+export interface ISafari {
   id: number;
   name: string;
   type: string;
@@ -18,7 +18,9 @@ interface Safari {
   safariTypes: SafariTypes[];
 }
 
-export const Safaris: Safari[] = [
+export type GladiolusToursSafari = ISafari[];
+
+export const GtSafaris: GladiolusToursSafari = [
   {
     id: 1,
     name: 'Wildlife Safaris',
@@ -40,14 +42,14 @@ export const Safaris: Safari[] = [
 
   {
     id: 2,
-    name: 'Signature Safaris',
-    type: 'Signature Safaris',
+    name: 'Adventure Safaris',
+    type: 'Adventure Safaris',
     href: '',
     price: '',
     description: '',
     status: true,
     imageSrc: `${Img0}`,
-    imageAlt: 'Signature Safaris',
+    imageAlt: '',
     safariTypes: [
       {
         name: '',
@@ -97,14 +99,14 @@ export const Safaris: Safari[] = [
   },
   {
     id: 5,
-    name: 'Flying Safaris',
-    type: 'Flying Safaris',
+    name: 'Beach Holiday',
+    type: 'Beach Holiday',
     href: '',
     price: '',
     description: '',
     status: true,
     imageSrc: `${Img0}`,
-    imageAlt: 'Flying Safaris',
+    imageAlt: 'Beach Holiday',
     safariTypes: [
       {
         name: '',
@@ -199,14 +201,14 @@ export const Safaris: Safari[] = [
   },
   {
     id: 10,
-    name: 'Boat Safaris',
-    type: 'Boat Safaris',
+    name: 'Walking Safaris',
+    type: 'Walking Safaris',
     href: '',
     price: '',
     description: '',
     status: true,
     imageSrc: `${Img0}`,
-    imageAlt: 'Boat Safaris',
+    imageAlt: 'Walking Safaris',
     safariTypes: [
       {
         name: '',

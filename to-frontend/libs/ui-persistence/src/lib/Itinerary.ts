@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import Giraffe from './images/giraffe.webp';
 
 interface IDescription {
   title: string;
@@ -8,11 +8,6 @@ interface IDescription {
 enum Category {
   Mount,
   Safari,
-}
-
-enum Image {
-  Elephant,
-  Lion,
 }
 
 export interface IItinerary {
@@ -35,7 +30,7 @@ export const GtItinerary: GladiolusToursItinerary = [
     brief: '8 Days | Take a walk on the wild side in Kenya and Tanzania',
     code: 'GT001',
     category: Category.Safari,
-    image: '',
+    image: Giraffe,
     status: true,
     description: [
       {

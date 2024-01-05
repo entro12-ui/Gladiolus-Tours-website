@@ -14,7 +14,10 @@ interface IDestinations {
   status: boolean;
   nationalParks: NationalParks[];
 }
-export const Destinations: IDestinations[] = [
+
+export type GladiolusToursDestinations = IDestinations[];
+
+export const Destinations: GladiolusToursDestinations = [
   {
     id: 1,
     name: 'Northern Circuit',
