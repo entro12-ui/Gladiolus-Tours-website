@@ -17,7 +17,7 @@ interface IDestinations {
 export const Destinations: IDestinations[] = [
   {
     id: 1,
-    name: 'Northern Tanzania',
+    name: 'Northern Circuit',
     href: '',
     description: '',
     imageSrc: '',
@@ -58,7 +58,7 @@ export const Destinations: IDestinations[] = [
   },
   {
     id: 2,
-    name: 'Southern Tanzania',
+    name: 'Southern Circuit',
     href: '',
     description: '',
     imageSrc: '',
@@ -99,7 +99,7 @@ export const Destinations: IDestinations[] = [
   },
   {
     id: 3,
-    name: 'Western Tanzania',
+    name: 'Eastern Circuit',
     href: '',
     description: '',
     imageSrc: '',
@@ -125,7 +125,33 @@ export const Destinations: IDestinations[] = [
   },
   {
     id: 4,
-    name: 'The Coast',
+    name: 'Western Circuit',
+    href: '',
+    description: '',
+    imageSrc: '',
+    imageAlt: '',
+    status: true,
+    nationalParks: [
+      {
+        name: 'Kigoma Town',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Gombe Stream National Park',
+        description: '',
+        status: true,
+      },
+      {
+        name: 'Mahale Mountains National Park',
+        description: '',
+        status: true,
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: 'Ocean Islands',
     href: '',
     description: '',
     imageSrc: '',
@@ -163,5 +189,25 @@ export const Destinations: IDestinations[] = [
         status: true,
       },
     ],
+  },
+  {
+    id: 6,
+    name: 'Mafia Island',
+    href: '',
+    description: '',
+    imageSrc: '',
+    imageAlt: '',
+    status: true,
+    nationalParks: [],
+  },
+  {
+    id: 7,
+    name: 'Zanzibar Island',
+    href: '',
+    description: '',
+    imageSrc: '',
+    imageAlt: '',
+    status: true,
+    nationalParks: [],
   },
 ];
