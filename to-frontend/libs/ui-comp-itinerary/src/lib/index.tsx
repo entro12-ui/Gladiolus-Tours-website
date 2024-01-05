@@ -26,7 +26,7 @@ export const Itinerary = ({ itinerary }: IProps) => {
                     {itinerary.title}
                   </p>
                   <small className="leading-5 text-gray-500 dark:text-gray-400">
-                    {itinerary.brief}
+                    {itinerary.overview}
                   </small>
                 </figcaption>
               </figure>
