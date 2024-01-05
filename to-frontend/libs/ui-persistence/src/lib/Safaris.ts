@@ -1,4 +1,4 @@
-import Img0 from './images/chilling.webp';
+import Img0 from './images/Safaris/Ngorongoro_Crater_Elephants_NCA.webp';
 
 interface SafariTypes {
   name: string;
