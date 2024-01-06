@@ -7,7 +7,7 @@ interface IDescription {
   Accommodation: string;
 }
 
-enum Category {
+export enum GtItineraryCategory {
   Mount,
   Safari,
 }
@@ -16,7 +16,7 @@ export interface IItinerary {
   id: number;
   title: string;
   overview: string;
-  category: Category;
+  category: GtItineraryCategory;
   code: string;
   image: string;
   status: boolean;
@@ -29,9 +29,9 @@ export const GtItinerary: GladiolusToursItinerary = [
   {
     id: 1,
     title: '8 Days | Take a walk on the wild side in Kenya and Tanzania',
-    overview: '',
+    overview: 'Welcome to Gladiolus Tours',
     code: 'GT001',
-    category: Category.Safari,
+    category: GtItineraryCategory.Safari,
     image: Hippo,
     status: true,
     description: [
@@ -81,9 +81,9 @@ export const GtItinerary: GladiolusToursItinerary = [
   {
     id: 2,
     title: '4 Days Kilimanjaro Trek via Machame Route',
-    overview: '',
+    overview: 'Welcome to Gladiolus Tours',
     code: 'GT002',
-    category: Category.Mount,
+    category: GtItineraryCategory.Mount,
     image: Mount_Kilimanjaro,
     status: true,
     description: [
