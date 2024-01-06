@@ -1,5 +1,9 @@
-import { GladiolusToursItinerary } from '@collo/ui-persistance';
+import {
+  GladiolusToursItinerary,
+  GtItineraryCategory,
+} from '@collo/ui-persistance';
 import { Link } from 'react-router-dom';
+import { UiStatus } from '@collo/ui-comp-status';
 
 interface IProps {
   itinerary: GladiolusToursItinerary;
@@ -7,30 +11,33 @@ interface IProps {
 
 export const Itinerary = ({ itinerary }: IProps) => {
   return (
-    <section className="bg-gray-100 dark:bg-gray-900 py-10 px-12">
-      <h2 className="text-3xl font-extrabold mb-8 text-gray-800 dark:text-gray-300">
-        Gladiolus Tour Operator Itineraries
+    <section className="bg-gray-100 dark:bg-gray-900 py-10 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+      <h2 className="text-4xl font-extrabold mb-8 text-gray-800 dark:text-gray-300">
+        Explore Gladiolus Itineraries
       </h2>
       <div className="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {itinerary.map((itinerary, index) => (
+        {itinerary.map((item, index) => (
           <div
             key={index}
-            className="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1"
+            className="my-8 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 duration-300 hover:transform hover:scale-105"
           >
-            <Link to={`/itinerary/${index}`} className="cursor-pointer">
+            <Link to={`/itinerary/${index}`} className="block">
               <figure>
                 <img
-                  src={`${itinerary.image}?auto=format&fit=crop&w=400&q=50`}
-                  alt={itinerary.title}
-                  className="rounded-t h-72 w-full object-cover"
+                  src={`${item.image}?auto=format&fit=crop&w=400&q=50`}
+                  alt={item.title}
+                  className="rounded-t h-64 w-full object-cover"
                 />
                 <figcaption className="p-4">
-                  <p className="text-lg mb-4 font-bold leading-relaxed text-gray-800 dark:text-gray-300">
-                    {itinerary.title}
+                  <div className="mb-3 text-sm text-gray-500 dark:text-gray-400">
+                    Category: {GtItineraryCategory[item.category]}
+                  </div>
+                  <p className="text-xl mb-3 font-semibold leading-tight text-gray-800 dark:text-gray-300">
+                    {item.title}
                   </p>
-                  <small className="leading-5 text-gray-500 dark:text-gray-400">
-                    {itinerary.overview}
-                  </small>
+                  <p className="text-sm leading-5 text-gray-600 dark:text-gray-400">
+                    {item.overview}
+                  </p>
                 </figcaption>
               </figure>
             </Link>
