@@ -10,3 +10,13 @@ export const useSafariIdOrThrow = () => {
   }
   return parseInt(safariId);
 };
+
+export const useItineraryIdOrThrow = () => {
+  const { itineraryId } = useParams<GtToursRouteParam.ItineraryId>();
+  if (!itineraryId) {
+    throw new Error(
+      `Internal error: expected ${GtToursRouteParam.ItineraryId} parameter in URL.`
+    );
+  }
+  return parseInt(itineraryId);
+};
