@@ -20,3 +20,13 @@ export const useItineraryIdOrThrow = () => {
   }
   return parseInt(itineraryId);
 };
+
+export const useDestinationIdOrThrow = () => {
+  const { destinationId } = useParams<GtToursRouteParam.DestinationId>();
+  if (!destinationId) {
+    throw new Error(
+      `Internal error: expected ${GtToursRouteParam.DestinationId} parameter in URL.`
+    );
+  }
+  return parseInt(destinationId);
+};
