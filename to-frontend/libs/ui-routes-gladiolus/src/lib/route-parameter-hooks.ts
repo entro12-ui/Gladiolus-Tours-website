@@ -30,3 +30,14 @@ export const useDestinationIdOrThrow = () => {
   }
   return parseInt(destinationId);
 };
+
+export const useCulturalActivityIdOrThrow = () => {
+  const { culturalActivityId } =
+    useParams<GtToursRouteParam.CulturalActivityId>();
+  if (!culturalActivityId) {
+    throw new Error(
+      `Internal error: expected ${GtToursRouteParam.CulturalActivityId} parameter in URL.`
+    );
+  }
+  return parseInt(culturalActivityId);
+};
