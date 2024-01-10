@@ -43,7 +43,7 @@ export const LazyDestinationsPage = loadable(
   { fallback: <RouterLazyFallback /> }
 );
 
-export const LazyItinerariesPage = loadable(
-  () => import('@collo/ui-page-itineraries'),
+export const LazyItineraryPage = loadable(
+  () => import('@collo/ui-page-itinerary'),
   { fallback: <RouterLazyFallback /> }
 );
