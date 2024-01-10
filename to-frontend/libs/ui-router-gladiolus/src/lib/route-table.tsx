@@ -7,7 +7,7 @@ import {
   LazyContactPage,
   LazyDestinationsPage,
   LazyErrorNotFoundPage,
-  LazyItineraryPage,
+  LazyItineraryDetailsPage,
   LazyLandingPage,
   LazySafarisPage,
   LazyServicePage,
@@ -62,9 +62,9 @@ export const GLADIOLUS_TOURS_ROUTE_TABLE = [
         element: <LazyDestinationsPage />,
       },
       {
-        path: GtToursRoute.Itineraries,
+        path: GtToursRoute.ItineraryDetails,
         index: true,
-        element: <LazyItineraryPage />,
+        element: <LazyItineraryDetailsPage />,
       },
       {
         path: '*',
