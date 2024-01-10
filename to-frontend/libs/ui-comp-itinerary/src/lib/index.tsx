@@ -3,7 +3,6 @@ import {
   GtItineraryCategory,
 } from '@collo/ui-persistance';
 import { Link } from 'react-router-dom';
-import { UiStatus } from '@collo/ui-comp-status';
 
 interface IProps {
   itinerary: GladiolusToursItinerary;
