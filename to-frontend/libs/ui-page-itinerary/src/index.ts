@@ -1,3 +1,3 @@
-import { GladiolusToursItineraryPage } from './lib';
+import { GladiolusToursItineraryDetails } from './lib';
 
-export default GladiolusToursItineraryPage;
+export default GladiolusToursItineraryDetails;
