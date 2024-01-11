@@ -1,3 +1,4 @@
+import React from 'react';
 import { GtItinerary } from '@collo/ui-persistance';
 import {
   GtToursRoute,
@@ -21,11 +22,15 @@ export const GladiolusToursItineraryDetails = () => {
       <div className="text-gray-600 dark:text-gray-400">
         {itinerary.description.map((step, index) => (
           <div key={index} className="mb-6">
-            <h3 className="text-2xl font-semibold mb-2">{step.title}</h3>
-            <p className="mb-2">
+            <h3 className="text-2xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">
+              {step.title}
+            </h3>
+            <p className="mb-2 text-gray-700 dark:text-gray-300">
               {step.Accommodation && `Accommodation: ${step.Accommodation}`}
             </p>
-            <p>{step.description}</p>
+            <p className="text-gray-800 dark:text-gray-400">
+              {step.description}
+            </p>
           </div>
         ))}
       </div>
