@@ -2,7 +2,8 @@ import {
   GladiolusToursItinerary,
   GtItineraryCategory,
 } from '@collo/ui-persistance';
-import { Link } from 'react-router-dom';
+import { generatePath, Link } from 'react-router-dom';
+import { GtToursRoute } from '@collo/ui-routes-gladiolus';
 
 interface IProps {
   itinerary: GladiolusToursItinerary;
@@ -20,7 +21,12 @@ export const Itinerary = ({ itinerary }: IProps) => {
             key={index}
             className="my-8 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 duration-300 hover:transform hover:scale-105"
           >
-            <Link to={`/itinerary/${index}`} className="block">
+            <Link
+              to={generatePath(GtToursRoute.ItineraryDetails, {
+                itineraryId: String(index),
+              })}
+              className="block"
+            >
               <figure>
                 <img
                   src={`${item.image}?auto=format&fit=crop&w=400&q=50`}
