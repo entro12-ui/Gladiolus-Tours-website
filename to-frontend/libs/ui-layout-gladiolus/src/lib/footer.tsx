@@ -2,7 +2,6 @@ import { SVGProps } from 'react';
 import { JSX } from 'react/jsx-runtime';
 import { Link } from 'react-router-dom';
 import { GtToursRoute } from '@collo/ui-routes-gladiolus';
-import { toFormData } from 'axios';
 
 const navigation = {
   main: [
