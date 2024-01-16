@@ -5,6 +5,7 @@ import {
   useItineraryIdOrThrow,
 } from '@collo/ui-routes-gladiolus';
 import { generatePath, Navigate } from 'react-router-dom';
+import { AccordionItem } from './accordion-item';
 
 export const GladiolusToursItineraryDetails = () => {
   const itineraryId = useItineraryIdOrThrow();
@@ -15,23 +16,22 @@ export const GladiolusToursItineraryDetails = () => {
   }
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 py-10 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
-      <h2 className="text-4xl font-extrabold mb-8 text-gray-800 dark:text-gray-300">
-        {itinerary.title}
-      </h2>
-      <div className="text-gray-600 dark:text-gray-400">
+    <div className="container mx-auto py-10">
+      <div className="space-y-8">
         {itinerary.description.map((step, index) => (
-          <div key={index} className="mb-6">
-            <h3 className="text-2xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">
-              {step.title}
-            </h3>
-            <p className="mb-2 text-gray-700 dark:text-gray-300">
-              {step.Accommodation && `Accommodation: ${step.Accommodation}`}
-            </p>
-            <p className="text-gray-800 dark:text-gray-400">
-              {step.description}
-            </p>
-          </div>
+          <AccordionItem key={index} title={step.title}>
+            <div className="mb-6">
+              <h3 className="text-2xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">
+                {step.title}
+              </h3>
+              <p className="mb-2 text-gray-700 dark:text-gray-300">
+                {step.Accommodation && `Accommodation: ${step.Accommodation}`}
+              </p>
+              <p className="text-gray-800 dark:text-gray-400">
+                {step.description}
+              </p>
+            </div>
+          </AccordionItem>
         ))}
       </div>
     </div>
