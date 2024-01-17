@@ -1,5 +1,6 @@
 import Mount_Kilimanjaro from './images/Itinerary/Mount_Kilimanjaro.webp';
 import Hippo from './images/Itinerary/Hippo.webp';
+import Flamingos from './images/Itinerary/Lesser_Flamingos_Lake_Natron_01.webp';
 
 interface IDescription {
   title: string;
@@ -19,6 +20,7 @@ export interface IItinerary {
   category: GtItineraryCategory;
   code: string;
   image: string;
+  carouselImage: string[];
   status: boolean;
   description: IDescription[];
 }
@@ -33,6 +35,7 @@ export const GtItinerary: GladiolusToursItinerary = [
     code: 'GT001',
     category: GtItineraryCategory.Safari,
     image: Hippo,
+    carouselImage: [Flamingos, Mount_Kilimanjaro],
     status: true,
     description: [
       {
@@ -85,6 +88,7 @@ export const GtItinerary: GladiolusToursItinerary = [
     code: 'GT002',
     category: GtItineraryCategory.Mount,
     image: Mount_Kilimanjaro,
+    carouselImage: [Hippo],
     status: true,
     description: [
       {
