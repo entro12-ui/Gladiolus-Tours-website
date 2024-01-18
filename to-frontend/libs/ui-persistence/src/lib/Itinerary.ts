@@ -88,7 +88,7 @@ export const GtItinerary: GladiolusToursItinerary = [
     code: 'GT002',
     category: GtItineraryCategory.Mount,
     image: Mount_Kilimanjaro,
-    carouselImage: [Hippo],
+    carouselImage: [Mount_Kilimanjaro, Flamingos],
     status: true,
     description: [
       {
