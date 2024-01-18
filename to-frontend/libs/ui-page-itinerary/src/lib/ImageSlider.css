@@ -5,20 +5,15 @@
 }
 
 .slide-container {
-    display: flex;
     overflow: hidden;
-    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    flex: 0 0 100%;
+    width: 100%;
     height: 300px; /* Adjust the height as needed */
     background-size: cover;
     background-position: center;
-}
-
-.active {
-    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
 }
 
 .arrow {
