@@ -2,7 +2,7 @@ import Mount_Kilimanjaro from './images/Itinerary/Mount_Kilimanjaro.webp';
 import Hippo from './images/Itinerary/Hippo.webp';
 import Flamingos from './images/Itinerary/Lesser_Flamingos_Lake_Natron_01.webp';
 
-interface IDescription {
+interface IItinerary {
   title: string;
   description: string;
   Accommodation: string;
@@ -13,7 +13,7 @@ export enum GtItineraryCategory {
   Safari,
 }
 
-export interface IItinerary {
+export interface IPackage {
   id: number;
   title: string;
   overview: string;
@@ -22,12 +22,12 @@ export interface IItinerary {
   image: string;
   carouselImage: string[];
   status: boolean;
-  description: IDescription[];
+  itinerary: IItinerary[];
 }
 
-export type GladiolusToursItinerary = IItinerary[];
+export type GladiolusToursItinerary = IPackage[];
 
-export const GtItinerary: GladiolusToursItinerary = [
+export const GtPackage: GladiolusToursItinerary = [
   {
     id: 1,
     title: '8 Days | Take a walk on the wild side in Kenya and Tanzania',
@@ -37,7 +37,7 @@ export const GtItinerary: GladiolusToursItinerary = [
     image: Hippo,
     carouselImage: [Flamingos, Mount_Kilimanjaro],
     status: true,
-    description: [
+    itinerary: [
       {
         title: 'DAY 1: ARUSHA – NGORONGORO',
         Accommodation: '',
@@ -90,7 +90,7 @@ export const GtItinerary: GladiolusToursItinerary = [
     image: Mount_Kilimanjaro,
     carouselImage: [Mount_Kilimanjaro, Flamingos],
     status: true,
-    description: [
+    itinerary: [
       {
         title: 'Arrival Day - Arusha / Moshi Town',
         Accommodation: 'Hotel',
