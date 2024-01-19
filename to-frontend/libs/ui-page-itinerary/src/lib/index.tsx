@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GtItinerary } from '@collo/ui-persistance';
+import { GtPackage } from '@collo/ui-persistance';
 import {
   GtToursRoute,
   useItineraryIdOrThrow,
@@ -63,7 +63,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
 
 export const GladiolusToursItineraryDetails = () => {
   const itineraryId = useItineraryIdOrThrow();
-  const itinerary = GtItinerary[itineraryId];
+  const itinerary = GtPackage[itineraryId];
 
   if (!itinerary) {
     return <Navigate to={generatePath(GtToursRoute.NotFound)} />;
@@ -76,7 +76,7 @@ export const GladiolusToursItineraryDetails = () => {
       <ImageSlider images={carouselImages} />
       <div className="container mx-auto py-10">
         <div className="space-y-8">
-          {itinerary.description.map((step, index) => (
+          {itinerary.itinerary.map((step, index) => (
             <AccordionItem key={index} title={step.title}>
               <div className="mb-6">
                 <p className="mb-2 text-gray-700 dark:text-gray-300">
