@@ -2,6 +2,10 @@ import Visitor from './images/Visitors_And_Giraffes.webp';
 import Zanzibar from './images/Zanzibar.webp';
 import Walking from './images/Walking.webp';
 import Sunrise from './images/Sunrise.webp';
+import Mountain_Sunrise from './images/Mountain-Sunrise.webp';
+import Ngorongoro from './images/Ngorongoro-Green-View.webp';
+import King_Fisher from './images/King-Fisher.webp';
+import Flamingo from './images/Flamingo.webp';
 
 interface IFeatures {
   name: string;
@@ -41,6 +45,8 @@ const features: IFeatures[] = [
   },
 ];
 
+// ... (previous imports and interfaces)
+
 export const GladiolusSafaris = () => {
   const alternativeText = 'Gladiolus Safaris';
   return (
@@ -67,26 +73,46 @@ export const GladiolusSafaris = () => {
             ))}
           </dl>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           <img
             src={Visitor}
             alt={alternativeText}
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 h-40 w-full object-cover"
           />
           <img
             src={Sunrise}
             alt={alternativeText}
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 h-40 w-full object-cover"
           />
           <img
-            src={Walking}
+            src={Flamingo}
             alt={alternativeText}
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 h-40 w-full object-cover"
           />
           <img
             src={Zanzibar}
             alt={alternativeText}
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 h-40 w-full object-cover"
+          />
+          <img
+            src={Mountain_Sunrise}
+            alt={alternativeText}
+            className="rounded-lg bg-gray-100 h-40 w-full object-cover"
+          />
+          <img
+            src={Walking}
+            alt={alternativeText}
+            className="rounded-lg bg-gray-100 h-40 w-full object-cover"
+          />
+          <img
+            src={King_Fisher}
+            alt={alternativeText}
+            className="rounded-lg bg-gray-100 h-40 w-full object-cover"
+          />
+          <img
+            src={Ngorongoro}
+            alt={alternativeText}
+            className="rounded-lg bg-gray-100 h-40 w-full object-cover"
           />
         </div>
       </div>
