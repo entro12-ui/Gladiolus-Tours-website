@@ -85,9 +85,9 @@ export const GladiolusToursContactBody = () => {
                   />
                 </dt>
                 <dd>
-                  545 Mavis Island
+                  Tanzania, Arusha
                   <br />
-                  Chicago, IL 99191
+                  Phillips, JPM5+Q69
                 </dd>
               </div>
               <div className="flex gap-x-4">
