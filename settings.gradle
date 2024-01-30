@@ -1,4 +1,4 @@
-rootProject.name = 'TheOddagen'
+rootProject.name = 'Ubiquitous-System'
 
 include 'to-frontend'
 include 'to-backend-server'
