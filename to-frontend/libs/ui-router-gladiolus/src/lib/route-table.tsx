@@ -62,7 +62,7 @@ export const GLADIOLUS_TOURS_ROUTE_TABLE = [
         element: <LazyDestinationsPage />,
       },
       {
-        path: GtToursRoute.ItineraryDetails,
+        path: GtToursRoute.AdventuresDetails,
         index: true,
         element: <LazyItineraryDetailsPage />,
       },

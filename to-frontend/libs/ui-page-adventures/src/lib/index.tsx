@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  GtToursRoute,
-  useItineraryIdOrThrow,
+  GtToursRoute, useAdventuresIdOrThrow,
 } from '@collo/ui-routes-gladiolus';
 import { generatePath, Navigate } from 'react-router-dom';
 import { AccordionItem } from './accordion-item';
@@ -62,21 +61,21 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
 };
 
 export const GladiolusToursAdventuresDetails = () => {
-  const itineraryId = useItineraryIdOrThrow();
-  const itinerary = GtAdventures[itineraryId];
+  const adventureId = useAdventuresIdOrThrow();
+  const adventure = GtAdventures[adventureId];
 
-  if (!itinerary) {
+  if (!adventure) {
     return <Navigate to={generatePath(GtToursRoute.NotFound)} />;
   }
 
-  const carouselImages = itinerary.carouselImage.map((step) => step);
+  const carouselImages = adventure.carouselImage.map((step) => step);
 
   return (
     <>
       <ImageSlider images={carouselImages} />
       <div className="container mx-auto py-10">
         <div className="space-y-8">
-          {itinerary.itinerary.map((step, index) => (
+          {adventure.itinerary.map((step, index) => (
             <AccordionItem key={index} title={step.title}>
               <div className="mb-6">
                 <p className="mb-2 text-gray-700 dark:text-gray-300">

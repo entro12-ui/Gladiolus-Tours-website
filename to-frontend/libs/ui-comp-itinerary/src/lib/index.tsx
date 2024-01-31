@@ -22,8 +22,8 @@ export const Itinerary = ({ itinerary }: IProps) => {
             className="my-8 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 duration-300 hover:transform hover:scale-105"
           >
             <Link
-              to={generatePath(GtToursRoute.ItineraryDetails, {
-                itineraryId: String(index),
+              to={generatePath(GtToursRoute.AdventuresDetails, {
+                adventuresId: String(index),
               })}
               className="block"
             >
