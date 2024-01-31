@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {
-  GtToursRoute, useAdventuresIdOrThrow,
+  GtToursRoute,
+  useAdventuresIdOrThrow,
 } from '@collo/ui-routes-gladiolus';
 import { generatePath, Navigate } from 'react-router-dom';
 import { AccordionItem } from './accordion-item';
 import './ImageSlider.css';
-import {GtAdventures} from "@collo/ui-persistance";
+import { GtAdventures } from '@collo/ui-persistance';
 
 interface ImageSliderProps {
   images: string[];
@@ -71,24 +72,29 @@ export const GladiolusToursAdventuresDetails = () => {
   const carouselImages = adventure.carouselImage.map((step) => step);
 
   return (
-    <>
-      <ImageSlider images={carouselImages} />
-      <div className="container mx-auto py-10">
-        <div className="space-y-8">
-          {adventure.itinerary.map((step, index) => (
-            <AccordionItem key={index} title={step.title}>
-              <div className="mb-6">
-                <p className="mb-2 text-gray-700 dark:text-gray-300">
-                  {step.Accommodation && `Accommodation: ${step.Accommodation}`}
-                </p>
-                <p className="text-gray-800 dark:text-gray-400">
-                  {step.description}
-                </p>
-              </div>
-            </AccordionItem>
-          ))}
+    <div className="container mx-auto py-10">
+      <div className="grid grid-cols-2 md:grid-cols-1 gap-8">
+        <div>
+          <ImageSlider images={carouselImages} />
+        </div>
+        <div>
+          <div className="space-y-8">
+            {adventure.itinerary.map((step, index) => (
+              <AccordionItem key={index} title={step.title}>
+                <div className="mb-6">
+                  <p className="mb-2 text-black dark:text-black">
+                    {step.Accommodation &&
+                      `Accommodation: ${step.Accommodation}`}
+                  </p>
+                  <p className="text-black dark:text-black">
+                    {step.description}
+                  </p>
+                </div>
+              </AccordionItem>
+            ))}
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
