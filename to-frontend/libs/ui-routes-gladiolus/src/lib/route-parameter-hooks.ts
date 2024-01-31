@@ -11,14 +11,14 @@ export const useSafariIdOrThrow = () => {
   return parseInt(safariId);
 };
 
-export const useItineraryIdOrThrow = () => {
-  const { itineraryId } = useParams<GtToursRouteParam.ItineraryId>();
-  if (!itineraryId) {
+export const useAdventuresIdOrThrow = () => {
+  const { adventuresId } = useParams<GtToursRouteParam.AdventuresId>();
+  if (!adventuresId) {
     throw new Error(
-      `Internal error: expected ${GtToursRouteParam.ItineraryId} parameter in URL.`
+      `Internal error: expected ${GtToursRouteParam.AdventuresId} parameter in URL.`
     );
   }
-  return parseInt(itineraryId);
+  return parseInt(adventuresId);
 };
 
 export const useDestinationIdOrThrow = () => {

@@ -1,5 +1,5 @@
 export enum GtToursRouteParam {
-  ItineraryId = 'itineraryId',
+  AdventuresId = 'adventuresId',
   DestinationId = 'destinationId',
   CulturalActivityId = 'culturalActivityId',
   AccommodationId = 'accommodationId',
