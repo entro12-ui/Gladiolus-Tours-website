@@ -61,7 +61,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
   );
 };
 
-export const GladiolusToursItineraryDetails = () => {
+export const GladiolusToursAdventuresDetails = () => {
   const itineraryId = useItineraryIdOrThrow();
   const itinerary = GtAdventures[itineraryId];
 
