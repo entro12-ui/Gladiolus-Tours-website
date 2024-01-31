@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { GtPackage } from '@collo/ui-persistance';
 import {
   GtToursRoute,
   useItineraryIdOrThrow,
@@ -7,6 +6,7 @@ import {
 import { generatePath, Navigate } from 'react-router-dom';
 import { AccordionItem } from './accordion-item';
 import './ImageSlider.css';
+import {GtAdventures} from "@collo/ui-persistance";
 
 interface ImageSliderProps {
   images: string[];
@@ -63,7 +63,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
 
 export const GladiolusToursItineraryDetails = () => {
   const itineraryId = useItineraryIdOrThrow();
-  const itinerary = GtPackage[itineraryId];
+  const itinerary = GtAdventures[itineraryId];
 
   if (!itinerary) {
     return <Navigate to={generatePath(GtToursRoute.NotFound)} />;

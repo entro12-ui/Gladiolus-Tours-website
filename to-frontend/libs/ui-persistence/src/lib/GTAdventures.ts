@@ -13,7 +13,7 @@ export enum GtItineraryCategory {
   Safari,
 }
 
-export interface IPackage {
+export interface IGtAdventures {
   id: number;
   title: string;
   overview: string;
@@ -25,9 +25,9 @@ export interface IPackage {
   itinerary: IItinerary[];
 }
 
-export type GladiolusToursItinerary = IPackage[];
+export type GladiolusToursItinerary = IGtAdventures[];
 
-export const GtPackage: GladiolusToursItinerary = [
+export const GtAdventures: GladiolusToursItinerary = [
   {
     id: 1,
     title: '8 Days | Take a walk on the wild side in Kenya and Tanzania',
