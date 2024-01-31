@@ -3,6 +3,7 @@ import Hippo from './images/Itinerary/Hippo.webp';
 import Flamingos from './images/Itinerary/Lesser_Flamingos_Lake_Natron_01.webp';
 
 interface IItinerary {
+  day: number;
   title: string;
   description: string;
   Accommodation: string;
@@ -39,18 +40,21 @@ export const GtAdventures: GladiolusToursItinerary = [
     status: true,
     itinerary: [
       {
+        day: 1,
         title: 'DAY 1: ARUSHA – NGORONGORO',
         Accommodation: '',
         description:
           'Meet in Arusha. After lunch, drive through the Ngorongoro Highlands to your lodge situated on the rim of the crater. The crater covers over 300 square kilometers of land and is the home of the rare black rhino, prides of lion, elephant, cheetah and great herds of buffalo, antelope and wildebeest. Dinner and overnight at a lodge in Ngorongoro.',
       },
       {
+        day: 2,
         title: 'DAY 2: NGORONGORO',
         Accommodation: '',
         description:
           'Today you will descend over 600 meters to the floor of the crater for a day crater tour. Explore the forest areas that are inhabited by monkey and elephant, the lake area, where you may see the flamingos and the open savannah where the lions hunt for food. Picnic lunches will be served in the crater. Dinner and overnight at a lodge in Ngorongoro.',
       },
       {
+        day: 3,
         title: 'DAY 3: NGORONGORO – SERENGETI',
         Accommodation: '',
         description:
@@ -59,6 +63,7 @@ export const GtAdventures: GladiolusToursItinerary = [
           'Continue to Serengeti National Park in time for lunch. This enormous park supports every variety of animal imaginable – from large predators such as lion, leopard and cheetah to the smaller herbivores they prey on. Afternoon game drive. Dinner and overnight at a lodge in Serengeti.',
       },
       {
+        day: 4,
         title: 'DAY 4: SERENGETI',
         Accommodation: '',
         description:
@@ -67,12 +72,14 @@ export const GtAdventures: GladiolusToursItinerary = [
           'Dinner and overnight at a lodge in Serengeti.',
       },
       {
+        day: 5,
         title: 'DAY 5: SERENGETI – MANYARA',
         Accommodation: '',
         description:
           'Breakfast at your lodge. Drive to Lake Manyara, a soda lake lying in the Great Rift Valley. Lunch at Lake Manyara. In the afternoon game drive in Lake Manyara National Park, home of the tree-climbing lions. Apart from the varied types of landscape including jungle, swamp and savanna, there are also a large variety of animals including Giraffe, Zebra, Elephant, Gazelle, hippos, monkeys and about 400 different species of birds. Dinner and overnight in a lodge around Lake Manyara.',
       },
       {
+        day: 6,
         title: 'DAY 6: MANYARA – ARUSHA',
         Accommodation: '',
         description:
@@ -92,12 +99,14 @@ export const GtAdventures: GladiolusToursItinerary = [
     status: true,
     itinerary: [
       {
+        day: 1,
         title: 'Arrival Day - Arusha / Moshi Town',
         Accommodation: 'Hotel',
         description:
           'Pick up from Kilimanjaro airport and transfer to hotel in Moshi/ Arusha. A pre-climb briefing can be organized where we will provide you all the information to prepare for your climb. This will include a day to day guide of your climb, the gear required as well as discussing acute mountain sickness and all health and safety on Kilimanjaro.',
       },
       {
+        day: 2,
         title:
           'Arusha/Moshi Town – Machame Gate (1800 m) – Machame Camp (3010 m)',
         Accommodation: 'Machame Camp',
@@ -107,6 +116,7 @@ export const GtAdventures: GladiolusToursItinerary = [
           'Distance: About 5 km | Hiking time: 5-6 hours | Habitat: Montane forest\n',
       },
       {
+        day: 3,
         title:
           'Machame Camp (3010 m) – Shira Camp (3845 m) – Lava Tower (4630 m) – Barranco Camp (3950 m)',
         Accommodation: 'Barranco Camp',
@@ -116,6 +126,7 @@ export const GtAdventures: GladiolusToursItinerary = [
           'Distance: About 16 km | Hiking time: 6-10 hours | Habitat: Moorland, Semi desert\n',
       },
       {
+        day: 4,
         title: 'Barranco Camp (3950 m) – Barafu Camp (4640 m)',
         Accommodation: 'Barafu Camp',
         description:
@@ -124,6 +135,7 @@ export const GtAdventures: GladiolusToursItinerary = [
           'Distance: About 11 km | Hiking time: 8-10 hours | Habitat: Alpine desert\n',
       },
       {
+        day: 5,
         title:
           'Barafu Camp (4640 m) – Uhuru Peak (5895 m) – Mweka Camp (3080 m) – Mweka Gate (1630 m) – Moshi / Arusha Town',
         Accommodation: 'Hotel',
@@ -134,6 +146,7 @@ export const GtAdventures: GladiolusToursItinerary = [
           'Hiking time: 8 hours to reach Uhuru Peak | Descend time: 8-11 hours to descend to Mweka Gate | Distance: About 6 km ascent + 20 km descent | Habitat: Stone scree and ice-capped summit, Moorland, Montane forest\n',
       },
       {
+        day: 6,
         title: 'Departure Day / Go on a Safari',
         Accommodation: '',
         description:

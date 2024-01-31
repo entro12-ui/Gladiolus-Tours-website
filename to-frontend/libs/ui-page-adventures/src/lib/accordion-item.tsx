@@ -3,9 +3,10 @@ import { ReactNode, useState } from 'react';
 interface AccordionItemProps {
   title: string;
   children: ReactNode;
+  day: number;
 }
 
-export const AccordionItem = ({ title, children }: AccordionItemProps) => {
+export const AccordionItem = ({ title, children, day }: AccordionItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -14,6 +15,7 @@ export const AccordionItem = ({ title, children }: AccordionItemProps) => {
         className="flex items-center justify-between cursor-pointer p-4 bg-gray-100"
         onClick={() => setIsOpen(!isOpen)}
       >
+        {/* <div className="">Day {day}</div> */}
         <h3 className="text-xl font-semibold mb-2 text-black overflow-hidden">
           {title}
         </h3>

@@ -80,7 +80,7 @@ export const GladiolusToursAdventuresDetails = () => {
         <div>
           <div className="space-y-8">
             {adventure.itinerary.map((step, index) => (
-              <AccordionItem key={index} title={step.title}>
+              <AccordionItem key={index} title={step.title} day={step.day}>
                 <div className="mb-6">
                   <p className="mb-2 text-black dark:text-black">
                     {step.Accommodation &&
