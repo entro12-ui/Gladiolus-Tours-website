@@ -41,11 +41,11 @@
       "@collo/ui-page-accommodations": [
         "libs/ui-page-accommodations/src/index.ts"
       ],
+      "@collo/ui-page-adventures": ["libs/ui-page-adventures/src/index.ts"],
       "@collo/ui-page-contact": ["libs/ui-page-contact/src/index.ts"],
       "@collo/ui-page-destinations": ["libs/ui-page-destinations/src/index.ts"],
       "@collo/ui-page-error-404": ["libs/ui-page-error-404/src/index.ts"],
       "@collo/ui-page-itineraries": ["libs/ui-page-itineraries/src/index.ts"],
-      "@collo/ui-page-adventures": ["libs/ui-page-adventures/src/index.ts"],
       "@collo/ui-page-landing-page": ["libs/ui-page-landing-page/src/index.ts"],
       "@collo/ui-page-safaris": ["libs/ui-page-safaris/src/index.ts"],
       "@collo/ui-page-services": ["libs/ui-page-services/src/index.ts"],

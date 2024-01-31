@@ -1,7 +1,7 @@
 import {
   ReactNotifications,
   ReactNotificationOptions,
-  store
+  store,
 } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 

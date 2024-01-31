@@ -14,7 +14,7 @@ const overview: IStats[] = [
 ];
 
 interface IWords {
-  words: string[]
+  words: string[];
 }
 
 const Typewriter = ({ words }: IWords) => {

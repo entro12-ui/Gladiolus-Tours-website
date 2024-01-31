@@ -4,7 +4,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import { getWebsiteBaseHref } from '@collo/ui-utils';
 import { GLADIOLUS_TOURS_ROUTE_TABLE } from './route-table';
 
-
 // See https://medium.com/doctolib/react-query-cachetime-vs-staletime-ec74defc483e
 // * cacheTime default is 5 mins
 // * staleTime default is 0 mins

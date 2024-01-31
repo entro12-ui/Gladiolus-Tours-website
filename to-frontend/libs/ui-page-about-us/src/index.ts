@@ -1,2 +1,2 @@
 import { GladiolusToursAboutUs } from './lib/index';
-export default GladiolusToursAboutUs
+export default GladiolusToursAboutUs;

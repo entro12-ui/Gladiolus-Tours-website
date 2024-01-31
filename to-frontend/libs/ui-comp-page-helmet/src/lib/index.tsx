@@ -7,10 +7,10 @@ export interface PageHelmetProps {
 }
 
 const CorePageHelmet = ({
-                          title,
-                          titleTemplate,
-                          description,
-                        }: PageHelmetProps) => {
+  title,
+  titleTemplate,
+  description,
+}: PageHelmetProps) => {
   return (
     <Helmet>
       <meta charSet="utf-8" />
