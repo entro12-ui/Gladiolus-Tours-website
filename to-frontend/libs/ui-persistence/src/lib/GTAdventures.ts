@@ -26,9 +26,9 @@ export interface IGtAdventures {
   itinerary: IItinerary[];
 }
 
-export type GladiolusToursItinerary = IGtAdventures[];
+export type GladiolusToursAdventure = IGtAdventures[];
 
-export const GtAdventures: GladiolusToursItinerary = [
+export const GtAdventures: GladiolusToursAdventure = [
   {
     id: 1,
     title: '8 Days | Take a walk on the wild side in Kenya and Tanzania',

@@ -6,8 +6,8 @@ import { WhyGoWithGladiolus } from './services';
 import { GladiolusToursIncentives } from './incentives';
 import { GladiolusOverview } from './overview';
 import { EntryPageHelmet } from '@collo/ui-comp-page-helmet';
-import { Itinerary } from '@collo/ui-comp-itinerary';
 import { GtAdventures } from '@collo/ui-persistance';
+import { Adventure } from '@collo/ui-comp-itinerary';
 
 export const GladiolusLandingPage = () => {
   return (
@@ -18,7 +18,7 @@ export const GladiolusLandingPage = () => {
           <MainHero />
         </div>
         <div>
-          <Itinerary itinerary={GtAdventures} />
+          <Adventure adventure={GtAdventures} />
         </div>
         <div>
           <GladiolusOverview />

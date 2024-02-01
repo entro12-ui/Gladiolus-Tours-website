@@ -1,22 +1,22 @@
 import {
-  GladiolusToursItinerary,
+  GladiolusToursAdventure,
   GtItineraryCategory,
 } from '@collo/ui-persistance';
 import { generatePath, Link } from 'react-router-dom';
 import { GtToursRoute } from '@collo/ui-routes-gladiolus';
 
 interface IProps {
-  itinerary: GladiolusToursItinerary;
+  adventure: GladiolusToursAdventure;
 }
 
-export const Itinerary = ({ itinerary }: IProps) => {
+export const Adventure = ({ adventure }: IProps) => {
   return (
     <section className="bg-gray-100 dark:bg-gray-900 py-10 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
       <h2 className="text-4xl font-extrabold mb-8 text-gray-800 dark:text-gray-300">
         Explore Gladiolus Adventures
       </h2>
       <div className="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {itinerary.map((item, index) => (
+        {adventure.map((item, index) => (
           <div
             key={index}
             className="my-8 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 duration-300 hover:transform hover:scale-105"
