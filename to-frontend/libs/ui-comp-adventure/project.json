@@ -1,7 +1,7 @@
 {
-  "name": "ui-comp-itinerary",
+  "name": "ui-comp-adventure",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/ui-comp-itinerary/src",
+  "sourceRoot": "libs/ui-comp-adventure/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -13,16 +13,16 @@
       "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/ui-comp-itinerary",
-        "tsConfig": "libs/ui-comp-itinerary/tsconfig.lib.json",
-        "project": "libs/ui-comp-itinerary/package.json",
-        "entryFile": "libs/ui-comp-itinerary/src/index.ts",
+        "outputPath": "dist/libs/ui-comp-adventure",
+        "tsConfig": "libs/ui-comp-adventure/tsconfig.lib.json",
+        "project": "libs/ui-comp-adventure/package.json",
+        "entryFile": "libs/ui-comp-adventure/src/index.ts",
         "external": ["react", "react-dom", "react/jsx-runtime"],
         "rollupConfig": "@nx/react/plugins/bundle-rollup",
         "compiler": "babel",
         "assets": [
           {
-            "glob": "libs/ui-comp-itinerary/README.md",
+            "glob": "libs/ui-comp-adventure/README.md",
             "input": ".",
             "output": "."
           }
@@ -33,7 +33,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/ui-comp-itinerary/jest.config.ts"
+        "jestConfig": "libs/ui-comp-adventure/jest.config.ts"
       }
     }
   }

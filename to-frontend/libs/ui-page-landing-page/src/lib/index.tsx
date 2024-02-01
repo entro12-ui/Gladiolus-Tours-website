@@ -7,7 +7,7 @@ import { GladiolusToursIncentives } from './incentives';
 import { GladiolusOverview } from './overview';
 import { EntryPageHelmet } from '@collo/ui-comp-page-helmet';
 import { GtAdventures } from '@collo/ui-persistance';
-import { Adventure } from '@collo/ui-comp-itinerary';
+import { Adventure } from '@collo/ui-comp-adventure';
 
 export const GladiolusLandingPage = () => {
   return (

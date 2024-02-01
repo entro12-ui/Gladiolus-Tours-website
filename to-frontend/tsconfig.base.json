@@ -21,7 +21,7 @@
       "@collo/ui-comp-chat-bot": ["libs/ui-comp-chat-bot/src/index.ts"],
       "@collo/ui-comp-header": ["libs/ui-comp-header/src/index.ts"],
       "@collo/ui-comp-images": ["libs/ui-comp-images/src/index.ts"],
-      "@collo/ui-comp-itinerary": ["libs/ui-comp-itinerary/src/index.ts"],
+      "@collo/ui-comp-adventure": ["libs/ui-comp-adventure/src/index.ts"],
       "@collo/ui-comp-logo": ["libs/ui-comp-logo/src/index.ts"],
       "@collo/ui-comp-notifications": [
         "libs/ui-comp-notifications/src/index.ts"
