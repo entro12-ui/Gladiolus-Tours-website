@@ -1,11 +1,11 @@
 /* eslint-disable */
 export default {
-  displayName: 'ui-page-adventures',
+  displayName: 'ui-page-adventure-details',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
     '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nx/react/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/ui-page-adventures',
+  coverageDirectory: '../../coverage/libs/ui-page-adventure-details',
 };
