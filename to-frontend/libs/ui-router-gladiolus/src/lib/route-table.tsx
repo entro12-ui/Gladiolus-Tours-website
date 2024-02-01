@@ -4,10 +4,10 @@ import { UiGladiolusToursLayoutWebsite } from '@collo/ui-layout-gladiolus';
 import {
   LazyAboutUsPage,
   LazyAccommodationsPage,
+  LazyAdventureDetailPage,
   LazyContactPage,
   LazyDestinationsPage,
   LazyErrorNotFoundPage,
-  LazyItineraryDetailsPage,
   LazyLandingPage,
   LazySafarisPage,
   LazyServicePage,
@@ -64,7 +64,7 @@ export const GLADIOLUS_TOURS_ROUTE_TABLE = [
       {
         path: GtToursRoute.AdventuresDetails,
         index: true,
-        element: <LazyItineraryDetailsPage />,
+        element: <LazyAdventureDetailPage />,
       },
       {
         path: '*',
