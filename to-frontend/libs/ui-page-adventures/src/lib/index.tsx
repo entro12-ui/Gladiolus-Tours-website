@@ -5,7 +5,7 @@ import { GtAdventures, GtItineraryCategory } from '@collo/ui-persistance';
 export const GladiolusToursAdventures = () => {
   return (
     <div className="container mx-auto py-10">
-      <h2 className="text-4xl font-extrabold mb-8 text-gray-800 dark:text-gray-300 text-center">
+      <h2 className="text-4xl font-extrabold mb-8 text-black dark:text-white text-center">
         Discover Your Next Adventure with Gladiolus Tours
       </h2>
       <div className="grid grid-flow-row gap-8 justify-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
