@@ -13,11 +13,13 @@ import {
 import { Link } from 'react-router-dom';
 import { Dialog, Transition, Menu } from '@headlessui/react';
 import { classNames } from '@collo/ui-utils';
+import GtLogo from './assets/gt-logo.png';
 
 const navigation = [
   { name: 'Home', href: GtToursRoute.Home },
   { name: 'Services', href: GtToursRoute.Service },
   { name: 'Safaris', href: GtToursRoute.Safaris },
+  { name: 'Adventures', href: GtToursRoute.Adventures },
   { name: 'Destinations', href: GtToursRoute.Destinations },
   { name: 'Accommodations', href: GtToursRoute.Accommodation },
   { name: 'About Us', href: GtToursRoute.AboutUs },
@@ -40,11 +42,7 @@ export const GladiolusHeader = () => {
       >
         <Link to={GtToursRoute.Home} className="-m-1.5 p-1.5">
           {/*<Logo style={{ width: '50%' }} className={'mx-auto'} />*/}
-          <img
-            className="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Gladiolus Tours"
-          />
+          <img className="h-10 w-auto" src={GtLogo} alt="Gladiolus Tours" />
         </Link>
         <div className="flex lg:hidden">
           <button
@@ -189,7 +187,7 @@ export const GladiolusHeader = () => {
               <span className="sr-only">Gladiolus Tours</span>
               <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="https://www.cleanpng.com/png-georgia-tech-yellow-jackets-football-georgia-tech-1344222/preview.html"
                 alt="Gladiolus Tours"
               />
             </Link>
