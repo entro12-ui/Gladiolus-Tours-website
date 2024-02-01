@@ -44,7 +44,7 @@ export const AccordionItem = ({ title, children, day }: AccordionItemProps) => {
           isOpen ? 'h-auto' : 'h-0'
         }`}
       >
-        <div className="bg-gray-100 dark:bg-gray-700 p-4">{children}</div>
+        <div className="bg-gray-100 dark:bg-gray-100 p-4">{children}</div>
       </div>
     </div>
   );

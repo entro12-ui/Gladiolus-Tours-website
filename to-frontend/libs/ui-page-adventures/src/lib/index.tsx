@@ -73,8 +73,8 @@ export const GladiolusToursAdventuresDetails = () => {
 
   return (
     <div className="container mx-auto py-10">
-      <div className="grid grid-cols-2 md:grid-cols-1 gap-8">
-        <div>
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+        <div className="mb-8 md:mb-0">
           <ImageSlider images={carouselImages} />
         </div>
         <div>
