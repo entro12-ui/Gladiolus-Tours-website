@@ -48,7 +48,10 @@ export const Destinations: React.FC<IProps> = ({ destinations }) => {
       <h2 className="text-4xl font-extrabold mb-8 text-black-800 dark:text-black-300">
         Explore Gladiolus Destinations
       </h2>
-      <Slider {...sliderSettings} className="slick-container">
+      <Slider
+        {...sliderSettings}
+        className="slick-container grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
         {destinations.map((item, index) => (
           <div
             key={index}
