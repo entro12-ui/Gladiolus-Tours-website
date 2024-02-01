@@ -11,8 +11,8 @@ interface IProps {
 
 export const Adventure = ({ adventure }: IProps) => {
   return (
-    <section className="bg-gray-100 dark:bg-gray-900 py-10 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
-      <h2 className="text-4xl font-extrabold mb-8 text-gray-800 dark:text-gray-300">
+    <section className="bg-gray dark:bg-gray py-10 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+      <h2 className="text-4xl font-extrabold mb-8 text-black-800 dark:text-black-300">
         Explore Gladiolus Adventures
       </h2>
       <div className="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

@@ -52,7 +52,7 @@ export const Destinations: React.FC<IProps> = ({ destinations }) => {
         {destinations.map((item, index) => (
           <div
             key={index}
-            className="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 slick-slide"
+            className="my-8 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 duration-300 hover:transform hover:scale-105"
           >
             <Link
               to={generatePath(GtToursRoute.DestinationDetails, {
