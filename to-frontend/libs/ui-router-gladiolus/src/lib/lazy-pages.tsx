@@ -47,3 +47,8 @@ export const LazyAdventureDetailPage = loadable(
   () => import('@collo/ui-page-adventure-details'),
   { fallback: <RouterLazyFallback /> }
 );
+
+export const LazyAdventuresPage = loadable(
+  () => import('@collo/ui-page-adventures'),
+  { fallback: <RouterLazyFallback /> }
+);
