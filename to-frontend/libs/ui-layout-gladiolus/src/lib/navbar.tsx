@@ -185,11 +185,7 @@ export const GladiolusHeader = () => {
           <div className="flex items-center justify-between">
             <Link to={GtToursRoute.Home} className="-m-1.5 p-1.5">
               <span className="sr-only">Gladiolus Tours</span>
-              <img
-                className="h-8 w-auto"
-                src="https://www.cleanpng.com/png-georgia-tech-yellow-jackets-football-georgia-tech-1344222/preview.html"
-                alt="Gladiolus Tours"
-              />
+              <img className="h-8 w-auto" src={GtLogo} alt="Gladiolus Tours" />
             </Link>
             <button
               type="button"
