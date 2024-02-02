@@ -44,15 +44,15 @@ export const Destinations: React.FC<IProps> = ({ destinations }) => {
   };
 
   return (
-    <section className="bg-gray dark:bg-gray py-10 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
-      <h2 className="text-4xl font-extrabold mb-8 text-black-800 dark:text-black-300">
+    <section className="bg-gray dark:bg-gray-800 py-10 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+      <h2 className="text-4xl font-extrabold mb-8 text-white dark:text-white">
         Explore Gladiolus Destinations
       </h2>
       <Slider {...sliderSettings} className="slick-container">
         {destinations.map((item, index) => (
           <div
             key={index}
-            className="my-8 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 duration-300 hover:transform hover:scale-105"
+            className="my-8 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-white duration-300 hover:transform hover:scale-105"
           >
             <Link
               to={generatePath(GtToursRoute.DestinationDetails, {
@@ -67,13 +67,13 @@ export const Destinations: React.FC<IProps> = ({ destinations }) => {
                   className="rounded-t h-64 w-full object-cover"
                 />
                 <figcaption className="p-4">
-                  <div className="mb-3 text-sm text-gray-500 dark:text-gray-400">
+                  <div className="mb-3 text-sm text-black dark:text-black">
                     Status: <UiStatus status={item.status} />
                   </div>
-                  <p className="text-xl mb-3 font-semibold leading-tight text-gray-800 dark:text-gray-300">
+                  <p className="text-xl mb-3 font-semibold leading-tight text-black dark:text-black">
                     {item.name}
                   </p>
-                  <p className="text-sm leading-5 text-gray-600 dark:text-gray-400">
+                  <p className="text-sm leading-5 text-black dark:text-black">
                     {item.description}
                   </p>
                 </figcaption>
