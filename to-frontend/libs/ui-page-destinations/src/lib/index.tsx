@@ -8,7 +8,7 @@ export const GladiolusDestinationsPage = () => {
       <EntryPageHelmet title={'Destinations'} />
       <GladiolusHeaderSection
         header={'Destinations'}
-        description={'Destinations Offered by Gladiolus Tours'}
+        description={'Explore Gladiolus Tours Destinations'}
       />
       <div>
         <GladiolusToursDestinations />
