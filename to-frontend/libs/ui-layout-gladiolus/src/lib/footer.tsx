@@ -6,8 +6,9 @@ import { GtToursRoute } from '@collo/ui-routes-gladiolus';
 const navigation = {
   main: [
     { name: 'About Us', href: GtToursRoute.AboutUs },
+    { name: 'Services', href: GtToursRoute.Service },
     { name: 'Destinations', href: GtToursRoute.Destinations },
-    { name: 'Accommodation & Activities', href: GtToursRoute.Accommodation },
+    { name: 'Adventures', href: GtToursRoute.Adventures },
     { name: 'Safaris', href: GtToursRoute.Safaris },
     { name: 'Contact', href: GtToursRoute.Contact },
   ],
