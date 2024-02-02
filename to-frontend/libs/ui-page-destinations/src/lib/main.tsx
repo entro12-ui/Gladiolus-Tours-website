@@ -2,6 +2,7 @@ import React from 'react';
 import { GtDestinations } from '@collo/ui-persistance';
 import { generatePath, Link } from 'react-router-dom';
 import { GtToursRoute } from '@collo/ui-routes-gladiolus';
+import { UiStatus } from '@collo/ui-comp-status';
 
 export const GladiolusToursDestinations = () => {
   return (
@@ -34,8 +35,8 @@ export const GladiolusToursDestinations = () => {
                 <p className="text-sm text-gray-500 mb-4">
                   {destination.description}
                 </p>
-                <p className="text-sm italic text-gray-500">
-                  {destination.status}
+                <p>
+                  <UiStatus status={destination.status} />
                 </p>
               </div>
             </Link>
