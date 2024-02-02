@@ -19,10 +19,10 @@ export const GladiolusLandingPage = () => {
           <MainHero />
         </div>
         <div>
-          <GladiolusOverview />
+          <Adventure adventure={GtAdventures} />
         </div>
         <div>
-          <Adventure adventure={GtAdventures} />
+          <GladiolusOverview />
         </div>
         <div>
           <Destinations destinations={GtDestinations} />
