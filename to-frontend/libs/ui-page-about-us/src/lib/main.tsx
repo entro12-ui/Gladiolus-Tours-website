@@ -71,7 +71,7 @@ const blogPosts = [
 
 export const GladiolusToursAboutPage = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-gray-100 py-16">
       <main className="isolate">
         {/* Hero section */}
         <div className="relative isolate -z-10">
