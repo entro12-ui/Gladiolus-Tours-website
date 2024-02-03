@@ -14,8 +14,9 @@ tasks.register("serveUiGladiolusTours", YarnTask) {
 
 
 /**
- * Helper Utility:
- *  Linter, Formatter, Dependency Graph
+ * Helper/Utility:
+ *  Utility: Linter, Formatter, Unit Test, Build
+ *  Helper: Dependency Graph
  */
 tasks.register('lintFixAll', YarnTask) {
     dependsOn yarnInstallDev
@@ -27,7 +28,41 @@ tasks.register('formatWriteAll', YarnTask) {
     args = ['nx', 'format:write', '--all']
 }
 
+tasks.register('unitTestAll', YarnTask) {
+    dependsOn yarnInstallDev
+    args = ['nx', 'run-many', '--all', '--target=test', '--parallel']
+}
+
+tasks.register('buildAppsOnly', YarnTask) {
+    dependsOn yarnInstallDev
+    args = ['nx', 'run-many', '-t', 'build', '-p', 'ui-gladiolus-tours', '--parallel']
+}
+
 tasks.register('depgraph', YarnTask) {
     dependsOn yarnInstallDev
     args = ['nx', 'graph']
+}
+
+
+/**
+ * CI tasks
+ */
+tasks.register('formatCheckAllCi', YarnTask) {
+    dependsOn yarnInstallCi
+    args = ['nx', 'format:check', '--all']
+}
+
+tasks.register('buildAffectedCi', YarnTask) {
+    dependsOn yarnInstallCi
+    args = ['nx', 'affected', '--target=build', '--prod', '--parallel']
+}
+
+tasks.register('lintAffectedCi', YarnTask) {
+    dependsOn yarnInstallCi
+    args = ['nx', 'affected', '--target=lint', '--parallel', '--max-warning=0']
+}
+
+tasks.register('unitTestAffectedCi', YarnTask) {
+    dependsOn yarnInstallCi
+    args = ['nx', 'affected', '--target=test', '--parallel']
 }

@@ -1,17 +1,17 @@
 #!/bin/bash
 
-npx nx format:check --all
+./gradlew :to-frontend:formatCheckAllCi
 exitStatus=$?
 if [ $exitStatus -ne 0 ]; then
     echo -e "\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     echo "One or more frontend files are not properly formatted."
-    echo "To fix, run: nx format:write --all"
+    echo "To fix, run: ./gradlew :to-frontend:formatWriteAll"
     echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     exit $exitStatus
 fi
 
 
-npx nx affected --target=lint --parallel --max-warnings=0
+./gradlew :to-frontend:lintAffectedCi
 exitStatus=$?
 if [ $exitStatus -ne 0 ]; then
     echo -e "\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -21,7 +21,7 @@ if [ $exitStatus -ne 0 ]; then
 fi
 
 
-npx nx affected --target=build --prod --parallel
+./gradlew :to-frontend:buildAffectedCi
 exitStatus=$?
 if [ $exitStatus -ne 0 ]; then
     echo -e "\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -31,7 +31,7 @@ if [ $exitStatus -ne 0 ]; then
 fi
 
 
-npx nx affected --target=test --parallel
+./gradlew :to-frontend:unitTestAffectedCi
 exitStatus=$?
 if [ $exitStatus -ne 0 ]; then
     echo -e "\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
