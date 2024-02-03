@@ -11,3 +11,23 @@ tasks.register("serveUiGladiolusTours", YarnTask) {
     dependsOn killAnyExistingNodeProcesses
     args = ['nx', 'serve', 'ui-gladiolus-tours']
 }
+
+
+/**
+ * Helper Utility:
+ *  Linter, Formatter, Dependency Graph
+ */
+tasks.register('lintFixAll', YarnTask) {
+    dependsOn yarnInstallDev
+    args = ['nx', 'run-many', '--all', '--target=lint', '--fix', '--parallel']
+}
+
+tasks.register('formatWriteAll', YarnTask) {
+    dependsOn yarnInstallDev
+    args = ['nx', 'format:write', '--all']
+}
+
+tasks.register('depgraph', YarnTask) {
+    dependsOn yarnInstallDev
+    args = ['nx', 'graph']
+}
