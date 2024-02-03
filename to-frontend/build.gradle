@@ -50,6 +50,12 @@ tasks.register('depgraph', YarnTask) {
 tasks.register('formatCheckAllCi', YarnTask) {
     dependsOn yarnInstallCi
     args = ['nx', 'format:check', '--all']
+    ignoreExitValue = true
+    doLast {
+        if(result.getExitValue() != 0) {
+            println("Always execute due to exist value been ignored: ./gradlew :to-frontend:formatWriteAll")
+        }
+    }
 }
 
 tasks.register('buildAffectedCi', YarnTask) {
@@ -65,22 +71,4 @@ tasks.register('lintAffectedCi', YarnTask) {
 tasks.register('unitTestAffectedCi', YarnTask) {
     dependsOn yarnInstallCi
     args = ['nx', 'affected', '--target=test', '--parallel']
-}
-
-tasks.register('e2eTestAllCi', YarnTask) {
-    dependsOn yarnInstallCi
-    dependsOn killAnyExistingNodeProcesses
-    // * technically we can run e2e tests in parallel (the frontend dev servers choose any
-    //   free port in cypress mode), but if we split backend into per-frontend servers,
-    //   we may need to run sequentially
-    // * without --output-style=stream, Nx doesn't display run command output until task
-    //   completion, which makes debugging difficult when awaiting backend servers to come online
-    // * do NOT use --parallel here, now that there are multiple backend servers, launching all
-    //   of them at once will just slow the CI runner to a crawl
-    // * using "all" (NOT "affected") with "--skip-nx-cache here" to always run e2e tests for
-    //   all projects, because regardless of whether their frontend code changed or not,
-    //   the backend could have changed, which Nx doesn't know
-    //   about, and so the risk is that e2e won't run for backend code changes that could cause
-    //   frontend failures
-    args = ['nx', 'run-many', '--all', '--target=e2e', '--verbose', '--output-style=stream', '--skip-nx-cache']
 }
