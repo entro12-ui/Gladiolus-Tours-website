@@ -21,7 +21,6 @@ const navigation = [
   { name: 'Safaris', href: GtToursRoute.Safaris },
   { name: 'Adventures', href: GtToursRoute.Adventures },
   { name: 'Destinations', href: GtToursRoute.Destinations },
-  { name: 'Accommodations', href: GtToursRoute.Accommodation },
   { name: 'About Us', href: GtToursRoute.AboutUs },
   { name: 'Contact Us', href: GtToursRoute.Contact },
 ];
