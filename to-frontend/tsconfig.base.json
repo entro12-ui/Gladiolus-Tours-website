@@ -47,6 +47,9 @@
       ],
       "@collo/ui-page-adventures": ["libs/ui-page-adventures/src/index.ts"],
       "@collo/ui-page-contact": ["libs/ui-page-contact/src/index.ts"],
+      "@collo/ui-page-destination-details": [
+        "libs/ui-page-destination-details/src/index.ts"
+      ],
       "@collo/ui-page-destinations": ["libs/ui-page-destinations/src/index.ts"],
       "@collo/ui-page-error-404": ["libs/ui-page-error-404/src/index.ts"],
       "@collo/ui-page-itineraries": ["libs/ui-page-itineraries/src/index.ts"],
