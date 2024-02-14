@@ -17,7 +17,6 @@ import GtLogo from './assets/gt-logo.png';
 
 const navigation = [
   { name: 'Home', href: GtToursRoute.Home },
-  { name: 'Services', href: GtToursRoute.Service },
   { name: 'Safaris', href: GtToursRoute.Safaris },
   { name: 'Adventures', href: GtToursRoute.Adventures },
   { name: 'Destinations', href: GtToursRoute.Destinations },
