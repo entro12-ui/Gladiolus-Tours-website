@@ -1,10 +1,12 @@
 import { generatePath, Link } from 'react-router-dom';
 import { GtToursRoute } from '@collo/ui-routes-gladiolus';
 import { GtAdventures, GtItineraryCategory } from '@collo/ui-persistance';
+import { EntryPageHelmet } from '@collo/ui-comp-page-helmet';
 
 export const GladiolusToursAdventures = () => {
   return (
     <div className="container mx-auto py-10">
+      <EntryPageHelmet title={'Adventures'} />
       <h2 className="text-4xl font-extrabold mb-8 text-black dark:text-black text-center">
         Discover Your Next Adventure with Gladiolus Tours
       </h2>

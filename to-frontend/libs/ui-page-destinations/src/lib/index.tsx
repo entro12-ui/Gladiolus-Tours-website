@@ -5,9 +5,9 @@ import { GladiolusToursDestinations } from './main';
 export const GladiolusDestinationsPage = () => {
   return (
     <div className="bg-white">
-      <EntryPageHelmet title={'Destinations'} />
+      <EntryPageHelmet title={'Safari Destinations'} />
       <GladiolusHeaderSection
-        header={'Destinations'}
+        header={'Safari Destinations'}
         description={'Explore Gladiolus Tours Destinations'}
       />
       <div>

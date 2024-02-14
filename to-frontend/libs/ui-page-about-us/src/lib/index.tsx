@@ -5,7 +5,7 @@ import { GladiolusToursAboutPage } from './main';
 export const GladiolusToursAboutUs = () => {
   return (
     <div className="bg-white">
-      <EntryPageHelmet title={'About us'} />
+      <EntryPageHelmet title={'About Us'} />
       <GladiolusHeaderSection
         header={'About us'}
         description={'About Gladiolus Tours'}
