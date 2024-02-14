@@ -60,6 +60,13 @@ npx nx g @nx/react:app {Application_Name} --directory=libs/{Application_Name} --
 npx nx g @nx/react:library {Library_Name} --directory=libs/{Library_Name} --unitTestRunner=jest
 ```
 
+## Removing Projects
+
+```
+npx nx g @nx/workspace:remove {Library_Name}
+```
+[More Details](https://nx.dev/nx-api/workspace)
+
 ## Set up CI!
 
 Nx comes with local caching already built-in (check your `nx.json`). On CI you might want to go a step further.
