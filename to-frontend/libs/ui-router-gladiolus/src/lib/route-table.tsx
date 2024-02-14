@@ -3,7 +3,6 @@ import { ScrollToTop } from '@collo/ui-comp-scroll-to-top';
 import { UiGladiolusToursLayoutWebsite } from '@collo/ui-layout-gladiolus';
 import {
   LazyAboutUsPage,
-  LazyAccommodationsPage,
   LazyAdventureDetailPage,
   LazyAdventuresPage,
   LazyContactPage,
@@ -37,11 +36,6 @@ export const GLADIOLUS_TOURS_ROUTE_TABLE = [
         path: GtToursRoute.AboutUs,
         index: true,
         element: <LazyAboutUsPage />,
-      },
-      {
-        path: GtToursRoute.Accommodation,
-        index: true,
-        element: <LazyAccommodationsPage />,
       },
       {
         path: GtToursRoute.Service,
