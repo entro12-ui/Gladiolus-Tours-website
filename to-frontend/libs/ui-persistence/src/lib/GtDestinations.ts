@@ -6,10 +6,21 @@ import GTDestination5 from './images/Destinations/Mbudya_Island_Dar-es-Salaam_1.
 import GTDestination6 from './images/Destinations/Mafia_Island_Chole_Mjini.webp';
 import GTDestination7 from './images/Destinations/Zanzibar_Island_Stone_Town_01.webp';
 
+enum Category {
+  'Northern Circuit',
+  'Southern Circuit',
+  'Eastern Circuit',
+  'Western Circuit',
+  'Ocean Islands',
+  'Mafia Island',
+  'Zanzibar Island',
+}
+
 interface NationalParks {
   name: string;
   description: string;
   status: boolean;
+  category: Category;
 }
 
 interface IDestinations {
@@ -34,34 +45,106 @@ export const GtDestinations: GladiolusToursDestinations = [
     status: true,
     nationalParks: [
       {
+        name: 'Serengeti National Park',
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
+        name: 'Mount Kilimanjaro National Park',
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
         name: 'Arusha National Park',
         description: '',
         status: true,
-      },
-      {
-        name: 'Tarangire National Park',
-        description: '',
-        status: true,
+        category: Category['Northern Circuit'],
       },
       {
         name: 'Lake Manyara National Park',
         description: '',
         status: true,
+        category: Category['Northern Circuit'],
       },
       {
         name: 'Ngorongoro Conservation Area',
         description: '',
         status: true,
+        category: Category['Northern Circuit'],
       },
       {
-        name: 'Serengeti National Park',
+        name: 'Tarangire National Park',
         description: '',
         status: true,
+        category: Category['Northern Circuit'],
       },
       {
         name: 'Mkomazi National Park',
         description: '',
         status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
+        name: "Mount Ol'doinyo Lengai",
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
+        name: 'Lake Natron',
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
+        name: 'Lake Natron',
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
+        name: 'Kondoa Rock Art Sites',
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
+        name: 'Lake Chala',
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
+        name: 'Lake Jipe',
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
+        name: 'Lake Eyasi',
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
+        name: 'Pare Mountains',
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
+        name: 'Mount Meru',
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
+      },
+      {
+        name: 'Materuni Waterfalls',
+        description: '',
+        status: true,
+        category: Category['Northern Circuit'],
       },
     ],
   },
@@ -74,34 +157,82 @@ export const GtDestinations: GladiolusToursDestinations = [
     status: true,
     nationalParks: [
       {
-        name: 'Mikumi National Park',
-        description: '',
-        status: true,
-      },
-      {
         name: 'Ruaha National Park',
         description: '',
         status: true,
+        category: Category['Southern Circuit'],
       },
       {
         name: 'Nyerere National Park',
         description: '',
         status: true,
-      },
-      {
-        name: 'Udzunguwa National Park',
-        description: '',
-        status: true,
+        category: Category['Southern Circuit'],
       },
       {
         name: 'Kitulo National Park',
         description: '',
         status: true,
+        category: Category['Southern Circuit'],
       },
       {
         name: 'Katavi National Park',
         description: '',
         status: true,
+        category: Category['Southern Circuit'],
+      },
+      {
+        name: 'Kalambo Falls',
+        description: '',
+        status: true,
+        category: Category['Southern Circuit'],
+      },
+      {
+        name: 'Mbozi Mateorite',
+        description: '',
+        status: true,
+        category: Category['Southern Circuit'],
+      },
+      {
+        name: 'Lake Ngozi',
+        description: '',
+        status: true,
+        category: Category['Southern Circuit'],
+      },
+      {
+        name: 'Kaporongwe Falls',
+        description: '',
+        status: true,
+        category: Category['Southern Circuit'],
+      },
+      {
+        name: 'Matema Beach',
+        description: '',
+        status: true,
+        category: Category['Southern Circuit'],
+      },
+      {
+        name: 'Lake Nyasa',
+        description: '',
+        status: true,
+        category: Category['Southern Circuit'],
+      },
+      {
+        name: 'Mnazi Bay - Ruvuma Estuary Marine Park',
+        description: '',
+        status: true,
+        category: Category['Southern Circuit'],
+      },
+      {
+        name: 'Igeleke Rock Art Site',
+        description: '',
+        status: true,
+        category: Category['Southern Circuit'],
+      },
+      {
+        name: 'Isimila Stone Age Site',
+        description: '',
+        status: true,
+        category: Category['Southern Circuit'],
       },
     ],
   },
@@ -114,19 +245,100 @@ export const GtDestinations: GladiolusToursDestinations = [
     status: true,
     nationalParks: [
       {
-        name: 'Kigoma Town',
+        name: 'Nyerere National Park',
         description: '',
         status: true,
+        category: Category['Eastern Circuit'],
       },
       {
-        name: 'Gombe Stream National Park',
+        name: 'Udzungwa National Park',
         description: '',
         status: true,
+        category: Category['Eastern Circuit'],
       },
       {
-        name: 'Mahale Mountains National Park',
+        name: 'Saadani National Park',
         description: '',
         status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Mikumi National Park',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Usambara Mountains',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Amani Nature Forest Reserves',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Amboni Caves',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Uluguru Mountains',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Pugu Hill Nature Reserve',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Mnazi Bay - Ruvuma Estuary Marine Park',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Kilwa',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Kilwa Kisiwani',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Songo Mnara',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Kilwa Kivinje',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Pangani',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
+      },
+      {
+        name: 'Bagamoyo',
+        description: '',
+        status: true,
+        category: Category['Eastern Circuit'],
       },
     ],
   },
@@ -139,19 +351,58 @@ export const GtDestinations: GladiolusToursDestinations = [
     status: true,
     nationalParks: [
       {
-        name: 'Kigoma Town',
-        description: '',
-        status: true,
-      },
-      {
         name: 'Gombe Stream National Park',
         description: '',
         status: true,
+        category: Category['Western Circuit'],
       },
       {
         name: 'Mahale Mountains National Park',
         description: '',
         status: true,
+        category: Category['Western Circuit'],
+      },
+      {
+        name: 'Saanane Island National Park',
+        description: '',
+        status: true,
+        category: Category['Western Circuit'],
+      },
+      {
+        name: 'Rubondo Island National Park',
+        description: '',
+        status: true,
+        category: Category['Western Circuit'],
+      },
+      {
+        name: 'Ukerewe Island',
+        description: '',
+        status: true,
+        category: Category['Western Circuit'],
+      },
+      {
+        name: 'Burigi-Chato National Park',
+        description: '',
+        status: true,
+        category: Category['Western Circuit'],
+      },
+      {
+        name: 'Ibanda-Kyerwa National Park',
+        description: '',
+        status: true,
+        category: Category['Western Circuit'],
+      },
+      {
+        name: 'Lake Tanganyika',
+        description: '',
+        status: true,
+        category: Category['Western Circuit'],
+      },
+      {
+        name: 'Lake Victoria',
+        description: '',
+        status: true,
+        category: Category['Western Circuit'],
       },
     ],
   },
@@ -164,34 +415,52 @@ export const GtDestinations: GladiolusToursDestinations = [
     status: true,
     nationalParks: [
       {
-        name: 'Dar Es Salaam City',
+        name: 'Mbudya Island Marine Reserve',
         description: '',
         status: true,
+        category: Category['Ocean Islands'],
       },
       {
-        name: 'Bagamoyo',
+        name: 'Bongoyo Island Marine Reserve',
         description: '',
         status: true,
+        category: Category['Ocean Islands'],
       },
       {
-        name: 'Saadani National Park',
+        name: 'Pangavini Island Marine Reserve',
         description: '',
         status: true,
+        category: Category['Ocean Islands'],
       },
       {
-        name: 'Pangani National Park',
+        name: 'Fungu Yasin Sand Bar',
         description: '',
         status: true,
+        category: Category['Ocean Islands'],
       },
       {
-        name: 'Mafia Island',
+        name: 'Sinda Island Marine Reserve',
         description: '',
         status: true,
+        category: Category['Ocean Islands'],
       },
       {
-        name: 'Zanzibar Islands (Unguja & Pemba)',
+        name: 'Tanga Marine Park & Reserve',
         description: '',
         status: true,
+        category: Category['Ocean Islands'],
+      },
+      {
+        name: 'Chumbe Island Marine Sanctuary',
+        description: '',
+        status: true,
+        category: Category['Ocean Islands'],
+      },
+      {
+        name: 'Mnemba Island Conservation Area',
+        description: '',
+        status: true,
+        category: Category['Ocean Islands'],
       },
     ],
   },
