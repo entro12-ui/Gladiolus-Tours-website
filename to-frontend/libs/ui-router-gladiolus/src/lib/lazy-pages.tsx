@@ -38,22 +38,22 @@ export const LazySafarisPage = loadable(
   { fallback: <RouterLazyFallback /> }
 );
 
-export const LazyDestinationDetailPage = loadable(
-  () => import('@collo/ui-page-destination-details'),
-  { fallback: <RouterLazyFallback /> }
-);
-
 export const LazyDestinationsPage = loadable(
   () => import('@collo/ui-page-destinations'),
   { fallback: <RouterLazyFallback /> }
 );
 
-export const LazyAdventureDetailPage = loadable(
-  () => import('@collo/ui-page-adventure-details'),
+export const LazyDestinationDetailPage = loadable(
+  () => import('@collo/ui-page-destination-details'),
   { fallback: <RouterLazyFallback /> }
 );
 
 export const LazyAdventuresPage = loadable(
   () => import('@collo/ui-page-adventures'),
+  { fallback: <RouterLazyFallback /> }
+);
+
+export const LazyAdventureDetailPage = loadable(
+  () => import('@collo/ui-page-adventure-details'),
   { fallback: <RouterLazyFallback /> }
 );
