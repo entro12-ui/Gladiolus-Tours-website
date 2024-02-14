@@ -7,7 +7,6 @@ export enum GtToursRouteParam {
 export enum GtToursRoute {
   Home = '/',
   AboutUs = '/about-us',
-  Service = '/service',
   Safaris = '/safaris',
   SafariDetails = '/safari/:safariId',
   Destinations = '/destinations',
