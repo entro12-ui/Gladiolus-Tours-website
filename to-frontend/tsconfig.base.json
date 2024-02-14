@@ -39,9 +39,6 @@
       "@collo/ui-i18n": ["libs/ui-i18n/src/index.ts"],
       "@collo/ui-layout-gladiolus": ["libs/ui-layout-gladiolus/src/index.ts"],
       "@collo/ui-page-about-us": ["libs/ui-page-about-us/src/index.ts"],
-      "@collo/ui-page-accommodations": [
-        "libs/ui-page-accommodations/src/index.ts"
-      ],
       "@collo/ui-page-adventure-details": [
         "libs/ui-page-adventure-details/src/index.ts"
       ],
