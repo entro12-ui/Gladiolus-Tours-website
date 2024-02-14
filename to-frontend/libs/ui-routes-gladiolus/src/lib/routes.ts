@@ -2,7 +2,6 @@ export enum GtToursRouteParam {
   AdventuresId = 'adventuresId',
   DestinationId = 'destinationId',
   CulturalActivityId = 'culturalActivityId',
-  AccommodationId = 'accommodationId',
   SafariId = 'safariId',
 }
 export enum GtToursRoute {
@@ -13,8 +12,6 @@ export enum GtToursRoute {
   SafariDetails = '/safari/:safariId',
   Destinations = '/destinations',
   DestinationDetails = '/destinations/:destinationId',
-  Accommodation = '/accommodation-activities',
-  AccommodationDetails = '/accommodation-activities/accommodationId',
   CulturalActivity = '/culturalActivity',
   CulturalActivityDetails = '/cultural-activity/:culturalActivityId',
   Adventures = '/adventures',
