@@ -98,7 +98,7 @@ const Tab = ({ selectedDestination, onTabChange }: TabProps) => {
             )
           }
         >
-          <option value="">All Circuits</option>
+          <option value="">All Destinations</option>
           {destinations.map((destination) => (
             <option key={destination} value={destination}>
               {destination}
@@ -119,7 +119,7 @@ const Tab = ({ selectedDestination, onTabChange }: TabProps) => {
                 : 'text-gray-500 hover:text-gray-700'
             }`}
           >
-            All Circuits
+            All Destinations
           </button>
           {destinations.map((destination) => (
             <button
