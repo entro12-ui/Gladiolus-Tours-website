@@ -16,7 +16,7 @@ export enum GtDestinationCategory {
   'Zanzibar Island',
 }
 
-interface NationalParks {
+export interface GtNationalParks {
   name: string;
   description: string;
   status: boolean;
@@ -30,7 +30,8 @@ interface IDestinations {
   imageSrc: string;
   imageAlt: string;
   status: boolean;
-  nationalParks: NationalParks[];
+  nationalParks: GtNationalParks[];
+  category: GtDestinationCategory;
 }
 
 export type GladiolusToursDestinations = IDestinations[];
@@ -43,6 +44,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: GTDestination1,
     imageAlt: 'Northern Circuit',
     status: true,
+    category: GtDestinationCategory['Northern Circuit'],
     nationalParks: [
       {
         name: 'Serengeti National Park',
@@ -155,6 +157,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: GTDestination2,
     imageAlt: 'Southern Circuit',
     status: true,
+    category: GtDestinationCategory['Southern Circuit'],
     nationalParks: [
       {
         name: 'Ruaha National Park',
@@ -243,6 +246,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: GTDestination3,
     imageAlt: '',
     status: true,
+    category: GtDestinationCategory['Eastern Circuit'],
     nationalParks: [
       {
         name: 'Nyerere National Park',
@@ -349,6 +353,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: GTDestination4,
     imageAlt: 'Western Circuit',
     status: true,
+    category: GtDestinationCategory['Western Circuit'],
     nationalParks: [
       {
         name: 'Gombe Stream National Park',
@@ -413,6 +418,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: GTDestination5,
     imageAlt: 'Ocean Islands',
     status: true,
+    category: GtDestinationCategory['Ocean Islands'],
     nationalParks: [
       {
         name: 'Mbudya Island Marine Reserve',
@@ -471,6 +477,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: GTDestination6,
     imageAlt: 'Mafia Island',
     status: true,
+    category: GtDestinationCategory['Mafia Island'],
     nationalParks: [],
   },
   {
@@ -480,6 +487,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: GTDestination7,
     imageAlt: 'Zanzibar Island',
     status: true,
+    category: GtDestinationCategory['Zanzibar Island'],
     nationalParks: [],
   },
 ];
