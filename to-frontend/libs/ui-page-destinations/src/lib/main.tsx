@@ -38,27 +38,20 @@ export const GladiolusToursDestinations = () => {
         </div>
       </div>
 
-      {filteredDestinations.length > 0 && (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredDestinations.map((destination, index) => (
-              <div
-                key={index}
-                className="block rounded-lg overflow-hidden bg-white shadow-md hover:shadow-lg transition duration-300"
-              >
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {destination.name}
-                  </h3>
-                  <div className="grid grid-cols-1 gap-4">
-                    {destination.nationalParks.map((park, parkIndex) => (
-                      <ParkCard key={parkIndex} park={park} />
-                    ))}
-                  </div>
-                </div>
+      {filteredDestinations.length >= 0 && (
+        <div className="container mx-auto py-10">
+          {filteredDestinations.map((destination, index) => (
+            <div key={index}>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {destination.name}
+              </h3>
+              <div className="grid grid-flow-row gap-8 justify-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+                {destination.nationalParks.map((park, parkIndex) => (
+                  <ParkCard key={parkIndex} park={park} />
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       )}
     </div>
