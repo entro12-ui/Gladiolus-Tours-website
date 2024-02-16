@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import {
-  GtAdventures,
   GtDestinationCategory,
   GtDestinations,
-  GtItineraryCategory,
   GtNationalParks,
 } from '@collo/ui-persistance';
 import { generatePath, Link } from 'react-router-dom';
