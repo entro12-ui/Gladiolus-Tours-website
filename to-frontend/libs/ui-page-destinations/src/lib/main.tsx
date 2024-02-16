@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import {
+  GtAdventures,
   GtDestinationCategory,
   GtDestinations,
+  GtItineraryCategory,
   GtNationalParks,
 } from '@collo/ui-persistance';
 import { generatePath, Link } from 'react-router-dom';
@@ -147,11 +149,41 @@ const Tab = ({ selectedDestination, onTabChange }: TabProps) => {
 const ParkCard: React.FC<{ park: GtNationalParks }> = ({ park }) => {
   return (
     <div className="bg-white shadow-md rounded-lg p-4">
-      <h4 className="text-lg font-semibold text-gray-900 mb-2">{park.name}</h4>
-      <p className="text-sm text-gray-500 mb-4">{park.description}</p>
-      <p>
-        <UiStatus status={park.status} />
-      </p>
+      <div
+        key={park.id}
+        className="my-8 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 duration-300 hover:transform hover:scale-105"
+      >
+        <Link
+          to={generatePath(GtToursRoute.DestinationDetails, {
+            destinationId: String(park.id),
+          })}
+          className="block"
+        >
+          <figure>
+            <img
+              src={`${park.imageSrc}?auto=format&fit=crop&w=400&q=50`}
+              alt={park.imageAlt}
+              className="rounded-t h-64 w-full object-cover"
+            />
+            <figcaption className="p-4">
+              {/*
+                <div className="mb-3 text-sm text-gray-500 dark:text-gray-400">
+                  Category: {GtItineraryCategory[item.category]}
+                </div>
+                */}
+              <p>
+                <UiStatus status={park.status} />
+              </p>
+              <p className="text-xl mb-3 font-semibold leading-tight text-gray-800 dark:text-gray-300">
+                {park.name}
+              </p>
+              <p className="text-sm leading-5 text-gray-600 dark:text-gray-400">
+                {park.description}
+              </p>
+            </figcaption>
+          </figure>
+        </Link>
+      </div>
     </div>
   );
 };
