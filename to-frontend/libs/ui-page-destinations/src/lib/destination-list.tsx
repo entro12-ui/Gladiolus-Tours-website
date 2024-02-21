@@ -1,6 +1,8 @@
+import React from 'react';
 import {
-  GladiolusToursDestinations,
   GtDestinationCategory,
+  GladiolusToursDestinations,
+  GtNationalParks,
 } from '@collo/ui-persistance';
 
 interface DestinationListProps {
@@ -8,13 +10,15 @@ interface DestinationListProps {
   filter: GtDestinationCategory | '';
 }
 
-export function DestinationList({
+export const DestinationList = ({
   destinations,
   filter,
-}: DestinationListProps) {
+}: DestinationListProps) => {
+  // Filter destinations based on the selected category
   const filteredDestinations = filter
     ? destinations.filter((destination) => destination.category === filter)
     : destinations;
+
   return (
     <div>
       <h2>Destinations</h2>
@@ -22,9 +26,19 @@ export function DestinationList({
         {filteredDestinations.map((destination) => (
           <li key={destination.id}>
             <strong>{destination.name}</strong> - {destination.category}
+            {/* Render national parks associated with this destination only if the category matches the filter */}
+            {destination.category === filter && (
+              <ul>
+                {destination.nationalParks.map((park: GtNationalParks) => (
+                  <li key={park.id}>
+                    <strong>{park.name}</strong> - {park.description}
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
       </ul>
     </div>
   );
-}
+};
