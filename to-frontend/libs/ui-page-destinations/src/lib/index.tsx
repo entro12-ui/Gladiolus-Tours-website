@@ -1,6 +1,5 @@
 import { EntryPageHelmet } from '@collo/ui-comp-page-helmet';
 import { GladiolusHeaderSection } from '@collo/ui-comp-header';
-import { GladiolusToursDestinations } from './main';
 
 export const GladiolusDestinationsPage = () => {
   return (
@@ -10,9 +9,7 @@ export const GladiolusDestinationsPage = () => {
         header={'Safari Destinations'}
         description={'Explore Gladiolus Tours Destinations'}
       />
-      <div>
-        <GladiolusToursDestinations />
-      </div>
+      <div></div>
     </div>
   );
 };
