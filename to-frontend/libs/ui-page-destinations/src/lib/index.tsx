@@ -4,13 +4,14 @@ import { DestinationCounter } from './destination-counter';
 import { DestinationFilter } from './destination-filter';
 import { DestinationList } from './destination-list';
 import { useState } from 'react';
-import { GtDestinations } from '@collo/ui-persistance';
+import { GtDestinationCategory, GtDestinations } from '@collo/ui-persistance';
 
 export const GladiolusDestinationsPage = () => {
   const [destinations] = useState(GtDestinations);
+  const [filter, setFilter] = useState<GtDestinationCategory | ''>('');
 
-  const handleFilterChange = (filter: string) => {
-    // Filter Logic
+  const handleFilterChange = (newFilter: GtDestinationCategory | '') => {
+    setFilter(newFilter);
   };
 
   return (
@@ -22,10 +23,8 @@ export const GladiolusDestinationsPage = () => {
       />
       <div>
         <DestinationCounter count={destinations.length} />
-        <DestinationFilter
-          onFilterChange={(filter) => handleFilterChange(filter)}
-        />
-        <DestinationList />
+        <DestinationFilter onFilterChange={handleFilterChange} />
+        <DestinationList filter={filter} destinations={destinations} />
       </div>
     </div>
   );

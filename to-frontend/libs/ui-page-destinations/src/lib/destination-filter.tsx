@@ -1,16 +1,17 @@
 import { useState } from 'react';
+import { GtDestinationCategory } from '@collo/ui-persistance';
 
 interface GtDestinationFilterProps {
-  onFilterChange: (filter: string) => void;
+  onFilterChange: (filter: GtDestinationCategory) => void;
 }
 
 export function DestinationFilter({
   onFilterChange,
 }: GtDestinationFilterProps) {
-  const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState<GtDestinationCategory | ''>('');
 
   const handleFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newFilter = event.target.value;
+    const newFilter = event.target.value as unknown as GtDestinationCategory;
     setFilter(newFilter);
     onFilterChange(newFilter);
   };
