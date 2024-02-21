@@ -23,7 +23,10 @@ export const GladiolusDestinationsPage = () => {
       />
       <div>
         <DestinationCounter count={destinations.length} />
-        <DestinationFilter onFilterChange={handleFilterChange} />
+        <DestinationFilter
+          selectedFilter={filter}
+          onFilterChange={handleFilterChange}
+        />
         <DestinationList filter={filter} destinations={destinations} />
       </div>
     </div>
