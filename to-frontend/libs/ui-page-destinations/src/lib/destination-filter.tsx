@@ -1,7 +1,28 @@
-export function DestinationFilter() {
+import { useState } from 'react';
+
+interface GtDestinationFilterProps {
+  onFilterChange: (filter: string) => void;
+}
+
+export function DestinationFilter({
+  onFilterChange,
+}: GtDestinationFilterProps) {
+  const [filter, setFilter] = useState('');
+
+  const handleFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newFilter = event.target.value;
+    setFilter(newFilter);
+    onFilterChange(newFilter);
+  };
+
   return (
     <div>
-      <h1>Destination Filter</h1>
+      <input
+        type="text"
+        value={filter}
+        onChange={handleFilterChange}
+        placeholder="Enter destination"
+      />
     </div>
   );
 }
