@@ -1,40 +1,58 @@
 import React from 'react';
-import { GtDestinationCategory } from '@collo/ui-persistance';
+import {
+  GtDestinationCategory,
+  GladiolusToursDestinations,
+} from '@collo/ui-persistance';
 
-interface GtDestinationFilterProps {
+interface FilterComponentProps {
   selectedFilter: GtDestinationCategory | '';
+  destinations: GladiolusToursDestinations;
   onFilterChange: (filter: GtDestinationCategory | '') => void;
 }
 
-const tabs = [
-  {
-    name: 'Northern Circuit',
-    category: GtDestinationCategory['Northern Circuit'],
-  },
-  {
-    name: 'Southern Circuit',
-    category: GtDestinationCategory['Southern Circuit'],
-  },
-  {
-    name: 'Eastern Circuit',
-    category: GtDestinationCategory['Eastern Circuit'],
-  },
-  {
-    name: 'Western Circuit',
-    category: GtDestinationCategory['Western Circuit'],
-  },
-  { name: 'Ocean Islands', category: GtDestinationCategory['Ocean Islands'] },
-  { name: 'Mafia Island', category: GtDestinationCategory['Mafia Island'] },
-  {
-    name: 'Zanzibar Island',
-    category: GtDestinationCategory['Zanzibar Island'],
-  },
-];
-
 export const DestinationFilter = ({
   selectedFilter,
+  destinations,
   onFilterChange,
-}: GtDestinationFilterProps) => {
+}: FilterComponentProps) => {
+  const tabs = [
+    {
+      name: 'Northern Circuit',
+      category: GtDestinationCategory['Northern Circuit'],
+    },
+    {
+      name: 'Southern Circuit',
+      category: GtDestinationCategory['Southern Circuit'],
+    },
+    {
+      name: 'Eastern Circuit',
+      category: GtDestinationCategory['Eastern Circuit'],
+    },
+    {
+      name: 'Western Circuit',
+      category: GtDestinationCategory['Western Circuit'],
+    },
+    { name: 'Ocean Islands', category: GtDestinationCategory['Ocean Islands'] },
+    { name: 'Mafia Island', category: GtDestinationCategory['Mafia Island'] },
+    {
+      name: 'Zanzibar Island',
+      category: GtDestinationCategory['Zanzibar Island'],
+    },
+  ];
+
+  // Filter out categories without any destinations within the filtered list
+  const availableTabs = tabs.filter((tab) => {
+    if (selectedFilter === '') {
+      return true; // Include all tabs when no filter is applied
+    }
+    // Include tabs with destinations in the filtered list or when the tab matches the selected filter
+    return (
+      destinations.some(
+        (destination) => destination.category === tab.category
+      ) || tab.category === selectedFilter
+    );
+  });
+
   const handleTabClick = (filter: GtDestinationCategory | '') => {
     onFilterChange(filter);
   };
@@ -45,7 +63,7 @@ export const DestinationFilter = ({
         className="isolate flex divide-x divide-gray-200 rounded-lg shadow"
         aria-label="Tabs"
       >
-        {tabs.map((tab) => (
+        {availableTabs.map((tab) => (
           <button
             key={tab.name}
             onClick={() => handleTabClick(tab.category)}
