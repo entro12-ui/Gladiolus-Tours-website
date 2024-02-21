@@ -26,7 +26,7 @@ export interface GtNationalParks {
   category: GtDestinationCategory;
 }
 
-interface IDestinations {
+export interface IDestinations {
   id: number;
   name: string;
   description: string;
