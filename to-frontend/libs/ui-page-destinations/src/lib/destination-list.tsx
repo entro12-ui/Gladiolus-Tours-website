@@ -30,8 +30,9 @@ export const DestinationList = ({
             className="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 duration-300 transform hover:scale-105"
           >
             <Link
-              to={generatePath(GtToursRoute.DestinationDetails, {
+              to={generatePath(GtToursRoute.NationalParkDetail, {
                 destinationId: String(destination.id),
+                parkId: String(park.id),
               })}
               className="block"
             >
