@@ -3,18 +3,18 @@ export enum GtToursRouteParam {
   DestinationId = 'destinationId',
   CulturalActivityId = 'culturalActivityId',
   SafariId = 'safariId',
+  ParkId = 'parkId',
 }
 export enum GtToursRoute {
   Home = '/',
   AboutUs = '/about-us',
   Safaris = '/safaris',
   SafariDetails = '/safari/:safariId',
-  Destinations = '/destinations',
-  DestinationDetails = '/destinations/:destinationId',
-  CulturalActivity = '/culturalActivity',
-  CulturalActivityDetails = '/cultural-activity/:culturalActivityId',
   Adventures = '/adventures',
   AdventuresDetails = '/adventure/:adventuresId',
+  Destinations = '/destinations',
+  DestinationDetails = '/destinations/:destinationId',
+  NationalParkDetail = '/destinations/:destinationId/park/:parkId',
   Contact = '/contact',
   NotFound = '/404',
 }
