@@ -51,6 +51,7 @@
       "@collo/ui-page-error-404": ["libs/ui-page-error-404/src/index.ts"],
       "@collo/ui-page-itineraries": ["libs/ui-page-itineraries/src/index.ts"],
       "@collo/ui-page-landing-page": ["libs/ui-page-landing-page/src/index.ts"],
+      "@collo/ui-page-park-details": ["libs/ui-page-park-details/src/index.ts"],
       "@collo/ui-page-safaris": ["libs/ui-page-safaris/src/index.ts"],
       "@collo/ui-persistance": ["libs/ui-persistence/src/index.ts"],
       "@collo/ui-router-gladiolus": ["libs/ui-router-gladiolus/src/index.ts"],
