@@ -370,7 +370,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 3,
+        id: 4,
         name: 'Mikumi National Park',
         description: '',
         status: true,
@@ -379,7 +379,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 4,
+        id: 5,
         name: 'Usambara Mountains',
         description: '',
         status: true,
@@ -388,7 +388,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 5,
+        id: 6,
         name: 'Amani Nature Forest Reserves',
         description: '',
         status: true,
@@ -397,7 +397,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 6,
+        id: 7,
         name: 'Amboni Caves',
         description: '',
         status: true,
@@ -406,7 +406,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 7,
+        id: 8,
         name: 'Uluguru Mountains',
         description: '',
         status: true,
@@ -415,7 +415,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 8,
+        id: 9,
         name: 'Pugu Hill Nature Reserve',
         description: '',
         status: true,
@@ -424,7 +424,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 9,
+        id: 10,
         name: 'Mnazi Bay - Ruvuma Estuary Marine Park',
         description: '',
         status: true,
@@ -433,7 +433,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 10,
+        id: 11,
         name: 'Kilwa',
         description: '',
         status: true,
@@ -442,7 +442,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 11,
+        id: 12,
         name: 'Kilwa Kisiwani',
         description: '',
         status: true,
@@ -451,7 +451,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 12,
+        id: 13,
         name: 'Songo Mnara',
         description: '',
         status: true,
@@ -460,7 +460,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 13,
+        id: 14,
         name: 'Kilwa Kivinje',
         description: '',
         status: true,
@@ -469,7 +469,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 14,
+        id: 15,
         name: 'Pangani',
         description: '',
         status: true,
@@ -478,7 +478,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageAlt: 'Eastern Circuit',
       },
       {
-        id: 15,
+        id: 16,
         name: 'Bagamoyo',
         description: '',
         status: true,
