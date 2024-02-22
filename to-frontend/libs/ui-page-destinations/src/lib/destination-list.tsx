@@ -7,36 +7,29 @@ import {
 
 interface DestinationListProps {
   destinations: GladiolusToursDestinations;
-  filter: GtDestinationCategory | '';
+  filter: GtDestinationCategory;
 }
 
 export const DestinationList = ({
   destinations,
   filter,
 }: DestinationListProps) => {
-  // Filter destinations based on the selected category
-  const filteredDestinations = filter
-    ? destinations.filter((destination) => destination.category === filter)
-    : destinations;
+  const filteredDestinations =
+    filter === GtDestinationCategory['All Circuits']
+      ? destinations
+      : destinations.filter((destination) => destination.category === filter);
 
   return (
     <div>
-      <h2>Destinations</h2>
       <ul>
         {filteredDestinations.map((destination) => (
-          <li key={destination.id}>
-            <strong>{destination.name}</strong> - {destination.category}
-            {/* Render national parks associated with this destination only if the category matches the filter */}
-            {destination.category === filter && (
-              <ul>
-                {destination.nationalParks.map((park: GtNationalParks) => (
-                  <li key={park.id}>
-                    <strong>{park.name}</strong> - {park.description}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
+          <React.Fragment key={destination.id}>
+            {destination.nationalParks.map((park: GtNationalParks) => (
+              <li key={park.id}>
+                <strong>{park.name}</strong> - {park.description}
+              </li>
+            ))}
+          </React.Fragment>
         ))}
       </ul>
     </div>

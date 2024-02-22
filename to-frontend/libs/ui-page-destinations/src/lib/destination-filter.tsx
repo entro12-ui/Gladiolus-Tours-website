@@ -1,21 +1,25 @@
 import React from 'react';
-import {
-  GtDestinationCategory,
-  GladiolusToursDestinations,
-} from '@collo/ui-persistance';
+import { GtDestinationCategory } from '@collo/ui-persistance';
 
 interface FilterComponentProps {
-  selectedFilter: GtDestinationCategory | '';
-  destinations: GladiolusToursDestinations;
-  onFilterChange: (filter: GtDestinationCategory | '') => void;
+  selectedFilter: GtDestinationCategory;
+  onFilterChange: (filter: GtDestinationCategory) => void;
+}
+
+interface ITab {
+  name: string;
+  category: GtDestinationCategory;
 }
 
 export const DestinationFilter = ({
   selectedFilter,
-  destinations,
   onFilterChange,
 }: FilterComponentProps) => {
-  const tabs = [
+  const tabs: ITab[] = [
+    {
+      name: 'All Circuits',
+      category: GtDestinationCategory['All Circuits'],
+    },
     {
       name: 'Northern Circuit',
       category: GtDestinationCategory['Northern Circuit'],
@@ -40,20 +44,7 @@ export const DestinationFilter = ({
     },
   ];
 
-  // Filter out categories without any destinations within the filtered list
-  const availableTabs = tabs.filter((tab) => {
-    if (selectedFilter === '') {
-      return true; // Include all tabs when no filter is applied
-    }
-    // Include tabs with destinations in the filtered list or when the tab matches the selected filter
-    return (
-      destinations.some(
-        (destination) => destination.category === tab.category
-      ) || tab.category === selectedFilter
-    );
-  });
-
-  const handleTabClick = (filter: GtDestinationCategory | '') => {
+  const handleTabClick = (filter: GtDestinationCategory) => {
     onFilterChange(filter);
   };
 
@@ -63,7 +54,7 @@ export const DestinationFilter = ({
         className="isolate flex divide-x divide-gray-200 rounded-lg shadow"
         aria-label="Tabs"
       >
-        {availableTabs.map((tab) => (
+        {tabs.map((tab) => (
           <button
             key={tab.name}
             onClick={() => handleTabClick(tab.category)}

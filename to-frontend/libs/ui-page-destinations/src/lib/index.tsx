@@ -8,9 +8,11 @@ import { GtDestinationCategory, GtDestinations } from '@collo/ui-persistance';
 
 export const GladiolusDestinationsPage = () => {
   const [destinations] = useState(GtDestinations);
-  const [filter, setFilter] = useState<GtDestinationCategory | ''>('');
+  const [filter, setFilter] = useState<GtDestinationCategory>(
+    GtDestinationCategory['All Circuits']
+  );
 
-  const handleFilterChange = (newFilter: GtDestinationCategory | '') => {
+  const handleFilterChange = (newFilter: GtDestinationCategory) => {
     setFilter(newFilter);
   };
 
@@ -25,7 +27,6 @@ export const GladiolusDestinationsPage = () => {
         <DestinationCounter count={destinations.length} />
         <DestinationFilter
           selectedFilter={filter}
-          destinations={destinations}
           onFilterChange={handleFilterChange}
         />
         <DestinationList filter={filter} destinations={destinations} />
