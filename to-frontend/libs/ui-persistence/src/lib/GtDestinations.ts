@@ -7,6 +7,7 @@ import GTDestination6 from './images/Destinations/Mafia_Island_Chole_Mjini.webp'
 import GTDestination7 from './images/Destinations/Zanzibar_Island_Stone_Town_01.webp';
 
 export enum GtDestinationCategory {
+  'All Circuits',
   'Northern Circuit',
   'Southern Circuit',
   'Eastern Circuit',
