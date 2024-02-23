@@ -10,8 +10,11 @@ interface IItinerary {
 }
 
 export enum GtItineraryCategory {
-  Mount,
-  Safari,
+  'Adventure Safaris',
+  'Mountain Climbing',
+  'Beach Holiday',
+  'Walking Safaris',
+  'Tourist Attraction',
 }
 
 export interface IGtAdventures {
@@ -34,7 +37,7 @@ export const GtAdventures: GladiolusToursAdventure = [
     title: '8 Days | Take a walk on the wild side in Kenya and Tanzania',
     overview: 'Welcome to Gladiolus Tours',
     code: 'GT001',
-    category: GtItineraryCategory.Safari,
+    category: GtItineraryCategory['Adventure Safaris'],
     image: Hippo,
     carouselImage: [Flamingos, Mount_Kilimanjaro],
     status: true,
@@ -93,7 +96,7 @@ export const GtAdventures: GladiolusToursAdventure = [
     title: '4 Days Kilimanjaro Trek via Machame Route',
     overview: 'Welcome to Gladiolus Tours',
     code: 'GT002',
-    category: GtItineraryCategory.Mount,
+    category: GtItineraryCategory['Mountain Climbing'],
     image: Mount_Kilimanjaro,
     carouselImage: [Mount_Kilimanjaro, Flamingos],
     status: true,
