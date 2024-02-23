@@ -1,1 +1,3 @@
-export * from './lib/ui-page-park-details';
+import { GladiolusParkDetails } from './lib/index';
+
+export default GladiolusParkDetails;
