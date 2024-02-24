@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@collo/ui-api": ["libs/ui-api/src/index.ts"],
+      "@collo/ui-comp-activities": ["libs/ui-comp-activities/src/index.ts"],
       "@collo/ui-comp-adventure": ["libs/ui-comp-adventure/src/index.ts"],
       "@collo/ui-comp-banner": ["libs/ui-comp-banner/src/index.ts"],
       "@collo/ui-comp-chat-bot": ["libs/ui-comp-chat-bot/src/index.ts"],
