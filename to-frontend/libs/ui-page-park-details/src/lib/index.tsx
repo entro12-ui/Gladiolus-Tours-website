@@ -59,6 +59,31 @@ export function GladiolusParkDetails() {
               <h2 className="text-xl font-semibold mb-2">Location</h2>
               <p className="text-gray-700">{destination.name}</p>
             </div>
+            <div className="px-6 py-4">
+              <h2 className="text-xl font-semibold mb-2">FAQs</h2>
+              {gtNationalPark.faq.map((item, index) => (
+                <div key={index} className="mb-2">
+                  <h3 className="font-semibold">{item.question}</h3>
+                  <p>{item.answer}</p>
+                </div>
+              ))}
+            </div>
+            <div className="px-6 py-4">
+              <h2 className="text-xl font-semibold mb-2">Activities</h2>
+              <ul>
+                {gtNationalPark.activities.map((activity, index) => (
+                  <li key={index}>{activity}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="px-6 py-4">
+              <h2 className="text-xl font-semibold mb-2">Adventures</h2>
+              <ul>
+                {gtNationalPark.adventures.map((adventure, index) => (
+                  <li key={index}>{adventure}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
