@@ -90,17 +90,19 @@ export function GladiolusParkDetails() {
           </div>
           <div className="px-6 py-4">
             <h2 className="text-2xl font-semibold mb-4">Activities</h2>
-            <ul className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {gtNationalPark.activities.map((activity, index) => (
-                <li key={index} className="flex items-center">
+                <div key={index} className="bg-gray-100 p-4 rounded-lg">
                   <FontAwesomeIcon
                     icon={getActivityIcon(activity)}
                     className="w-6 h-6 mr-2"
                   />
-                  <span>{GtActivities[activity]}</span>
-                </li>
+                  <h4 className="text-lg font-semibold mb-2">
+                    {GtActivities[activity]}
+                  </h4>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
