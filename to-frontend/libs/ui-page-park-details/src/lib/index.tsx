@@ -3,11 +3,19 @@ import {
   useNationalParkIdOrThrow,
 } from '@collo/ui-routes-gladiolus';
 import {
+  FAQ,
+  GtActivities,
   GtDestinations,
   GtNationalParks,
   IDestinations,
 } from '@collo/ui-persistance';
 import { useEffect, useState } from 'react';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Typography,
+} from '@mui/material';
 
 export function GladiolusParkDetails() {
   const nationalParkId = useNationalParkIdOrThrow();
@@ -61,18 +69,22 @@ export function GladiolusParkDetails() {
             </div>
             <div className="px-6 py-4">
               <h2 className="text-xl font-semibold mb-2">FAQs</h2>
-              {gtNationalPark.faq.map((item, index) => (
-                <div key={index} className="mb-2">
-                  <h3 className="font-semibold">{item.question}</h3>
-                  <p>{item.answer}</p>
-                </div>
+              {gtNationalPark.faq.map((item: FAQ, index: number) => (
+                <Accordion key={index}>
+                  <AccordionSummary>
+                    <Typography variant="h6">{item.question}</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>{item.answer}</Typography>
+                  </AccordionDetails>
+                </Accordion>
               ))}
             </div>
             <div className="px-6 py-4">
               <h2 className="text-xl font-semibold mb-2">Activities</h2>
               <ul>
                 {gtNationalPark.activities.map((activity, index) => (
-                  <li key={index}>{activity}</li>
+                  <li key={index}>{GtActivities[activity]}</li>
                 ))}
               </ul>
             </div>

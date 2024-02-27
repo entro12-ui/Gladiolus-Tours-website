@@ -19,7 +19,7 @@ export enum GtDestinationCategory {
   'Zanzibar Island',
 }
 
-type FAQ = {
+export type FAQ = {
   question: string;
   answer: string;
 };
