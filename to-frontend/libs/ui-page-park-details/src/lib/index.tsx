@@ -6,6 +6,7 @@ import {
   FAQ,
   GtActivities,
   GtDestinations,
+  GtItineraryCategory,
   GtNationalParks,
   IDestinations,
 } from '@collo/ui-persistance';
@@ -92,7 +93,7 @@ export function GladiolusParkDetails() {
               <h2 className="text-xl font-semibold mb-2">Adventures</h2>
               <ul>
                 {gtNationalPark.adventures.map((adventure, index) => (
-                  <li key={index}>{adventure}</li>
+                  <li key={index}>{GtItineraryCategory[adventure]}</li>
                 ))}
               </ul>
             </div>
