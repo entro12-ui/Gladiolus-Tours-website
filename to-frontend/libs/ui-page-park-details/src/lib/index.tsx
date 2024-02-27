@@ -19,8 +19,12 @@ import {
 } from '@mui/material';
 import { getActivityIcon } from '@collo/ui-comp-activities';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowCircleUp,
+  faInfoCircle,
+} from '@fortawesome/free-solid-svg-icons';
 import { RateDisplay } from '@collo/ui-comp-rate';
+import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons/faArrowCircleDown';
 
 export function GladiolusParkDetails() {
   const nationalParkId = useNationalParkIdOrThrow();
@@ -78,7 +82,7 @@ export function GladiolusParkDetails() {
             {gtNationalPark.faq.map((item: FAQ, index: number) => (
               <Accordion key={index}>
                 <AccordionSummary
-                  expandIcon={<FontAwesomeIcon icon={faInfoCircle} />}
+                  expandIcon={<FontAwesomeIcon icon={faArrowCircleDown} />}
                 >
                   <Typography variant="h6">{item.question}</Typography>
                 </AccordionSummary>
