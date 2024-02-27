@@ -17,6 +17,8 @@ import {
   AccordionSummary,
   Typography,
 } from '@mui/material';
+import { getActivityIcon } from '@collo/ui-comp-activities';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export function GladiolusParkDetails() {
   const nationalParkId = useNationalParkIdOrThrow();
@@ -83,9 +85,15 @@ export function GladiolusParkDetails() {
             </div>
             <div className="px-6 py-4">
               <h2 className="text-xl font-semibold mb-2">Activities</h2>
-              <ul>
+              <ul className="flex flex-wrap gap-4">
                 {gtNationalPark.activities.map((activity, index) => (
-                  <li key={index}>{GtActivities[activity]}</li>
+                  <li key={index} className="flex items-center">
+                    <FontAwesomeIcon
+                      icon={getActivityIcon(activity)}
+                      className="w-6 h-6 mr-2"
+                    />
+                    <span>{GtActivities[activity]}</span>
+                  </li>
                 ))}
               </ul>
             </div>

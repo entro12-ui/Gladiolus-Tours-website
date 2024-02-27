@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-activities';
+export * from './lib/index';
