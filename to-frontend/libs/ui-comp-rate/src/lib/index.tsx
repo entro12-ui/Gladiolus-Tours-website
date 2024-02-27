@@ -53,5 +53,3 @@ export const RateDisplay = ({ rate }: RateDisplayProps) => {
     </div>
   );
 };
-
-export default RateDisplay;

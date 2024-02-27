@@ -20,6 +20,7 @@ import {
 import { getActivityIcon } from '@collo/ui-comp-activities';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { RateDisplay } from '@collo/ui-comp-rate';
 
 export function GladiolusParkDetails() {
   const nationalParkId = useNationalParkIdOrThrow();
@@ -61,13 +62,19 @@ export function GladiolusParkDetails() {
             </div>
           </div>
           <div className="px-6 py-8">
-            <h2 className="text-2xl font-semibold mb-4">
-              About {gtNationalPark.name}
-            </h2>
+            <h1 className="text-4xl font-bold">
+              {gtNationalPark.name} {/* Display park name */}
+              <span className="text-base ml-2">
+                <RateDisplay rate={gtNationalPark.rate} />
+              </span>{' '}
+            </h1>
             <p className="text-gray-700">{gtNationalPark.description}</p>
           </div>
           <div className="px-6 py-4">
             <h2 className="text-2xl font-semibold mb-4">FAQs</h2>
+            <h2 className="text-2xl font-semibold mb-4">
+              {gtNationalPark.name}
+            </h2>
             {gtNationalPark.faq.map((item: FAQ, index: number) => (
               <Accordion key={index}>
                 <AccordionSummary
