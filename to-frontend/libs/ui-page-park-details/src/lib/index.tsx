@@ -87,6 +87,25 @@ export function GladiolusParkDetails() {
             </h1>
           </div>
         </div>
+
+        <div className="mt-8 flex justify-center">
+          {internalLinks.map((link, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                const element = document.querySelector(link.target);
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="flex items-center justify-center w-1/5 mx-1 p-4 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition duration-300"
+            >
+              <FontAwesomeIcon icon={link.iconClass as any} className="mr-2" />
+              <span>{link.label}</span>
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-2">
           <div className="px-6 py-8" id="overview">
             <h1 className="text-4xl font-bold">Overview</h1>
@@ -126,23 +145,6 @@ export function GladiolusParkDetails() {
             </Accordion>
           ))}
         </div>
-      </div>
-      <div className="mt-8 flex justify-center">
-        {internalLinks.map((link, index) => (
-          <button
-            key={index}
-            onClick={() => {
-              const element = document.querySelector(link.target);
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className="flex items-center justify-center w-1/5 mx-1 p-4 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition duration-300"
-          >
-            <FontAwesomeIcon icon={link.iconClass as any} className="mr-2" />
-            <span>{link.label}</span>
-          </button>
-        ))}
       </div>
     </div>
   );
