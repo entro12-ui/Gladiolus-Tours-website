@@ -20,6 +20,7 @@ import { getActivityIcon } from '@collo/ui-comp-activities';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { RateDisplay } from '@collo/ui-comp-rate';
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons/faArrowCircleDown';
+import './style.css';
 
 interface InternalLink {
   label: string;
@@ -86,41 +87,28 @@ export function GladiolusParkDetails() {
             </h1>
           </div>
         </div>
-        <div className="container mx-auto flex justify-center mt-8">
-          {internalLinks.map((link, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                const element = document.querySelector(link.target);
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="flex items-center justify-center w-1/5 mx-1 p-4 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition duration-300"
-            >
-              <FontAwesomeIcon icon={link.iconClass as any} className="mr-2" />
-              <span>{link.label}</span>
-            </button>
-          ))}
-        </div>
-        <div className="px-6 py-8" id="overview">
-          <h1 className="text-4xl font-bold">Overview</h1>
-          <p className="text-gray-700">{gtNationalPark.description}</p>
-        </div>
-        <div className="px-6 py-4" id="activities">
-          <h2 className="text-2xl font-semibold mb-4">Activities</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {gtNationalPark.activities.map((activity, index) => (
-              <div key={index} className="bg-gray-100 p-4 rounded-lg">
-                <FontAwesomeIcon
-                  icon={getActivityIcon(activity)}
-                  className="w-6 h-6 mr-2"
-                />
-                <h4 className="text-lg font-semibold mb-2">
-                  {GtActivities[activity]}
-                </h4>
-              </div>
-            ))}
+        <div className="grid grid-cols-2">
+          <div className="px-6 py-8" id="overview">
+            <h1 className="text-4xl font-bold">Overview</h1>
+            <p className="text-gray-700 description">
+              {gtNationalPark.description}
+            </p>
+          </div>
+          <div className="px-6 py-8" id="activities">
+            <h1 className="text-4xl font-bold">Activities</h1>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {gtNationalPark.activities.map((activity, index) => (
+                <div key={index} className="bg-gray-100 p-4 rounded-lg">
+                  <FontAwesomeIcon
+                    icon={getActivityIcon(activity)}
+                    className="w-6 h-6 mr-2"
+                  />
+                  <h4 className="text-lg font-semibold mb-2">
+                    {GtActivities[activity]}
+                  </h4>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="px-6 py-4" id="faq">
@@ -138,6 +126,23 @@ export function GladiolusParkDetails() {
             </Accordion>
           ))}
         </div>
+      </div>
+      <div className="mt-8 flex justify-center">
+        {internalLinks.map((link, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              const element = document.querySelector(link.target);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="flex items-center justify-center w-1/5 mx-1 p-4 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition duration-300"
+          >
+            <FontAwesomeIcon icon={link.iconClass as any} className="mr-2" />
+            <span>{link.label}</span>
+          </button>
+        ))}
       </div>
     </div>
   );
