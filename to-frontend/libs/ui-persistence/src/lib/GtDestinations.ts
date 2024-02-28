@@ -63,19 +63,59 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 1,
         name: 'Serengeti National Park',
-        description: '',
+        description:
+          'Serengeti National Park is undoubtedly the best-known wildlife sanctuary in the world, unequalled for its natural beauty and scientific value, it has the greatest concentration of plains game in Africa\n' +
+          '\n' +
+          'The Serengeti National Park in Tanzania was established in 1952. It is home to the greatest wildlife spectacle on earth - the great migration of wildebeest and zebra. The resident population of lion, cheetah, elephant, giraffe, and birds is also impressive. There’s a wide variety of accommodation available, from luxury lodges to mobile camps. The park covers 5,700 sq miles, (14,763 sq km), it’s larger than Connecticut, with at most a couple hundred vehicles driving around.\n' +
+          '\n' +
+          'The Park can be divided into 3 sections. The popular southern/central part (Seronera Valley), is what the Maasai called the “serengit”, the land of endless plains. It’s classic savannah, dotted with acacias and filled with wildlife. The western corridor is marked by the Grumeti River, and has more forests and dense bush. The north, Lobo area, meets up with Kenya’s Masai Mara Reserve, is the least visited section.\n' +
+          '\n' +
+          'Two World Heritage Sites and two Biosphere Reserves have been established within the 30,000 km² region. It’s unique ecosystem has inspired writers from Ernest Hemingway to Peter Mattheissen, filmakers like Hugo von Lawick and Alan Root as well as numerous photographers and scientists - many of which have put their works at our disposal to create this website.\n' +
+          '\n' +
+          'The Serengeti ecosystem is one of the oldest on earth. The essential features of climate, vegetation and fauna have barely changed in the past million years. Early man himself made an appearance in Olduvai Gorge about two million years ago. Some patterns of life, death, adaptation and migration are as old as the hills themselves.\n' +
+          '\n' +
+          'It is the migration for which Serengeti is perhaps most famous. Over a million wildebeest and about 200,000 zebras flow south from the northern hills to the southern plains for the short rains every October and November, and then swirl west and north after the long rains in April, May and June. So strong is the ancient instinct to move that no drought, gorge or crocodile infested river can hold them back.\n' +
+          '\n' +
+          'The Wildebeest travel through a variety of parks, reserves and protected areas and through a variety of habitat. Join us to explore the different forms of vegetation and landscapes of the Serengeti ecosystem and meet some of their most fascinating inhabitants.\n',
         status: true,
         imageSrc: GTDestination1,
         imageAlt: 'Northern Circuit',
-        rate: 4.5,
+        rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'When is the best time of year to visit the Serengeti?',
+            answer:
+              'The climate of the Serengeti National Park is subtropical, with rain season from November to April and dry season from May to October.\n' +
+              'The park is located at an altitude between 1,100 and 2,000 meters with annual average rainfall ranging from 900 to 1,000 mm.\n' +
+              'The Serengeti is a year-round safari destination. However, the peak, wet season runs from March to April.\n' +
+              'June to October: June and July are the best months to see the wildebeest in the western corridor, and August to September in the northern parts of the Serengeti. During this time, the weather is generally sunny with not much rain. Please note that this is also one of the busier times to visit, so there will be more safari vehicles on the road, accommodation is limited, and prices can be a bit higher.\n' +
+              "November to May: January to February is the best time to see newborns. This, in turn, lures the predators. It's very green during this time, with incredible bird watching opportunities. April to May is the low season, so there will be fewer crowds, and – bonus – prices might be lower.\n",
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'How much does a safari in the Serengeti cost?',
+            answer:
+              "A Serengeti safari will depend on various factors, including but not limited to where you stay, when you're visiting, and what activities you wish to partake in. However, the price per person per day is usually around $500-$2,500. ",
+          },
+          {
+            question: 'How to get to the Serengeti National Park?',
+            answer:
+              'Distance: Arusha - Serengeti Park gate: 142 km | 4-4.5 hours\n' +
+              'Road. Accessed from all towns and cities to the present entry or exit points/gates namely Naabi Hill, Seronera, Ndutu, Kusini, Kirawira, Handajega, Ikoma, Tabora ‘B’, Lamai, Lobo, Ndabaka, Machochwe and Kleins.\n' +
+              'Air. There are all weather airstrips in the center of the park (Seronera), in the South (Kusini), in the East (Lobo), in the West (Kirawira) and in the North (Kogatende & Lamai). There are scheduled and private charters from Arusha, Mwanza, Kilimanjaro, Musoma, Dar es salaam and Zanzibar.\n',
+          },
+          {
+            question: 'What makes a Serengeti National Park safari so special?',
+            answer:
+              'Serengeti National Park, a world-renown, World Biosphere Reserve and World Heritage Site that has many attractions than any other national park in Africa. The Great Migration, The Big Five, Unique Bird Collections, Endangered Species, Highest concentration of Carnivores and Herbivores, Scenic and Spectacular Landscapes are some of the attractions one will encounter!\n' +
+              "The Serengeti is best known for being host to part of the Great Migration. Every year, millions of wildebeest traverse the plains, with zebra, gazelle and others following them on their journey. Predators take advantage of this spectacular gathering to plan attacks, from lions stalking them to crocodiles attacking during their river crossings. This means that there's much drama during this time! \n",
+          },
+          {
+            question: 'Where to visit the Great Serengeti Migration',
+            answer:
+              "The great wildebeest migration of over 1.3 million accompanied by large numbers of zebra, and smaller numbers of Grant's & Thomson's gazelle, eland and impala with an annual pattern seeking fresh grazing and water. Having a chance of encountering this phenomena has being  described as one of the natural wonders and gives you a life time experience from nature.\n" +
+              'The famous Great Migration moves in a clockwise direction from the north via the central part, to the west, and then back to the Maasai Mara in Kenya. Therefore, the time of your trip will greatly depend on where you should go for your Great Migration safari. \n' +
+              "While the wildebeests are in the south, it's calving season, and many newborn animals are around. Those make easy prey, so predators are on the prowl! When they move through central Serengeti, the big cat sightings are incredible! \n" +
+              'As the animals move through the west, they cross the Grumeti River, trying to escape crocodile jaws. Have your camera ready for exciting Great Migration safari sightings! And then, in the north, they have to tackle another obstacle, the Mara River, where more hungry crocodiles and hippos await. \n',
           },
         ],
         activities: [
