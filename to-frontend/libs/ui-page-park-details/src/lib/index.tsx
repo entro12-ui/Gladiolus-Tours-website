@@ -21,6 +21,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { RateDisplay } from '@collo/ui-comp-rate';
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons/faArrowCircleDown';
 
+interface InternalLink {
+  label: string;
+  target: string;
+  iconClass: string;
+}
+
 export function GladiolusParkDetails() {
   const nationalParkId = useNationalParkIdOrThrow();
   const destinationId = useDestinationIdOrThrow();
@@ -48,61 +54,89 @@ export function GladiolusParkDetails() {
     return <h1>National Park Not Found</h1>;
   }
 
+  const internalLinks: InternalLink[] = [
+    { label: 'Overview', target: '#overview', iconClass: 'icon-home' },
+    { label: 'Activities', target: '#activities', iconClass: 'icon-ski' },
+    { label: 'FAQ', target: '#faq', iconClass: 'icon-menu' },
+    {
+      label: 'Safari Packages',
+      target: '#safari-packages',
+      iconClass: 'icon-destination',
+    },
+    {
+      label: 'Parks Nearby',
+      target: '#parks-nearby',
+      iconClass: 'icon-nature',
+    },
+  ];
+
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div
-            className="bg-cover bg-center h-96"
-            style={{ backgroundImage: `url(${gtNationalPark.imageSrc})` }}
-          >
-            <div className="bg-black bg-opacity-40 h-full flex items-center justify-center text-white text-center">
-              <h1 className="text-4xl font-bold">{gtNationalPark.name}</h1>
-            </div>
-          </div>
-          <div className="px-6 py-8">
-            <h1 className="text-4xl font-bold">
-              {gtNationalPark.name} {/* Display park name */}
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden relative">
+        <div
+          className="bg-cover bg-center h-96 flex items-center justify-center text-white text-center relative"
+          style={{ backgroundImage: `url(${gtNationalPark.imageSrc})` }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+            <h1 className="text-4xl font-bold z-10">
+              {gtNationalPark.name}{' '}
               <span className="text-base ml-2">
                 <RateDisplay rate={gtNationalPark.rate} />
-              </span>{' '}
+              </span>
             </h1>
-            <p className="text-gray-700">{gtNationalPark.description}</p>
           </div>
-          <div className="px-6 py-4">
-            <h2 className="text-2xl font-semibold mb-4">FAQs</h2>
-            <h2 className="text-2xl font-semibold mb-4">
-              {gtNationalPark.name}
-            </h2>
-            {gtNationalPark.faq.map((item: FAQ, index: number) => (
-              <Accordion key={index}>
-                <AccordionSummary
-                  expandIcon={<FontAwesomeIcon icon={faArrowCircleDown} />}
-                >
-                  <Typography variant="h6">{item.question}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>{item.answer}</Typography>
-                </AccordionDetails>
-              </Accordion>
+        </div>
+        <div className="container mx-auto flex justify-center mt-8">
+          {internalLinks.map((link, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                const element = document.querySelector(link.target);
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="flex items-center justify-center w-1/5 mx-1 p-4 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition duration-300"
+            >
+              <FontAwesomeIcon icon={link.iconClass as any} className="mr-2" />
+              <span>{link.label}</span>
+            </button>
+          ))}
+        </div>
+        <div className="px-6 py-8" id="overview">
+          <h1 className="text-4xl font-bold">Overview</h1>
+          <p className="text-gray-700">{gtNationalPark.description}</p>
+        </div>
+        <div className="px-6 py-4" id="activities">
+          <h2 className="text-2xl font-semibold mb-4">Activities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {gtNationalPark.activities.map((activity, index) => (
+              <div key={index} className="bg-gray-100 p-4 rounded-lg">
+                <FontAwesomeIcon
+                  icon={getActivityIcon(activity)}
+                  className="w-6 h-6 mr-2"
+                />
+                <h4 className="text-lg font-semibold mb-2">
+                  {GtActivities[activity]}
+                </h4>
+              </div>
             ))}
           </div>
-          <div className="px-6 py-4">
-            <h2 className="text-2xl font-semibold mb-4">Activities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {gtNationalPark.activities.map((activity, index) => (
-                <div key={index} className="bg-gray-100 p-4 rounded-lg">
-                  <FontAwesomeIcon
-                    icon={getActivityIcon(activity)}
-                    className="w-6 h-6 mr-2"
-                  />
-                  <h4 className="text-lg font-semibold mb-2">
-                    {GtActivities[activity]}
-                  </h4>
-                </div>
-              ))}
-            </div>
-          </div>
+        </div>
+        <div className="px-6 py-4" id="faq">
+          <h2 className="text-2xl font-semibold mb-4">FAQs</h2>
+          {gtNationalPark.faq.map((item: FAQ, index: number) => (
+            <Accordion key={index}>
+              <AccordionSummary
+                expandIcon={<FontAwesomeIcon icon={faArrowCircleDown} />}
+              >
+                <Typography variant="h6">{item.question}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>{item.answer}</Typography>
+              </AccordionDetails>
+            </Accordion>
+          ))}
         </div>
       </div>
     </div>
