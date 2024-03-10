@@ -10,7 +10,8 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { classNames } from '@collo/ui-utils';
 import { GtDestinationCategory, GtDestinations } from '@collo/ui-persistance';
-import { Link } from 'react-router-dom';
+import { generatePath, Link } from 'react-router-dom';
+import { GtToursRoute } from '@collo/ui-routes-gladiolus';
 
 const sortOptions = [
   { name: 'By Name', href: '#' },
@@ -340,26 +341,40 @@ export function Destinations() {
               <h2 id="more-products-heading" className="sr-only">
                 More Destinations
               </h2>
-
               <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                {filteredParks.map((park) => (
-                  <Link key={park.id} to={park.name} className="group">
-                    <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
-                      <img
-                        src={park.imageSrc}
-                        alt={park.imageAlt}
-                        className="h-full w-full object-cover object-center group-hover:opacity-75"
-                      />
-                    </div>
-                    <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
-                      <h3>{park.name}</h3>
-                      <p>{park.rate}</p>
-                    </div>
-                    <p className="mt-1 text-sm italic text-gray-500">
-                      {park.description}
-                    </p>
-                  </Link>
-                ))}
+                {GtDestinations.flatMap((destination) =>
+                  destination.nationalParks
+                    .filter((park) =>
+                      selectedCircuit === GtDestinationCategory['All Circuits']
+                        ? true
+                        : park.category === selectedCircuit
+                    )
+                    .map((park) => (
+                      <Link
+                        key={park.id}
+                        to={generatePath(GtToursRoute.DestinationDetails, {
+                          destinationId: String(destination.id),
+                          parkId: String(park.id),
+                        })}
+                        className="group"
+                      >
+                        <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
+                          <img
+                            src={park.imageSrc}
+                            alt={park.imageAlt}
+                            className="h-full w-full object-cover object-center group-hover:opacity-75"
+                          />
+                        </div>
+                        <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
+                          <h3>{park.name}</h3>
+                          <p>{park.rate}</p>
+                        </div>
+                        <p className="mt-1 text-sm italic text-gray-500">
+                          {park.description}
+                        </p>
+                      </Link>
+                    ))
+                )}
               </div>
             </section>
           </div>
