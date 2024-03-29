@@ -1,4 +1,7 @@
 import Profile from './images/Team-Anonymous-pillars.webp';
+import Sunday from './images/Sunday.webp';
+import Francois from './images/Francois.webp';
+
 interface ITeam {
   name: string;
   role: string;
@@ -11,14 +14,14 @@ const people: ITeam[] = [
   {
     name: 'Sunday Mtui',
     role: 'Co-Founder',
-    imageUrl: `${Profile}`,
+    imageUrl: `${Sunday}`,
     twitterUrl: `#`,
     linkedinUrl: `#`,
   },
   {
     name: 'Francois Martin',
     role: 'Co-Founder',
-    imageUrl: `${Profile}`,
+    imageUrl: `${Francois}`,
     twitterUrl: `#`,
     linkedinUrl: `#`,
   },
