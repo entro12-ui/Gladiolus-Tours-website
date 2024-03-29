@@ -53,7 +53,7 @@ export const GladiolusHeader = () => {
             <Link
               key={item.name}
               to={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 text-gray-900 gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold shadow-sm hover:bg-gray-50"
             >
               {item.name}
             </Link>
