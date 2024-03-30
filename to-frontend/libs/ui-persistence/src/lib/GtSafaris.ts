@@ -1,4 +1,14 @@
-import Img0 from './images/Safaris/Ngorongoro_Crater_Elephants_NCA.webp';
+import WildLifeSafari from './images/Safaris/WildLifeSafari.webp';
+import AdventureSafari from './images/Safaris/Zebra.webp';
+import GroupAndIncentiveTravel from './images/Safaris/Group_And_Incentive_Safaris.webp';
+import CampingSafari from './images/Safaris/Camping_Safari.webp';
+import BeachHoliday from './images/Safaris/Beach_Holiday_Safari.webp';
+import MountainClimbingAndTrekking from './images/Safaris/Uhuru_Peak.webp';
+import CulturalSafari from './images/Safaris/Cultural_Safaris.webp';
+import HistoricalSafari from './images/Safaris/Historical_Safaris.webp';
+import ZanzibarHolidaySafari from './images/Safaris/Zanzibar_Holiday_Safari.webp';
+import WalkingSafari from './images/Safaris/Walking_Safari.webp';
+import BalloonSafari from './images/Safaris/Balloon_Safari.webp';
 
 interface SafariTypes {
   name: string;
@@ -30,7 +40,7 @@ export const GtSafaris: GladiolusToursSafari = [
     description:
       'We believe in value for money. Every guest would like to have the most reliable and comfortable vehicles on safari. In response to the clients’ needs, we have a very strict vehicle replacement policy that ensures a young fleet at all times. We have a total fleet of 225 well-maintained motor vehicles, predominantly 4-wheel drives. This does away with the problem of sub-contracting vehicles and driver-guides, which may compromise the quality of services. Our safari vehicles are specifically converted for maximum space and comfort. All of them have hatched roof and sliding windows to facilitate good viewing and convenient photography during game drives and sight seeing, fridge and sockets for charging electronic devices.',
     status: true,
-    imageSrc: `${Img0}`,
+    imageSrc: `${WildLifeSafari}`,
     imageAlt: 'Wildlife Safaris',
     safariTypes: [
       {
@@ -48,7 +58,7 @@ export const GtSafaris: GladiolusToursSafari = [
     price: '',
     description: '',
     status: true,
-    imageSrc: `${Img0}`,
+    imageSrc: `${AdventureSafari}`,
     imageAlt: '',
     safariTypes: [
       {
@@ -65,7 +75,7 @@ export const GtSafaris: GladiolusToursSafari = [
     price: '',
     description: '',
     status: true,
-    imageSrc: `${Img0}`,
+    imageSrc: `${GroupAndIncentiveTravel}`,
     imageAlt: 'Group and Incentive Travel',
     safariTypes: [
       {
@@ -82,7 +92,7 @@ export const GtSafaris: GladiolusToursSafari = [
     price: '',
     description: '',
     status: true,
-    imageSrc: `${Img0}`,
+    imageSrc: `${CampingSafari}`,
     imageAlt: 'Camping Safaris',
     safariTypes: [
       {
@@ -105,7 +115,7 @@ export const GtSafaris: GladiolusToursSafari = [
     price: '',
     description: '',
     status: true,
-    imageSrc: `${Img0}`,
+    imageSrc: `${BeachHoliday}`,
     imageAlt: 'Beach Holiday',
     safariTypes: [
       {
@@ -123,7 +133,7 @@ export const GtSafaris: GladiolusToursSafari = [
     description:
       'Tanzania is home to the highest mountain in Africa – Mount Kilimanjaro (5895 metres), which is also the highest free-standing mountain in the world. Despite its height Kilimanjaro is one of the world’s most accessible high summits, with most climbers reaching the peak (Uhuru Peak) with little more than a walking stick, proper clothing and determination',
     status: true,
-    imageSrc: `${Img0}`,
+    imageSrc: `${MountainClimbingAndTrekking}`,
     imageAlt: 'Mountain Climbing & Trekking',
     safariTypes: [
       {
@@ -150,13 +160,13 @@ export const GtSafaris: GladiolusToursSafari = [
   },
   {
     id: 7,
-    name: 'Cultural & Historical Tours',
-    type: 'Cultural & Historical Tours',
+    name: 'Cultural Tours',
+    type: 'Cultural Tours',
     href: '',
     price: '',
     description: '',
     status: true,
-    imageSrc: `${Img0}`,
+    imageSrc: `${CulturalSafari}`,
     imageAlt: 'Cultural & Historical Tours',
     safariTypes: [
       {
@@ -167,14 +177,14 @@ export const GtSafaris: GladiolusToursSafari = [
   },
   {
     id: 8,
-    name: 'Zanzibar & Beach Holidays',
-    type: 'Zanzibar & Beach Holidays',
+    name: 'Historical Tours',
+    type: 'Historical Tours',
     href: '',
     price: '',
     description: '',
     status: true,
-    imageSrc: `${Img0}`,
-    imageAlt: 'Zanzibar & Beach Holidays',
+    imageSrc: `${HistoricalSafari}`,
+    imageAlt: 'Cultural & Historical Tours',
     safariTypes: [
       {
         name: '',
@@ -184,14 +194,14 @@ export const GtSafaris: GladiolusToursSafari = [
   },
   {
     id: 9,
-    name: 'Walking Safari',
-    type: 'Walking Safari',
+    name: 'Zanzibar & Beach Holidays',
+    type: 'Zanzibar & Beach Holidays',
     href: '',
     price: '',
     description: '',
     status: true,
-    imageSrc: `${Img0}`,
-    imageAlt: 'Walking Safari',
+    imageSrc: `${ZanzibarHolidaySafari}`,
+    imageAlt: 'Zanzibar & Beach Holidays',
     safariTypes: [
       {
         name: '',
@@ -201,14 +211,14 @@ export const GtSafaris: GladiolusToursSafari = [
   },
   {
     id: 10,
-    name: 'Walking Safaris',
-    type: 'Walking Safaris',
+    name: 'Walking Safari',
+    type: 'Walking Safari',
     href: '',
     price: '',
     description: '',
     status: true,
-    imageSrc: `${Img0}`,
-    imageAlt: 'Walking Safaris',
+    imageSrc: `${WalkingSafari}`,
+    imageAlt: 'Walking Safari',
     safariTypes: [
       {
         name: '',
@@ -224,7 +234,7 @@ export const GtSafaris: GladiolusToursSafari = [
     price: '',
     description: '',
     status: true,
-    imageSrc: `${Img0}`,
+    imageSrc: `${BalloonSafari}`,
     imageAlt: 'Balloon Safaris in Serengeti and Tarangire',
     safariTypes: [
       {
