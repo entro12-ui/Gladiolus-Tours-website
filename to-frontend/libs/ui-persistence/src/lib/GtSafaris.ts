@@ -3,7 +3,7 @@ import AdventureSafari from './images/Safaris/Zebra.webp';
 import GroupAndIncentiveTravel from './images/Safaris/Group_And_Incentive_Safaris.webp';
 import CampingSafari from './images/Safaris/Camping_Safari.webp';
 import BeachHoliday from './images/Safaris/Beach_Holiday_Safari.webp';
-import MountainClimbingAndTrekking from './images/Safaris/Uhuru_Peak.webp';
+import MountainClimbingAndTrekking from './images/Safaris/Mountain.webp';
 import CulturalSafari from './images/Safaris/Cultural_Safaris.webp';
 import HistoricalSafari from './images/Safaris/Historical_Safaris.webp';
 import ZanzibarHolidaySafari from './images/Safaris/Zanzibar_Holiday_Safari.webp';
