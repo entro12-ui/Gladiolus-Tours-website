@@ -1,15 +1,7 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { GtSafaris } from '@collo/ui-persistance';
 
 export const GladiolusSafaris = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Trigger animation when component mounts
-    setIsVisible(true);
-  }, []);
-
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
@@ -24,17 +16,14 @@ export const GladiolusSafaris = () => {
         </p>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {GtSafaris.map((safari, index) => (
-            <Link
-              key={safari.name}
-              to={'#'}
-              className={`group block ${isVisible ? 'animate-fadeIn' : ''}`}
-            >
-              <div className="relative overflow-hidden rounded-lg aspect-w-16 aspect-h-9">
+          {GtSafaris.map((safari) => (
+            <Link key={safari.name} to={'#'} className="group block">
+              <div className="relative overflow-hidden rounded-lg aspect-w-16 aspect-h-9 h-64">
                 <img
                   src={safari.imageSrc}
                   alt={safari.imageAlt}
                   className="object-cover w-full h-full transition-transform transform group-hover:scale-105"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
               <div className="mt-4 h-24 overflow-hidden">
