@@ -10,7 +10,7 @@ export const Destinations: React.FC<FilteredNationalParksProps> = ({
   destinations,
 }) => {
   const [selectedCategory, setSelectedCategory] =
-    useState<GtDestinationCategory | null>(null);
+    useState<GtDestinationCategory>(GtDestinationCategory['All Circuits']);
 
   const filteredParks = selectedCategory
     ? destinations.filter(
