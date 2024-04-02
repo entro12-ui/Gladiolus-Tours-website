@@ -4,8 +4,16 @@ import { Destinations } from './destinations';
 export const GladiolusDestinationsPage = () => {
   return (
     <div className="bg-white">
-      <EntryPageHelmet title={'Safari Destinations'} />
-      <Destinations />
+      <EntryPageHelmet title={'Destinations'} />
+      {/*
+      <GladiolusHeaderSection
+        header={'Safari Destinations'}
+        description={'Explore Gladiolus Tours Destinations'}
+      />
+      */}
+      <div>
+        <Destinations />
+      </div>
     </div>
   );
 };
