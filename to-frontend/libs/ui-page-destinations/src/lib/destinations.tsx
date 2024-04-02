@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { GtDestinationCategory, GtDestinations } from '@collo/ui-persistance';
 
 interface MapIconProps {
   className?: string;
@@ -24,60 +25,63 @@ const MapIcon: React.FC<MapIconProps> = ({ className }) => (
   </svg>
 );
 
-export const Destinations: React.FC = () => {
+export const Destinations = () => {
+  const [filter, setFilter] = useState<GtDestinationCategory | null>(null);
+
+  const handleCheckboxChange = (category: GtDestinationCategory | null) => {
+    setFilter(category);
+  };
+
+  // Flatten all national parks into a single array
+  const allNationalParks = GtDestinations.flatMap((dest) => dest.nationalParks);
+
   return (
     <section className="px-4 md:px-6 py-6 md:py-12 lg:py-16 xl:py-24 2xl:py-32">
       <div className="container grid gap-6">
-        <div className="flex flex-col gap-2">
-          <div className="grid gap-1">
-            <h1 className="text-3xl font-bold tracking-tight">
-              Find Your Destination
-            </h1>
-            <p className="text-gray-500 dark:text-gray-400">
-              Discover the perfect place for your next adventure
-            </p>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="flex-1 min-w-0">
+        {/* Filter Checkbox */}
+        <div>
+          {Object.keys(GtDestinationCategory).map((category) => (
+            <label key={category} className="flex items-center gap-2">
               <input
-                className="w-full max-w-[400px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                placeholder="Search destinations..."
-                type="search"
+                type="checkbox"
+                checked={
+                  filter ===
+                  GtDestinationCategory[
+                    category as keyof typeof GtDestinationCategory
+                  ]
+                }
+                onChange={() =>
+                  handleCheckboxChange(
+                    GtDestinationCategory[
+                      category as keyof typeof GtDestinationCategory
+                    ]
+                  )
+                }
               />
-            </div>
-            <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none">
-              Search
-            </button>
-          </div>
+              <span>{category}</span>
+            </label>
+          ))}
         </div>
-        <div className="grid gap-6">
-          <div className="flex flex-col gap-2">
-            <div className="grid gap-2">
-              <div className="p-4 border border-gray-300 rounded-lg">
-                <div className="grid gap-2">
-                  <h3 className="font-semibold tracking-tight">
-                    Bali, Indonesia
-                  </h3>
-                  <p className="text-sm leading-none text-gray-500 dark:text-gray-400">
-                    Island Paradise
-                  </p>
-                </div>
-                <div className="p-4 flex items-center justify-between border-t border-gray-300 rounded-b-lg">
-                  <div className="flex items-center gap-2 text-sm">
-                    <MapIcon className="w-4 h-4" />
-                    <span>Indonesia</span>
-                  </div>
-                  <Link
-                    className="ml-auto text-blue-500 hover:text-blue-700"
-                    to="#"
-                  >
-                    View
-                  </Link>
-                </div>
+        {/* National Parks Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {allNationalParks.map((park) => (
+            <div
+              key={park.id}
+              className="p-4 border border-gray-300 rounded-lg"
+            >
+              <img
+                src={park.imageSrc}
+                alt={park.imageAlt}
+                className="w-full h-32 object-cover rounded-md mb-2"
+              />
+              <div className="flex items-center justify-between">
+                <p className="font-semibold">{park.name}</p>
+                <Link className="text-blue-500 hover:text-blue-700" to="#">
+                  View
+                </Link>
               </div>
             </div>
-          </div>
-          {/* Other Card components */}
+          ))}
         </div>
       </div>
     </section>
