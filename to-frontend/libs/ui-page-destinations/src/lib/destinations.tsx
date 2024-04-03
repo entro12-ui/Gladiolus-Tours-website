@@ -25,28 +25,45 @@ const filters = [
     id: 'category',
     name: 'Category',
     options: [
-      { value: GtDestinationCategory['All Circuits'], label: 'All Circuits' },
+      {
+        value: GtDestinationCategory['All Circuits'],
+        label: 'All Circuits',
+        checked: true,
+      },
       {
         value: GtDestinationCategory['Northern Circuit'],
         label: 'Northern Circuit',
+        checked: false,
       },
       {
         value: GtDestinationCategory['Southern Circuit'],
         label: 'Southern Circuit',
+        checked: false,
       },
       {
         value: GtDestinationCategory['Eastern Circuit'],
         label: 'Eastern Circuit',
+        checked: false,
       },
       {
         value: GtDestinationCategory['Western Circuit'],
         label: 'Western Circuit',
+        checked: false,
       },
-      { value: GtDestinationCategory['Ocean Islands'], label: 'Ocean Islands' },
-      { value: GtDestinationCategory['Mafia Island'], label: 'Mafia Island' },
+      {
+        value: GtDestinationCategory['Ocean Islands'],
+        label: 'Ocean Islands',
+        checked: false,
+      },
+      {
+        value: GtDestinationCategory['Mafia Island'],
+        label: 'Mafia Island',
+        checked: false,
+      },
       {
         value: GtDestinationCategory['Zanzibar Island'],
         label: 'Zanzibar Island',
+        checked: false,
       },
     ],
   },
@@ -147,7 +164,7 @@ export function Destinations() {
                                       name={`${section.id}[]`}
                                       defaultValue={option.value}
                                       type="checkbox"
-                                      defaultChecked={true}
+                                      defaultChecked={option.checked}
                                       className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                     />
                                     <label
@@ -286,7 +303,7 @@ export function Destinations() {
                                   id={`filter-${section.id}-${optionIdx}`}
                                   name={`${section.id}[]`}
                                   defaultValue={option.value}
-                                  defaultChecked={true}
+                                  defaultChecked={option.checked}
                                   type="checkbox"
                                   className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                 />
