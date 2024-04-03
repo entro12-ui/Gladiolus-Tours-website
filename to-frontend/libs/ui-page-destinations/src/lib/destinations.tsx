@@ -9,7 +9,7 @@ import {
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { classNames } from '@collo/ui-utils';
-import { GtDestinations } from '@collo/ui-persistance';
+import { GtDestinationCategory, GtDestinations } from '@collo/ui-persistance';
 import { Link } from '@mui/material';
 
 const sortOptions = [
@@ -25,46 +25,29 @@ const filters = [
     id: 'category',
     name: 'Category',
     options: [
-      { value: 'tees', label: 'Tees' },
-      { value: 'crewnecks', label: 'Crewnecks' },
-      { value: 'hats', label: 'Hats' },
-      { value: 'bundles', label: 'Bundles' },
-      { value: 'carry', label: 'Carry' },
-      { value: 'objects', label: 'Objects' },
-    ],
-  },
-  {
-    id: 'brand',
-    name: 'Brand',
-    options: [
-      { value: 'clothing-company', label: 'Clothing Company' },
-      { value: 'fashion-inc', label: 'Fashion Inc.' },
-      { value: 'shoes-n-more', label: "Shoes 'n More" },
-      { value: 'supplies-n-stuff', label: "Supplies 'n Stuff" },
-    ],
-  },
-  {
-    id: 'color',
-    name: 'Color',
-    options: [
-      { value: 'white', label: 'White' },
-      { value: 'black', label: 'Black' },
-      { value: 'grey', label: 'Grey' },
-      { value: 'blue', label: 'Blue' },
-      { value: 'olive', label: 'Olive' },
-      { value: 'tan', label: 'Tan' },
-    ],
-  },
-  {
-    id: 'sizes',
-    name: 'Sizes',
-    options: [
-      { value: 'xs', label: 'XS' },
-      { value: 's', label: 'S' },
-      { value: 'm', label: 'M' },
-      { value: 'l', label: 'L' },
-      { value: 'xl', label: 'XL' },
-      { value: '2xl', label: '2XL' },
+      { value: GtDestinationCategory['All Circuits'], label: 'All Circuits' },
+      {
+        value: GtDestinationCategory['Northern Circuit'],
+        label: 'Northern Circuit',
+      },
+      {
+        value: GtDestinationCategory['Southern Circuit'],
+        label: 'Southern Circuit',
+      },
+      {
+        value: GtDestinationCategory['Eastern Circuit'],
+        label: 'Eastern Circuit',
+      },
+      {
+        value: GtDestinationCategory['Western Circuit'],
+        label: 'Western Circuit',
+      },
+      { value: GtDestinationCategory['Ocean Islands'], label: 'Ocean Islands' },
+      { value: GtDestinationCategory['Mafia Island'], label: 'Mafia Island' },
+      {
+        value: GtDestinationCategory['Zanzibar Island'],
+        label: 'Zanzibar Island',
+      },
     ],
   },
 ];
