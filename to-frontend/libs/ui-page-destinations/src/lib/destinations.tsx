@@ -53,7 +53,14 @@ const filters = [
 ];
 
 export function Destinations() {
+  const [selectedCircuit] = useState(GtDestinationCategory['All Circuits']);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
+  const filteredParks = GtDestinations.flatMap((destination) =>
+    destination.nationalParks.filter(
+      (park) => park.category === selectedCircuit
+    )
+  );
 
   return (
     <div className="bg-gray-50">
@@ -310,26 +317,24 @@ export function Destinations() {
               </h2>
 
               <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                {GtDestinations.map((destination) =>
-                  destination.nationalParks.map((parks) => (
-                    <Link key={parks.id} href={parks.name} className="group">
-                      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
-                        <img
-                          src={parks.imageSrc}
-                          alt={parks.imageAlt}
-                          className="h-full w-full object-cover object-center group-hover:opacity-75"
-                        />
-                      </div>
-                      <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
-                        <h3>{parks.name}</h3>
-                        <p>{parks.rate}</p>
-                      </div>
-                      <p className="mt-1 text-sm italic text-gray-500">
-                        {parks.description}
-                      </p>
-                    </Link>
-                  ))
-                )}
+                {filteredParks.map((park) => (
+                  <Link key={park.id} href={park.name} className="group">
+                    <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
+                      <img
+                        src={park.imageSrc}
+                        alt={park.imageAlt}
+                        className="h-full w-full object-cover object-center group-hover:opacity-75"
+                      />
+                    </div>
+                    <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
+                      <h3>{park.name}</h3>
+                      <p>{park.rate}</p>
+                    </div>
+                    <p className="mt-1 text-sm italic text-gray-500">
+                      {park.description}
+                    </p>
+                  </Link>
+                ))}
               </div>
             </section>
           </div>
