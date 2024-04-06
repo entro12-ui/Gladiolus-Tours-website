@@ -30,3 +30,13 @@ export const useDestinationIdOrThrow = () => {
   }
   return parseInt(destinationId);
 };
+
+export const useNationalParkIdOrThrow = () => {
+  const { parkId } = useParams<GtToursRouteParam.ParkId>();
+  if (!parkId) {
+    throw new Error(
+      `Internal error: expected ${GtToursRouteParam.ParkId} parameter in URL`
+    );
+  }
+  return parseInt(parkId);
+};
