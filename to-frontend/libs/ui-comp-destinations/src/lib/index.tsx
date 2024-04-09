@@ -55,9 +55,7 @@ export const Destinations: React.FC<IProps> = ({ destinations }) => {
             className="my-8 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-white duration-300 hover:transform hover:scale-105"
           >
             <Link
-              to={generatePath(GtToursRoute.DestinationDetails, {
-                destinationId: String(index),
-              })}
+              to={generatePath(GtToursRoute.Destinations)}
               className="block"
             >
               <figure>
