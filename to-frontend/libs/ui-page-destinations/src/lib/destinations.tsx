@@ -13,11 +13,8 @@ import { GtDestinationCategory, GtDestinations } from '@collo/ui-persistance';
 import { Link } from 'react-router-dom';
 
 const sortOptions = [
-  { name: 'Most Popular', href: '#' },
-  { name: 'Best Rating', href: '#' },
-  { name: 'Newest', href: '#' },
-  { name: 'Price: Low to High', href: '#' },
-  { name: 'Price: High to Low', href: '#' },
+  { name: 'By Name', href: '#' },
+  { name: 'By Circuit', href: '#' },
 ];
 
 const filters = [
