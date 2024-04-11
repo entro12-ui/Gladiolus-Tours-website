@@ -14,7 +14,6 @@ export enum GtToursRoute {
   AdventuresDetails = '/adventure/:adventuresId',
   Destinations = '/destinations',
   DestinationDetails = '/destinations/:destinationId',
-  NationalParkDetail = '/destinations/:destinationId/park/:parkId',
   Contact = '/contact',
   NotFound = '/404',
 }
