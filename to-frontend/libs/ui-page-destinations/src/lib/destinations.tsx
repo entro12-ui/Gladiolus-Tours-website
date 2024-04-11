@@ -10,7 +10,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { classNames } from '@collo/ui-utils';
 import { GtDestinationCategory, GtDestinations } from '@collo/ui-persistance';
-import { Link } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const sortOptions = [
   { name: 'Most Popular', href: '#' },
@@ -70,7 +70,9 @@ const filters = [
 ];
 
 export function Destinations() {
-  const [selectedCircuit] = useState(GtDestinationCategory['All Circuits']);
+  const [selectedCircuit, setSelectedCircuit] = useState<GtDestinationCategory>(
+    GtDestinationCategory['All Circuits']
+  );
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   const filteredParks = GtDestinations.flatMap((destination) =>
@@ -166,6 +168,9 @@ export function Destinations() {
                                       type="checkbox"
                                       defaultChecked={option.checked}
                                       className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                      onChange={() =>
+                                        setSelectedCircuit(option.value)
+                                      }
                                     />
                                     <label
                                       htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
@@ -306,6 +311,9 @@ export function Destinations() {
                                   defaultChecked={option.checked}
                                   type="checkbox"
                                   className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                  onChange={() =>
+                                    setSelectedCircuit(option.value)
+                                  }
                                 />
                                 <label
                                   htmlFor={`filter-${section.id}-${optionIdx}`}
@@ -335,7 +343,7 @@ export function Destinations() {
 
               <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
                 {filteredParks.map((park) => (
-                  <Link key={park.id} href={park.name} className="group">
+                  <Link key={park.id} to={park.name} className="group">
                     <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
                       <img
                         src={park.imageSrc}
