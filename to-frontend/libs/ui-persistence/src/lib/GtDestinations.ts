@@ -611,7 +611,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 2,
@@ -639,7 +639,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 3,
@@ -667,7 +667,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 4,
@@ -695,7 +695,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 5,
@@ -723,7 +723,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 6,
@@ -751,7 +751,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 7,
@@ -779,7 +779,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 8,
@@ -807,7 +807,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 9,
@@ -835,7 +835,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 10,
@@ -863,7 +863,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 11,
@@ -891,7 +891,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 12,
@@ -919,7 +919,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 13,
@@ -948,7 +948,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Southern Circuit'],
       },
     ],
   },
@@ -986,7 +986,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 2,
@@ -1014,7 +1014,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 3,
@@ -1042,7 +1042,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 4,
@@ -1070,7 +1070,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 5,
@@ -1098,7 +1098,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 6,
@@ -1126,7 +1126,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 7,
@@ -1154,7 +1154,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 8,
@@ -1182,7 +1182,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 9,
@@ -1210,7 +1210,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 10,
@@ -1238,7 +1238,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 11,
@@ -1266,7 +1266,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 12,
@@ -1294,7 +1294,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 13,
@@ -1322,7 +1322,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 14,
@@ -1350,7 +1350,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 15,
@@ -1378,7 +1378,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 16,
@@ -1406,7 +1406,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Eastern Circuit'],
       },
     ],
   },
@@ -1444,7 +1444,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Western Circuit'],
       },
       {
         id: 2,
@@ -1472,7 +1472,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Western Circuit'],
       },
       {
         id: 3,
@@ -1500,7 +1500,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Western Circuit'],
       },
       {
         id: 4,
@@ -1528,7 +1528,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Western Circuit'],
       },
       {
         id: 5,
@@ -1556,7 +1556,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Western Circuit'],
       },
       {
         id: 6,
@@ -1584,7 +1584,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Western Circuit'],
       },
       {
         id: 7,
@@ -1612,7 +1612,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Western Circuit'],
       },
       {
         id: 8,
@@ -1640,7 +1640,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Western Circuit'],
       },
       {
         id: 9,
@@ -1668,7 +1668,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Western Circuit'],
       },
     ],
   },
@@ -1706,7 +1706,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Ocean Islands'],
       },
       {
         id: 2,
@@ -1734,7 +1734,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Ocean Islands'],
       },
       {
         id: 3,
@@ -1762,7 +1762,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Ocean Islands'],
       },
       {
         id: 4,
@@ -1790,7 +1790,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Ocean Islands'],
       },
       {
         id: 5,
@@ -1818,7 +1818,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Ocean Islands'],
       },
       {
         id: 6,
@@ -1846,7 +1846,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Ocean Islands'],
       },
       {
         id: 7,
@@ -1874,7 +1874,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Ocean Islands'],
       },
       {
         id: 8,
@@ -1902,7 +1902,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           GtActivities['Great Migration'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
+        category: GtDestinationCategory['Ocean Islands'],
       },
     ],
   },
@@ -1913,15 +1913,67 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: GTDestination6,
     imageAlt: 'Mafia Island',
     status: true,
-    nationalParks: [],
+    nationalParks: [
+      {
+        id: 1,
+        name: 'Whale Sharks Snorkeling',
+        description: '',
+        status: true,
+        imageSrc: GTDestination5,
+        imageAlt: 'Mafia Island',
+        rate: 5,
+        faq: [
+          {
+            question: 'What is the best time to visit Serengeti?',
+            answer: 'Answer to the question',
+          },
+          {
+            question: 'Are there accommodation options in Serengeti?',
+            answer: 'Answer to the question',
+          },
+        ],
+        activities: [GtActivities['Fishing / Sport Fishing']],
+        adventures: [GtItineraryCategory['Adventure Safaris']],
+        category: GtDestinationCategory['Mafia Island'],
+      },
+    ],
   },
   {
     id: 7,
-    name: 'Zanzibar Island',
+    name: 'Deep Sea Fishing in Zanzibar',
     description: 'Welcome to Gladiolus Tours',
     imageSrc: GTDestination7,
     imageAlt: 'Zanzibar Island',
     status: true,
-    nationalParks: [],
+    nationalParks: [
+      {
+        id: 8,
+        name: 'Mnemba Island Conservation Area',
+        description: '',
+        status: true,
+        imageSrc: GTDestination5,
+        imageAlt: 'Ocean Islands',
+        rate: 5,
+        faq: [
+          {
+            question: 'What is the best time to visit Serengeti?',
+            answer: 'Answer to the question',
+          },
+          {
+            question: 'Are there accommodation options in Serengeti?',
+            answer: 'Answer to the question',
+          },
+        ],
+        activities: [
+          GtActivities['Balloon Safari'],
+          GtActivities['Game Drives'],
+          GtActivities['Bird Watching'],
+          GtActivities['Wedding / Honeymoon'],
+          GtActivities['Great Migration'],
+        ],
+        adventures: [GtItineraryCategory['Adventure Safaris']],
+        category: GtDestinationCategory['Zanzibar Island'],
+      },
+    ],
   },
 ];
