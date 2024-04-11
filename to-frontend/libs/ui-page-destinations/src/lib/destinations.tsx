@@ -72,9 +72,12 @@ export function Destinations() {
   );
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
+  // Filtered parks based on selected circuit
   const filteredParks = GtDestinations.flatMap((destination) =>
-    destination.nationalParks.filter(
-      (park) => park.category === selectedCircuit
+    destination.nationalParks.filter((park) =>
+      selectedCircuit === GtDestinationCategory['All Circuits']
+        ? true
+        : park.category === selectedCircuit
     )
   );
 
