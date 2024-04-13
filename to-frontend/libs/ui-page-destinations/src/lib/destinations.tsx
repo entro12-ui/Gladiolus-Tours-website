@@ -20,8 +20,8 @@ const sortOptions = [
 
 const filters = [
   {
-    id: 'category',
-    name: 'Category',
+    id: 'Circuit',
+    name: 'Circuit',
     options: [
       {
         value: GtDestinationCategory['All Circuits'],
