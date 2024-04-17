@@ -87,7 +87,7 @@ export const GladiolusToursContactBody = () => {
                 <dd>
                   Tanzania, Arusha
                   <br />
-                  Phillips, JPM5+Q69
+                  MV8C+MC, Usa River
                 </dd>
               </div>
               <div className="flex gap-x-4">
