@@ -1,5 +1,21 @@
+import NorthernCircuit from './images/Destinations/Northern/Serengeti_Gnus_7765.webp';
 import ArushaNationalPark from './images/Destinations/Northern/Arusha_National_Park_Tanzania_550_550shar-50brig-20_c1.webp';
 import NgorongoroCrater from './images/Destinations/Northern/Ngorongoro_Crater_View_NCA_550_550shar-50brig-20_c1.webp';
+import NgorongoroHighland from './images/Destinations/Northern/Ngorongoro_Highlands_Endoro_Waterfalls_4_550_550shar-50brig-20_c1.webp';
+import SerengetiMigration from './images/Destinations/Northern/Serengeti_Migration_P103.webp';
+import MountKilimanjaro from './images/Destinations/Northern/Mount_Kilimanjaro_Tanzania_550_550shar-50brig-20_c1.webp';
+import LakeManyara from './images/Destinations/Northern/Lake_Manyara_National_Park_Giraffes_24_550_550shar-50brig-20_c1.webp';
+import TarangireNationalPark from './images/Destinations/Northern/Tarangire_National_Park_20_550_550shar-50brig-20_c1.webp';
+import MkomaziNationalPark from './images/Destinations/Northern/Mkomazi_National_Park_Dindera_Dam_40_550_550shar-50brig-20_c1.webp';
+import MountOldonyoLengai from './images/Destinations/Northern/Mount_Oldonyo_Lengai_07_550_550shar-50brig-20_c1.webp';
+import LakeNatron from './images/Destinations/Northern/Lesser_Flamingos_Lake_Natron_01_550_550shar-50brig-20_c1.webp';
+import MateruniWaterFalls from './images/Destinations/Northern/Materuni_Waterfalls_01_550_550shar-50brig-20_c1.webp';
+import KondoaRockArt from './images/Destinations/Northern/Kondoa_Rock_Art_Site_07_550_550shar-50brig-20_c1.webp';
+import LakeChala from './images/Destinations/Northern/Lake_Chala_Ecotour_03_550_550shar-50brig-20_c1.webp';
+import LakeJipe from './images/Destinations/Northern/Lake_Jipe_Canoeing_20_550_550shar-50brig-20_c1.webp';
+import LakeEyasi from './images/Destinations/Northern/Lake_Eyasi_x_29_550_550shar-50brig-20_c1.webp';
+import PareMountain from './images/Destinations/Northern/Pare_Mountains_Aerial_View_10_550_550shar-50brig-20_c1.webp';
+import MountMeru from './images/Destinations/Northern/Arusha_National_Park_Mount_Meru_Girrafe_11.jpg';
 import { GtItineraryCategory } from './GtAdventures';
 import { GtActivities } from './GtActivities';
 
@@ -50,7 +66,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     id: 1,
     name: 'Northern Circuit',
     description: 'Welcome to Gladiolus Tours',
-    imageSrc: ArushaNationalPark,
+    imageSrc: NorthernCircuit,
     imageAlt: 'Northern Circuit',
     status: true,
     nationalParks: [
@@ -72,7 +88,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           '\n' +
           'The Wildebeest travel through a variety of parks, reserves and protected areas and through a variety of habitat. Join us to explore the different forms of vegetation and landscapes of the Serengeti ecosystem and meet some of their most fascinating inhabitants.\n',
         status: true,
-        imageSrc: '',
+        imageSrc: SerengetiMigration,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -127,7 +143,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mount Kilimanjaro National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MountKilimanjaro,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -155,7 +171,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Arusha National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: ArushaNationalPark,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -183,7 +199,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Manyara National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: LakeManyara,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -211,7 +227,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Ngorongoro Conservation Area',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: NgorongoroCrater,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -239,7 +255,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Tarangire National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: TarangireNationalPark,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -267,7 +283,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mkomazi National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MkomaziNationalPark,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -295,7 +311,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: "Mount Ol'doinyo Lengai",
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MountOldonyoLengai,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -323,7 +339,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Natron',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: LakeNatron,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -348,10 +364,10 @@ export const GtDestinations: GladiolusToursDestinations = [
       },
       {
         id: 10,
-        name: 'Lake Natron',
+        name: 'Kondoa Rock Art Sites',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: KondoaRockArt,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -376,10 +392,10 @@ export const GtDestinations: GladiolusToursDestinations = [
       },
       {
         id: 11,
-        name: 'Kondoa Rock Art Sites',
+        name: 'Lake Chala',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: LakeChala,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -404,10 +420,10 @@ export const GtDestinations: GladiolusToursDestinations = [
       },
       {
         id: 12,
-        name: 'Lake Chala',
+        name: 'Lake Jipe',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: LakeJipe,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -432,10 +448,10 @@ export const GtDestinations: GladiolusToursDestinations = [
       },
       {
         id: 13,
-        name: 'Lake Jipe',
+        name: 'Lake Eyasi',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: LakeEyasi,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -460,10 +476,10 @@ export const GtDestinations: GladiolusToursDestinations = [
       },
       {
         id: 14,
-        name: 'Lake Eyasi',
+        name: 'Pare Mountains',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: PareMountain,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -488,10 +504,10 @@ export const GtDestinations: GladiolusToursDestinations = [
       },
       {
         id: 15,
-        name: 'Pare Mountains',
+        name: 'Mount Meru',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MountMeru,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -516,38 +532,10 @@ export const GtDestinations: GladiolusToursDestinations = [
       },
       {
         id: 16,
-        name: 'Mount Meru',
-        description: '',
-        status: true,
-        imageSrc: '',
-        imageAlt: 'Northern Circuit',
-        rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
-        activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
-        ],
-        adventures: [GtItineraryCategory['Adventure Safaris']],
-        category: GtDestinationCategory['Northern Circuit'],
-      },
-      {
-        id: 17,
         name: 'Materuni Waterfalls',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MateruniWaterFalls,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
