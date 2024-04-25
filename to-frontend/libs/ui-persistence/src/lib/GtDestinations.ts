@@ -1,10 +1,5 @@
-import GTDestination1 from './images/Destinations/Ngorongoro_Crater_Flamingos_10_NCA.webp';
-import GTDestination2 from './images/Destinations/Kitulo_National_Park_Orchidbed.webp';
-import GTDestination3 from './images/Destinations/Ngorongoro_Crater_Swamps_NCA.webp';
-import GTDestination4 from './images/Destinations/Gombe_Stream_National_Park_Chimp_Laying_Around_14.webp';
-import GTDestination5 from './images/Destinations/Mbudya_Island_Dar-es-Salaam_1.webp';
-import GTDestination6 from './images/Destinations/Mafia_Island_Chole_Mjini.webp';
-import GTDestination7 from './images/Destinations/Zanzibar_Island_Stone_Town_01.webp';
+import ArushaNationalPark from './images/Destinations/Northern/Arusha_National_Park_Tanzania_550_550shar-50brig-20_c1.webp';
+import NgorongoroCrater from './images/Destinations/Northern/Ngorongoro_Crater_View_NCA_550_550shar-50brig-20_c1.webp';
 import { GtItineraryCategory } from './GtAdventures';
 import { GtActivities } from './GtActivities';
 
@@ -55,7 +50,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     id: 1,
     name: 'Northern Circuit',
     description: 'Welcome to Gladiolus Tours',
-    imageSrc: GTDestination1,
+    imageSrc: ArushaNationalPark,
     imageAlt: 'Northern Circuit',
     status: true,
     nationalParks: [
@@ -77,7 +72,7 @@ export const GtDestinations: GladiolusToursDestinations = [
           '\n' +
           'The Wildebeest travel through a variety of parks, reserves and protected areas and through a variety of habitat. Join us to explore the different forms of vegetation and landscapes of the Serengeti ecosystem and meet some of their most fascinating inhabitants.\n',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -132,7 +127,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mount Kilimanjaro National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -160,7 +155,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Arusha National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -188,7 +183,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Manyara National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -216,7 +211,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Ngorongoro Conservation Area',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -244,7 +239,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Tarangire National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -272,7 +267,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mkomazi National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -300,7 +295,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: "Mount Ol'doinyo Lengai",
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -328,7 +323,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Natron',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -356,7 +351,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Natron',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -384,7 +379,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kondoa Rock Art Sites',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -412,7 +407,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Chala',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -440,7 +435,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Jipe',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -468,7 +463,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Eyasi',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -496,7 +491,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Pare Mountains',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -524,7 +519,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mount Meru',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -552,7 +547,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Materuni Waterfalls',
         description: '',
         status: true,
-        imageSrc: GTDestination1,
+        imageSrc: '',
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
@@ -581,7 +576,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     id: 2,
     name: 'Southern Circuit',
     description: 'Welcome to Gladiolus Tours',
-    imageSrc: GTDestination2,
+    imageSrc: '',
     imageAlt: 'Southern Circuit',
     status: true,
     nationalParks: [
@@ -590,7 +585,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Ruaha National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -618,7 +613,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Nyerere National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -646,7 +641,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kitulo National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -674,7 +669,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Katavi National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -702,7 +697,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kalambo Falls',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -730,7 +725,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mbozi Mateorite',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -758,7 +753,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Ngozi',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -786,7 +781,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kaporongwe Falls',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -814,7 +809,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Matema Beach',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -842,7 +837,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Nyasa',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -870,7 +865,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mnazi Bay - Ruvuma Estuary Marine Park',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -898,7 +893,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Igeleke Rock Art Site',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -926,7 +921,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Isimila Stone Age Site',
         description: '',
         status: true,
-        imageSrc: GTDestination2,
+        imageSrc: '',
         imageAlt: 'Southern Circuit',
 
         rate: 5,
@@ -956,7 +951,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     id: 3,
     name: 'Eastern Circuit',
     description: 'Welcome to Gladiolus Tours',
-    imageSrc: GTDestination3,
+    imageSrc: '',
     imageAlt: 'Eastern Circuit',
     status: true,
     nationalParks: [
@@ -965,7 +960,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Nyerere National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -993,7 +988,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Udzungwa National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1021,7 +1016,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Saadani National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1049,7 +1044,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mikumi National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1077,7 +1072,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Usambara Mountains',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1105,7 +1100,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Amani Nature Forest Reserves',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1133,7 +1128,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Amboni Caves',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1161,7 +1156,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Uluguru Mountains',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1189,7 +1184,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Pugu Hill Nature Reserve',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1217,7 +1212,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mnazi Bay - Ruvuma Estuary Marine Park',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1245,7 +1240,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kilwa',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1273,7 +1268,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kilwa Kisiwani',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1301,7 +1296,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Songo Mnara',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1329,7 +1324,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kilwa Kivinje',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1357,7 +1352,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Pangani',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1385,7 +1380,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Bagamoyo',
         description: '',
         status: true,
-        imageSrc: GTDestination3,
+        imageSrc: '',
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1414,7 +1409,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     id: 4,
     name: 'Western Circuit',
     description: 'Welcome to Gladiolus Tours',
-    imageSrc: GTDestination4,
+    imageSrc: '',
     imageAlt: 'Western Circuit',
     status: true,
     nationalParks: [
@@ -1423,7 +1418,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Gombe Stream National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination4,
+        imageSrc: '',
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1451,7 +1446,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mahale Mountains National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination4,
+        imageSrc: '',
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1479,7 +1474,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Saanane Island National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination4,
+        imageSrc: '',
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1507,7 +1502,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Rubondo Island National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination4,
+        imageSrc: '',
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1535,7 +1530,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Ukerewe Island',
         description: '',
         status: true,
-        imageSrc: GTDestination4,
+        imageSrc: '',
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1563,7 +1558,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Burigi-Chato National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination4,
+        imageSrc: '',
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1591,7 +1586,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Ibanda-Kyerwa National Park',
         description: '',
         status: true,
-        imageSrc: GTDestination4,
+        imageSrc: '',
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1619,7 +1614,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Tanganyika',
         description: '',
         status: true,
-        imageSrc: GTDestination4,
+        imageSrc: '',
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1647,7 +1642,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Victoria',
         description: '',
         status: true,
-        imageSrc: GTDestination4,
+        imageSrc: '',
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1676,7 +1671,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     id: 5,
     name: 'Ocean Islands',
     description: 'Welcome to Gladiolus Tours',
-    imageSrc: GTDestination5,
+    imageSrc: '',
     imageAlt: 'Ocean Islands',
     status: true,
     nationalParks: [
@@ -1685,7 +1680,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mbudya Island Marine Reserve',
         description: '',
         status: true,
-        imageSrc: GTDestination5,
+        imageSrc: '',
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1713,7 +1708,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Bongoyo Island Marine Reserve',
         description: '',
         status: true,
-        imageSrc: GTDestination5,
+        imageSrc: '',
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1741,7 +1736,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Pangavini Island Marine Reserve',
         description: '',
         status: true,
-        imageSrc: GTDestination5,
+        imageSrc: '',
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1769,7 +1764,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Fungu Yasin Sand Bar',
         description: '',
         status: true,
-        imageSrc: GTDestination5,
+        imageSrc: '',
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1797,7 +1792,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Sinda Island Marine Reserve',
         description: '',
         status: true,
-        imageSrc: GTDestination5,
+        imageSrc: '',
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1825,7 +1820,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Tanga Marine Park & Reserve',
         description: '',
         status: true,
-        imageSrc: GTDestination5,
+        imageSrc: '',
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1853,7 +1848,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Chumbe Island Marine Sanctuary',
         description: '',
         status: true,
-        imageSrc: GTDestination5,
+        imageSrc: '',
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1881,7 +1876,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mnemba Island Conservation Area',
         description: '',
         status: true,
-        imageSrc: GTDestination5,
+        imageSrc: '',
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1910,7 +1905,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     id: 6,
     name: 'Mafia Island',
     description: 'Welcome to Gladiolus Tours',
-    imageSrc: GTDestination6,
+    imageSrc: '',
     imageAlt: 'Mafia Island',
     status: true,
     nationalParks: [
@@ -1919,7 +1914,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Whale Sharks Snorkeling',
         description: '',
         status: true,
-        imageSrc: GTDestination5,
+        imageSrc: '',
         imageAlt: 'Mafia Island',
         rate: 5,
         faq: [
@@ -1942,7 +1937,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     id: 7,
     name: 'Deep Sea Fishing in Zanzibar',
     description: 'Welcome to Gladiolus Tours',
-    imageSrc: GTDestination7,
+    imageSrc: '',
     imageAlt: 'Zanzibar Island',
     status: true,
     nationalParks: [
@@ -1951,7 +1946,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mnemba Island Conservation Area',
         description: '',
         status: true,
-        imageSrc: GTDestination5,
+        imageSrc: '',
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
