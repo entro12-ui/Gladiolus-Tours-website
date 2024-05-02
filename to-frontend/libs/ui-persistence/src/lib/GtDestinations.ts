@@ -1,7 +1,6 @@
 import NorthernCircuit from './images/Destinations/Northern/Serengeti_Gnus_7765.webp';
 import ArushaNationalPark from './images/Destinations/Northern/Arusha_National_Park_Tanzania_550_550shar-50brig-20_c1.webp';
 import NgorongoroCrater from './images/Destinations/Northern/Ngorongoro_Crater_View_NCA_550_550shar-50brig-20_c1.webp';
-import NgorongoroHighland from './images/Destinations/Northern/Ngorongoro_Highlands_Endoro_Waterfalls_4_550_550shar-50brig-20_c1.webp';
 import SerengetiMigration from './images/Destinations/Northern/Serengeti_Migration_P103.webp';
 import MountKilimanjaro from './images/Destinations/Northern/Mount_Kilimanjaro_Tanzania_550_550shar-50brig-20_c1.webp';
 import LakeManyara from './images/Destinations/Northern/Lake_Manyara_National_Park_Giraffes_24_550_550shar-50brig-20_c1.webp';
@@ -16,6 +15,19 @@ import LakeJipe from './images/Destinations/Northern/Lake_Jipe_Canoeing_20_550_5
 import LakeEyasi from './images/Destinations/Northern/Lake_Eyasi_x_29_550_550shar-50brig-20_c1.webp';
 import PareMountain from './images/Destinations/Northern/Pare_Mountains_Aerial_View_10_550_550shar-50brig-20_c1.webp';
 import MountMeru from './images/Destinations/Northern/Arusha_National_Park_Mount_Meru_Girrafe_11.jpg';
+import RuahaNationalPark from './images/Destinations/Southern/Ruaha_National_Park_Tanzania_550_550shar-50brig-20_c1.webp';
+import NyerereNationalPark from './images/Destinations/Southern/Nyerere_National_Park_Elephants_25.jpg';
+import KituloNationalPark from './images/Destinations/Southern/Kitulo_National_Park_Orchidbed_550_550shar-50brig-20_c1.webp';
+import KataviNationalPark from './images/Destinations/Southern/Katavi_National_Park_x_70_550_550shar-50brig-20_c1.webp';
+import KalamboFalls from './images/Destinations/Southern/Kalambo_Falls_Waterfalls_40_550_550shar-50brig-20_c1.webp';
+import MboziMateorite from './images/Destinations/Southern/Mbozi_Meteorite_09_550_550shar-50brig-20_c1.webp';
+import LakeNgozi from './images/Destinations/Southern/Lake_Ngozi_Ngosi_21_550_550shar-50brig-20_c1.webp';
+import KaporongweFalls from './images/Destinations/Southern/Kaporogwe_Waterfalls_Mbeya_01_550_550shar-50brig-20_c1.webp';
+import MatemaBeach from './images/Destinations/Southern/Matema_Beach_Lake_Nyasa_02_550_550shar-50brig-20_c1.webp';
+import LakeNyasa from './images/Destinations/Southern/Lake_Nyasa_Shoreline_07_550_550shar-50brig-20_c1.webp';
+import MnaziBay from './images/Destinations/Southern/Mnazi_Bay_Ruvuma_Estuary_Marine_Park_02_550_550shar-50brig-20_c1.webp';
+import Igeleke from './images/Destinations/Southern/Igeleke_Rock_Paintings_Iringa_05_550_550shar-50brig-20_c1.webp';
+import IsmilaStoneAge from './images/Destinations/Southern/Isimila_Stone_Age_Site_25_550_550shar-50brig-20_c1.webp';
 import { GtItineraryCategory } from './GtAdventures';
 import { GtActivities } from './GtActivities';
 
@@ -573,7 +585,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Ruaha National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: RuahaNationalPark,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -601,7 +613,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Nyerere National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: NyerereNationalPark,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -629,7 +641,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kitulo National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: KituloNationalPark,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -657,7 +669,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Katavi National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: KataviNationalPark,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -685,7 +697,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kalambo Falls',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: KalamboFalls,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -713,7 +725,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mbozi Mateorite',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MboziMateorite,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -741,7 +753,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Ngozi',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: LakeNgozi,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -769,7 +781,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kaporongwe Falls',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: KaporongweFalls,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -797,7 +809,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Matema Beach',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MatemaBeach,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -825,7 +837,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Nyasa',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: LakeNyasa,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -853,7 +865,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mnazi Bay - Ruvuma Estuary Marine Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MnaziBay,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -881,7 +893,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Igeleke Rock Art Site',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: Igeleke,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
@@ -909,7 +921,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Isimila Stone Age Site',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: IsmilaStoneAge,
         imageAlt: 'Southern Circuit',
 
         rate: 5,
