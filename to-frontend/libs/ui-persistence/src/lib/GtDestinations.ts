@@ -28,6 +28,20 @@ import LakeNyasa from './images/Destinations/Southern/Lake_Nyasa_Shoreline_07_55
 import MnaziBay from './images/Destinations/Southern/Mnazi_Bay_Ruvuma_Estuary_Marine_Park_02_550_550shar-50brig-20_c1.webp';
 import Igeleke from './images/Destinations/Southern/Igeleke_Rock_Paintings_Iringa_05_550_550shar-50brig-20_c1.webp';
 import IsmilaStoneAge from './images/Destinations/Southern/Isimila_Stone_Age_Site_25_550_550shar-50brig-20_c1.webp';
+import UdzunguwaNationalPark from './images/Destinations/Eastern/Udzungwa_National_Park_Sanje_Waterfalls_21_550_550shar-50brig-20_c1.webp';
+import SaadaniNationalPark from './images/Destinations/Eastern/Saadani_National_Park_Wami_River_40_550_550shar-50brig-20_c1.webp';
+import MikumiNationalPark from './images/Destinations/Eastern/Mikumi_National_Park_Zebras_111_550_550shar-50brig-20_c1.webp';
+import UsambaraMountain from './images/Destinations/Eastern/West_Usambara_Mountains_08_550_550shar-50brig-20_c1.webp';
+import AmaniNatureForestReserves from './images/Destinations/Eastern/Amani_Nature_Forest_Reserves_in_Usambara_01_550_550shar-50brig-20_c1.webp';
+import AmboniCaves from './images/Destinations/Eastern/Amboni_Caves_Tanga_Tanzania_550_550shar-50brig-20_c1.webp';
+import UluguruMountain from './images/Destinations/Eastern/Uluguru_Mountains_view_from_Morogoro_Town_550_550shar-50brig-20_c1.webp';
+import PuguHillNatureReserve from './images/Destinations/Eastern/Pugu_Hill_Nature_Forest_with_Lake_Minaki_550_550shar-50brig-20_c1.webp';
+import Kilwa from './images/Destinations/Eastern/The_Palace_Ruins_02_Songo_Mnara_Kilwa_550_550shar-50brig-20_c1.webp';
+import KilwaKisiwani from './images/Destinations/Eastern/Husuni_Kubwa_Sultans_Palace_14th__Century_04_Kilwa_Kisiwani_550_550shar-50brig-20_c1.webp';
+import KilwaKivinje from './images/Destinations/Eastern/Kilwa_Kivinje_Beach_25_550_550shar-50brig-20_c1.webp';
+import SongoMnaraKilwa from './images/Destinations/Eastern/The_Palace_Ruins_02_Songo_Mnara_Kilwa_550_550shar-50brig-20_c1.webp';
+import Pangani from './images/Destinations/Eastern/Pangani_Tanzania_550_550shar-50brig-20_c1.webp';
+import Bagamoyo from './images/Destinations/Eastern/German_Old_Colonial_Fort_in_Bagamoyo_02_550_550shar-50brig-20_c1.webp';
 import { GtItineraryCategory } from './GtAdventures';
 import { GtActivities } from './GtActivities';
 
@@ -960,7 +974,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Nyerere National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: NyerereNationalPark,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -988,7 +1002,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Udzungwa National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: UdzunguwaNationalPark,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1016,7 +1030,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Saadani National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: SaadaniNationalPark,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1044,7 +1058,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mikumi National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MikumiNationalPark,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1072,7 +1086,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Usambara Mountains',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: UsambaraMountain,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1100,7 +1114,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Amani Nature Forest Reserves',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: AmaniNatureForestReserves,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1128,7 +1142,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Amboni Caves',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: AmboniCaves,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1156,7 +1170,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Uluguru Mountains',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: UluguruMountain,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1184,7 +1198,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Pugu Hill Nature Reserve',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: PuguHillNatureReserve,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1212,7 +1226,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mnazi Bay - Ruvuma Estuary Marine Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MnaziBay,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1240,7 +1254,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kilwa',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: Kilwa,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1268,7 +1282,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kilwa Kisiwani',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: KilwaKisiwani,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1296,7 +1310,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Songo Mnara',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: SongoMnaraKilwa,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1324,7 +1338,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Kilwa Kivinje',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: KilwaKivinje,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1352,7 +1366,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Pangani',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: Pangani,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
@@ -1380,7 +1394,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Bagamoyo',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: Bagamoyo,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
