@@ -42,6 +42,15 @@ import KilwaKivinje from './images/Destinations/Eastern/Kilwa_Kivinje_Beach_25_5
 import SongoMnaraKilwa from './images/Destinations/Eastern/The_Palace_Ruins_02_Songo_Mnara_Kilwa_550_550shar-50brig-20_c1.webp';
 import Pangani from './images/Destinations/Eastern/Pangani_Tanzania_550_550shar-50brig-20_c1.webp';
 import Bagamoyo from './images/Destinations/Eastern/German_Old_Colonial_Fort_in_Bagamoyo_02_550_550shar-50brig-20_c1.webp';
+import GombeStreamNationalPark from './images/Destinations/Western/Gombe_Stream_National_Park_Boating_71_550_550shar-50brig-20_c1.webp';
+import MahaleMountainsNationalPark from './images/Destinations/Western/Mahale_Mountain_National_Park_550_550shar-50brig-20_c1.webp';
+import SaananeIslandNationalPark from './images/Destinations/Western/Saanane_Island_National_Park_09_550_550shar-50brig-20_c1.webp';
+import RubondoIslandNationalPark from './images/Destinations/Western/Rubondo_Island_National_Park_x_13_550_550shar-50brig-20_c1.webp';
+import UkereweIsland from './images/Destinations/Western/Ukerewe_Island_in_Lake_Victoria_2_550_550shar-50brig-20_c1.webp';
+import BurigiChatoNationalPark from './images/Destinations/Western/Burigi_Chato_National_Park_Giraffes_07_550_550shar-50brig-20_c1.webp';
+import IbandaKyerwaNationalPark from './images/Destinations/Western/Ibanda_Kyerwa_National_Park_Wildlife_550_550shar-50brig-20_c1.webp';
+import LakeTanganyika from './images/Destinations/Western/Lake_Tanganyika_Mahale_Mountains_11_550_550shar-50brig-20_c1.webp';
+import LakeVictoria from './images/Destinations/Western/Lake_Victoria_Bismark_Rocks_1_550_550shar-50brig-20_c1.webp';
 import { GtItineraryCategory } from './GtAdventures';
 import { GtActivities } from './GtActivities';
 
@@ -1432,7 +1441,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Gombe Stream National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: GombeStreamNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1460,7 +1469,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mahale Mountains National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MahaleMountainsNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1488,7 +1497,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Saanane Island National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: SaananeIslandNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1516,7 +1525,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Rubondo Island National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: RubondoIslandNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1544,7 +1553,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Ukerewe Island',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: UkereweIsland,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1572,7 +1581,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Burigi-Chato National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: BurigiChatoNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1600,7 +1609,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Ibanda-Kyerwa National Park',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: IbandaKyerwaNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1628,7 +1637,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Tanganyika',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: LakeTanganyika,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
@@ -1656,7 +1665,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Lake Victoria',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: LakeVictoria,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
