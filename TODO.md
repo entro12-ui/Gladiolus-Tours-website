@@ -42,7 +42,7 @@
 
     [ ] Info About the Services provided by Gladiolus Tours.
 
-[ ] Languages:
+[ ] Languages Translation (Internationalization):
 
     [ ] Support For Multiple Languages.
 
@@ -53,6 +53,7 @@
         [ ] Amazon Simple Email Service (SES)
         [ ] A Spring Boot Server spin up and deployed to AWS Lambda.
         [ ] A Form submition should trigger the Spring boot service to send the email to Amazon Work Mail.
+    [ ] AWS Serverless
 
 [ ] Dev Environment:
 
