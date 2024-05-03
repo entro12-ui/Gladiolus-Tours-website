@@ -51,6 +51,14 @@ import BurigiChatoNationalPark from './images/Destinations/Western/Burigi_Chato_
 import IbandaKyerwaNationalPark from './images/Destinations/Western/Ibanda_Kyerwa_National_Park_Wildlife_550_550shar-50brig-20_c1.webp';
 import LakeTanganyika from './images/Destinations/Western/Lake_Tanganyika_Mahale_Mountains_11_550_550shar-50brig-20_c1.webp';
 import LakeVictoria from './images/Destinations/Western/Lake_Victoria_Bismark_Rocks_1_550_550shar-50brig-20_c1.webp';
+import MbudyaIslandMarineReserve from './images/Destinations/Ocean/Mbudya_Island_Dar-es-Salaam_1_550_550shar-50brig-20_c1.webp';
+import BongoyoIslandMarineReserve from './images/Destinations/Ocean/Bongoyo_Island__Aerial_View_Tanzania_02_550_550shar-50brig-20_c1.webp';
+import PangaviniIslandMarineReserve from './images/Destinations/Ocean/Tanzania_Dar_es_Salaam_Marine_Reserve_Pangavini_Island_550_550shar-50brig-20_c1.webp';
+import FunguYasinSandBar from './images/Destinations/Ocean/Tanzania_Dar_es_Salaam_Marine_Reserve_Fungu_Yasini_550_550shar-50brig-20_c1.webp';
+import SindaIslandMarineReserve from './images/Destinations/Ocean/Sinda_Island_Marine_Reserve_02_550_550shar-50brig-20_c1.webp';
+import TangaMarinePark from './images/Destinations/Ocean/Tanga_Coelacanth_Marine_Park_550_550shar-50brig-20_c1.webp';
+import ChumbeIslandMarineSanctuary from './images/Destinations/Ocean/Zanzibar_Chumbe_Island_01_550_550shar-50brig-20_c1.webp';
+import MnembaIslandConservationArea from './images/Destinations/Ocean/Zanzibar_Island_Mnemba_Island_550_550shar-50brig-20_c1.webp';
 import { GtItineraryCategory } from './GtAdventures';
 import { GtActivities } from './GtActivities';
 
@@ -1703,7 +1711,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mbudya Island Marine Reserve',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MbudyaIslandMarineReserve,
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1731,7 +1739,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Bongoyo Island Marine Reserve',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: BongoyoIslandMarineReserve,
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1759,7 +1767,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Pangavini Island Marine Reserve',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: PangaviniIslandMarineReserve,
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1787,7 +1795,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Fungu Yasin Sand Bar',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: FunguYasinSandBar,
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1815,7 +1823,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Sinda Island Marine Reserve',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: SindaIslandMarineReserve,
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1843,7 +1851,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Tanga Marine Park & Reserve',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: TangaMarinePark,
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1871,7 +1879,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Chumbe Island Marine Sanctuary',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: ChumbeIslandMarineSanctuary,
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
@@ -1899,7 +1907,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         name: 'Mnemba Island Conservation Area',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MnembaIslandConservationArea,
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
