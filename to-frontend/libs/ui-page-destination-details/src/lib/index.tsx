@@ -6,7 +6,6 @@ import {
   FAQ,
   GtActivities,
   GtDestinations,
-  GtNationalParks,
   IDestinations,
 } from '@collo/ui-persistance';
 import { useEffect, useState } from 'react';
@@ -49,7 +48,7 @@ export function GladiolusToursDestinationsDetails() {
   }
 
   const gtNationalPark = destination.destinations.find(
-    (park: GtNationalParks) => park.id === nationalParkId
+    (destination: GtDestinations) => destination.id === nationalParkId
   );
 
   if (!gtNationalPark) {

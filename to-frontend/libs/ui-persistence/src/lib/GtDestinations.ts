@@ -80,7 +80,7 @@ export type FAQ = {
   answer: string;
 };
 
-export interface GtNationalParks {
+export interface GtDestinations {
   id: number;
   name: string;
   description: string;
@@ -101,7 +101,7 @@ export interface IDestinations {
   imageSrc: string;
   imageAlt: string;
   status: boolean;
-  destinations: GtNationalParks[];
+  destinations: GtDestinations[];
 }
 
 export type GladiolusToursDestinations = IDestinations[];
