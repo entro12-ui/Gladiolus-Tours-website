@@ -59,6 +59,8 @@ import SindaIslandMarineReserve from './images/Destinations/Ocean/Sinda_Island_M
 import TangaMarinePark from './images/Destinations/Ocean/Tanga_Coelacanth_Marine_Park_550_550shar-50brig-20_c1.webp';
 import ChumbeIslandMarineSanctuary from './images/Destinations/Ocean/Zanzibar_Chumbe_Island_01_550_550shar-50brig-20_c1.webp';
 import MnembaIslandConservationArea from './images/Destinations/Ocean/Zanzibar_Island_Mnemba_Island_550_550shar-50brig-20_c1.webp';
+import ZanzibarIsland from './images/Destinations/Zanzibar/Zanzibar_House_of_Wonders_Stone_Town_01.webp';
+import MafiaIsland from './images/Destinations/Mafia/Mafia_Island_Diving_01.webp';
 import { GtItineraryCategory } from './GtAdventures';
 import { GtActivities } from './GtActivities';
 
@@ -1936,16 +1938,16 @@ export const GtDestinations: GladiolusToursDestinations = [
     id: 6,
     name: 'Mafia Island',
     description: 'Welcome to Gladiolus Tours',
-    imageSrc: '',
+    imageSrc: MafiaIsland,
     imageAlt: 'Mafia Island',
     status: true,
     nationalParks: [
       {
         id: 1,
-        name: 'Whale Sharks Snorkeling',
+        name: 'Mafia Island',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: MafiaIsland,
         imageAlt: 'Mafia Island',
         rate: 5,
         faq: [
@@ -1966,18 +1968,18 @@ export const GtDestinations: GladiolusToursDestinations = [
   },
   {
     id: 7,
-    name: 'Deep Sea Fishing in Zanzibar',
+    name: 'Zanzibar Island',
     description: 'Welcome to Gladiolus Tours',
-    imageSrc: '',
+    imageSrc: ZanzibarIsland,
     imageAlt: 'Zanzibar Island',
     status: true,
     nationalParks: [
       {
-        id: 8,
-        name: 'Mnemba Island Conservation Area',
+        id: 1,
+        name: 'Zanzibar Island',
         description: '',
         status: true,
-        imageSrc: '',
+        imageSrc: ZanzibarIsland,
         imageAlt: 'Ocean Islands',
         rate: 5,
         faq: [
