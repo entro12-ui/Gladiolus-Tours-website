@@ -761,27 +761,56 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 17,
         name: 'Ruaha National Park',
-        description: '',
+        description:
+          'Ruaha National Park is located just south of the central midpoint of Tanzania. The national park encompasses an area of 7,809 square miles (20,226 sq km) making it the largest national park in Tanzania and one of the largest in Africa.\n' +
+          '\n' +
+          'Ruaha National Park is part of the larger Rungwa-Kizigo-Muhesi ecosystem that covers an area of 17,000 square miles (45,000 sq km). Along with Ruaha, the area includes two other game reserves and a wildlife management area.  There are three primary areas for safari game-viewers to explore.  The Ruaha River area is the most stunning with Mdonya woodlands and the Mbage-Mwagusi circuit.\n' +
+          '\n' +
+          'Ngalambulwa Mountain is the tallest point in the park reaching a summit of 5,250 feet (1,600 m). Grasslands and rocky terrain surround this massif adding to the varying landscapes.\n' +
+          '\n' +
+          'The great Ruaha River travels along the southeastern border of the park.  The river name serves as the source for the national park name. This water source also serves as a draw for safari game viewing. A second river, Njombe traverses the park through gorges and rocky broken landscapes. Crocodiles can be commonly seen sunning on the banks of the rivers.\n' +
+          '\n' +
+          'The largest collection of elephants is located here in Ruaha compared to anywhere else in Tanzania. Similarly, there is almost a guarantee that safari-goers will see Great Kudu because of their population.\n' +
+          '\n' +
+          'The park predators feature lion, leopard, cheetah, spotted hyena, and wild dog.  The park serves as one of Tanzania’s Lion Conservation Units.  Giraffe, buffalo, hippopotamus, zebra, warthog, and sable antelope are some of the popular species found within the park.\n' +
+          '\n' +
+          "Ruaha is also a bird lovers paradise with over 570 species of birds found within the park.  Hornbills, raptors, bee-eaters, rollers, and many other species make bird-watching a popular activity in the park.  This is also home to the rare Eleonora's Falcon during the months of December and January.\n" +
+          '\n' +
+          'The park offers hides and tree houses which are situated in places which provide excellent views of the watering spots most frequented by wildlife.  These are inspirational opportunities to have stunning views of the wildlife apart from the traditional vehicle safari.',
         status: true,
         imageSrc: RuahaNationalPark,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best time to Visit Ruaha National Park',
+            answer:
+              'Although all-round the year is good for game viewing, the dry season is the best (June to October). \n' +
+              'From June to October, expect to see animals gathered near the dominating Ruaha River, the only source of life in the park.',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Ruaha National Park',
+            answer:
+              'The park is accessible by road and air. \n' +
+              '\n' +
+              'Road. From Iringa town it is 108 km to the main gate (Y-Junction), 625 km from Dar es Salaam and 480 km from Mbeya City.\n' +
+              '\n' +
+              'Air. Daily flights from Dar es Salaam and Arusha is the easiest way to Ruaha. Airstrips are located at Msembe and Jongomero. Coastal Aviation, Auric Air and Safari Link all have scheduled flights to Ruaha.\n' +
+              '\n' +
+              'Distance from Dar es Salaam: 625 km (388 miles)\n',
+          },
+          {
+            question: 'Climate of Ruaha National Park',
+            answer:
+              'Ruaha National Park enjoys only one rainy season, usually from the end of November to May with annual average rainfall ranging from 500 to 800 mm. The park is located at an altitude between 750 and 1868 meters.',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
           GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Balloon Safari'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -789,27 +818,41 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 18,
         name: 'Nyerere National Park',
-        description: '',
+        description:
+          'Nyerere National Park is the northeastern part of the huge Selous Game Reserve set aside for photographic safaris, which was upgraded to the national park status in November 2019. The park was named after the first president of Tanzania, Mr Julius Nyerere (late), in recognition for championing conservation and protection of wildlife in the country. Nyerere National Park, is one of the most beautiful and game-rich areas in the ecosystem of Selous Game Reserve, spanning the Rufiji River basin in southeastern Tanzania.\n' +
+          '\n' +
+          'Selous Game Reserve was established in 1922, and in 1982, was named after Frederick Selous Courtney who was a great Hunter and explorer. it was declared a UNESCO world heritage site thanks to its rich diversity of wildlife and uninterrupted nature.\n' +
+          '\n' +
+          'Nyerere National Park is located in south eastern Tanzania, bordered by Mikumi National Park to the northwest and Udzungwa Mountains National Park to the west.\n' +
+          '\n' +
+          'With an area of about 30,893sqkm, Nyerere National Park is the largest national park in Africa. It is perhaps one of the most pristine wildernesses still remaining in Africa, with a wide variety of wildlife habitats, including open grasslands, Miombo woodlands, swamps and riverine forests in the many tributaries of the mighty Rufiji River which flows through the National Park to the Indian Ocean.\n' +
+          '\n' +
+          'Its wildlife is spectacular, with some of the largest population of mammals and reptiles in Africa, including buffaloes, elephants, hippos and crocodiles which can be seen here. Nyerere National Park, together with the remaining part of Selous Game Reserve, is considered to be the last stronghold of the African wild dog. Other common wildlife include the wildebeest, zebra, giraffe, eland, the greater kudu, sable antelopes, black rhino, waterbuck, impala, lion, leopard, the spotted hyena, cheetah, baboon, vervet and blue monkey, and the black and white colobus monkey which can be viewed in riverine forests. About 440 species of birds both resident and migratory have been observed in the national park.\n' +
+          '\n' +
+          'The park offers a wide variety of game viewing opportunities including the thrilling experience of a walking safari in the company of an armed ranger. The many waterways in the park provide an excellent natural setting for boat safaris, both for big game viewing and bird watching. This is in addition to the game drives in specially designed safari vehicles which, combined with boat and walking safaris, offer an exciting and rich game viewing itinerary unique to Nyerere National Park. The best time to visit is from June to October. During the long rains, between March and May, some parts of the park are temporarily closed for game drives due to poor accessibility.\n',
         status: true,
         imageSrc: NyerereNationalPark,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best time to Visit Nyerere National Park',
+            answer:
+              'The best time to visit the Selous (for ease of game viewing) is during the dry season, between late June and November. \n' +
+              'June - November (Game Viewing) \n' +
+              'January - April (Bird Watching, rainy)\n',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Nyerere National Park',
+            answer:
+              'Dar es Salaam to Selous Game Reserve via Mikumi National Park is 280 kilometers and it takes 5 hrs on the road.\n',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
           GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Canoeing / Kayaking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -817,27 +860,59 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 19,
         name: 'Kitulo National Park',
-        description: '',
+        description:
+          'Locals refer to the Kitulo Plateau as Bustani ya Mungu – The Garden of God – whereas botanists have dubbed it the Serengeti of Flowers, host to ‘one of the great floral spectacles of the world’, and only of its kind in Africa where wild flowers, birds and harmonious grass eating mammals are dominating\n' +
+          '\n' +
+          'Kitulo is indeed a rare botanical marvel, home to wildflowers for six months of the year, from November to April. There is a documented 350 species of wild flowers including lilies and fields of daisies. 45 endemic orchid species are found only in the park than any other part of the world, from  June to August the entire park is foggy with no visibility during the daytime, and it is hardly possible to view its beauties.\n' +
+          '\n' +
+          'Perched at around 2,600 metres (8,500 ft) between the rugged peaks of the Kipengere, Poroto and Livingstone Mountains, the well-watered volcanic soils of Kitulo support the largest and the most important montane grassland community in Tanzania.\n' +
+          '\n' +
+          'Although sparse in big game, this natural botanical garden is highly alluring to bird watchers who thrill to sightings of rare Denham’s bustard, the endangered blue swallow, mountain marsh widow, Njombe cisticola and Kipengere seedeater. \n' +
+          '\n' +
+          'Endemic species of butterfly, chameleon, lizard and frog further enhance the biological wealth of God’s Garden. Unique and the only of its kind in Africa for natural orchids and birds, this park has been gazetted last year set for tourists.\n' +
+          '\n' +
+          'Open walking safaris through the grasslands watching birds and wild flowers, hill hiking on the neighboring ranges during the day, gives a visitor fantastic views of Lake Nyasa and its beautiful Matema Beach down the mountains.\n' +
+          '\n' +
+          'When full flocked, Kitulo National Park will be the leading nature conservation park in Africa, specializing on orchid holidays with less wildlife itineraries. It will add a new product to Tanzania’s wildlife-based tourism, which so far, has been competing with other destinations like Kenya, Zimbabwe, Botswana, Namibia and South Africa.  \n' +
+          '\n' +
+          'Because of its cool and moderate weather similar to Mediterranean or European conditions, the area has since then attracted a number of British and American settlers in 1920’ who reared livestock and practiced small scale tourist projects.',
         status: true,
         imageSrc: KituloNationalPark,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Kitulo National Park',
+            answer:
+              '\n' +
+              '\n' +
+              'The park can be accessed from Mbeya town, which is about 110 Km away via Chimala road and 70 Km via Isyonje road. It is about 90 Km from Songwe Airport. The park can only be reached by road.\n' +
+              '\n' +
+              ' By Air: Through Songwe Airport; 90 kms via Isyonje and 125 via Chimala small town to Kitulo.\n' +
+              '\n' +
+              ' By Road: Mbeya city-Isyonje- Kitulo is 70 kms: Mbeya city-Chimala-Kitulo is 103 kms: Njombe town-Ikonda-makete-Kitulo 165 kms.\n' +
+              '\n' +
+              ' By Railway: Through railway transport Tanzania-Zambia (TAZARA), Iyunga and Makambako stations\n' +
+              '\n' +
+              'Songwe airport is an airport in the southern highlands region of Tanzania serving the city of Mbeya and the nearby regions. It is able to accommodate commercial jet traffic. The services of domestic flights are provided by Air Tanzania, Precision air, Fast jet and Tropical air. \n',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best Time to Visit Kitulo National Park',
+            answer:
+              'The peak season to see wildflowers is between December and April. From September to November, the season remains sunny and offer comfortable hiking, but disheartening for botanists. From June to August the season is cold and foggy',
+          },
+          {
+            question: 'What is the Climate in Kitulo National Park?',
+            answer:
+              'The climate is influenced by altitude, Lake Nyasa and is largely temperate. The maximum daily temperature varies from 14.5°c to 18°c and minimum ambient temperature ranges from 7°c to 8°c between December and April, and can go as low as 0.5˚c during June to August ,during this period frost occurs. The average annual rainfall is 1600mm ranging from 1500 – 1700mm. The rain season begins from October to May.',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
           GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Waterfalls'],
+          GtActivities['Picnicking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -845,27 +920,44 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 20,
         name: 'Katavi National Park',
-        description: '',
+        description:
+          'It offers un-spoilt wildlife viewing in the country’s third-largest national park, in a remote location far off the beaten track. The national park is Africa at its most wild — unadulterated bush settings, spectacular views, and rich wildlife.\n' +
+          '\n' +
+          'Tanzania’s third largest national park; it lies in the remote area southwest of the country, within a truncated arm of the Rift Valley that terminates in the shallow, brooding expanse of Lake Rukwa. The wilderness of Katavi National Park, located in the western area of Tanzania, is one of the most untouched areas in the entire country.\n' +
+          '\n' +
+          'Katavi’s dramatic scenery is as varied as it is pristine. Flood plains of thick reeds and dense waterways are home to a huge population of hippo and varied birdlife. In the woodlands to the west, forest canopies shroud herds of buffaloes and elephants. Seasonal lakes fill with dirty coloured water after the rains and animals from all corners of the park descend in them to drink. The park is also home to the rare roan and sable antelope species, and it is a must-see for the visitors intending to explore the wilds of the continent.\n' +
+          '\n' +
+          'The bulk of Katavi supports a hypnotically featureless cover of tangled brachystegia woodland, home to substantial but elusive populations of the localised eland, sable and roan antelopes. Nevertheless the main focus for game viewing within the park is the Katuma River and associated floodplains such as the seasonal Lakes Katavi and Chada. During the rainy season, these lush, marshy lakes are a haven for myriad water birds, and they also support Tanzania’s densest concentrations of hippos and crocodiles.\n' +
+          '\n' +
+          'Katavi’s most singular wildlife spectacle is provided by its hippos. Towards the end of the dry season, up to 200 individuals might flop together in any riverine pool of sufficient depth. And as more hippos gather in one place, so does male rivalry heat up – bloody territorial fights are an everyday incident, with the vanquished male forced to lurk hapless on the open plains until it gathers sufficient confidence to mount another challenge.\n',
         status: true,
         imageSrc: KataviNationalPark,
         imageAlt: 'Southern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'When to go to Katavi National Park',
+            answer:
+              'Katavi National Park can be visited all year round. During the drier months (May to October and December to February), the animals congregate around the remaining water bodies and can be reached easily. During the wetter months, the extensive wetlands offer splendid scenery to adventurous visitors. \n' +
+              '\n' +
+              'It is during the dry season, when the floodwaters retreat, that Katavi truly comes into life. The Katuma, reduced to a shallow muddy trickle, forms the only source of drinking water for miles around, and the flanking floodplains support game concentrations that defy belief. An estimated 4,000 elephants might converge on the area, together with several herds of 1,000-plus buffalo, while an abundance of giraffes, zebras, impalas and reedbucks provide easy pickings for the numerous lion prides and spotted hyena clans whose territories converge on the floodplains.\n',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Katavi National Park',
+            answer:
+              'By Air: Several companies like Zantas air, Safari air link (SAL) arrange charter flight from Dar es Salam, Mwanza or Arusha cities to either Mpanda airport which is located in Mpanda town or to Sitalike and Ikuu airstrips inside the park. Usually every Monday and Thursday. Coastal Aviation Charted flight within the park Ikuu airstrips.\n' +
+              '\n' +
+              'By Road: From either Dar es Salaam via Mbeya (1513Km), Dar es Salaam via Tabora (1392km), Arusha via Tabora (1015.7km) or Mwanza via Tabora-Inyonga (741 km).\n' +
+              '\n' +
+              'By Rail: It is also possible to reach Mpanda by train from Dar es Salaam via Tabora then catch a public transport to Sitalike, where game drives can be arranged.\n',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
           GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Night Game Drives'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -873,27 +965,27 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 21,
         name: 'Kalambo Falls',
-        description: '',
+        description:
+          'Kalambo Nature Forest Reserve is in Kalambo District, Rukwa Region and has an area of 43,334ha. The iconic tourist attraction of the reserve is the Kalambo Waterfalls, which also serves as the border between Tanzania and Zambia. The Kalambo waterfalls is the 2nd highest fall in Africa with a single drop of 250m. (second to one of the tiers of Tugela Falls in South Africa) \n' +
+          '\n' +
+          'Besides the Kalambo waterfalls, there are attractions like the Kalambo Gorge at downstream of the waterfalls, a beautiful beach around Lake Tanganyika, a hot water spring at Kizombwe village, cultural attractions like Rungu Drama from Kalambo village and several archaeological resources.\n' +
+          '\n' +
+          'As a matter of fact, the Kalambo River defines the Tanzania-Zambia border all the way into the vast Lake Tanganyika, which itself is shared by a foursome of countries (i.e. Democratic Republic of Congo, Burundi, Zambia, and Tanzania).\n' +
+          '\n' +
+          'The waterfall is in high flow in the May/June timeframe. But this depends on how much rainfall the region gets during its rainy season from January through April. The flow diminishes as the year progresses. Some of the locals we’ve spoken to said that around October or November, the falls probably won’t look impressive. \n' +
+          '\n' +
+          'Though few visitors realise it, the Kalambo Falls are also one of the most important archaeological sites in southern Africa. Just above the falls, by the side of the river, is a site that appears to have been occupied throughout much of the Stone Age and early Iron Age. The earliest tools and other remains discovered there may be over 300,000 years old, including evidence for the use of fire.\n' +
+          '\n' +
+          'For years Kalambo provided the earliest evidence of fire in sub-Saharan Africa – charred logs, ash and charcoal have been discovered amongst the lowest levels of remains. This was a tremendously important step for Stone-Age man as it enabled him to keep warm and cook food, as well as use fire to scare off aggressive animals. Burning areas of grass may even have helped him to hunt. However, more recent excavations of older sites in Africa have discovered evidence of the use of fire before the time when we believe that this site at Kalambo was occupied.\n',
         status: true,
         imageSrc: KalamboFalls,
         imageAlt: 'Southern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Waterfalls'],
+          GtActivities['Historical Visits'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -901,35 +993,54 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 22,
         name: 'Mbozi Mateorite',
-        description: '',
+        description:
+          "Mbozi Meteorite or “Kimondo cha Mbozi” in Swahili is World's fourth largest, lies on the southwestern slope of Marengi Hill, in Songwe Region, 70 kilometers west of Mbeya, off the road to Tunduma is estimated weigh is about 25 metric tons and around 3m long and 1m tall, and its the most popular tourist attraction found in Songwe region.\n" +
+          '\n' +
+          'Scientists are unsure when it hit the earth, but it is assumed to have been many thousands of years ago, since there are no traces of the crater that it must have made when it fell, nor any local legends regarding its origins. \n' +
+          '\n' +
+          'Although the site was only discovered by outsiders in 1930, it had been known to locals for centuries, but not reported because of various associated taboos. Like most meteorites, the one at Mbozi is composed primarily of iron (90%), with about 8% nickel and traces of phosphorous and other elements. It was declared a protected monument by the government in 1967 and is now under the jurisdiction of the Department of Antiquities. \n' +
+          '\n' +
+          'The meteorite’s dark colour is due to its high iron content, while its burnished look comes from the melting and other heating that occurred as the meteorite hurtled through the atmosphere towards earth.\n' +
+          '\n' +
+          'A visit to the Meteorite Site is always fascinating especially if you are in a group and you travel using public transport as a means of getting a better taste of the countryside and face some adventures. This enables the group to also interact with the locals who are ever ready to share views with visitors.',
         status: true,
         imageSrc: MboziMateorite,
         imageAlt: 'Southern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
-        activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
-        ],
+        faq: [],
+        activities: [GtActivities['Historical Visits']],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
       },
       {
         id: 23,
         name: 'Lake Ngozi',
-        description: '',
+        description:
+          'Lake Ngozi or (Lake Ngosi) a thrilling crater lake in Southern Highlands of Tanzania and the second largest Crater Lake in Africa. It has a length of 2.5 kilometers and width of 1.5 kilometers and 75 meters deep.\n' +
+          '\n' +
+          'The lake is located about 38 kilometers south of Mbeya city, near the sprawling Tukuyu Township. It is located on Ngosi peak on the Uporoto Mountains which makes part of Eastern Arc ranges.\n' +
+          '\n' +
+          'It is located at an uplift of 2,600 meters above sea level in a thick, natural forest of the Uporoto nature reserve, covering some 9,332 hectares of land. To reach the lake, one has to drive and stop at the edge of the Uporoto Forest Reserve at the foothills of the Uporoto range. It takes up to two hours walking from the foothill to the ridge where the lake lies at 200 meters below.\n' +
+          '\n' +
+          'This stunning caldera lake dates from some time in the Neocene period. The water is slightly brackish, contains some fish, and is up to 75 m deep. The lake has spiritual significance for the local inhabitants. \n' +
+          '\n' +
+          'The mountain and the lake are counted to an age of one million years, and remains an old volcano that has now collapsed to form a wide caldera filled with a shining alkaline ‘soda’ waters. \n' +
+          '\n' +
+          'It is a green shimmering lake walled by the collapsed caldera of the extinct Ngosi Volcano. The peak is the highest point of the Uporoto Ridge Forest Reserve. The forest has an endemic three horned chameleon (Chameleon fuelleborni). \n' +
+          '\n' +
+          'The waters of the lake are said to have magical medicinal powers. Ngosi means ‘The Big One’; in vernacular Kinyakyusa dialect.\n' +
+          '\n' +
+          'It is an exciting adventure to trek or walk through the dense montane forest to the crater rim. Monkeys and many bird species can be seen in the forest which is also home to an endemic species of chameleon and montane, wild banana trees.\n' +
+          '\n' +
+          'Walking and climbing the Uporoto range is organized by special guides familiar to the route which is made up of cascades, horrific gorges and valleys where someone could fall with no option of rescue. It is risky to fall into the gorges if one trek without care, and, if one falls into one of numerous gorges on the way to the lake, it will be the end of his or her life.\n' +
+          '\n' +
+          'Despite those risks, it is automatically safe to trek the Uporotos and view magnificent Lake Ngosi which is a sight of outstanding natural beauty and a superb hiking hotspot. \n' +
+          '\n' +
+          'Climbers looking to view this scenic lake are well rewarded with excellent views from the top of the sharp crater rim, from where the lake gleams below with an overwhelming tranquil air, and beyond the land are pocked with the points of smaller volcanic peaks. \n' +
+          '\n' +
+          'Walking to the rim leads through upland grasslands and tropical forests where families of Colobus monkeys chatter and play, and a miasma of birds take refuge.\n' +
+          '\n' +
+          'The path leads into the forest for about 2.5km and then begins the climb to the crater top. Just before the top, the path branches in two; the right hand path leads swiftly to the peak, and the left leads down to the water’s edge.\n',
         status: true,
         imageSrc: LakeNgozi,
         imageAlt: 'Southern Circuit',
@@ -945,11 +1056,9 @@ export const GtDestinations: GladiolusToursDestinations = [
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Forest Walk'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -957,27 +1066,28 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 24,
         name: 'Kaporongwe Falls',
-        description: '',
+        description:
+          'Kaporogwe waterfalls, also known as Kala Falls a natural water drop on Livingstone Mountains are sheltered beneath impressive natural gorge of basalt rock and which creates more excitement to visitors viewing or getting snapshots of the falls.\n' +
+          '\n' +
+          'Counted as a thrilling attraction in Mbeya Region, Kaporogwe Falls are located some 25 kilometers from Tukuyu Township, a fast growing tourist locality in Southern Highlands of Tanzania.\n' +
+          '\n' +
+          'Thrilling 25-metre Kaporogwe Falls originates from Kala River, a tributary of the Kiwira River. A day trip to these falls would be an exciting moment. \n' +
+          '\n' +
+          'It is also possible to climb down the falls, with care, and to find routes into caves behind the curtain of water plummeting down before you, and to swim in the pool beneath.\n' +
+          '\n' +
+          'Good walking and swimming possibilities can be organized by qualified guides familiar with area. \n' +
+          '\n' +
+          'Driving towards the Kaporogwe Falls is as well, an exciting moment. It gives a visitor to this area a thrilling moment when passing through green and fertile land, full of interesting off-road diversions. The journey to Kaporogwe Falls gets a visitor a quick view of perennially lush and bountiful forests of the Livingstone Mountains, adding more travel excitement.\n' +
+          '\n' +
+          'There is a natural cave behind the falls and a concrete wall where Germans have built as a fort or a hideout during the First World War. The area around the falls is as well, a pre-historical site after discovery of stone tools there. These including knives, scrapers, picks and axes.',
         status: true,
         imageSrc: KaporongweFalls,
         imageAlt: 'Southern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Waterfalls'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -985,27 +1095,43 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 25,
         name: 'Matema Beach',
-        description: '',
+        description:
+          'Matema Beach, a beachside town in Mbeya Region, Located on the beautiful shores of Lake Nyasa, Matema Beach is among the most scenic tourist attractive site in Tanzania. \n' +
+          '\n' +
+          'The lakeshore beach lies on the foothills and the end point of Livingstone Mountains at the place where these scenic ranges ends majestically into Lake Nyasa.\n' +
+          '\n' +
+          'Travelling to Matema Beach is made up of beautiful views of real African life of the local communities. A winding road passes through high, Livingstone Mountains and tea estates before it descends to the tropical shores of Lake Nyasa. \n' +
+          '\n' +
+          'From Matema Beach, you can make canoe trips with fishermen over the lake to the nearby village where women specialize in pottery. There is a superb snookering rocky shoreline, also a waterfall from Livingstone Mountains.\n' +
+          '\n' +
+          'Matema lakeshore village is a fishing settlement where local fishermen are easily seen selling their catches. The village was the regional headquarters of German Governor during German rule in Tanzania before the mosquitoes forced him and his team out of place.\n' +
+          '\n' +
+          'The beach is an expanse lakeside giving a beautiful view of its horizon and clear, shining water of Lake Nyasa; giving a chance for waters ports, ornamental fish viewing, water surfing, diving and beachside recreations on the soft sands.\n' +
+          '\n' +
+          'From the beachside, a visitor can take a breathtaking of Livingstone Mountains as they drop majestically into Lake Nyasa. Apart from the beach, Matema is a historical site where Germans built a Lutheran Mission House found there today and with Bavarian architectural style.\n' +
+          '\n' +
+          'Mount Livingstone hiking and visits to potteries are the other tourist activities in Matema. A number of tourist class accommodation facilities have been established there; among them are the Lutheran Center, Matema Beach View, Matema Shore Lake Resort and a number of Guest Houses.\n' +
+          '\n' +
+          'To reach Matema Beach, it is 130 kilometre drive from Mbeya City, passing through the tarmac road to Malawian border.  The drive is an exciting as the car roll through green scenery, made up of tea, banana and tree farms on hillside areas.\n' +
+          '\n' +
+          'A tour of rice and cocoa farms in Kyela, a waterfall on Mount Livingstone and special cultural performances add more tourist attractiveness to the area.  \n' +
+          '\n' +
+          'Kyela is a small African and agrarian township where agricultural produce are sold and transported to other parts of Tanzania, mostly the commercial city of Dar es Salaam.\n' +
+          '\n' +
+          'There are several guest houses, lodges and hotels in Kyela, ideal for local and foreign tourists. Among them are Sativa Midland Hotel, Mwambipile Guest House, Sunway Lodge, Gold Plaza Lodge, Hamili Park, Unamwa Inn and Matema Beach Hotel.\n' +
+          '\n' +
+          'From Kyela and Matema, a visitor can cross the Tanzanian border to Malawi through Kasumulu border post or taking a boat at Itungi port to other side of Lake Nyasa in Malawi.\n',
         status: true,
         imageSrc: MatemaBeach,
         imageAlt: 'Southern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Picnicking'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -1013,27 +1139,33 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 26,
         name: 'Lake Nyasa',
-        description: '',
+        description:
+          'Lake Nyasa, also called Lake Malawi, southernmost and third largest of the East African Rift Valley lakes of East Africa, lying in a deep trough mainly within Malawi and covers three regions of Tanzania including Mbeya, Njombe and Ruvuma.\n' +
+          '\n' +
+          'Lake Nyasa (Nyasa means “lake”) is located at the south-west of Tanzania,  The lake lies in three countries’ territory; Tanzania and Malawi. However, it is bordered by three countries, Tanzania , Malawi and Mozambique. It is the third largest in Africa (after Lake Victoria and lake Tanganyika)  with 550 kilometers length and 75 kilometers width,  covering an area of more than 11,400 square kilometers. In some parts,  the lake is as deep as 700 meters.\n' +
+          '\n' +
+          'The Lake lies in the sided walls of mountain ranges: the forested Livingston Mountains and Nyika Plateau, which provide the magnificent view of the lake from far and the landscape for hikers and backpackers. \n' +
+          '\n' +
+          'Lake Nyasa is also among the Great Rift Valley’s lakes, which shares some of the characteristics with lake Tanganyika.  The lake has a distinctive characteristic: 14 rivers pouring their waters into the lake, and only one river which flows out to the sea, River Shire. \n' +
+          '\n' +
+          'The Lake also has a lot of names such as “Lake of stars” which is provided by the lovers who trip their and discover it one of the dreamy and romantic destination in Eastern Africa. It is situated between Malawi, Mozambique as well as Tanzania.  It has so many things to offer such as numerous opportunities for water sports as well as diving. The lake is enormously rich with diverse fish species and is one of the most appealing lakes that offer unforgettable underwater views!\n' +
+          '\n' +
+          'Some parts of the lake offer nice beaches and places to swim. Matema, in the northern part of the lake is considered to be the best beach for people who like to relax swim along the lake shore. In contrast to other lakes the water of lake Nyasa is bilharzias free.  There are also caves and interesting waterfalls to see.\n' +
+          '\n' +
+          'Other activities include local canoeing ride down the river, hiking on surrounding mountains. \n' +
+          '\n' +
+          'Though Lake Nyasa does not receive many tourists, the lake is magnificently attractive and is rich in crocodiles and hippopotamus. For Fish lovers, Lake Nyasa is biologically the most diverse lake, containing approximately 30% of world’s cichlid species (colorful fish which are easily seen in the lake’s clear water)',
         status: true,
         imageSrc: LakeNyasa,
         imageAlt: 'Southern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Picnicking'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -1041,27 +1173,31 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 27,
         name: 'Mnazi Bay - Ruvuma Estuary Marine Park',
-        description: '',
+        description:
+          'Mnazi Bay - Ruvuma Estuary Marine Park (MBREMP) is in the Mtwara district of Southeast Tanzania and extends to the border with Mozambique. The area is considered to have globally significant marine biodiversity values and covers 650 square kilometres, of which 33% is on land. The park extends from the northern portion of the Ruvuma Estuary to Mnazi Bay, including the headland of Ras Msangamkuu.\n' +
+          '\n' +
+          'The environment within the park includes mangroves, rocky and sandy shoreline, mudflats, salt pans, fringing coral reefs, lagoonal patch reef, seagrass beds, three islands (Namponda, Mongo and Kisiwa Kidogo) and numerous small rocky islets.\n' +
+          '\n' +
+          'Surveys have found over 250 species of hard coral, 400 species of fish, and 100 species of echinoderms within the Park’s reefs. The marine and coastal plants and animals found within the Park are there because of the climate, the physical features, the influences of the Indian Ocean, and the overall integrity of the combination of habitat.\n' +
+          '\n' +
+          'The Park is home to nesting grounds for Green and Hawksbill turtles, and a number of marine mammals have been seen in the area including migrating Humpback whales and the Indopacific Humpback dolphin. A large population of crab-plovers led to the area being designated as an Important Bird Area (IBA) in 2001.\n' +
+          '\n' +
+          'The area was also once home to dugongs but the last confirmed sighting was in 1992, although there have been unconfirmed sightings since.\n' +
+          '\n' +
+          'Close to 30,000 people live within the park, depending mainly on marine resources for their livelihoods; the park includes in its boundaries 11 villages and 8 sub-villages. There are few opportunities for development hence poverty is rife. This has created an over dependence on marine resources and the persistent use of destructive fishing methods.\n' +
+          '\n' +
+          'Gas was discovered in Mnazi Bay in 1982, and wells were brought into operation in 2006. Gas from the wells is now piped to Mtwara where a gas to power plant provides electricity for the Mtwara and Lindi areas.',
         status: true,
         imageSrc: MnaziBay,
         imageAlt: 'Southern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Whale Watching'],
+          GtActivities['Dolphin Watching'],
+          GtActivities['Scuba Diving'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -1069,27 +1205,21 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 28,
         name: 'Igeleke Rock Art Site',
-        description: '',
+        description:
+          'The rock art of the Iringa region in southern Tanzania is primarily prehistoric, painted in monochrome fashion and often displayed in Precambrian rock shelters and overhangs. Based on predominating color types, subject matters, and artistic style, two broad rock art traditions are recognized: The “Hunter-Forager” and “Bantu-language-speaker”, or “Late White”, styles. Most of the paintings of Iringa share some artistic traditions, such as stylistic motifs, techniques of execution, subject matter, and colour, with the rock art of Central and Southern Africa. \n' +
+          '\n' +
+          "The ochre drawings depict human figures, an elephant, jumping eland and giraffe hiding in long grass. It's an easy and worthwhile excursion from town involving a short but steep walk from the car park.\n" +
+          '\n' +
+          'Archaeologically, Early Stone Age sites (Acheulean site) well-known site is Isimila in Iringa as well as other sites renowned for the Middle Stone Age is at Magubike and Mlambalasi. Recently, rock shelters with prehistoric rock paintings have been documented in various sites such as Kihessakilolo, Ikula and Lutona.',
         status: true,
         imageSrc: Igeleke,
         imageAlt: 'Southern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Historical Visits'],
+          GtActivities['Rock Art / Cave Painting'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -1097,7 +1227,16 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 29,
         name: 'Isimila Stone Age Site',
-        description: '',
+        description:
+          'Isimila Stone Age Site is pre-historic settlement located inside Iringa District of Iringa Region in Tanzania. The site is home to the Middle Pleistocene archaeological site. Large surface assemblages of later Acheulean lithics, including hand axes, cleavers, scrapers, cores and bones, have been found at the site. Isimila provides a special view into Middle Pleistocene Hominid behavior. The site is a registered Tanzania National Historic Site. \n' +
+          '\n' +
+          'Isimila stone age site and natural pillars is likely known as the home of the early man between 60,000 and 100,000 years ago because of the tools that were mostly used by the early man in their different activities are found here.\n' +
+          '\n' +
+          'There is evidence which shows that the area around the Isimila site was a small lake. This would have been a perfect hunting ground for hominids who lived there between 300,000 - 600,000 years ago. The tools found there confirm this theory. Looking at the site today you might be able to imagine how the land was eroded from a lake to a large canyon. Harder rock types more resistant to erosion have remained, leaving thin rock towers as high as 30m, thus Isimila Stone Age site and natural pillars in Iringa\n' +
+          '\n' +
+          'The tour of the Isimila Stone Age site includes; canyon visit, an explanation of how the rock towers were formed and a scenic walk with a great spot to see different bird species.\n' +
+          '\n' +
+          'Fossils discovered in Isimila verified site; numerous fossils dating back more than 100 years have been discovered here. Tomahawks, scrubbers, and stones are displayed throughout the small historical center that is visible here. There are also many fossilized bones to be seen here, including human fossils, animal fossils, and various gadget fossils. The fossils of well-evolved organisms include the bones associated with giraffes, even though they have a more limited neck. The remains of hippos, elephants, and a variety of extinct pigs are found.',
         status: true,
         imageSrc: IsmilaStoneAge,
         imageAlt: 'Southern Circuit',
@@ -1105,20 +1244,16 @@ export const GtDestinations: GladiolusToursDestinations = [
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question:
+              'When is the best time to go on the Isimila historical tour?',
+            answer:
+              'The Isimila Stone Age Site can be visited at any time of year; there is no perfect time. If you intend to visit Isimila Historical Site during this season, the best time to do it will be during the dry season. The wet season is a fantastic opportunity for bird lovers to watch birds that are prevalent in public parks near here. The possibility of visiting these locations is dependent on anyone’s desire and the amount of time they require, as this location can be visited at any time of year.',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Historical Visits'],
+          GtActivities['Museum / Monument'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Southern Circuit'],
@@ -2090,19 +2225,56 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 63,
         name: 'Mafia Island',
-        description: '',
+        description:
+          "Mafia Island (394 km2) is located in the east coast of Tanzania opposite the delta of the Rufiji River. The 20 kilometres wide stretch of water between the delta and the island is called the Mafia Channel. Mafia Island is part of a small Tanzania’s Mafia archipelago in the Indian Ocean   consists of one large island and several smaller islands, including Jibondo, Chole, Juani, Bwejuu, Mbarakuni, Shungumbili and Nyororo. Some of which are inhabited. The main town on Mafia is Kilindoni on the west coast. In the south beaches include secluded Ras Kisimani, just across from Bwejuu Island and Utende. On the east coast is Chole Bay, Mafia's protected deep-water anchorage and original harbour. The bay is studded with islets, sandbanks and beaches, and is protected from the east by coral reefs and Juani Island. \n" +
+          '\n' +
+          'The island lies across the trade routes from the Gulf and has seen Egyptian, Omani, Greco-Roman, Chines, Portuguese, English and German occupation, and has had a prominent place in the history of the East Coast of Africa, as it was a safe haven for ships to stop for water and for repairs. The Mafia Archipelago hosts antiquities dating back to the Eleventh Century, including ruins at Kisimani Mafia, Kanga, Kua on Juani Island and Chole Island.\n' +
+          '\n' +
+          'The atmosphere of all the islands in Mafia is one of adventure: days are spent fishing or exploring exposed sand bars and untouched reefs, however the main appeal for many visitors is that it remains locked in a time warp of the early 20th Century.\n' +
+          '\n' +
+          'Surrounded by a protected marine park, the diving, fishing and snorkeling here are the best in the entire region. Mafia is truly an excellent destination for those wanting to spend a bit of time in the underwater world and interested in nature and outdoor activities. Known for it’s location of the migratory Whale Sharks, spotting these magnificent creatures is an unforgettable experience of a lifetime.\n' +
+          '\n' +
+          'The atmosphere of all the islands is one of adventure: days are spent fishing or exploring exposed sand bars and untouched reefs. Perhaps best for those mad keen on making diving the central focus of their Tanzania holiday.\n' +
+          '\n' +
+          'Mafia is undoubtedly the best dive location in Tanzania. It’s a small haven that has a lot to offer and, quite exquisitely, is also suitable for less experienced divers. The reefs of the archipelago offer a staggeringly beautiful and varied display of marine life. The diversity of animal and plant life is hard to match, with over 50 types of corals and 400 species of fish so far identified. On top of that, Mafia offers one of the world’s best opportunities for snorkeling with whale sharks!\n' +
+          'Mafia Island Marine Park\n' +
+          '\n' +
+          'The marine park at Mafia Island extends over 822 km2, with more than 75% of it below the high-water mark. The area hosts an outstanding mosaic of tropic marine habitats including coral reefs, seagrass beds, mangroves, and inter- tidal flats. Two species of sea turtle use Mafia’s beaches as nesting grounds and the area has been recognized internationally as a critical site for biodiversity. \n' +
+          '\n' +
+          'Several sites of historic ruins lie within the marine park area, some dating back to the C13th. Mafia Island’s separation from the mainland and its freedom from industrial development have ensured that its surrounding waters are some of the least contaminated in Tanzania. The marine park area has national importance as one of the few remaining reef complexes within Tanzania’s coastal waters in relatively untouched condition.\n' +
+          '\n' +
+          'Marine Parks and Reserves are created as an important tool for conservation and tourism in Tanzania and worldwide. With the two, it is our responsibility to always balance them for the best of both present and future generations.\n' +
+          'Mafia Islands Marine Reserves\n' +
+          '\n' +
+          '    Shungi Mbili Island Marine Reserve\n' +
+          '    Mbarakuni Island Marine Reserve\n' +
+          '    Nyororo Island Marine Reserve\n' +
+          '\n',
         status: true,
         imageSrc: MafiaIsland,
         imageAlt: 'Mafia Island',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'How do you get to Mafia Island?',
+            answer:
+              'To reach mafia one no longer sails as the first option, but rather take a flight in light aircraft from Dar es Salaam or Zanzibar, or one of the game parks such as the Nyerere National Park. Coastal aviation and auric air both offer multiple daily flights, which take approximately 30-50 minutes.  The experience is fantastic, with great views of the African bush and coastline.',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'How far is Mafia Island from Zanzibar?',
+            answer:
+              'The distance between Zanzibar City and Mafia Island is 198 km. It takes roughly 30 to 40 minutes flight from Zanzibar and Dar es Salaam respectively',
+          },
+          {
+            question: 'Best time to visit Mafia Island',
+            answer:
+              '\n' +
+              '\n' +
+              'Mafia Island enjoys two rainy seasons, similar to the mainland. In November and December and March to May.\n' +
+              '\n' +
+              '    The first best time to visit is from October to February offering the best visibility\n' +
+              '    The second-best time is June to September as it is the coolest time.\n' +
+              '\n',
           },
         ],
         activities: [GtActivities['Fishing / Sport Fishing']],
@@ -2138,11 +2310,18 @@ export const GtDestinations: GladiolusToursDestinations = [
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
+          GtActivities['Cultural Visits'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
           GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Historical Visits'],
+          GtActivities['Dolphin Watching'],
+          GtActivities['Giant Tortoise Watching'],
+          GtActivities['Scuba Diving'],
+          GtActivities['Spice Farms'],
+          GtActivities['City Tours'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Zanzibar Island'],
