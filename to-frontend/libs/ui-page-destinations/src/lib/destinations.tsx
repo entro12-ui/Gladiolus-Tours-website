@@ -12,7 +12,6 @@ import { classNames } from '@collo/ui-utils';
 import { GtDestinationCategory, GtDestinations } from '@collo/ui-persistance';
 import { generatePath, Link } from 'react-router-dom';
 import { GtToursRoute } from '@collo/ui-routes-gladiolus';
-import { JSXElement } from '@swc/core';
 
 const sortOptions = [
   { name: 'By Name', href: '#' },
@@ -347,7 +346,7 @@ export function Destinations() {
               </h2>
               <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
                 {GtDestinations.flatMap((destination) =>
-                  destination.nationalParks
+                  destination.destinations
                     .filter((park) =>
                       selectedCircuit === GtDestinationCategory['All Circuits']
                         ? true

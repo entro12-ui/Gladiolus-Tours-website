@@ -21,6 +21,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { RateDisplay } from '@collo/ui-comp-rate';
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons/faArrowCircleDown';
 import './style.css';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface InternalLink {
   label: string;
@@ -47,7 +48,7 @@ export function GladiolusToursDestinationsDetails() {
     return <h1>Destination Not Found</h1>;
   }
 
-  const gtNationalPark = destination.nationalParks.find(
+  const gtNationalPark = destination.destinations.find(
     (park: GtNationalParks) => park.id === nationalParkId
   );
 
@@ -100,7 +101,10 @@ export function GladiolusToursDestinationsDetails() {
               }}
               className="flex items-center justify-center w-1/5 mx-1 p-4 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition duration-300"
             >
-              <FontAwesomeIcon icon={link.iconClass as any} className="mr-2" />
+              <FontAwesomeIcon
+                icon={link.iconClass as IconProp}
+                className="mr-2"
+              />
               <span>{link.label}</span>
             </button>
           ))}
