@@ -101,7 +101,7 @@ export interface IDestinations {
   imageSrc: string;
   imageAlt: string;
   status: boolean;
-  nationalParks: GtNationalParks[];
+  destinations: GtNationalParks[];
 }
 
 export type GladiolusToursDestinations = IDestinations[];
@@ -114,7 +114,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: NorthernCircuit,
     imageAlt: 'Northern Circuit',
     status: true,
-    nationalParks: [
+    destinations: [
       {
         id: 1,
         name: 'Serengeti National Park',
@@ -612,7 +612,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: '',
     imageAlt: 'Southern Circuit',
     status: true,
-    nationalParks: [
+    destinations: [
       {
         id: 17,
         name: 'Ruaha National Park',
@@ -987,7 +987,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: '',
     imageAlt: 'Eastern Circuit',
     status: true,
-    nationalParks: [
+    destinations: [
       {
         id: 30,
         name: 'Nyerere National Park',
@@ -1445,7 +1445,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: '',
     imageAlt: 'Western Circuit',
     status: true,
-    nationalParks: [
+    destinations: [
       {
         id: 46,
         name: 'Gombe Stream National Park',
@@ -1707,7 +1707,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: '',
     imageAlt: 'Ocean Islands',
     status: true,
-    nationalParks: [
+    destinations: [
       {
         id: 55,
         name: 'Mbudya Island Marine Reserve',
@@ -1941,7 +1941,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: MafiaIsland,
     imageAlt: 'Mafia Island',
     status: true,
-    nationalParks: [
+    destinations: [
       {
         id: 63,
         name: 'Mafia Island',
@@ -1973,7 +1973,7 @@ export const GtDestinations: GladiolusToursDestinations = [
     imageSrc: ZanzibarIsland,
     imageAlt: 'Zanzibar Island',
     status: true,
-    nationalParks: [
+    destinations: [
       {
         id: 64,
         name: 'Zanzibar Island',
