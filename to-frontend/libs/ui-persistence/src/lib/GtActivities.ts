@@ -33,4 +33,5 @@ export enum GtActivities {
   'Forest Walk',
   'Worship Site',
   'Wedding / Honeymoon',
+  'Paragliding / Microflights',
 }
