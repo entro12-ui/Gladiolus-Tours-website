@@ -186,27 +186,61 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 2,
         name: 'Mount Kilimanjaro National Park',
-        description: '',
+        description:
+          'At 5896 m Mt Kilimanjaro, Africa\'s highest mountain and one of the continent\'s magnificent sights, It has three main volcanic peaks, Kibo, Mawenzi, and Shira. The name itself "Kilimanjaro" is a mystery wreathed in clouds. It might mean Mountain of Light, Mountain of Greatness or Mountain of Caravans.\n' +
+          '\n' +
+          'Above the gently rolling hills and plateaux of northern Tanzania rises the snowy peak of Mt. Kilimanjaro, it’s slopes and glaciers shimmering above the rising clouds. Kilimanjaro is located near the town of Moshi and is a protected area, carefully regulated for climbers to enjoy without leaving a trace of their presence. The mountain’s ecosystems are as strikingly beautiful as they are varied and diverse. \n' +
+          '\n' +
+          'On the lowland slopes, much of the mountain is farmland, with coffee, banana, cassava, and maize crops grown for subsistence and cash sale. A few larger coffee farms still exist on the lower slopes, but much of the area outside the national park has been subdivided into small plots. Once inside the park, thick lowland forest covers the lower altitudes and breaks into alpine meadows once the air begins to thin. Near the peak, the landscape is harsh and barren, with rocks and ice the predominant features above a breathtaking African view.\n' +
+          '\n' +
+          'Climbing Mt. Kilimanjaro is the highlight of most visitors’ experiences in Tanzania. Few mountains can claim the grandeur, the breathtaking views of Amboseli National Park in Kenya, the Rift Valley, and the Masaai Steppe, that belongs to Kilimanjaro. Hiking on the ‘rooftop of Africa’ — the highest point on the continent at 5896 metres — is the adventure of a lifetime, especially because, if paced well, everyone from seasoned trekkers to first-time enthusiasts can scale the snowy peak. For more information, see the ‘Mountain Climbing‘ section under ‘Things to Do.\n' +
+          '\n' +
+          '“Kilimanjaro” The name itself is a mystery wreathed in clouds. It might mean Mountain of Light, Mountain of Greatness or Mountain of Caravans. Or it might not. The local people, the Wachagga, don’t even have a name for the whole massif, only Kipoo (now known as Kibo) for the familiar snowy peak that stands imperious, overseer of the continent, the summit of Africa.\n' +
+          '\n' +
+          'Kilimanjaro is one of the world’s most accessible high summits, a beacon for visitors from around the world. Most climbers reach the crater rim with little more than a walking stick, proper clothing and determination. And those who reach Uhuru Point, the actual summit, or Gillman’s Point on the lip of the crater, will have earned their climbing certificates and their memories.\n' +
+          '\n' +
+          'But there is so much more to Kili than her summit. The ascent of the slopes is a virtual climatic world tour, from the tropics to the Arctic.\n' +
+          '\n' +
+          'Even before you cross the national park boundary (at the 2,700m contour), the cultivated footslopes give way to lush montane forest, inhabited by elusive elephant, leopard, buffalo, the endangered Abbot’s duiker, and other small antelope and primates. Higher still lies the moorland zone, where a cover of giant heather is studded with otherworldly giant lobelias.\n' +
+          '\n' +
+          'Above 4,000m, a surreal alpine desert supports little life other than a few hardy mosses and lichen. Then, finally, the last vestigial vegetation gives way to a winter wonderland of ice and snow – and the magnificent beauty of the roof of the continent.\n',
         status: true,
         imageSrc: MountKilimanjaro,
         imageAlt: 'Northern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'What is the best time of year to climb Kilimanjaro?',
+            answer:
+              'You can climb Kilimanjaro at any time of the year, but there are two different rainy seasons, which most guests prefer to avoid. Mid-March to May are typically the long rains, and then there are the short rains at the end of October and into November. January, February, July August and September are all popular climbing months. In wet seasons, the routes become slippery.',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'How do I get to Kilimanjaro',
+            answer:
+              '\n' +
+              '\n' +
+              '40 km from Moshi Town and 128 km (80 miles) from Arusha Town. About one hour’s drive from Kilimanjaro International Airport (JRO).\n' +
+              '\n' +
+              'The park can be accessed by road or flight via Kilimanjaro International Airport – about 45km to the west. The Park Headquarters and one of the ascending gates are at Marangu, about 41Km from Moshi town and 86km from Kilimanjaro International Airport. The other seven gates of Rongai, Machame, Londorosi, Lemosho, Kilema, Mweka and Umbwe are located around the mountain base and can be reached by road.\n',
+          },
+          {
+            question: 'How cold does it get on Kilimanjaro?',
+            answer:
+              'The temperature at the top of the mountain can vary widely. Sometimes it is only a degree or two below freezing, but visitors should be prepared for the possibility of temperatures as low as minus 25 degrees Celsius, perhaps in conjunction with a wind.',
+          },
+          {
+            question: 'How much time do I need to climb Mount Kilimanjaro?',
+            answer:
+              'Most routes on Kilimanjaro are between 5 – 8 days. We recommend having at least one day at the hotel before the climb, so that we can give you a full briefing and also check your gear. Many guests like to have a day or two at the hotel after the climb, to relax and decompress a bit before heading home or continuing with their safari.',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
+          GtActivities['Climbing / Trekking'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Biking'],
+          GtActivities['Waterfalls'],
+          GtActivities['Paragliding / Microflights'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Northern Circuit'],
