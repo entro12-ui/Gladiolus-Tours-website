@@ -12,6 +12,7 @@ import { classNames } from '@collo/ui-utils';
 import { GtDestinationCategory, GtDestinations } from '@collo/ui-persistance';
 import { generatePath, Link } from 'react-router-dom';
 import { GtToursRoute } from '@collo/ui-routes-gladiolus';
+import { JSXElement } from '@swc/core';
 
 const sortOptions = [
   { name: 'By Name', href: '#' },
@@ -66,6 +67,18 @@ const filters = [
     ],
   },
 ];
+
+const generateStars = (rate: number): JSX.Element[] => {
+  const stars = [];
+  for (let i = 0; i < rate; i++) {
+    stars.push(
+      <span key={i} className="text-yellow-400">
+        &#9733;
+      </span>
+    );
+  }
+  return stars;
+};
 
 export function Destinations() {
   const [selectedCircuit, setSelectedCircuit] = useState<GtDestinationCategory>(
@@ -349,19 +362,24 @@ export function Destinations() {
                         })}
                         className="group"
                       >
-                        <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
-                          <img
-                            src={park.imageSrc}
-                            alt={park.imageAlt}
-                            className="h-full w-full object-cover object-center group-hover:opacity-75"
-                          />
+                        <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                          <div className="relative overflow-hidden rounded-lg aspect-w-16 aspect-h-9 h-64">
+                            <img
+                              src={park.imageSrc}
+                              alt={park.imageAlt}
+                              className="object-cover w-full h-full transition-transform transform group-hover:scale-105"
+                              style={{ objectFit: 'cover' }}
+                            />
+                          </div>
                         </div>
                         <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
-                          <h3>{park.name}</h3>
-                          <p>{park.rate}</p>
+                          <h3 className="truncate">{park.name}</h3>
+                          <p className="ml-2 text-sm font-semibold text-gray-600">
+                            {generateStars(park.rate)}
+                          </p>
                         </div>
-                        <p className="mt-1 text-sm italic text-gray-500">
-                          {park.description}
+                        <p className="mt-1 text-sm text-gray-600">
+                          {park.description.slice(0, 100)}...
                         </p>
                       </Link>
                     ))
