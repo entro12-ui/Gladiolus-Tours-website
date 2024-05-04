@@ -1,4 +1,4 @@
-rootProject.name = 'Ubiquitous-System'
+rootProject.name = 'Gladiolus-Tours'
 
 include 'to-frontend'
 include 'to-backend-server'
