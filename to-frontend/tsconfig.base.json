@@ -30,6 +30,7 @@
       ],
       "@collo/ui-comp-page-helmet": ["libs/ui-comp-page-helmet/src/index.ts"],
       "@collo/ui-comp-rate": ["libs/ui-comp-rate/src/index.ts"],
+      "@collo/ui-comp-rate-star": ["libs/ui-comp-rate-star/src/index.ts"],
       "@collo/ui-comp-router-lazy-fallback": [
         "libs/ui-comp-router-lazy-fallback/src/index.ts"
       ],
