@@ -489,16 +489,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageSrc: MountOldonyoLengai,
         imageAlt: 'Northern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: '',
-            answer: '',
-          },
-          {
-            question: '',
-            answer: '',
-          },
-        ],
+        faq: [],
         activities: [
           GtActivities['Climbing / Trekking'],
           GtActivities['Cultural Visits'],
@@ -559,16 +550,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageSrc: KondoaRockArt,
         imageAlt: 'Northern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
           GtActivities['Historical Visits'],
           GtActivities['Rock Art / Cave Painting'],
@@ -1045,16 +1027,7 @@ export const GtDestinations: GladiolusToursDestinations = [
         imageSrc: LakeNgozi,
         imageAlt: 'Southern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
           GtActivities['Bird Watching'],
           GtActivities['Walking / Hiking'],
