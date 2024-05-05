@@ -1271,55 +1271,90 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 30,
         name: 'Nyerere National Park',
-        description: '',
+        description:
+          'Nyerere National Park is the northeastern part of the huge Selous Game Reserve set aside for photographic safaris, which was upgraded to the national park status in November 2019. The park was named after the first president of Tanzania, Mr Julius Nyerere (late), in recognition for championing conservation and protection of wildlife in the country. Nyerere National Park, is one of the most beautiful and game-rich areas in the ecosystem of Selous Game Reserve, spanning the Rufiji River basin in southeastern Tanzania.\n' +
+          '\n' +
+          'Selous Game Reserve was established in 1922, and in 1982, was named after Frederick Selous Courtney who was a great Hunter and explorer. it was declared a UNESCO world heritage site thanks to its rich diversity of wildlife and uninterrupted nature.\n' +
+          '\n' +
+          'Nyerere National Park is located in south eastern Tanzania, bordered by Mikumi National Park to the northwest and Udzungwa Mountains National Park to the west.\n' +
+          '\n' +
+          'With an area of about 30,893sqkm, Nyerere National Park is the largest national park in Africa. It is perhaps one of the most pristine wildernesses still remaining in Africa, with a wide variety of wildlife habitats, including open grasslands, Miombo woodlands, swamps and riverine forests in the many tributaries of the mighty Rufiji River which flows through the National Park to the Indian Ocean.\n' +
+          '\n' +
+          'Its wildlife is spectacular, with some of the largest population of mammals and reptiles in Africa, including buffaloes, elephants, hippos and crocodiles which can be seen here. Nyerere National Park, together with the remaining part of Selous Game Reserve, is considered to be the last stronghold of the African wild dog. Other common wildlife include the wildebeest, zebra, giraffe, eland, the greater kudu, sable antelopes, black rhino, waterbuck, impala, lion, leopard, the spotted hyena, cheetah, baboon, vervet and blue monkey, and the black and white colobus monkey which can be viewed in riverine forests. About 440 species of birds both resident and migratory have been observed in the national park.\n' +
+          '\n' +
+          'The park offers a wide variety of game viewing opportunities including the thrilling experience of a walking safari in the company of an armed ranger. The many waterways in the park provide an excellent natural setting for boat safaris, both for big game viewing and bird watching. This is in addition to the game drives in specially designed safari vehicles which, combined with boat and walking safaris, offer an exciting and rich game viewing itinerary unique to Nyerere National Park. The best time to visit is from June to October. During the long rains, between March and May, some parts of the park are temporarily closed for game drives due to poor accessibility.\n',
         status: true,
         imageSrc: NyerereNationalPark,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best time to Visit Nyerere National Park',
+            answer:
+              '\n' +
+              'The best time to visit the Selous (for ease of game viewing) is during the dry season, between late June and November. \n' +
+              '\n' +
+              'June - November (Game Viewing) \n' +
+              'January - April (Bird Watching, rainy)\n',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Nyerere National Park',
+            answer:
+              '\n' +
+              '\n' +
+              'Dar es Salaam to Selous Game Reserve via Mikumi National Park is 280 kilometers and it takes 5 hrs on the road.\n',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
           GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Canoeing / Kayaking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
       },
       {
         id: 31,
-        name: 'Udzungwa National Park',
-        description: '',
+        name: 'Udzungwa Mountains Park',
+        description:
+          'Udzungwa Mountains National Park was established in 1992 and covers an area of 1990km2 where geographically, 20% of the total area lies in Morogoro region while the remaining 80% being in the southern highland region of Iringa. The word "Udzungwa" comes from the word "Wadsungwa" referring to one of the native sub tribes of the "Hehe" people who once lived in the slopes of the mountains.\n' +
+          '\n' +
+          'Udzungwa National Park harbours one of East Africa’s great forests and the biodiversity of the park contribute the most significant attractions for visitors. The diverse habitat includes tropical rainforests, mountain forests, Miombo woodlands, grasslands and steppe. The major drawcard includes its biologically diverse forest, harbouring some plant species found nowhere else in the world, from a tiny African violet to 30-metre high trees.\n' +
+          '\n' +
+          'The spectacular mountains scenery, grasslands, rocks, rivers and waterfalls and unique collection of flora and fauna are the treasure-trove of Udzungwa National Park.\n' +
+          '\n' +
+          'The wildlife spotted in the park includes elephants, leopards, bush bucks, duikers, palm civets, Miombo genets, elephant shrews and hyenas. In addition to the wild animals the park also harbours some species of primates. Among the primates Iringa red colobus and the Sanje crested Mangabey are the unique ones.\n' +
+          '\n' +
+          'With more than 400 species of birds, the park is also a treat for bird-lovers. Some common birds include crowned eagles, ruppells vultures, woodland kingfishers, silvery cheeked hornbills marabous, malachite kingfishers, and trumpeter hornbills.\n' +
+          '\n' +
+          'Your trips can be tailor-made according to your travel preferences, what you want to see, and the time of year, so don’t hesitate to let your operator know exactly what you want in your Tanzania Safari.',
         status: true,
         imageSrc: UdzunguwaNationalPark,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best time to Visit Udzungwa Mountains Park',
+            answer:
+              '\n' +
+              '\n' +
+              'The park is good to visit throughout the year. It is a bit slippery during the wet rainy season\n' +
+              '\n' +
+              'Dry season (June – September) and wet season (November – March) when wild flowers are flourishing and plentiful of butterflies. For bird watchers, December – February is their best time as most migratory birds are nesting in the park.\n',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Udzungwa Mountains Park',
+            answer:
+              "By road network from Dar es Salaam (380km) as well as Arusha, Kilimanjaro and Mbeya. There are two airstrips Msolwa and Kilombero which can be used by tourist through air transport before they connect using hired vehicles to the park's main gate.",
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Waterfalls'],
+          GtActivities['Picnicking'],
+          GtActivities['Forest Walk'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1327,19 +1362,41 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 32,
         name: 'Saadani National Park',
-        description: '',
+        description:
+          'Covering an area of 1,062 sq km (415 sq miles), Saadani National Park is sited on the north coast of Tanzania, approximately 100km North West of Dar es Salaam. The Park is home to a variable mix of both marine and mainland flora and fauna. Saadani is an ideal blend of island relaxation and safari excitement.\n' +
+          '\n' +
+          'Saadani National Park is a one of a kind paradise with unique ecosystem where beach life meets wilderness. This gives you not only the opportunity to plunge into the Indian Ocean straight after your safari, but also to be submerged in a unique display of both marine and mainland flora and fauna in a naturally fascinating setting.\n' +
+          '\n' +
+          'The name Saadani has a close link to the Arab settlement in the area during the 19 Century. The name of a fishing village that, origin ally known as Utondwe which changed to Saadani. Saadani is such an important name in the country’s history since the time immemorial centuries or more, mentioned in chronicles of the Portuguese and notable travellers like Johannes Rebman, El-Masoud, Ptolemy, and Richard Burton among others. The historical Saadani leaves us with the evidence of not only visits of these travellers, but also of a former town which was once a trade centre coordinating overseas and hinterland bather trade, including slave trade.\n' +
+          '\n' +
+          'Wide range of grazers and primates are seen on game drives and walks, among them include giraffes, buffaloes, warthogs, common waterbucks, reedbucks, hartebeests, wildebeests, red duikers, greater kudus, elands, sable antelopes, yellow baboons and velvet monkeys. Herds of up to 30 elephants are encountered with increasing frequency, and several lion prides are inhabitants, together with leopards, spotted hyenas and black-backed jackals. Boat trips on the mangrove-lined Wami River come along with a high chance of sighting hippos, crocodiles and a selection of marine and riverine birds, including the mangrove kingfisher and lesser flamingo. The beaches form one of the last major green turtle breeding sites on mainland Tanzania.',
         status: true,
         imageSrc: SaadaniNationalPark,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Saadani National Park',
+            answer:
+              '\n' +
+              '\n' +
+              'By Air: Charter flight from Dar es Salaam, Zanzibar, Tanga, Arusha or any other major town landing at all seasons Saadani Airstrip in the South or Mkwaja Airstrip in the North.\n' +
+              '\n' +
+              'By Road\n' +
+              '\n' +
+              '    131km from Dar es Salaam via Bagamoyo off Makurunge to Gama Entrance Gate\n' +
+              '    146km from Tanga via Pangani and Mkwaja to Madete Entrance Gate\n' +
+              '    225km from Dar es Salaam off Chalinze and Mandera junction via Miono to Mvave Entrance Gate\n' +
+              '    On the Arusha – Dar es Salaam road, off Mkata Junction via Kwamsisi to Madete Entrance Gate 79km from Mkata to Madete.\n' +
+              '    On the north coast, roughly 100km (60 miles) northwest of Dar es Salaam, and a similar distance southwest of the port of Tanga.\n' +
+              '\n',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best Time to Visit Saadani National Park',
+            answer:
+              '\n' +
+              '\n' +
+              'Generally accessible all-year round, although the access roads are sometimes impassable during April and May. The best game-viewing is in January and February and from June to August. \n',
           },
         ],
         activities: [
@@ -1355,27 +1412,35 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 33,
         name: 'Mikumi National Park',
-        description: '',
+        description:
+          'Mikumi National Park is only three to four hours drive from Dar es Salaam, lying astride the main highway to Zambia, and en route to the National Parks of Udzungwa Mountains, Ruaha and Kitulo. The main feature of the park is the Mikumi flood plain, along with the mountain ranges that border the park on two sides. Open grasslands dominate in the flood plain, eventually merging with the miombo woodland covering the lower hills.\n' +
+          '\n' +
+          'With almost guaranteed year-round wildlife sightings, Mikumi is an ideal Tanzania Safari Destination for those without much time. The tamarind trees are a favourite spot for elephants and giraffes that spend hours eating the fruits.\n' +
+          '\n' +
+          'The park has many wildlife like buffalos, Lions, Zebra, Giraffes and Elephants .Giraffes are often seen browsing leaves from the isolated acacia trees that fringe the Mkata river. Also the greater Kudu and sable antelope can be found in the miombo woodland-covered foothills of the mountain that rise from the Park boundaries. \n' +
+          '\n' +
+          'More than 400 bird species, Mikumi National Park is also a heaven for birding-lovers. The most common ones being marabou storks, bateleur eagles, the black bellied bustards, guinea fowls, ox peckers, colorful lilac breasted rollers and yellow throated long claws. These are some of the many species you are likely to spot. The park also witnesses a passing of migrating birds from Europe during the rainy season such as blacksmith plovers, cattle egrets, various herons, fish eagles and many more.',
         status: true,
         imageSrc: MikumiNationalPark,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Mikumi National Park',
+            answer:
+              'Road: The park is 283 km from Dar es Salaam and 118 km from Morogoro town.\n' +
+              '\n' +
+              'Air: Scheduled flights from all the main centers in Tanzania but often routing via Dar es Salaam.\n',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best Time to Visit Mikumi National Park',
+            answer: 'Accessible year round\n',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
           GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Night Game Drives'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1383,27 +1448,39 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 34,
         name: 'Usambara Mountains',
-        description: '',
+        description:
+          "The Usambara's are a part of the ancient Eastern Arc chain which mountains stretch in a broken crescent from the Taita hills in southern Kenya down to Morogoro and the southern highlands. They are estimated to be at least 100 million years old and the rocks forming them may be as much as 600 million years old. The mountains are home to an exceptional assortment of plants and animals and represent one of the highest degrees of biodiversity on the continent.\n" +
+          '\n' +
+          'The range is accessible from the towns of Lushoto in the west, and Amani Nature Reserves in the east, approached from Muheza, with its botanical garden, butterfly farming, tea & spice plantations. The Usambaras are commonly split into two sub-ranges, the West Usambaras are separated from the East by a valley and are approached via the district centre of Lushoto. The East Usambara is closer to the coast, receives more rainfall, and is significantly smaller than the west.\n' +
+          '\n' +
+          'The mountains boast of over 3000 plant species in total and over 600 tree species. The Usambaras are part of the Eastern Arc Mountains which run parallel to the Tanzanian coast extending into Taita Hills in Kenya, and recognized as one of the world’s biodiversity hotspots. This exceptional diversity attracts naturalists and nature lovers from all over the world who come to watch birds, study trees and flowers or butterflies.\n' +
+          '\n' +
+          'The Usambara Mountains, situated in the north eastern part of Tanzania, are known for their pleasant climate, beautiful view points and fertile slopes. Favoured by the Germans and English during colonial times, the area is rich in historical buildings from the period. Excursions, which take half day or less, will include hiking and visits to Wasambaa villages, where visitors may have a glimpse of daily life of the local people.',
         status: true,
         imageSrc: UsambaraMountain,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best Time to Visit Usambara Mountains',
+            answer:
+              'Although the climate is comfortable year-round, paths get too muddy for trekking during the rainy season from March through May. The best time to visit is from June to November, after the rains and when the air is clearest.',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Usambara Mountains',
+            answer:
+              'Dar es Salaam - Lushoto: 6 hrs - Dar es Salaam - Mombo: 5 hrs\n' +
+              '\n' +
+              "The Usambaras are approximately 90 kilometres (56 mi) long and ranging from 30'50 kilometres (19'31 mi) in width\n",
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Cultural Visits'],
+          GtActivities['Biking'],
+          GtActivities['Waterfalls'],
+          GtActivities['Forest Walk'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1411,27 +1488,28 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 35,
         name: 'Amani Nature Forest Reserves',
-        description: '',
+        description:
+          'Amani Nature Forest Reserve (ANFR) is located in Muheza and Korogwe Districts in Tanga Region. The Nature Reserve covers an area of 8,380 ha and it has tremendous ecological importance with the astonishing African violet flowers (Saintpaulia) which is believed to have a spiritual aspect (power of forgiveness) and cultural significance. According to Bird Life International, the area is ranked the 12th world best bird watching sites and the UNESCO list the Reserve among the designated Man and Biosphere Reserve in the World. “Home of African Violent flowers (“Saintpaulia”)\n' +
+          '\n' +
+          'Apart from the Saintpaulia flowers, the reserve is gifted with other varieties of tourist attractions ranging from endemic species of flora and fauna, unique biodiversity, natural attractions, historical and cultural attractions. Additionally, the reserve is famous for varieties of bird and butterfly species. Other attractions are: the three horned chameleons, amazing waterfalls (at Zigi, Chemka and Ndola) where visitors can swim after a trek through the forest, Sunset and sunrise viewpoints, a Botanical garden which is one of the oldest in Africa with more than 1000 plant species from all over the globe, Cultural attractions that include Traditions, Historical sites with remnants of steam engines used during the colonial era, Beautiful viewpoint of tea plantations and spice farms.\n' +
+          '\n' +
+          'Amani Forest Nature Reserve Tour (1 Day)\n' +
+          'The rich endowment of nature-based tourist attractions, offers a wide range ecotourism activities including nature viewing, bird watching, night walking safaris, picnicking and camping, sun downers, mountain biking, swimming in the plunge pools of waterfalls, forest trekking (hiking), cultural activities (local dancing or watching, local massage and local brew testing) research and educational tour, excursion and photographing. Spending not less than 2h hiking, trekking to the waterfalls & spices during the evening hike to the sunset viewing point.',
         status: true,
         imageSrc: AmaniNatureForestReserves,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Amani Forest Reserve',
+            answer:
+              'The reserve is accessible from 3 routes. First route is from Dar es Salaam city 330 kilometers, the second route is from Arusha city some 446 kilometers and the third route is from Tanga city some 74 kilometers. Coincidentally all three routes pass through Muheza town.',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Waterfalls'],
+          GtActivities['Forest Walk'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1439,27 +1517,45 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 36,
         name: 'Amboni Caves',
-        description: '',
+        description:
+          'The Amboni Caves are the most extensive limestone caves in East Africa. They are located 8 km in Kiomoni Village north of Tanga City in Tanzania off the Tanga-Mombasa road. The caves were formed about 150 million years ago during the Jurassic age. It covers an area of 234 km². According to researchers the area was under water some 20 million years ago. History has it that the caves were originally thought to extend 200 km or more. There are altogether ten caves but only one is used for guided tours. The Amboni caves, which are home to a large number of bats, were traditionally thought to be home to various spirits and are still used for worship and rituals by the locals. \n' +
+          '\n' +
+          'Amboni Limited, a company which was then operating sisal plantations in Tanga Region acquired the area in 1892. The company notified the British colonial government about the caves who in turn declared the caves a conservation area in 1922.\n' +
+          '\n' +
+          'It is not known when the caves were exactly discovered but reports indicate that ethnic groups such as the Segeju, Sambaa, Bondei and Digo who lived near the caves used it for prayers. In 1963, the then government of Tanganyika handed over the caves to the Department of Antiquities.\n' +
+          '\n' +
+          'These caves have been subject of local legends and a number of mythical and awe-inspiring stories have been attributed to the caves. To the local people the caves are regarded as supernatural formations where supernatural powers commonly known as “Mizimu” are believed to have been residing since the caves formation. There are chambers treated as sacred chambers for worshiping some spirits. One of them is called “Mzimu wa Mabuvu”. Some believe that there is a powerful deity which can alleviate their sickness, sufferings or increase their fertility. \n' +
+          '\n' +
+          'These limestone caves are formed by a special nature of erosion. According to Mturi (1975:18-19), there are tree theories which explain the formation of the Amboni Caves. The first theory is known as the vedose process. According to this theory, rain water absorbs carbon dioxide in the atmosphere and forms a weak carbonic acid which is capable of dissolving calcium carbonate minerals of which limestone is formed. When this acidulated rain water seeps trough the limestone it is dissolved and cavities and caves are formed.\n' +
+          '\n' +
+          'The second theory is that of phreatic origin. According to this theory, the caves are formed by erosion from the sub water table. The rain water with carbonic acid rapidly seeps through the limestone and reaches the water table before being a saturated solution of calcium bicarbonate. At this stage it is still capable of acting as a dissolving agent for the calcium carbonate.\n' +
+          '\n' +
+          'The Amboni caves are among the area’s most popular attractions and feature vast below-ground halls with towering formations. Visitors are advised to wear comfortable shoes and to bring a pocket-size camera, since it’s cumbersome to bring a camera with a large lens as walking is through tight squeezes. And before entering some of the tight spots, visitors are asked to leave large bags in an area to pick up later.\n' +
+          '\n' +
+          'The views of towering formations in the caves are an admiration. Nearly all its tunnels or chambers are accessible to tourists via guided tour. Walking through squeezes while getting treated to views of incredible formations makes the visit well worth it. \n' +
+          '\n' +
+          'The caves have religious significance to the local people who pray and make offerings in one of the shrines. For a section of locals, the caves have been long-known as the place to worship to pray for different needs. Chamber number one is used for the prayers, in what many people associate with superstitions. Different items are deposited here during players as ‘gifts that the local villagers offer to the spirits.\n' +
+          '\n' +
+          'The caves’ upkeep is under the department of Antiquities in the ministry of natural resources and tourism.\n',
         status: true,
         imageSrc: AmboniCaves,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'How to Reach Amboni Caves',
+            answer:
+              '\n' +
+              'Located nearly 8 kms from Tanga town.\n' +
+              '\n' +
+              'Access is by road from the Tanga - Mombasa road. For access to the main forest block (Msitu wa Mbogo) turn left 5km after Tanga onto the B121 road to Mjessani. Park the vehicle 5.5 km along this road and walk south along paths for 2 km to reach the river. For access to Amboni Caves forest patches take the left turning to Kiomono village 4 km after leaving Tanga on the main road to Mombasa. The road runs through the village and down to the caves. Park and proceed on foot along the river to reach the other forest patches further up-river. \n' +
+              '\n' +
+              'All sites can be reached directly from Tanga by foot within two hours.\n',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Caving / Caves'],
+          GtActivities['Picnicking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1467,27 +1563,29 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 37,
         name: 'Uluguru Mountains',
-        description: '',
+        description:
+          'The Uluguru mountains are a mountain range in eastern Tanzania, named after the Luguru tribe. The main portion of the Uluguru mountains is a ridge running roughly north-south and rising to 2,630 metres (8,600 ft) altitude at its highest point. On the main Uluguru range, 50 villages touch the forest boundary and over 151,000 people are found within the mountain area, often at increasing densities at higher altitudes up to the forest boundary.\n' +
+          '\n' +
+          'The Ulugurus lie 200 km inland from the Indian Ocean. They are part of a chain of mountains in eastern Africa collectively called the Eastern Arc Mountains, which include the Taita Hills, Pare Mountains, Usambara Mountains, Nguru Mountains, Rubeho, Ukaguru, Udzungwa Mountains and Mahenge Mountains. The forests of the mountains provide the water catchment areas for the streams and rivers. This water flows mainly from the forest-capped peaks of the Ulugurus into streams joining to form the Ruvu River.\n' +
+          '\n' +
+          'Biodiversity\n' +
+          'The vegetation of the Uluguru main ridge and outlying blocks is extremely variable. It ranges from drier lowland coastal forest habitats, to transitional rainforests, to sub-montane, montane and upper montane forest types.\n' +
+          '\n' +
+          'Unique to the Ulugurus are over 100 plants, 2 birds, 2 mammals, 4 reptiles and 6 amphibians unknown elsewhere in the world. There are also a large number of additional species shared only with one or two other Eastern Arc mountains, and hence globally rare. Endemic species include African violets, Impatiens and Begonias which are popular pot-plants in the rest of the world.\n' +
+          '\n' +
+          'Tourism\n' +
+          "The mountains attracts many tourists to the area, particularly due to the mountains' proximity to the former capital and economic center of Tanzania, the city of Dar es Salaam (180km away).\n" +
+          'A visit to the "Morning side"which is an old german hut at 1000m is one of the famous shot day hike, a visit to Choma waterfalls, bondwe and lupanga peaks, cultural tour to the waluguru tribe, farmlands and many more',
         status: true,
         imageSrc: UluguruMountain,
         imageAlt: 'Eastern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
+          GtActivities['Climbing / Trekking'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Cultural Visits'],
+          GtActivities['Waterfalls'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1495,27 +1593,36 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 38,
         name: 'Pugu Hill Nature Reserve',
-        description: '',
+        description:
+          '<br/>Pugu Hill Nature Reserve also known as Pugu / Kazimzumbwi Nature Forest Reserve is a protected area located in Kisarawe ward of Kisarawe District in Pwani Region, Tanzania. The forest borders in the Pugu ward, of Ilala MC in Dar es Salaam to the east about 10 km from Dar City Center, adjacent to the Kazimzumbwi Forest Reserve. \n' +
+          '\n' +
+          'This rich portfolio of tourism attractions enable the reserve to offers enormous recreation satisfactions, meditation, or reflection moments. The forest is filled with 100+ species of trees, and a number of steep and gentle hills. Has a viewpoint that will enable you to see the breathtaking view of Dar es Salaam City. Is also has a Lake called ‘Minaki’. This is an ideal place to get in tune with Nature. The place has ancient caves that are used for local prayers by the residents around this locality. Small animals like colobus monkeys and Millipede and variety of birds are also found.\n' +
+          '\n' +
+          'It takes 4 to 5 hrs to explore the whole forest. Apart from Dar es Salaam being a busy city, Pugu hills are one of the unique places to explore nature, a go-to place for hiking, and a perfect getaway for nature exploration.\n' +
+          '\n' +
+          '<br/><br/><b>Itinerary</b>' +
+          `<ul>` +
+          `    <li>Drive over to Pugu Hills forest about 1.30 hrs drive from Dar es Salaam City</li>` +
+          `    <li>After arriving at the entry point, do registration and start the hike.</li>` +
+          `    <li>You can start explore the forest initially by going through the lake, where you'll get a chance to see the lake and several flora and fauna bushes' mixed with bamboo forests, followed by a hike that will enable you to see the whole of Dar es Salaam</li>` +
+          `    <li>At the forest, you'll see the ancient caves that are used for local prayers, 100+ species of trees, a peaceful bamboo forest that will enable you to get in tune with nature, a great view of Dar es Salaam City and several monkeys.</li>` +
+          `    <li>Afternoon Drive back to Dar es Salaam</li>` +
+          `</ul>` +
+          '<br/><b>Note: This tour can be customized</b>',
         status: true,
         imageSrc: PuguHillNatureReserve,
         imageAlt: 'Eastern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Biking'],
+          GtActivities['Caving / Caves'],
+          GtActivities['Picnicking'],
+          GtActivities['Forest Walk'],
+          GtActivities['Worship Site'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1523,27 +1630,31 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 39,
         name: 'Mnazi Bay - Ruvuma Estuary Marine Park',
-        description: '',
+        description:
+          'Mnazi Bay - Ruvuma Estuary Marine Park (MBREMP) is in the Mtwara district of Southeast Tanzania and extends to the border with Mozambique. The area is considered to have globally significant marine biodiversity values and covers 650 square kilometres, of which 33% is on land. The park extends from the northern portion of the Ruvuma Estuary to Mnazi Bay, including the headland of Ras Msangamkuu.\n' +
+          '\n' +
+          'The environment within the park includes mangroves, rocky and sandy shoreline, mudflats, salt pans, fringing coral reefs, lagoonal patch reef, seagrass beds, three islands (Namponda, Mongo and Kisiwa Kidogo) and numerous small rocky islets.\n' +
+          '\n' +
+          'Surveys have found over 250 species of hard coral, 400 species of fish, and 100 species of echinoderms within the Park’s reefs. The marine and coastal plants and animals found within the Park are there because of the climate, the physical features, the influences of the Indian Ocean, and the overall integrity of the combination of habitat.\n' +
+          '\n' +
+          'The Park is home to nesting grounds for Green and Hawksbill turtles, and a number of marine mammals have been seen in the area including migrating Humpback whales and the Indopacific Humpback dolphin. A large population of crab-plovers led to the area being designated as an Important Bird Area (IBA) in 2001.\n' +
+          '\n' +
+          'The area was also once home to dugongs but the last confirmed sighting was in 1992, although there have been unconfirmed sightings since.\n' +
+          '\n' +
+          'Close to 30,000 people live within the park, depending mainly on marine resources for their livelihoods; the park includes in its boundaries 11 villages and 8 sub-villages. There are few opportunities for development hence poverty is rife. This has created an over dependence on marine resources and the persistent use of destructive fishing methods.\n' +
+          '\n' +
+          'Gas was discovered in Mnazi Bay in 1982, and wells were brought into operation in 2006. Gas from the wells is now piped to Mtwara where a gas to power plant provides electricity for the Mtwara and Lindi areas.',
         status: true,
         imageSrc: MnaziBay,
         imageAlt: 'Eastern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Whale Watching'],
+          GtActivities['Dolphin Watching'],
+          GtActivities['Scuba Diving'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1551,27 +1662,36 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 40,
         name: 'Kilwa',
-        description: '',
+        description:
+          'Kilwa is one of six administrative districts of Lindi Region in Tanzania. It has a total area of 13,347.50 square kilometers, Kilwa district has 5 Islands, with the largest one being Kilwa Kisiwani. The other islands in the Kilwa archipelago are Island and Songo Mnara Island. In addition, the Songosongo Islands archipelago is composed of 21 coral reefs including the 4 coral islands. The four Islands in the archipelago are Fanjove, Nyuni Island, Songo Songo and Okuza Island. Kilwa District is home to Pindiro Forest Reserve where albino hippopotamuses have been observed.\n' +
+          '\n' +
+          "The Matandu River is the largest river running west to east of Kilwa district. The other rivers found in the district are the Mbwemkuru River, Matandu River and the Mavuji River. There is also a cave system in Kipatimu ward, the Nan'goma Cave. The cave system is located in the Matumbi Highlands which are shared between Kilwa District and Rufiji District in Pwani Region.\n" +
+          '\n' +
+          "Historicaly he area that is now Kilwa district has been inhabited by humans for thousands of years. The area is the ancestral home to three Bantu people groups, namely the Mwera people and the Matumbi people together with the Machinga people. The Matumbi being historically the majority native group inhabiting the most land in the district. They are the natives of the entire central and northern Kilwa district and Kilwa's islands. The Machinga people are native to the south eastern section of the district to the border with Lindi District. The Mwera inhabit the south west part of the district.\n" +
+          '\n' +
+          'The three tribes became swahilized in the 9th century with the arrival of Islam in the region transforming the region to its being one of the wealthiest Swahili city states on the continent by the 14th century. Kilwa district is known globally for its Middle Ages Swahili historical sites from Middle Ages on the islands Kilwa Kisiwani and Songo Mnara which are part of the seven Tanzanian World Heritage Site.\n' +
+          '\n' +
+          'The Swahili city-state of Kilwa was once the greatest Swahili port city that met an unfortunate end on July 1505 when the Portuguese burned and looted the city. In the 1866 the area of what is now Kilwa district was occupied by Germans who established their headquarters at Kilwa Kivinje and used it as a base to quell the Maji Maji rebellion that was based on the Matumbi Hills north of the Kilwa district.\n' +
+          '\n' +
+          'In 1918 when Tanganyika became a British protectorate, Kilwa Masoko was chosen as it is the district seat and they built a deepwater port to assist with their commercial vessels. To this day Kilwa Masoko remains the capital of Kilwa district. During the British occupation the district was one of six councils established in 1947 in Lindi region. Post-independence, in 1984 Kilwa was officially designated as a district council.',
         status: true,
         imageSrc: Kilwa,
         imageAlt: 'Eastern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Cultural Visits'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Biking'],
+          GtActivities['Historical Visits'],
+          GtActivities['Caving / Caves'],
+          GtActivities['City Tours'],
+          GtActivities['Fishing / Sport Fishing'],
+          GtActivities['Worship Site'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1579,27 +1699,29 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 41,
         name: 'Kilwa Kisiwani',
-        description: '',
+        description:
+          'Situated off the coast of Tanzania, the island of Kilwa Kisiwani (“isle of the fish”) was once the center of one of the greatest empires in East Africa.\n' +
+          '\n' +
+          'From the 9th century all the way up until the 19th century, Kilwa Kisiwani was a wealthy and powerful port, reaching its peak around the late-Middle Ages. At its height, the empire stretched from Kenya to Mozambique, and Kilwa Kisiwani’s prosperity was crucial to the development of Swahili civilization.\n' +
+          '\n' +
+          'During this time great structures were built that are now stunning ruins, all that’s left of the late empire. One of the most impressive of the ruins is the Great Mosque, the oldest standing mosque on the East African coast, which has 16 domes supported by many arches and pillars. Another amazing site is the Palace of Husuni Kubwa, which overlooks the island from on high and was once the largest building in sub-Saharan Africa.\n' +
+          '\n' +
+          'According to legend, the empire was established on the island by a Persian prince who bought Kilwa Kisiwani from an indigenous king for enough cloth to circle the island. The prince then destroyed a bridge that connected the island to mainland Tanzania.\n' +
+          '\n' +
+          'Kilwa Kisiwani grew rich and powerful because it was well placed on trading routes between Africa, China, India, and Arabia. Gold, porcelain, quartz, ivory, and other valuable treasures all passed through the island. Among the island’s own exports were spices, tortoiseshell, and slaves.  The start of its decline came in the 16th century, when the Portuguese completed their own fort on the island and came to dominate trade in the region.',
         status: true,
         imageSrc: KilwaKisiwani,
         imageAlt: 'Eastern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Cultural Visits'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Historical Visits'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1607,27 +1729,28 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 42,
         name: 'Songo Mnara',
-        description: '',
+        description:
+          'Jagged walls of stone and coral rising up amidst coconut palms and baobabs are all that remains of a port city from a golden age of trading. Back in the city’s heyday, these buildings would have been covered in bright white plaster adorned with intricate carvings. The island of Songo Mnara, located off the southern coast of Tanzania, is quite small, covering just over three square miles. But the 500-year-old ruins that lie at the island’s northern end loom large in history.\n' +
+          '\n' +
+          'Songo Mnara was an offshoot of the older and larger city of Kilwa Kisiwani, which was located on an island slightly farther north. Between the 13th and 16th centuries, Kilwa Kisiwani and Songo Mnara were central to the Indian Ocean trade and the Swahili Coast Culture. They were two of the many thriving Islamic settlements in East Africa, from Somalia to Mozambique, which served as conduits for trade with Arabia, India, and China. Goods from the African mainland such as gold, ivory, timber, and textiles, were traded for silver, gemstones, perfumes, and pottery.\n' +
+          '\n' +
+          'While Kilwa developed over many centuries, Songo Mnara was a planned city that came together much more quickly. It was only occupied for about 150 years, starting in the 14th century. Though centuries have passed, the now-remote site has gone largely undisturbed, so its distinct urban structure has been preserved. That structure gives modern archaeologists a glimpse into the Swahili culture at its height.\n' +
+          '\n' +
+          'At Songo Mnara, archaeologists have identified dozens of residences, six mosques, and a number of tombs. Many of the homes include spaces for hosting traveling merchants and other guests. Merchants who arrived on monsoon winds would often stay for weeks or even months, awaiting a change in the winds that would allow them to return home. It was this kind of arrangement that facilitated the cultural exchange that made Songo Mnara so special.\n' +
+          '\n' +
+          'As European explorers started staking claims to African land, the stone towns of the Swahili coast began to disappear. In 1505, the Portuguese established a fort at Kilwa Kisiwani, which marked the start of its decline.\n' +
+          '\n' +
+          'Archaeologists continue to excavate the ruins at Songo Mnara, which was designated a UNESCO World Heritage Site in 1981. With each new fragment of pottery and cache of coins found at the site, another piece of this site’s rich history is revealed.',
         status: true,
         imageSrc: SongoMnaraKilwa,
         imageAlt: 'Eastern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Cultural Visits'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Historical Visits'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1635,27 +1758,20 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 43,
         name: 'Kilwa Kivinje',
-        description: '',
+        description:
+          'The quiet town of Kilwa Kivinje became the terminus of the southern slave caravan in the early 1800s. The mainland port of Kilwa Kivinje is a wide sandy port, which is still an ideal landing beach for wooden boats. By 1850, Kivinje had grown into a settlement of 12-15,000 inhabitants, including many wealthy families of Indian descent, and the regional center of the slave trade. Towards the end of the 19th century, Kilwa Kivinje became the German administrative center. With the abolition of the slave trade and German wartime defeats, Kilwa Kivinje’s short heyday came to an end.\n' +
+          '\n' +
+          'Kilwa Kivinje is now a small atmospheric village with a Swahili village feel and an intriguing mix of German colonial and Omani Arab architecture, filled with ruins revealing the prosperous city it was in the 19th century. Old colonial buildings and crumbling remains of ancient Omani structures are disseminated around the city. Kivinje owed its prosperity to several trades, including slave and ivory trade.',
         status: true,
         imageSrc: KilwaKivinje,
         imageAlt: 'Eastern Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Cultural Visits'],
+          GtActivities['Historical Visits'],
+          GtActivities['City Tours'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1663,27 +1779,40 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 44,
         name: 'Pangani',
-        description: '',
+        description:
+          '<br/>Pangani is situated about 50km south of Tanga on the mouth of River Pangani that flows from the slopes of Mount Kilimanjaro.<br/>' +
+          '<br/>The name Pangani owes to the river that runs through northern part of the Historical Town. Pangani is a very old town, it is believed to be established before 6th Century BC as a coastal dhow port, but later became a station on the caravan route from Late Tanganyika for exporting slaves and ivory. Several historical sites in and around the town serve as reminders for the strong Arabic influence and the later German, British colonial era in Tanganyika. The town served as port, when sisal plantations were set up in the colonial period, before the Tanga Harbor constructed. Nowadays it is mainly a fishing town with a lot of coconut trees, providing nice beaches for quiet vacation.<br/>' +
+          '<br/>Attraction: Pangani Falls, a water fall that provides electricity for Tanga, Dar es Salaam, Arusha and Moshi. Boat Safari on the Pangani River, which hosts birds and crocodiles. Maziwi Island, which was submerged due to environmental destruction and the effect of the global climate changes; is a nature reserve which provides ground for snorkeling opportunity and dolphins tour. Walking tour in the historical town to see some of old buildings aged more than 200 years old, visits to a former slave labor camps and slave market site.<br/>' +
+          '<br/>Pangani is close to the Saadani National Park (especially on the Mkwaja side) the only place where one can see wildlife basking on the beach.<br/>' +
+          '<br/>There are plenty of activities to keep you busy, with most of the good lodges offering diving, snorkelling, sailing and kayaking. Some also offer mountain-biking, horse-riding and cultural visits to local towns and villages. If you stay in the Pangani area it is possible to do motorboat safari along the river.<br/>' +
+          '<br/>Several historical sites in and around the town serve as reminders of the strong Arabic influence and later colonial era of German East Africa and British Tanganyika Territory. The district boma or headquarters is the most impressive building remaining from the period of Zanzibari rule.<br/>',
         status: true,
         imageSrc: Pangani,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Why visit Pangani?',
+            answer:
+              'Pangani is a quiet place to rest and relax. It lays on the Indian Ocean and offers many things to do on your visit. It is a nice place to enjoy the beach, to go on snorkeling or diving excursions. Most of the lodges offer windsurfing, kayaking and dhow rides as well as fishing trips. Longer trips such as the one to Zanzibar Island, a cruise on the Pangani River or possibly even a trip further south to the recently demarcated <b>Saadani national park</b> can be arranged.',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'When is the best time of to visit Pangani?',
+            answer:
+              'The coast of Tanzania experiences a classic tropical weather pattern, characterized throughout the year by high temperatures, with rainfall year round, but with two large seasonal peaks driven by changes in the equatorial winds caused by the rotation of the earth with respect to the sun.<br/>' +
+              'The best times down on the coast are generally considered to be Jul/Oct and Dec/Mar, when there is usually slightly less rain and wind.\n',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Cultural Visits'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Biking'],
+          GtActivities['Historical Visits'],
+          GtActivities['Dhow Cruise'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1691,27 +1820,32 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 45,
         name: 'Bagamoyo',
-        description: '',
+        description:
+          'Bagamoyo, is a historic coastal town founded at the end of the 18th century, though it is an extension of a much older (8th century) Swahili settlement, Kaole. It was chosen as the capital of German East Africa by the German colonial administration and it became one of the most important trading ports for the Germans along the East African coast along the west of the Indian Ocean in the late 19th and early 20th century. Today, it is the capital of the Bagamoyo District in Pwani Region. Bagamoyo town is now one of UNESCO’s World Heritage Sites with rich cultural heritage waiting you to explore.\n' +
+          '\n' +
+          'This town was once a most important trading port along the East African Coast and a German East Africa Capital. Bagamoyo is home to many ethnic groups, including the Wakwere, Wazaramo and Wazigua. Different cultures including people of Arab descent coexist in Bagamoyo making the town a peaceful and friendly place for visitors from all over the world.\n' +
+          '\n' +
+          'The town of Bagamoyo was one of the most important trading ports on the East African coast and the penultimate stop of slave and ivory caravans travelling on foot from Lake Tanganyika on their way to Zanzibar. Missionaries active in abolishing the slave trade made Bagamoyo, whose name means ‘bury my heart’ in Kiswahili, a centre for their activities.\n' +
+          '\n' +
+          'Bagamoyo is a quiet village with a few German colonial buildings still standing. In the past, the town of Bagamoyo was one of the most important trading ports on the entire East African coast. Its port was the penultimate stop of slave and ivory caravans that travelled on foot all the way from Lake Tanganyika. Once the caravans reached Bagamoyo, the slaves and ivory were shipped by dhow to Zanzibar, where they were then dispatched all over the world. These days, Bagamoyo is a centre of dhow building in the region and along the Tanzanian Coast.',
         status: true,
         imageSrc: Bagamoyo,
         imageAlt: 'Eastern Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Bagamoyo',
+            answer:
+              'Bagamoyo is located 75 kms North of Dar-es-Salaam, 1-1.5 hours drive. One can catch daily buses commuting between Dar-es-Salaam Mwenge local bus station and Bagamoyo Town.',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Cultural Visits'],
+          GtActivities['Biking'],
+          GtActivities['Historical Visits'],
+          GtActivities['City Tours'],
+          GtActivities['Museum / Monument'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Eastern Circuit'],
@@ -1729,27 +1863,40 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 46,
         name: 'Gombe Stream National Park',
-        description: '',
+        description:
+          'Covering an area of only 56 km, Gombe National Park is Tanzania’s smallest park. The park’s most attractions are its famous primate inhabitants and its connection to Jane Goodall. First researched in the 60’s by Jane Goodall, Gombe is heaven for chimpanzee lovers.\n' +
+          '\n' +
+          'Many of Gombe’s chimps are well habituated inside the park. Though it is a little difficult, sweaty walking steep hills and valleys, but the experience is so tempting. If you head out early in the morning sightings are nearly guaranteed and incredible. The experience is one that you are unlikely to forget.\n' +
+          '\n' +
+          'Gombe is placed at the shore of Lake Tanganyika. The forest is verdant and 13 streams run down the escarpment to the sandy beach. The view of the forested slopes touching the steep escarpment is the most appealing one.\n' +
+          '\n' +
+          'In addition to the main attraction chimpanzee, the park is also home to a troop of habituated olive baboon that can usually be found on the lakeshore. There are several other monkey species present, including red colobus monkey, while red-tailed, which are sometimes hunted by the chimps.\n' +
+          '\n' +
+          'The park also harbours diverse colourful bird species. The notable are African broadbill, Black saw-wing, Crowned eagle, Double-toothed barbet, Kenya rufous sparrow, Livingstone’s turaco, Palm-nut vulture, Peter’s twinspot, Red-capped robin-chat, Red-chested cuckoo, Ross’s turaco, Yellow-rumped tinkerbird.\n' +
+          '\n' +
+          'Despite chimp tracking, you can take walks along the lakeshore, and go and see Jane’s old chimp-feeding station, the viewpoint on Jane’s Peak and Kakombe Waterfall.',
         status: true,
         imageSrc: GombeStreamNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best time to Visit Gombe Stream National Park',
+            answer:
+              'Best Time to Visit Gombe National Park Trekking chimpanzees in can be done throughout the year, but the odds of finding them quickly is better towards the end of the Dry season, from July to October.',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Gombe Stream National Park.',
+            answer:
+              'Gombe Stream National Park. Distance from Arusha: To Kigoma it is roughly 1,020 km (633 miles) - about 4 hours by plane and from Kigoma to Gombe is 16 km (9 miles)',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Chimpanzee Watching'],
+          GtActivities['Forest Walk'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Western Circuit'],
@@ -1757,27 +1904,57 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 47,
         name: 'Mahale Mountains National Park',
-        description: '',
+        description:
+          'Mahale is located in the Western Tanzania to the South of Kigoma town, it is bordering Lake Tanganyika-the World’s longest, second deepest and least polluted freshwater lake-harbouring an estimated 1000 fish species.\n' +
+          '\n' +
+          'The park is famous among visitors because of holding an abundant number of chimpanzees. In addition to chimpanzee, Mahale is heaven for other primates. The beauty of the park includes rivers and waterfalls and white sandy beached around the shoreline of the Lake.\n' +
+          '\n' +
+          'The wild adventure leads through the misty forests. During these walks hikers also have the chance to spot other animals such as roan and sable antelope, warthog mongoose, and sometimes even lion and leopard. Crocodiles are also known to live in the park but rare.\n' +
+          '\n' +
+          "Here you can also spot Tanzania's densest population of primates like red colobus, yellow baboon, red-tailed monkeys and vervet monkeys. Hippos can also be witnessed in Lake Tanganyika, swimming in the crystal clear waters.\n" +
+          '\n' +
+          'Home to almost 355 species of birds, the park is also famous as birders paradise. On the sandy beaches of the Lakeshore visitors can spot pelicans and different storks as well as malachite kingfishers, pied king fishers, fish eagles Livingston’s turacos, narina trogons, crested guinea fowls and blue cheeked bee and many more colourful birds.\n' +
+          '\n' +
+          'The lake also harbors over 250 endemic fish species. You can also get the chance of snorkelling in the shallow waters of the Lake and swim with the multi-colored fishes.',
         status: true,
         imageSrc: MahaleMountainsNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Mahale Mountains National Park',
+            answer:
+              '\n' +
+              '\n' +
+              'The park can be accessed throughout the year by road, water and air.\n' +
+              '\n' +
+              'Road: From Kigoma town the park can be accessed by road 128km (5hrs drive) south, the road running south-east of Lake Tanganyika shore\n' +
+              '\n' +
+              'Air: Using charted flight (Zantas air, Coastal aviation, Air Excel and safari air link) from all major cities and towns\n' +
+              '\n' +
+              'Water: Also can be reached by ship (9-10hrs cruise) via Lake Tanganyika to Lagosa point and then by using boat with 30 minutes cruise to the park. Also there is a public transport at Rukoma village or Mgambo village where you can hire a local boat or arrange with park for boat pick up, or public transport to Park Headquarter.\n' +
+              '\n' +
+              'Distance from Arusha: to Kigoma it is roughly 1,020 km (633 miles)\n',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best Time to Visit Mahale National Park',
+            answer:
+              '\n' +
+              '\n' +
+              'May to October is considered the best season to visit the park. Chimpanzees can be spotted in groups, the lake illuminates in the rays of the sun so the colourful fishes.\n' +
+              '\n' +
+              'November to April is the Wet Season. During this time the waterfalls are in full flow and birding is at its peak. Colorful migratory birds can be easily seen in an abundant number.\n' +
+              '\n' +
+              'However, Mahale can be accessible all round the year.\n',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Chimpanzee Watching'],
+          GtActivities['Fishing / Sport Fishing'],
+          GtActivities['Forest Walk'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Western Circuit'],
@@ -1785,27 +1962,50 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 48,
         name: 'Saanane Island National Park',
-        description: '',
+        description:
+          'Covering an area of about 2.20 square Kilometers, Saanane National Park is located on an island in Lake Victoria. The park got its name from its former owner Mzee Saanane Chawandi.\n' +
+          '\n' +
+          'In 1964, Saanane was the first zoo in Tanzania. Later in 1991, it was recognized as a game reserve and then in 2013, it was gazetted as a National Park.\n' +
+          '\n' +
+          'The park can be reached in about 20-15 min boat ride from Mwanza town of Tanzania. The Park is also famous for its location within the city of Tanzania. With lots of adventures, the park welcomes visitors who are coming for a memorable Tanzania Safari.\n' +
+          '\n' +
+          "The Park is a resident to mammals like Impala, Velvet Monkeys, Rock Hyrax, and Wild Cats. The presence of “De-brazza's Monkey” distinguishes the park as the only Park in the country inhabiting the species.\n" +
+          '\n' +
+          'Reptiles can also be found in the park, including crocodiles, Monitor Lizards, Agama Lizards, Pancake and Leopard Tortoises, Snakes particularly Python.\n' +
+          '\n' +
+          'The aquatic part of the Park inhabits a variety of fisheries life, mainly Tilapia and Nile Perch.\n' +
+          '\n' +
+          'As for birds, there are 44 species documented in Saanane Island National Park. Many more can be found at different times of the year. ',
         status: true,
         imageSrc: SaananeIslandNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best Time to Visit Saanane Island National Park',
+            answer:
+              'Saanane National Park is best for all year round. November to March is best for watching most varied birdlife. The scenery remains the greenest during this period. June-August is the dry season and great for game viewing, rock hiking and Picnicking.',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Saanane Island National Park',
+            answer:
+              '\n' +
+              '\n' +
+              'Saa Nane Island National Park is located within the city of Mwanza Town, 2 kilometers Southwest of it and centered in the Gulf of island of Lake Victoria. \n' +
+              '\n' +
+              'By Air: The Island can only be reached by road or air from Dar es Salaam and Kilimanjaro International AirPort \n' +
+              '\n' +
+              'By Railway: It can be reached by taking the railway to Mwanza City from Arusha. \n' +
+              '\n' +
+              'By Sea: Some travel by sea to Mwanza Port from nearby islands like Uganda, Kenya and Bukoba.\n',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Picnicking'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Western Circuit'],
@@ -1813,27 +2013,37 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 49,
         name: 'Rubondo Island National Park',
-        description: '',
+        description:
+          'Rubondo Island national park has a size of 240 km². It is only one of two Tanzanian national parks located on an island in Lake Victoria, the world’s second-largest lake. It is located in the southwest corner of the lake. Rubondo became a game reserve in 1965, to provide a sanctuary for animals. Tanzania gazetted Rubondo in 1977 as a national park. It is uninhabited and consequently 90% of the island remains forest today. With nine smaller islands under its wing, Rubondo also protects precious fish breeding grounds.\n' +
+          '\n' +
+          'The habitat of Rubondo Island is mixed evergreen and semi-deciduous forest, which covers about 80% of the island’s surface area, hosting a variety of common species. The eastern lakeshore is characterized by rocky areas and sandy beaches whilst the western shore supports extensive papyrus swamps, lined with date palms.\n' +
+          '\n' +
+          'Rubondo is home to a surprising number of large animals. Elephant, giraffe, bushbuck, Bush buck, Chimpanzee, hippo and crocodile. Except the wildlife viewing, guests can also embark on a variety of other activities that promote eco-sensitivity.\n' +
+          '\n' +
+          'The park hosts a diverse number of birds. With 300 endemic and migratory bird species, Rubondo Island is an ornithologist’s dream. The most common species are African darters, egrets, pied kingfisher, the high-pitched screeches and African grey parrot. Rubondo also holds a very high concentration of fish eagles.',
         status: true,
         imageSrc: RubondoIslandNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best time to Visit Rubondo Island National Park',
+            answer:
+              'The best time to visit Rubondo is during the dry season, between June and October. December through to February experiences a large number of migrant bird species visit the island so for keen birders this can also be a great time to visit.',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Rubondo Island National Park',
+            answer:
+              'By Boat: By using own boat from Mwanza to Kageye Park Headquarters.\n' +
+              'By Road: From Mwanza to Muganza 270 km.\n' +
+              'By Air: Schedule and chattered flights from Arusha, Bukoba, Kilimanjaro, Dar es Salaam, Mwanza and other Major Cities',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Western Circuit'],
@@ -1841,27 +2051,31 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 50,
         name: 'Ukerewe Island',
-        description: '',
+        description:
+          'Ukerewe is the largest island in Lake Victoria and the largest inland island in Africa, with an area of approximately 530 km². Ukerewe Island is situated in the Ukerewe District, nearly 50 km north of Mwanza to which it is linked by ferry, and it takes 3 to 4 hours to travel.\n' +
+          '\n' +
+          'Ukerewe Island is situated 45 km (25 nautical miles) north of Mwanza to which it is linked by ferry, but a shorter vehicle ferry crossing of only 3.8 km also links the island across the Rugezi Channel to a dirt road on the eastern lake shore, which runs to Kibara and Musoma. The shoreline of Ukerewe Island is carved into numerous bays and it is surrounded by at least a dozen smaller islands.\n' +
+          '\n' +
+          'The shoreline of Ukerewe Island is carved into numerous bays and it is surrounded by 27 small islands surrounding the neighbourhood with 3 of them not occupied by humans and the rest are occupied by fishermen with their families. Its largest community is Nansio. Its simple lifestyle and rocky terrain broken by lake vistas and tiny patches of forest, makes an intriguing, offbeat diversion.\n' +
+          '\n' +
+          'The few proper sights include agricultural activities in which the residents farm maize, sweet potatoes, millet, cassava and rice, including the main activity here, fishing. Seen from Nansio are 27 small islands surrounding the neighbourhood with 3 of them not occupied by humans and the rest are occupied by fishermen with their families.\n' +
+          '\n' +
+          'The are visits to Kagunguli, the oldest Roman church built in 1895 located near a hill with the same name; the old school and dispensary which were built between 1902 and 1913 and surviving to date with few repairs all are still in use. The Chief’s palace, Bukindo built from 1922 to 1923, the modest European-style palace of the island’s former king, which is still in use is a must see place if you are in the area and find out from the palace guide why one of its rooms has remained closed more half a century.\n' +
+          '\n' +
+          'Others include, Irondo point where visitors see amazing views of Mwanza city, Entebbe in Uganda and Nairobi in Kenya; a chance to be part of a traditional dance group Buzegwe staff band that is sure to leave you fascinated; a visit to the historic sites, including graves in the area.\n' +
+          '\n' +
+          'The dancing Stone in Ukara Island, a neighbouring island is also another attraction in the area, including crocodile tree and the knife of truth and learn how the people eke out a living.\n',
         status: true,
         imageSrc: UkereweIsland,
         imageAlt: 'Western Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Cultural Visits'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Biking'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Western Circuit'],
@@ -1869,27 +2083,41 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 51,
         name: 'Burigi-Chato National Park',
-        description: '',
+        description:
+          'Recently gazetted as a National Park Burigi-Chato combines 3 former Game Reserves into 1 unit that is now 4,707 sq km making it the 4th largest National Park in Tanzania.\n' +
+          '\n' +
+          'Stretching from Lake Victoria in the East to the Rwandan boundary in the West, Burigi-Chato is an enormous piece of wild country encompassing fresh water lakes, long hills, rocky crags along escarpments, deeply set valleys lined with forest, open plains, swamps, rivers, flood plains and hundreds of square kilometres of medium and tall grass wooded savanna - mostly combretum and Terminalia known as Miombo. \n' +
+          '\n' +
+          'Park Attractions\n' +
+          '\n' +
+          'A key attraction in this National Park are the lakes with Lake Burigi being the 3rd largest lake in the country. It is a long lake with a number of islands, inlets and bays along its length, some of which are swampy and are home for the rare Sitatunga antelope, and possibly also the even rarer shoe billed stork.',
         status: true,
         imageSrc: BurigiChatoNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'How to Get to Burigi-Chato National Park',
+            answer:
+              '\n' +
+              '\n' +
+              'The nearest local town is Chato which has an International Airport, and private charters are possible to an airstrip near the Nkonje Ranger Post beside Lake Burigi, or to the Birahamulo airstrip. \n' +
+              '\n' +
+              'by road to the park is also possible as the park is connected to close towns including Chato and Karagwe\n',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Best Time to Visit Burigi-Chato National Park',
+            answer:
+              'This part of East Africa has two rainfall peaks, November / December and another in March / April, with dry weather from June to September. Temperatures are pleasant with cool nights and warm days. The best time to visit is the Park is on June – September',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
           GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Picnicking'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Western Circuit'],
@@ -1897,27 +2125,43 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 52,
         name: 'Ibanda-Kyerwa National Park',
-        description: '',
+        description:
+          'The Ibanda-Kyerwa National Park, previously Ibanda Game Reserve, is a national park in Tanzania. Originally established in 1974, it was designated a national park in 2019. The national park is located in Kagera Region and has an area of 200 square kilometres.\n' +
+          '\n' +
+          'The unseen treasure in the Western corner of the country, the paradise with scenic beauty of rolling hills, valleys, plains of Acacia savannah, the central basin dissected by seasonal rivers filling the scattered lakes and swamps all blow your visit to this undiscovered park. \n' +
+          '\n' +
+          'The Park is exceptional gifted with a variety of attractions ranging from savannah, lakes, rivers and swamps inhabited with different kinds wildlife. The park is endowed with various wild animals such as African Buffalo, Hippos, Leopards, Antelopes like reed buck and roan and birds. \n' +
+          '\n' +
+          'Kagera River\n' +
+          '\n' +
+          'This is one of the largest rivers in Tanzania which act as a boundary with Rwanda. The river separates the two nations and also the two national parks; the Ibanda-kyerwa National park in Tanzania and Akagera National Park in Rwanda. Also to the north the rivers is a boundary with Uganda and this makes easy to visit even from Uganda and Rwanda.\n' +
+          '\n' +
+          'Game drive\n' +
+          '\n' +
+          'With its open savannah grasslands, the scattered lakes, hills, valleys, Kagera river and basins a game drive inside the park is inspirational to many visitors as they can see animals like herds of buffalo, zebra, leopards, topi, eland, impala, waterbuck, reedback and giraffe.',
         status: true,
         imageSrc: IbandaKyerwaNationalPark,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'Getting to Ibanda-Kyerwa National Park',
+            answer:
+              '\n' +
+              '\n' +
+              'The park is accessible by road and air\n' +
+              '\n' +
+              'Road: The Park can be reached by road from Bukoba to Murongo (220km) or from Chato to Murongo (327km) and also from Uganda via Murongo town which is about 3.5km from the Park.\n' +
+              '\n' +
+              'Air: The park can be accessed by scheduled flight via Chato or Kigoma Airports\n',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
           GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Night Game Drives'],
+          GtActivities['Picnicking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Western Circuit'],
@@ -1925,27 +2169,26 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 53,
         name: 'Lake Tanganyika',
-        description: '',
+        description:
+          'Lake Tanganyika is the world’s longest (660km), deepest in Africa and second-deepest in the world (more than 1436m) and second-largest (by volume) freshwater lake. At somewhere between nine and 13 million years old, it’s also one of the oldest. Thanks to its age and ecological isolation it’s home to an exceptional number of endemic fish, including 98% of the 250-plus species of cichlids. Cichlids are popular aquarium fish due to their bright colours, and they make Tanganyika an outstanding snorkelling and diving destination.\n' +
+          '\n' +
+          'Comparatively narrow, varying in width from 10 to 45 miles (16 to 72 km), it covers about 12,700 square miles (32,900 square km) and forms the boundary between Tanzania and Congo (Kinshasa). It occupies the southern end of the Western Rift Valley, and for most of its length the land rises steeply from its shores. Its waters tend to be brackish. Though fed by a number of rivers, the lake is not the centre of an extensive drainage area. The largest rivers discharging into the lake are the Malagarasi, the Ruzizi, and the Kalambo, which has one of the highest waterfalls in the world (704 feet [215 metres]). Its outlet is the Lukuga River, which flows into the Lualaba River.\n' +
+          '\n' +
+          'Lake Tanganyika is situated on the line dividing the floral regions of eastern and western Africa, and oil palms, which are characteristic of the flora of western Africa, grow along the lake’s shores. Rice and subsistence crops are grown along the shores, and fishing is of some significance. Hippopotamuses and crocodiles abound, and the bird life is varied.\n' +
+          '\n' +
+          'Many of the numerous peoples (predominantly Bantu-speaking) living on the lake’s eastern borders trace their origins to areas in the Congo River basin. The lake was first visited by Europeans in 1858, when the British explorers Sir Richard Burton and John Hanning Speke reached Ujiji, on the lake’s eastern shore, in their quest for the source of the Nile River. In 1871 Henry (later Sir Henry) Morton Stanley “found” David Livingstone at Ujiji. Important ports situated along Lake Tanganyika are Bujumbura (Burundi), Kalemi (Congo), and Ujiji and Kigoma (Tanzania).',
         status: true,
         imageSrc: LakeTanganyika,
         imageAlt: 'Western Circuit',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Scuba Diving'],
+          GtActivities['Picnicking'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Western Circuit'],
@@ -1953,27 +2196,62 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 54,
         name: 'Lake Victoria',
-        description: '',
+        description:
+          "With a surface area of 68,800 sq km (26,600 sq mi), Lake Victoria is Africa’s largest lake. In addition, it's the largest tropical lake in the world, and the planet's second largest freshwater lake. Only North America's Lake Superior is larger.\n" +
+          '\n' +
+          'An irregular quadrilateral in shape, its shores, save on the west, are deeply indented. Its greatest length from north to south is 210 miles (337 km), its greatest breadth 150 miles (240 km). Its coastline exceeds 2,000 miles (3,220 km). Its waters fill a shallow depression in the centre of the great plateau that stretches between the Western and Eastern Rift Valleys. The lake’s surface is 3,720 feet (1,134 metres) above sea level, and its greatest ascertained depth is 270 feet (82 metres). Many archipelagos are contained within the lake, as are numerous reefs, often just below the surface of the clear waters. Lake Victoria has more than 200 species of fish, of which the Tilapia is the most economically important. The lake’s basin area covers 92,240 square miles (238,900 square km).\n' +
+          '\n' +
+          'The lake’s shores vary in aspect. The lake’s southwestern coast is backed by precipices 300 feet (90 metres) high, which give way on the western coast to papyrus and ambatch swamps marking the delta of the Kagera River. The lake’s deeply indented northern coast is flat and bare. A narrow channel leads into the Kavirondo Gulf, which has an average width of 16 miles (25 km) and extends for 40 miles (64 km) eastward to Kisumu, Kenya. The Ugandan cities of Kampala and Entebbe lie along or near the northern coast. At the lake’s southeastern corner is Speke Gulf, and at the southwestern corner Emin Pasha Gulf. Of the numerous islands in the lake, Ukerewe, north of Speke Gulf, is the largest, with wooded hills rising 650 feet (200 metres) above the lake. It is densely populated. At the lake’s northwestern corner are the 62 islands of the Sese archipelago, some of them of striking beauty.\n' +
+          '\n' +
+          'The Kagera River, the largest and most important of the lake affluents, enters the western side of Lake Victoria just north of latitude 1° S. The only other river of note entering from the west is the Katonga, north of Kagera. The lake’s only outlet is the Victoria Nile, which exits from the northern coast.\n' +
+          '\n' +
+          'The search by Europeans for the source of the Nile led to the sighting of the lake by the British explorer John Hanning Speke in 1858. Formerly known to the Arabs as Ukerewe, the lake was named by Speke in honour of Queen Victoria of England. A detailed survey of the lake was made by Sir William Garstin in 1901. Plans for gradually raising the level of the lake’s waters were completed in 1954 with the construction of the Owen Falls Dam (now the Nalubaale Dam) on the Victoria Nile at Jinja, Uganda. The dam provides hydroelectric power on a large scale and made the lake a vast reservoir. A second dam, Kiira, was later constructed 0.6 mile (1 km) from Nalubaale. It was completed in 1999 and began producing hydroelectric power the next year.\n' +
+          '\n' +
+          'The Lake Victoria region is one of the most densely populated in Africa; within 50 miles (80 km) of its shores live several million people, nearly all Bantu-speaking. There are local steamer services around the lake.',
         status: true,
         imageSrc: LakeVictoria,
         imageAlt: 'Western Circuit',
         rate: 5,
         faq: [
           {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
+            question: 'How Big is Lake Victoria?',
+            answer:
+              '\n' +
+              '\n' +
+              'It’s known in Kenya as Nam Lowe (body of endless water) and in Uganda as ’Nnalubaale (Home of the Gods). Both names allude to the grand scale of the lake – the largest in Africa, and second-largest in the world. \n' +
+              '\n' +
+              'Lake Victoria covers a gigantic area of 26,600 square miles and has a coastline that runs for over 2,000 miles around three countries. It contains approximately 1,000 islands, ranging from tiny spits of land to larger inhabited islets. Each inhabited island has its own character, customs, and history – visitors to Mfangano Island, for example, will be able to see ancient rock paintings made by the Twa (Batwa) people. \n',
           },
           {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
+            question: 'How Old is Lake Victoria?',
+            answer:
+              'Lake Victoria is approximately 400,000 years old, which is relatively young in geological terms. During its short life, it’s dried up several times – the most recent was about 17,000 years ago. Though it’s not known exactly why it dries up so often, it’s thought it could be the result of the lake’s comparably shallow waters – the average depth is just 25 metres. This sensitivity to drought is one of the reasons why scientists believe Lake Victoria could experience another arid spell in the next 500 years – a result of climate change. ',
+          },
+          {
+            question: 'What Animals Are Native to Lake Victoria?',
+            answer:
+              'Lake Victoria is a haven for wildlife. Alongside a spectacular array of birdlife and wetland animals, such as the clawless otter and sitatunga, the lake has fostered a number of native species. Among these are several types of cichlid, many of which are notable by their vibrantly-coloured scales. More elusive – or, possibly extinct – is the Lake Victoria Deepwater Catfish. Dwelling at the bottom of the lake, which is 82 metres at its deepest, this little-known catfish is thought to have been brought to near-extinction by the introduction of the Nile Perch.',
+          },
+          {
+            question: 'What Else Makes Lake Victoria Special?',
+            answer:
+              '\n' +
+              '\n' +
+              'Alongside its rich history, cultural wealth, and spectacular wildlife, Lake Victoria is special for being one of only two places in East Africa where it’s possible to watch the sunset over water without being on the coast! Lake Turkana in Northern Kenya is the other. \n' +
+              '\n' +
+              'Standing in the heart of East Africa, Lake Victoria is an enormous mass of water that stretches across countries, cultures, and histories. A visit to the lake offers the chance to explore the diversity of local communities, as well as sight some of Africa’s most prized wildlife.\n',
+          },
+          {
+            question: 'Who Named Lake Victoria?',
+            answer:
+              'Although the lake has different names corresponding to the different nations and communities it borders, it’s most common title derives from Queen Victoria of England.  The British explorer John Hanning Speke was the first European to find the lake in the 1850s during his expedition to find the source of the River Nile, and decided to dedicate his discovery to Queen and country.  Speke believed that the lake was in-fact the source he’d been looking for, and this is now widely accepted as being true (at least, it’s considered to be the main contributor to the ‘Fat River’)',
           },
         ],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Fishing / Sport Fishing'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Western Circuit'],
@@ -1991,27 +2269,26 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 55,
         name: 'Mbudya Island Marine Reserve',
-        description: '',
+        description:
+          'Mbudya, an uninhabited island north of Tanzania’s major city, Dar es Salaam, is one of the four islands that make up the Dar es Salaam Marine Reserve. \n' +
+          '\n' +
+          'The island lies close to Kunduchi fishing community and takes around 15-20 minutes motorboat ride crossing from the mainland. It is situated about 3 km offshore, within easy reach of the hotels on the North coast of Dar es Salaam.\n' +
+          '\n' +
+          'The beautiful Mbudya Island is located in the midst of the Indian Ocean resembles Dar es Salaam’s Zanzibar. Mbudya Island, with its white-sand beaches and crystal clear turquoise seas, is the ideal getaway for anyone looking to escape the rush and bustle of Dar es Salaam. Sunbathing, swimming, snorkeling, and simply spending time on the seashore with friends are all popular activities on this island.\n' +
+          '\n' +
+          'The Island is characterized with sand beaches on the western and eastern sides. On the western side, it is possible to have barbecued fish with chips and drinks under casuarina trees and Bandas (local shade facilities) in which one can rest in. The island has a restaurant serving sea food and a variety of beverages under the shade of palm trees or palm frond thatched huts.',
         status: true,
         imageSrc: MbudyaIslandMarineReserve,
         imageAlt: 'Ocean Islands',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Historical Visits'],
+          GtActivities['Picnicking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Ocean Islands'],
@@ -2019,27 +2296,37 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 56,
         name: 'Bongoyo Island Marine Reserve',
-        description: '',
+        description:
+          'Bongoyo Island Marine Reserve is uninhabited Island, located 2.5km north of the country capital city, Dar es Salaam. It is the most frequently visited island of the Dar es Salaam Marine Reserves System (DMRS).\n' +
+          '\n' +
+          'The island lies close to the Msasani Peninsula is reachable by means boat ride, it takes only 30 minutes from the mainland. The point of departure for most visitors to the island is “the Slipway mall complex” on the western side of the Msasani Peninsula.\n' +
+          '\n' +
+          'The underwater habitat range from shallow gently sloping coral reefs, sandy expnses and sea grass beds. Coastal shores of this island support several clearly defined communities of plants and animals. Their distribution is predominantly determined by physical conditions including the type of substrates (whether sedimentary or rock), slope of substrates, tidal and current regimes, exposure to wave action and the influence of fresh water. The main coastal habitats around Bongoyo Island include sand beaches (beach I and II), coral reefs, sea grass beds, rocky shores, lagoons (shark lagoon) and algal beds.\n' +
+          'FAUNA AND FLORA AT BONGOYO\n' +
+          '\n' +
+          'The Island has forest with vegetation described as bush land with emergent trees. Plant species are chiefly characteristic of the dry land coastal forest of East Africa.\n' +
+          '\n' +
+          'About 59 plant families are found on the Island. Both island of Bongoyo and Mbudya have very similar vegetation type differing by few aspects. Sand dunes of these islands are colonized by pioneer species such as Cyperus crassipes, Crotolaria laburuodes, Tephrosia pumila var aldabresis, T. pumila var dumesis, Asytasia gangentica and Ipomoea pesi-caprae. \n' +
+          '\n' +
+          'Fishes around the coral reef and the seagrass beds includes Butterfly fish Chaetodontidae, Sweet lips Haemulidae, Grouper, Serranidae and banded coral shrimps Stenopus hispidus. Other intertidal organisms includes Sea urchin (Diadema sp), Giant clamps (Tridacna sp), Octopus (Octopodidea), Tigger cowry, (Cyprea tigris), Starfish (Protoreaster linck), Cushion starts (Oreasteridae) Nudibranchia, Hermit crabs (Anomura), Edible sea cucumbers (Holothuridae) and Sea turtles are reported to be frequently seen by the divers over the reefs. \n' +
+          '\n' +
+          'Two species of Hawksbill (Eretmochely imbricate) and Green turtles Chelonea mydas are nesting on on the beaches of Bongoyo and Mbudya islands.\n' +
+          '\n' +
+          'On Bongoyo island there are two mooring sites where the visiting boats anchor. There is a number of bandas on the sand beach for resting (roof only). Msasani Slipway has a mobile bar, which serve cold drinks and can serve fish and chips for visitors. The staff ensures that the area is clean and tidy at the end of the day. There is one Honorary Ranger who is always at service\n' +
+          '\n' +
+          'The Island is approximately 30 minutes ride from the mainland with motorized dhow from Msasani Slipway and 10 min by speedboat from Msasani Bay.\n',
         status: true,
         imageSrc: BongoyoIslandMarineReserve,
         imageAlt: 'Ocean Islands',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
           GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Picnicking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Ocean Islands'],
@@ -2047,27 +2334,24 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 57,
         name: 'Pangavini Island Marine Reserve',
-        description: '',
+        description:
+          'Pangavini Island Marine Reserve is another uninhabited island located in the northern of the country capital city, Dar es Salaam and is one of the seven islands of the Dar es Salaam Marine Reserve System (DMRS). The island is small, only about 250 m long; it has a rocky coastline without beaches. \n' +
+          '\n' +
+          'It provides protection for several important biological diversity and tropical habitats; sea grass beds, Coral reefs and different fish species.\n' +
+          '\n' +
+          'Pangavini Island has the splendour of being the nocturnal home of most of the birds that hove over Dar es Salaam city during the day. It is also the nesting sanctuary of the birds. The reserves also save as a stopover of migratory birds during their flight from winter.\n' +
+          '\n' +
+          'Pangavini Island is an important breeding, resting and feeding site to a variety of rats, birds and reptiles. The area is unique due to their good scenic diving and snorkeling sites and there are numerous and extensive sea grass beds within the reserve area.',
         status: true,
         imageSrc: PangaviniIslandMarineReserve,
         imageAlt: 'Ocean Islands',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Picnicking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Ocean Islands'],
@@ -2075,27 +2359,21 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 58,
         name: 'Fungu Yasin Sand Bar',
-        description: '',
+        description:
+          'This is unique Marine Reserve which is an island of sand bank seen only during low tide and is devoid of vegetation. It is located in the northern part of Dar es Salaam after Mbudya Island Marine Reserve. The lower intertidal zone on the west and north is sandy with abundant sea grass mixed together with coral patches. The southeast lower intertidal areas are rocky.\n' +
+          '\n' +
+          'Coral reefs are found on the western and eastern side of the Island where more than 35% of coral cover is located on two locations: one on the southwest waters of less than 10 m (108,320 m2) and the other on the deeper waters (462,765 m2). \n' +
+          '\n' +
+          'Like other DMRS islands the dominant sea grass species are Thallasodentron ciliatum and Thalassia hemprichii. Animals in the intertidal flats include sea cucumbers, octopus, sea urchin, giant clamps, rock crabs, tigger cowry, starfish, cushion starts, nudibranchia and crabs.',
         status: true,
         imageSrc: FunguYasinSandBar,
         imageAlt: 'Ocean Islands',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Picnicking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Ocean Islands'],
@@ -2103,27 +2381,25 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 59,
         name: 'Sinda Island Marine Reserve',
-        description: '',
+        description:
+          'This reserve is found in the Southern Coast of Dar es Salaam (Kigamboni).Inner and Outer Sinda Islands Marine Reserve was about 288.7 Hectares, Inner and Outer Sinda Islands cover an area of 23.31 and 23.96 Hectares, respectively. Sinda Islands coastlines include rocky cliffs and sandy beaches\n' +
+          '\n' +
+          'In Sinda, the maximum depth is less than 10 m. Seawards of the reserves, the deep water (> 50 m) is just 1.8 km and 3.2 km away from Outer Sinda and Outer Makatumbe Islands, respectively. Proximity to deep waters makes the seawards sides of the reserves prone to high tidal currents and waves, especially during spring tides. The seawards sides of all reserves can be described as high energy areas (ie. high wave impact areas) and are characterised by rock cliffs.\n' +
+          '\n' +
+          'Interesting sandy beaches are found on the north and south of Inner Sinda Island and on landward of Sinda Island. Beaches on the Outer Sinda are located relatively in the middle of intertidal zones, hence are far from beautiful swimming sports. They can however, be useful for resting and other land based tourist activities, daytime lunch facilities.\n' +
+          '\n' +
+          'The south Inner Sinda beach has the best morphology for tourism related activities: The beach is larger and adjacent to the beach there is a flat land area large enough to build tourist facilities. Additionally, there is also a large beach on the north of Inner Sinda. The combination of beaches, land vegetation and good coral reefs make this place suitable for combined land-sea eco-tourism.',
         status: true,
         imageSrc: SindaIslandMarineReserve,
         imageAlt: 'Ocean Islands',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Picnicking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Ocean Islands'],
@@ -2131,27 +2407,72 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 60,
         name: 'Tanga Marine Park & Reserve',
-        description: '',
+        description:
+          'Tanga Coleacanth Marine Park\n' +
+          '\n' +
+          'This park is internationally renowned for the presence and high abundance of the coelacanth, Latimeria chalumnae. The rare ‘living fossil’ fish were re-discovered in the coastal waters off Tanzania in 2003. Since then has been sighted frequently within the TACMP area. Today, many of the park’s residents see the coelacanth as an icon for their rich coastal resources and opportunities for eco-tourism. \n' +
+          '\n' +
+          'Marine life consists of endangered species like dugong, which was sighted in 2006 off Kigombe, sea turtles, tropical fish species and migratory water birds. The park is focusing intensely on Coelacanth protection as a key component for achieving its species and biodiversity conservation objective.\n' +
+          '\n' +
+          'The Park covers an area of about 552 km² of which 85 km² are terrestrial and 467 km² are aquatic. It includes the bays of Tanga City and Mwambani, Tongoni estuary, and three small islands of Toten, Yambe and Karange. The uniqueness of the park includes: the occurrence and high rates of incidental catches of the CITES - listed and iconic Coelacanth, Latimeria chalumnae. TACMP is also a home to other endangered species like dugong, sea turtles and migratory water birds. The dugong was 1st sighted in 2006 off Kigombe.\n' +
+          '\n' +
+          'Toten Island \n' +
+          'Toten Island is located in Tanga Bay directly opposite Tanga Harbour. The island is covered by a lush coastal forest with huge baobab trees and has also ruins of early settlements. When the Portuguese controlled part of the coast, Toten Island seems to have been used for a prison. Later, according to historical records, the island was around 1854 occupied by a considerable number of inhabitants. Islamic monochrome and Chinese blue and white shards mostly of the 15th, 16th and late 18th and 19th centuries have been found here.\n' +
+          '\n' +
+          'There are also ruins of two mosques and German tombs of the turn of 19th century, as well as foundations and ruins of buildings of the German colonial era, when Toten Island served as a quarantine station and European graveyard, thus its name ‘Toten Island’, which is German for ‘island of the dead’. In 1884, the last inhabitants of the Island moved to Tanga. Research is needed to explore the history of the many ruins on Toten Island, which are also in urgent need of protection as historical sites. Toten Island also has small beaches and nature trails criss-crossing the forest and ruins and can be visited by boats, arranged by hotels and tour operators in Tanga.\n' +
+          '\n' +
+          'Yambe Island\n' +
+          'Yambe Island borders the southeast coast of Tanga Bay opposite of the Ras Nyamakuu peninsula. The island is surrounded by coral reefs and totally covered by coastal rag and mangrove forests. Uninhabited today, German records of the 19th century mention a small resident village of a local Arab ruler with his slaves. Maybe from his time or earlier, the island has ruins hidden in the forest, a walled grave and pillar tomb with large panels, enclosed by stones decorated with a herringbone pattern and a frieze of small panels. The herringbone pattern is a rare and unique feature Yambe Island in such tombs, but also sometimes found in ‘mihrabs’ of mosques.\n' +
+          '\n' +
+          'Tanga Marine Reserves\n' +
+          '\n' +
+          '    Kwale Island Marine Reserve\n' +
+          '    Kirui Island Marine Reserve\n' +
+          '    Ulenge Island Marine Reserve\n' +
+          '    Mwewe Island Marine Reserve\n' +
+          '\n' +
+          'Maziwe Sand Bar (Marine Reserve)\n' +
+          '\n' +
+          'Maziwe island marine reserve is a very small unvegetated island surrounded by coral reefs located about 8 kilometres (5.0 mi) south east of the town of Pangani off the northern coast of Tanzania.\n' +
+          '\n' +
+          'Maziwe / Maziwi Island is one of the oldest Marine Reserve in Tanzania which located about 15 miles from the cost of Pangani. It assumes that in 1912 the island was covered by a dense forest which was so lush. From the 1970 the trees were cut down and the island reverted to a sandbank .Around 1983 the last tree was seen on Maziwe and what is left today is a sun-kissed sand island exposed during low tide.\n' +
+          '\n' +
+          'The Maziwe Island was established in 1975 and given a status of a Reserve to protect this most important breeding place for sea turtles of the East Africa Coast as well as to take care of the important reef system around.\n' +
+          '\n' +
+          'Maziwe is also a diversity of nearly 400 species of fish, 35 general of hard and soft corals, sponges and algae as well as shoreline birds have been identified. The long reef slopes and beautiful coral gardens around the island are still visited by sea turtles looking for breeding places with records of about 200 nests of green and olive ridley turtles in a season when maziwe was still a forested island.\n' +
+          '\n' +
+          'Attractions\n' +
+          'Species of fish: In Maziwe Marine reserve you will find over 200 species of fish and 35 kinds of coral riffs which are found in the particular area.\n' +
+          'Birds: Many types of birds of different species are also found in and around the Island Reserve.\n' +
+          'Vegetation cover: The main island vegetation species that were found by then were huge trees like Casuarina cunninghamiana (Mivinje Bahari), Cocos nucifera (coconut plantations) fruit trees and other shrubs.\n' +
+          '\n' +
+          'Under water adventures : The area is also ideal for underwater adventures and is among the best diving destinations along the Eastern African Coast with a wide variety of underwater marine life.\n' +
+          '\n' +
+          'Activities: \n' +
+          '\n' +
+          '    Swimming and Snorkeling - Maziwe Island remains an ideal place for swimming, snorkeling and diving in the deep sea.\n' +
+          '    Sunbathing - Sunbathing and watching dazzling tropical fish is more impressive at this marine park.\n' +
+          '    Fishing - Maziwe Island serves as a fishing camp to a number of fishermen from different areas.\n' +
+          '\n' +
+          'Climate\n' +
+          'Rainfall - The coastal has tropical climate and it contain about two main rain seasons but heavy rains occurs between mid March to May.\n' +
+          'Temperature - The temperatures average between 25°C to 30°C\n' +
+          '\n' +
+          'Best time to visit\n' +
+          '\n' +
+          '    The Maziwe Island reserve is open and can be visited all round the year.\n' +
+          '    Dolphins favour the area and are frequently spotted',
         status: true,
         imageSrc: TangaMarinePark,
         imageAlt: 'Ocean Islands',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
+          GtActivities['Scuba Diving'],
+          GtActivities['Picnicking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Ocean Islands'],
@@ -2159,27 +2480,27 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 61,
         name: 'Chumbe Island Marine Sanctuary',
-        description: '',
+        description:
+          'Chumbe offers some of the most pristine and colourful coral reefs in the world, with over 200 species of coral providing a sanctuary for more than 400 species of colourful fish.\n' +
+          '\n' +
+          'To protect these coral reefs, diving is not permitted in the marine park. The reef is shallow enough to see everything very clearly with a mask, snorkel and fins. There is also a coral-rag forest, which is home to the endangered Ader’s Duiker, giant Coconut Crabs, hermit crabs and a variety of bird species.\n' +
+          '\n' +
+          'Knowledgeable guides take guests on daily snorkelling and forest tours. Chumbe can be visited for day trips or longer, staying in ‘eco-bungalows’ overlooking the Indian Ocean. Chumbe Island contains a lighthouse (which is still operational and was built by the British in 1904), a ruined mosque and the lighthouse keeper’s house, is now converted into a spectacular education centre and restaurant. \n' +
+          '\n' +
+          'All profits from tourism on Chumbe Island are reinvested into the conservation and education programs operating in the Park, and the island is staffed and managed by local Zanzibaris from the fishing community with voluntary support from overseas experts.\n' +
+          '\n' +
+          'The work of Chumbe Island Coral Park Ltd towards the sustainable management and protection of the Chumbe coral reefs has been recognized by the UN Secretary General in his report to the General Assembly on Protection of coral reefs for sustainable livelihoods and development, in preparation for the Rio+20 - United Nations Conference on Sustainable Development 4-6 June 2012. Under the heading “The role of national legislation in protecting coral reefs (including importance of inclusion of indigenous/local communities)”',
         status: true,
         imageSrc: ChumbeIslandMarineSanctuary,
         imageAlt: 'Ocean Islands',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
+          GtActivities['Walking / Hiking'],
+          GtActivities['Beach Relaxation'],
           GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Historical Visits'],
+          GtActivities['Scuba Diving'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Ocean Islands'],
@@ -2187,27 +2508,32 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 62,
         name: 'Mnemba Island Conservation Area',
-        description: '',
+        description:
+          'Mnemba Island is a single small island located about 3 km off the northeast coast of Unguja, the largest island of the Zanzibar Archipelago, Tanzania, opposite Muyuni Beach. It is roughly triangular in shape, about 500 m in diameter and about 1.5 km in circumference. It is surrounded by an oval reef seven by four kilometres in extent. These reefs have been declared a Marine Conservation area. Mnemba Island and its reef are sometimes called Mnemba Atoll which is incorrect because an atoll is an island that encircles a lagoon, which is not the case for Mnemba Island.\n' +
+          '\n' +
+          'The surrounding waters and area around Mnemba Island are an important breeding ground for Green Turtles while a host of migratory wading birds use the island as a secure roost. The fragile coral reef eco-systems support countless fish species and microorganisms while gigantic Whale Sharks, Humpback Whales and dolphins frequent the deeper waters. \n' +
+          '\n' +
+          'Diving & Snorkeling Sites Around Northern Zanzibar Island and Mnemba Island Marine Conservation Area\n' +
+          'Diving at Mnemba is a year-round event, with reasonably good conditions to be found on the atoll under almost all weather conditions and visibilities of 20 to 40 metres are the norm.\n' +
+          '\n' +
+          'Kichwani Reef: Kichwani Reef is a deep, clear, drift dive from 20 to 40 meters depending on the divers experience. Many coral species are found such as Mushroom, Honeycombe, Brain and Staghorn Coral to name just a few. Below 30 meters, a vertical wall of reef fish, Trumpet fish and large Napoleon Wrasse are commonly seen; lucky divers can spot Reef sharks, Eagle and Manta Rays.\n' +
+          '\n' +
+          'Wattabomi Site: Wattambomi is an excellent site for snorkels and novice divers. Schools of small reef fish, Regal Angelfish, Bluestreak Cleaner Wrasse, Semicircle Angelfish, Moorish Idols, Blue Spotted Rays, Lionfish are commonly seen. Take your time looking for Flounders and Soles. These fish lie on their side buried in the sand, and are very well camouflaged.  For most of the year, you will be treated to the beautifully patterned Striped Dolphin but the Bottlenose, Spinner and common Dolphins are also seen in the clear waters around Mnemba Atoll. This is an excellent photographic opportunity both above and below the water.\n' +
+          '\n' +
+          'Aquarium Site: The Aquarium’s depth is 20 meters. There is usually a slight current at this site. Patches of sandy bottom occur quite close to the reef with Surgeonfishes, Moorish Idols, Parrotfish, Groupers, large Hawksbill and Green Turtles along with White Tip reef sharks.\n' +
+          '\n' +
+          'West Gardens Site: Lies at a depth of 12 meters, and is a good spot for snorkels and novice divers.\n' +
+          '\n' +
+          'The Big Wall Site: Lies at a depth of 30 meters, which drops to 50 meters. You will descend down to 30 meters drifting along a vertical wall. On your silent drift along this wonderful wall you will be passed by different species of pelagic school’s of Rainbow Runner, Bluefin Trevally and common dolphin fish. Along the edge of the wall, you find some overhangs and small caves often filled with lobsters.',
         status: true,
         imageSrc: MnembaIslandConservationArea,
         imageAlt: 'Ocean Islands',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
-          GtActivities['Balloon Safari'],
-          GtActivities['Game Drives'],
-          GtActivities['Bird Watching'],
-          GtActivities['Wedding / Honeymoon'],
-          GtActivities['Great Migration'],
+          GtActivities['Beach Relaxation'],
+          GtActivities['Snorkeling / Swimming'],
+          GtActivities['Canoeing / Kayaking'],
         ],
         adventures: [GtItineraryCategory['Adventure Safaris']],
         category: GtDestinationCategory['Ocean Islands'],
@@ -2294,21 +2620,21 @@ export const GtDestinations: GladiolusToursDestinations = [
       {
         id: 64,
         name: 'Zanzibar Island',
-        description: '',
+        description:
+          'Also known as the Spice Island, the beautiful island of Zanzibar is full of culture and history, shinning white-sand beaches with palms swaying lazily in the sea breeze, together makes Zanzibar a fabulous place to explore as well as a dream to relax and unwind.\n' +
+          '\n' +
+          'Zanzibar is the semi-autonomous part of Tanzania in East Africa. It is composed of the Zanzibar Archipelago in the Indian Ocean, 25–50 kilometres (16–31 mi) off the coast of the mainland, and consists of many small islands and two large ones: Unguja (the main island, referred to informally as Zanzibar) and Pemba. The capital is Zanzibar City, located on the island of Unguja. Its historic centre is Stone Town, which is a World Heritage Site.\n' +
+          '\n' +
+          'The Island is heaven for water sports activities such as swimming, snorkelling, diving with lots of luminous fish or just grazing over nearby coral gardens and pods of dolphins frolic offshore. The smooth beaches make the day dazzling in the sun.\n' +
+          '\n' +
+          'The historic Stone Town sits in the island’s capital, Zanzibar. The historic heart lets you imagine yourself floating back in time. The Spice Tour gives the opportunity to head out into the live plantations to see, touch and taste Zanzibar’s many spices in its natural environment. Some of the exotic flavours include cloves, vanilla, nutmeg, cinnamon, and other spices that have made the island famous.\n' +
+          '\n' +
+          'If you wish to have Zanzibar’s eclectic street food, Forodhani Garden’s food market is your destination.',
         status: true,
         imageSrc: ZanzibarIsland,
         imageAlt: 'Ocean Islands',
         rate: 5,
-        faq: [
-          {
-            question: 'What is the best time to visit Serengeti?',
-            answer: 'Answer to the question',
-          },
-          {
-            question: 'Are there accommodation options in Serengeti?',
-            answer: 'Answer to the question',
-          },
-        ],
+        faq: [],
         activities: [
           GtActivities['Cultural Visits'],
           GtActivities['Beach Relaxation'],
