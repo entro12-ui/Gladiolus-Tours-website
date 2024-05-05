@@ -132,21 +132,25 @@ export function GladiolusToursDestinationsDetails() {
             </div>
           </div>
         </div>
-        <div className="px-6 py-4" id="faq">
-          <h2 className="text-2xl font-semibold mb-4">FAQs</h2>
-          {gtNationalPark.faq.map((item: FAQ, index: number) => (
-            <Accordion key={index}>
-              <AccordionSummary
-                expandIcon={<FontAwesomeIcon icon={faArrowCircleDown} />}
-              >
-                <Typography variant="h6">{parse(item.question)}</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>{parse(item.answer)}</Typography>
-              </AccordionDetails>
-            </Accordion>
-          ))}
-        </div>
+        {gtNationalPark.faq.length !== 0 ? (
+          <div className="px-6 py-4" id="faq">
+            <h2 className="text-2xl font-semibold mb-4">FAQs</h2>
+            {gtNationalPark.faq.map((item: FAQ, index: number) => (
+              <Accordion key={index}>
+                <AccordionSummary
+                  expandIcon={<FontAwesomeIcon icon={faArrowCircleDown} />}
+                >
+                  <Typography variant="h6">{parse(item.question)}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>{parse(item.answer)}</Typography>
+                </AccordionDetails>
+              </Accordion>
+            ))}
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
