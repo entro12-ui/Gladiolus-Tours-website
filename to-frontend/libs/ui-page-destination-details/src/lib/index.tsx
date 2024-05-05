@@ -21,6 +21,7 @@ import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons/faArrowCirc
 import './style.css';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { RateStars } from '@collo/ui-comp-rate-star';
+import parse from 'html-react-parser';
 
 interface InternalLink {
   label: string;
@@ -112,9 +113,7 @@ export function GladiolusToursDestinationsDetails() {
         <div className="grid grid-cols-2">
           <div className="px-6 py-8" id="overview">
             <h1 className="text-4xl font-bold">Overview</h1>
-            <p className="text-gray-700 description">
-              {gtNationalPark.description}
-            </p>
+            <p className="text-gray-700">{parse(gtNationalPark.description)}</p>
           </div>
           <div className="px-6 py-8" id="activities">
             <h1 className="text-4xl font-bold">Activities</h1>
@@ -140,10 +139,10 @@ export function GladiolusToursDestinationsDetails() {
               <AccordionSummary
                 expandIcon={<FontAwesomeIcon icon={faArrowCircleDown} />}
               >
-                <Typography variant="h6">{item.question}</Typography>
+                <Typography variant="h6">{parse(item.question)}</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>{item.answer}</Typography>
+                <Typography>{parse(item.answer)}</Typography>
               </AccordionDetails>
             </Accordion>
           ))}
