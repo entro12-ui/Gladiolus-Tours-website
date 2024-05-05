@@ -1,4 +1,4 @@
-import { Fragment, useMemo, useState } from 'react';
+import { Fragment, useState } from 'react';
 import {
   Dialog,
   Disclosure,
@@ -12,11 +12,15 @@ import { classNames } from '@collo/ui-utils';
 import { GtDestinationCategory, GtDestinations } from '@collo/ui-persistance';
 import { generatePath, Link } from 'react-router-dom';
 import { GtToursRoute } from '@collo/ui-routes-gladiolus';
+import { RateStars } from '@collo/ui-comp-rate-star';
+import parse from 'html-react-parser';
 
+/*
 const sortOptions = [
   { name: 'By Name', href: '#' },
   { name: 'By Circuit', href: '#' },
 ];
+*/
 
 const filters = [
   {
@@ -67,24 +71,10 @@ const filters = [
   },
 ];
 
-const generateStars = (rate: number): JSX.Element[] => {
-  const stars = [];
-  for (let i = 0; i < rate; i++) {
-    stars.push(
-      <span key={i} className="text-yellow-400">
-        &#9733;
-      </span>
-    );
-  }
-  return stars;
-};
-
 export function Destinations() {
   const [selectedCircuit, setSelectedCircuit] = useState<GtDestinationCategory>(
     GtDestinationCategory['All Circuits']
   );
-  const [selectedSortOption, setSelectedSortOption] =
-    useState<string>('By Name');
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   return (
@@ -243,6 +233,7 @@ export function Destinations() {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
+                    {/*
                     <Menu.Items className="absolute left-0 z-10 mt-2 w-40 origin-top-left rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <div className="py-1">
                         {sortOptions.map((option) => (
@@ -253,9 +244,6 @@ export function Destinations() {
                                   active ? 'bg-gray-100' : '',
                                   'block px-4 py-2 text-sm font-medium text-gray-900'
                                 )}
-                                onClick={() =>
-                                  setSelectedSortOption(option.name)
-                                }
                               >
                                 {option.name}
                               </button>
@@ -264,6 +252,7 @@ export function Destinations() {
                         ))}
                       </div>
                     </Menu.Items>
+                    */}
                   </Transition>
                 </Menu>
 
@@ -353,38 +342,38 @@ export function Destinations() {
               <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
                 {GtDestinations.flatMap((destination) =>
                   destination.destinations
-                    .filter((park) =>
+                    .filter((dest) =>
                       selectedCircuit === GtDestinationCategory['All Circuits']
                         ? true
-                        : park.category === selectedCircuit
+                        : dest.category === selectedCircuit
                     )
-                    .map((park) => (
+                    .map((dest) => (
                       <Link
-                        key={park.id}
+                        key={dest.id}
                         to={generatePath(GtToursRoute.DestinationDetails, {
                           destinationId: String(destination.id),
-                          parkId: String(park.id),
+                          parkId: String(dest.id),
                         })}
                         className="group"
                       >
                         <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                           <div className="relative overflow-hidden rounded-lg aspect-w-16 aspect-h-9 h-64">
                             <img
-                              src={park.imageSrc}
-                              alt={park.imageAlt}
+                              src={dest.imageSrc}
+                              alt={dest.imageAlt}
                               className="object-cover w-full h-full transition-transform transform group-hover:scale-105"
                               style={{ objectFit: 'cover' }}
                             />
                           </div>
                         </div>
                         <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
-                          <h3 className="truncate">{park.name}</h3>
+                          <h3 className="">{dest.name}</h3>
                           <p className="ml-2 text-sm font-semibold text-gray-600">
-                            {generateStars(park.rate)}
+                            <RateStars rate={dest.rate} />
                           </p>
                         </div>
                         <p className="mt-1 text-sm text-gray-600">
-                          {park.description.slice(0, 100)}...
+                          {parse(dest.description.slice(0, 100))}...
                         </p>
                       </Link>
                     ))
