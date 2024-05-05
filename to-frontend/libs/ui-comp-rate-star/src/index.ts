@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-rate-star';
+export * from './lib/index';

@@ -1,14 +1,23 @@
-import styles from './ui-comp-rate-star.module.css';
+import { StarIcon } from '@heroicons/react/20/solid';
 
-/* eslint-disable-next-line */
-export interface UiCompRateStarProps {}
+const TOTAL_STARS = 5;
 
-export function UiCompRateStar(props: UiCompRateStarProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiCompRateStar!</h1>
-    </div>
-  );
+interface IRate {
+  rate: number;
 }
 
-export default UiCompRateStar;
+export const RateStars = (rate: IRate) => {
+  const stars = [];
+  for (let i = 0; i < TOTAL_STARS; i++) {
+    stars.push(
+      <StarIcon
+        key={i}
+        className={`h-5 w-5 flex-shrink-0 ${
+          i < rate.rate ? 'text-yellow-400' : 'text-gray-300'
+        }`}
+        aria-hidden="true"
+      />
+    );
+  }
+  return <div className="flex">{stars}</div>;
+};
