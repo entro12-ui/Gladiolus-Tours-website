@@ -17,10 +17,10 @@ import {
 } from '@mui/material';
 import { getActivityIcon } from '@collo/ui-comp-activities';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { RateDisplay } from '@collo/ui-comp-rate';
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons/faArrowCircleDown';
 import './style.css';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { RateStars } from '@collo/ui-comp-rate-star';
 
 interface InternalLink {
   label: string;
@@ -82,7 +82,7 @@ export function GladiolusToursDestinationsDetails() {
             <h1 className="text-4xl font-bold z-10">
               {gtNationalPark.name}{' '}
               <span className="text-base ml-2">
-                <RateDisplay rate={gtNationalPark.rate} />
+                <RateStars rate={gtNationalPark.rate} />
               </span>
             </h1>
           </div>
