@@ -11,7 +11,7 @@ interface IProps {
   destinations: GladiolusToursDestinations;
 }
 
-export const Destinations: React.FC<IProps> = ({ destinations }) => {
+export const Destinations = ({ destinations }: IProps) => {
   const sliderSettings = {
     dots: true,
     infinite: true,
