@@ -110,7 +110,7 @@ export const GtDestinations: GladiolusToursDestinations = [
   {
     id: 1,
     name: 'Northern Circuit',
-    description: 'Welcome to Gladiolus Tours',
+    description: '',
     imageSrc: NorthernCircuit,
     imageAlt: 'Northern Circuit',
     status: true,
@@ -735,8 +735,8 @@ export const GtDestinations: GladiolusToursDestinations = [
   {
     id: 2,
     name: 'Southern Circuit',
-    description: 'Welcome to Gladiolus Tours',
-    imageSrc: '',
+    description: '',
+    imageSrc: KituloNationalPark,
     imageAlt: 'Southern Circuit',
     status: true,
     destinations: [
@@ -1236,8 +1236,8 @@ export const GtDestinations: GladiolusToursDestinations = [
   {
     id: 3,
     name: 'Eastern Circuit',
-    description: 'Welcome to Gladiolus Tours',
-    imageSrc: '',
+    description: '',
+    imageSrc: UdzunguwaNationalPark,
     imageAlt: 'Eastern Circuit',
     status: true,
     destinations: [
@@ -1828,8 +1828,8 @@ export const GtDestinations: GladiolusToursDestinations = [
   {
     id: 4,
     name: 'Western Circuit',
-    description: 'Welcome to Gladiolus Tours',
-    imageSrc: '',
+    description: '',
+    imageSrc: SaananeIslandNationalPark,
     imageAlt: 'Western Circuit',
     status: true,
     destinations: [
@@ -2234,8 +2234,8 @@ export const GtDestinations: GladiolusToursDestinations = [
   {
     id: 5,
     name: 'Ocean Islands',
-    description: 'Welcome to Gladiolus Tours',
-    imageSrc: '',
+    description: '',
+    imageSrc: BongoyoIslandMarineReserve,
     imageAlt: 'Ocean Islands',
     status: true,
     destinations: [
@@ -2516,7 +2516,7 @@ export const GtDestinations: GladiolusToursDestinations = [
   {
     id: 6,
     name: 'Mafia Island',
-    description: 'Welcome to Gladiolus Tours',
+    description: '',
     imageSrc: MafiaIsland,
     imageAlt: 'Mafia Island',
     status: true,
@@ -2585,7 +2585,7 @@ export const GtDestinations: GladiolusToursDestinations = [
   {
     id: 7,
     name: 'Zanzibar Island',
-    description: 'Welcome to Gladiolus Tours',
+    description: '',
     imageSrc: ZanzibarIsland,
     imageAlt: 'Zanzibar Island',
     status: true,
