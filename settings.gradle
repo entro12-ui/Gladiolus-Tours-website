@@ -1,4 +1,3 @@
 rootProject.name = 'Gladiolus-Tours'
 
-include 'to-frontend'
-include 'to-backend-server'
+include ('to-frontend', 'to-backend-server')
