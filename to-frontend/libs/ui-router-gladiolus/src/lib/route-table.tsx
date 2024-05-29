@@ -66,10 +66,10 @@ export const GLADIOLUS_TOURS_ROUTE_TABLE = [
         index: true,
         element: <LazyAdventureDetailPage />,
       },
-      {
-        path: '*',
-        element: <LazyErrorNotFoundPage />,
-      },
     ],
+  },
+  {
+    path: '*',
+    element: <LazyErrorNotFoundPage />,
   },
 ];
