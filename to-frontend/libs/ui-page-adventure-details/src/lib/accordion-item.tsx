@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 
 interface AccordionItemProps {
   title: string;
@@ -8,6 +8,7 @@ interface AccordionItemProps {
 
 export const AccordionItem = ({ title, children, day }: AccordionItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const daysString = 'Day: ' + day;
 
   return (
     <div className="mb-4">
@@ -15,10 +16,15 @@ export const AccordionItem = ({ title, children, day }: AccordionItemProps) => {
         className="flex items-center justify-between cursor-pointer p-4 bg-gray-100"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {/* <div className="">Day {day}</div> */}
-        <h3 className="text-xl font-semibold mb-2 text-black overflow-hidden">
-          {title}
-        </h3>
+        {/* Circle displaying the day */}
+        <div className="flex items-center">
+          <div className="flex-shrink-0 w-16 h-16 mr-2 flex items-center justify-center rounded-full bg-gray-300 text-black dark:bg-gray-700 dark:text-white">
+            {daysString}
+          </div>
+          <h3 className="text-xl font-semibold text-black overflow-hidden">
+            {title}
+          </h3>
+        </div>
         <div className="relative">
           <div
             className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center"
