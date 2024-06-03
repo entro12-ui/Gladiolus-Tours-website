@@ -208,4 +208,89 @@ export const GtAdventures: GladiolusToursAdventure = [
       },
     ],
   },
+  {
+    id: 3,
+    title: '5 Days Kilimanjaro Trek via Umbwe Route',
+    overview:
+      'The Umbwe route is short, steep and direct route and its considered to be very difficult and challenging way up Mount Kilimanjaro. Due to the quick ascent, Umbwe does not provide the necessary stages for altitude acclimatization. Although the traffic on this route is very low, the chances of success are also low. The route is offered at a minimum of five days, though six days is recommended when attempting this route. The Umbwe route should only be attempted by those who are very strong hikers and are confident in their ability to acclimatize.\n',
+    code: 'GT003',
+    duration: '5 Days / 4 Nights',
+    category: GtItineraryCategory['Mountain Climbing'],
+    activities: [GtActivities['Climbing / Trekking']],
+    image: Mount_Kilimanjaro,
+    carouselImage: [Mount_Kilimanjaro, Flamingos],
+    status: true,
+    itinerary: [
+      {
+        day: 1,
+        title: 'Arrival Day – Arusha /Moshi Town',
+        Accommodation: 'Hotel',
+        description:
+          'Pick up from Kilimanjaro airport and transfer to hotel in Moshi / Arusha. A pre-climb briefing can be organized where we will provide you all the information to prepare for your climb. This will include a day to day guide of your climb, the gear required as well as discussing acute mountain sickness and all health and safety on Kilimanjaro.',
+      },
+      {
+        day: 2,
+        title: 'Arusha /Moshi – Umbwe Gate (1800 m) – Umbwe Cave Camp (2850 m)',
+        Accommodation: 'Umbwe Cave-Camp',
+        description:
+          'From Umbwe Gate you ascend through forestry track before it narrows and steepness to climb a ridge between Lonzo and Umbwe Rivers. This is the steepest part of the entire trek. Eventually after hours of this exhausting exercise, and again in altitude of 1050 approximately, you reach a rocky overhang. This is Umbwe Cave a popular first night Campsite with plenty of water sources available.\n' +
+          '\n' +
+          'The day begins with a 50 minute drive to Machame Gate where registration formalities will be completed. We then transfer through villages and coffee and banana plantations to Umbwe Gate. The trail ascends sharply on a forestry track which winds up the dense rain forest. The path narrows and steepens as we climb the ridge between two rivers surrounded by huge trees. Umbwe Camp is perched between trees and thick undergrowth.\n' +
+          '\n' +
+          'Distance: About 5 km | Hiking time: 5-6 hours | Habitat: Montane forest\n',
+      },
+      {
+        day: 3,
+        title: 'Umbwe Cave Camp (2850 m) – Barranco Camp (3950 m)',
+        Accommodation: 'Barranco Camp',
+        description:
+          'After leaving the forest, continue through open moorlands until reaching Barranco Camp. Barranco is generally regarded as the most scenic campsite on the Umbwe Trail as it’s surrounded by giant senecios and lobelias. As Barranco is in a valley, the sun rises later than at the other camps. Dinner and overnight at Barranco camp.\n' +
+          '\n' +
+          'Distance: About 6 km | Hiking time: 5-7 hours | Habitat: Montane forest, Moorland\n',
+      },
+      {
+        day: 4,
+        title: 'Barranco Camp (3950 m) – Barafu Camp (4640 m)',
+        Accommodation: 'Barafu Camp',
+        description:
+          'We starts by descending into the start of the Great Barranco, a huge ravine. We then exit steeply, up the Great Barranco Wall, which divides us from the southeastern slopes of Kibo. It’s a climb over rock, not technical but long and tiring. Passing underneath the Heim and Kersten glaciers, we head towards the Karanga valley. From here we have a steep climb up from Karanga valley to \n' +
+          '\n' +
+          'walk to Barafu camp at 4640 m. The climb will take us across desolate scree slopes with no vegetation around us at all. It’s a tough steep walk made more difficult by the altitude. On arriving at camp we eat and spend the afternoon resting as we prepare for a long night and day ahead. It is important to keep hydrated and warm. We have an early dinner and then try to get some sleep as we will be getting up at between 11pm and 12pm to start the climb to the summit. Dinner and overnight at the Camp.\n' +
+          '\n' +
+          'Distance: About 8 km | Hiking time: 6-8 hours | Habitat: Alpine desert\n',
+      },
+      {
+        day: 5,
+        title:
+          'Barafu Camp (4640 m) – Uhuru Peak (5895 m) – Mweka Camp (3100 m)',
+        Accommodation: 'Mweka Camp',
+        description:
+          'We start off at around midnight, and walk steeply upwards to the summit glaciers. We will be climbing scree for 4 to 5 hours but gain incredible height over a short distance. The views are spectacular. We should be on the crater rim at Stella Point (5739 m) as the first rays of the sun hit us. Spectacular ice cliffs within the crater surround us and the views to jagged Mawenzi peak and beyond are breathtaking. Another hour’s walking takes us to the summit, Uhuru Peak (5895 m). We begin our descent by returning to Stella Point and then descending on scree slope and track back to Barafu Camp for breakfast, before finally heading down to Mweka Camp for a long well-earned rest. Dinner and overnight at the Camp.\n' +
+          '\n' +
+          'Distance: About 13.4 km | Hiking time: 8–12 hours | Habitat: Arctic, Montane forest\n',
+      },
+      {
+        day: 6,
+        title: 'Mweka Camp (3100 m) – Mweka Gate (1630 m) – Moshi /Arusha Town',
+        Accommodation: 'Hotel',
+        description:
+          'Make the final descent through the rain forest to Mweka Gate. Here we will collect or summit certificate, have lunch and say goodbye to our mountain crew before drive back to Moshi/Arusha for dinner and overnight.\n' +
+          '\n' +
+          'Distance: About 12.1 km | Hiking time: 4-5 hours | Habitat: Montane forest',
+      },
+      {
+        day: 7,
+        title: 'Departure Day / Go on a Safari',
+        Accommodation: '',
+        description:
+          'After breakfast, depart for your next destination, which is optional or can be arranged:\n' +
+          '\n' +
+          '    Safari to the National Parks\n' +
+          '    Transfer to Kilimanjaro International Airport or Arusha Airport\n' +
+          '    Transport to Other Towns in Tanzania i.e. Dar es Salaam, Zanzibar\n' +
+          '    Nairobi via border town Namanga\n' +
+          '\n',
+      },
+    ],
+  },
 ];
