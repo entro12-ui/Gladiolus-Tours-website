@@ -36,7 +36,7 @@ export const GladiolusToursAdventures = () => {
                     {item.title}
                   </p>
                   <p className="text-sm leading-5 text-gray-600 dark:text-gray-400">
-                    {item.overview}
+                    {item.overview.slice(0, 150)}...
                   </p>
                 </figcaption>
               </figure>
