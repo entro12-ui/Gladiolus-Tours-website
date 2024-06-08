@@ -41,7 +41,7 @@ export const Adventure = ({ adventure }: IProps) => {
                     {item.title}
                   </p>
                   <p className="text-sm leading-5 text-black dark:text-black">
-                    {item.overview}
+                    {item.overview.slice(0, 100)}...
                   </p>
                 </figcaption>
               </figure>
