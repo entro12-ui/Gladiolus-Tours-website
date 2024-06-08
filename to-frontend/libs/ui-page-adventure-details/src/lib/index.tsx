@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { generatePath, Navigate } from 'react-router-dom';
 import {
   GtToursRoute,
   useAdventuresIdOrThrow,
 } from '@collo/ui-routes-gladiolus';
-import { generatePath, Navigate } from 'react-router-dom';
 import { AccordionItem } from './accordion-item';
 import './ImageSlider.css';
 import { GtAdventures } from '@collo/ui-persistance';
@@ -43,7 +43,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
 
   return (
     <div className="slider">
-      <button className="arrow" onClick={prevSlide}>
+      <button className="arrow left" onClick={prevSlide}>
         {'<'}
       </button>
       <div className="slide-container">
@@ -54,7 +54,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
           }}
         ></div>
       </div>
-      <button className="arrow" onClick={nextSlide}>
+      <button className="arrow right" onClick={nextSlide}>
         {'>'}
       </button>
     </div>
@@ -74,9 +74,21 @@ export const GladiolusToursAdventuresDetails = () => {
   return (
     <div className="container mx-auto py-10">
       <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          {adventure.title}
+        </h2>
         <div className="mb-8 md:mb-0">
           <ImageSlider images={carouselImages} />
         </div>
+        <h2 className="text-base font-semibold leading-7 text-indigo-400">
+          Overview
+        </h2>
+        <div className="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
+          <p>{adventure.overview}</p>
+        </div>
+        <h2 className="text-base font-semibold leading-7 text-indigo-400">
+          Itinerary
+        </h2>
         <div>
           <div className="space-y-8">
             {adventure.itinerary.map((step, index) => (
