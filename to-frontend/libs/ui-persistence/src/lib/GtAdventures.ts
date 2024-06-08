@@ -1,7 +1,29 @@
-import Mount_Kilimanjaro from './images/Itinerary/Mountain/Mount_Kilimanjaro.webp';
-import Hippo from './images/Itinerary/Hippo.webp';
-import Flamingos from './images/Itinerary/Lesser_Flamingos_Lake_Natron_01.webp';
 import { GtActivities } from './GtActivities';
+import Mount_Kilimanjaro from './images/Itinerary/Mountain/Mount_Kilimanjaro.webp';
+import Kilimanjaro_Machame_Route_01 from './images/Itinerary/Mountain/Mount_Kilimanjaro_Machame_Route_Mountain_Landscape.webp';
+import Kilimanjaro_Machame_Route_02 from './images/Itinerary/Mountain/Kilimanjaro_Climb_Machame_Route_01.webp';
+import Kilimanjaro_Machame_Route_03 from './images/Itinerary/Mountain/Kilimanjaro_Climb_Machame_Route_02.webp';
+import Mount_Kilimanjaro_Glacier_02 from './images/Itinerary/Mountain/Mount_Kilimanjaro_Glacier_of_Southern_Ice_Field_02.webp';
+import Mount_Kilimanjaro_Glacier_03 from './images/Itinerary/Mountain/Mount_Kilimanjaro_Glacier_of_Southern_Ice_Field_03.webp';
+import Mount_Kilimanjaro_3a from './images/Itinerary/Mountain/Kilimanjaro_Climb_3a.webp';
+import Mount_Kilimanjaro_Climb_4a from './images/Itinerary/Mountain/Kilimanjaro_Climb_4a.webp';
+import Mount_Kilimanjaro_Climb_4b from './images/Itinerary/Mountain/Kilimanjaro_Climb_4b.webp';
+import Mount_Kilimanjaro_Climb_09 from './images/Itinerary/Mountain/Kilimanjaro_Climb_Camping_09.webp';
+import Lemosho_Route_01 from './images/Itinerary/Mountain/Mount_Kilimanjaro_Londorosi_Lemosho_01.webp';
+import Lemosho_Route_02 from './images/Itinerary/Mountain/Mount_Kilimanjaro_View_from_Lemosho_Route_02.webp';
+import Shira_Plateau_Kilimanjaro_01 from './images/Itinerary/Mountain/Shira_Plateau_Kilimanjaro_01.webp';
+import Shira_Plateau_Kilimanjaro_02 from './images/Itinerary/Mountain/Shira_Plateau_Kilimanjaro_02.webp';
+import Shira_Plateau_Kilimanjaro_03 from './images/Itinerary/Mountain/Shira_Plateau_Kilimanjaro_03.webp';
+import Shira_Plateau_Kilimanjaro_04 from './images/Itinerary/Mountain/Shira_Plateau_Kilimanjaro_04.webp';
+import Mount_Kilimanjaro_Mountain_Landscape_01 from './images/Itinerary/Mountain/Mount_Kilimanjaro_Mountain_Landscape_01.webp';
+import Mount_Kilimanjaro_Mountain_Landscape_02 from './images/Itinerary/Mountain/Mount_Kilimanjaro_Mountain_Landscape_02.webp';
+import Mount_Kilimanjaro_Summit from './images/Itinerary/Mountain/Mount_Kilimanjaro_Mountain_Summit.webp';
+import Kilimanjaro_Climb_Camping from './images/Itinerary/Mountain/Kilimanjaro_Climb_Camping.webp';
+import Kilimanjaro_Climb_Rongai_Route_01 from './images/Itinerary/Mountain/Kilimanjaro_Climb_Rongai_Route_01.webp';
+import Kilimanjaro_Climb_Marangu_Gate_01 from './images/Itinerary/Mountain/Mount_Kilimanjaro_Marangu-Route_the_Saddle_01.webp';
+import Kilimanjaro_Climb_Marangu_Gate_03 from './images/Itinerary/Mountain/Kilimanjaro_Climb_Marangu_Gate_03.webp';
+import Kilimanjaro_Climb_Horombo_Huts_06 from './images/Itinerary/Mountain/Mount_Kilimanjaro_Horombo_Huts_06.webp';
+import Kilimanjaro_Climb_Horombo_Huts_11 from './images/Itinerary/Mountain/Mount_Kilimanjaro_Horombo_Huts_11.webp';
 
 interface IItinerary {
   day: number;
@@ -44,8 +66,8 @@ export const GtAdventures: GladiolusToursAdventure = [
     duration: '4 Days / 3 Nights',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
-    image: Hippo,
-    carouselImage: [Flamingos, Mount_Kilimanjaro],
+    image: Kilimanjaro_Machame_Route_01,
+    carouselImage: [Kilimanjaro_Machame_Route_02, Kilimanjaro_Machame_Route_03],
     status: true,
     itinerary: [
       {
@@ -122,8 +144,11 @@ export const GtAdventures: GladiolusToursAdventure = [
     duration: '6 Days / 5 Nights',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
-    image: Mount_Kilimanjaro,
-    carouselImage: [Mount_Kilimanjaro, Flamingos],
+    image: Kilimanjaro_Climb_Marangu_Gate_01,
+    carouselImage: [
+      Kilimanjaro_Climb_Horombo_Huts_06,
+      Kilimanjaro_Climb_Marangu_Gate_03,
+    ],
     status: true,
     itinerary: [
       {
@@ -217,8 +242,8 @@ export const GtAdventures: GladiolusToursAdventure = [
     duration: '5 Days / 4 Nights',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
-    image: Mount_Kilimanjaro,
-    carouselImage: [Mount_Kilimanjaro, Flamingos],
+    image: Mount_Kilimanjaro_Climb_4a,
+    carouselImage: [Mount_Kilimanjaro_Climb_4b, Lemosho_Route_01],
     status: true,
     itinerary: [
       {
@@ -304,8 +329,11 @@ export const GtAdventures: GladiolusToursAdventure = [
     duration: '6 Days / 5 Nights',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
-    image: Mount_Kilimanjaro,
-    carouselImage: [Mount_Kilimanjaro, Flamingos],
+    image: Kilimanjaro_Climb_Rongai_Route_01,
+    carouselImage: [
+      Mount_Kilimanjaro_Mountain_Landscape_01,
+      Mount_Kilimanjaro_Mountain_Landscape_02,
+    ],
     status: true,
     itinerary: [
       {
@@ -395,8 +423,8 @@ export const GtAdventures: GladiolusToursAdventure = [
     duration: '6 Days / 5 Nights',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
-    image: Mount_Kilimanjaro,
-    carouselImage: [Mount_Kilimanjaro, Flamingos],
+    image: Kilimanjaro_Machame_Route_02,
+    carouselImage: [Kilimanjaro_Machame_Route_03, Kilimanjaro_Machame_Route_02],
     status: true,
     itinerary: [
       {
@@ -489,8 +517,8 @@ export const GtAdventures: GladiolusToursAdventure = [
     duration: '',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
-    image: Mount_Kilimanjaro,
-    carouselImage: [Mount_Kilimanjaro, Flamingos],
+    image: Lemosho_Route_02,
+    carouselImage: [Kilimanjaro_Climb_Rongai_Route_01, Lemosho_Route_01],
     status: true,
     itinerary: [
       {
@@ -580,8 +608,13 @@ export const GtAdventures: GladiolusToursAdventure = [
     duration: '7 Days / 6 Nights',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
-    image: Mount_Kilimanjaro,
-    carouselImage: [Mount_Kilimanjaro, Flamingos],
+    image: Shira_Plateau_Kilimanjaro_01,
+    carouselImage: [
+      Shira_Plateau_Kilimanjaro_02,
+      Shira_Plateau_Kilimanjaro_03,
+      Shira_Plateau_Kilimanjaro_04,
+      Shira_Plateau_Kilimanjaro_01,
+    ],
     status: true,
     itinerary: [
       {
@@ -685,8 +718,11 @@ export const GtAdventures: GladiolusToursAdventure = [
     duration: '7 Days / 6 Nights',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
-    image: Mount_Kilimanjaro,
-    carouselImage: [Mount_Kilimanjaro, Flamingos],
+    image: Kilimanjaro_Climb_Horombo_Huts_11,
+    carouselImage: [
+      Kilimanjaro_Climb_Rongai_Route_01,
+      Kilimanjaro_Climb_Rongai_Route_01,
+    ],
     status: true,
     itinerary: [
       {
@@ -787,8 +823,8 @@ export const GtAdventures: GladiolusToursAdventure = [
     duration: '7 Days / 6 Nights',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
-    image: Mount_Kilimanjaro,
-    carouselImage: [Mount_Kilimanjaro, Flamingos],
+    image: Lemosho_Route_01,
+    carouselImage: [Lemosho_Route_01, Lemosho_Route_02],
     status: true,
     itinerary: [
       {
@@ -891,8 +927,8 @@ export const GtAdventures: GladiolusToursAdventure = [
     duration: '8 Days / 7 Nights',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
-    image: Mount_Kilimanjaro,
-    carouselImage: [Mount_Kilimanjaro, Flamingos],
+    image: Mount_Kilimanjaro_Glacier_02,
+    carouselImage: [Lemosho_Route_01, Lemosho_Route_02],
     status: true,
     itinerary: [
       {
@@ -1003,8 +1039,12 @@ export const GtAdventures: GladiolusToursAdventure = [
     duration: '',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
-    image: Mount_Kilimanjaro,
-    carouselImage: [Mount_Kilimanjaro, Flamingos],
+    image: Mount_Kilimanjaro_Summit,
+    carouselImage: [
+      Kilimanjaro_Machame_Route_01,
+      Kilimanjaro_Machame_Route_02,
+      Kilimanjaro_Machame_Route_03,
+    ],
     status: true,
     itinerary: [
       {
