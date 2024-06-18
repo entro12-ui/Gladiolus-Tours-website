@@ -13,18 +13,7 @@ repositories {
 
 dependencies {
 
-    implementation libs.spring.boot.starter.web
-    implementation libs.spring.boot.starter.data.jpa
-    implementation libs.guava
-    runtimeOnly libs.postgresql
-    implementation libs.slf4j
-    implementation libs.logback
-    implementation libs.logback
-
-    testImplementation libs.testcontainers
-    testImplementation libs.testcontainers.postgresql
-    testImplementation libs.testcontainers.jdbc
-    testImplementation libs.testcontainers.junit.jupiter
+    implementation libs.aws.java.sdk.ses
 
     testImplementation libs.truth
     testImplementation libs.junit.jupiter.api
@@ -41,5 +30,19 @@ java {
 }
 
 tasks.named('test') {
+    // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+    testLogging {
+        events "started", "passed", "skipped", "failed"
+        if (Boolean.getBoolean("test.verbose")) {
+            // events "passed", "skipped", "failed"
+            showExceptions true
+            exceptionFormat "full"
+            showStandardStreams true
+        }
+        debug {
+            events "started", "passed", "skipped", "failed", "standard_out", "standard_error"
+            exceptionFormat "full"
+        }
+    }
 }
