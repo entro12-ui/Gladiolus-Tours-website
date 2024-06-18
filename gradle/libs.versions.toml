@@ -11,6 +11,7 @@ testcontainers = "1.19.3"
 junit-jupiter = "5.10.1"
 flyway = "10.3.0"
 postgresql = "42.7.1"
+aws-sdk = "1.12.744"
 
 [libraries]
 spring-core = { module = "org.springframework:spring-core", version.ref = "spring" }
@@ -32,6 +33,7 @@ testcontainers-junit-jupiter = { module = "org.testcontainers:junit-jupiter", ve
 testcontainers-postgresql = { module = "org.testcontainers:postgresql", version.ref = "testcontainers" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 mockito-junit-jupiter = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
+aws-java-sdk-ses = { module = "com.amazonaws:aws-java-sdk-ses", version.ref = "aws-sdk" }
 
 [plugins]
 node = {id = "com.github.node-gradle.node", version.ref = "node-plugin"}
