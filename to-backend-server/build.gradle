@@ -7,13 +7,26 @@ plugins {
 group = 'com.gladiolustours'
 version = '0.0.1-SNAPSHOT'
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 repositories {
     mavenCentral()
 }
 
+ext {
+    set('springCloudVersion', "2023.0.2")
+}
+
 dependencies {
 
+    implementation libs.spring.boot.starter.web
     implementation libs.aws.java.sdk.ses
+    implementation libs.spring.cloud.function.web
+    implementation libs.spring.cloud.function.adapter.aws
 
     testImplementation libs.truth
     testImplementation libs.junit.jupiter.api
@@ -23,9 +36,9 @@ dependencies {
     testImplementation libs.mockito.junit.jupiter
 }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
     }
 }
 
