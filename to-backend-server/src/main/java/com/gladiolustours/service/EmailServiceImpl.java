@@ -22,12 +22,38 @@ public class EmailServiceImpl implements EmailService {
 
     @Override
     public void send(Booking book) {
+        String subject = book.getSubject() != null ? book.getSubject() : "Booking Form: Booking from Gladiolus Tours Website";
 
+        String bodyHtml = "<h1>Gladiolus Tours Websites Booking Form Submission</h1>"
+                + "<p>Full Name: " + book.getFullName() + "</p>"
+                + "<p>Email: " + book.getEmail() + "</p>"
+                + "<p>Date From " + book.getDateFrom() + " To " + book.getDateTo() + "</p>"
+                + "<p>Message: " + book.getMoreInfo() + "</p>"
+                + "<p>Adults: " + book.getAdults() + "</p>"
+                + "<p>Children: " + book.getChild() + "</p>"
+                + "<p>Adventure Code: " + book.getCode() + "</p>";
+
+        String bodyText = "Name: " + book.getFullName() + "\n Email: " + book.getEmail()
+                + "\n Message: " + book.getMoreInfo() + "\n Adventure Code: " + book.getCode();
+
+        sendEmail(book.getEmail(), subject, bodyHtml, bodyText);
     }
 
     @Override
     public void send(Contact book) {
+        String subject = book.getSubject() != null ? book.getSubject() : "Contact Form: Message from Gladiolus Tours Website";
 
+        String bodyHtml = "<h1>Gladiolus Tours Websites Contact Form</h1>"
+                + "<p>First Name: " + book.getFirstName() + "</p>"
+                + "<p>Last Name: " + book.getLastName() + "</p>"
+                + "<p>Email: " + book.getEmail() + "</p>"
+                + "<p>Phone Number: " + book.getPhoneNumber() + "</p>"
+                + "<p>Message: " + book.getMessage() + "</p>";
+
+        String bodyText = "First Name: " + book.getFirstName() + "Last Name: " + book.getLastName() + "\n Email: " + book.getEmail()
+                + "\n Phone Number: " + book.getPhoneNumber() + "\n Message: " + book.getMessage();
+
+        sendEmail(book.getEmail(), subject, bodyHtml, bodyText);
     }
 
     private void sendEmail(String fromEmail, String subject, String bodyHtml, String bodyText) {
