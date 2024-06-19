@@ -3,13 +3,15 @@ package com.gladiolustours.model;
 public class Contact {
     private String firstName;
     private String lastName;
+    private String subject;
     private String email;
     private String phoneNumber;
     private String message;
 
-    public Contact(String firstName, String lastName, String email, String phoneNumber, String message) {
+    public Contact(String firstName, String lastName, String subject, String email, String phoneNumber, String message) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.subject = subject;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.message = message;
@@ -37,6 +39,14 @@ public class Contact {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
     public String getEmail() {
