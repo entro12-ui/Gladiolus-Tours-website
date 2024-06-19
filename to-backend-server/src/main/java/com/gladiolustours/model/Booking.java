@@ -4,6 +4,7 @@ public class Booking {
 
     private String fullName;
     private String email;
+    private String subject;
     private String dateFrom;
     private String dateTo;
     private Integer adults;
@@ -11,9 +12,10 @@ public class Booking {
     private String moreInfo;
     private String code;
 
-    public Booking(String fullName, String email, String dateFrom, String dateTo, Integer adults, Integer child, String moreInfo, String code) {
+    public Booking(String fullName, String email, String subject, String dateFrom, String dateTo, Integer adults, Integer child, String moreInfo, String code) {
         this.fullName = fullName;
         this.email = email;
+        this.subject = subject;
         this.dateFrom = dateFrom;
         this.dateTo = dateTo;
         this.adults = adults;
@@ -36,6 +38,14 @@ public class Booking {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
     public String getDateFrom() {
