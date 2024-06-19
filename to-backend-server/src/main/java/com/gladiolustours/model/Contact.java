@@ -1,13 +1,18 @@
 package com.gladiolustours.model;
 
-public class ContactFormRequest {
+public class Contact {
     private String firstName;
     private String lastName;
     private String email;
     private String phoneNumber;
     private String message;
 
-    public ContactFormRequest() {
+    public Contact(String firstName, String lastName, String email, String phoneNumber, String message) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.message = message;
     }
 
     public String getFirstName() {
