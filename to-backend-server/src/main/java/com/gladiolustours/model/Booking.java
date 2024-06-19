@@ -1,3 +1,5 @@
+package com.gladiolustours.model;
+
 public class BookFormRequest {
 
     private String fullName;

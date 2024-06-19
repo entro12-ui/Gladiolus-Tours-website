@@ -45,3 +45,6 @@ to-frontend/.nx/cache
 
 # Ignore Gradle build output directory
 build
+
+# Environment Variable
+env.sh

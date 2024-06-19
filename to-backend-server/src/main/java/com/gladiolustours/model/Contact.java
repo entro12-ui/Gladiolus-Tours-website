@@ -1,4 +1,4 @@
-package com.gladiolustours;
+package com.gladiolustours.model;
 
 public class ContactFormRequest {
     private String firstName;
