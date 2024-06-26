@@ -14,19 +14,17 @@ java {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
-}
-
-ext {
-    set('springCloudVersion', "2023.0.2")
+    maven {url "https://repo.spring.io/milestone"}
+    maven {url "https://repo.spring.io/snapshot"}
 }
 
 dependencies {
 
     implementation libs.spring.boot.starter.web
     implementation libs.aws.java.sdk.ses
-    implementation libs.spring.cloud.function.web
-    implementation libs.spring.cloud.function.adapter.aws
+    implementation libs.aws.serverless
 
     testImplementation libs.truth
     testImplementation libs.junit.jupiter.api
@@ -34,12 +32,6 @@ dependencies {
     testImplementation libs.junit.jupiter.params
     testImplementation libs.mockito.core
     testImplementation libs.mockito.junit.jupiter
-}
-
-dependencyManagement {
-    imports {
-        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
-    }
 }
 
 tasks.named('test') {
@@ -58,4 +50,18 @@ tasks.named('test') {
             exceptionFormat "full"
         }
     }
+}
+
+task buildZip(type: Zip) {
+    from compileJava
+    from processResources
+    into('lib') {
+        from(configurations.compileClasspath) {
+            exclude 'tomcat-embed-*'
+        }
+    }
+}
+
+tasks.build {
+    dependsOn buildZip
 }
