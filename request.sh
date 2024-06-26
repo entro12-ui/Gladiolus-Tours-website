@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-curl -X POST http://localhost:8080/createBooking -H "Content-Type: application/json" -d '{
+curl -X POST http://localhost:8080/booking -H "Content-Type: application/json" -d '{
   "fullName": "John Doe",
   "email": "collo@fastmail.com",
   "subject": "Booking Inquiry",
@@ -12,7 +12,7 @@ curl -X POST http://localhost:8080/createBooking -H "Content-Type: application/j
   "code": "GT001"
 }'
 
-curl -X POST http://localhost:8080/createContact -H "Content-Type: application/json" -d '{
+curl -X POST http://localhost:8080/contact -H "Content-Type: application/json" -d '{
   "firstName": "Jane",
   "lastName": "Doe",
   "subject": "General Inquiry",
