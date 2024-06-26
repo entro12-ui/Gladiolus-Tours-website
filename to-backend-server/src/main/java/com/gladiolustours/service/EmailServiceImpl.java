@@ -67,7 +67,7 @@ public class EmailServiceImpl implements EmailService {
     private void sendEmail(String fromEmail, String subject, String bodyHtml, String bodyText) {
         AmazonSimpleEmailService client = AmazonSimpleEmailServiceClientBuilder.standard()
                 .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
-                .withRegion(Regions.valueOf(region))
+                .withRegion(Regions.AF_SOUTH_1)
                 .build();
 
         SendEmailRequest request = new SendEmailRequest()
