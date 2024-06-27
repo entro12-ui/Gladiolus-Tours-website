@@ -1,8 +1,10 @@
 import axios from 'axios';
 
-export const sendFormEmailClient = axios.create({
-  baseURL: 'https://api.emailjs.com/api/v1.0/email/',
+const baseURL = 'https://p6v8eafh3f.execute-api.af-south-1.amazonaws.com/prev';
+
+export const apiClient = axios.create({
+  baseURL,
   headers: {
-    'Content-Type': 'multipart/form-data',
+    'Content-Type': 'application/json',
   },
 });
