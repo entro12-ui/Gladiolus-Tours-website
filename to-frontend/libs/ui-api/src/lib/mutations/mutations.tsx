@@ -1,23 +1,41 @@
 import { useMutation } from '@tanstack/react-query';
-import { sendFormEmailClient } from './index';
+import { apiClient } from '../client';
+import { GtNotify } from '@collo/ui-comp-notifications';
 
-export interface IForm {
+/**
+ * Contact Form
+ */
+export type GladiolusToursRequest = {
   firstName: string;
   lastName: string;
+  subject: string;
   email: string;
-  phoneNumber: string | null;
+  phoneNumber: string;
   message: string;
-}
+};
 
-export const useSendEmail = (onSuccess: (response: string) => void) => {
-  return useMutation<string, Error, IForm>(
-    async (variables) => {
-      return await sendFormEmailClient.postForm(`send`, variables);
+export type GladiolusToursResponse = {
+  firstName: string;
+  lastName: string;
+  subject: string;
+  email: string;
+  phoneNumber: string;
+  message: string;
+};
+
+export const useGladiolusToursContactMutation = (
+  onSuccess: (response: GladiolusToursResponse) => void
+) => {
+  return useMutation<GladiolusToursResponse, Error, GladiolusToursRequest>(
+    async (data) => {
+      return await apiClient.post(`/contact`, data);
     },
     {
-      onSuccess,
-      onError: (err) => {
-        alert('Failed to send message: ' + err.message);
+      onSuccess: (success) => {
+        GtNotify.success('Message Sent', `${success.message}`);
+      },
+      onError: (error) => {
+        GtNotify.danger('Failed To Send Message', `${error.message}`);
       },
     }
   );
