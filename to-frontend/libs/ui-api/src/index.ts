@@ -1,3 +1,3 @@
-export * from './lib/index';
-export * from './lib/query';
-export * from './lib/mutations';
+export * from './lib/client';
+export * from './lib/queries/query';
+export * from './lib/mutations/mutations';
