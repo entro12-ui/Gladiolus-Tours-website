@@ -1,6 +1,7 @@
 package com.gladiolustours.controller;
 
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +12,7 @@ import java.util.Map;
 
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @EnableWebMvc
 public class PingController {
     @RequestMapping(path = "/ping", method = RequestMethod.GET)
