@@ -7,6 +7,7 @@ import {
 import { AccordionItem } from './accordion-item';
 import './ImageSlider.css';
 import { GtAdventures } from '@collo/ui-persistance';
+import parse from 'html-react-parser';
 
 interface ImageSliderProps {
   images: string[];
@@ -99,7 +100,7 @@ export const GladiolusToursAdventuresDetails = () => {
                       `Accommodation: ${step.Accommodation}`}
                   </p>
                   <p className="text-black dark:text-black">
-                    {step.description}
+                    {parse(step.description)}
                   </p>
                 </div>
               </AccordionItem>
