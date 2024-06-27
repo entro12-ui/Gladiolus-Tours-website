@@ -38,7 +38,7 @@
     "react-intl": "^6.5.5",
     "react-intl-universal": "^2.9.1",
     "react-loader-spinner": "^6.1.0",
-    "react-notifications-component": "^3.1.4",
+    "react-notifications-component": "3.1.0",
     "react-router-dom": "^6.19.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
