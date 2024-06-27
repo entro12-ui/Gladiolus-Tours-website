@@ -1,5 +1,4 @@
-import {
-  ReactNotifications,
+import ReactNotification, {
   ReactNotificationOptions,
   store,
 } from 'react-notifications-component';
@@ -66,8 +65,8 @@ const GtNotify = {
   },
 };
 
-const ColloNotification = () => {
-  return <ReactNotifications />;
+const GtNotification = () => {
+  return <ReactNotification />;
 };
 
-export { GtNotify, ColloNotification };
+export { GtNotify, GtNotification };
