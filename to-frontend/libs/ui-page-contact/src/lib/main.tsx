@@ -21,8 +21,7 @@ export const GladiolusToursContactBody = () => {
   } = useForm<GladiolusToursContactRequest>();
 
   const onSubmit: SubmitHandler<GladiolusToursContactRequest> = (data) => {
-    console.log(data);
-    const response = mutation.mutate({
+    mutation.mutate({
       firstName: data.firstName,
       lastName: data.lastName,
       email: data.email,
@@ -30,7 +29,6 @@ export const GladiolusToursContactBody = () => {
       phoneNumber: data.phoneNumber,
       subject: 'Contact Form: From Gladiolus Tours Website',
     });
-    console.log(response);
   };
 
   return (
