@@ -6,24 +6,30 @@ import {
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { classNames } from '@collo/ui-utils';
 import { FORM_VALIDATION_OPTIONS_KW_USER_EMAIL } from '@collo/ui-utils-form';
-import { useQueryClient } from '@tanstack/react-query';
-import { IForm, useSendEmail } from '@collo/ui-api';
+import {
+  GladiolusToursContactRequest,
+  useGladiolusToursContactMutation,
+} from '@collo/ui-api';
 import { Link } from 'react-router-dom';
 
 export const GladiolusToursContactBody = () => {
-  const queryClient = useQueryClient();
-  const { mutate } = useSendEmail(() => {
-    queryClient.invalidateQueries();
-  });
+  const mutation = useGladiolusToursContactMutation();
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<IForm>();
+  } = useForm<GladiolusToursContactRequest>();
 
-  const onSubmit: SubmitHandler<IForm> = (data) => {
+  const onSubmit: SubmitHandler<GladiolusToursContactRequest> = (data) => {
     console.log(data);
-    const response = mutate(data);
+    const response = mutation.mutate({
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+      message: data.message,
+      phoneNumber: data.phoneNumber,
+      subject: 'Contact Form: From Gladiolus Tours Website',
+    });
     console.log(response);
   };
 
@@ -273,7 +279,7 @@ export const GladiolusToursContactBody = () => {
                     autoComplete="tel"
                     className={classNames(
                       'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6',
-                      errors.email?.message
+                      errors.phoneNumber?.message
                         ? 'border-red-300 text-red-900 focus:border-red-500 focus:ring-red-500'
                         : ''
                     )}
@@ -285,11 +291,11 @@ export const GladiolusToursContactBody = () => {
                         message: 'Minimum length is 10.',
                       },
                       maxLength: {
-                        value: 15,
+                        value: 20,
                         message: 'Maximum length is 15',
                       },
                       pattern: {
-                        value: /^[0-9]*$/,
+                        value: /^(\+\d{3}-\d{3}-\d{3}-\d{3})$/,
                         message: 'Only Numbers are allowed',
                       },
                     })}
