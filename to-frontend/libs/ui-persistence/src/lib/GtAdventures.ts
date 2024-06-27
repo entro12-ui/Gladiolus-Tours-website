@@ -59,11 +59,13 @@ export type GladiolusToursAdventure = IGtAdventures[];
 export const GtAdventures: GladiolusToursAdventure = [
   {
     id: 1,
-    title: '4 Days Kilimanjaro Trek via Machame Route',
+    title: '9 Days Kilimanjaro Trek via Northern Route',
     overview:
-      'The 4 Days Kilimanjaro Short Trek via Machame route is referred as Special Kilimanjaro Climbing challenge to get to the summit for shortest period of time. It is NOT more affordable than a 6 days Kilimanjaro hike but it is a challenge for most fit hikers. So this itinerary is designed for Mountaineers as a Kilimanjaro Climb Challenge.\n',
+      'The Northern Circuit route is the newest route up Mount Kilimanjaro and arguably the best. That’s because it’s a combination of all of the best elements of the other routes with beautiful scenery, plenty of solitude, a healthy challenge, and the potential to spot wildlife, this is definitely the route for you.\n' +
+      '\n' +
+      'The Northern Circuit route follows the same route as Lemosho route for the first few days, but rather than sticking to the south side of Kibo, it turns to the little-used northern trails instead. The route is also has the most acclimatization time and the highest summit success rate.',
     code: 'GT001',
-    duration: '4 Days / 3 Nights',
+    duration: '',
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
     image: Kilimanjaro_Machame_Route_01,
@@ -72,7 +74,7 @@ export const GtAdventures: GladiolusToursAdventure = [
     itinerary: [
       {
         day: 1,
-        title: 'Arrival Day - Arusha / Moshi Town',
+        title: 'Arrival Day – Arusha / Moshi Town',
         Accommodation: 'Hotel',
         description:
           'Pick up from Kilimanjaro airport and transfer to hotel in Moshi/ Arusha. A pre-climb briefing can be organized where we will provide you all the information to prepare for your climb. This will include a day to day guide of your climb, the gear required as well as discussing acute mountain sickness and all health and safety on Kilimanjaro.',
@@ -80,57 +82,93 @@ export const GtAdventures: GladiolusToursAdventure = [
       {
         day: 2,
         title:
-          'Arusha / Moshi Town - Machame Gate (1800 m) - Machame Camp (3010 m)',
-        Accommodation: 'Machame Camp',
+          'Arusha / Moshi Town – Londorossi Gate (2210 m) – Mti Mkubwa Camp (Big Tree Camp) (2780 m)',
+        Accommodation: 'Mti Mkubwa Camp',
         description:
-          'Transfer from your hotel to the Kilimanjaro National Park gate at Machame. After registration and preparations we start our trek into the lush rainforest. There is the possibility of spotting some Black-and-White Colobus monkeys on the way to Machame camp for Dinner and overnight.\n' +
-          '\n' +
-          'Distance: About 5 km | Hiking time: 5-6 hours | Habitat: Montane forest\n',
+          'You will be picked up at your hotel at around 08:00am and transferred to the Lemosho (Londorossi) gate located on the western side of Kilimanjaro. After the registration process you will still start our climb steadily through the forests of the Lemosho glades to reach Big Tree camp where you will be spending the night.<br/><br/>' +
+          '<b>Distance:</b> About 6 km | <b>Approx. time:</b> 3-4 hours | <b>Habitat:</b> Montane forest',
       },
       {
         day: 3,
         title:
-          'Machame Camp (3010 m) – Shira Camp (3845 m) – Lava Tower (4630 m) – Barranco Camp (3950 m)',
-        Accommodation: 'Barranco Camp',
+          'Mti Mkubwa Camp (Big Tree Camp) (2780 m) – Shira 1 Camp (3500 m)',
+        Accommodation: 'Shira 1 Camp',
         description:
-          'After a short forest hike we continue a steep ridge passing through open moorlands crossing a large gorge to reach Shira Camp, beautiful views of the Shira Plateau and sometimes Mount Meru. The trek continues to ascent above the Shira Plateau in the direction of the Lava Tower. The vegetation becomes sparser as the landscape changes to an afro-alpine desert. The route passes through the sweeping Barranco Valley with its lobelia and giant senecio plants. After 1 to 7 hours, you will arrive at the Barranco Camp.\n' +
-          '\n' +
-          'Distance: About 16 km | Hiking time: 6-10 hours | Habitat: Moorland, Semi desert\n',
+          'Trek across a plateau of grassy moorland and heather scattered with volcanic rock formations. Our destination for today is the Shira 1 Camp from where there are often views of Kibo Peak floating on the clouds. This section has reasonable amount of altitude and parts of the route are fairly steep. Dinner and overnight at the Camp.<br/><br/>' +
+          '<b>Distance:</b> About 5 km | <b>Hiking time:</b> 4-5 hours | <b>Habitat:</b> Meadows',
       },
       {
         day: 4,
-        title: 'Barranco Camp (3950 m) – Barafu Camp (4640 m)',
-        Accommodation: 'Barafu Camp',
+        title: 'Shira 1 Camp (3500 m) – Shira 2 Camp (3845 m)',
+        Accommodation: 'Shira 2 Camp',
         description:
-          'The path climbs steep out of the Barranco valley and crosses the Karanga valley, then turns North to reach Barafu Hut. Overnight stay at Barafu camp.\n' +
-          '\n' +
-          'Distance: About 11 km | Hiking time: 8-10 hours | Habitat: Alpine desert\n',
+          'This section you will get the chance to view the Northern Ice fields from the western side of the mountain with some unusual views of Kibo. A steady climb across the moorland of the Shira Plateau will help with acclimatization and we enjoy great panoramic views to destination Shira 2 Camp. In the afternoon you will take an acclimatization walk then head back to camp for dinner and overnight.<br/><br/>' +
+          '<b>Distance:</b> About 7 km | <b>Hiking time:</b> 3-4 hours | <b>Habitat:</b> Moorland',
       },
       {
         day: 5,
         title:
-          'Barafu Camp (4640 m) – Uhuru Peak (5895 m) – Mweka Camp (3080 m) – Mweka Gate (1630 m) – Moshi / Arusha Town',
-        Accommodation: 'Hotel',
+          'Shira Camp 2 (3845 m) – Lava Tower (4630 m) – Moir Hut (4200 m)',
+        Accommodation: 'Moir Hut',
         description:
-          '\n' +
-          '\n' +
-          'Summit Attempt\n' +
-          'Along day with an early start to reach the crater, ream at the Stella point in time for sunrise, then to Uhuru peak, the highest point in Africa. After celebrating with photos at the summit we start descent to Base, Picnic Lunch en-route to Mweka Gate were you will collect our summit certificates, and say goodbye to our mountain crew before drive back to Moshi/Arusha to your hotel for dinner and overnight.\n' +
-          '\n' +
-          'Hiking time: 8 hours to reach Uhuru Peak | Descend time: 8-11 hours to descend to Mweka Gate | Distance: About 6 km ascent + 20 km descent | Habitat: Stone scree and ice-capped summit, Moorland, Montane forest\n',
+          'The fifth day of this route will take you east into the High Alpine desert zone. Here the Lemosho Route connects with the popular Machame Route before you leave for a more secluded trail to Lava Tower. This part of your journey involves gradual exposure to much higher altitudes, consolidating your acclimatization process. The end of the day sees you heading towards the Moir Camp (4,200 m), situated behind the magnificent Lent Hills for Dinner and overnight.<br/><br/>' +
+          '<b>Distance:</b> About 14 km | <b>Hiking time:</b> 5-7 hours | <b>Habitat:</b> Alpine Desert',
       },
       {
         day: 6,
-        title: 'Departure Day / Go on a Safari',
-        Accommodation: '',
+        title: 'Moir Hut (4200 m) – Buffalo Camp (4020 m)',
+        Accommodation: 'Buffalo Camp',
         description:
-          'After breakfast, depart for your next destination, which is optional or can be arranged:\n' +
-          '\n' +
-          '    Safari to the National Parks\n' +
-          '    Transfer to Kilimanjaro International Airport or Arusha Airport\n' +
-          '    Transport to Other Towns in Tanzania i.e. Dar es Salaam, Zanzibar\n' +
-          '    Nairobi via border town Namanga\n' +
-          '\n',
+          'After breakfast, gather your gear and climb out of the Moir Valley, a short detour sees you reach the summit of Lent Hills to admire the views before rejoining the Kilimanjaro Northern Circuit trail. Journey along rolling terrain that incline and decline, taking you around the northern slopes of Kibo before reaching Buffalo Camp for Dinner and overnight.<br/><br/>' +
+          '<b>Distance:</b> About 12 km | <b>Hiking time:</b> 5-7 hours | <b>Habitat:</b> Alpine Desert\n',
+      },
+      {
+        day: 7,
+        title: 'Buffalo Camp (4020 m) – Third Cave (3870 m)',
+        Accommodation: 'Third Cave',
+        description:
+          'Your Kilimanjaro Northern Circuit adventure continues with a revitalizing morning climbing up to the top of ‘Buffalo Ridge’. After stopping for lunch, you’ll continue eastwards through High and Low Alpine scenery passing increasingly sparse and rare vegetation. The day’s journey ends after circumventing the northern slopes to reach the Rongai Third Cave Camp. By this stage of the trek, you’ll be fully acclimatized to the high altitude.<br/><br/>' +
+          '<b>Distance:</b> About 8 km | <b>Hiking time:</b> 5-7 hours | <b>Habitat:</b> Alpine Desert\n',
+      },
+      {
+        day: 8,
+        title: 'Third Cave Camp (3870 m) – School Hut Camp (4715 m)',
+        Accommodation: 'School Hut Camp',
+        description:
+          'This is the final leg of the trip before your last ascent up to the peak of Mount Kilimanjaro. The highlight of the day will be the trek up and over The Saddle, a lunar landscape that lies between the Kibo and Mawenzi Peaks. You’ll then head southwest to School Hut (4,800 m) to rest in preparations for the summit, dinner and overnight.<br/><br/>' +
+          '<b>Distance:</b> About 6 km | <b>Hiking time:</b> 4-6 hours | <b>Habitat:</b> Alpine desert',
+      },
+      {
+        day: 9,
+        title:
+          'School Hut (4715 m) – Uhuru Peak (5895 m) – Millennium Camp (3790 m)',
+        Accommodation: 'Millennium Camp',
+        description:
+          'Get off to an early start you will travel through the darkness towards Kilimanjaro’s main crater rim at Gilman’s Point. There you’ll rest before the final push, passing spectacular ice cliffs and glaciers. You’ll arrive at the Mount Kilimanjaro summit just in time to catch the sunrise, the most spectacular of nature’s backdrops. Share the sense of exhilaration and accomplishment with your guides and support team. Soak in the beauty of the view before retracing your steps down the crater rim. Then you’ll descend on the Mweka Route towards the last stop on your journey – Millennium Camp.<br/><br/>' +
+          '<b>Total Distance:</b> About 19 km | <b>Hiking/Descending time:</b> 11–15 hours | <b>Habitat:</b> Arctic, Montane forest',
+      },
+      {
+        day: 10,
+        title:
+          'Millennium Camp (3790 m) – Mweka Gate (1630 m) – Moshi / Arusha Town',
+        Accommodation: 'Mweka Gate',
+        description:
+          'Make the final descent through the rain forest to Mweka Gate. Here we will collect or summit certificate, have lunch and say goodbye to our mountain crew before drive back to Moshi/Arusha for dinner and overnight.<br/><br/>' +
+          '<b>Distance:</b> About 12.1 km | <b>Hiking time:</b> 4-5 hours | <b>Habitat:</b> Montane forest',
+      },
+      {
+        day: 11,
+        title: 'Departure Day / Go on a Safari',
+        Accommodation: 'Hotel',
+        description: `
+        After breakfast, depart for your next destination, which is optional or can be arranged:<br/><br/>
+        <ul>
+            <li>Safari to the National Parks</li>
+            <li>Transfer to Kilimanjaro International Airport or Arusha Airport</li>
+            <li>Transport to Other Towns in Tanzania i.e. Dar es Salaam, Zanzibar</li>
+            <li>Nairobi via border town Namanga</li>
+        </ul>
+        `,
       },
     ],
   },
