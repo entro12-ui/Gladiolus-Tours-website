@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { getWebsiteBaseHref } from '@collo/ui-utils';
 import { GLADIOLUS_TOURS_ROUTE_TABLE } from './route-table';
+import { GtNotification } from '@collo/ui-comp-notifications';
 
 // See https://medium.com/doctolib/react-query-cachetime-vs-staletime-ec74defc483e
 // * cacheTime default is 5 mins
@@ -24,6 +25,7 @@ export function UiRouterGladiolusTours() {
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
+        <GtNotification />
         <RouterProvider router={router} />
       </QueryClientProvider>
     </HelmetProvider>
