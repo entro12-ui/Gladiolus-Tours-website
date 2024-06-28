@@ -1249,10 +1249,11 @@ export const GtAdventures: GladiolusToursAdventure = [
   },
   {
     id: 13,
-    title: '',
-    overview: '',
-    code: '',
-    duration: '',
+    title: '5 Days Serengeti and Ngorongoro Crater Safari',
+    overview:
+      'This tour offers you a 5-day Tanzania Migration Safari where your river crossing tour will take you to the Mara River for the spectacular migration crossing which is an experience of a lifetime. Let us tailor-make your itinerary and customize your tour according to your requirements and duration.',
+    code: 'GT0013',
+    duration: '5 Days / 4 Nights',
     category: GtItineraryCategory['Adventure Safaris'],
     activities: [
       GtActivities['Game Drives'],
@@ -1271,9 +1272,47 @@ export const GtAdventures: GladiolusToursAdventure = [
     itinerary: [
       {
         day: 1,
-        title: '',
+        title: 'Moshi / Arusha – Serengeti National Park',
         Accommodation: '',
-        description: '',
+        description:
+          'After early morning breakfast, we begin our drive to the Serengeti National Park via Ngorongoro with a few stops during the journey at interesting scenic points for you to take pictures and get the full experience of your Tanzania Classic tour. <br/><br/>' +
+          'The drives from Moshi/Arusha to Serengeti National Park is approximately 6 hours and we will make provision for your lunch during the journey by providing you with enjoyable lunch boxes to allow for us arriving timeously for afternoon animal sightings in the Serengeti. Dinner and overnight at either midrange or luxury lodge in Serengeti.',
+      },
+      {
+        day: 2,
+        title: 'Full day in Serengeti National Park',
+        Accommodation: '',
+        description:
+          'A full day Serengeti tour will start after your breakfast, where you will spend the day observing animals in their natural habitat at a different time and in various parts of the Serengeti. <br/><br/>' +
+          'Look forward to witnessing large herds of migrating animals, prides of lions, cheetah, leopard, elephant, giraffe, buffalo, and antelope as well as various species of birdlife and indigenous trees.',
+      },
+      {
+        day: 3,
+        title: 'Another Full day in Serengeti National Park',
+        Accommodation: '',
+        description:
+          'Enjoy a full day of animal sightings and capture the wilderness in all its glory as you drive through the Serengeti in search of wildlife. <br/><br/>' +
+          'Depending on the time of the year this 5 Days Tanzania Classic Migration tour will be located in the central Serengeti, Northern Serengeti, or Southern Serengeti. <br/><br/>' +
+          'This itinerary is flexible and the accommodation will be booked according to animal migratory movement. Dinner and overnight at either midrange or luxury lodge in Serengeti.<br/><br/>',
+      },
+      {
+        day: 4,
+        title:
+          'Morning in Serengeti National park – Afternoon drive to Ngorongoro',
+        Accommodation: '',
+        description:
+          'This tour will start with an early breakfast at your lodge or camp before you leave for morning game sightings. <br/><br/>' +
+          'At midday, you will enjoy your picnic lunch thereafter you will continue with afternoon animal sightings as you drive to the Ngorongoro crater rim for an overnight stay.',
+      },
+      {
+        day: 5,
+        title:
+          'Morning in Ngorongoro Crater – Afternoon drive back to Arusha / Moshi',
+        Accommodation: '',
+        description:
+          'Today your safari will begin with an early breakfast at your lodge or camp before you travel down the crater rim to view the animals inside the crater up-close. <br/><br/>' +
+          'The Ngorongoro crater is the world’s largest unbroken Caldera where thousands of animals live, where you will see big five animals. <br/><br/>' +
+          'That afternoon you will enjoy your picnic lunch at the hippo pool then continue with the afternoon’s animal sightings as you make your way out of the crater and on your way back to your arranged hotel in Arusha/Airport/Moshi.<br/>',
       },
     ],
   },
