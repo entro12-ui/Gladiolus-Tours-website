@@ -1260,7 +1260,6 @@ export const GtAdventures: GladiolusToursAdventure = [
       GtActivities['Great Migration'],
       GtActivities['Bird Watching'],
       GtActivities['Balloon Safari'],
-      GtActivities['Canopy Walkway'],
     ],
     image: Mount_Kilimanjaro_Summit,
     carouselImage: [
