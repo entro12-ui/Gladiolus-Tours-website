@@ -69,7 +69,11 @@ export const GtAdventures: GladiolusToursAdventure = [
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
     image: Kilimanjaro_Machame_Route_01,
-    carouselImage: [Kilimanjaro_Machame_Route_02, Kilimanjaro_Machame_Route_03],
+    carouselImage: [
+      Mount_Kilimanjaro,
+      Kilimanjaro_Machame_Route_02,
+      Kilimanjaro_Machame_Route_03,
+    ],
     status: true,
     itinerary: [
       {
@@ -186,6 +190,7 @@ export const GtAdventures: GladiolusToursAdventure = [
     carouselImage: [
       Kilimanjaro_Climb_Horombo_Huts_06,
       Kilimanjaro_Climb_Marangu_Gate_03,
+      Kilimanjaro_Climb_Camping,
     ],
     status: true,
     itinerary: [
@@ -281,7 +286,11 @@ export const GtAdventures: GladiolusToursAdventure = [
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
     image: Mount_Kilimanjaro_Climb_4a,
-    carouselImage: [Mount_Kilimanjaro_Climb_4b, Lemosho_Route_01],
+    carouselImage: [
+      Mount_Kilimanjaro_Climb_4b,
+      Lemosho_Route_01,
+      Mount_Kilimanjaro_Climb_09,
+    ],
     status: true,
     itinerary: [
       {
@@ -371,6 +380,7 @@ export const GtAdventures: GladiolusToursAdventure = [
     carouselImage: [
       Mount_Kilimanjaro_Mountain_Landscape_01,
       Mount_Kilimanjaro_Mountain_Landscape_02,
+      Mount_Kilimanjaro_3a,
     ],
     status: true,
     itinerary: [
@@ -966,7 +976,11 @@ export const GtAdventures: GladiolusToursAdventure = [
     category: GtItineraryCategory['Mountain Climbing'],
     activities: [GtActivities['Climbing / Trekking']],
     image: Mount_Kilimanjaro_Glacier_02,
-    carouselImage: [Lemosho_Route_01, Lemosho_Route_02],
+    carouselImage: [
+      Lemosho_Route_01,
+      Lemosho_Route_02,
+      Mount_Kilimanjaro_Glacier_03,
+    ],
     status: true,
     itinerary: [
       {
