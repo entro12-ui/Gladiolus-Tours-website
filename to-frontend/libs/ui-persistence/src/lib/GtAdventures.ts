@@ -1384,17 +1384,17 @@ export const GtAdventures: GladiolusToursAdventure = [
   },
   {
     id: 15,
-    title: '',
+    title: '5 Days Tarangire, Serengeti, Ngorongoro, Lake Manyara Safari',
     overview: '',
-    code: '',
-    duration: '',
+    code: 'GT0015',
+    duration: '5 Days / 4 Nights',
     category: GtItineraryCategory['Adventure Safaris'],
     activities: [
       GtActivities['Game Drives'],
       GtActivities['Great Migration'],
       GtActivities['Bird Watching'],
       GtActivities['Balloon Safari'],
-      GtActivities['Canopy Walkway'],
+      GtActivities['Night Game Drives'],
     ],
     image: Mount_Kilimanjaro_Summit,
     carouselImage: [
@@ -1406,9 +1406,42 @@ export const GtAdventures: GladiolusToursAdventure = [
     itinerary: [
       {
         day: 1,
-        title: '',
+        title: 'Moshi / Arusha - Tarangire National Park',
         Accommodation: '',
-        description: '',
+        description:
+          'Your expert safari driver will pick you up from the hotel after breakfast and transfer you to Tarangire National Park for the animal sighting. Enjoy 2 hours a relaxing drive from Moshi/Airport/Arusha to Tarangire National Park. <br/><br/>' +
+          'The Park is rich with ancient giant baobab trees, also known as the ‘’Tree of life’’, which covers most of the landscape of the park, after a full day of game drive, you will be transferred to your arranged hotel or lodge for dinner and overnight either Tarangire, Manyara or Karatu.',
+      },
+      {
+        day: 2,
+        title: 'Serengeti National Park',
+        Accommodation: '',
+        description:
+          'After an early morning breakfast, we will be heading to Serengeti National Park through Ngorongoro conservation area, we will have some stop during the journey at some interesting scenic point for you to take pictures and get the full experience of Tanzania classic safari. After animal viewing in Serengeti, you will be transferred to your lodge for dinner and overnight in Serengeti.',
+      },
+      {
+        day: 3,
+        title: 'Full day game viewing in Serengeti',
+        Accommodation: '',
+        description:
+          'You will spend the full day observing animals at the different parts of the Serengeti. It is the wildebeest migration for which Serengeti is perhaps most famous, abundance of large animals including Lions, Buffalos, Hyenas, Antelopes and Others. <br/><br/>' +
+          'Over a million wildebeest and about hundreds zebra graze from south of the northern hills to the southern plains for the short rain season.\n',
+      },
+      {
+        day: 4,
+        title: 'Morning Game drive in Serengeti Park - Drive to Ngorongoro',
+        Accommodation: '',
+        description:
+          'After an early breakfast at your lodge or camp, you will continue with game viewing as we drive to Ngorongoro Crater for a wildlife spotting. You will experience the Maasai traditional life on the way to Ngorongoro Crater. <br/><br/>' +
+          'The Crater has vast number of animals including lion, zebra, elephant and various resident animals, it also a good spot to see the rare black rhino. Dinner and Overnight in either Karatu or Manyara.',
+      },
+      {
+        day: 5,
+        title: 'Manyara National Park',
+        Accommodation: '',
+        description:
+          'A 5 days Tanzania  safari will commence with an early breakfast, you will visit Lake Manyara National Park for animals’ sightings with the option for a cultural visit in nearby village Mto wa Mbu (the mosquito river) the park is famous for the tree-climbing lion and a thousand of flamingos.<br/><br/>' +
+          'Dependent on your schedule and returning flight, thereafter you will be transferred to the airport on time or to your arranged hotel in Arusha/Moshi marking the end of your 5 days safari in Tanzania.\n',
       },
     ],
   },
