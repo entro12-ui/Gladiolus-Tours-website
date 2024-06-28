@@ -1318,17 +1318,17 @@ export const GtAdventures: GladiolusToursAdventure = [
   },
   {
     id: 14,
-    title: '',
-    overview: '',
-    code: '',
-    duration: '',
+    title: '6 Days Tarangire, Serengeti and Ngorongoro Crater Safari',
+    overview:
+      'A 6 day Safari to provide unlimited wildlife encounters in the heart of the Northern Tanzania Circuit. You’ll see what Lake Manyara, Tarangire National Park, Ngorongoro Crater (one of the world’s eight natural wonders), and Serengeti National Park have to offer. The safari is ideal for those safari goes seeking to explore the best of Tanzania with adequate time.',
+    code: 'GT0014',
+    duration: '6 Days / 5 Nights',
     category: GtItineraryCategory['Adventure Safaris'],
     activities: [
       GtActivities['Game Drives'],
       GtActivities['Great Migration'],
       GtActivities['Bird Watching'],
       GtActivities['Balloon Safari'],
-      GtActivities['Canopy Walkway'],
     ],
     image: Mount_Kilimanjaro_Summit,
     carouselImage: [
@@ -1340,9 +1340,45 @@ export const GtAdventures: GladiolusToursAdventure = [
     itinerary: [
       {
         day: 1,
-        title: '',
+        title: 'Moshi / Arusha - Lake Manyara National Park',
         Accommodation: '',
-        description: '',
+        description:
+          'After breakfast from Arusha, proceed to Lake Manyara National Park for a full day game drive with picnic lunches, Later proceed to Lake Manyara for dinner and overnight stay.',
+      },
+      {
+        day: 2,
+        title: 'Lake Manyara – Serengeti National Park',
+        Accommodation: '',
+        description:
+          'After breakfast, proceed to Serengeti National Park for a game drive with picnic lunches, Dinner and overnight at either midrange or luxury Lodge in Serengeti.',
+      },
+      {
+        day: 3,
+        title: 'Full day in Serengeti National Park',
+        Accommodation: '',
+        description:
+          'Early morning game drive Serengeti National Park, back for breakfast and relax. Later again proceed for a full day game drive with picnic lunches, Dinner and overnight at either midrange or luxury lodge in Serengeti.',
+      },
+      {
+        day: 4,
+        title: 'Serengeti National Park – Afterwards to Ngorongoro',
+        Accommodation: '',
+        description:
+          'Early morning game drive Serengeti National Park, back for breakfast and then proceed to Ngorongoro Crater, en route game drive with picnic lunches, Later proceed to <b>Ngorongoro Wildlife</b> for dinner and overnight stay.',
+      },
+      {
+        day: 5,
+        title: 'Full day Ngorongoro Crater – Afterwards to Tarangire',
+        Accommodation: '',
+        description:
+          'After early breakfast, proceed for a Full Day Crater tour with picnic lunches at Ngorongoro Crater, later proceed to Tarangire. Dinner and overnight at either midrange or luxury lodge.',
+      },
+      {
+        day: 6,
+        title: 'Tarangire National Park – Arusha / Moshi',
+        Accommodation: '',
+        description:
+          'After early breakfast, proceed for a full day game drive at Tarangire National Park with picnic lunches, Later proceed back to Arusha in the evening.',
       },
     ],
   },
