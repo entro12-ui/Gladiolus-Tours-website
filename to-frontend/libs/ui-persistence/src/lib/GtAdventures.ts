@@ -1182,4 +1182,159 @@ export const GtAdventures: GladiolusToursAdventure = [
       },
     ],
   },
+  {
+    id: 12,
+    title: '5 Days Lake Manyara, Serengeti and Ngorongoro Crater Safari',
+    overview:
+      'A 5 day Safari to provide unlimited wildlife encounters in the heart of the Northern Tanzania Circuit. You’ll see what Lake Manyara National Park, Ngorongoro Crater (one of the world’s eight natural wonders), and Serengeti National Park have to offer. The safari is ideal for those safari goes seeking to explore the best of Tanzania with adequate time.',
+    code: 'GT0012',
+    duration: '5 Days / 4 Nights',
+    category: GtItineraryCategory['Adventure Safaris'],
+    activities: [
+      GtActivities['Game Drives'],
+      GtActivities['Great Migration'],
+      GtActivities['Bird Watching'],
+      GtActivities['Balloon Safari'],
+      GtActivities['Canopy Walkway'],
+    ],
+    image: Mount_Kilimanjaro_Summit,
+    carouselImage: [
+      Kilimanjaro_Machame_Route_01,
+      Kilimanjaro_Machame_Route_02,
+      Kilimanjaro_Machame_Route_03,
+    ],
+    status: true,
+    itinerary: [
+      {
+        day: 1,
+        title: 'Moshi / Arusha - Lake Manyara National Park',
+        Accommodation: '',
+        description:
+          'At 8:30am, you will depart for Lake Manyara National Park where you will do game drive; Lake Manyara is a shallow freshwater lake in Tanzania. It is said to be the “loveliest (lake) … in Africa,” Lake Manyara is covering 127 square miles (329 km2) of Lake Manyara National Park, the lake’s alkaline waters cover approximately 89 square miles (231 km2). <br/><br/>' +
+          'It is famous for a good number of baboons and birdlife, also home to herbivores such as hippos, impalas, elephants, wildebeests, buffalo, warthogs, and giraffes, giant fig trees and mahogany seen in the groundwater forest. Dinner and overnight at either midrange or luxury Lodge on Full Board basis in either Manyara or Karatu.\n',
+      },
+      {
+        day: 2,
+        title: 'Serengeti National Park',
+        Accommodation: '',
+        description:
+          'After breakfast drive to Serengeti National Park with an optional – via Olduvai Gorge (Millions of years ago, the site was that of a large lake, the shores of which were covered with successive deposits of volcanic ash. <br/><br/>' +
+          'Excavation work there was pioneered by Louis and Mary Leakey beginning in 1931. The Serengeti National park covers 14,763 km² (5,700 square miles) of grassland plains and savanna as well as river trine forest and woodlands. <br/><br/>' +
+          'The park lies in the north of the country, bordered to the north by the national Tanzania and Kenyan border. Dinner and overnight at either midrange or luxury Lodge in Serengeti. <br/><br/>',
+      },
+      {
+        day: 3,
+        title: 'Full day at Serengeti National Park',
+        Accommodation: '',
+        description:
+          'Start your day with a full day game driving in the Serengeti plains, the endless, almost treeless grassland of the south is the most emblematic scenery of the park. <br/><br/>' +
+          'Other hoofed animals – zebra, gazelle, impala, hartebeest, topi, buffalo, and waterbuck – also occur in huge numbers thru out the year.  Dinner and overnight at either midrange or luxury lodge on Full Board basis in Serengeti.\n',
+      },
+      {
+        day: 4,
+        title: 'Ngorongoro Conservation Area Authority',
+        Accommodation: '',
+        description:
+          'Wake-up call at 6:00am, in order to have just a cup of hot coffee then proceed for the early morning game drive, this morning game drive is very important as you will be able to witness the early morning kills from the big five only if you will be lucky enough. <br/><br/>' +
+          'After the game drive back to the Lodge at 9:30am in order to have your main breakfast, there after you will check out the Lodge and proceed with game drives en–route to Ngorongoro Conservation Area Authority. Dinner and overnight at either midrange or luxury lodge.',
+      },
+      {
+        day: 5,
+        title: 'Ngorongoro Crater Tour – Drive Back to Arusha / Moshi',
+        Accommodation: '',
+        description:
+          'Descend into the Ngorongoro Crater for crater tour. This is world heritage site; the incomparable Ngorongoro crater is the world’s largest “caldera”. Dominated by cliffs standing some 600 meters high and presenting a sheer drop down to a wide open space of some 246 square km, and you may see everything from elephant to lion, and if you’re lucky, the near–extinct black rhino, all amongst large herds of zebra and wildebeest.  Afternoon exit the crater and drive back to Arusha/Airport/Moshi.',
+      },
+    ],
+  },
+  {
+    id: 13,
+    title: '',
+    overview: '',
+    code: '',
+    duration: '',
+    category: GtItineraryCategory['Adventure Safaris'],
+    activities: [
+      GtActivities['Game Drives'],
+      GtActivities['Great Migration'],
+      GtActivities['Bird Watching'],
+      GtActivities['Balloon Safari'],
+      GtActivities['Canopy Walkway'],
+    ],
+    image: Mount_Kilimanjaro_Summit,
+    carouselImage: [
+      Kilimanjaro_Machame_Route_01,
+      Kilimanjaro_Machame_Route_02,
+      Kilimanjaro_Machame_Route_03,
+    ],
+    status: true,
+    itinerary: [
+      {
+        day: 1,
+        title: '',
+        Accommodation: '',
+        description: '',
+      },
+    ],
+  },
+  {
+    id: 14,
+    title: '',
+    overview: '',
+    code: '',
+    duration: '',
+    category: GtItineraryCategory['Adventure Safaris'],
+    activities: [
+      GtActivities['Game Drives'],
+      GtActivities['Great Migration'],
+      GtActivities['Bird Watching'],
+      GtActivities['Balloon Safari'],
+      GtActivities['Canopy Walkway'],
+    ],
+    image: Mount_Kilimanjaro_Summit,
+    carouselImage: [
+      Kilimanjaro_Machame_Route_01,
+      Kilimanjaro_Machame_Route_02,
+      Kilimanjaro_Machame_Route_03,
+    ],
+    status: true,
+    itinerary: [
+      {
+        day: 1,
+        title: '',
+        Accommodation: '',
+        description: '',
+      },
+    ],
+  },
+  {
+    id: 15,
+    title: '',
+    overview: '',
+    code: '',
+    duration: '',
+    category: GtItineraryCategory['Adventure Safaris'],
+    activities: [
+      GtActivities['Game Drives'],
+      GtActivities['Great Migration'],
+      GtActivities['Bird Watching'],
+      GtActivities['Balloon Safari'],
+      GtActivities['Canopy Walkway'],
+    ],
+    image: Mount_Kilimanjaro_Summit,
+    carouselImage: [
+      Kilimanjaro_Machame_Route_01,
+      Kilimanjaro_Machame_Route_02,
+      Kilimanjaro_Machame_Route_03,
+    ],
+    status: true,
+    itinerary: [
+      {
+        day: 1,
+        title: '',
+        Accommodation: '',
+        description: '',
+      },
+    ],
+  },
 ];
