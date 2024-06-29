@@ -282,21 +282,7 @@ export const GladiolusToursContactBody = () => {
                         : ''
                     )}
                     required
-                    {...register('phoneNumber', {
-                      required: 'Phone Number is required.',
-                      minLength: {
-                        value: 10,
-                        message: 'Minimum length is 10.',
-                      },
-                      maxLength: {
-                        value: 20,
-                        message: 'Maximum length is 15',
-                      },
-                      pattern: {
-                        value: /^(\+\d{3}-\d{3}-\d{3}-\d{3})$/,
-                        message: 'Only Numbers are allowed',
-                      },
-                    })}
+                    {...register('phoneNumber', {})}
                   />
                   {errors?.phoneNumber?.message && (
                     <p className="text-red-600">
