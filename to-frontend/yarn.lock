@@ -10041,11 +10041,6 @@ react-i18next@^13.5.0:
     "@babel/runtime" "^7.22.5"
     html-parse-stringify "^3.0.1"
 
-react-international-phone@4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/react-international-phone/-/react-international-phone-4.3.0.tgz#cb04295b13b5a55f50f36e3c0b7f6c2dc549bb6c"
-  integrity sha512-lIntIkwq2j0m3j4RsRiGJl/buHMLBd+mQ9S9RfiX3KbiUCUtbawoPCV2r8BvyeRMZI0cDtovoukBCuZ+70QzJA==
-
 react-intl-universal@^2.9.1:
   version "2.11.1"
   resolved "https://registry.yarnpkg.com/react-intl-universal/-/react-intl-universal-2.11.1.tgz#f7138fe83dbe4661ee0f2489449a01dc3329e0c4"
