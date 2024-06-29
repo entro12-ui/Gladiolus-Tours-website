@@ -24,6 +24,24 @@ import Kilimanjaro_Climb_Marangu_Gate_01 from './images/Itinerary/Mountain/Mount
 import Kilimanjaro_Climb_Marangu_Gate_03 from './images/Itinerary/Mountain/Kilimanjaro_Climb_Marangu_Gate_03.webp';
 import Kilimanjaro_Climb_Horombo_Huts_06 from './images/Itinerary/Mountain/Mount_Kilimanjaro_Horombo_Huts_06.webp';
 import Kilimanjaro_Climb_Horombo_Huts_11 from './images/Itinerary/Mountain/Mount_Kilimanjaro_Horombo_Huts_11.webp';
+import Ngorongoro_Crater_Black_Rhinos_NCA_01 from './images/Itinerary/adventure/Ngorongoro_Crater_Black_Rhinos_NCA_01.webp';
+import Ngorongoro_Crater_Black_Rhinos_NCA_02 from './images/Itinerary/adventure/Ngorongoro_Crater_Black_Rhinos_NCA_02.webp';
+import Ngorongoro_Crater_Elephant_NCA from './images/Itinerary/adventure/Ngorongoro_Crater_Elephant_NCA.webp';
+import Ngorongoro_Crater_Floor_NCA from './images/Itinerary/adventure/Ngorongoro_Crater_Floor_NCA.webp';
+import Ngorongoro_Crater_Wildlife_24 from './images/Itinerary/adventure/Ngorongoro_Crater_Wildlife_24.webp';
+import Ngorongoro_Crater_View_NCA from './images/Itinerary/adventure/Ngorongoro_Crater_View_NCA.webp';
+import Ngorongoro_Crater_Hyenas_NCA from './images/Itinerary/adventure/Ngorongoro_Crater_Hyenas_NCA.webp';
+import Ngorongoro_Crater_Swamps_NCA from './images/Itinerary/adventure/Ngorongoro_Crater_Swamps_NCA.webp';
+import Ngorongoro_Crater_Flamingos_10_NCA from './images/Itinerary/adventure/Ngorongoro_Crater_Flamingos_10_NCA.webp';
+import Ngorongoro_Crater_Lion_20 from './images/Itinerary/adventure/Ngorongoro_Crater_Lion_20.webp';
+import Ngorongoro_Crater_Ostrich_20 from './images/Itinerary/adventure/Ngorongoro_Crater_Ostrich_20.webp';
+import Serengeti_Giraffe_8085 from './images/Itinerary/adventure/Serengeti_Girafe_8085.webp';
+import Serengeti_National_Park_Lions_22 from './images/Itinerary/adventure/Serengeti_National_Park_Lions_22.webp';
+import Serengeti_Wildebeests_03 from './images/Itinerary/adventure/Serengeti_Wildebeests_03.webp';
+import Serengeti_National_Park_Hyenas_22 from './images/Itinerary/adventure/Serengeti_National_Park_Hyenas_22.webp';
+import Serengeti_National_Park_Leopard_24 from './images/Itinerary/adventure/Serengeti_National_Park_Leopard_24.webp';
+import Tarangire_National_Park_Giraffe_20 from './images/Itinerary/adventure/Tarangire_National_Park_Giraffe_20.webp';
+import Lake_Manyara_National_Park_Giraffe_23 from './images/Itinerary/adventure/Lake_Manyara_National_Park_Giraffes_23.webp';
 
 interface IItinerary {
   day: number;
@@ -1211,11 +1229,11 @@ export const GtAdventures: GladiolusToursAdventure = [
       GtActivities['Balloon Safari'],
       GtActivities['Canopy Walkway'],
     ],
-    image: Mount_Kilimanjaro_Summit,
+    image: Serengeti_National_Park_Hyenas_22,
     carouselImage: [
-      Kilimanjaro_Machame_Route_01,
-      Kilimanjaro_Machame_Route_02,
-      Kilimanjaro_Machame_Route_03,
+      Ngorongoro_Crater_View_NCA,
+      Ngorongoro_Crater_Black_Rhinos_NCA_01,
+      Ngorongoro_Crater_Black_Rhinos_NCA_02,
     ],
     status: true,
     itinerary: [
@@ -1275,11 +1293,10 @@ export const GtAdventures: GladiolusToursAdventure = [
       GtActivities['Bird Watching'],
       GtActivities['Balloon Safari'],
     ],
-    image: Mount_Kilimanjaro_Summit,
+    image: Ngorongoro_Crater_Black_Rhinos_NCA_02,
     carouselImage: [
-      Kilimanjaro_Machame_Route_01,
-      Kilimanjaro_Machame_Route_02,
-      Kilimanjaro_Machame_Route_03,
+      Ngorongoro_Crater_Swamps_NCA,
+      Ngorongoro_Crater_Flamingos_10_NCA,
     ],
     status: true,
     itinerary: [
@@ -1343,11 +1360,11 @@ export const GtAdventures: GladiolusToursAdventure = [
       GtActivities['Bird Watching'],
       GtActivities['Balloon Safari'],
     ],
-    image: Mount_Kilimanjaro_Summit,
+    image: Ngorongoro_Crater_Elephant_NCA,
     carouselImage: [
-      Kilimanjaro_Machame_Route_01,
-      Kilimanjaro_Machame_Route_02,
-      Kilimanjaro_Machame_Route_03,
+      Ngorongoro_Crater_Wildlife_24,
+      Tarangire_National_Park_Giraffe_20,
+      Serengeti_Wildebeests_03,
     ],
     status: true,
     itinerary: [
@@ -1409,11 +1426,11 @@ export const GtAdventures: GladiolusToursAdventure = [
       GtActivities['Balloon Safari'],
       GtActivities['Night Game Drives'],
     ],
-    image: Mount_Kilimanjaro_Summit,
+    image: Tarangire_National_Park_Giraffe_20,
     carouselImage: [
-      Kilimanjaro_Machame_Route_01,
-      Kilimanjaro_Machame_Route_02,
-      Kilimanjaro_Machame_Route_03,
+      Serengeti_National_Park_Lions_22,
+      Ngorongoro_Crater_Floor_NCA,
+      Serengeti_National_Park_Leopard_24,
     ],
     status: true,
     itinerary: [
