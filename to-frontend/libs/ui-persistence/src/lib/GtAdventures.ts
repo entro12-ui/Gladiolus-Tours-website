@@ -1415,7 +1415,7 @@ export const GtAdventures: GladiolusToursAdventure = [
   {
     id: 15,
     title: '5 Days Tarangire, Serengeti, Ngorongoro, Lake Manyara Safari',
-    overview: '',
+    overview: 'The 5 days Safari has been carefully planned to provide unlimited wildlife encounters in the heart of the Northern Tanzania Circuit. You’ll see what Tarangire National Park, Manyara National Park, Ngorongoro Crater (one of the world’s eight natural wonders), and Serengeti National Park. The safari is ideal for those safari goes seeking to explore the best of Tanzania with adequate time.',
     code: 'GT0015',
     duration: '5 Days / 4 Nights',
     category: GtItineraryCategory['Adventure Safaris'],
