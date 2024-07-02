@@ -3,7 +3,7 @@
 # Booking Inquiry
 response_booking=$(curl -s -X POST http://localhost:8080/booking -H "Content-Type: application/json" -d '{
   "fullName": "John Doe",
-  "email": "info@gladiolustours.com",
+  "email": "inquiry@gladiolustours.com",
   "subject": "Booking Inquiry",
   "dateFrom": "20/07/2024",
   "dateTo": "25/07/2024",
@@ -19,7 +19,7 @@ response_contact=$(curl -s -X POST http://localhost:8080/contact -H "Content-Typ
   "firstName": "Jane",
   "lastName": "Doe",
   "subject": "General Inquiry",
-  "email": "info@gladiolustours.com",
+  "email": "inquiry@gladiolustours.com",
   "phoneNumber": "+255-762-578-062",
   "message": "I have a question about your tours."
 }')
