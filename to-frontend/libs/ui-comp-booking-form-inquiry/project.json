@@ -1,0 +1,40 @@
+{
+  "name": "ui-comp-booking-form-inquiry",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui-comp-booking-form-inquiry/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ui-comp-booking-form-inquiry",
+        "tsConfig": "libs/ui-comp-booking-form-inquiry/tsconfig.lib.json",
+        "project": "libs/ui-comp-booking-form-inquiry/package.json",
+        "entryFile": "libs/ui-comp-booking-form-inquiry/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/ui-comp-booking-form-inquiry/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/ui-comp-booking-form-inquiry/jest.config.ts"
+      }
+    }
+  }
+}

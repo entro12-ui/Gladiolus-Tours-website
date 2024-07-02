@@ -20,6 +20,9 @@
       "@collo/ui-comp-activities": ["libs/ui-comp-activities/src/index.ts"],
       "@collo/ui-comp-adventure": ["libs/ui-comp-adventure/src/index.ts"],
       "@collo/ui-comp-banner": ["libs/ui-comp-banner/src/index.ts"],
+      "@collo/ui-comp-booking-form-inquiry": [
+        "libs/ui-comp-booking-form-inquiry/src/index.ts"
+      ],
       "@collo/ui-comp-chat-bot": ["libs/ui-comp-chat-bot/src/index.ts"],
       "@collo/ui-comp-destinations": ["libs/ui-comp-destinations/src/index.ts"],
       "@collo/ui-comp-header": ["libs/ui-comp-header/src/index.ts"],
