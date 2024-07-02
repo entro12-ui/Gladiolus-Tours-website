@@ -13,8 +13,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class EmailServiceImpl implements EmailService {
-    @Value("${aws.region}")
-    private String region;
+    @Value("${aws.ses.sourceEmail}")
+    private String sourceEmail;
 
     @Value("${aws.ses.destinationEmail}")
     private String destinationEmail;
@@ -44,7 +44,7 @@ public class EmailServiceImpl implements EmailService {
         String bodyText = "Name: " + book.getFullName() + "\n Email: " + book.getEmail()
                 + "\n Message: " + book.getMoreInfo() + "\n Adventure Code: " + book.getCode();
 
-        sendEmail(book.getEmail(), subject, bodyHtml, bodyText);
+        sendEmail(subject, bodyHtml, bodyText);
     }
 
     @Override
@@ -61,10 +61,10 @@ public class EmailServiceImpl implements EmailService {
         String bodyText = "First Name: " + book.getFirstName() + "Last Name: " + book.getLastName() + "\n Email: " + book.getEmail()
                 + "\n Phone Number: " + book.getPhoneNumber() + "\n Message: " + book.getMessage();
 
-        sendEmail(book.getEmail(), subject, bodyHtml, bodyText);
+        sendEmail(subject, bodyHtml, bodyText);
     }
 
-    private void sendEmail(String fromEmail, String subject, String bodyHtml, String bodyText) {
+    private void sendEmail(String subject, String bodyHtml, String bodyText) {
         AmazonSimpleEmailService client = AmazonSimpleEmailServiceClientBuilder.standard()
                 .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
                 .withRegion(Regions.AF_SOUTH_1)
@@ -79,7 +79,7 @@ public class EmailServiceImpl implements EmailService {
                                 .withText(new Content().withCharset("UTF-8").withData(bodyText))
                         )
                 )
-                .withSource(fromEmail);
+                .withSource(sourceEmail);
 
         if (configSet != null && !configSet.isEmpty()) {
             request.withConfigurationSetName(configSet);
