@@ -1,7 +1,5 @@
 aws:
-  region: ${AWS_REGION_GLADIOLUS_TOURS}
-  accessKeyId: ${AWS_ACCESS_KEY_ID_GLADIOLUS_TOURS}
-  secretKey: ${AWS_SECRET_ACCESS_KEY_GLADIOLUS_TOURS}
   ses:
+    sourceEmail: ${AWS_SES_SOURCE_EMAIL}
     destinationEmail: ${AWS_SES_DESTINATION_EMAIL}
     configSet: ${AWS_SES_CONFIG_SET}
