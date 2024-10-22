@@ -1,6 +1,3 @@
-import { ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-
 const DEFAULT_BASE_HREF = '/';
 
 /** the <base .../> tag is set by webpack and defined in the baseHref property of the Nx app's project.json */
@@ -28,8 +25,4 @@ export function getRandomIntExclusiveUpperBound(min: number, max: number) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-}
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
 }
