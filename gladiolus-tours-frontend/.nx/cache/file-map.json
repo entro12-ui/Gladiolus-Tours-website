@@ -1,0 +1,3350 @@
+{
+  "version": "6.0",
+  "nxVersion": "v17.2.5",
+  "deps": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@google-cloud/translate": "^8.0.2",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@loadable/component": "^5.15.3",
+    "@mui/material": "^5.15.11",
+    "@swc/helpers": "~0.5.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tanstack/react-query": "^4.10.3",
+    "@types/country-flag-icons": "^1.2.2",
+    "@types/loadable__component": "^5.13.7",
+    "@types/react-notifications-component": "^3.1.4",
+    "@types/react-slick": "^0.23.13",
+    "axios": "^1.6.2",
+    "clsx": "^2.1.1",
+    "country-flag-icons": "^1.5.9",
+    "framer-motion": "^11.5.4",
+    "html-react-parser": "^5.1.10",
+    "i18next": "^23.7.8",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "react": "18.2.0",
+    "react-chatbot-kit": "^2.2.2",
+    "react-dom": "18.2.0",
+    "react-helmet-async": "^1.3.0",
+    "react-hook-form": "^7.49.0",
+    "react-i18next": "^13.5.0",
+    "react-intl": "^6.5.5",
+    "react-intl-universal": "^2.9.1",
+    "react-loader-spinner": "^6.1.0",
+    "react-notifications-component": "3.1.0",
+    "react-router-dom": "^6.19.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss": "^3.3.5",
+    "tslib": "^2.3.0",
+    "@babel/core": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "@nx/cypress": "v17.2.5",
+    "@nx/eslint": "v17.2.5",
+    "@nx/eslint-plugin": "v17.2.5",
+    "@nx/jest": "v17.2.5",
+    "@nx/js": "v17.2.5",
+    "@nx/react": "v17.2.5",
+    "@nx/rollup": "v17.2.5",
+    "@nx/webpack": "v17.2.5",
+    "@nx/workspace": "v17.2.5",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+    "@rollup/plugin-url": "^7.0.0",
+    "@svgr/rollup": "^8.0.1",
+    "@svgr/webpack": "^8.0.1",
+    "@swc-node/register": "~1.6.7",
+    "@swc/cli": "~0.1.62",
+    "@swc/core": "~1.3.85",
+    "@testing-library/react": "14.0.0",
+    "@types/jest": "^29.4.0",
+    "@types/node": "18.16.9",
+    "@types/react": "18.2.33",
+    "@types/react-dom": "18.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "autoprefixer": "10.4.13",
+    "babel-jest": "^29.4.1",
+    "cypress": "^13.0.0",
+    "eslint": "~8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^2.13.4",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "nx": "v17.2.5",
+    "postcss": "8.4.21",
+    "prettier": "^2.6.2",
+    "react-refresh": "^0.10.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
+    "typescript": "~5.2.2",
+    "url-loader": "^4.1.1"
+  },
+  "pathMappings": {
+    "@collo/ui-api": [
+      "libs/ui-api/src/index.ts"
+    ],
+    "@collo/ui-comp-activities": [
+      "libs/ui-comp-activities/src/index.ts"
+    ],
+    "@collo/ui-comp-adventure": [
+      "libs/ui-comp-adventure/src/index.ts"
+    ],
+    "@collo/ui-comp-banner": [
+      "libs/ui-comp-banner/src/index.ts"
+    ],
+    "@collo/ui-comp-booking-form-inquiry": [
+      "libs/ui-comp-booking-form-inquiry/src/index.ts"
+    ],
+    "@collo/ui-comp-chat-bot": [
+      "libs/ui-comp-chat-bot/src/index.ts"
+    ],
+    "@collo/ui-comp-destinations": [
+      "libs/ui-comp-destinations/src/index.ts"
+    ],
+    "@collo/ui-comp-header": [
+      "libs/ui-comp-header/src/index.ts"
+    ],
+    "@collo/ui-comp-images": [
+      "libs/ui-comp-images/src/index.ts"
+    ],
+    "@collo/ui-comp-logo": [
+      "libs/ui-comp-logo/src/index.ts"
+    ],
+    "@collo/ui-comp-notifications": [
+      "libs/ui-comp-notifications/src/index.ts"
+    ],
+    "@collo/ui-comp-page-helmet": [
+      "libs/ui-comp-page-helmet/src/index.ts"
+    ],
+    "@collo/ui-comp-rate-star": [
+      "libs/ui-comp-rate-star/src/index.ts"
+    ],
+    "@collo/ui-comp-router-lazy-fallback": [
+      "libs/ui-comp-router-lazy-fallback/src/index.ts"
+    ],
+    "@collo/ui-comp-safaris": [
+      "libs/ui-comp-safaris/src/index.ts"
+    ],
+    "@collo/ui-comp-scroll-to-top": [
+      "libs/ui-comp-scroll-to-top/src/index.ts"
+    ],
+    "@collo/ui-comp-status": [
+      "libs/ui-comp-status/src/index.ts"
+    ],
+    "@collo/ui-i18n": [
+      "libs/ui-i18n/src/index.ts"
+    ],
+    "@collo/ui-layout-gladiolus": [
+      "libs/ui-layout-gladiolus/src/index.ts"
+    ],
+    "@collo/ui-page-about-us": [
+      "libs/ui-page-about-us/src/index.ts"
+    ],
+    "@collo/ui-page-adventure-details": [
+      "libs/ui-page-adventure-details/src/index.ts"
+    ],
+    "@collo/ui-page-adventures": [
+      "libs/ui-page-adventures/src/index.ts"
+    ],
+    "@collo/ui-page-contact": [
+      "libs/ui-page-contact/src/index.ts"
+    ],
+    "@collo/ui-page-destination-details": [
+      "libs/ui-page-destination-details/src/index.ts"
+    ],
+    "@collo/ui-page-destinations": [
+      "libs/ui-page-destinations/src/index.ts"
+    ],
+    "@collo/ui-page-error-404": [
+      "libs/ui-page-error-404/src/index.ts"
+    ],
+    "@collo/ui-page-itineraries": [
+      "libs/ui-page-itineraries/src/index.ts"
+    ],
+    "@collo/ui-page-landing-page": [
+      "libs/ui-page-landing-page/src/index.ts"
+    ],
+    "@collo/ui-page-safaris": [
+      "libs/ui-page-safaris/src/index.ts"
+    ],
+    "@collo/ui-persistance": [
+      "libs/ui-persistence/src/index.ts"
+    ],
+    "@collo/ui-router-gladiolus": [
+      "libs/ui-router-gladiolus/src/index.ts"
+    ],
+    "@collo/ui-routes-gladiolus": [
+      "libs/ui-routes-gladiolus/src/index.ts"
+    ],
+    "@collo/ui-utils": [
+      "libs/ui-utils/src/index.ts"
+    ],
+    "@collo/ui-utils-form": [
+      "libs/ui-utils-form/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "13217536419450503436"
+      },
+      {
+        "file": "nx.json",
+        "hash": "5326617318473241777"
+      },
+      {
+        "file": ".nx/cache/file-map.json",
+        "hash": "16080290832638335576"
+      },
+      {
+        "file": ".nx/cache/run.json",
+        "hash": "6330723149856722941"
+      },
+      {
+        "file": "package.json",
+        "hash": "1813488818828933670"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/9424288610979663464",
+        "hash": "3424256879442700482"
+      },
+      {
+        "file": ".nx/cache/d/daemon.log",
+        "hash": "15717957999882572352"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "18317298528530236307"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "16448050467312557263"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "1154086608504543374"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "build.gradle",
+        "hash": "12466820600179429693"
+      }
+    ],
+    "projectFileMap": {
+      "ui-page-adventures": [
+        {
+          "file": "libs/ui-page-adventures/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-adventures/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-adventures/README.md",
+          "hash": "12465242661418755683"
+        },
+        {
+          "file": "libs/ui-page-adventures/jest.config.ts",
+          "hash": "14961630373096882476"
+        },
+        {
+          "file": "libs/ui-page-adventures/package.json",
+          "hash": "7891256461052098642"
+        },
+        {
+          "file": "libs/ui-page-adventures/project.json",
+          "hash": "793059708727375392"
+        },
+        {
+          "file": "libs/ui-page-adventures/src/index.ts",
+          "hash": "8762035935971336682"
+        },
+        {
+          "file": "libs/ui-page-adventures/src/lib/index.tsx",
+          "hash": "4980073228110731931",
+          "deps": [
+            "npm:react-router-dom",
+            "ui-routes-gladiolus",
+            "ui-persistance",
+            "ui-comp-page-helmet"
+          ]
+        },
+        {
+          "file": "libs/ui-page-adventures/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-adventures/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-adventures/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-utils": [
+        {
+          "file": "libs/ui-utils/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-utils/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-utils/README.md",
+          "hash": "2706552009264497341"
+        },
+        {
+          "file": "libs/ui-utils/jest.config.ts",
+          "hash": "14827086550239241779"
+        },
+        {
+          "file": "libs/ui-utils/package.json",
+          "hash": "14639469518456751379"
+        },
+        {
+          "file": "libs/ui-utils/project.json",
+          "hash": "1726060423977309926"
+        },
+        {
+          "file": "libs/ui-utils/src/index.ts",
+          "hash": "9045591398890367539"
+        },
+        {
+          "file": "libs/ui-utils/src/lib/cn.ts",
+          "hash": "7725575681239376239",
+          "deps": [
+            "npm:clsx",
+            "npm:tailwind-merge"
+          ]
+        },
+        {
+          "file": "libs/ui-utils/src/lib/index.ts",
+          "hash": "11732518008817615863"
+        },
+        {
+          "file": "libs/ui-utils/src/lib/persistence-hooks.ts",
+          "hash": "15975873544304792704",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "libs/ui-utils/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-utils/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-utils/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-rate-star": [
+        {
+          "file": "libs/ui-comp-rate-star/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-rate-star/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-rate-star/README.md",
+          "hash": "1841897462782901523"
+        },
+        {
+          "file": "libs/ui-comp-rate-star/jest.config.ts",
+          "hash": "5077267780097925581"
+        },
+        {
+          "file": "libs/ui-comp-rate-star/package.json",
+          "hash": "6906838204044881768"
+        },
+        {
+          "file": "libs/ui-comp-rate-star/project.json",
+          "hash": "13957398745676081378"
+        },
+        {
+          "file": "libs/ui-comp-rate-star/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-rate-star/src/lib/index.tsx",
+          "hash": "2498569076635147663",
+          "deps": [
+            "npm:@heroicons/react"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-rate-star/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-rate-star/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-rate-star/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-page-helmet": [
+        {
+          "file": "libs/ui-comp-page-helmet/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/README.md",
+          "hash": "16565907895805537469"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/jest.config.ts",
+          "hash": "13777987115481094142"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/package.json",
+          "hash": "16208215985831469460"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/project.json",
+          "hash": "17048099164109540360"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/src/lib/index.tsx",
+          "hash": "3736732801043015922",
+          "deps": [
+            "npm:react-helmet-async"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-page-helmet/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-chat-bot": [
+        {
+          "file": "libs/ui-comp-chat-bot/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/README.md",
+          "hash": "12450617905102091877"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/jest.config.ts",
+          "hash": "14011790291863987533"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/package.json",
+          "hash": "1645629285616278972"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/project.json",
+          "hash": "13957268814996264447"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/src/lib/action-provider.tsx",
+          "hash": "10529288332667376817",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/src/lib/config.ts",
+          "hash": "14004613446447546938",
+          "deps": [
+            "npm:react-chatbot-kit"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/src/lib/index.tsx",
+          "hash": "10116377849509179339",
+          "deps": [
+            "npm:react-chatbot-kit"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/src/lib/message-parser.tsx",
+          "hash": "11871993739293914043",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-chat-bot/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-logo": [
+        {
+          "file": "libs/ui-comp-logo/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-logo/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-logo/README.md",
+          "hash": "16412194503063605964"
+        },
+        {
+          "file": "libs/ui-comp-logo/jest.config.ts",
+          "hash": "17022910694781008546"
+        },
+        {
+          "file": "libs/ui-comp-logo/package.json",
+          "hash": "11973801702796309209"
+        },
+        {
+          "file": "libs/ui-comp-logo/project.json",
+          "hash": "13749770199389450633"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/images/192 X 192.webp",
+          "hash": "17450855734345048293"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/images/400 X 400.webp",
+          "hash": "11569914532395058039"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/images/500 X 500.webp",
+          "hash": "1459212749559436217"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/images/672 X 234.webp",
+          "hash": "16185507115590355545"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/images/888 X 499.webp",
+          "hash": "17279780054071903186"
+        },
+        {
+          "file": "libs/ui-comp-logo/src/lib/index.tsx",
+          "hash": "2652759754628249786",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-logo/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-logo/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-logo/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-adventure": [
+        {
+          "file": "libs/ui-comp-adventure/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-adventure/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-adventure/README.md",
+          "hash": "11903242412613563069"
+        },
+        {
+          "file": "libs/ui-comp-adventure/jest.config.ts",
+          "hash": "1301235823825675989"
+        },
+        {
+          "file": "libs/ui-comp-adventure/package.json",
+          "hash": "417998757095190457"
+        },
+        {
+          "file": "libs/ui-comp-adventure/project.json",
+          "hash": "5797722666626402530"
+        },
+        {
+          "file": "libs/ui-comp-adventure/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-adventure/src/lib/index.tsx",
+          "hash": "8116256933416334833",
+          "deps": [
+            "ui-persistance",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-adventure/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-adventure/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-adventure/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-adventure-details": [
+        {
+          "file": "libs/ui-page-adventure-details/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-adventure-details/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-adventure-details/README.md",
+          "hash": "8072354407093144565"
+        },
+        {
+          "file": "libs/ui-page-adventure-details/jest.config.ts",
+          "hash": "14295838926631922003"
+        },
+        {
+          "file": "libs/ui-page-adventure-details/package.json",
+          "hash": "11512224388058477965"
+        },
+        {
+          "file": "libs/ui-page-adventure-details/project.json",
+          "hash": "16109344182024912783"
+        },
+        {
+          "file": "libs/ui-page-adventure-details/src/index.ts",
+          "hash": "8720995970696776608"
+        },
+        {
+          "file": "libs/ui-page-adventure-details/src/lib/ImageSlider.css",
+          "hash": "7006809229112437142"
+        },
+        {
+          "file": "libs/ui-page-adventure-details/src/lib/accordion-item.tsx",
+          "hash": "11295916909293431744",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-page-adventure-details/src/lib/index.tsx",
+          "hash": "2496925293478957252",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus",
+            "ui-persistance",
+            "npm:html-react-parser"
+          ]
+        },
+        {
+          "file": "libs/ui-page-adventure-details/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-adventure-details/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-adventure-details/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-layout-gladiolus": [
+        {
+          "file": "libs/ui-layout-gladiolus/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/README.md",
+          "hash": "1215451592879913381"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/jest.config.ts",
+          "hash": "54521830550048199"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/package.json",
+          "hash": "929545512217879861"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/project.json",
+          "hash": "15564216294721794109"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/src/lib/assets/gt-logo.png",
+          "hash": "5068055850677861287"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/src/lib/footer.tsx",
+          "hash": "10460190580992263267",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus"
+          ]
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/src/lib/index.tsx",
+          "hash": "18407035475247589458",
+          "deps": [
+            "npm:react",
+            "ui-comp-banner"
+          ]
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/src/lib/language-menu.tsx",
+          "hash": "557828399217976929",
+          "deps": [
+            "npm:react",
+            "npm:@headlessui/react",
+            "npm:country-flag-icons",
+            "npm:@heroicons/react"
+          ]
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/src/lib/navbar.tsx",
+          "hash": "4491864732441000965",
+          "deps": [
+            "ui-routes-gladiolus",
+            "npm:react",
+            "npm:react-i18next",
+            "npm:country-flag-icons",
+            "npm:@heroicons/react",
+            "npm:react-router-dom",
+            "npm:@headlessui/react",
+            "ui-utils"
+          ]
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-layout-gladiolus/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-banner": [
+        {
+          "file": "libs/ui-comp-banner/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-banner/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-banner/README.md",
+          "hash": "4908622100162720014"
+        },
+        {
+          "file": "libs/ui-comp-banner/jest.config.ts",
+          "hash": "15745426977988696929"
+        },
+        {
+          "file": "libs/ui-comp-banner/package.json",
+          "hash": "6981527180774311013"
+        },
+        {
+          "file": "libs/ui-comp-banner/project.json",
+          "hash": "12429142650980657751"
+        },
+        {
+          "file": "libs/ui-comp-banner/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-banner/src/lib/index.tsx",
+          "hash": "391279229975656346",
+          "deps": [
+            "npm:react",
+            "npm:@heroicons/react",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-banner/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-banner/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-banner/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-safaris": [
+        {
+          "file": "libs/ui-comp-safaris/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-safaris/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-safaris/README.md",
+          "hash": "525528569234810327"
+        },
+        {
+          "file": "libs/ui-comp-safaris/jest.config.ts",
+          "hash": "606029351737764843"
+        },
+        {
+          "file": "libs/ui-comp-safaris/package.json",
+          "hash": "315039228031543366"
+        },
+        {
+          "file": "libs/ui-comp-safaris/project.json",
+          "hash": "4392104756228137160"
+        },
+        {
+          "file": "libs/ui-comp-safaris/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-safaris/src/lib/index.tsx",
+          "hash": "11412881132720966872",
+          "deps": [
+            "npm:react-router-dom",
+            "ui-persistance"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-safaris/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-safaris/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-safaris/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-notifications": [
+        {
+          "file": "libs/ui-comp-notifications/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-notifications/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-notifications/README.md",
+          "hash": "16291847497683733904"
+        },
+        {
+          "file": "libs/ui-comp-notifications/jest.config.ts",
+          "hash": "10621269050250298570"
+        },
+        {
+          "file": "libs/ui-comp-notifications/package.json",
+          "hash": "14468094104801043553"
+        },
+        {
+          "file": "libs/ui-comp-notifications/project.json",
+          "hash": "10608635496576496876"
+        },
+        {
+          "file": "libs/ui-comp-notifications/src/index.ts",
+          "hash": "14428353282588746736"
+        },
+        {
+          "file": "libs/ui-comp-notifications/src/lib/index.tsx",
+          "hash": "16926073417593127033",
+          "deps": [
+            "npm:react-notifications-component"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-notifications/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-notifications/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-notifications/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-destination-details": [
+        {
+          "file": "libs/ui-page-destination-details/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-destination-details/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-destination-details/README.md",
+          "hash": "3358314690682730350"
+        },
+        {
+          "file": "libs/ui-page-destination-details/jest.config.ts",
+          "hash": "1827177684170753650"
+        },
+        {
+          "file": "libs/ui-page-destination-details/package.json",
+          "hash": "8546194708730969538"
+        },
+        {
+          "file": "libs/ui-page-destination-details/project.json",
+          "hash": "5641252807123400923"
+        },
+        {
+          "file": "libs/ui-page-destination-details/src/index.ts",
+          "hash": "1416051371547121586"
+        },
+        {
+          "file": "libs/ui-page-destination-details/src/lib/index.tsx",
+          "hash": "134458632280104485",
+          "deps": [
+            "ui-routes-gladiolus",
+            "ui-persistance",
+            "npm:react",
+            "npm:@mui/material",
+            "ui-comp-activities",
+            "npm:@fortawesome/react-fontawesome",
+            "npm:@fortawesome/free-solid-svg-icons",
+            "npm:@fortawesome/fontawesome-svg-core",
+            "ui-comp-rate-star",
+            "npm:html-react-parser"
+          ]
+        },
+        {
+          "file": "libs/ui-page-destination-details/src/lib/style.css",
+          "hash": "169278371486627671"
+        },
+        {
+          "file": "libs/ui-page-destination-details/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-destination-details/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-destination-details/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-booking-form-inquiry": [
+        {
+          "file": "libs/ui-comp-booking-form-inquiry/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-booking-form-inquiry/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-booking-form-inquiry/README.md",
+          "hash": "5162525764063171015"
+        },
+        {
+          "file": "libs/ui-comp-booking-form-inquiry/jest.config.ts",
+          "hash": "15982025564180966440"
+        },
+        {
+          "file": "libs/ui-comp-booking-form-inquiry/package.json",
+          "hash": "17924818468917878638"
+        },
+        {
+          "file": "libs/ui-comp-booking-form-inquiry/project.json",
+          "hash": "11879658670457437153"
+        },
+        {
+          "file": "libs/ui-comp-booking-form-inquiry/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-booking-form-inquiry/src/lib/index.tsx",
+          "hash": "6300429472001560848",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-booking-form-inquiry/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-booking-form-inquiry/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-booking-form-inquiry/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-images": [
+        {
+          "file": "libs/ui-comp-images/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-images/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-images/README.md",
+          "hash": "5793385573362252241"
+        },
+        {
+          "file": "libs/ui-comp-images/jest.config.ts",
+          "hash": "6225849570142631772"
+        },
+        {
+          "file": "libs/ui-comp-images/package.json",
+          "hash": "3794754489213924585"
+        },
+        {
+          "file": "libs/ui-comp-images/project.json",
+          "hash": "16441071250416278267"
+        },
+        {
+          "file": "libs/ui-comp-images/src/index.ts",
+          "hash": "14428353282588746736"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/buffalo.webp",
+          "hash": "12187944333229060449"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/buffalo_grass.webp",
+          "hash": "2395087257910628400"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/cave_lion.webp",
+          "hash": "16185219334402256404"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/cheetah.webp",
+          "hash": "10474280816604990210"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/cheetah_grass.webp",
+          "hash": "12530176801965839282"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/cheetah_on_tree.webp",
+          "hash": "3632148505194450342"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/convert-to-webp.sh",
+          "hash": "7335691642775702097"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/elephant.webp",
+          "hash": "15717964145558117057"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/elephant_family.webp",
+          "hash": "1073695306548423926"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/giraffe.webp",
+          "hash": "14326787922444279947"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/giraffes.webp",
+          "hash": "14504739803906295485"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/lion.webp",
+          "hash": "15211388694753115492"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/lioness.webp",
+          "hash": "10594384767581103540"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/ngorongoro_zebra.webp",
+          "hash": "4051190098050905102"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/images/zebras.webp",
+          "hash": "8103585655091947307"
+        },
+        {
+          "file": "libs/ui-comp-images/src/lib/index.tsx",
+          "hash": "15570253114017242952",
+          "deps": [
+            "ui-utils",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-images/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-images/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-images/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-header": [
+        {
+          "file": "libs/ui-comp-header/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-header/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-header/README.md",
+          "hash": "13260194583170882252"
+        },
+        {
+          "file": "libs/ui-comp-header/jest.config.ts",
+          "hash": "634600509606122786"
+        },
+        {
+          "file": "libs/ui-comp-header/package.json",
+          "hash": "13527600169936829131"
+        },
+        {
+          "file": "libs/ui-comp-header/project.json",
+          "hash": "11749247699786536086"
+        },
+        {
+          "file": "libs/ui-comp-header/src/index.ts",
+          "hash": "14428353282588746736"
+        },
+        {
+          "file": "libs/ui-comp-header/src/lib/images/header-image.webp",
+          "hash": "10594384767581103540"
+        },
+        {
+          "file": "libs/ui-comp-header/src/lib/index.tsx",
+          "hash": "15353471955766940968"
+        },
+        {
+          "file": "libs/ui-comp-header/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-header/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-header/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-status": [
+        {
+          "file": "libs/ui-comp-status/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-status/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-status/README.md",
+          "hash": "6582286878615926715"
+        },
+        {
+          "file": "libs/ui-comp-status/jest.config.ts",
+          "hash": "13473179359725555208"
+        },
+        {
+          "file": "libs/ui-comp-status/package.json",
+          "hash": "18048606213610949738"
+        },
+        {
+          "file": "libs/ui-comp-status/project.json",
+          "hash": "13547343733612019449"
+        },
+        {
+          "file": "libs/ui-comp-status/src/index.ts",
+          "hash": "2858470008808344071"
+        },
+        {
+          "file": "libs/ui-comp-status/src/lib/ui-status.spec.tsx",
+          "hash": "8540029762651097600",
+          "deps": [
+            "npm:@testing-library/react",
+            "npm:@testing-library/jest-dom"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-status/src/lib/ui-status.tsx",
+          "hash": "8242552775399413512",
+          "deps": [
+            "ui-utils"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-status/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-status/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-status/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-gladiolus-tours": [
+        {
+          "file": "apps/ui-gladiolus-tours/.babelrc",
+          "hash": "13020124393823981135"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/jest.config.ts",
+          "hash": "1580594082215031123"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/postcss.config.js",
+          "hash": "2759402739052110475",
+          "deps": [
+            "npm:path"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/project.json",
+          "hash": "12171791762129360766"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/app/app.spec.tsx",
+          "hash": "6895743418989114498",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/app/app.tsx",
+          "hash": "13827191742079210263",
+          "deps": [
+            "ui-router-gladiolus"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/favicon.ico",
+          "hash": "16288083615836131783"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/index.html",
+          "hash": "10831937981703580215"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/main.tsx",
+          "hash": "3427523804892720320",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/site.webmanifest",
+          "hash": "17057149910186105237"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/src/styles.css",
+          "hash": "2866083945719690482"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/tailwind.config.js",
+          "hash": "5963147484134239710",
+          "deps": [
+            "npm:@nx/react/tailwind",
+            "npm:path",
+            "npm:tailwindcss",
+            "npm:@tailwindcss/forms"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/tsconfig.app.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/tsconfig.json",
+          "hash": "9850153468027031608"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/tsconfig.spec.json",
+          "hash": "11378287594513225419"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours/webpack.config.js",
+          "hash": "9397115949254193752",
+          "deps": [
+            "npm:@nx/webpack",
+            "npm:@nx/react"
+          ]
+        }
+      ],
+      "ui-gladiolus-tours-e2e": [
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/.eslintrc.json",
+          "hash": "14060216369337943343"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/cypress.config.ts",
+          "hash": "12586416982398116375",
+          "deps": [
+            "npm:@nx/cypress/plugins/cypress-preset",
+            "npm:cypress"
+          ]
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/project.json",
+          "hash": "16140486819826152241"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/src/e2e/app.cy.ts",
+          "hash": "11665767942881401089"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/src/fixtures/example.json",
+          "hash": "11785586596216172004"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/src/support/commands.ts",
+          "hash": "5397443931564808659"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/src/support/e2e.ts",
+          "hash": "1054106023200826784"
+        },
+        {
+          "file": "apps/ui-gladiolus-tours-e2e/tsconfig.json",
+          "hash": "10740392072068377465"
+        }
+      ],
+      "ui-comp-router-lazy-fallback": [
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/README.md",
+          "hash": "4637513836296106469"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/jest.config.ts",
+          "hash": "15016330847111727372"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/package.json",
+          "hash": "13263227957475117033"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/project.json",
+          "hash": "6512702113174156730"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/src/index.ts",
+          "hash": "14428353282588746736"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/src/lib/index.tsx",
+          "hash": "14114244119858699713",
+          "deps": [
+            "npm:react-loader-spinner"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-router-lazy-fallback/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-scroll-to-top": [
+        {
+          "file": "libs/ui-comp-scroll-to-top/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/README.md",
+          "hash": "2500598793807970004"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/jest.config.ts",
+          "hash": "6894402957572070001"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/package.json",
+          "hash": "2352401623203458467"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/project.json",
+          "hash": "7293566032810867795"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/src/lib/index.tsx",
+          "hash": "17937757252694066628",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-scroll-to-top/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-about-us": [
+        {
+          "file": "libs/ui-page-about-us/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-about-us/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-about-us/README.md",
+          "hash": "389607667003707505"
+        },
+        {
+          "file": "libs/ui-page-about-us/jest.config.ts",
+          "hash": "3006993506392066377"
+        },
+        {
+          "file": "libs/ui-page-about-us/package.json",
+          "hash": "13947095122621382386"
+        },
+        {
+          "file": "libs/ui-page-about-us/project.json",
+          "hash": "13407853995597518126"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/index.ts",
+          "hash": "12612619993868243650"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/images/couple.webp",
+          "hash": "8777544259324445449"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/images/flower.webp",
+          "hash": "12760263655028331568"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/images/grandpap.webp",
+          "hash": "3128033774334044134"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/images/kwawingu.webp",
+          "hash": "6110427983293088984"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/images/mount-kilimanjaro.webp",
+          "hash": "3262116218825509605"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/images/ngorongoro.webp",
+          "hash": "14973917243924701408"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/images/tanappa.webp",
+          "hash": "14258167623426889238"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/images/team-work.webp",
+          "hash": "9974836470360498787"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/images/team.webp",
+          "hash": "17293921081424227755"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/images/twc.webp",
+          "hash": "5401495292070730133"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/images/tzgovernment.webp",
+          "hash": "7466665945243460883"
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/index.tsx",
+          "hash": "332260909584674929",
+          "deps": [
+            "ui-comp-page-helmet",
+            "ui-comp-header"
+          ]
+        },
+        {
+          "file": "libs/ui-page-about-us/src/lib/main.tsx",
+          "hash": "6160083908426799431",
+          "deps": [
+            "ui-page-landing-page"
+          ]
+        },
+        {
+          "file": "libs/ui-page-about-us/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-about-us/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-about-us/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-error-404": [
+        {
+          "file": "libs/ui-page-error-404/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-error-404/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-error-404/README.md",
+          "hash": "1696365265769914310"
+        },
+        {
+          "file": "libs/ui-page-error-404/jest.config.ts",
+          "hash": "18286586894267517660"
+        },
+        {
+          "file": "libs/ui-page-error-404/package.json",
+          "hash": "15788775499256039855"
+        },
+        {
+          "file": "libs/ui-page-error-404/project.json",
+          "hash": "6476760050372695309"
+        },
+        {
+          "file": "libs/ui-page-error-404/src/index.ts",
+          "hash": "6980580040178836154"
+        },
+        {
+          "file": "libs/ui-page-error-404/src/lib/index.tsx",
+          "hash": "17132038527317315860",
+          "deps": [
+            "ui-comp-page-helmet",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus"
+          ]
+        },
+        {
+          "file": "libs/ui-page-error-404/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-error-404/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-error-404/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-destinations": [
+        {
+          "file": "libs/ui-page-destinations/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-destinations/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-destinations/README.md",
+          "hash": "9062185518788434841"
+        },
+        {
+          "file": "libs/ui-page-destinations/jest.config.ts",
+          "hash": "2634517938759263276"
+        },
+        {
+          "file": "libs/ui-page-destinations/package.json",
+          "hash": "5295328947251148039"
+        },
+        {
+          "file": "libs/ui-page-destinations/project.json",
+          "hash": "7845942737015598743"
+        },
+        {
+          "file": "libs/ui-page-destinations/src/index.ts",
+          "hash": "15604300984608585393"
+        },
+        {
+          "file": "libs/ui-page-destinations/src/lib/destinations.tsx",
+          "hash": "14578149079622665249",
+          "deps": [
+            "npm:react",
+            "npm:@headlessui/react",
+            "npm:@heroicons/react",
+            "ui-utils",
+            "ui-persistance",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus",
+            "ui-comp-rate-star",
+            "npm:html-react-parser"
+          ]
+        },
+        {
+          "file": "libs/ui-page-destinations/src/lib/index.tsx",
+          "hash": "10321510399503355049",
+          "deps": [
+            "ui-comp-page-helmet"
+          ]
+        },
+        {
+          "file": "libs/ui-page-destinations/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-destinations/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-destinations/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-activities": [
+        {
+          "file": "libs/ui-comp-activities/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-activities/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-activities/README.md",
+          "hash": "4443636170553404337"
+        },
+        {
+          "file": "libs/ui-comp-activities/jest.config.ts",
+          "hash": "1816423781436395513"
+        },
+        {
+          "file": "libs/ui-comp-activities/package.json",
+          "hash": "8584196480690928624"
+        },
+        {
+          "file": "libs/ui-comp-activities/project.json",
+          "hash": "6689088728538700516"
+        },
+        {
+          "file": "libs/ui-comp-activities/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-activities/src/lib/index.tsx",
+          "hash": "4443779755155984246",
+          "deps": [
+            "npm:@fortawesome/fontawesome-svg-core",
+            "npm:@fortawesome/free-solid-svg-icons",
+            "ui-persistance"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-activities/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-activities/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-activities/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-landing-page": [
+        {
+          "file": "libs/ui-page-landing-page/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-landing-page/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-landing-page/README.md",
+          "hash": "9698525991843523808"
+        },
+        {
+          "file": "libs/ui-page-landing-page/jest.config.ts",
+          "hash": "3820470531015011490"
+        },
+        {
+          "file": "libs/ui-page-landing-page/package.json",
+          "hash": "3297906649171940841"
+        },
+        {
+          "file": "libs/ui-page-landing-page/project.json",
+          "hash": "7483709677332514421"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/index.ts",
+          "hash": "9170725765283075386"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/hero.tsx",
+          "hash": "11700002922900333248",
+          "deps": [
+            "ui-comp-images",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus"
+          ]
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Box.webp",
+          "hash": "1873979285283710165"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Customer-Loyalty.webp",
+          "hash": "15898661729117098244"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Destination.webp",
+          "hash": "5557479420145913851"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Flamingo.webp",
+          "hash": "11059011164226335606"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Francois.webp",
+          "hash": "5664676254785592464"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/GtLogo/192 X 192.webp",
+          "hash": "17450855734345048293"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/GtLogo/400 X 400.webp",
+          "hash": "11569914532395058039"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/GtLogo/500 X 500.webp",
+          "hash": "1459212749559436217"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/GtLogo/672 X 234.webp",
+          "hash": "16185507115590355545"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/GtLogo/888 X 499.webp",
+          "hash": "17279780054071903186"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/King-Fisher.webp",
+          "hash": "16993348498373733746"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Mountain-Sunrise.webp",
+          "hash": "13634852122610290248"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Ngorongoro-Green-View.webp",
+          "hash": "16728564788792733684"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Sunday.webp",
+          "hash": "14129421792577411101"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Sunrise.webp",
+          "hash": "12311969117181154544"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Team-Anonymous-pillars.webp",
+          "hash": "4357715187407011999"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Visitors_And_Giraffes.webp",
+          "hash": "3183632566635722814"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Walking.webp",
+          "hash": "15351842618498401831"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Waterfall.webp",
+          "hash": "4067858202672009395"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/images/Zanzibar.webp",
+          "hash": "17369879517520090565"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/incentives.tsx",
+          "hash": "16936351302483791428"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/index.tsx",
+          "hash": "12913945797159996942",
+          "deps": [
+            "ui-comp-page-helmet",
+            "ui-persistance",
+            "ui-comp-adventure",
+            "ui-comp-destinations"
+          ]
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/overview.tsx",
+          "hash": "14096293348456801871",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/safaris.tsx",
+          "hash": "8574407810859782561"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/services.tsx",
+          "hash": "10206386827763403067"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/team-sections.tsx",
+          "hash": "9857437798018399687"
+        },
+        {
+          "file": "libs/ui-page-landing-page/src/lib/testimonials.tsx",
+          "hash": "13789456456088593773"
+        },
+        {
+          "file": "libs/ui-page-landing-page/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-landing-page/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-landing-page/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-persistance": [
+        {
+          "file": "libs/ui-persistence/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-persistence/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-persistence/README.md",
+          "hash": "10191183609284510858"
+        },
+        {
+          "file": "libs/ui-persistence/jest.config.ts",
+          "hash": "9056084064658556746"
+        },
+        {
+          "file": "libs/ui-persistence/package.json",
+          "hash": "5055326284281333798"
+        },
+        {
+          "file": "libs/ui-persistence/project.json",
+          "hash": "3647138159162824472"
+        },
+        {
+          "file": "libs/ui-persistence/src/index.ts",
+          "hash": "8199666766721729099"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/GtAccomodations.ts",
+          "hash": "15039347721982538676"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/GtActivities.ts",
+          "hash": "8981373118167460555"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/GtAdventures.ts",
+          "hash": "15189248674184021415"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/GtCulturalActivities.ts",
+          "hash": "7992573475834723594"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/GtDestinations.ts",
+          "hash": "12836251519640761587"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/GtDuration.ts",
+          "hash": "795912081890282054"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/GtPlaceToGo.ts",
+          "hash": "2197231631820405337"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/GtSafaris.ts",
+          "hash": "4115145336169001231"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Amani_Nature_Forest_Reserves_in_Usambara_01_550_550shar-50brig-20_c1.webp",
+          "hash": "4986341667679464336"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Amboni_Caves_Tanga_Tanzania_550_550shar-50brig-20_c1.webp",
+          "hash": "16677031419796055983"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/German_Old_Colonial_Fort_in_Bagamoyo_02_550_550shar-50brig-20_c1.webp",
+          "hash": "3042064154543000016"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Husuni_Kubwa_Sultans_Palace_14th__Century_04_Kilwa_Kisiwani_550_550shar-50brig-20_c1.webp",
+          "hash": "9044175944300483476"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Kilwa_Kivinje_Beach_25_550_550shar-50brig-20_c1.webp",
+          "hash": "15752821130938968220"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Kunduchi_Ruins_Tombs_550_550shar-50brig-20_c1.webp",
+          "hash": "693759939949104105"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Mikumi_National_Park_Zebras_111_550_550shar-50brig-20_c1.webp",
+          "hash": "4630637428882969015"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Mnazi_Bay_Ruvuma_Estuary_Marine_Park_02_550_550shar-50brig-20_c1.webp",
+          "hash": "9895124738027737462"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Old_German_Admistrative_Block_03_Kilwa_Kivinje_550_550shar-50brig-20_c1.webp",
+          "hash": "4514689708718447114"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Pangani_Tanzania_550_550shar-50brig-20_c1.webp",
+          "hash": "2651541863772432452"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Pugu_Hill_Nature_Forest_with_Lake_Minaki_550_550shar-50brig-20_c1.webp",
+          "hash": "3950224702925195626"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Saadani_National_Park_Wami_River_40_550_550shar-50brig-20_c1.webp",
+          "hash": "2735637460912999279"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Selous_Game_Reserve_Aeroview_550_550shar-50brig-20_c1.webp",
+          "hash": "8630994226168135032"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/The_Palace_Ruins_02_Songo_Mnara_Kilwa_550_550shar-50brig-20_c1.webp",
+          "hash": "9649924850976897892"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Udzungwa_National_Park_Sanje_Waterfalls_21_550_550shar-50brig-20_c1.webp",
+          "hash": "12636708174399551997"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/Uluguru_Mountains_view_from_Morogoro_Town_550_550shar-50brig-20_c1.webp",
+          "hash": "9799469423024733396"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Eastern/West_Usambara_Mountains_08_550_550shar-50brig-20_c1.webp",
+          "hash": "10190728438724471401"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Anemonefish_hidden_in_bubble_anemone_in_Chole_Bay_Mafia_Island.webp",
+          "hash": "7698669660515044464"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Coral_Bommie_in_the_Mafia_Island_Marine_Park.webp",
+          "hash": "6751231527125735906"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Mafia_Island_Ancient_Hindu_Temple_Built_in_1890_Under_Ficus_Roots_02.webp",
+          "hash": "10500361763210786480"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Mafia_Island_Chole_Mjini.webp",
+          "hash": "4623503490313754501"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Mafia_Island_Diving_01.webp",
+          "hash": "15062732754079587643"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Mafia_Island_Diving_02.webp",
+          "hash": "12558137253055568248"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Mafia_Island_Humpback_Whale_01.webp",
+          "hash": "18068315497557951499"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Mafia_Island_Marine_Reserve_Sea_Turtle_01.webp",
+          "hash": "8955839731351866762"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Mafia_Island_Tanzania_01.webp",
+          "hash": "5526879983119375893"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Mafia_Island_Tanzania_02.webp",
+          "hash": "4693421020849782410"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Mafia_Island_Whale_Shark_04.webp",
+          "hash": "2740816853946780033"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/School_of_yellow-spot_emperors_swarm_over_fire_coral_on_reefs_in_Chole_Bay_Mafia_Islan.webp",
+          "hash": "17098084170149730820"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Mafia/Underwater_Corals_Mafia_Island_Marine_Park_01.webp",
+          "hash": "17135908661196150506"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Arusha_National_Park_Momella_Lake_Flamingos_83_550_550shar-50brig-20_c1.webp",
+          "hash": "16069273488528718179"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Arusha_National_Park_Mount_Meru_Girrafe_11.jpg",
+          "hash": "11696018570012031444"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Arusha_National_Park_Tanzania_550_550shar-50brig-20_c1.webp",
+          "hash": "9493396660569793102"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Empakai_Crater_Lake_NCA_3_550_550shar-50brig-20_c1.webp",
+          "hash": "12515789557302979652"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Engaresero_Footprints_550_550shar-50brig-20_c1.webp",
+          "hash": "17885476753865810562"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Engaruka_Ruins_Remnant_of_Old_Home_2_550_550shar-50brig-20_c1.webp",
+          "hash": "366096922323202011"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Gol_Mountains_NCA_1_550_550shar-50brig-20_c1.webp",
+          "hash": "3047033136138250948"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Gol_Mountains_NCA_2_550_550shar-50brig-20_c1.webp",
+          "hash": "11997120722238662347"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Kondoa_Rock_Art_Site_07_550_550shar-50brig-20_c1.webp",
+          "hash": "17347109935110315063"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Laetoli_Footprints_NCA_3_550_550shar-50brig-20_c1.webp",
+          "hash": "4805273016085791748"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Lake_Chala_Ecotour_03_550_550shar-50brig-20_c1.webp",
+          "hash": "14874434879699099673"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Lake_Duluti_x_65_550_550shar-50brig-20_c1.webp",
+          "hash": "12027188305943235090"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Lake_Eyasi_x_29_550_550shar-50brig-20_c1.webp",
+          "hash": "15805050769575181037"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Lake_Jipe_Canoeing_20_550_550shar-50brig-20_c1.webp",
+          "hash": "16709407365665123818"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Lake_Manyara_National_Park_Giraffes_24_550_550shar-50brig-20_c1.webp",
+          "hash": "14740585382441565216"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Lesser_Flamingos_Lake_Natron_01_550_550shar-50brig-20_c1.webp",
+          "hash": "16489933090884306322"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Materuni_Waterfalls_01_550_550shar-50brig-20_c1.webp",
+          "hash": "6743849048402382114"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Mkomazi_National_Park_Dindera_Dam_40_550_550shar-50brig-20_c1.webp",
+          "hash": "6654733002890999561"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Mount_Kilimanjaro_Tanzania_550_550shar-50brig-20_c1.webp",
+          "hash": "8398455480016105402"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Mount_Lolmalasin_NCA_1_550_550shar-50brig-20_c1.webp",
+          "hash": "16551478035907315853"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Mount_Oldonyo_Lengai_07_550_550shar-50brig-20_c1.webp",
+          "hash": "1351778229393085299"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Mumba_Rock_Shelter_01_550_550shar-50brig-20_c1.webp",
+          "hash": "886858188589209684"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Nasera_Rock_NCA_7_550_550shar-50brig-20_c1.webp",
+          "hash": "9570548926080300945"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Ngorongoro_Crater_View_NCA_550_550shar-50brig-20_c1.webp",
+          "hash": "1330841347512416091"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Ngorongoro_Highlands_Endoro_Waterfalls_4_550_550shar-50brig-20_c1.webp",
+          "hash": "5860451315944016981"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Olduvai_Gorge_NCA_2_1_550_550shar-50brig-20_c1.webp",
+          "hash": "10044391555756385214"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Olkarien_Gorge_NCA_1_550_550shar-50brig-20_c1.webp",
+          "hash": "15302104147852276179"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Olmoti_Crater_NCA_2_550_550shar-50brig-20_c1.webp",
+          "hash": "3335627027341158961"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Pare_Mountains_Aerial_View_10_550_550shar-50brig-20_c1.webp",
+          "hash": "7215936719841135958"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Rau_Forest_Mvule_Tree_01_550_550shar-50brig-20_c1.webp",
+          "hash": "18338299754566436492"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Rundugai_Hotsprings_Kilimanjaro_550_550shar-50brig-20_c1.webp",
+          "hash": "10475506749563854355"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Serengeti_Gnus_7765.webp",
+          "hash": "17617156980613258436"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Serengeti_Migration_P103.webp",
+          "hash": "8304889584677679605"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Shifting_Sands_NCA_2_550_550shar-50brig-20_c1.webp",
+          "hash": "11539830941189542852"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Tarangire_National_Park_20_550_550shar-50brig-20_c1.webp",
+          "hash": "10252080572566145656"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Northern/Wildebeest_in_Ndutu_550_550shar-50brig-20_c1.webp",
+          "hash": "14871340780483694267"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Ocean/Bongoyo_Island__Aerial_View_Tanzania_02_550_550shar-50brig-20_c1.webp",
+          "hash": "7788804507074588406"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Ocean/Mbudya_Island_Dar-es-Salaam_1_550_550shar-50brig-20_c1.webp",
+          "hash": "12225857500340105150"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Ocean/Sinda_Island_Marine_Reserve_02_550_550shar-50brig-20_c1.webp",
+          "hash": "15348218155467591324"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Ocean/Tanga_Coelacanth_Marine_Park_550_550shar-50brig-20_c1.webp",
+          "hash": "12485463359848232649"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Ocean/Tanzania_Dar_es_Salaam_Marine_Reserve_Fungu_Yasini_550_550shar-50brig-20_c1.webp",
+          "hash": "9670504620809478862"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Ocean/Tanzania_Dar_es_Salaam_Marine_Reserve_Pangavini_Island_550_550shar-50brig-20_c1.webp",
+          "hash": "12267338208094809398"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Ocean/Zanzibar_Chumbe_Island_01_550_550shar-50brig-20_c1.webp",
+          "hash": "16871167672284715442"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Ocean/Zanzibar_Island_Mnemba_Island_550_550shar-50brig-20_c1.webp",
+          "hash": "3173253033051485925"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Igeleke_Rock_Paintings_Iringa_05_550_550shar-50brig-20_c1.webp",
+          "hash": "7596469852659675567"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Isimila_Stone_Age_Site_25_550_550shar-50brig-20_c1.webp",
+          "hash": "9374041971127177726"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Kalambo_Falls_Waterfalls_40_550_550shar-50brig-20_c1.webp",
+          "hash": "15287378916480373581"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Kaporogwe_Waterfalls_Mbeya_01_550_550shar-50brig-20_c1.webp",
+          "hash": "17255448980822054882"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Katavi_National_Park_x_70_550_550shar-50brig-20_c1.webp",
+          "hash": "16867286468188590177"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Kitulo_National_Park_Orchidbed_550_550shar-50brig-20_c1.webp",
+          "hash": "17413902171593187458"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Lake_Ngozi_Ngosi_21_550_550shar-50brig-20_c1.webp",
+          "hash": "12532981032939775291"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Lake_Nyasa_Shoreline_07_550_550shar-50brig-20_c1.webp",
+          "hash": "381519802600486380"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Matema_Beach_Lake_Nyasa_02_550_550shar-50brig-20_c1.webp",
+          "hash": "8023844537489765124"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Mbozi_Meteorite_09_550_550shar-50brig-20_c1.webp",
+          "hash": "13498513417707469982"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Mnazi_Bay_Ruvuma_Estuary_Marine_Park_02_550_550shar-50brig-20_c1.webp",
+          "hash": "9895124738027737462"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Nyerere_National_Park_Elephants_25.jpg",
+          "hash": "11108271626278508582"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Ruaha_National_Park_Tanzania_550_550shar-50brig-20_c1.webp",
+          "hash": "16285162891703807886"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Southern/Selous_Game_Reserve_Aeroview_550_550shar-50brig-20_c1.webp",
+          "hash": "8630994226168135032"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Western/Burigi_Chato_National_Park_Giraffes_07_550_550shar-50brig-20_c1.webp",
+          "hash": "12965302399322495595"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Western/Gombe_Stream_National_Park_Boating_71_550_550shar-50brig-20_c1.webp",
+          "hash": "10711741119395843119"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Western/Ibanda_Kyerwa_National_Park_Wildlife_550_550shar-50brig-20_c1.webp",
+          "hash": "10384501934806089524"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Western/Lake_Tanganyika_Mahale_Mountains_11_550_550shar-50brig-20_c1.webp",
+          "hash": "16342864467615105126"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Western/Lake_Victoria_Bismark_Rocks_1_550_550shar-50brig-20_c1.webp",
+          "hash": "4684932499392006644"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Western/Mahale_Mountain_National_Park_550_550shar-50brig-20_c1.webp",
+          "hash": "8909534243756557428"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Western/Rubondo_Island_National_Park_x_13_550_550shar-50brig-20_c1.webp",
+          "hash": "15070543274957033710"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Western/Saanane_Island_National_Park_09_550_550shar-50brig-20_c1.webp",
+          "hash": "14824930161117779504"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Western/Ukerewe_Island_in_Lake_Victoria_2_550_550shar-50brig-20_c1.webp",
+          "hash": "11008183831087436793"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Nakupenda_Sandbank_Zanzibar.webp",
+          "hash": "6199389302579421891"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_Beach_Holiday.webp",
+          "hash": "7792863406329253451"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_Beach_Holidays_01.webp",
+          "hash": "3483482972869104505"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_Beach_Holidays_02.webp",
+          "hash": "13235919427810384448"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_House_of_Wonders_Stone_Town_01.webp",
+          "hash": "16259280095431309086"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_House_of_Wonders_Stone_Town_03.webp",
+          "hash": "10803495441996457460"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_Island_Stone_Town.webp",
+          "hash": "11375697426650450067"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_Island_Stone_Town_01.webp",
+          "hash": "13223269712236435100"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_Island_Stone_Town_02.webp",
+          "hash": "13586284472620804728"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_Island_Stone_Town_03.webp",
+          "hash": "6927446444816244739"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_Prestine_Beach_04.webp",
+          "hash": "6001495889467625635"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_Stone_Town_02.webp",
+          "hash": "8584849231315704052"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_Stone_Town_03.webp",
+          "hash": "7674828958025626052"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Destinations/Zanzibar/Zanzibar_Stone_Town_Tour_01.webp",
+          "hash": "13775956898270634929"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Hippo.webp",
+          "hash": "2643649334186689018"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Lesser_Flamingos_Lake_Natron_01.webp",
+          "hash": "11059011164226335606"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Kilimanjaro_Climb_3a.webp",
+          "hash": "2159006514775852916"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Kilimanjaro_Climb_4a.webp",
+          "hash": "18331493971329144889"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Kilimanjaro_Climb_4b.webp",
+          "hash": "4514846433902327511"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Kilimanjaro_Climb_Camping.webp",
+          "hash": "3887898218291477085"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Kilimanjaro_Climb_Camping_09.webp",
+          "hash": "3887898218291477085"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Kilimanjaro_Climb_Machame_Route_01.webp",
+          "hash": "6824596668835505455"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Kilimanjaro_Climb_Machame_Route_02.webp",
+          "hash": "17230136869252854293"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Kilimanjaro_Climb_Marangu_Gate_03.webp",
+          "hash": "7208877468290788405"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Kilimanjaro_Climb_Rongai_Route_01.webp",
+          "hash": "7122301143113978614"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro.webp",
+          "hash": "12264665947460645982"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_10.webp",
+          "hash": "12264665947460645982"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Campsite_Tarn_Hut.webp",
+          "hash": "1973735761613602790"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Endemic_Plants_Senecio.webp",
+          "hash": "11114270653503648049"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Glacier_of_Southern_Ice_Field_02.webp",
+          "hash": "12115190219171718568"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Glacier_of_Southern_Ice_Field_03.webp",
+          "hash": "2120513289691071898"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Horombo_Huts_06.webp",
+          "hash": "16687373778503650945"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Horombo_Huts_11.webp",
+          "hash": "10808672384761394653"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Kibo_Peak_05.webp",
+          "hash": "7166598194689644982"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Londorosi_Lemosho_01.webp",
+          "hash": "1552204653148939447"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Machame_Route_Mountain_Landscape.webp",
+          "hash": "13043094162490531768"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Mandara_Huts_02.webp",
+          "hash": "5951234353383207758"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Marangu-Route_the_Saddle_01.webp",
+          "hash": "2936369989316682379"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Mawenzi_Peak_01.webp",
+          "hash": "5374469681638797335"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Mountain_Landscape_01.webp",
+          "hash": "864861883918278848"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Mountain_Landscape_02.webp",
+          "hash": "1241811711559233281"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Mountain_Summit.webp",
+          "hash": "11650571727154862319"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_Tanzania.webp",
+          "hash": "11486422394037720551"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_View_from_Lemosho_Route_02.webp",
+          "hash": "15213944715891723421"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_the_Crater.webp",
+          "hash": "10725420143492071223"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_the_Crater_01.webp",
+          "hash": "10725420143492071223"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_the_Glaciers_01.webp",
+          "hash": "4960370830832268060"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Mount_Kilimanjaro_the_Saddle_02.webp",
+          "hash": "16395771303624679995"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Shira_Plateau_Kilimanjaro_01.webp",
+          "hash": "4355975842253284353"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Shira_Plateau_Kilimanjaro_02.webp",
+          "hash": "12771649644485309503"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Shira_Plateau_Kilimanjaro_03.webp",
+          "hash": "4771257243712405590"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/Mountain/Shira_Plateau_Kilimanjaro_04.webp",
+          "hash": "17814521688025445098"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Lake_Manyara_National_Park_Giraffes_23.webp",
+          "hash": "3267402051119302317"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Lake_Manyara_National_Park_Kingfisher_60.webp",
+          "hash": "16993348498373733746"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Lake_Manyara_National_Park_Velvet_Monkey_26.webp",
+          "hash": "12345191014017786341"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Ngorongoro_Crater_Black_Rhinos_NCA_01.webp",
+          "hash": "10966361047512528112"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Ngorongoro_Crater_Black_Rhinos_NCA_02.webp",
+          "hash": "16401111530629289218"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Ngorongoro_Crater_Elephant_NCA.webp",
+          "hash": "15063034341210547679"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Ngorongoro_Crater_Flamingos_10_NCA.webp",
+          "hash": "7297836712381967390"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Ngorongoro_Crater_Floor_NCA.webp",
+          "hash": "13013446106642239515"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Ngorongoro_Crater_Hyenas_NCA.webp",
+          "hash": "7764034242113866786"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Ngorongoro_Crater_Lion_20.webp",
+          "hash": "14411488011466953835"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Ngorongoro_Crater_Ostrich_20.webp",
+          "hash": "3946032424591171089"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Ngorongoro_Crater_Swamps_NCA.webp",
+          "hash": "3155414078480757346"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Ngorongoro_Crater_View_NCA.webp",
+          "hash": "9207663792270075728"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Ngorongoro_Crater_Wildlife_24.webp",
+          "hash": "5574335798658745840"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_Girafe_8085.webp",
+          "hash": "9985287508474730910"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Agama_Lizard_20.webp",
+          "hash": "1436430945757731299"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Birdslife_20.webp",
+          "hash": "13871033340256824336"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Hyenas_22.webp",
+          "hash": "14998026525958890847"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Jackal_20.webp",
+          "hash": "1166075577189483022"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Kopjes_20.webp",
+          "hash": "8037395496157937533"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Leopard_21.webp",
+          "hash": "1657726545604832802"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Leopard_24.webp",
+          "hash": "1324083042867992446"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Lions_21.webp",
+          "hash": "7530080875601202799"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Lions_22.webp",
+          "hash": "690980796733751675"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Ostriches_20.webp",
+          "hash": "18375449694268224471"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Valture_20.webp",
+          "hash": "10586120805978026337"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Waterbuck_20.webp",
+          "hash": "18436761030553009593"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Wildebeests_22.webp",
+          "hash": "13950472911968698322"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_National_Park_Zebras_20.webp",
+          "hash": "16390653113252677284"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Serengeti_Wildebeests_03.webp",
+          "hash": "10583456304462539179"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Tarangire_National_Park_Cheeters_20.webp",
+          "hash": "5396774495601296787"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Tarangire_National_Park_Elephants_38.webp",
+          "hash": "11534204314087365734"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Tarangire_National_Park_Elephants_in_Trangire_River_42.webp",
+          "hash": "13586728037251385851"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Tarangire_National_Park_Giraffe_20.webp",
+          "hash": "5051334386560524977"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Tarangire_National_Park_Lions_20.webp",
+          "hash": "12140735038351846869"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Tarangire_National_Park_Ostriches_41.webp",
+          "hash": "5819497032279788104"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Tarangire_National_Park_Velvet_Monkey_20.webp",
+          "hash": "7835141789354987089"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Itinerary/adventure/Tarangire_National_Park_Waterbuck_20.webp",
+          "hash": "2023197174303737978"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/Balloon_Safari.webp",
+          "hash": "5022535548085695949"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/Beach_Holiday_Safari.webp",
+          "hash": "7626535770485862095"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/Camping_Safari.webp",
+          "hash": "15372637870310324664"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/Cultural_Safaris.webp",
+          "hash": "523122640589276578"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/Group_And_Incentive_Safaris.webp",
+          "hash": "11737079998036248830"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/Historical_Safaris.webp",
+          "hash": "2395570343284477883"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/Mountain.webp",
+          "hash": "2669089460075427660"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/Uhuru_Peak.webp",
+          "hash": "14069458427220960262"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/Walking_Safari.webp",
+          "hash": "11399333500948419568"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/WildLifeSafari.webp",
+          "hash": "2371228819730622596"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/Zanzibar_Holiday_Safari.webp",
+          "hash": "7445036242782212963"
+        },
+        {
+          "file": "libs/ui-persistence/src/lib/images/Safaris/Zebra.webp",
+          "hash": "16203296746857859305"
+        },
+        {
+          "file": "libs/ui-persistence/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-persistence/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-persistence/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-router-gladiolus": [
+        {
+          "file": "libs/ui-router-gladiolus/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/README.md",
+          "hash": "6193847315711947401"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/jest.config.ts",
+          "hash": "5712545805973665638"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/package.json",
+          "hash": "12050218784274375959"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/project.json",
+          "hash": "12616870308587095206"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/src/index.ts",
+          "hash": "11520655071739251408"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/src/lib/lazy-pages.tsx",
+          "hash": "15502721347661281777",
+          "deps": [
+            "npm:@loadable/component",
+            "ui-comp-router-lazy-fallback",
+            [
+              "ui-page-landing-page",
+              "dynamic"
+            ],
+            [
+              "ui-page-error-404",
+              "dynamic"
+            ],
+            [
+              "ui-page-about-us",
+              "dynamic"
+            ],
+            [
+              "ui-page-contact",
+              "dynamic"
+            ],
+            [
+              "ui-page-safaris",
+              "dynamic"
+            ],
+            [
+              "ui-page-destinations",
+              "dynamic"
+            ],
+            [
+              "ui-page-destination-details",
+              "dynamic"
+            ],
+            [
+              "ui-page-adventures",
+              "dynamic"
+            ],
+            [
+              "ui-page-adventure-details",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "libs/ui-router-gladiolus/src/lib/route-table.tsx",
+          "hash": "2785008821327810620",
+          "deps": [
+            "npm:react-router-dom",
+            "ui-comp-scroll-to-top",
+            "ui-layout-gladiolus",
+            "ui-routes-gladiolus"
+          ]
+        },
+        {
+          "file": "libs/ui-router-gladiolus/src/lib/router.tsx",
+          "hash": "1089556699431116600",
+          "deps": [
+            "npm:@tanstack/react-query",
+            "npm:react-router-dom",
+            "npm:react-helmet-async",
+            "ui-utils",
+            "ui-comp-notifications"
+          ]
+        },
+        {
+          "file": "libs/ui-router-gladiolus/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-router-gladiolus/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-contact": [
+        {
+          "file": "libs/ui-page-contact/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-contact/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-contact/README.md",
+          "hash": "9205987546928873986"
+        },
+        {
+          "file": "libs/ui-page-contact/jest.config.ts",
+          "hash": "13062406761653094625"
+        },
+        {
+          "file": "libs/ui-page-contact/package.json",
+          "hash": "2333177002969011386"
+        },
+        {
+          "file": "libs/ui-page-contact/project.json",
+          "hash": "7730001209511085786"
+        },
+        {
+          "file": "libs/ui-page-contact/src/index.ts",
+          "hash": "10425411892941639057"
+        },
+        {
+          "file": "libs/ui-page-contact/src/lib/index.tsx",
+          "hash": "12305130614461552093",
+          "deps": [
+            "ui-comp-page-helmet",
+            "ui-comp-header"
+          ]
+        },
+        {
+          "file": "libs/ui-page-contact/src/lib/main.tsx",
+          "hash": "6409688772194420250",
+          "deps": [
+            "npm:@heroicons/react",
+            "npm:react-hook-form",
+            "ui-utils",
+            "ui-utils-form",
+            "ui-api",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "libs/ui-page-contact/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-contact/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-contact/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-routes-gladiolus": [
+        {
+          "file": "libs/ui-routes-gladiolus/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/README.md",
+          "hash": "11732572138960611563"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/jest.config.ts",
+          "hash": "15049907118369323335"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/package.json",
+          "hash": "100085815848628292"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/project.json",
+          "hash": "8445614894240821291"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/src/index.ts",
+          "hash": "9505106575944403756"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/src/lib/index.tsx",
+          "hash": "8157238789585637613",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/src/lib/route-parameter-hooks.ts",
+          "hash": "7184361188495523987",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/src/lib/routes.ts",
+          "hash": "8412046461465199463"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-routes-gladiolus/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-api": [
+        {
+          "file": "libs/ui-api/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-api/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-api/README.md",
+          "hash": "13047988405604545017"
+        },
+        {
+          "file": "libs/ui-api/jest.config.ts",
+          "hash": "6997849854409942234"
+        },
+        {
+          "file": "libs/ui-api/package.json",
+          "hash": "17743220518808420758"
+        },
+        {
+          "file": "libs/ui-api/project.json",
+          "hash": "4728606463280814579"
+        },
+        {
+          "file": "libs/ui-api/src/index.ts",
+          "hash": "11110392292034175545"
+        },
+        {
+          "file": "libs/ui-api/src/lib/client.ts",
+          "hash": "3603209098058022857",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "libs/ui-api/src/lib/mutations/mutations.tsx",
+          "hash": "14392345705315852986",
+          "deps": [
+            "npm:@tanstack/react-query",
+            "ui-comp-notifications"
+          ]
+        },
+        {
+          "file": "libs/ui-api/src/lib/queries/query.tsx",
+          "hash": "5396672589363382073"
+        },
+        {
+          "file": "libs/ui-api/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-api/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-api/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-utils-form": [
+        {
+          "file": "libs/ui-utils-form/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-utils-form/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-utils-form/README.md",
+          "hash": "11363669461802462483"
+        },
+        {
+          "file": "libs/ui-utils-form/jest.config.ts",
+          "hash": "6673820432232427031"
+        },
+        {
+          "file": "libs/ui-utils-form/package.json",
+          "hash": "12587829602839773876"
+        },
+        {
+          "file": "libs/ui-utils-form/project.json",
+          "hash": "5679223672886797410"
+        },
+        {
+          "file": "libs/ui-utils-form/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-utils-form/src/lib/index.ts",
+          "hash": "10340614165101301530"
+        },
+        {
+          "file": "libs/ui-utils-form/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-utils-form/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-utils-form/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-page-safaris": [
+        {
+          "file": "libs/ui-page-safaris/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-page-safaris/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-page-safaris/README.md",
+          "hash": "5003648258178001020"
+        },
+        {
+          "file": "libs/ui-page-safaris/jest.config.ts",
+          "hash": "14696023950841269362"
+        },
+        {
+          "file": "libs/ui-page-safaris/package.json",
+          "hash": "17374258286175510658"
+        },
+        {
+          "file": "libs/ui-page-safaris/project.json",
+          "hash": "14393005016923181828"
+        },
+        {
+          "file": "libs/ui-page-safaris/src/index.ts",
+          "hash": "4310530692465930868"
+        },
+        {
+          "file": "libs/ui-page-safaris/src/lib/index.tsx",
+          "hash": "14410800626883867057",
+          "deps": [
+            "ui-comp-page-helmet",
+            "ui-comp-header",
+            "ui-comp-safaris"
+          ]
+        },
+        {
+          "file": "libs/ui-page-safaris/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-page-safaris/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-page-safaris/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-comp-destinations": [
+        {
+          "file": "libs/ui-comp-destinations/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-comp-destinations/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-comp-destinations/README.md",
+          "hash": "5853964952547008739"
+        },
+        {
+          "file": "libs/ui-comp-destinations/jest.config.ts",
+          "hash": "14122749109810317496"
+        },
+        {
+          "file": "libs/ui-comp-destinations/package.json",
+          "hash": "559947150006993025"
+        },
+        {
+          "file": "libs/ui-comp-destinations/project.json",
+          "hash": "18271096003806556801"
+        },
+        {
+          "file": "libs/ui-comp-destinations/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-comp-destinations/src/lib/index.tsx",
+          "hash": "881785629993282970",
+          "deps": [
+            "npm:react",
+            "ui-persistance",
+            "npm:react-router-dom",
+            "ui-routes-gladiolus",
+            "ui-comp-status",
+            "npm:react-slick",
+            "npm:slick-carousel"
+          ]
+        },
+        {
+          "file": "libs/ui-comp-destinations/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-comp-destinations/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-comp-destinations/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "ui-i18n": [
+        {
+          "file": "libs/ui-i18n/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/ui-i18n/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "libs/ui-i18n/README.md",
+          "hash": "1017914486167903239"
+        },
+        {
+          "file": "libs/ui-i18n/jest.config.ts",
+          "hash": "1680340628659068886"
+        },
+        {
+          "file": "libs/ui-i18n/package.json",
+          "hash": "11320476082123891796"
+        },
+        {
+          "file": "libs/ui-i18n/project.json",
+          "hash": "15779320743609453787"
+        },
+        {
+          "file": "libs/ui-i18n/src/index.ts",
+          "hash": "11741295640859605956"
+        },
+        {
+          "file": "libs/ui-i18n/src/lib/index.tsx",
+          "hash": "14135528481754244967",
+          "deps": [
+            "npm:i18next",
+            "npm:i18next-browser-languagedetector",
+            "npm:react-i18next"
+          ]
+        },
+        {
+          "file": "libs/ui-i18n/src/lib/locales/de.json",
+          "hash": "5558883205366542772"
+        },
+        {
+          "file": "libs/ui-i18n/src/lib/locales/en.json",
+          "hash": "11777463938340860754"
+        },
+        {
+          "file": "libs/ui-i18n/src/lib/locales/es.json",
+          "hash": "9465409152705063874"
+        },
+        {
+          "file": "libs/ui-i18n/src/lib/locales/fr.json",
+          "hash": "17261469685566761339"
+        },
+        {
+          "file": "libs/ui-i18n/tsconfig.json",
+          "hash": "12937361759397702261"
+        },
+        {
+          "file": "libs/ui-i18n/tsconfig.lib.json",
+          "hash": "15147195313780277677"
+        },
+        {
+          "file": "libs/ui-i18n/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx serve ui-gladiolus-tours",
+    "startTime": "2024-11-24T11:44:28.847Z",
+    "endTime": "2024-11-24T11:44:40.651Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "ui-gladiolus-tours:serve:development",
+      "target": "serve",
+      "projectName": "ui-gladiolus-tours",
+      "hash": "9424288610979663464",
+      "startTime": "2024-11-24T11:44:28.851Z",
+      "endTime": "2024-11-24T11:44:40.651Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}
