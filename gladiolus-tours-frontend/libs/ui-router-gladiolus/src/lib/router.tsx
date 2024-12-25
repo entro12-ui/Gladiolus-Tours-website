@@ -4,6 +4,11 @@ import { HelmetProvider } from 'react-helmet-async';
 import { getWebsiteBaseHref } from '@collo/ui-utils';
 import { GLADIOLUS_TOURS_ROUTE_TABLE } from './route-table';
 import { GtNotification } from '@collo/ui-comp-notifications';
+import {
+  WhatsAppChatButton,
+  WhatsAppChatButtonRecipient,
+} from '@collo/ui-comp-chat-on-whatsapp';
+import React from 'react';
 
 // See https://medium.com/doctolib/react-query-cachetime-vs-staletime-ec74defc483e
 // * cacheTime default is 5 mins
@@ -27,6 +32,11 @@ export function UiRouterGladiolusTours() {
       <QueryClientProvider client={queryClient}>
         <GtNotification />
         <RouterProvider router={router} />
+        <WhatsAppChatButton
+          size="medium"
+          theme="green"
+          recipient={WhatsAppChatButtonRecipient.GTTZ}
+        />
       </QueryClientProvider>
     </HelmetProvider>
   );
