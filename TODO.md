@@ -1,5 +1,9 @@
 # Gladiolus Tours
 
+[ ] Landing Page
+
+    [ ] Animated Testimonials from (Aceternity UI)
+
 [ ] Update to the Navigation Bar:
 
     [ ] Fix the Phone display when the navigation is selected.
@@ -66,6 +70,6 @@
             [ ] Scripts to build and Deploy to the S3 bucket and AWS Lambda for the backend.
             [ ] Considering S3 Object Versioning.
 
-# Note: 
+# Note:
     - Avoiding to deploy from Local computer.
     - Development rules should be followed whereby use of the VCS and Creation of PR so that it could trigger and deploy the updated version.
