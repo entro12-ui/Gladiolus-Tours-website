@@ -1,1 +1,1 @@
-export * from './lib/ui-comp-chat-on-whatsapp';
+export * from './lib/index';
