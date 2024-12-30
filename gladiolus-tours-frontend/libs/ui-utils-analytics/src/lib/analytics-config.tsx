@@ -1,8 +1,11 @@
-import mixpanel from "mixpanel-browser";
-import { createContext, ReactNode } from "react";
+import posthog from 'posthog-js';
+import { createContext, ReactNode } from 'react';
 
-// Not replaceable by endsWith("kwawingu.com") because we don't want to track QA activity
-const ENABLED_HOSTNAMES = new Set(["kwawingu.com", "tours.kwawingu.com"]);
+// Not replaceable by endsWith("gladiolustours.com") because we don't want to track QA activity
+const ENABLED_HOSTNAMES = new Set([
+  'gladiolustours.com',
+  'admin.gladiolustours.com',
+]);
 
 export interface IAnalyticsProvider {
   track: (message: string) => void;
@@ -13,36 +16,38 @@ export interface IAnalyticsProvider {
 
 const NOOP_ANALYTICS_PROVIDER: IAnalyticsProvider = {
   track: (message) => {
-    console.log("Analytics:track", message);
+    console.log('Analytics:track', message);
   },
   associateEmail: (email) => {
-    console.log("Analytics:associateEmail", email);
+    console.log('Analytics:associateEmail', email);
   },
   alias: (email) => {
-    console.log("Analytics:alias", email);
+    console.log('Analytics:alias', email);
   },
   reset: () => {
-    console.log("Analytics:reset");
+    console.log('Analytics:reset');
   },
 };
 
 const newAnalyticsProvider = (): IAnalyticsProvider => {
   if (ENABLED_HOSTNAMES.has(window.location.hostname)) {
-    mixpanel.init("424a39065d0134ea15e546f82c9323b8"); // eslint-disable-line
+    posthog.init('YOUR_POSTHOG_API_KEY', {
+      api_host: 'https://app.posthog.com',
+    });
     return {
       track: (message) => {
-        mixpanel.track(message);
+        posthog.capture(message);
       },
       associateEmail: (email) => {
-        mixpanel.identify(email); // user's events now associated with their email address in Mixpanel
-        mixpanel.people.set({ $email: email });
+        posthog.identify(email); // user's events now associated with their email address
+        posthog.people.set({ $email: email });
       },
       alias: (email) => {
-        mixpanel.alias(email); // user's events now associated with their email address in Mixpanel
-        mixpanel.people.set({ $email: email });
+        posthog.alias(email); // user's events now associated with their email address in Mixpanel
+        posthog.people.set({ $email: email });
       },
       reset: () => {
-        mixpanel.reset();
+        posthog.reset();
       },
     };
   }
