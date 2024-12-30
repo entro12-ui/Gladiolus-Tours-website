@@ -64,6 +64,7 @@
       "@collo/ui-router-gladiolus": ["libs/ui-router-gladiolus/src/index.ts"],
       "@collo/ui-routes-gladiolus": ["libs/ui-routes-gladiolus/src/index.ts"],
       "@collo/ui-utils": ["libs/ui-utils/src/index.ts"],
+      "@collo/ui-utils-analytics": ["libs/ui-utils-analytics/src/index.ts"],
       "@collo/ui-utils-form": ["libs/ui-utils-form/src/index.ts"]
     }
   },
