@@ -24,6 +24,9 @@
         "libs/ui-comp-booking-form-inquiry/src/index.ts"
       ],
       "@collo/ui-comp-chat-bot": ["libs/ui-comp-chat-bot/src/index.ts"],
+      "@collo/ui-comp-chat-on-whatsapp": [
+        "libs/ui-comp-chat-on-whatsapp/src/index.ts"
+      ],
       "@collo/ui-comp-destinations": ["libs/ui-comp-destinations/src/index.ts"],
       "@collo/ui-comp-header": ["libs/ui-comp-header/src/index.ts"],
       "@collo/ui-comp-images": ["libs/ui-comp-images/src/index.ts"],
