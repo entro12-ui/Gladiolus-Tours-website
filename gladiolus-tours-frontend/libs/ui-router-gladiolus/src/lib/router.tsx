@@ -33,7 +33,7 @@ export function UiRouterGladiolusTours() {
         <GtNotification />
         <RouterProvider router={router} />
         <WhatsAppChatButton
-          size="medium"
+          size="large"
           theme="green"
           recipient={WhatsAppChatButtonRecipient.GTTZ}
         />
