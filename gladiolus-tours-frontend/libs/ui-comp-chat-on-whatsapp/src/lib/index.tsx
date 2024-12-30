@@ -11,7 +11,7 @@ export type WhatsAppChatButtonSize = 'small' | 'medium' | 'large';
 export type WhatsAppChatButtonTheme = 'green' | 'white';
 
 export enum WhatsAppChatButtonRecipient {
-  KWTZ = '255742804629',
+  GTTZ = '255753858059',
 }
 
 interface IProps {
