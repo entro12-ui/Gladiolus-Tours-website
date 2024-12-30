@@ -6,6 +6,7 @@ import LargeWhite from './white-theme/WhatsAppButtonWhiteLarge.svg';
 import MediumWhite from './white-theme/WhatsAppButtonWhiteMedium.svg';
 import SmallWhite from './white-theme/WhatsAppButtonWhiteSmall.svg';
 import { AnalyticsContext } from '@collo/ui-utils-analytics';
+import './style.css';
 
 export type WhatsAppChatButtonSize = 'small' | 'medium' | 'large';
 export type WhatsAppChatButtonTheme = 'green' | 'white';
@@ -64,19 +65,22 @@ export const WhatsAppChatButton = ({
 }: IProps) => {
   const analytics = useContext(AnalyticsContext);
   return (
-    <a
-      className={linkClassName}
-      aria-label="Chat on WhatsApp"
-      href={toLink(recipient)}
-      onClick={(e) => {
-        analytics.track(`WhatsApp chat button clicked: ${recipient}`);
-      }}
-    >
-      <img
-        className={imageClassName}
-        alt="Chat on WhatsApp"
-        src={toButton(size, theme)}
-      />
-    </a>
+    <div className="floating-whatsapp-chat-button">
+      <a
+        className={linkClassName}
+        aria-label="Chat on WhatsApp"
+        href={toLink(recipient)}
+        target="_blank"
+        onClick={(e) => {
+          analytics.track(`WhatsApp chat button clicked: ${recipient}`);
+        }}
+      >
+        <img
+          className={imageClassName}
+          alt="Chat on WhatsApp"
+          src={toButton(size, theme)}
+        />
+      </a>
+    </div>
   );
 };
