@@ -1,1 +1,2 @@
-export * from './lib/ui-utils-analytics';
+export * from './lib/analytics-config';
+export * from './lib/analytics-location-history';
