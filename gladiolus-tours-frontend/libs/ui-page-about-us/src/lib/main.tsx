@@ -1,4 +1,5 @@
 import { GladiolusTeam } from '@collo/ui-page-landing-page';
+import { Link } from 'react-router-dom';
 import Team from './images/team.webp';
 import Tanapa from './images/tanappa.webp';
 import Ngorongoro from './images/ngorongoro.webp';
@@ -9,6 +10,8 @@ import Couple from './images/couple.webp';
 import Flower from './images/flower.webp';
 import GrandPaa from './images/grandpap.webp';
 import MountKilimanjaro from './images/mount-kilimanjaro.webp';
+import SafariGo from './images/safarigo.png';
+import SafariBookings from './images/safaribookings.png';
 import TeamWork from './images/team-work.webp';
 
 const stats = [
@@ -120,17 +123,28 @@ export const GladiolusToursAboutPage = () => {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-purple-500">
                     Transforming Connections, One Journey at a Time
                   </h1>
-                  <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    At Gladiolus Tours, we believe in changing the way people
+                  <div className="h-1 w-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full my-6"></div>
+                  <p className="relative text-lg leading-8 text-gray-700 sm:max-w-md lg:max-w-none">
+                    At <span className="font-semibold text-indigo-700">Gladiolus Tours</span>, we believe in changing the way people
                     connect through travel. Our mission is to create meaningful
-                    journeys that go beyond the ordinary. We curate experiences
-                    that touch your soul and foster connections with the world
-                    around you. Join us in embracing the transformative power of
-                    exploration and the joy of shared moments.
+                    journeys that go beyond the ordinary tourist experience.
                   </p>
+                  <p className="relative mt-4 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
+                    We curate personalized adventures that touch your soul and foster deep connections with the world
+                    around you. Join us in embracing the transformative power of
+                    exploration and discover the joy of shared moments in Tanzania's most breathtaking destinations.
+                  </p>
+                  <div className="mt-8">
+                    <a href="#our-values" className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 transition-colors duration-300 inline-flex items-center">
+                      Discover Our Values
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 ml-2">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
@@ -191,6 +205,7 @@ export const GladiolusToursAboutPage = () => {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our Commitment to Excellence
             </h2>
+            <div className="h-1 w-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full my-6"></div>
             <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
                 <p className="text-xl leading-8 text-gray-600">
@@ -212,52 +227,109 @@ export const GladiolusToursAboutPage = () => {
                     – it's a celebration of cultures, a discovery of hidden
                     gems, and a connection with the world around you.
                   </p>
-                  <p className="mt-10">
-                    Join us in exploring the beauty of our planet while creating
-                    meaningful connections with fellow travelers. We invite you
-                    to be part of our community, where every journey is an
-                    opportunity for personal growth, cultural exchange, and
-                    unforgettable moments. Discover the world with Gladiolus
-                    Tours and let your adventure begin!
-                  </p>
+
+                  <div className="mt-10 p-6 bg-indigo-50 border-l-4 border-indigo-600 rounded-r-lg">
+                    <p className="italic text-gray-800">
+                      "Join us in exploring the beauty of our planet while creating
+                      meaningful connections with fellow travelers. We invite you
+                      to be part of our community, where every journey is an
+                      opportunity for personal growth, cultural exchange, and
+                      unforgettable moments."
+                    </p>
+                    <p className="mt-3 font-semibold text-indigo-700">— Gladiolus Tours Team</p>
+                  </div>
                 </div>
               </div>
               <div className="lg:flex lg:flex-auto lg:justify-center">
-                <dl className="w-64 space-y-8 xl:w-80">
-                  {stats.map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="flex flex-col-reverse gap-y-4"
-                    >
-                      <dt className="text-base leading-7 text-gray-600">
-                        {stat.label}
-                      </dt>
-                      <dd className="text-5xl font-semibold tracking-tight text-gray-900">
-                        {stat.value}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
+                <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
+                  <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Our Impact</h3>
+                  <dl className="space-y-8">
+                    {stats.map((stat) => (
+                      <div
+                        key={stat.label}
+                        className="bg-gray-50 p-4 rounded-lg flex flex-col items-center text-center hover:bg-gray-100 transition-colors duration-300"
+                      >
+                        <dd className="text-4xl font-bold tracking-tight text-indigo-600 mb-2">
+                          {stat.value}
+                        </dd>
+                        <dt className="text-base font-medium text-gray-700">
+                          {stat.label}
+                        </dt>
+                      </div>
+                    ))}
+                  </dl>
+                  <div className="mt-8 text-center">
+                    <a href="#" className="text-indigo-600 hover:text-indigo-800 font-medium">
+                      Learn about our impact →
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Partner Representation Section */}
+        <div className="mx-auto mt-16 max-w-7xl px-6 lg:px-8">
+          <div className="bg-white shadow-md rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">Our Global Presence</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="flex flex-col items-center justify-center space-y-4 p-6 bg-gray-50 rounded-lg transition-all duration-300 hover:shadow-lg">
+                <img
+                  src={SafariBookings}
+                  alt="Safari Bookings Logo"
+                  className="h-16 object-contain mb-2"
+                />
+                <span className="text-lg font-semibold text-gray-900">SafariBookings.com</span>
+                <span className="text-sm text-gray-600 text-center">
+                  We are proudly represented on <Link to="https://www.safaribookings.com/" className="text-blue-600 hover:text-blue-800 font-medium">SafariBookings</Link>, 
+                  the largest marketplace for African Safaris!
+                </span>
+              </div>
+              <div className="flex flex-col items-center justify-center space-y-4 p-6 bg-gray-50 rounded-lg transition-all duration-300 hover:shadow-lg">
+                <img
+                  src={SafariGo}
+                  alt="SafariGo Logo"
+                  className="h-16 object-contain mb-2"
+                />
+                <span className="text-lg font-semibold text-gray-900">SafariGo.com</span>
+                <span className="text-sm text-gray-600 text-center">
+                  We are also featured on <Link to="https://safarigo.com" className="text-blue-600 hover:text-blue-800 font-medium">SafariGo</Link>, 
+                  connecting travelers with authentic safari experiences.
+                </span>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
         {/* Image section */}
         <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-          <img
-            src={Team}
-            alt=""
-            className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
-          />
+          <div className="relative">
+            <img
+              src={Team}
+              alt="Gladiolus Tours team members standing together, showcasing our dedicated staff who provide exceptional safari experiences in Tanzania"
+              className="aspect-[5/2] w-full object-cover xl:rounded-3xl shadow-xl"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent xl:rounded-3xl"></div>
+            <div className="absolute bottom-0 left-0 p-6 sm:p-10">
+              <h3 className="text-xl sm:text-2xl font-bold text-white drop-shadow-lg">
+                Our Team: Your Safari Companions
+              </h3>
+              <p className="text-white/90 max-w-md mt-2 drop-shadow-lg">
+                Expert guides and support staff dedicated to creating your perfect Tanzania adventure
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Values section */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
+        <div id="our-values" className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8 scroll-mt-24">
+          <div className="mx-auto max-w-2xl lg:mx-0 text-center lg:text-left">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our Values: Guiding Your Journey with Integrity and Purpose
             </h2>
+            <div className="h-1 w-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full my-6 mx-auto lg:mx-0"></div>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               At Gladiolus Tours, our values are the compass that guides every
               aspect of your journey. We are committed to delivering exceptional
@@ -266,95 +338,85 @@ export const GladiolusToursAboutPage = () => {
             </p>
           </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {values.map((value) => (
-              <div key={value.name}>
-                <dt className="font-semibold text-gray-900">{value.name}</dt>
-                <dd className="mt-1 text-gray-600">{value.description}</dd>
+            {values.map((value, index) => (
+              <div key={value.name} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                <div className="bg-indigo-100 text-indigo-800 w-10 h-10 rounded-full flex items-center justify-center mb-4 font-bold">
+                  {index + 1}
+                </div>
+                <dt className="font-semibold text-gray-900 text-lg">{value.name}</dt>
+                <dd className="mt-3 text-gray-600">{value.description}</dd>
               </div>
             ))}
           </dl>
         </div>
 
-        {/* Logo cloud */}
-        <div className="relative isolate -z-10 mt-32 sm:mt-48">
-          <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
-            <svg
-              className="h-[40rem] w-[80rem] flex-none stroke-gray-200"
-              aria-hidden="true"
-            >
-              <defs>
-                <pattern
-                  id="e9033f3e-f665-41a6-84ef-756f6778e6fe"
-                  width={200}
-                  height={200}
-                  x="50%"
-                  y="50%"
-                  patternUnits="userSpaceOnUse"
-                  patternTransform="translate(-100 0)"
-                >
-                  <path d="M.5 200V.5H200" fill="none" />
-                </pattern>
-              </defs>
-              <svg x="50%" y="50%" className="overflow-visible fill-gray-50">
-                <path
-                  d="M-300 0h201v201h-201Z M300 200h201v201h-201Z"
-                  strokeWidth={0}
-                />
-              </svg>
-              <rect
-                width="100%"
-                height="100%"
-                strokeWidth={0}
-                fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)"
-              />
-            </svg>
-          </div>
+        {/* Partners section */}
+        <div className="relative mt-32 sm:mt-48 bg-white py-16">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
-              Our Partners
-            </h2>
-            <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-              <img
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                src={TzGovernment}
-                alt="Tanzanian Government"
-                width={158}
-                height={48}
-              />
-              <img
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                src={Tanapa}
-                alt="Tanapa"
-                width={158}
-                height={48}
-              />
-              <img
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                src={Ngorongoro}
-                alt="Ngorongoro"
-                width={158}
-                height={48}
-              />
-              <img
-                className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-                src={TWC}
-                alt="TWC"
-                width={158}
-                height={48}
-              />
-              <img
-                className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-                src={KwaWingu}
-                alt="KwaWingu Tours"
-                width={158}
-                height={48}
-              />
+            <div className="text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Our Trusted Partners
+              </h2>
+              <div className="h-1 w-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full my-6 mx-auto"></div>
+              <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+                We collaborate with leading organizations to deliver exceptional travel experiences throughout Tanzania.
+              </p>
+            </div>
+
+            <div className="mx-auto mt-16 max-w-7xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="p-8 bg-gray-50 rounded-xl hover:shadow-md transition-all duration-300 flex flex-col items-center">
+                  <img
+                    className="h-16 object-contain mb-6"
+                    src={SafariBookings}
+                    alt="Safari Bookings - Marketplace for African Safaris"
+                  />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Safari Bookings</h3>
+                  <p className="text-gray-600 text-center">The largest online marketplace for African safari tours, featuring trusted operators and authentic reviews.</p>
+                  <a href="https://www.safaribookings.com/" target="_blank" rel="noopener noreferrer" className="mt-4 text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                    Visit Website
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 ml-1">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+
+                <div className="p-8 bg-gray-50 rounded-xl hover:shadow-md transition-all duration-300 flex flex-col items-center">
+                  <img
+                    className="h-16 object-contain mb-6"
+                    src={SafariGo}
+                    alt="SafariGo - Safari Booking Platform"
+                  />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">SafariGo</h3>
+                  <p className="text-gray-600 text-center">A premier platform connecting travelers with authentic safari experiences across East Africa.</p>
+                  <a href="https://safarigo.com" target="_blank" rel="noopener noreferrer" className="mt-4 text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                    Visit Website
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 ml-1">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-12 text-center">
+                <p className="text-gray-600">Interested in partnering with us? <a href="#" className="text-indigo-600 hover:text-indigo-800 font-medium">Contact our partnership team</a></p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Team section */}
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Meet Our Passionate Team
+            </h2>
+            <div className="h-1 w-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full my-6 mx-auto"></div>
+            <p className="mx-auto max-w-2xl text-lg leading-8 text-gray-600">
+              Our dedicated team of travel experts is committed to creating unforgettable experiences for every traveler.
+              With deep local knowledge and a passion for Tanzania, we're here to make your journey truly special.
+            </p>
+          </div>
           <GladiolusTeam />
         </div>
 

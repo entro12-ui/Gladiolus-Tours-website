@@ -5,12 +5,12 @@ import { GladiolusToursAboutPage } from './main';
 export const GladiolusToursAboutUs = () => {
   return (
     <div className="bg-white">
-      <EntryPageHelmet title={'About Us'} />
+      <EntryPageHelmet title={'About Gladiolus Tours - Our Story, Values & Team'} />
       <GladiolusHeaderSection
-        header={'About us'}
-        description={'About Gladiolus Tours'}
+        header={'About Us'}
+        description={'Discover the story, values, and passionate team behind Gladiolus Tours'}
       />
-      <div>
+      <div className="overflow-hidden">
         <GladiolusToursAboutPage />
       </div>
     </div>
