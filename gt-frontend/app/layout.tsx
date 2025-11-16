@@ -1,11 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Playfair_Display, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-sans" })
-const inter = Inter({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gladiolustours.com"),
@@ -102,7 +98,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${inter.variable} font-sans antialiased`}>
+      <body className="font-sans antialiased">
         {children}
         <Analytics />
       </body>
