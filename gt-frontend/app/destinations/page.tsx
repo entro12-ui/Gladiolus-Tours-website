@@ -146,7 +146,7 @@ export default function DestinationsPage() {
                     <div className="text-lg font-serif text-primary">{destination.price}</div>
                   </div>
                   <Button asChild className="w-full bg-primary hover:bg-primary/90">
-                    <Link href={`/destinations/${destination.id}`}>
+                    <Link href={`/destinations/${destination.slug}`}>
                       View Details <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>

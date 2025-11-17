@@ -14,11 +14,16 @@ import { destinations } from "@/lib/destinations-data"
 import { absoluteUrl } from "@/lib/seo"
 
 type Props = {
-  params: { id: string }
+  params: Promise<{ id: string }>
+}
+
+function resolveDestination(identifier: string) {
+  return destinations.find((destination) => destination.slug === identifier || destination.id === identifier)
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const destination = destinations.find((d) => d.id === params.id)
+  const { id } = await params
+  const destination = resolveDestination(id)
 
   if (!destination) {
     return {
@@ -26,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
 
-  const url = absoluteUrl(`/destinations/${destination.id}`)
+  const url = absoluteUrl(`/destinations/${destination.slug}`)
   const imageUrl = absoluteUrl(destination.image)
 
   return {
@@ -60,19 +65,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams() {
   return destinations.map((destination) => ({
-    id: destination.id,
+    id: destination.slug,
   }))
 }
 
-export default function DestinationDetailPage({ params }: Props) {
-  const destination = destinations.find((d) => d.id === params.id)
+export default async function DestinationDetailPage({ params }: Props) {
+  const { id } = await params
+  const destination = resolveDestination(id)
 
   if (!destination) {
     notFound()
   }
 
   const currentDestination = destination
-  const canonicalUrl = absoluteUrl(`/destinations/${currentDestination.id}`)
+  const canonicalUrl = absoluteUrl(`/destinations/${currentDestination.slug}`)
 
   return (
     <div className="min-h-screen">
@@ -273,7 +279,7 @@ export default function DestinationDetailPage({ params }: Props) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {destinations
-              .filter((d) => d.id !== currentDestination.id)
+              .filter((d) => d.slug !== currentDestination.slug)
               .slice(0, 3)
               .map((dest) => (
                 <Card key={dest.id} className="overflow-hidden group hover:shadow-xl transition-shadow">
@@ -292,7 +298,7 @@ export default function DestinationDetailPage({ params }: Props) {
                       <span className="font-serif text-primary">{dest.price}</span>
                     </div>
                     <Button asChild variant="outline" className="w-full bg-transparent">
-                      <Link href={`/destinations/${dest.id}`}>View Details</Link>
+                      <Link href={`/destinations/${dest.slug}`}>View Details</Link>
                     </Button>
                   </CardContent>
                 </Card>
