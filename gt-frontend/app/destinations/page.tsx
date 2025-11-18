@@ -1,0 +1,151 @@
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { MapPin, Calendar, ArrowRight, TrendingUp } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
+import type { Metadata } from "next"
+import { destinations } from "@/lib/destinations-data"
+
+export const metadata: Metadata = {
+  title: "Safari Destinations - Gladiolus Tours",
+  description:
+    "Explore our handpicked selection of African safari destinations. From Serengeti to Masai Mara, discover your perfect adventure.",
+  openGraph: {
+    title: "Safari Destinations - Gladiolus Tours",
+    description: "Explore premium African safari destinations",
+  },
+}
+
+export default function DestinationsPage() {
+  return (
+    <div className="min-h-screen">
+      <Navigation />
+
+      {/* Hero Section */}
+      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden mt-20">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/placeholder.svg?height=800&width=1600"
+            alt="Safari Destinations"
+            fill
+            className="object-cover brightness-75"
+            priority
+          />
+        </div>
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 text-balance">Our Safari Destinations</h1>
+          <p className="text-xl font-mono text-white/90 leading-relaxed text-pretty">
+            Choose from our carefully curated collection of Africa's most spectacular wildlife destinations
+          </p>
+        </div>
+      </section>
+
+      {/* Filters Section */}
+      <section className="py-8 bg-muted border-b border-border">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
+            <div className="font-mono text-sm text-muted-foreground">Showing {destinations.length} destinations</div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Select defaultValue="all">
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Location" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Locations</SelectItem>
+                  <SelectItem value="tanzania">Tanzania</SelectItem>
+                  <SelectItem value="kenya">Kenya</SelectItem>
+                </SelectContent>
+              </Select>
+              <Select defaultValue="all">
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Duration" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Durations</SelectItem>
+                  <SelectItem value="short">2-4 Days</SelectItem>
+                  <SelectItem value="medium">5-7 Days</SelectItem>
+                  <SelectItem value="long">8+ Days</SelectItem>
+                </SelectContent>
+              </Select>
+              <Select defaultValue="featured">
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Sort by" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="featured">Featured</SelectItem>
+                  <SelectItem value="price-low">Price: Low to High</SelectItem>
+                  <SelectItem value="price-high">Price: High to Low</SelectItem>
+                  <SelectItem value="duration">Duration</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Destinations Grid */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {destinations.map((destination) => (
+              <Card key={destination.id} className="overflow-hidden group hover:shadow-xl transition-shadow">
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={destination.image || "/placeholder.svg"}
+                    alt={destination.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-mono">
+                    {destination.difficulty}
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 text-sm font-mono text-muted-foreground mb-2">
+                    <MapPin className="h-4 w-4" />
+                    <span>{destination.location}</span>
+                  </div>
+                  <h3 className="text-2xl font-serif text-foreground mb-3">{destination.title}</h3>
+                  <p className="font-mono text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-2">
+                    {destination.description}
+                  </p>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2 text-sm font-mono text-muted-foreground">
+                      <Calendar className="h-4 w-4" />
+                      <span>{destination.duration}</span>
+                    </div>
+                    <div className="text-lg font-serif text-primary">{destination.price}</div>
+                  </div>
+                  <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                    <Link href={`/destinations/${destination.id}`}>
+                      View Details <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <TrendingUp className="h-12 w-12 mx-auto mb-4 text-secondary" />
+          <h2 className="text-4xl font-serif mb-4 text-balance">Can't Decide?</h2>
+          <p className="text-lg font-mono mb-8 max-w-2xl mx-auto leading-relaxed text-primary-foreground/90">
+            Let our safari experts help you design a custom itinerary that matches your interests and budget
+          </p>
+          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+            <Link href="/contact">Contact Our Experts</Link>
+          </Button>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  )
+}
