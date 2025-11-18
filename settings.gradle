@@ -1,3 +1,3 @@
 rootProject.name = 'Gladiolus-Tours'
 
-include ('gladiolus-tours-frontend', 'gladiolus-tours-server')
+include ('gladiolus-tours-frontend', 'gladiolus-tours-server', 'gt-frontend')
