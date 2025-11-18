@@ -6,21 +6,12 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     unoptimized: true,
   },
-  // Enable internationalization
-  i18n: {
-    locales: ['en', 'sw'],
-    defaultLocale: 'en',
-    localeDetection: true,
-  },
   // Optimize for production
   compress: true,
   poweredByHeader: false,
   // Generate sitemap
   experimental: {
     optimizeCss: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
