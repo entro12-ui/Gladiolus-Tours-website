@@ -1,20 +1,40 @@
+import type { Metadata } from "next"
+import Link from "next/link"
+import Image from "next/image"
+import { Calendar, Clock, ArrowRight } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Clock, ArrowRight } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import type { Metadata } from "next"
+import { BreadcrumbSchema, StructuredData } from "@/components/structured-data"
+import { absoluteUrl } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Safari Blog & Travel Tips - Gladiolus Tours",
   description:
     "Expert safari advice, destination guides, wildlife information, and travel tips for your African adventure.",
+  alternates: {
+    canonical: "/blog",
+  },
   openGraph: {
-    title: "Safari Blog - Gladiolus Tours",
-    description: "Expert safari advice and travel tips",
+    title: "Gladiolus Tours Safari Blog",
+    description: "Expert safari advice, destination guides, and conservation stories from East Africa.",
+    url: absoluteUrl("/blog"),
+    images: [
+      {
+        url: absoluteUrl("/og-image.jpg"),
+        width: 1200,
+        height: 630,
+        alt: "Safari blog wildlife montage",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gladiolus Tours Safari Blog",
+    description: "Travel tips and inspiration for planning your African safari adventure.",
+    images: [absoluteUrl("/og-image.jpg")],
   },
 }
 
@@ -87,8 +107,29 @@ const blogPosts = [
 ]
 
 export default function BlogPage() {
+  const blogStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Gladiolus Tours Safari Blog",
+    description:
+      "Expert safari advice, destination guides, and conservation updates from Gladiolus Tours' travel specialists.",
+    url: absoluteUrl("/blog"),
+    publisher: {
+      "@type": "Organization",
+      name: "Gladiolus Tours",
+      url: absoluteUrl("/"),
+    },
+  }
+
   return (
     <div className="min-h-screen">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: absoluteUrl("/") },
+          { name: "Blog", url: absoluteUrl("/blog") },
+        ]}
+      />
+      <StructuredData id="blog-schema" data={blogStructuredData} />
       <Navigation />
 
       {/* Hero Section */}
