@@ -1,18 +1,38 @@
+import type { Metadata } from "next"
+import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import type { Metadata } from "next"
+import { BreadcrumbSchema, FAQSchema } from "@/components/structured-data"
+import { absoluteUrl } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions - Gladiolus Tours",
   description:
     "Find answers to common questions about safari planning, travel requirements, and what to expect on your African adventure.",
+  alternates: {
+    canonical: "/faq",
+  },
   openGraph: {
-    title: "FAQ - Gladiolus Tours",
-    description: "Common questions about African safaris answered",
+    title: "African Safari FAQs | Gladiolus Tours",
+    description: "Get answers to top questions about planning luxury safaris in Tanzania and Kenya.",
+    url: absoluteUrl("/faq"),
+    images: [
+      {
+        url: absoluteUrl("/og-image.jpg"),
+        width: 1200,
+        height: 630,
+        alt: "Gladiolus Tours safari FAQ",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gladiolus Tours Safari FAQs",
+    description: "Everything you need to know before your East African safari adventure.",
+    images: [absoluteUrl("/og-image.jpg")],
   },
 }
 
@@ -115,8 +135,22 @@ const faqCategories = [
 ]
 
 export default function FAQPage() {
+  const faqList = faqCategories.flatMap((category) => category.questions)
+
   return (
     <div className="min-h-screen">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: absoluteUrl("/") },
+          { name: "FAQ", url: absoluteUrl("/faq") },
+        ]}
+      />
+      <FAQSchema
+        url={absoluteUrl("/faq")}
+        title="Gladiolus Tours Safari FAQs"
+        description="Answers to the most common luxury African safari questions from Gladiolus Tours."
+        faqs={faqList}
+      />
       <Navigation />
 
       {/* Hero Section */}
