@@ -21,9 +21,6 @@ export function Footer() {
               <a href="#" className="hover:text-secondary transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-secondary transition-colors" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
-              </a>
             </div>
           </div>
 
@@ -71,7 +68,7 @@ export function Footer() {
             <ul className="space-y-3 font-mono text-sm">
               <li className="flex items-start gap-2 text-primary-foreground/80">
                 <Phone className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span>+255 123 456 789</span>
+                <span>+255-753-858-059</span>
               </li>
               <li className="flex items-start gap-2 text-primary-foreground/80">
                 <Mail className="h-5 w-5 flex-shrink-0 mt-0.5" />
@@ -108,7 +105,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Gladiolus Tours. All rights reserved.
           </p>
           <div className="flex gap-6 font-mono text-sm">
-            <Link href="/faq" className="text-primary-foreground/60 hover:text-secondary transition-colors">
+            {/*<Link href="/faq" className="text-primary-foreground/60 hover:text-secondary transition-colors">
               FAQ
             </Link>
             <Link href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors">
@@ -116,7 +113,7 @@ export function Footer() {
             </Link>
             <Link href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors">
               Terms of Service
-            </Link>
+            </Link>*/}
           </div>
         </div>
       </div>
