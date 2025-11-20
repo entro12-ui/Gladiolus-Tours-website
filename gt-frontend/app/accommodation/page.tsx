@@ -1,20 +1,40 @@
+import type { Metadata } from "next"
+import Image from "next/image"
+import { MapPin, Star, Wifi, Coffee } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { MapPin, Star, Wifi, Coffee } from "lucide-react"
-import Image from "next/image"
-import type { Metadata } from "next"
+import { BreadcrumbSchema } from "@/components/structured-data"
+import { absoluteUrl } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Luxury Safari Accommodation - Gladiolus Tours",
   description:
     "Stay in handpicked luxury lodges, tented camps, and hotels across Africa's premier safari destinations.",
+  alternates: {
+    canonical: "/accommodation",
+  },
   openGraph: {
-    title: "Luxury Safari Accommodation - Gladiolus Tours",
-    description: "Discover our premium safari accommodation options",
+    title: "Luxury Safari Accommodation | Gladiolus Tours",
+    description: "Discover premium safari lodges, camps, and hotels curated by Gladiolus Tours.",
+    url: absoluteUrl("/accommodation"),
+    images: [
+      {
+        url: absoluteUrl("/og-image.jpg"),
+        width: 1200,
+        height: 630,
+        alt: "Luxury safari accommodation in East Africa",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gladiolus Tours Safari Accommodation",
+    description: "Explore handpicked safari accommodation options across Tanzania and Kenya.",
+    images: [absoluteUrl("/og-image.jpg")],
   },
 }
 
@@ -91,6 +111,12 @@ const accommodations = [
 export default function AccommodationPage() {
   return (
     <div className="min-h-screen">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: absoluteUrl("/") },
+          { name: "Accommodation", url: absoluteUrl("/accommodation") },
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}
