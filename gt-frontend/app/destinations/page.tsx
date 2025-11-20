@@ -1,31 +1,57 @@
+import type { Metadata } from "next"
+import Link from "next/link"
+import Image from "next/image"
+import { MapPin, Calendar, ArrowRight, TrendingUp } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { MapPin, Calendar, ArrowRight, TrendingUp } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import type { Metadata } from "next"
+import { BreadcrumbSchema } from "@/components/structured-data"
 import { destinations } from "@/lib/destinations-data"
+import { absoluteUrl } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Safari Destinations - Gladiolus Tours",
   description:
     "Explore our handpicked selection of African safari destinations. From Serengeti to Masai Mara, discover your perfect adventure.",
+  alternates: {
+    canonical: "/destinations",
+  },
   openGraph: {
-    title: "Safari Destinations - Gladiolus Tours",
-    description: "Explore premium African safari destinations",
+    title: "African Safari Destinations | Gladiolus Tours",
+    description: "Discover curated safari destinations across Tanzania and Kenya with Gladiolus Tours.",
+    url: absoluteUrl("/destinations"),
+    images: [
+      {
+        url: absoluteUrl("/og-image.jpg"),
+        width: 1200,
+        height: 630,
+        alt: "African safari landscape with wildlife",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Explore Gladiolus Tours Safari Destinations",
+    description: "Browse luxury African safari destinations tailored by Gladiolus Tours.",
+    images: [absoluteUrl("/og-image.jpg")],
   },
 }
 
 export default function DestinationsPage() {
   return (
     <div className="min-h-screen">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: absoluteUrl("/") },
+          { name: "Destinations", url: absoluteUrl("/destinations") },
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden mt-20">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/placeholder.svg?height=800&width=1600"
@@ -36,9 +62,9 @@ export default function DestinationsPage() {
           />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 text-balance">Our Safari Destinations</h1>
+          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 text-balance">Signature African Safari Destinations</h1>
           <p className="text-xl font-mono text-white/90 leading-relaxed text-pretty">
-            Choose from our carefully curated collection of Africa's most spectacular wildlife destinations
+            Browse our curated luxury safaris across Tanzania and Kenya, handpicked for unforgettable wildlife experiences
           </p>
         </div>
       </section>

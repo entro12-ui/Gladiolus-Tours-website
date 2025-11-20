@@ -1,15 +1,17 @@
+import Link from "next/link"
+import Image from "next/image"
+import type { Metadata } from "next"
+import { notFound } from "next/navigation"
+import { MapPin, Calendar, Users, CheckCircle2, XCircle, Clock, ArrowRight } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Calendar, Users, CheckCircle2, XCircle, Clock, ArrowRight } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import { notFound } from "next/navigation"
+import { BreadcrumbSchema, TourSchema } from "@/components/structured-data"
 import { destinations } from "@/lib/destinations-data"
-import type { Metadata } from "next"
+import { absoluteUrl } from "@/lib/seo"
 
 type Props = {
   params: { id: string }
@@ -24,13 +26,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
 
+  const url = absoluteUrl(`/destinations/${destination.id}`)
+  const imageUrl = absoluteUrl(destination.image)
+
   return {
     title: `${destination.title} - Gladiolus Tours`,
     description: destination.description,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title: `${destination.title} Safari - Gladiolus Tours`,
       description: destination.description,
-      images: [destination.image],
+      url,
+      type: "article",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: destination.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${destination.title} Safari - Gladiolus Tours`,
+      description: destination.description,
+      images: [imageUrl],
     },
   }
 }
@@ -48,16 +71,34 @@ export default function DestinationDetailPage({ params }: Props) {
     notFound()
   }
 
+  const currentDestination = destination
+  const canonicalUrl = absoluteUrl(`/destinations/${currentDestination.id}`)
+
   return (
     <div className="min-h-screen">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: absoluteUrl("/") },
+          { name: "Destinations", url: absoluteUrl("/destinations") },
+          { name: currentDestination.title, url: canonicalUrl },
+        ]}
+      />
+      <TourSchema
+        name={currentDestination.title}
+        description={currentDestination.description}
+        image={absoluteUrl(currentDestination.image)}
+        price={currentDestination.priceValue}
+        duration={currentDestination.duration}
+        location={currentDestination.location}
+      />
       <Navigation />
 
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-end overflow-hidden mt-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src={destination.image || "/placeholder.svg"}
-            alt={destination.title}
+            src={currentDestination.image || "/placeholder.svg"}
+            alt={currentDestination.title}
             fill
             className="object-cover brightness-75"
             priority
@@ -67,24 +108,24 @@ export default function DestinationDetailPage({ params }: Props) {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="flex items-center gap-2 text-white/90 mb-4">
               <MapPin className="h-5 w-5" />
-              <span className="font-mono text-sm">{destination.location}</span>
+              <span className="font-mono text-sm">{currentDestination.location}</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 text-balance">{destination.title}</h1>
+            <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 text-balance">{currentDestination.title}</h1>
             <div className="flex flex-wrap gap-4 text-white/90 font-mono text-sm">
               <div className="flex items-center gap-2">
                 <Calendar className="h-5 w-5" />
-                <span>{destination.duration}</span>
+                <span>{currentDestination.duration}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5" />
-                <span>{destination.groupSize}</span>
+                <span>{currentDestination.groupSize}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="h-5 w-5" />
-                <span>Best: {destination.bestTime}</span>
+                <span>Best: {currentDestination.bestTime}</span>
               </div>
               <Badge variant="secondary" className="text-sm">
-                {destination.difficulty}
+                {currentDestination.difficulty}
               </Badge>
             </div>
           </div>
@@ -100,14 +141,14 @@ export default function DestinationDetailPage({ params }: Props) {
               {/* Overview */}
               <div>
                 <h2 className="text-3xl font-serif text-foreground mb-4">Overview</h2>
-                <p className="font-mono text-muted-foreground leading-relaxed">{destination.description}</p>
+                <p className="font-mono text-muted-foreground leading-relaxed">{currentDestination.description}</p>
               </div>
 
               {/* Highlights */}
               <div>
                 <h2 className="text-3xl font-serif text-foreground mb-4">Highlights</h2>
                 <ul className="space-y-3">
-                  {destination.highlights.map((highlight, index) => (
+                  {currentDestination.highlights.map((highlight, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="font-mono text-sm text-muted-foreground">{highlight}</span>
@@ -120,7 +161,7 @@ export default function DestinationDetailPage({ params }: Props) {
               <div>
                 <h2 className="text-3xl font-serif text-foreground mb-6">Detailed Itinerary</h2>
                 <div className="space-y-6">
-                  {destination.itinerary.map((day, index) => (
+                  {currentDestination.itinerary.map((day, index) => (
                     <Card key={index}>
                       <CardContent className="p-6">
                         <div className="flex gap-4">
@@ -145,7 +186,7 @@ export default function DestinationDetailPage({ params }: Props) {
                 <div>
                   <h3 className="text-2xl font-serif text-foreground mb-4">What's Included</h3>
                   <ul className="space-y-2">
-                    {destination.included.map((item, index) => (
+                    {currentDestination.included.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                         <span className="font-mono text-sm text-muted-foreground">{item}</span>
@@ -156,7 +197,7 @@ export default function DestinationDetailPage({ params }: Props) {
                 <div>
                   <h3 className="text-2xl font-serif text-foreground mb-4">What's Not Included</h3>
                   <ul className="space-y-2">
-                    {destination.excluded.map((item, index) => (
+                    {currentDestination.excluded.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <XCircle className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                         <span className="font-mono text-sm text-muted-foreground">{item}</span>
@@ -173,7 +214,7 @@ export default function DestinationDetailPage({ params }: Props) {
                 <CardContent className="p-6 space-y-6">
                   <div>
                     <div className="text-sm font-mono text-muted-foreground mb-2">Price per person</div>
-                    <div className="text-4xl font-serif text-primary">{destination.price}</div>
+                    <div className="text-4xl font-serif text-primary">{currentDestination.price}</div>
                   </div>
 
                   <Separator />
@@ -181,19 +222,19 @@ export default function DestinationDetailPage({ params }: Props) {
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span className="font-mono text-sm text-muted-foreground">Duration</span>
-                      <span className="font-mono text-sm text-foreground font-medium">{destination.duration}</span>
+                      <span className="font-mono text-sm text-foreground font-medium">{currentDestination.duration}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="font-mono text-sm text-muted-foreground">Group Size</span>
-                      <span className="font-mono text-sm text-foreground font-medium">{destination.groupSize}</span>
+                      <span className="font-mono text-sm text-foreground font-medium">{currentDestination.groupSize}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="font-mono text-sm text-muted-foreground">Difficulty</span>
-                      <span className="font-mono text-sm text-foreground font-medium">{destination.difficulty}</span>
+                      <span className="font-mono text-sm text-foreground font-medium">{currentDestination.difficulty}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="font-mono text-sm text-muted-foreground">Best Time</span>
-                      <span className="font-mono text-sm text-foreground font-medium">{destination.bestTime}</span>
+                      <span className="font-mono text-sm text-foreground font-medium">{currentDestination.bestTime}</span>
                     </div>
                   </div>
 
@@ -232,7 +273,7 @@ export default function DestinationDetailPage({ params }: Props) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {destinations
-              .filter((d) => d.id !== destination.id)
+              .filter((d) => d.id !== currentDestination.id)
               .slice(0, 3)
               .map((dest) => (
                 <Card key={dest.id} className="overflow-hidden group hover:shadow-xl transition-shadow">
