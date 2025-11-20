@@ -1,3 +1,5 @@
+import type { Metadata } from "next"
+import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -6,21 +8,45 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
-import type { Metadata } from "next"
+import { BreadcrumbSchema } from "@/components/structured-data"
+import { absoluteUrl } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Contact Us - Gladiolus Tours",
   description: "Get in touch with our safari experts. We're here to help plan your perfect African adventure.",
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
-    title: "Contact Us - Gladiolus Tours",
-    description: "Contact our safari planning experts today",
+    title: "Contact Gladiolus Tours | Plan Your Luxury African Safari",
+    description: "Speak with Gladiolus Tours' safari planners to create your bespoke African adventure.",
+    url: absoluteUrl("/contact"),
+    images: [
+      {
+        url: absoluteUrl("/og-image.jpg"),
+        width: 1200,
+        height: 630,
+        alt: "Gladiolus Tours safari consultation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Gladiolus Tours",
+    description: "Connect with our safari experts to tailor your East African journey.",
+    images: [absoluteUrl("/og-image.jpg")],
   },
 }
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: absoluteUrl("/") },
+          { name: "Contact", url: absoluteUrl("/contact") },
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}
