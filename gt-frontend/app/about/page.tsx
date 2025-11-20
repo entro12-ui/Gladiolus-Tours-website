@@ -1,17 +1,37 @@
+import type { Metadata } from "next"
+import Image from "next/image"
+import { Award, Heart, Globe, Shield } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
-import { Award, Heart, Globe, Shield } from "lucide-react"
-import Image from "next/image"
-import type { Metadata } from "next"
+import { BreadcrumbSchema } from "@/components/structured-data"
+import { absoluteUrl } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "About Us - Gladiolus Tours",
   description:
     "Learn about Gladiolus Tours, our mission, values, and the passionate team behind your African safari adventures.",
+  alternates: {
+    canonical: "/about",
+  },
   openGraph: {
-    title: "About Us - Gladiolus Tours",
-    description: "Learn about our mission to create unforgettable African safari experiences",
+    title: "About Gladiolus Tours | Trusted African Safari Experts",
+    description: "Meet the Gladiolus Tours team delivering authentic African safari experiences across Tanzania and Kenya.",
+    url: absoluteUrl("/about"),
+    images: [
+      {
+        url: absoluteUrl("/og-image.jpg"),
+        width: 1200,
+        height: 630,
+        alt: "Gladiolus Tours team on safari",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Gladiolus Tours",
+    description: "Discover the mission, values, and experts behind Gladiolus Tours' luxury African safaris.",
+    images: [absoluteUrl("/og-image.jpg")],
   },
 }
 
@@ -72,6 +92,12 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: absoluteUrl("/") },
+          { name: "About", url: absoluteUrl("/about") },
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}
