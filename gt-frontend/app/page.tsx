@@ -1,11 +1,44 @@
+import type { Metadata } from "next"
+import Link from "next/link"
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { OrganizationSchema } from "@/components/structured-data"
+import { BreadcrumbSchema, OrganizationSchema } from "@/components/structured-data"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, MapPin, Calendar, Users } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
+import { absoluteUrl } from "@/lib/seo"
+
+export const metadata: Metadata = {
+  title: "Luxury African Safari Tours & Tailor-Made Travel Packages",
+  description:
+    "Plan an unforgettable African safari with Gladiolus Tours. Discover luxury safari packages, expert guides, and tailor-made itineraries across Tanzania and Kenya.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Gladiolus Tours | Luxury African Safari Packages",
+    description:
+      "Experience bespoke African safaris with award-winning guides, luxury lodges, and carefully curated itineraries across East Africa.",
+    url: absoluteUrl(),
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Gladiolus Tours Luxury African Safari",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gladiolus Tours | Luxury African Safari Packages",
+    description:
+      "Book tailor-made luxury safaris with Gladiolus Tours. Premium accommodations, expert guides, and unforgettable wildlife encounters.",
+    images: [absoluteUrl("/og-image.jpg")],
+  },
+}
 
 export default function HomePage() {
   const featuredDestinations = [
@@ -38,6 +71,14 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       <OrganizationSchema />
+      <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: absoluteUrl("/"),
+          },
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -52,9 +93,12 @@ export default function HomePage() {
           />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-serif text-white mb-6 text-balance">Discover the Heart of Africa</h1>
+          <h1 className="text-5xl md:text-7xl font-serif text-white mb-6 text-balance">
+            Luxury African Safaris Crafted by Local Experts
+          </h1>
           <p className="text-xl md:text-2xl font-mono text-white/90 mb-8 leading-relaxed text-pretty">
-            Experience unforgettable safari adventures through pristine wilderness and encounter majestic wildlife
+            Experience tailor-made safari adventures across Tanzania and Kenya with expert guides, premium lodges, and
+            unforgettable wildlife encounters
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg">
