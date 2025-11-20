@@ -2,12 +2,13 @@ import Script from "next/script"
 
 interface StructuredDataProps {
   data: object
+  id?: string
 }
 
-export function StructuredData({ data }: StructuredDataProps) {
+export function StructuredData({ data, id }: StructuredDataProps) {
   return (
     <Script
-      id="structured-data"
+      id={id ?? "structured-data"}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
@@ -19,7 +20,7 @@ export function OrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     name: "Gladiolus Tours",
-    description: "Premier African safari tour operator specializing in Tanzania and Kenya wildlife adventures",
+    description: "Premier African safari tour operator specializing in Tanzania wildlife adventures",
     url: "https://gladiolustours.com",
     logo: "https://gladiolustours.com/logo.png",
     image: "https://gladiolustours.com/og-image.jpg",
@@ -27,19 +28,18 @@ export function OrganizationSchema() {
     email: "info@gladiolustours.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Safari Road",
+      streetAddress: "MV8C+MC, Usa River",
       addressLocality: "Arusha",
       addressCountry: "TZ",
     },
     sameAs: [
-      "https://facebook.com/gladiolustours",
-      "https://instagram.com/gladiolustours",
-      "https://twitter.com/gladiolustours",
+      "https://facebook.com/GladiolusTours",
+      "https://instagram.com/gladiolus_tours",
     ],
     priceRange: "$$-$$$",
   }
 
-  return <StructuredData data={schema} />
+  return <StructuredData id="organization-schema" data={schema} />
 }
 
 interface TourSchemaProps {
@@ -52,6 +52,11 @@ interface TourSchemaProps {
 }
 
 export function TourSchema({ name, description, image, price, duration, location }: TourSchemaProps) {
+  const idSlug = name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "")
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "TouristTrip",
@@ -75,5 +80,51 @@ export function TourSchema({ name, description, image, price, duration, location
     },
   }
 
-  return <StructuredData data={schema} />
+  return <StructuredData id={`tour-schema-${idSlug}`} data={schema} />
+}
+
+interface BreadcrumbSchemaProps {
+  items: { name: string; url: string }[]
+}
+
+export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  }
+
+  return <StructuredData id={`breadcrumb-${items.map((item) => item.url).join("-")}`} data={schema} />
+}
+
+interface FAQSchemaProps {
+  url: string
+  title: string
+  description: string
+  faqs: { question: string; answer: string }[]
+}
+
+export function FAQSchema({ url, title, description, faqs }: FAQSchemaProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    name: title,
+    description,
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+    url,
+  }
+
+  return <StructuredData id="faq-schema" data={schema} />
 }
