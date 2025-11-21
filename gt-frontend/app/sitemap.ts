@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic destination pages
   const destinationPages = destinations.map((destination) => ({
-    url: `${baseUrl}/destinations/${destination.id}`,
+    url: `${baseUrl}/destinations/${destination.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
