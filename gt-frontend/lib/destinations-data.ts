@@ -1,5 +1,6 @@
 export interface Destination {
   id: string
+  slug: string
   title: string
   location: string
   duration: string
@@ -23,6 +24,7 @@ export interface Destination {
 export const destinations: Destination[] = [
   {
     id: "1",
+    slug: "serengeti-national-park",
     title: "Serengeti National Park",
     location: "Tanzania",
     duration: "5 Days",
@@ -88,6 +90,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "2",
+    slug: "masai-mara-reserve",
     title: "Masai Mara Reserve",
     location: "Kenya",
     duration: "7 Days",
@@ -155,6 +158,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "3",
+    slug: "ngorongoro-crater",
     title: "Ngorongoro Crater",
     location: "Tanzania",
     duration: "4 Days",
@@ -207,6 +211,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "4",
+    slug: "tarangire-national-park",
     title: "Tarangire National Park",
     location: "Tanzania",
     duration: "3 Days",
@@ -247,6 +252,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "5",
+    slug: "lake-manyara-national-park",
     title: "Lake Manyara National Park",
     location: "Tanzania",
     duration: "2 Days",
@@ -282,6 +288,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "6",
+    slug: "mount-kilimanjaro-trek",
     title: "Mount Kilimanjaro Trek",
     location: "Tanzania",
     duration: "8 Days",
