@@ -44,6 +44,7 @@ export default function HomePage() {
   const featuredDestinations = [
     {
       id: 1,
+      slug: "serengeti-national-park",
       title: "Serengeti National Park",
       location: "Tanzania",
       duration: "5 Days",
@@ -52,6 +53,7 @@ export default function HomePage() {
     },
     {
       id: 2,
+      slug: "masai-mara-reserve",
       title: "Masai Mara Reserve",
       location: "Kenya",
       duration: "7 Days",
@@ -60,6 +62,7 @@ export default function HomePage() {
     },
     {
       id: 3,
+      slug: "ngorongoro-crater",
       title: "Ngorongoro Crater",
       location: "Tanzania",
       duration: "4 Days",
@@ -153,7 +156,7 @@ export default function HomePage() {
                     <div className="text-lg font-serif text-primary">{destination.price}</div>
                   </div>
                   <Button asChild className="w-full bg-primary hover:bg-primary/90">
-                    <Link href={`/destinations/${destination.id}`}>
+                    <Link href={`/destinations/${destination.slug}`}>
                       Learn More <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
