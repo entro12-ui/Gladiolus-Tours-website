@@ -108,7 +108,11 @@ export default function HomePage() {
             unforgettable wildlife encounters
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg shadow-lg shadow-primary/30">
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-3 text-lg font-semibold tracking-wide text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 transition-transform hover:-translate-y-0.5 hover:from-primary-alt/90 hover:to-primary/90"
+            >
               <Link href="/destinations">
                 Explore Safaris <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -117,7 +121,7 @@ export default function HomePage() {
               asChild
               size="lg"
               variant="outline"
-              className="bg-white/10 backdrop-blur-xl border-white/60 text-white hover:bg-white/20 text-lg"
+              className="rounded-full bg-white/15 backdrop-blur-xl border-white/70 text-white hover:bg-white/25 text-lg"
             >
               <Link href="/contact">Plan Your Trip</Link>
             </Button>
@@ -166,7 +170,10 @@ export default function HomePage() {
                     </div>
                     <div className="text-lg font-serif text-primary">{destination.price}</div>
                   </div>
-                  <Button asChild className="w-full bg-primary hover:bg-primary/90 shadow-md shadow-primary/20">
+                  <Button
+                    asChild
+                    className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-md shadow-primary/20 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
+                  >
                     <Link href={`/destinations/${destination.slug}`}>
                       Learn More <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -177,7 +184,12 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline" className="border-primary/40 text-primary hover:bg-primary/10">
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-full border-primary/50 px-8 py-3 text-primary hover:bg-primary/10 hover:text-primary"
+            >
               <Link href="/destinations">View All Destinations</Link>
             </Button>
           </div>
@@ -245,7 +257,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg shadow-lg shadow-secondary/30"
+                className="rounded-full bg-white/90 px-8 py-3 text-lg font-semibold text-primary shadow-lg shadow-white/40 transition hover:bg-white"
               >
                 <Link href="/contact">
                   Get Started <ArrowRight className="ml-2 h-5 w-5" />
