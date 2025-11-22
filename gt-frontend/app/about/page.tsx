@@ -1,10 +1,12 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import Link from "next/link"
 import { Award, Heart, Globe, Shield } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { BreadcrumbSchema } from "@/components/structured-data"
+import { BreadcrumbSchema, StructuredData, OrganizationSchema } from "@/components/structured-data"
 import { absoluteUrl } from "@/lib/seo"
 
 export const metadata: Metadata = {
@@ -90,8 +92,50 @@ export default function AboutPage() {
     },
   ]
 
+  const founder =
+    teamMembers.find((member) => member.role.toLowerCase().includes("founder")) ?? teamMembers[0] ?? null
+
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About Gladiolus Tours",
+    description:
+      "Learn about Gladiolus Tours, our mission, values, and the passionate team behind your African safari adventures.",
+    url: absoluteUrl("/about"),
+    mainEntity: {
+      "@type": "Organization",
+      name: "Gladiolus Tours",
+      description:
+        "Premier African safari tour operator specializing in tailor-made experiences across Tanzania and Kenya.",
+      foundingDate: "2010",
+      founder: founder
+        ? {
+            "@type": "Person",
+            name: founder.name,
+            jobTitle: founder.role,
+            description: founder.bio,
+            image: absoluteUrl(founder.image ?? "/placeholder.svg"),
+          }
+        : undefined,
+      employee: teamMembers.map((member) => ({
+        "@type": "Person",
+        name: member.name,
+        jobTitle: member.role,
+        description: member.bio,
+        image: absoluteUrl(member.image ?? "/placeholder.svg"),
+      })),
+      sameAs: [
+        "https://facebook.com/GladiolusTours",
+        "https://instagram.com/gladiolus_tours",
+      ],
+    },
+    mainEntityOfPage: absoluteUrl("/about"),
+  }
+
   return (
     <div className="min-h-screen">
+      <OrganizationSchema />
+      <StructuredData id="about-page-schema" data={aboutPageSchema} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: absoluteUrl("/") },
@@ -229,6 +273,18 @@ export default function AboutPage() {
               <div className="text-5xl font-serif mb-2">98%</div>
               <div className="font-mono text-sm text-primary-foreground/80">Satisfaction Rate</div>
             </div>
+          </div>
+          <div className="mt-12 flex flex-col items-center gap-4 text-center">
+            <p className="text-lg font-mono text-primary-foreground/85 max-w-2xl">
+              Ready to craft your dream safari with the team that knows Africa best?
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full bg-white/90 px-8 py-3 text-lg font-semibold text-primary shadow-lg shadow-white/40 transition hover:bg-white"
+            >
+              <Link href="/contact">Speak with Our Experts</Link>
+            </Button>
           </div>
         </div>
       </section>
