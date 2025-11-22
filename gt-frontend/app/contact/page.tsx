@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { BreadcrumbSchema } from "@/components/structured-data"
+import { BreadcrumbSchema, StructuredData, OrganizationSchema } from "@/components/structured-data"
 import { absoluteUrl } from "@/lib/seo"
 
 export const metadata: Metadata = {
@@ -39,8 +39,47 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact Gladiolus Tours",
+    description: "Get in touch with Gladiolus Tours' safari experts to plan your African adventure.",
+    url: absoluteUrl("/contact"),
+    mainEntity: {
+      "@type": "Organization",
+      name: "Gladiolus Tours",
+      url: absoluteUrl("/"),
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+255-123-456-789",
+          contactType: "sales",
+          areaServed: "TZ",
+          availableLanguage: ["en", "sw"],
+        },
+        {
+          "@type": "ContactPoint",
+          telephone: "+255-987-654-321",
+          contactType: "customer support",
+          areaServed: "TZ",
+          availableLanguage: ["en", "sw"],
+        },
+      ],
+      email: "info@gladiolustours.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "123 Safari Road",
+        addressLocality: "Arusha",
+        addressCountry: "TZ",
+      },
+    },
+    mainEntityOfPage: absoluteUrl("/contact"),
+  }
+
   return (
     <div className="min-h-screen">
+      <OrganizationSchema />
+      <StructuredData id="contact-page-schema" data={contactPageSchema} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: absoluteUrl("/") },
@@ -153,7 +192,11 @@ export default function ContactPage() {
                       <Textarea id="message" placeholder="Tell us about your dream safari..." rows={6} required />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-3 text-base font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 hover:from-primary-alt/90 hover:to-primary/90"
+                    >
                       Send Inquiry
                     </Button>
 
