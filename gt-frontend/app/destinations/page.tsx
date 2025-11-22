@@ -145,7 +145,10 @@ export default function DestinationsPage() {
                     </div>
                     <div className="text-lg font-serif text-primary">{destination.price}</div>
                   </div>
-                  <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                  <Button
+                    asChild
+                    className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-md shadow-primary/20 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
+                  >
                     <Link href={`/destinations/${destination.slug}`}>
                       View Details <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -165,7 +168,11 @@ export default function DestinationsPage() {
           <p className="text-lg font-mono mb-8 max-w-2xl mx-auto leading-relaxed text-primary-foreground/90">
             Let our safari experts help you design a custom itinerary that matches your interests and budget
           </p>
-          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-3 text-lg font-semibold text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 hover:from-primary-alt/90 hover:to-primary/90"
+          >
             <Link href="/contact">Contact Our Experts</Link>
           </Button>
         </div>

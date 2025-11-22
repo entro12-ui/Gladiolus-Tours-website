@@ -247,12 +247,21 @@ export default async function DestinationDetailPage({ params }: Props) {
                   <Separator />
 
                   <div className="space-y-3">
-                    <Button asChild className="w-full bg-primary hover:bg-primary/90" size="lg">
+                    <Button
+                      asChild
+                      size="lg"
+                      className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-3 text-base font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 hover:from-primary-alt/90 hover:to-primary/90"
+                    >
                       <Link href="/contact">
                         Book This Safari <ArrowRight className="ml-2 h-5 w-5" />
                       </Link>
                     </Button>
-                    <Button asChild variant="outline" className="w-full bg-transparent" size="lg">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full rounded-full border-primary/40 bg-white/60 py-3 text-base font-semibold text-primary hover:bg-white"
+                      size="lg"
+                    >
                       <Link href="/contact">Request Custom Quote</Link>
                     </Button>
                   </div>
@@ -297,7 +306,10 @@ export default async function DestinationDetailPage({ params }: Props) {
                       <span className="font-mono text-sm text-muted-foreground">{dest.duration}</span>
                       <span className="font-serif text-primary">{dest.price}</span>
                     </div>
-                    <Button asChild variant="outline" className="w-full bg-transparent">
+                    <Button
+                      asChild
+                      className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-md shadow-primary/20 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
+                    >
                       <Link href={`/destinations/${dest.slug}`}>View Details</Link>
                     </Button>
                   </CardContent>
