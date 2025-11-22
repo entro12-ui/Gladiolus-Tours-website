@@ -50,13 +50,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="text-primary-foreground/80 hover:text-secondary transition-colors">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-primary-foreground/80 hover:text-secondary transition-colors">
-                  Blog
+                <Link href="/contact" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>
