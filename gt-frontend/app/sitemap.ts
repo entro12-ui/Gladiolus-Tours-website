@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://gladiolustours.com"
 
   // Static pages
-  const staticPages = ["", "/about", "/destinations", "/accommodation", "/gallery", "/blog", "/contact", "/faq"].map(
+  const staticPages = ["", "/about", "/destinations", "/accommodation", "/gallery", "/contact", "/faq"].map(
     (route) => ({
       url: `${baseUrl}${route}`,
       lastModified: new Date(),
