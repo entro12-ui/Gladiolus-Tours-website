@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import Image from "next/image"
 import { MapPin, Star, Wifi, Coffee } from "lucide-react"
 import { Navigation } from "@/components/navigation"
@@ -221,8 +222,12 @@ export default function AccommodationPage() {
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-serif text-primary">{accommodation.price}</div>
-                    <Button size="sm" className="bg-primary hover:bg-primary/90">
-                      View Details
+                    <Button
+                      asChild
+                      size="sm"
+                      className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-5 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-md shadow-primary/20 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
+                    >
+                      <Link href="/contact">View Details</Link>
                     </Button>
                   </div>
                 </CardContent>
