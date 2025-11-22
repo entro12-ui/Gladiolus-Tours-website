@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        url: "/favicon.ico",
+      },
+      {
         url: "/icon-light-32x32.png",
         media: "(prefers-color-scheme: light)",
       },
@@ -88,7 +91,6 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
     yandex: "your-yandex-verification-code",
   },
-    generator: 'v0.app'
 }
 
 export default function RootLayout({
