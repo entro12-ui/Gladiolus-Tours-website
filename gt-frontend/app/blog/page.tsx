@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BreadcrumbSchema, StructuredData } from "@/components/structured-data"
 import { absoluteUrl } from "@/lib/seo"
+import { blogPosts } from "@/lib/blog-posts"
 
 export const metadata: Metadata = {
   title: "Safari Blog & Travel Tips - Gladiolus Tours",
@@ -38,75 +39,11 @@ export const metadata: Metadata = {
   },
 }
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "The Ultimate Guide to the Great Migration",
-    excerpt:
-      "Everything you need to know about witnessing one of nature's greatest spectacles - the wildebeest migration across the Serengeti and Masai Mara.",
-    image: "/placeholder.svg?height=600&width=800",
-    category: "Wildlife",
-    date: "2024-11-15",
-    readTime: "8 min read",
-    author: "David Kimani",
-  },
-  {
-    id: 2,
-    title: "Best Photography Tips for Safari",
-    excerpt:
-      "Capture stunning wildlife photos with these expert tips on camera settings, timing, and composition for African safari photography.",
-    image: "/placeholder.svg?height=600&width=800",
-    category: "Photography",
-    date: "2024-11-10",
-    readTime: "6 min read",
-    author: "Sarah Mwangi",
-  },
-  {
-    id: 3,
-    title: "Choosing Between Tanzania and Kenya",
-    excerpt:
-      "A comprehensive comparison of safari destinations to help you decide which country is best for your African adventure.",
-    image: "/placeholder.svg?height=600&width=800",
-    category: "Destinations",
-    date: "2024-11-05",
-    readTime: "10 min read",
-    author: "James Omondi",
-  },
-  {
-    id: 4,
-    title: "Packing Essentials for Your Safari",
-    excerpt:
-      "The definitive packing list for safari travelers, including clothing, gear, and photography equipment recommendations.",
-    image: "/placeholder.svg?height=600&width=800",
-    category: "Travel Tips",
-    date: "2024-10-28",
-    readTime: "5 min read",
-    author: "Grace Njeri",
-  },
-  {
-    id: 5,
-    title: "Understanding Big Five Behavior",
-    excerpt:
-      "Learn about the habits, habitats, and behaviors of Africa's Big Five to enhance your safari experience and wildlife photography.",
-    image: "/placeholder.svg?height=600&width=800",
-    category: "Wildlife",
-    date: "2024-10-20",
-    readTime: "12 min read",
-    author: "David Kimani",
-  },
-  {
-    id: 6,
-    title: "Sustainable Safari: Our Conservation Efforts",
-    excerpt: "How Gladiolus Tours contributes to wildlife conservation and supports local communities in Tanzania.",
-    image: "/placeholder.svg?height=600&width=800",
-    category: "Conservation",
-    date: "2024-10-15",
-    readTime: "7 min read",
-    author: "Sarah Mwangi",
-  },
-]
-
 export default function BlogPage() {
+  if (!blogPosts.length) {
+    return null
+  }
+
   const blogStructuredData = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -180,8 +117,11 @@ export default function BlogPage() {
                     <span>{blogPosts[0].readTime}</span>
                   </div>
                 </div>
-                <Button asChild className="w-fit bg-primary hover:bg-primary/90">
-                  <Link href={`/blog/${blogPosts[0].id}`}>
+                <Button
+                  asChild
+                  className="w-fit rounded-full bg-gradient-to-r from-primary-alt to-primary px-6 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-md shadow-primary/20 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
+                >
+                  <Link href={`/blog/${blogPosts[0].slug}`}>
                     Read Article <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -223,8 +163,11 @@ export default function BlogPage() {
                       <span>{post.readTime}</span>
                     </div>
                   </div>
-                  <Button asChild variant="outline" className="w-full bg-transparent">
-                    <Link href={`/blog/${post.id}`}>Read More</Link>
+                  <Button
+                    asChild
+                    className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-md shadow-primary/20 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
+                  >
+                    <Link href={`/blog/${post.slug}`}>Read More</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -240,7 +183,11 @@ export default function BlogPage() {
           <p className="text-lg font-mono mb-8 max-w-2xl mx-auto leading-relaxed text-primary-foreground/90">
             Subscribe to our newsletter for exclusive safari advice, special offers, and wildlife updates
           </p>
-          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-3 text-lg font-semibold text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 hover:from-primary-alt/90 hover:to-primary/90"
+          >
             <Link href="#newsletter">Subscribe Now</Link>
           </Button>
         </div>
