@@ -63,7 +63,11 @@ export default function GalleryPage() {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 variant={selectedCategory === category ? "default" : "outline"}
-                className={selectedCategory === category ? "bg-primary hover:bg-primary/90" : ""}
+                className={
+                  selectedCategory === category
+                    ? "rounded-full bg-gradient-to-r from-primary-alt to-primary px-6 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-md shadow-primary/20 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
+                    : "rounded-full border-primary/40 px-6 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary hover:bg-primary/10"
+                }
               >
                 {category}
               </Button>
@@ -140,7 +144,11 @@ export default function GalleryPage() {
           <p className="text-lg font-mono mb-8 max-w-2xl mx-auto leading-relaxed text-primary-foreground/90">
             Join us on an unforgettable adventure and capture moments like these
           </p>
-          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-3 text-lg font-semibold text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 hover:from-primary-alt/90 hover:to-primary/90"
+          >
             <a href="/destinations">Explore Our Safaris</a>
           </Button>
         </div>
