@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "destinations": "Destinos",
+    "accommodation": "Alojamiento",
+    "gallery": "Galería",
+    "contact": "Contacto",
+    "faq": "Preguntas Frecuentes",
+    "bookNow": "Reservar un Safari"
+  },
+  "home": {
+    "heroBadge": "Safaris de Lujo a Medida",
+    "heroTitle": "Safaris Africanos de Lujo Diseñados por Expertos Locales",
+    "heroSubtitle": "Vive aventuras de safari a medida en Tanzania y Kenia con guías expertos, lodges premium y encuentros inolvidables con la vida salvaje",
+    "exploreSafaris": "Explorar Safaris",
+    "planYourTrip": "Planifica Tu Viaje",
+    "featuredDestinations": "Destinos Destacados",
+    "featuredDestinationsDesc": "Explora nuestra selección de destinos de safari africanos más espectaculares",
+    "whyChooseUs": "Por Qué Elegir Gladiolus Tours",
+    "whyChooseUsDesc": "Creamos experiencias de safari excepcionales que te conectan con las maravillas naturales de África",
+    "expertGuides": "Guías Expertos",
+    "expertGuidesDesc": "Nuestros guías experimentados aportan décadas de conocimientos sobre vida salvaje y pasión por la conservación",
+    "premiumLocations": "Ubicaciones Premium",
+    "premiumLocationsDesc": "Acceso a áreas de safari exclusivas y lodges de lujo en el corazón de la naturaleza salvaje",
+    "tailoredExperiences": "Experiencias a Medida",
+    "tailoredExperiencesDesc": "Cada safari se personaliza según tus intereses, ritmo y estilo de aventura",
+    "readyForAdventure": "¿Listo para Tu Aventura Africana?",
+    "readyForAdventureDesc": "Contáctanos hoy y empecemos a planificar tu experiencia de safari soñada",
+    "getStarted": "Comenzar",
+    "viewAllDestinations": "Ver Todos los Destinos",
+    "learnMore": "Saber Más"
+  },
+  "about": {
+    "title": "Acerca de",
+    "ourStory": "Nuestra Historia",
+    "mission": "Crear Experiencias de Safari Inolvidables",
+    "values": "Nuestros Valores",
+    "team": "Conoce Nuestro Equipo",
+    "stats": "Años de Experiencia"
+  },
+  "destinations": {
+    "title": "Destinos de Safari",
+    "subtitle": "Explora nuestra selección de destinos de safari africanos"
+  },
+  "accommodation": {
+    "title": "Alojamiento",
+    "subtitle": "Elige entre lujosos lodges y campamentos de tienda auténticos"
+  },
+  "gallery": {
+    "title": "Galería",
+    "subtitle": "Momentos impresionantes de nuestros safaris"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Ponte en contacto con nuestros expertos en safari"
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados.",
+    "quickLinks": "Enlaces Rápidos",
+    "contactInfo": "Contáctanos"
+  }
+}
