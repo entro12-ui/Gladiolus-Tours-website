@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "destinations": "Destinations",
+    "accommodation": "Accommodation",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "bookNow": "Book a Safari"
+  },
+  "home": {
+    "heroBadge": "Tailor-made Luxury Safaris",
+    "heroTitle": "Luxury African Safaris Crafted by Local Experts",
+    "heroSubtitle": "Experience tailor-made safari adventures across Tanzania and Kenya with expert guides, premium lodges, and unforgettable wildlife encounters",
+    "exploreSafaris": "Explore Safaris",
+    "planYourTrip": "Plan Your Trip",
+    "featuredDestinations": "Featured Destinations",
+    "featuredDestinationsDesc": "Explore our handpicked selection of Africa's most spectacular safari destinations",
+    "whyChooseUs": "Why Choose Gladiolus Tours",
+    "whyChooseUsDesc": "We create exceptional safari experiences that connect you with Africa's natural wonders",
+    "expertGuides": "Expert Guides",
+    "expertGuidesDesc": "Our experienced guides bring decades of wildlife knowledge and passion for conservation",
+    "premiumLocations": "Premium Locations",
+    "premiumLocationsDesc": "Access to exclusive safari areas and luxury lodges in the heart of the wilderness",
+    "tailoredExperiences": "Tailored Experiences",
+    "tailoredExperiencesDesc": "Every safari is customized to match your interests, pace, and adventure style",
+    "readyForAdventure": "Ready for Your African Adventure?",
+    "readyForAdventureDesc": "Contact us today and let's start planning your dream safari experience",
+    "getStarted": "Get Started",
+    "viewAllDestinations": "View All Destinations",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "About Us",
+    "ourStory": "Our Story",
+    "mission": "Creating Unforgettable Safari Experiences",
+    "values": "Our Values",
+    "team": "Meet Our Team",
+    "stats": "Years Experience"
+  },
+  "destinations": {
+    "title": "Safari Destinations",
+    "subtitle": "Explore our handpicked selection of African safari destinations"
+  },
+  "accommodation": {
+    "title": "Accommodation",
+    "subtitle": "Choose from luxury lodges to authentic tented camps"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Stunning moments from our safaris"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our safari experts"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Us"
+  }
+}
