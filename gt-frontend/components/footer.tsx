@@ -1,9 +1,11 @@
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { useTranslations } from "next-intl"
 
 export function Footer() {
+  const t = useTranslations()
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -26,11 +28,11 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-mono text-sm font-semibold mb-4 uppercase tracking-wider">Quick Links</h4>
+            <h4 className="font-mono text-sm font-semibold mb-4 uppercase tracking-wider">{t("footer.quickLinks")}</h4>
             <ul className="space-y-3 font-mono text-sm">
               <li>
                 <Link href="/about" className="text-primary-foreground/80 hover:text-secondary transition-colors">
-                  About Us
+                  {t("nav.about")}
                 </Link>
               </li>
               <li>
@@ -38,7 +40,7 @@ export function Footer() {
                   href="/destinations"
                   className="text-primary-foreground/80 hover:text-secondary transition-colors"
                 >
-                  Destinations
+                  {t("nav.destinations")}
                 </Link>
               </li>
               <li>
@@ -46,12 +48,12 @@ export function Footer() {
                   href="/accommodation"
                   className="text-primary-foreground/80 hover:text-secondary transition-colors"
                 >
-                  Accommodation
+                  {t("nav.accommodation")}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-primary-foreground/80 hover:text-secondary transition-colors">
-                  Contact
+                  {t("nav.contact")}
                 </Link>
               </li>
             </ul>
@@ -59,7 +61,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-mono text-sm font-semibold mb-4 uppercase tracking-wider">Contact Us</h4>
+            <h4 className="font-mono text-sm font-semibold mb-4 uppercase tracking-wider">{t("footer.contactInfo")}</h4>
             <ul className="space-y-3 font-mono text-sm">
               <li className="flex items-start gap-2 text-primary-foreground/80">
                 <Phone className="h-5 w-5 flex-shrink-0 mt-0.5" />
@@ -97,7 +99,7 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-mono text-sm text-primary-foreground/60">
-            &copy; {new Date().getFullYear()} Gladiolus Tours. All rights reserved.
+            &copy; {new Date().getFullYear()} Gladiolus Tours. {t("footer.copyright")}
           </p>
           <div className="flex gap-6 font-mono text-sm">
             {/*<Link href="/faq" className="text-primary-foreground/60 hover:text-secondary transition-colors">
