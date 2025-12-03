@@ -111,13 +111,19 @@ export default async function DestinationDetailPage({ params }: Props) {
           />
         </div>
         <div className="relative z-10 w-full bg-gradient-to-t from-black/80 to-transparent">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="flex items-center gap-2 text-white/90 mb-4">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-4">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1 font-mono text-[0.7rem] tracking-[0.35em] uppercase text-white/80">
+              <span>Signature Safari</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/90">
               <MapPin className="h-5 w-5" />
               <span className="font-mono text-sm">{currentDestination.location}</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 text-balance">{currentDestination.title}</h1>
-            <div className="flex flex-wrap gap-4 text-white/90 font-mono text-sm">
+            <h1 className="text-5xl md:text-6xl font-serif text-white text-balance">{currentDestination.title}</h1>
+            <p className="max-w-3xl font-mono text-base text-white/90 leading-relaxed line-clamp-3">
+              {currentDestination.description}
+            </p>
+            <div className="mt-4 flex flex-wrap gap-4 text-white/90 font-mono text-sm">
               <div className="flex items-center gap-2">
                 <Calendar className="h-5 w-5" />
                 <span>{currentDestination.duration}</span>
@@ -145,13 +151,13 @@ export default async function DestinationDetailPage({ params }: Props) {
             {/* Left Column - Details */}
             <div className="lg:col-span-2 space-y-12">
               {/* Overview */}
-              <div>
-                <h2 className="text-3xl font-serif text-foreground mb-4">Overview</h2>
-                <p className="font-mono text-muted-foreground leading-relaxed">{currentDestination.description}</p>
+              <div className="rounded-3xl border border-border/40 bg-card/80 backdrop-blur p-6 md:p-8 space-y-4">
+                <h2 className="text-3xl font-serif text-foreground">Overview</h2>
+                <p className="font-mono text-sm text-muted-foreground leading-relaxed">{currentDestination.description}</p>
               </div>
 
               {/* Highlights */}
-              <div>
+              <div className="rounded-3xl border border-border/40 bg-card/80 backdrop-blur p-6 md:p-8 space-y-4">
                 <h2 className="text-3xl font-serif text-foreground mb-4">Highlights</h2>
                 <ul className="space-y-3">
                   {currentDestination.highlights.map((highlight, index) => (
@@ -164,8 +170,8 @@ export default async function DestinationDetailPage({ params }: Props) {
               </div>
 
               {/* Itinerary */}
-              <div>
-                <h2 className="text-3xl font-serif text-foreground mb-6">Detailed Itinerary</h2>
+              <div className="rounded-3xl border border-border/40 bg-card/80 backdrop-blur p-6 md:p-8 space-y-6">
+                <h2 className="text-3xl font-serif text-foreground">Detailed Itinerary</h2>
                 <div className="space-y-6">
                   {currentDestination.itinerary.map((day, index) => (
                     <Card key={index}>
@@ -189,7 +195,7 @@ export default async function DestinationDetailPage({ params }: Props) {
 
               {/* Included & Excluded */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
+                <div className="rounded-3xl border border-border/40 bg-card/80 backdrop-blur p-6 md:p-8">
                   <h3 className="text-2xl font-serif text-foreground mb-4">What's Included</h3>
                   <ul className="space-y-2">
                     {currentDestination.included.map((item, index) => (
@@ -200,7 +206,7 @@ export default async function DestinationDetailPage({ params }: Props) {
                     ))}
                   </ul>
                 </div>
-                <div>
+                <div className="rounded-3xl border border-border/40 bg-card/80 backdrop-blur p-6 md:px-8">
                   <h3 className="text-2xl font-serif text-foreground mb-4">What's Not Included</h3>
                   <ul className="space-y-2">
                     {currentDestination.excluded.map((item, index) => (
@@ -216,11 +222,11 @@ export default async function DestinationDetailPage({ params }: Props) {
 
             {/* Right Column - Booking Card */}
             <div className="lg:col-span-1">
-              <Card className="sticky top-24 border-2">
+              <Card className="sticky top-24 rounded-3xl border border-border/60 bg-card/90 backdrop-blur-xl shadow-xl shadow-primary/10">
                 <CardContent className="p-6 space-y-6">
-                  <div>
-                    <div className="text-sm font-mono text-muted-foreground mb-2">Price per person</div>
-                    <div className="text-4xl font-serif text-primary">{currentDestination.price}</div>
+                  <div className="space-y-2">
+                    <p className="font-mono text-[0.7rem] uppercase tracking-[0.3em] text-muted-foreground">Plan your safari</p>
+                    <h2 className="text-xl font-serif text-foreground">Talk to a Gladiolus expert</h2>
                   </div>
 
                   <Separator />
@@ -291,7 +297,10 @@ export default async function DestinationDetailPage({ params }: Props) {
               .filter((d) => d.slug !== currentDestination.slug)
               .slice(0, 3)
               .map((dest) => (
-                <Card key={dest.id} className="overflow-hidden group hover:shadow-xl transition-shadow">
+                <Card
+                  key={dest.id}
+                  className="overflow-hidden group border border-border/40 bg-card/80 backdrop-blur rounded-3xl hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                >
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={dest.image || "/placeholder.svg"}
@@ -299,12 +308,16 @@ export default async function DestinationDetailPage({ params }: Props) {
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-300"
                     />
+                    <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/60 to-transparent" />
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-serif text-foreground mb-2">{dest.title}</h3>
-                    <div className="flex items-center justify-between mb-4">
+                  <CardContent className="p-6 space-y-2">
+                    <div className="flex items-center gap-2 text-xs font-mono text-muted-foreground">
+                      <MapPin className="h-3 w-3" />
+                      <span>{dest.location}</span>
+                    </div>
+                    <h3 className="text-xl font-serif text-foreground">{dest.title}</h3>
+                    <div className="flex items-center justify-between mt-2 mb-4">
                       <span className="font-mono text-sm text-muted-foreground">{dest.duration}</span>
-                      <span className="font-serif text-primary">{dest.price}</span>
                     </div>
                     <Button
                       asChild
