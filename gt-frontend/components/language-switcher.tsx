@@ -1,35 +1,74 @@
 "use client"
 
-import { useState } from "react"
+import { useParams } from "next/navigation"
+import { useRouter, usePathname } from "@/i18n/routing"
+import { useTransition, useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Globe } from "lucide-react"
-import { languageNames, type Locale } from "@/lib/i18n"
+
+const locales = [
+  { code: "en", name: "English" },
+  { code: "fr", name: "Français" },
+  { code: "es", name: "Español" },
+] as const
 
 export function LanguageSwitcher() {
-  const [currentLocale, setCurrentLocale] = useState<Locale>("en")
+  const router = useRouter()
+  const pathname = usePathname()
+  const params = useParams()
+  const [isPending, startTransition] = useTransition()
+  const [mounted, setMounted] = useState(false)
 
-  const handleLanguageChange = (locale: Locale) => {
-    setCurrentLocale(locale)
-    // In a production app, this would update the URL and reload with the new locale
-    // For now, it just updates the state
+  const currentLocale = (params.locale as string) || "en"
+
+  // Handle hydration
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const handleLanguageChange = (locale: string) => {
+    // Save to localStorage for persistence
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('preferred-language', locale)
+    }
+
+    startTransition(() => {
+      router.replace(pathname, { locale })
+    })
+  }
+
+  const currentLocaleName = locales.find((l) => l.code === currentLocale)?.name || "English"
+
+  // Don't render until mounted to avoid hydration mismatch
+  if (!mounted) {
+    return (
+      <Button variant="ghost" size="sm" className="gap-2">
+        <Globe className="h-4 w-4" />
+        <span className="hidden sm:inline font-mono text-xs">Loading...</span>
+      </Button>
+    )
   }
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-2">
+        <Button variant="ghost" size="sm" className="gap-2" disabled={isPending}>
           <Globe className="h-4 w-4" />
-          <span className="hidden sm:inline font-mono text-xs">{languageNames[currentLocale]}</span>
+          <span className="hidden sm:inline font-mono text-xs">{currentLocaleName}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => handleLanguageChange("en")} className="font-mono text-sm">
-          English
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => handleLanguageChange("sw")} className="font-mono text-sm">
-          Kiswahili
-        </DropdownMenuItem>
+        {locales.map((locale) => (
+          <DropdownMenuItem
+            key={locale.code}
+            onClick={() => handleLanguageChange(locale.code)}
+            className="font-mono text-sm"
+            disabled={currentLocale === locale.code}
+          >
+            {locale.name}
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   )
