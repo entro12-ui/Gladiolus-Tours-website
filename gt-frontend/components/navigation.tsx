@@ -1,21 +1,23 @@
 "use client"
 
-import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { Link } from "@/i18n/routing"
 import { Button } from "@/components/ui/button"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { useTranslations } from "next-intl"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const t = useTranslations()
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/destinations", label: "Destinations" },
-    { href: "/accommodation", label: "Accommodation" },
-    { href: "/gallery", label: "Gallery" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: t("nav.home") },
+    { href: "/about", label: t("nav.about") },
+    { href: "/destinations", label: t("nav.destinations") },
+    { href: "/accommodation", label: t("nav.accommodation") },
+    { href: "/gallery", label: t("nav.gallery") },
+    { href: "/contact", label: t("nav.contact") },
   ]
 
   return (
@@ -45,7 +47,7 @@ export function Navigation() {
               asChild
               className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 transition-transform hover:-translate-y-0.5 hover:from-primary-alt/90 hover:to-primary/90"
             >
-              <Link href="/contact">Book a Safari</Link>
+              <Link href="/contact">{t("nav.bookNow")}</Link>
             </Button>
           </div>
 
@@ -81,7 +83,7 @@ export function Navigation() {
                 className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 hover:from-primary-alt/90 hover:to-primary/90"
               >
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  Book a Safari
+                  {t("nav.bookNow")}
                 </Link>
               </Button>
             </div>
