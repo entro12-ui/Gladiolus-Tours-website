@@ -51,7 +51,6 @@ export default function HomePage() {
       title: "Serengeti National Park",
       location: "Tanzania",
       duration: "5 Days",
-      price: "From $2,500",
       image: "/serengeti-safari-landscape-with-wildlife.jpg",
     },
     {
@@ -60,7 +59,6 @@ export default function HomePage() {
       title: "Masai Mara Reserve",
       location: "Kenya",
       duration: "7 Days",
-      price: "From $3,200",
       image: "/masai-mara-wildlife-safari-sunset.jpg",
     },
     {
@@ -69,7 +67,6 @@ export default function HomePage() {
       title: "Ngorongoro Crater",
       location: "Tanzania",
       duration: "4 Days",
-      price: "From $2,000",
       image: "/ngorongoro-crater-landscape-elephants.jpg",
     },
   ]
@@ -293,12 +290,11 @@ export default function HomePage() {
                     <span>{destination.location}</span>
                   </div>
                   <h3 className="text-2xl font-serif text-foreground mb-3">{destination.title}</h3>
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center mb-4">
                     <div className="flex items-center gap-2 text-sm font-mono text-muted-foreground">
                       <Calendar className="h-4 w-4" />
                       <span>{destination.duration}</span>
                     </div>
-                    <div className="text-lg font-serif text-primary">{destination.price}</div>
                   </div>
                   <Button
                     asChild
