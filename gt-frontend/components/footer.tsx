@@ -1,121 +1,146 @@
 import { Link } from "@/i18n/routing"
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { useTranslations } from "next-intl"
 
+const quickLinks = [
+  { href: "/about", labelKey: "nav.about" },
+  { href: "/destinations", labelKey: "nav.destinations" },
+  { href: "/accommodation", labelKey: "nav.accommodation" },
+  { href: "/contact", labelKey: "nav.contact" },
+]
+
 export function Footer() {
   const t = useTranslations()
+
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div>
-            <h3 className="text-2xl font-serif mb-4">Gladiolus Tours</h3>
-            <p className="font-mono text-sm text-primary-foreground/80 mb-4 leading-relaxed">
-              Your gateway to unforgettable African safari adventures. Experience the wild like never before.
-            </p>
-            <div className="flex gap-4">
-              <a href="https://web.facebook.com/GladiolusTours" className="hover:text-secondary transition-colors" aria-label="Facebook" target="_blank" rel="noreferrer">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="https://www.instagram.com/gladiolus_tours/" className="hover:text-secondary transition-colors" aria-label="Instagram" target="_blank" rel="noreferrer">
-                <Instagram className="h-5 w-5" />
-              </a>
+    <footer className="relative bg-[#0d1b1e] text-primary-foreground">
+      <div className="absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.08),_transparent_45%),_radial-gradient(circle_at_bottom_right,_rgba(255,158,10,0.2),_transparent_45%)]" />
+
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-10 py-20 space-y-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12">
+          {/* Left column */}
+          <div className="space-y-10">
+            <div className="space-y-6">
+              <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1 font-mono text-xs tracking-[0.3em] uppercase text-white/80">
+                GLADIOLUS TOURS
+              </p>
+              <p className="text-4xl md:text-5xl font-serif leading-tight text-white">
+                Crafted journeys across East Africa's most breathtaking landscapes
+              </p>
+              <p className="font-mono text-sm text-white/70 max-w-2xl">
+                From the endless plains of Serengeti to the dramatic peaks of Kilimanjaro, our team curates soulful safari experiences with meticulous care and local expertise.
+              </p>
+              <div className="flex gap-4">
+                <a
+                  href="https://web.facebook.com/GladiolusTours"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:border-white hover:bg-white/10"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-5 w-5 transition group-hover:scale-110" />
+                </a>
+                <a
+                  href="https://www.instagram.com/gladiolus_tours/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:border-white hover:bg-white/10"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="h-5 w-5 transition group-hover:scale-110" />
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                <h4 className="text-sm font-semibold uppercase tracking-[0.4em] text-white/70 mb-4">
+                  {t("footer.contactInfo")}
+                </h4>
+                <div className="space-y-4 text-sm font-mono text-white/80">
+                  <div className="flex gap-3">
+                    <Phone className="h-4 w-4 text-secondary mt-1" />
+                    <div className="space-y-1">
+                      <p>+255 (789) 736-559</p>
+                      <p>+255 (753) 858-059</p>
+                      <p>+1 (401) 500-6480</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <Mail className="h-4 w-4 text-secondary mt-1" />
+                    <p>info@gladiolustours.com</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <MapPin className="h-4 w-4 text-secondary mt-1" />
+                    <p>MV8C+MC, Usa River, Arusha, Tanzania</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur">
+                <h4 className="text-sm font-semibold uppercase tracking-[0.4em] text-white/70 mb-4">Newsletter</h4>
+                <p className="text-sm font-mono text-white/70 mb-4">
+                  Receive curated safari stories and early access to expedition releases.
+                </p>
+                <form className="space-y-3">
+                  <Input
+                    type="email"
+                    placeholder="you@example.com"
+                    className="border border-white/20 bg-white/5 text-white placeholder:text-white/50"
+                  />
+                  <Button className="w-full rounded-full bg-secondary px-6 py-5 text-secondary-foreground font-semibold tracking-widest uppercase">
+                    Subscribe
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-mono text-sm font-semibold mb-4 uppercase tracking-wider">{t("footer.quickLinks")}</h4>
-            <ul className="space-y-3 font-mono text-sm">
-              <li>
-                <Link href="/about" className="text-primary-foreground/80 hover:text-secondary transition-colors">
-                  {t("nav.about")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/destinations"
-                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                >
-                  {t("nav.destinations")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/accommodation"
-                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                >
-                  {t("nav.accommodation")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-primary-foreground/80 hover:text-secondary transition-colors">
-                  {t("nav.contact")}
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Right column */}
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 lg:p-10 backdrop-blur space-y-10">
+            <div className="space-y-4">
+              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-white/70">
+                {t("footer.quickLinks")}
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {quickLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-mono text-white/80 transition hover:border-secondary hover:bg-white/10"
+                  >
+                    {t(link.labelKey)}
+                    <span className="text-xs text-white/60 transition group-hover:text-secondary">→</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
 
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-mono text-sm font-semibold mb-4 uppercase tracking-wider">{t("footer.contactInfo")}</h4>
-            <ul className="space-y-3 font-mono text-sm">
-              <li className="flex items-start gap-2 text-primary-foreground/80">
-                <Phone className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span className="flex flex-col">
-                  <span>+255 (789) 736-559</span>
-                  <span>+255 (753) 858-059</span>
-                  <span>+1 (401) 500-6480</span>
-                </span>
-              </li>
-              <li className="flex items-start gap-2 text-primary-foreground/80">
-                <Mail className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span>info@gladiolustours.com</span>
-              </li>
-              <li className="flex items-start gap-2 text-primary-foreground/80">
-                <MapPin className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span>Arusha, Tanzania</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h4 className="font-mono text-sm font-semibold mb-4 uppercase tracking-wider">Newsletter</h4>
-            <p className="font-mono text-sm text-primary-foreground/80 mb-4 leading-relaxed">
-              Subscribe for exclusive safari deals and travel tips.
-            </p>
-            <form className="flex flex-col gap-2">
-              <Input
-                type="email"
-                placeholder="Your email"
-                className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
-              />
-              <Button type="submit" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                Subscribe
-              </Button>
-            </form>
+            <div className="rounded-2xl border border-white/10 bg-[#0c1416] p-6 text-white">
+              <p className="text-xs font-semibold uppercase tracking-[0.5em] text-white/50 mb-3">On Safari Support</p>
+              <h3 className="text-2xl font-serif mb-2">24/7 concierge desk</h3>
+              <p className="text-sm font-mono text-white/70 mb-4">
+                Already traveling with us? Our operations team is on call for any itinerary changes or special requests.
+              </p>
+              <p className="text-lg font-mono">+255 (789) 736-559</p>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-mono text-sm text-primary-foreground/60">
+        <div className="flex flex-col gap-6 border-t border-white/10 pt-8 text-sm font-mono text-white/60 md:flex-row md:items-center md:justify-between">
+          <p>
             &copy; {new Date().getFullYear()} Gladiolus Tours. {t("footer.copyright")}
           </p>
-          <div className="flex gap-6 font-mono text-sm">
-            {/*<Link href="/faq" className="text-primary-foreground/60 hover:text-secondary transition-colors">
+          <nav className="flex flex-wrap gap-6 text-xs uppercase tracking-[0.3em]">
+            <Link href="/faq" className="hover:text-white transition">
               FAQ
             </Link>
-            <Link href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors">
-              Privacy Policy
+            <Link href="/contact" className="hover:text-white transition">
+              {t("nav.contact")}
             </Link>
-            <Link href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors">
-              Terms of Service
-            </Link>*/}
-          </div>
+          </nav>
         </div>
       </div>
     </footer>
