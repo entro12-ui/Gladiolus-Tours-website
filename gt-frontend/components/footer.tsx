@@ -17,10 +17,10 @@ export function Footer() {
               Your gateway to unforgettable African safari adventures. Experience the wild like never before.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-secondary transition-colors" aria-label="Facebook">
+              <a href="https://web.facebook.com/GladiolusTours" className="hover:text-secondary transition-colors" aria-label="Facebook" target="_blank" rel="noreferrer">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-secondary transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/gladiolus_tours/" className="hover:text-secondary transition-colors" aria-label="Instagram" target="_blank" rel="noreferrer">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
