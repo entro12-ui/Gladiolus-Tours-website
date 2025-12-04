@@ -131,6 +131,134 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Safari Circuits */}
+      <section className="py-24 bg-[#0d1b1e] text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 space-y-4">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1 font-mono text-xs tracking-[0.35em] uppercase text-white/80">
+              {t("home.circuitsBadge")}
+            </span>
+            <h2 className="text-4xl md:text-5xl font-serif text-white mb-2 text-balance">
+              {t("home.circuitsTitle")}
+            </h2>
+            <p className="text-lg font-mono text-white/75 max-w-2xl mx-auto leading-relaxed">
+              {t("home.circuitsSubtitle")}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="relative overflow-hidden border border-white/10 bg-white/5 backdrop-blur rounded-3xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
+              <CardContent className="relative p-6 space-y-4">
+                <p className="font-mono text-xs tracking-[0.3em] uppercase text-white/60">
+                  {t("home.circuitNorthernLabel")}
+                </p>
+                <h3 className="text-2xl font-serif text-white mb-1">
+                  {t("home.circuitNorthernTitle")}
+                </h3>
+                <p className="text-sm font-mono text-white/75 leading-relaxed">
+                  {t("home.circuitNorthernDesc")}
+                </p>
+                <div className="mt-4 space-y-1 text-xs font-mono text-white/70">
+                  <p>{t("home.circuitDuration", { value: "8–10" })}</p>
+                  <p>{t("home.circuitRouteNorthern")}</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="relative overflow-hidden border border-white/10 bg-white/5 backdrop-blur rounded-3xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent pointer-events-none" />
+              <CardContent className="relative p-6 space-y-4">
+                <p className="font-mono text-xs tracking-[0.3em] uppercase text-white/60">
+                  {t("home.circuitMigrationLabel")}
+                </p>
+                <h3 className="text-2xl font-serif text-white mb-1">
+                  {t("home.circuitMigrationTitle")}
+                </h3>
+                <p className="text-sm font-mono text-white/75 leading-relaxed">
+                  {t("home.circuitMigrationDesc")}
+                </p>
+                <div className="mt-4 space-y-1 text-xs font-mono text-white/70">
+                  <p>{t("home.circuitDuration", { value: "7–9" })}</p>
+                  <p>{t("home.circuitRouteMigration")}</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="relative overflow-hidden border border-white/10 bg-white/5 backdrop-blur rounded-3xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/25 to-transparent pointer-events-none" />
+              <CardContent className="relative p-6 space-y-4">
+                <p className="font-mono text-xs tracking-[0.3em] uppercase text-white/60">
+                  {t("home.circuitKiliLabel")}
+                </p>
+                <h3 className="text-2xl font-serif text-white mb-1">
+                  {t("home.circuitKiliTitle")}
+                </h3>
+                <p className="text-sm font-mono text-white/75 leading-relaxed">
+                  {t("home.circuitKiliDesc")}
+                </p>
+                <div className="mt-4 space-y-1 text-xs font-mono text-white/70">
+                  <p>{t("home.circuitDuration", { value: "10–12" })}</p>
+                  <p>{t("home.circuitRouteKili")}</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Safari Packages by Travel Style */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-2 text-balance">
+              {t("home.packagesTitle")}
+            </h2>
+            <p className="text-lg font-mono text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              {t("home.packagesSubtitle")}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="border border-border/40 bg-white/80 backdrop-blur rounded-3xl">
+              <CardContent className="p-6 space-y-3">
+                <h3 className="text-xl font-serif text-foreground">{t("home.packageFamilyTitle")}</h3>
+                <p className="font-mono text-sm text-muted-foreground leading-relaxed">
+                  {t("home.packageFamilyDesc")}
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-border/40 bg-white/80 backdrop-blur rounded-3xl">
+              <CardContent className="p-6 space-y-3">
+                <h3 className="text-xl font-serif text-foreground">{t("home.packageHoneymoonTitle")}</h3>
+                <p className="font-mono text-sm text-muted-foreground leading-relaxed">
+                  {t("home.packageHoneymoonDesc")}
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-border/40 bg-white/80 backdrop-blur rounded-3xl">
+              <CardContent className="p-6 space-y-3">
+                <h3 className="text-xl font-serif text-foreground">{t("home.packagePhotoTitle")}</h3>
+                <p className="font-mono text-sm text-muted-foreground leading-relaxed">
+                  {t("home.packagePhotoDesc")}
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-border/40 bg-white/80 backdrop-blur rounded-3xl">
+              <CardContent className="p-6 space-y-3">
+                <h3 className="text-xl font-serif text-foreground">{t("home.packagePrivateTitle")}</h3>
+                <p className="font-mono text-sm text-muted-foreground leading-relaxed">
+                  {t("home.packagePrivateDesc")}
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Destinations */}
       <section className="relative py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background-secondary/40 to-transparent" />
