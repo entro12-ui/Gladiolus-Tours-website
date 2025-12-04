@@ -40,28 +40,22 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: "David Kimani",
-      role: "Founder & Lead Guide",
-      image: "/placeholder.svg?height=400&width=400",
-      bio: "20+ years of safari experience",
+      name: "Sunday Mtui",
+      role: "Co-Founder",
+      image: "/team/sunday-mtui.jpg",
+      bio: "Visionary co-founder with decades of experience crafting bespoke safaris.",
     },
     {
-      name: "Sarah Mwangi",
-      role: "Operations Manager",
-      image: "/placeholder.svg?height=400&width=400",
-      bio: "Expert in logistics and hospitality",
+      name: "Francois Martin",
+      role: "Co-Founder",
+      image: "/team/francois-martin.jpg",
+      bio: "Co-founder focused on strategic partnerships and unique guest experiences.",
     },
     {
-      name: "James Omondi",
-      role: "Wildlife Expert",
-      image: "/placeholder.svg?height=400&width=400",
-      bio: "Conservation biologist and naturalist",
-    },
-    {
-      name: "Grace Njeri",
-      role: "Customer Relations",
-      image: "/placeholder.svg?height=400&width=400",
-      bio: "Dedicated to exceptional service",
+      name: "Claire",
+      role: "Director",
+      image: "/team/claire.jpg",
+      bio: "Director ensuring day-to-day operations deliver premium service.",
     },
   ]
 
@@ -238,10 +232,10 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
             {teamMembers.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="relative h-64 w-64 mx-auto mb-4 rounded-lg overflow-hidden">
+              <div key={index} className="text-center max-w-xs">
+                <div className="relative h-64 w-64 mx-auto mb-4 rounded-2xl overflow-hidden">
                   <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
                 </div>
                 <h3 className="text-xl font-serif text-foreground mb-1">{member.name}</h3>
@@ -249,42 +243,6 @@ export default function AboutPage() {
                 <p className="font-mono text-sm text-muted-foreground">{member.bio}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-5xl font-serif mb-2">14+</div>
-              <div className="font-mono text-sm text-primary-foreground/80">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-5xl font-serif mb-2">5,000+</div>
-              <div className="font-mono text-sm text-primary-foreground/80">Happy Travelers</div>
-            </div>
-            <div>
-              <div className="text-5xl font-serif mb-2">50+</div>
-              <div className="font-mono text-sm text-primary-foreground/80">Safari Routes</div>
-            </div>
-            <div>
-              <div className="text-5xl font-serif mb-2">98%</div>
-              <div className="font-mono text-sm text-primary-foreground/80">Satisfaction Rate</div>
-            </div>
-          </div>
-          <div className="mt-12 flex flex-col items-center gap-4 text-center">
-            <p className="text-lg font-mono text-primary-foreground/85 max-w-2xl">
-              Ready to craft your dream safari with the team that knows Africa best?
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="rounded-full bg-white/90 px-8 py-3 text-lg font-semibold text-primary shadow-lg shadow-white/40 transition hover:bg-white"
-            >
-              <Link href="/contact">Speak with Our Experts</Link>
-            </Button>
           </div>
         </div>
       </section>
