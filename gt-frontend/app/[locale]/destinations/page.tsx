@@ -54,17 +54,21 @@ export default function DestinationsPage() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=800&width=1600"
-            alt="Safari Destinations"
+            src="/african-safari-sunset-with-acacia-trees-and-wildli.jpg"
+            alt="African safari landscape with wildlife"
             fill
             className="object-cover brightness-75"
             priority
           />
         </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 text-balance">Signature African Safari Destinations</h1>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-4">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1 font-mono text-xs tracking-[0.35em] uppercase text-white/80">
+            Safari Destinations
+          </span>
+          <h1 className="text-5xl md:text-6xl font-serif text-white mb-2 text-balance">Signature African Safari Destinations</h1>
           <p className="text-xl font-mono text-white/90 leading-relaxed text-pretty">
-            Browse our curated luxury safaris across Tanzania and Kenya, handpicked for unforgettable wildlife experiences
+            Browse our curated luxury safaris across Tanzania and Kenya, handpicked for unforgettable wildlife experiences.
           </p>
         </div>
       </section>
@@ -117,7 +121,10 @@ export default function DestinationsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {destinations.map((destination) => (
-              <Card key={destination.id} className="overflow-hidden group hover:shadow-xl transition-shadow">
+              <Card
+                key={destination.id}
+                className="overflow-hidden group border border-border/40 bg-card/80 backdrop-blur rounded-3xl hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+              >
                 <div className="relative h-64 overflow-hidden">
                   <Image
                     src={destination.image || "/placeholder.svg"}
@@ -129,16 +136,35 @@ export default function DestinationsPage() {
                     {destination.difficulty}
                   </div>
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-6 space-y-4">
                   <div className="flex items-center gap-2 text-sm font-mono text-muted-foreground mb-2">
                     <MapPin className="h-4 w-4" />
                     <span>{destination.location}</span>
                   </div>
                   <h3 className="text-2xl font-serif text-foreground mb-3">{destination.title}</h3>
-                  <p className="font-mono text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-2">
+                  <p className="font-mono text-sm text-muted-foreground leading-relaxed line-clamp-3">
                     {destination.description}
                   </p>
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex flex-wrap gap-2 text-[0.7rem] font-mono text-muted-foreground">
+                    <span className="inline-flex items-center rounded-full border border-border bg-muted px-3 py-1">
+                      Best time: {destination.bestTime}
+                    </span>
+                    <span className="inline-flex items-center rounded-full border border-border bg-muted px-3 py-1">
+                      Group size: {destination.groupSize}
+                    </span>
+                    <span className="inline-flex items-center rounded-full border border-border bg-muted px-3 py-1">
+                      Difficulty: {destination.difficulty}
+                    </span>
+                  </div>
+                  <ul className="space-y-1 font-mono text-xs text-muted-foreground/90">
+                    {destination.highlights.slice(0, 3).map((highlight) => (
+                      <li key={highlight} className="flex items-start gap-2">
+                        <span className="mt-[2px] text-primary">•</span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center justify-between pt-2">
                     <div className="flex items-center gap-2 text-sm font-mono text-muted-foreground">
                       <Calendar className="h-4 w-4" />
                       <span>{destination.duration}</span>
