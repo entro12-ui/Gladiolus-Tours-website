@@ -75,7 +75,7 @@ export default function ContactPage() {
       email: "info@gladiolustours.com",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "123 Safari Road",
+        streetAddress: "MV8C+MC, Usa River",
         addressLocality: "Arusha",
         addressCountry: "TZ",
       },
@@ -235,14 +235,13 @@ export default function ContactPage() {
                       <div>
                         <p className="font-mono text-sm text-foreground font-medium">Email</p>
                         <p className="font-mono text-sm text-muted-foreground">info@gladiolustours.com</p>
-                        <p className="font-mono text-sm text-muted-foreground">bookings@gladiolustours.com</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="font-mono text-sm text-foreground font-medium">Office</p>
-                        <p className="font-mono text-sm text-muted-foreground">123 Safari Road</p>
+                        <p className="font-mono text-sm text-muted-foreground">MV8C+MC, Usa River</p>
                         <p className="font-mono text-sm text-muted-foreground">Arusha, Tanzania</p>
                       </div>
                     </div>
@@ -250,9 +249,7 @@ export default function ContactPage() {
                       <Clock className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="font-mono text-sm text-foreground font-medium">Hours</p>
-                        <p className="font-mono text-sm text-muted-foreground">Mon-Fri: 8:00 AM - 6:00 PM</p>
-                        <p className="font-mono text-sm text-muted-foreground">Sat: 9:00 AM - 4:00 PM</p>
-                        <p className="font-mono text-sm text-muted-foreground">Sun: Closed</p>
+                        <p className="font-mono text-sm text-muted-foreground">Open 24/7</p>
                       </div>
                     </div>
                   </div>
@@ -306,10 +303,14 @@ export default function ContactPage() {
               Located in the heart of Arusha, Tanzania's safari capital
             </p>
           </div>
-          <div className="relative h-96 bg-muted-foreground/20 rounded-lg overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <p className="font-mono text-muted-foreground">Map integration placeholder</p>
-            </div>
+          <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              title="Gladiolus Tours Location"
+              src="https://www.google.com/maps?q=MV8C%2BMC+Usa+River&output=embed"
+              className="absolute inset-0 h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>
