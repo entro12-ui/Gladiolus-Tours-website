@@ -52,17 +52,24 @@ export default function ContactPage() {
       contactPoint: [
         {
           "@type": "ContactPoint",
-          telephone: "+255-123-456-789",
+          telephone: "+255 (789) 736-559",
           contactType: "sales",
           areaServed: "TZ",
           availableLanguage: ["en", "sw"],
         },
         {
           "@type": "ContactPoint",
-          telephone: "+255-987-654-321",
+          telephone: "+255 (753) 858-059",
           contactType: "customer support",
           areaServed: "TZ",
           availableLanguage: ["en", "sw"],
+        },
+        {
+          "@type": "ContactPoint",
+          telephone: "+1 (401) 500-6480",
+          contactType: "international",
+          areaServed: "US",
+          availableLanguage: ["en"],
         },
       ],
       email: "info@gladiolustours.com",
@@ -218,8 +225,9 @@ export default function ContactPage() {
                       <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="font-mono text-sm text-foreground font-medium">Phone</p>
-                        <p className="font-mono text-sm text-muted-foreground">+255 123 456 789</p>
-                        <p className="font-mono text-sm text-muted-foreground">+255 987 654 321</p>
+                        <p className="font-mono text-sm text-muted-foreground">+255 (789) 736-559</p>
+                        <p className="font-mono text-sm text-muted-foreground">+255 (753) 858-059</p>
+                        <p className="font-mono text-sm text-muted-foreground">+1 (401) 500-6480</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -257,7 +265,7 @@ export default function ContactPage() {
                   <p className="font-mono text-sm text-primary-foreground/90 mb-4 leading-relaxed">
                     24/7 support for travelers on safari
                   </p>
-                  <p className="font-mono text-lg font-medium">+255 700 000 000</p>
+                  <p className="font-mono text-lg font-medium">+255 (789) 736-559</p>
                 </CardContent>
               </Card>
 
