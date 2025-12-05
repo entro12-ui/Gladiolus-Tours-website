@@ -1,12 +1,11 @@
 {
   "nav": {
     "home": "Inicio",
-    "about": "Acerca de",
+    "safaris": "Safaris",
+    "adventures": "Aventuras",
     "destinations": "Destinos",
-    "accommodation": "Alojamiento",
-    "gallery": "Galería",
-    "contact": "Contacto",
-    "faq": "Preguntas Frecuentes",
+    "about": "Acerca de Nosotros",
+    "contact": "Contáctanos",
     "bookNow": "Reservar un Safari"
   },
   "home": {
