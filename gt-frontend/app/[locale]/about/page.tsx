@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BreadcrumbSchema, StructuredData, OrganizationSchema } from "@/components/structured-data"
 import { absoluteUrl } from "@/lib/seo"
+import { assetUrl, hasAssetBase } from "@/lib/assets"
 
 export const metadata: Metadata = {
   title: "About Us - Gladiolus Tours",
@@ -42,19 +43,19 @@ export default function AboutPage() {
     {
       name: "Sunday Mtui",
       role: "Co-Founder",
-      image: "/team/sunday-mtui.jpg",
+      image: hasAssetBase ? assetUrl("/team/Sunday-Mtui.webp") : "/team/sunday-mtui.jpg",
       bio: "Visionary co-founder with decades of experience crafting bespoke safaris.",
     },
     {
       name: "Francois Martin",
       role: "Co-Founder",
-      image: "/team/francois-martin.jpg",
+      image: hasAssetBase ? assetUrl("/team/Francois-Martin.webp") : "/team/francois-martin.jpg",
       bio: "Co-founder focused on strategic partnerships and unique guest experiences.",
     },
     {
       name: "Claire",
       role: "Director",
-      image: "/team/claire.jpg",
+      image: hasAssetBase ? assetUrl("/team/Claire.webp") : "/team/claire.jpg",
       bio: "Director ensuring day-to-day operations deliver premium service.",
     },
   ]
@@ -186,7 +187,12 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden">
-              <Image src="/placeholder.svg?height=500&width=600" alt="Safari landscape" fill className="object-cover" />
+              <Image
+                src={assetUrl("/about-us/team.webp")}
+                alt="Gladiolus Tours team working together on safari plans"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
