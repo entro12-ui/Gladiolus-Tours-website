@@ -7,7 +7,8 @@ import { useTranslations } from "next-intl"
 const quickLinks = [
   { href: "/about", labelKey: "nav.about" },
   { href: "/destinations", labelKey: "nav.destinations" },
-  { href: "/accommodation", labelKey: "nav.accommodation" },
+  { href: "/safaris", labelKey: "nav.safaris" },
+  { href: "/adventures", labelKey: "nav.adventures" },
   { href: "/contact", labelKey: "nav.contact" },
 ]
 
