@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, MapPin, Calendar, Users } from "lucide-react"
 import { absoluteUrl } from "@/lib/seo"
+import { assetUrl } from "@/lib/assets"
 
 export const metadata: Metadata = {
   title: "Luxury African Safari Tours & Tailor-Made Travel Packages",
@@ -88,7 +89,7 @@ export default function HomePage() {
       <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/african-safari-sunset-with-acacia-trees-and-wildli.jpg"
+            src={assetUrl("/african-safari-sunset-with-acacia-trees-and-wildli.jpg")}
             alt="African Safari"
             fill
             className="object-cover brightness-75"
@@ -129,7 +130,7 @@ export default function HomePage() {
       </section>
 
       {/* Safari Circuits */}
-      <section className="py-24 bg-[#0d1b1e] text-white">
+      <section id="safaris" className="py-24 bg-[#0d1b1e] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1 font-mono text-xs tracking-[0.35em] uppercase text-white/80">
@@ -257,7 +258,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Destinations */}
-      <section className="relative py-24">
+      <section id="adventures" className="relative py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background-secondary/40 to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -277,7 +278,7 @@ export default function HomePage() {
               >
                 <div className="relative h-64 overflow-hidden">
                   <Image
-                    src={destination.image || "/placeholder.svg"}
+                    src={assetUrl(destination.image || "/placeholder.svg")}
                     alt={destination.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
