@@ -16,6 +16,7 @@ export function Navigation() {
     { href: "/safaris", label: t("nav.safaris") },
     { href: "/adventures", label: t("nav.adventures") },
     { href: "/destinations", label: t("nav.destinations") },
+    { href: "/gallery", label: t("nav.gallery") },
     { href: "/about", label: t("nav.about") },
     { href: "/contact", label: t("nav.contact") },
   ]
