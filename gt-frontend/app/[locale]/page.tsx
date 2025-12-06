@@ -89,7 +89,7 @@ export default function HomePage() {
       <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src={assetUrl("/african-safari-sunset-with-acacia-trees-and-wildli.jpg")}
+            src={assetUrl("/african-safari-sunset-with-acacia-trees-and-wildli.webp")}
             alt="African Safari"
             fill
             className="object-cover brightness-75"
