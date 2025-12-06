@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 import { BreadcrumbSchema, OrganizationSchema } from "@/components/structured-data"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, ArrowDown, MapPin, Calendar, Users, Compass, Camera, Sparkles } from "lucide-react"
+import { ArrowRight, ArrowDown, MapPin, Calendar, Users, Compass, Camera, Sparkles, Star } from "lucide-react"
 import { absoluteUrl } from "@/lib/seo"
 import { assetUrl } from "@/lib/assets"
 import { HeroSlideshow } from "@/components/home/hero-slideshow"
@@ -284,23 +284,65 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <p className="text-xs font-mono uppercase tracking-[0.35em] text-muted-foreground">Field Notes</p>
-            <h2 className="mt-2 text-4xl md:text-5xl font-serif text-foreground">Guest stories from migration crossings to dhow dinners.</h2>
+      <section className="relative overflow-hidden bg-[#04080c] py-24 text-white">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_rgba(4,8,12,0.9))]" />
+        <div className="container relative mx-auto grid gap-16 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-12">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <p className="text-xs font-mono uppercase tracking-[0.35em] text-white/70">Google Reviews</p>
+              <h2 className="text-4xl md:text-5xl font-serif text-balance">Our travellers keep the stories alive long after wheels-up.</h2>
+              <p className="font-mono text-sm text-white/75">
+                Every itinerary is followed by handwritten field notes from guests. Here are a few recent love letters captured straight from our
+                Google profile.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-6">
+              <div className="flex-1 min-w-[220px] rounded-3xl border border-white/15 bg-white/5 p-6">
+                <div className="flex items-center gap-2 text-amber-300">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <Star key={index} className="h-5 w-5 fill-current" />
+                  ))}
+                </div>
+                <p className="mt-4 text-4xl font-serif">5.0</p>
+                <p className="text-xs font-mono uppercase tracking-[0.3em] text-white/70">Average on Google</p>
+                <p className="mt-2 text-sm font-mono text-white/70">36+ verified reviews across Kilimanjaro ascents, migrations, and spice coast escapes.</p>
+              </div>
+              <div className="flex-1 min-w-[220px] rounded-3xl border border-white/10 bg-gradient-to-br from-primary/20 to-primary-alt/10 p-6">
+                <p className="text-xs font-mono uppercase tracking-[0.3em] text-white/80">Featured Guides</p>
+                <p className="mt-3 text-2xl font-serif">Sunday & Clever</p>
+                <p className="text-sm font-mono text-white/75">Lead concierge duo mentioned in 80% of 5★ reviews for their storytelling and care.</p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full border border-white/30 bg-white px-9 text-base font-semibold text-primary shadow-[0_15px_35px_rgba(255,255,255,0.15)] transition hover:-translate-y-0.5"
+              >
+                <Link href="/contact">Plan with our team</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full border-white/70 bg-white/5 px-9 text-base font-semibold text-white transition hover:bg-white/15"
+              >
+                <Link href="/gallery">Browse journey gallery</Link>
+              </Button>
+            </div>
           </div>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8">
             {testimonials.map((testimonial) => (
-              <Card key={testimonial.name} className="border-border/30 bg-white/80 backdrop-blur rounded-3xl">
-                <CardContent className="p-8 space-y-4">
-                  <p className="text-lg font-serif text-foreground">“{testimonial.quote}”</p>
-                  <div>
-                    <p className="text-sm font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-xs font-mono uppercase tracking-[0.3em] text-muted-foreground">{testimonial.detail}</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div
+                key={testimonial.name}
+                className="rounded-[32px] border border-white/15 bg-black/40 p-8 shadow-[0_25px_70px_rgba(2,6,23,0.4)] backdrop-blur"
+              >
+                <p className="text-lg font-serif leading-relaxed text-white">“{testimonial.quote}”</p>
+                <div className="mt-6">
+                  <p className="text-base font-semibold text-white">{testimonial.name}</p>
+                  <p className="text-xs font-mono uppercase tracking-[0.3em] text-white/60">{testimonial.detail}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -315,12 +357,17 @@ export default function HomePage() {
               Tell us your travel window, altitude comfort, and dream wildlife moments. We’ll reply within 48 hours with two cinematic drafts.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="rounded-full bg-white text-primary px-8">
+              <Button asChild size="lg" className="rounded-full border border-white/40 bg-white px-10 text-primary shadow-lg shadow-black/20">
                 <Link href="/contact">
                   Speak to a Safari Designer <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full border-white text-white">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full border-white/80 bg-white/5 px-10 text-white transition hover:bg-white/15"
+              >
                 <Link href="/adventures">View Adventure Concepts</Link>
               </Button>
             </div>
