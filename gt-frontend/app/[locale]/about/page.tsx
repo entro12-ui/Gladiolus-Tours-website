@@ -53,9 +53,9 @@ export default function AboutPage() {
       bio: "Co-founder focused on strategic partnerships and unique guest experiences.",
     },
     {
-      name: "Claire",
+      name: "Claire Matemba",
       role: "Director",
-      image: hasAssetBase ? assetUrl("/team/Claire.webp") : "/team/claire.jpg",
+      image: hasAssetBase ? assetUrl("/team/Claire-Matemba.webp") : "/team/Claire-Matemba.jpg",
       bio: "Director ensuring day-to-day operations deliver premium service.",
     },
   ]
@@ -176,8 +176,8 @@ export default function AboutPage() {
       <section className="relative h-[65vh] flex items-center justify-center overflow-hidden mt-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src={assetUrl("/about-us/team.webp")}
-            alt="Gladiolus Tours team celebrating in the Serengeti"
+            src={assetUrl("/about-us/team-work.webp")}
+            alt="Gladiolus Tours operations team collaborating in Arusha"
             fill
             className="object-cover brightness-[0.55]"
             priority
@@ -191,10 +191,10 @@ export default function AboutPage() {
             Transforming Connections, One Journey at a Time
           </h1>
           <p className="text-lg md:text-xl font-mono text-white/85 leading-relaxed">
-            We curate soulful Tanzania adventures that foster meaningful connections—with nature, culture, and the people you travel with.
+            We design soulful Tanzania journeys that connect you to wild spaces, local culture, and the people you travel with.
           </p>
           <p className="text-base md:text-lg font-mono text-white/80">
-            From Kilimanjaro's glaciers to spice-scented coastal breezes, every itinerary is crafted to inspire curiosity, reflection, and joy.
+            Think Kilimanjaro sunrises, crater lunches, and Zanzibar breezes—crafted to spark curiosity, reflection, and joy.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white">
@@ -210,7 +210,7 @@ export default function AboutPage() {
       {/* Mission Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,0.8fr)] gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.9fr)] gap-12 items-center">
             <div className="space-y-6">
               <div>
                 <p className="text-sm font-mono uppercase tracking-[0.35em] text-primary">Our Commitment to Excellence</p>
@@ -220,7 +220,7 @@ export default function AboutPage() {
               </div>
               <p className="font-mono text-base text-muted-foreground leading-relaxed">
                 We believe in the transformative power of travel. Every Gladiolus itinerary is designed to spark wonder,
-                champion responsible tourism, and celebrate Tanzania's diverse communities—from Serengeti plains to
+                champion responsible tourism, and celebrate Tanzania's diverse communities from Serengeti plains to
                 Zanzibar shores.
               </p>
               <p className="font-mono text-base text-muted-foreground leading-relaxed">
@@ -235,22 +235,18 @@ export default function AboutPage() {
                 <p className="mt-3 font-mono text-sm uppercase tracking-[0.3em] text-primary">— Gladiolus Tours Team</p>
               </div>
             </div>
-            <Card className="border border-border/40 bg-card/80 backdrop-blur">
-              <CardContent className="p-8 space-y-6">
-                <h3 className="text-2xl font-serif text-foreground text-center">Our Impact</h3>
-                <div className="grid gap-4">
-                  {impactStats.map((stat) => (
-                    <div key={stat.label} className="rounded-2xl border border-border/60 bg-background p-4 text-center">
-                      <div className="text-4xl font-serif text-primary">{stat.value}</div>
-                      <p className="mt-1 text-sm font-mono uppercase tracking-[0.2em] text-muted-foreground">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-center text-sm font-mono text-muted-foreground">
-                  Trusted by global marketplaces and repeat guests who return year after year.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
+              <Image
+                src={assetUrl("/about-us/team.webp")}
+                alt="Gladiolus Tours operations team planning bespoke journeys"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-sm font-mono uppercase tracking-[0.3em] text-white/80">
+                On the ground in Tanzania
+              </p>
+            </div>
           </div>
         </div>
       </section>
