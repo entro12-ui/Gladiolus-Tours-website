@@ -135,7 +135,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative isolate flex min-h-screen items-center overflow-hidden text-white">
         <HeroSlideshow />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 py-32">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 py-28">
           <div className="space-y-6 max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-2 font-mono text-xs uppercase tracking-[0.35em] text-white/80">
               Gladiolus Signature Journeys
@@ -146,11 +146,20 @@ export default function HomePage() {
             <p className="text-lg md:text-xl font-mono text-white/85 leading-relaxed">
               From Migration fly-ins to spice coast slowdowns, we blueprint every handover, picnic, and sundowner with a director’s eye for pacing and detail.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 text-base font-semibold">
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full bg-white px-8 text-base font-semibold text-primary shadow-lg shadow-black/30 hover:bg-white/90"
+              >
                 <Link href="/safaris">Browse Signature Safaris</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full border-white/70 text-white">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="rounded-full border-white/50 bg-white/10 px-8 text-base font-semibold text-white hover:bg-white/20"
+              >
                 <Link href="/contact">Start a Custom Map</Link>
               </Button>
             </div>
