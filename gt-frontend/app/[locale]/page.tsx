@@ -111,15 +111,15 @@ const experiencePillars = [
 const testimonials = [
   {
     quote:
-      "Every transfer, picnic, and sundowner felt choreographed. We witnessed river crossings with a pro tracker and ended with a private dhow dinner in Zanzibar—seamless magic.",
-    name: "Amelia & Jordan Reid",
-    detail: "Migration & Spice Route, July 2024",
+      "Sunday from Gladiolus Tours made my stay at Msuti Hut and safari in Arusha National Park unforgettable—kind, professional, and so passionate about culture and nature.",
+    name: "Lærke Skye",
+    detail: "Google Review • February 2024",
   },
   {
     quote:
-      "The team curated a Kilimanjaro ascent that balanced challenge with care. Recovery at Gibbs Farm with crater lunches made it a once-in-a-lifetime pairing.",
-    name: "Dr. Priya Patel",
-    detail: "Kili + Crater, September 2024",
+      "Unbelievable experience! We summited Kilimanjaro via Marangu in five days and every detail was perfectly organised by the Gladiolus team—we felt supported every step.",
+    name: "Maite Gonzalo",
+    detail: "Google Review • January 2024",
   },
 ]
 
