@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "African Safari FAQs | Gladiolus Tours",
-    description: "Get answers to top questions about planning luxury safaris in Tanzania and Kenya.",
+    description: "Get answers to top questions about planning luxury safaris in Tanzania.",
     url: absoluteUrl("/faq"),
     images: [
       {
@@ -66,9 +66,9 @@ const faqCategories = [
     category: "Travel Requirements",
     questions: [
       {
-        question: "Do I need a visa for Tanzania/Kenya?",
+        question: "Do I need a visa for Tanzania?",
         answer:
-          "Most visitors need a visa. Tanzania offers e-visas online, and Kenya has a similar system. We can provide guidance, but please check current requirements for your nationality.",
+          "Most visitors need a visa. Tanzania offers e-visas online. We can provide guidance, but please check current requirements for your nationality.",
       },
       {
         question: "What vaccinations are required?",
