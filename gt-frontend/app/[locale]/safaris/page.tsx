@@ -126,7 +126,7 @@ export default function SafarisPage() {
       {/* Hero */}
       <section className="relative mt-20 flex min-h-[80vh] items-end overflow-hidden">
         <Image
-          src={assetUrl("/serengeti-safari-landscape-with-wildlife.jpg")}
+          src={assetUrl("/gallery/zebra-00.webp")}
           alt="Tanzania safari landscape"
           fill
           className="object-cover"
