@@ -157,7 +157,6 @@ export default function ContactPage() {
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="serengeti">Serengeti National Park</SelectItem>
-                          <SelectItem value="mara">Masai Mara Reserve</SelectItem>
                           <SelectItem value="ngorongoro">Ngorongoro Crater</SelectItem>
                           <SelectItem value="tarangire">Tarangire National Park</SelectItem>
                           <SelectItem value="kilimanjaro">Mount Kilimanjaro</SelectItem>
