@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "About Gladiolus Tours | Trusted African Safari Experts",
-    description: "Meet the Gladiolus Tours team delivering authentic African safari experiences across Tanzania and Kenya.",
+    description: "Meet the Gladiolus Tours team delivering authentic African safari experiences across Tanzania.",
     url: absoluteUrl("/about"),
     images: [
       {
@@ -134,7 +134,7 @@ export default function AboutPage() {
       "@type": "Organization",
       name: "Gladiolus Tours",
       description:
-        "Premier African safari tour operator specializing in tailor-made experiences across Tanzania and Kenya.",
+        "Premier safari tour operator specializing in tailor-made experiences across Tanzania.",
       foundingDate: "2010",
       founder: founder
         ? {
