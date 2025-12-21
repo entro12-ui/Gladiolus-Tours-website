@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Gladiolus Tours",
   },
   description:
-    "Experience the wonder of Africa with Gladiolus Tours. Premium safari experiences, luxury accommodations, and authentic wildlife encounters in Tanzania and Kenya.",
+    "Experience the wonder of Tanzania with Gladiolus Tours. Premium safari experiences, luxury accommodations, and authentic wildlife encounters across Tanzania.",
   keywords: [
     "safari",
     "africa tours",
@@ -22,9 +22,7 @@ export const metadata: Metadata = {
     "adventure travel",
     "luxury safari",
     "tanzania",
-    "kenya",
     "serengeti",
-    "masai mara",
     "wildlife photography",
   ],
   authors: [{ name: "Gladiolus Tours" }],

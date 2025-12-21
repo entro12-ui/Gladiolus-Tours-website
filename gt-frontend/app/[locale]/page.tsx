@@ -14,7 +14,7 @@ import { HeroSlideshow } from "@/components/home/hero-slideshow"
 export const metadata: Metadata = {
   title: "Luxury African Safari Tours & Tailor-Made Travel Packages",
   description:
-    "Plan an unforgettable African safari with Gladiolus Tours. Discover luxury safari packages, expert guides, and tailor-made itineraries across Tanzania and Kenya.",
+    "Plan an unforgettable Tanzania safari with Gladiolus Tours. Discover luxury safari packages, expert guides, and tailor-made itineraries across Tanzania.",
   alternates: {
     canonical: "/",
   },
@@ -48,7 +48,7 @@ const signatureCollections = [
     description: "Follow the Migration, picnic on the Ngorongoro rim, and sleep beneath thousands of desert stars.",
     route: "Serengeti • Ngorongoro • Tarangire",
     duration: "9 days",
-    image: "/serengeti-safari-landscape-with-wildlife.jpg",
+    image: "/gallery/zebra-00.webp",
   },
   {
     name: "Kilimanjaro Peak + Crater",
@@ -72,21 +72,14 @@ const destinationHighlights = [
     title: "Serengeti National Park",
     location: "Tanzania",
     duration: "5 days",
-    image: "/serengeti-safari-landscape-with-wildlife.jpg",
-  },
-  {
-    slug: "masai-mara-reserve",
-    title: "Masai Mara Reserve",
-    location: "Kenya",
-    duration: "7 days",
-    image: "/masai-mara-wildlife-safari-sunset.jpg",
+    image: "/gallery/zebra-00.webp",
   },
   {
     slug: "ngorongoro-crater",
     title: "Ngorongoro Crater",
     location: "Tanzania",
     duration: "4 days",
-    image: "/ngorongoro-crater-landscape-elephants.jpg",
+    image: "/gallery/lunch-00.webp",
   },
 ]
 
