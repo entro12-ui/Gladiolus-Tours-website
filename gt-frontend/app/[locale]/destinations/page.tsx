@@ -6,21 +6,21 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { BreadcrumbSchema } from "@/components/structured-data"
 import { destinations } from "@/lib/destinations-data"
 import { absoluteUrl } from "@/lib/seo"
+import { assetUrl } from "@/lib/assets"
 
 export const metadata: Metadata = {
-  title: "Safari Destinations - Gladiolus Tours",
+  title: "Tanzania Safari Destinations - Gladiolus Tours",
   description:
-    "Explore our handpicked selection of African safari destinations. From Serengeti to Masai Mara, discover your perfect adventure.",
+    "Explore our handpicked Tanzania safari destinations. From Serengeti to Ngorongoro, discover your perfect adventure.",
   alternates: {
     canonical: "/destinations",
   },
   openGraph: {
-    title: "African Safari Destinations | Gladiolus Tours",
-    description: "Discover curated safari destinations across Tanzania and Kenya with Gladiolus Tours.",
+    title: "Tanzania Safari Destinations | Gladiolus Tours",
+    description: "Discover curated safari destinations across Tanzania with Gladiolus Tours.",
     url: absoluteUrl("/destinations"),
     images: [
       {
@@ -33,13 +33,33 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Explore Gladiolus Tours Safari Destinations",
-    description: "Browse luxury African safari destinations tailored by Gladiolus Tours.",
+    title: "Explore Gladiolus Tours Tanzania Destinations",
+    description: "Browse luxury Tanzania safari destinations tailored by Gladiolus Tours.",
     images: [absoluteUrl("/og-image.jpg")],
   },
 }
 
-export default function DestinationsPage() {
+type Props = {
+  searchParams?: Promise<{ circuit?: string }> | { circuit?: string }
+}
+
+const circuitOptions = [
+  { value: "all", label: "All Circuits" },
+  { value: "northern", label: "Northern Circuit" },
+  { value: "southern", label: "Southern Circuit" },
+  { value: "eastern", label: "Eastern Circuit" },
+  { value: "western", label: "Western Circuit" },
+  { value: "islands", label: "Ocean Islands" },
+  { value: "mountain", label: "Mountain" },
+]
+
+export default async function DestinationsPage({ searchParams }: Props) {
+  const resolvedSearchParams = await searchParams
+  const rawCircuit = resolvedSearchParams?.circuit
+  const selectedCircuit = rawCircuit === "northern" || rawCircuit === "southern" || rawCircuit === "eastern" || rawCircuit === "western" || rawCircuit === "islands" || rawCircuit === "mountain" ? rawCircuit : undefined
+
+  const filteredDestinations = selectedCircuit ? destinations.filter((destination) => destination.circuit === selectedCircuit) : destinations
+
   return (
     <div className="min-h-screen">
       <BreadcrumbSchema
@@ -51,85 +71,92 @@ export default function DestinationsPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/african-safari-sunset-with-acacia-trees-and-wildli.jpg"
-            alt="African safari landscape with wildlife"
-            fill
-            className="object-cover brightness-75"
-            priority
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-4">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1 font-mono text-xs tracking-[0.35em] uppercase text-white/80">
-            Safari Destinations
-          </span>
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-2 text-balance">Signature African Safari Destinations</h1>
-          <p className="text-xl font-mono text-white/90 leading-relaxed text-pretty">
-            Browse our curated luxury safaris across Tanzania and Kenya, handpicked for unforgettable wildlife experiences.
-          </p>
+      <section className="relative mt-20 flex min-h-[80vh] items-end overflow-hidden">
+        <Image
+          src={assetUrl("/gallery/sunset.webp")}
+          alt="Tanzania safari landscape"
+          fill
+          className="object-cover"
+          unoptimized
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/60 to-black/85" />
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 pb-24">
+          <div className="max-w-3xl space-y-6 text-white">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-2 font-mono text-xs uppercase tracking-[0.35em]">
+              Destinations
+            </span>
+            <h1 className="text-4xl md:text-6xl font-serif text-balance">Tanzania destinations for iconic wildlife, culture, and landscapes.</h1>
+            <p className="text-lg md:text-xl font-mono text-white/80 leading-relaxed">
+              From Serengeti plains to Ngorongoro's crater floor—browse the places we build into tailor-made routes.
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full bg-white px-8 text-base font-semibold text-primary shadow-lg shadow-black/30 hover:bg-white/90"
+              >
+                <Link href="/contact">
+                  Plan a Tanzania itinerary <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full border-white/50 bg-white/10 px-8 text-base font-semibold text-white hover:bg-white/20"
+              >
+                <Link href="#collections">Browse destinations</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Filters Section */}
-      <section className="py-8 bg-muted border-b border-border">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
-            <div className="font-mono text-sm text-muted-foreground">Showing {destinations.length} destinations</div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Select defaultValue="all">
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Location" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Locations</SelectItem>
-                  <SelectItem value="tanzania">Tanzania</SelectItem>
-                  <SelectItem value="kenya">Kenya</SelectItem>
-                </SelectContent>
-              </Select>
-              <Select defaultValue="all">
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Duration" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Durations</SelectItem>
-                  <SelectItem value="short">2-4 Days</SelectItem>
-                  <SelectItem value="medium">5-7 Days</SelectItem>
-                  <SelectItem value="long">8+ Days</SelectItem>
-                </SelectContent>
-              </Select>
-              <Select defaultValue="featured">
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Sort by" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="featured">Featured</SelectItem>
-                  <SelectItem value="price-low">Price: Low to High</SelectItem>
-                  <SelectItem value="price-high">Price: High to Low</SelectItem>
-                  <SelectItem value="duration">Duration</SelectItem>
-                </SelectContent>
-              </Select>
+      <section className="border-y border-border/70 bg-muted py-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="font-mono text-sm text-muted-foreground">Showing {filteredDestinations.length} destinations</div>
+            <div className="flex flex-wrap gap-2">
+              {circuitOptions.map((option) => {
+                const href = option.value === "all" ? "/destinations" : `/destinations?circuit=${option.value}`
+                const isActive = option.value === "all" ? !selectedCircuit : selectedCircuit === option.value
+
+                return (
+                  <Link
+                    key={option.value}
+                    href={href}
+                    className={
+                      isActive
+                        ? "rounded-full bg-primary px-4 py-2 text-xs font-mono uppercase tracking-[0.25em] text-primary-foreground"
+                        : "rounded-full border border-border bg-background px-4 py-2 text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground hover:text-foreground"
+                    }
+                  >
+                    {option.label}
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </div>
       </section>
 
       {/* Destinations Grid */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="collections" className="py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {destinations.map((destination) => (
+            {filteredDestinations.map((destination) => (
               <Card
                 key={destination.id}
                 className="overflow-hidden group border border-border/40 bg-card/80 backdrop-blur rounded-3xl hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
               >
                 <div className="relative h-64 overflow-hidden">
                   <Image
-                    src={destination.image || "/placeholder.svg"}
+                    src={assetUrl(destination.image) || "/placeholder.svg"}
                     alt={destination.title}
                     fill
+                    unoptimized
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-mono">
@@ -191,7 +218,7 @@ export default function DestinationsPage() {
           <TrendingUp className="h-12 w-12 mx-auto mb-4 text-secondary" />
           <h2 className="text-4xl font-serif mb-4 text-balance">Can't Decide?</h2>
           <p className="text-lg font-mono mb-8 max-w-2xl mx-auto leading-relaxed text-primary-foreground/90">
-            Let our safari experts help you design a custom itinerary that matches your interests and budget
+            Let our safari experts help you design a custom Tanzania itinerary that matches your interests and budget
           </p>
           <Button
             asChild
