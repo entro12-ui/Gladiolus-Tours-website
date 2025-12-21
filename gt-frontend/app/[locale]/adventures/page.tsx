@@ -6,72 +6,58 @@ import { BreadcrumbSchema } from "@/components/structured-data"
 import { absoluteUrl } from "@/lib/seo"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Compass, Waves, Flame, ArrowRight, Camera, Footprints } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Link } from "@/i18n/routing"
 import { assetUrl } from "@/lib/assets"
 
-const adventureCollections = [
+const adventureCategories = [
   {
     id: 1,
-    name: "Kilimanjaro & Crater",
-    tag: "High Altitude",
-    duration: "12 days",
-    price: "From $6,500",
-    image: "/placeholder.svg?height=640&width=960",
-    description:
-      "Summit Kilimanjaro via the scenic Lemosho Route before descending to Ngorongoro for crater rim hikes and private game drives.",
-    activities: ["7-day Lemosho ascent", "Crater rim hiking", "Starlit crater floor dinner"],
+    title: "9 Days Kilimanjaro Trek via Northern Route",
+    category: "Mountain Climbing",
+    overview:
+      "The Northern Circuit route is the newest route up Mount Kilimanjaro and arguably the best—combining beautiful scenery, solitude, a healthy challenge, and excellent acclimatization for a high summit success rate.",
+    image: "/about-us/team.webp",
   },
   {
     id: 2,
-    name: "Rift Valley Trails",
-    tag: "Walking & Culture",
-    duration: "8 days",
-    price: "From $4,200",
-    image: "/placeholder.svg?height=640&width=960",
-    description:
-      "Walk with Hadzabe guides near Lake Eyasi, kayak Lake Manyara at sunrise, and bike through coffee estates on the slopes of Meru.",
-    activities: ["Guided village walks", "Lake Manyara kayaking", "Coffee estate cycling"],
+    title: "Walking Safaris & Indigenous Guide Encounters",
+    category: "Walking Safaris",
+    overview:
+      "Slow down to feel Tanzania beyond the vehicle. Track wildlife on foot with specialist guides, learn bushcraft and ecology, and reconnect with place through mindful pacing.",
+    image: "/gallery/tour-guide.webp",
   },
   {
     id: 3,
-    name: "Coastline + Swahili",
-    tag: "Sea & Spice",
-    duration: "7 days",
-    price: "From $3,600",
-    image: "/placeholder.svg?height=640&width=960",
-    description:
-      "Blend dhow expeditions, mangrove SUP sessions, and Zanzibari culinary classes with boutique coastal hideaways.",
-    activities: ["Private dhow safari", "SUP through mangroves", "Spice market cooking class"],
+    title: "Zanzibar Coast & Spice Culture",
+    category: "Beach Holiday",
+    overview:
+      "Pair your safari with salt-air decompression—Stone Town stories, spice experiences, dhow sailing, and beach days curated for rest and romance.",
+    image: "/hero/hero-02.webp",
   },
   {
     id: 4,
-    name: "Ruaha After Dark",
-    tag: "Nightlife in the Wild",
-    duration: "6 days",
-    price: "From $3,950",
-    image: "/placeholder.svg?height=640&width=960",
-    description:
-      "Fly into Ruaha for walking safaris, night drives, and photographic hides focused on big cats and nocturnal species.",
-    activities: ["Night game drives", "Photographic hides", "Guided walking safaris"],
-  },
-]
-
-const experienceHighlights = [
-  {
-    icon: Compass,
-    title: "Immersive Routes",
-    description: "Go beyond game drives with trekking, paddling, biking, and culinary adventures across Tanzania's diverse landscapes.",
+    title: "Adventure Safaris Across the Northern Circuit",
+    category: "Adventure Safaris",
+    overview:
+      "Combine classic game drives with active add-ons—canoeing, cycling, crater rim walks, and photography-focused days tuned to the season’s best light and wildlife behaviour.",
+    image: "/gallery/gt-tourist-vehicle-01.webp",
   },
   {
-    icon: Waves,
-    title: "Elemental Balance",
-    description: "Pair mountains with coastlines, crater rims with coral reefs, and remote bush camps with boutique seaside retreats.",
+    id: 5,
+    title: "Tourist Attractions & Heritage Stops",
+    category: "Tourist Attraction",
+    overview:
+      "Add depth to your journey with Olduvai Gorge, craft markets, and heritage-rich detours that frame Tanzania’s landscapes with human story and history.",
+    image: "/gallery/Olduvai-Gorge-01.webp",
   },
   {
-    icon: Flame,
-    title: "Expert Outfitters",
-    description: "Local specialists coordinate gear, safety crews, permits, and storytellers to keep every adventure seamless.",
+    id: 6,
+    title: "Wildlife + Adventure Photo Days",
+    category: "Adventure Safaris",
+    overview:
+      "Cinematic golden-hour drives, curated vantage points, and gentle pacing for travellers who want both adrenaline and heirloom images from the field.",
+    image: "/gallery/photo-00.webp",
   },
 ]
 
@@ -108,99 +94,92 @@ export default function AdventuresPage() {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative mt-20 flex min-h-[80vh] items-end overflow-hidden">
         <Image
-          src={assetUrl("/placeholder.svg?height=900&width=1600")}
+          src={assetUrl("/hero/hero-02.webp")}
           alt="Tanzania adventure"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
-        <div className="relative z-10 max-w-3xl text-center px-6 space-y-6 text-white">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1 font-mono text-xs tracking-[0.4em] uppercase">
-            Tanzania Adventures
-          </span>
-          <h1 className="text-5xl md:text-6xl font-serif text-balance">Beyond the Vehicle. Deep Into Tanzania.</h1>
-          <p className="text-lg md:text-xl font-mono text-white/80 leading-relaxed">
-            Trek Kilimanjaro, kayak crater lakes, sail Zanzibari dhows, and explore with indigenous guides—crafted for curious travelers.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white">
-              <Link href="/contact">
-                Plan an Adventure <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="rounded-full border-white/60 text-white">
-              <Link href="#collections">Browse Ideas</Link>
-            </Button>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/60 to-black/85" />
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 pb-24">
+          <div className="max-w-3xl space-y-6 text-white">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-2 font-mono text-xs uppercase tracking-[0.35em]">
+              Adventures
+            </span>
+            <h1 className="text-4xl md:text-6xl font-serif text-balance">Discover your next adventure with Gladiolus Tours</h1>
+            <p className="text-lg md:text-xl font-mono text-white/80 leading-relaxed">
+              Climb Kilimanjaro, walk with specialist guides, explore heritage sites, and end on the spice coast—crafted end-to-end with Tanzanian experts.
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full bg-white px-8 text-base font-semibold text-primary shadow-lg shadow-black/30 hover:bg-white/90"
+              >
+                <Link href="/contact">
+                  Plan an Adventure <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full border-white/50 bg-white/10 px-8 text-base font-semibold text-white hover:bg-white/20"
+              >
+                <Link href="#collections">Browse Ideas</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Highlights */}
-      <section className="py-16 bg-[#050b0d] text-white border-b border-white/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {experienceHighlights.map((highlight) => (
-              <Card key={highlight.title} className="bg-white/5 border-white/10">
-                <CardContent className="p-8 space-y-4">
-                  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center">
-                    <highlight.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-serif text-white">{highlight.title}</h3>
-                  <p className="font-mono text-sm text-white/75 leading-relaxed">{highlight.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+      <section className="border-y border-border/70 bg-muted py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="max-w-3xl space-y-6">
+            <p className="text-xs font-mono uppercase tracking-[0.35em] text-muted-foreground">Adventure Ideas</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-balance">Active experiences crafted for curious travellers.</h2>
+            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
+              Browse a few adventure categories below. If you share your travel window and comfort level, we’ll tailor the route, crew, permits, and pacing.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Collections */}
-      <section id="collections" className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 space-y-3">
-            <p className="text-xs font-mono uppercase tracking-[0.35em] text-muted-foreground">Signature Adventures</p>
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground text-balance">Active Journeys to Inspire</h2>
-            <p className="text-lg font-mono text-muted-foreground max-w-2xl mx-auto">
-              Choose your canvas—summits, coasts, culture, or conservation. We layer in the right crew, safety, and comforts.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {adventureCollections.map((collection) => (
-              <Card key={collection.id} className="overflow-hidden border border-border/40 bg-card/80 backdrop-blur">
-                <div className="relative h-64">
-                  <Image src={assetUrl(collection.image)} alt={collection.name} fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/30 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-white space-y-1">
-                    <p className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.3em]">
-                      <Camera className="h-3.5 w-3.5" /> {collection.tag}
+      <section id="collections" className="py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {adventureCategories.map((item) => (
+              <Link key={item.id} href="/contact" className="group block">
+                <Card className="overflow-hidden rounded-3xl border-border/40 bg-background py-0 gap-0 transition hover:-translate-y-1 hover:shadow-xl">
+                  <div className="relative h-60 overflow-hidden">
+                    <Image
+                      src={assetUrl(item.image)}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+                    <div className="absolute bottom-5 left-5 right-5 text-white space-y-2">
+                      <p className="inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-mono uppercase tracking-[0.3em] text-white/90">
+                        {item.category}
+                      </p>
+                      <h3 className="text-2xl font-serif leading-tight">{item.title}</h3>
+                    </div>
+                  </div>
+                  <CardContent className="p-6">
+                    <p className="font-mono text-sm text-muted-foreground leading-relaxed h-24 overflow-hidden">
+                      {item.overview.length > 160 ? `${item.overview.slice(0, 160)}...` : item.overview}
                     </p>
-                    <p className="text-3xl font-serif">{collection.name}</p>
-                  </div>
-                </div>
-                <CardContent className="p-6 space-y-4">
-                  <p className="font-mono text-sm text-muted-foreground leading-relaxed">{collection.description}</p>
-                  <div className="flex flex-wrap gap-3 text-xs font-mono text-muted-foreground">
-                    <span className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1">
-                      <Footprints className="h-3.5 w-3.5" /> {collection.duration}
-                    </span>
-                    <span className="inline-flex rounded-full border border-border px-3 py-1">{collection.price}</span>
-                  </div>
-                  <ul className="space-y-2 font-mono text-sm text-muted-foreground">
-                    {collection.activities.map((activity) => (
-                      <li key={activity} className="flex items-start gap-2">
-                        <span className="text-primary">•</span>
-                        <span>{activity}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button asChild className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary text-white">
-                    <Link href="/contact">Customize This Adventure</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+                    <div className="mt-6 w-full rounded-full bg-gradient-to-r from-primary-alt to-primary px-4 py-2 text-center text-sm font-medium text-white">
+                      Enquire about this adventure
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
