@@ -14,6 +14,7 @@ export function Navigation() {
   const navLinks = [
     { href: "/", label: t("nav.home") },
     { href: "/safaris", label: t("nav.safaris") },
+    { href: "/treks", label: t("nav.treks") },
     { href: "/adventures", label: t("nav.adventures") },
     { href: "/destinations", label: t("nav.destinations") },
     { href: "/gallery", label: t("nav.gallery") },

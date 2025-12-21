@@ -8,6 +8,7 @@ const quickLinks = [
   { href: "/about", labelKey: "nav.about" },
   { href: "/destinations", labelKey: "nav.destinations" },
   { href: "/safaris", labelKey: "nav.safaris" },
+  { href: "/treks", labelKey: "nav.treks" },
   { href: "/adventures", labelKey: "nav.adventures" },
   { href: "/gallery", labelKey: "nav.gallery" },
   { href: "/contact", labelKey: "nav.contact" },
