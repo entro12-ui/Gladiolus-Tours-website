@@ -18,58 +18,21 @@ export function HeroSlideshow({ interval = SLIDE_INTERVAL }: { interval?: number
     []
   )
 
-  const [slides, setSlides] = useState<string[]>(heroImages)
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
-    let cancelled = false
-
-    const validateImages = async () => {
-      try {
-        const checks = await Promise.all(
-          heroImages.map(async (src) => {
-            try {
-              const response = await fetch(src, { method: "HEAD", cache: "no-store" })
-              return response.ok ? src : null
-            } catch (error) {
-              console.warn("Hero slideshow asset unavailable", { src, error })
-              return null
-            }
-          })
-        )
-
-        if (!cancelled) {
-          const validSlides = checks.filter((value): value is string => Boolean(value))
-          setSlides(validSlides.length ? validSlides : heroImages)
-        }
-      } catch (error) {
-        console.warn("Hero slideshow validation failed", error)
-        if (!cancelled) {
-          setSlides(heroImages)
-        }
-      }
-    }
-
-    void validateImages()
-
-    return () => {
-      cancelled = true
-    }
-  }, [heroImages])
-
-  useEffect(() => {
-    if (slides.length <= 1) return
+    if (heroImages.length <= 1) return
 
     const timer = window.setInterval(() => {
-      setActiveIndex((current) => (current + 1) % slides.length)
+      setActiveIndex((current) => (current + 1) % heroImages.length)
     }, interval)
 
     return () => window.clearInterval(timer)
-  }, [interval, slides.length])
+  }, [heroImages.length, interval])
 
   return (
     <div className="absolute inset-0 -z-10">
-      {slides.map((src, index) => (
+      {heroImages.map((src, index) => (
         <div
           key={src}
           className={`absolute inset-0 transition-opacity ${index === activeIndex ? "opacity-100" : "opacity-0"}`}
