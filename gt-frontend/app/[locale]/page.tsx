@@ -6,10 +6,11 @@ import { Footer } from "@/components/footer"
 import { BreadcrumbSchema, OrganizationSchema } from "@/components/structured-data"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, ArrowDown, MapPin, Calendar, Users, Compass, Camera, Sparkles, Star } from "lucide-react"
+import { ArrowRight, ArrowDown, MapPin, Calendar, Users, Compass, Camera, Sparkles, Star, Mountain } from "lucide-react"
 import { absoluteUrl } from "@/lib/seo"
 import { assetUrl } from "@/lib/assets"
 import { HeroSlideshow } from "@/components/home/hero-slideshow"
+import { majorMountainTreks } from "@/lib/treks-data"
 
 export const metadata: Metadata = {
   title: "Luxury African Safari Tours & Tailor-Made Travel Packages",
@@ -82,6 +83,11 @@ const destinationHighlights = [
     image: "/gallery/lunch-00.webp",
   },
 ]
+
+const trekHighlightIds = ["kili-lemosho", "kili-machame", "meru"] as const
+const trekHighlights = trekHighlightIds
+  .map((id) => majorMountainTreks.find((trek) => trek.id === id))
+  .filter((trek) => Boolean(trek))
 
 const experiencePillars = [
   {
@@ -205,6 +211,114 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-[#04080c] py-24 text-white">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.10),_rgba(4,8,12,0.92))]" />
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="mb-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+            <div className="space-y-5">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-2 font-mono text-xs uppercase tracking-[0.35em] text-white/80">
+                Treks
+              </span>
+              <h2 className="text-4xl md:text-5xl font-serif text-balance">High-altitude summits and volcanic ridgelines.</h2>
+              <p className="font-mono text-sm text-white/75 leading-relaxed max-w-2xl">
+                Compare Tanzania’s most iconic routes—from Kilimanjaro to Meru—and continue onward into safari circuits or Zanzibar recovery days.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-[11px] font-mono uppercase tracking-[0.25em] text-white/70">
+                  Guided routes
+                </span>
+                <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-[11px] font-mono uppercase tracking-[0.25em] text-white/70">
+                  Acclimatization-first pacing
+                </span>
+                <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-[11px] font-mono uppercase tracking-[0.25em] text-white/70">
+                  Summit + safari combos
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full border border-white/30 bg-white px-8 text-base font-semibold text-primary shadow-[0_18px_45px_rgba(255,255,255,0.15)] transition hover:-translate-y-0.5 hover:bg-white/90"
+              >
+                <Link href="/treks">Browse all treks</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full border-white/60 bg-white/5 px-8 text-base font-semibold text-white transition hover:bg-white/15"
+              >
+                <Link href="/contact">Plan a trek</Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            {trekHighlights.map((trek) => {
+              if (!trek) return null
+
+              return (
+                <Card
+                  key={trek.id}
+                  className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-black/30 text-white shadow-[0_30px_80px_rgba(2,6,23,0.55)]"
+                >
+                  <div className="absolute inset-0">
+                    <Image
+                      src={assetUrl(trek.image)}
+                      alt={trek.title}
+                      fill
+                      unoptimized
+                      className="object-cover brightness-[0.85] transition duration-[2000ms] ease-out group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
+                  </div>
+
+                  <Link href={`/treks/${trek.slug}`} className="absolute inset-0 z-10" aria-label={`View trek details for ${trek.title}`}>
+                    <span className="sr-only">View trek details</span>
+                  </Link>
+
+                  <CardContent className="relative z-20 flex min-h-[360px] flex-col justify-end p-6">
+                    <div className="rounded-3xl border border-white/15 bg-black/40 p-5 backdrop-blur">
+                      <div className="space-y-2">
+                        <p className="text-[11px] font-mono uppercase tracking-[0.35em] text-white/70 flex items-center gap-2">
+                          <MapPin className="h-3.5 w-3.5" /> {trek.location}
+                        </p>
+                        <h3 className="text-2xl font-serif leading-tight text-balance">{trek.title}</h3>
+                      </div>
+
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
+                          <Calendar className="h-4 w-4" /> {trek.duration}
+                        </span>
+                        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
+                          <Mountain className="h-4 w-4" /> {trek.elevation}
+                        </span>
+                        <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
+                          {trek.difficulty}
+                        </span>
+                      </div>
+
+                      <div className="mt-5">
+                        <Button
+                          asChild
+                          className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-md shadow-primary/20 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
+                        >
+                          <Link href={`/treks/${trek.slug}`}>
+                            View trek details <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </section>
