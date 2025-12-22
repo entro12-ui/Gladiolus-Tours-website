@@ -41,11 +41,15 @@ export const metadata: Metadata = {
 }
 
 function TrekCard({ trek }: { trek: Trek }) {
-  const { title, location, duration, elevation, difficulty, bestTime, permits, description, highlights, image } = trek
+  const { title, location, duration, elevation, difficulty, bestTime, permits, description, highlights, image, slug } = trek
+  const detailsHref = `/treks/${slug}`
 
   return (
     <Card className="overflow-hidden rounded-3xl border-border/40 bg-background py-0 gap-0 transition hover:-translate-y-1 hover:shadow-xl">
       <div className="relative h-60 overflow-hidden">
+        <Link href={detailsHref} aria-label={`View details for ${title}`} className="absolute inset-0 z-10">
+          <span className="sr-only">View details</span>
+        </Link>
         <Image src={assetUrl(image)} alt={title} fill unoptimized className="object-cover transition duration-700 hover:scale-110" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
         <div className="absolute bottom-5 left-5 right-5 text-white space-y-2">
@@ -98,9 +102,16 @@ function TrekCard({ trek }: { trek: Trek }) {
             asChild
             className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary px-7 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 hover:from-primary-alt/90 hover:to-primary/90"
           >
-            <Link href="/contact">
-              Plan this trek <ArrowRight className="ml-2 h-5 w-5" />
+            <Link href={detailsHref}>
+              View details <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="mt-3 w-full rounded-full border-primary/40 bg-white/60 py-5 text-sm font-semibold text-primary hover:bg-white"
+          >
+            <Link href="/contact">Plan this trek</Link>
           </Button>
         </div>
       </CardContent>
