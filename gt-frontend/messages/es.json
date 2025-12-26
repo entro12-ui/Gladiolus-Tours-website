@@ -86,5 +86,20 @@
     "copyright": "Todos los derechos reservados.",
     "quickLinks": "Enlaces Rápidos",
     "contactInfo": "Contáctanos"
+  },
+  "notFound": {
+    "title": "No encontramos esa página, pero el viaje continúa.",
+    "description": "El enlace que seguiste puede haber cambiado o nunca existió. Permítenos guiarte hacia el circuito, trekking o itinerario adecuado.",
+    "ctaPrimary": "Volver al inicio",
+    "ctaSecondary": "Contactar a nuestro equipo",
+    "suggestedHeading": "Secciones populares para explorar",
+    "suggestedSubheading": "Comienza con una de estas experiencias distintivas mientras trazamos el resto.",
+    "suggestionSafaris": "Safaris Signature",
+    "suggestionSafarisDesc": "Explora circuitos de safari cinematográficos centrados en los grandes momentos de fauna en Tanzania.",
+    "suggestionTreks": "Treks en Tanzania",
+    "suggestionTreksDesc": "Compara rutas del Kilimanjaro, ascensos al Monte Meru y caminatas en las tierras altas.",
+    "suggestionDestinations": "Destinos",
+    "suggestionDestinationsDesc": "Descubre Serengeti, Ngorongoro, Zanzíbar y otros paisajes icónicos.",
+    "exploreLink": "Explorar"
   }
 }

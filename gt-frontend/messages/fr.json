@@ -86,5 +86,20 @@
     "copyright": "Tous droits réservés.",
     "quickLinks": "Liens Rapides",
     "contactInfo": "Nous Contacter"
+  },
+  "notFound": {
+    "title": "Nous ne trouvons pas cette page, mais votre voyage continue.",
+    "description": "Le lien suivi a peut-être changé ou n’a jamais existé. Laissez-nous vous guider vers le circuit, le trek ou l’itinéraire idéal.",
+    "ctaPrimary": "Revenir à l’accueil",
+    "ctaSecondary": "Contacter notre équipe",
+    "suggestedHeading": "Sections populaires à explorer",
+    "suggestedSubheading": "Commencez par l’une de ces expériences signature pendant que nous traçons la suite.",
+    "suggestionSafaris": "Safaris Signature",
+    "suggestionSafarisDesc": "Découvrez des circuits safari cinématographiques centrés sur les moments sauvages iconiques de la Tanzanie.",
+    "suggestionTreks": "Treks en Tanzanie",
+    "suggestionTreksDesc": "Comparez les voies du Kilimandjaro, les ascensions du Mont Meru et les randonnées dans les hautes terres.",
+    "suggestionDestinations": "Destinations",
+    "suggestionDestinationsDesc": "Explorez le Serengeti, le Ngorongoro, Zanzibar et d’autres paysages emblématiques.",
+    "exploreLink": "Explorer"
   }
 }

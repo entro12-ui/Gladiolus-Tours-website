@@ -86,5 +86,20 @@
     "copyright": "All rights reserved.",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Us"
+  },
+  "notFound": {
+    "title": "We can’t find that page, but the journey continues.",
+    "description": "The link you followed may have moved or never existed. Let’s guide you toward the right circuit, trek, or itinerary.",
+    "ctaPrimary": "Return Home",
+    "ctaSecondary": "Contact Our Team",
+    "suggestedHeading": "Popular sections to explore",
+    "suggestedSubheading": "Start with one of these signature experiences while we help map the rest.",
+    "suggestionSafaris": "Signature Safaris",
+    "suggestionSafarisDesc": "Browse cinematic safari circuits crafted around Tanzania’s epic wildlife moments.",
+    "suggestionTreks": "Tanzania Treks",
+    "suggestionTreksDesc": "Compare Kilimanjaro routes, Mount Meru ascents, and highland walks.",
+    "suggestionDestinations": "Destinations",
+    "suggestionDestinationsDesc": "Dive into Serengeti, Ngorongoro, Zanzibar, and more iconic landscapes.",
+    "exploreLink": "Explore"
   }
 }
