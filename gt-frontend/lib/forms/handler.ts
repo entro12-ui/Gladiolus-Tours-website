@@ -65,6 +65,8 @@ export async function handleFormRoute<T extends { turnstileToken: string }>(req:
     console.error("[form] server error", error)
 
     const message = error instanceof Error ? error.message : ""
+    const maybeAny = error as any
+    const smtpErrCode = typeof maybeAny?.code === "string" ? (maybeAny.code as string) : ""
 
     if (message === "TURNSTILE_SECRET_KEY is not set") {
       return NextResponse.json(
@@ -82,6 +84,19 @@ export async function handleFormRoute<T extends { turnstileToken: string }>(req:
     ) {
       return NextResponse.json(
         { ok: false, error: "Server misconfiguration", code: "missing_smtp_config" },
+        { status: 500 }
+      )
+    }
+
+    if (
+      smtpErrCode === "EAUTH" ||
+      smtpErrCode === "ECONNECTION" ||
+      smtpErrCode === "ETIMEDOUT" ||
+      smtpErrCode === "EENVELOPE" ||
+      smtpErrCode === "EMESSAGE"
+    ) {
+      return NextResponse.json(
+        { ok: false, error: "Email delivery failed", code: "smtp_send_failed" },
         { status: 500 }
       )
     }
