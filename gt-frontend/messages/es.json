@@ -10,6 +10,111 @@
     "contact": "Contáctanos",
     "bookNow": "Reservar un Safari"
   },
+  "navDetails": {
+    "defaultCta": "Explorar",
+    "treks": {
+      "description": "Ascensos guiados por expertos en Kilimanjaro, Meru y las tierras altas volcánicas.",
+      "cta": "Planear un Trek",
+      "highlights": [
+        {
+          "title": "Rutas del Kilimanjaro",
+          "description": "Compara Machame, Lemosho y Rongai con perfiles de altitud.",
+          "href": "/treks"
+        },
+        {
+          "title": "Ascensos al Monte Meru",
+          "description": "Travesías más cortas para aclimatar con amaneceres en el cráter.",
+          "href": "/treks"
+        }
+      ]
+    },
+    "safaris": {
+      "description": "Safaris a medida en el norte, sur y la costa de Tanzania.",
+      "cta": "Ver Safaris",
+      "highlights": [
+        {
+          "title": "Gran Migración",
+          "description": "Sigue los cruces de ríos con campamentos móviles en el Serengeti.",
+          "href": "/safaris"
+        },
+        {
+          "title": "Safaris Familiares",
+          "description": "Ritmo flexible, guías para niños y vehículos privados.",
+          "href": "/safaris"
+        }
+      ]
+    },
+    "adventures": {
+      "description": "Viajes culturales, globos aerostáticos y escapadas costeras.",
+      "cta": "Descubrir Aventuras",
+      "highlights": [
+        {
+          "title": "Encuentros Culturales",
+          "description": "Visita comunidades masái y antiguas ciudades comerciales.",
+          "href": "/adventures"
+        },
+        {
+          "title": "Extensiones a Zanzíbar",
+          "description": "Combina safaris con tours de especias y atardeceres en dhow.",
+          "href": "/adventures"
+        }
+      ]
+    },
+    "destinations": {
+      "description": "Parques seleccionados desde el Serengeti hasta Ruaha.",
+      "cta": "Explorar Destinos",
+      "highlights": [
+        {
+          "title": "Circuito del Norte",
+          "description": "Serengeti, Ngorongoro, Tarangire y Lago Manyara.",
+          "href": "/destinations"
+        },
+        {
+          "title": "Sur Salvaje",
+          "description": "Valles de baobabs en Ruaha y canales del Selous.",
+          "href": "/destinations"
+        }
+      ]
+    },
+    "gallery": {
+      "description": "Historias visuales de cumbres y safaris en marcha.",
+      "cta": "Ver Galería",
+      "highlights": [
+        {
+          "title": "Ensayos Fotográficos",
+          "description": "Cruces de migración, vistas del cráter y vida en los lodges.",
+          "href": "/gallery"
+        }
+      ]
+    },
+    "about": {
+      "description": "Operador tanzano con más de 10 años guiando expediciones.",
+      "cta": "Conoce al Equipo",
+      "highlights": [
+        {
+          "title": "Nuestra Historia",
+          "description": "Cómo nació Gladiolus Tours y nuestra misión.",
+          "href": "/about"
+        },
+        {
+          "title": "Opiniones de Viajeros",
+          "description": "Testimonios de quienes viajaron con nosotros.",
+          "href": "/about"
+        }
+      ]
+    },
+    "contact": {
+      "description": "Planificadores dedicados listos para diseñar tu itinerario en 24 horas.",
+      "cta": "Contactar Expertos",
+      "highlights": [
+        {
+          "title": "Agenda una Llamada",
+          "description": "Programa una sesión con nuestros diseñadores de safaris.",
+          "href": "/contact"
+        }
+      ]
+    }
+  },
   "home": {
     "heroBadge": "Safaris de Lujo a Medida",
     "heroTitle": "Safaris Africanos de Lujo Diseñados por Expertos Locales",

@@ -10,6 +10,111 @@
     "contact": "Contact Us",
     "bookNow": "Book a Safari"
   },
+  "navDetails": {
+    "defaultCta": "Explore",
+    "treks": {
+      "description": "Expertly guided treks across Kilimanjaro, Meru, and the volcanic highlands.",
+      "cta": "Plan a Trek",
+      "highlights": [
+        {
+          "title": "Kilimanjaro Routes",
+          "description": "Compare Machame, Lemosho, and Rongai itineraries with altitude profiles.",
+          "href": "/treks"
+        },
+        {
+          "title": "Mount Meru Ascents",
+          "description": "Shorter acclimatization climbs with crater rim sunrises.",
+          "href": "/treks"
+        }
+      ]
+    },
+    "safaris": {
+      "description": "Tailor-made safaris across Northern, Southern, and coastal Tanzania.",
+      "cta": "View Safaris",
+      "highlights": [
+        {
+          "title": "Great Migration",
+          "description": "Track river crossings with mobile camps in the Serengeti.",
+          "href": "/safaris"
+        },
+        {
+          "title": "Family Safaris",
+          "description": "Flexible pacing, kid-friendly guides, and private vehicles.",
+          "href": "/safaris"
+        }
+      ]
+    },
+    "adventures": {
+      "description": "Immersive cultural journeys, hot-air balloons, and coastal escapes.",
+      "cta": "Discover Adventures",
+      "highlights": [
+        {
+          "title": "Cultural Encounters",
+          "description": "Visit Maasai communities and ancient trade towns.",
+          "href": "/adventures"
+        },
+        {
+          "title": "Zanzibar Extensions",
+          "description": "Pair safaris with spice tours and dhow sunsets.",
+          "href": "/adventures"
+        }
+      ]
+    },
+    "destinations": {
+      "description": "Handpicked parks and circuits spanning Serengeti to Ruaha.",
+      "cta": "Browse Destinations",
+      "highlights": [
+        {
+          "title": "Northern Circuit",
+          "description": "Serengeti, Ngorongoro, Tarangire, and Lake Manyara.",
+          "href": "/destinations"
+        },
+        {
+          "title": "Southern Wilderness",
+          "description": "Selous waterways and Ruaha baobab valleys.",
+          "href": "/destinations"
+        }
+      ]
+    },
+    "gallery": {
+      "description": "Visual stories from summit bids and safari game drives.",
+      "cta": "View Gallery",
+      "highlights": [
+        {
+          "title": "Photo Essays",
+          "description": "Migration crossings, crater vistas, and lodge life.",
+          "href": "/gallery"
+        }
+      ]
+    },
+    "about": {
+      "description": "A Tanzanian-owned outfitter with 10+ years of guiding expertise.",
+      "cta": "Meet the Team",
+      "highlights": [
+        {
+          "title": "Our Story",
+          "description": "How Gladiolus Tours began and what drives us today.",
+          "href": "/about"
+        },
+        {
+          "title": "Guest Reviews",
+          "description": "Hear from travelers who trekked and explored with us.",
+          "href": "/about"
+        }
+      ]
+    },
+    "contact": {
+      "description": "Dedicated planners ready to craft your itinerary in 24 hours.",
+      "cta": "Contact Experts",
+      "highlights": [
+        {
+          "title": "Plan a Call",
+          "description": "Schedule a planning session with our safari designers.",
+          "href": "/contact"
+        }
+      ]
+    }
+  },
   "home": {
     "heroBadge": "Tailor-made Luxury Safaris",
     "heroTitle": "Luxury African Safaris Crafted by Local Experts",

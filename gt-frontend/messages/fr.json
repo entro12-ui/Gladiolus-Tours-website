@@ -10,6 +10,111 @@
     "contact": "Contactez-nous",
     "bookNow": "Réserver un Safari"
   },
+  "navDetails": {
+    "defaultCta": "Explorer",
+    "treks": {
+      "description": "Ascensions guidées du Kilimandjaro, du Meru et des hauts plateaux volcaniques.",
+      "cta": "Préparer un Trek",
+      "highlights": [
+        {
+          "title": "Voies du Kilimandjaro",
+          "description": "Comparez Machame, Lemosho et Rongai avec leurs profils d’altitude.",
+          "href": "/treks"
+        },
+        {
+          "title": "Ascensions du Mont Meru",
+          "description": "Itinéraires plus courts pour l’acclimatation avec lever de soleil sur le cratère.",
+          "href": "/treks"
+        }
+      ]
+    },
+    "safaris": {
+      "description": "Safaris sur mesure dans le nord, le sud et la côte tanzanienne.",
+      "cta": "Voir les Safaris",
+      "highlights": [
+        {
+          "title": "Grande Migration",
+          "description": "Suivez les traversées de rivières avec des camps mobiles au Serengeti.",
+          "href": "/safaris"
+        },
+        {
+          "title": "Safaris Familiaux",
+          "description": "Rythme flexible, guides adaptés aux enfants et véhicules privés.",
+          "href": "/safaris"
+        }
+      ]
+    },
+    "adventures": {
+      "description": "Immersions culturelles, montgolfières et escapades côtières.",
+      "cta": "Découvrir les Aventures",
+      "highlights": [
+        {
+          "title": "Rencontres Culturelles",
+          "description": "Visitez les communautés massaï et les cités marchandes historiques.",
+          "href": "/adventures"
+        },
+        {
+          "title": "Extensions Zanzibar",
+          "description": "Associez safaris, circuits d’épices et couchers de soleil en dhow.",
+          "href": "/adventures"
+        }
+      ]
+    },
+    "destinations": {
+      "description": "Parcs d’exception du Serengeti à Ruaha.",
+      "cta": "Explorer les Destinations",
+      "highlights": [
+        {
+          "title": "Circuit Nord",
+          "description": "Serengeti, Ngorongoro, Tarangire et lac Manyara.",
+          "href": "/destinations"
+        },
+        {
+          "title": "Sud Sauvage",
+          "description": "Selous et Ruaha avec leurs vallées de baobabs.",
+          "href": "/destinations"
+        }
+      ]
+    },
+    "gallery": {
+      "description": "Récits visuels de sommets et de safaris.",
+      "cta": "Voir la Galerie",
+      "highlights": [
+        {
+          "title": "Essais Photographiques",
+          "description": "Traversées de migration, vues sur les cratères et vie de lodge.",
+          "href": "/gallery"
+        }
+      ]
+    },
+    "about": {
+      "description": "Agence tanzanienne avec plus de 10 ans d’expérience terrain.",
+      "cta": "Rencontrer l’Équipe",
+      "highlights": [
+        {
+          "title": "Notre Histoire",
+          "description": "Découvrez la création de Gladiolus Tours et notre vision.",
+          "href": "/about"
+        },
+        {
+          "title": "Avis des Voyageurs",
+          "description": "Retours d’expérience des explorateurs que nous avons guidés.",
+          "href": "/about"
+        }
+      ]
+    },
+    "contact": {
+      "description": "Planificateurs dédiés répondant sous 24 h avec un itinéraire personnalisé.",
+      "cta": "Contacter nos Experts",
+      "highlights": [
+        {
+          "title": "Programmer un Appel",
+          "description": "Réservez un échange avec nos concepteurs de safaris.",
+          "href": "/contact"
+        }
+      ]
+    }
+  },
   "home": {
     "heroBadge": "Safaris de Luxe Sur Mesure",
     "heroTitle": "Safaris Africains de Luxe Conçus par des Experts Locaux",
