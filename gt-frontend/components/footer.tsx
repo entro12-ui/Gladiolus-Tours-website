@@ -1,8 +1,7 @@
 import Image from "next/image"
 import { Link } from "@/i18n/routing"
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import { NewsletterForm } from "@/components/newsletter-form"
 import { useTranslations } from "next-intl"
 
 const quickLinks = [
@@ -100,16 +99,13 @@ export function Footer() {
                 <p className="text-sm font-mono text-white/70 mb-4">
                   Receive curated safari stories and early access to expedition releases.
                 </p>
-                <form className="space-y-3">
-                  <Input
-                    type="email"
-                    placeholder="you@example.com"
-                    className="border border-white/20 bg-white/5 text-white placeholder:text-white/50"
-                  />
-                  <Button className="w-full rounded-full bg-secondary px-6 py-5 text-secondary-foreground font-semibold tracking-widest uppercase">
-                    Subscribe
-                  </Button>
-                </form>
+                <NewsletterForm
+                  sendConfirmationDefault
+                  inputClassName="border border-white/20 bg-white/5 text-white placeholder:text-white/50"
+                  buttonClassName="w-full rounded-full bg-secondary px-6 py-5 text-secondary-foreground font-semibold tracking-widest uppercase"
+                  labelClassName="text-white/80"
+                  mutedTextClassName="text-white/70"
+                />
               </div>
             </div>
           </div>

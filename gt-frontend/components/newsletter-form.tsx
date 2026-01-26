@@ -22,9 +22,19 @@ type NewsletterValues = z.infer<typeof NewsletterSchema>
 
 type NewsletterFormProps = {
   sendConfirmationDefault?: boolean
+  inputClassName?: string
+  buttonClassName?: string
+  labelClassName?: string
+  mutedTextClassName?: string
 }
 
-export function NewsletterForm({ sendConfirmationDefault = true }: NewsletterFormProps) {
+export function NewsletterForm({
+  sendConfirmationDefault = true,
+  inputClassName,
+  buttonClassName,
+  labelClassName,
+  mutedTextClassName,
+}: NewsletterFormProps) {
   const pathname = usePathname()
 
   const siteKey = useMemo(() => process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY, [])
@@ -85,17 +95,28 @@ export function NewsletterForm({ sendConfirmationDefault = true }: NewsletterFor
     <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-cols-1 gap-3">
         <div className="space-y-2">
-          <Label htmlFor="newsletterEmail">Email</Label>
-          <Input id="newsletterEmail" type="email" autoComplete="email" {...register("email")} />
+          <Label htmlFor="newsletterEmail" className={labelClassName}>
+            Email
+          </Label>
+          <Input
+            id="newsletterEmail"
+            type="email"
+            autoComplete="email"
+            className={inputClassName}
+            {...register("email")}
+          />
           {errors.email && <p className="text-sm text-destructive">{errors.email.message}</p>}
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="newsletterName">Name (optional)</Label>
-          <Input id="newsletterName" autoComplete="name" {...register("name")} />
+          <Label htmlFor="newsletterName" className={labelClassName}>
+            Name (optional)
+          </Label>
+          <Input id="newsletterName" autoComplete="name" className={inputClassName} {...register("name")} />
         </div>
 
-        <label className="flex items-center gap-2 text-sm text-muted-foreground">
+        <label className={`flex items-center gap-2 text-sm ${mutedTextClassName ?? "text-muted-foreground"}`}
+        >
           <input
             type="checkbox"
             checked={!!sendConfirmation}
@@ -121,7 +142,11 @@ export function NewsletterForm({ sendConfirmationDefault = true }: NewsletterFor
         )}
       </div>
 
-      <Button type="submit" disabled={isSubmitting || !turnstileToken || !siteKey}>
+      <Button
+        type="submit"
+        disabled={isSubmitting || !turnstileToken || !siteKey}
+        className={buttonClassName}
+      >
         {isSubmitting ? "Submitting…" : "Subscribe"}
       </Button>
     </form>
