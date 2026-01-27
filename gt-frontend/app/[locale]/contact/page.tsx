@@ -2,12 +2,8 @@ import type { Metadata } from "next"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
+import { ContactForm } from "@/components/contact-form"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { BreadcrumbSchema, StructuredData, OrganizationSchema } from "@/components/structured-data"
 import { absoluteUrl } from "@/lib/seo"
 
@@ -113,105 +109,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card>
-                <CardContent className="p-8">
-                  <h2 className="text-3xl font-serif text-foreground mb-6">Send Us a Message</h2>
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="firstName" className="font-mono text-sm">
-                          First Name *
-                        </Label>
-                        <Input id="firstName" placeholder="John" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="lastName" className="font-mono text-sm">
-                          Last Name *
-                        </Label>
-                        <Input id="lastName" placeholder="Doe" required />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="email" className="font-mono text-sm">
-                          Email *
-                        </Label>
-                        <Input id="email" type="email" placeholder="john@example.com" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="phone" className="font-mono text-sm">
-                          Phone
-                        </Label>
-                        <Input id="phone" type="tel" placeholder="+1 234 567 8900" />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="destination" className="font-mono text-sm">
-                        Interested Destination
-                      </Label>
-                      <Select>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select a destination" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="serengeti">Serengeti National Park</SelectItem>
-                          <SelectItem value="ngorongoro">Ngorongoro Crater</SelectItem>
-                          <SelectItem value="tarangire">Tarangire National Park</SelectItem>
-                          <SelectItem value="kilimanjaro">Mount Kilimanjaro</SelectItem>
-                          <SelectItem value="custom">Custom Itinerary</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="travelers" className="font-mono text-sm">
-                          Number of Travelers
-                        </Label>
-                        <Select>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="1">1 Person</SelectItem>
-                            <SelectItem value="2">2 People</SelectItem>
-                            <SelectItem value="3-4">3-4 People</SelectItem>
-                            <SelectItem value="5-8">5-8 People</SelectItem>
-                            <SelectItem value="9+">9+ People</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="date" className="font-mono text-sm">
-                          Preferred Travel Date
-                        </Label>
-                        <Input id="date" type="date" />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message" className="font-mono text-sm">
-                        Message *
-                      </Label>
-                      <Textarea id="message" placeholder="Tell us about your dream safari..." rows={6} required />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-3 text-base font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 hover:from-primary-alt/90 hover:to-primary/90"
-                    >
-                      Send Inquiry
-                    </Button>
-
-                    <p className="font-mono text-xs text-muted-foreground text-center">
-                      We typically respond within 24 hours
-                    </p>
-                  </form>
-                </CardContent>
-              </Card>
+              <ContactForm />
             </div>
 
             {/* Contact Information */}
