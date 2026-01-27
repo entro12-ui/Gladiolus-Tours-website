@@ -2,10 +2,12 @@
 
 import { useParams } from "next/navigation"
 import { usePathname } from "next/navigation"
+import { Turnstile } from "@marsidev/react-turnstile"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { toast } from "sonner"
 import { z } from "zod"
+import { useMemo, useState } from "react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -32,6 +34,10 @@ export function InquiryForm() {
   const params = useParams()
   const pathname = usePathname()
   const locale = (params.locale as string) || "en"
+
+  const siteKey = useMemo(() => process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY, [])
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
+  const [turnstileKey, setTurnstileKey] = useState(0)
 
   const {
     register,
@@ -61,13 +67,17 @@ export function InquiryForm() {
 
   const onSubmit = async (values: InquiryValues) => {
     try {
-      const res = await fetch("/api/leads", {
+      if (!turnstileToken) {
+        toast.error("Please complete the verification.")
+        return
+      }
+
+      const res = await fetch("/api/inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          type: "inquiry",
+          turnstileToken,
           ...values,
-          locale,
           sourcePath: pathname,
         }),
       })
@@ -80,6 +90,8 @@ export function InquiryForm() {
 
       toast.success("Inquiry sent. We’ll respond within 24 hours.")
       reset()
+      setTurnstileToken(null)
+      setTurnstileKey((k) => k + 1)
     } catch {
       toast.error("Unable to send your inquiry")
     }
@@ -199,10 +211,26 @@ export function InquiryForm() {
             {errors.message && <p className="text-sm text-destructive">{errors.message.message}</p>}
           </fieldset>
 
+          <div className="space-y-3">
+            <p className="text-sm font-medium text-foreground">Verification</p>
+            {!siteKey ? (
+              <p className="text-sm text-destructive">Turnstile is not configured.</p>
+            ) : (
+              <Turnstile
+                key={turnstileKey}
+                siteKey={siteKey}
+                options={{ language: locale }}
+                onSuccess={(token) => setTurnstileToken(token)}
+                onError={() => setTurnstileToken(null)}
+                onExpire={() => setTurnstileToken(null)}
+              />
+            )}
+          </div>
+
           <Button
             type="submit"
             size="lg"
-            disabled={isSubmitting}
+            disabled={isSubmitting || !turnstileToken || !siteKey}
             className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-3 text-base font-semibold tracking-wide text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 hover:from-primary-alt/90 hover:to-primary/90"
           >
             {isSubmitting ? "Sending…" : "Design My Safari"}
