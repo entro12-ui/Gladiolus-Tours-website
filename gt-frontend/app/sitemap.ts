@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 import { destinations } from "@/lib/destinations-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://gladiolustours.com"
+  const baseUrl = "https://www.gladiolustours.com"
 
   // Static pages
   const staticPages = ["", "/about", "/destinations", "/gallery", "/contact", "/faq"].map(

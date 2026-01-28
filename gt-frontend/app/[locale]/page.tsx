@@ -56,14 +56,14 @@ const signatureCollections = [
     description: "Summit via Lemosho, recover in crater villas, and track tree-climbing lions at Lake Manyara.",
     route: "Kilimanjaro • Manyara • Crater",
     duration: "12 days",
-    image: "/placeholder.svg?height=900&width=1200",
+    image: "/placeholder.svg",
   },
   {
     name: "Southern Solitude",
     description: "Fly into Ruaha and Nyerere for walking safaris, boating on the Rufiji, and sleep-outs on raised decks.",
     route: "Ruaha • Nyerere",
     duration: "8 days",
-    image: "/placeholder.svg?height=900&width=1200",
+    image: "/placeholder.svg",
   },
 ]
 

@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/seo"
 import "../globals.css"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gladiolustours.com"),
+  metadataBase: new URL("https://www.gladiolustours.com"),
   title: {
     default: "Gladiolus Tours - Unforgettable African Safari Adventures",
     template: "%s | Gladiolus Tours",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     alternateLocale: ["fr_FR", "es_ES"],
-    url: "https://gladiolustours.com",
+    url: "https://www.gladiolustours.com",
     title: "Gladiolus Tours - Unforgettable African Safari Adventures",
     description: "Experience the wonder of Africa with Gladiolus Tours",
     siteName: "Gladiolus Tours",

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://gladiolustours.com/sitemap.xml",
+    sitemap: "https://www.gladiolustours.com/sitemap.xml",
   }
 }

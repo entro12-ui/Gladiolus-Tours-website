@@ -22,7 +22,7 @@ export function OrganizationSchema() {
     "@type": "TravelAgency",
     name: "Gladiolus Tours",
     description: "Premier African safari tour operator specializing in Tanzania wildlife adventures",
-    url: "https://gladiolustours.com",
+    url: "https://www.gladiolustours.com",
     logo: absoluteUrl("/logo-no-bg.png"),
     image: absoluteUrl("/og-image.jpg"),
     telephone: "+255-123-456-789",
