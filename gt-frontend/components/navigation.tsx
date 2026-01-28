@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useMemo, useState } from "react"
 import { Menu, X } from "lucide-react"
 import { useTranslations } from "next-intl"
@@ -71,9 +72,21 @@ export function Navigation() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="text-2xl font-serif text-primary transition-colors group-hover:text-primary-alt">
-              Gladiolus Tours
+          <Link href="/" className="flex items-center gap-2 group" aria-label="Gladiolus Tours home">
+            <div className="flex items-center gap-3">
+              <div className="relative h-10 w-10 rounded-full border border-border/60 bg-background/80 p-1 shadow-sm">
+                <Image
+                  src="/icon-192.png"
+                  alt="Gladiolus Tours crest"
+                  fill
+                  sizes="40px"
+                  className="object-contain drop-shadow-[0_8px_18px_rgba(0,0,0,0.35)]"
+                  priority
+                />
+              </div>
+              <div className="text-2xl font-serif text-primary transition-colors group-hover:text-primary-alt">
+                Gladiolus Tours
+              </div>
             </div>
           </Link>
 
