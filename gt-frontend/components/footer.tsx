@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Link } from "@/i18n/routing"
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react"
 import { Input } from "@/components/ui/input"
@@ -26,9 +27,21 @@ export function Footer() {
           {/* Left column */}
           <div className="space-y-10">
             <div className="space-y-6">
-              <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1 font-mono text-xs tracking-[0.3em] uppercase text-white/80">
-                GLADIOLUS TOURS
-              </p>
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1 font-mono text-xs tracking-[0.3em] uppercase text-white/80">
+                  GLADIOLUS TOURS
+                </p>
+                <div className="relative h-16 w-16 sm:h-20 sm:w-20">
+                  <Image
+                    src="/logo-no-bg.png"
+                    alt="Gladiolus Tours emblem"
+                    fill
+                    sizes="80px"
+                    className="object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)]"
+                    priority
+                  />
+                </div>
+              </div>
               <p className="text-4xl md:text-5xl font-serif leading-tight text-white">
                 Crafted journeys across East Africa's most breathtaking landscapes
               </p>

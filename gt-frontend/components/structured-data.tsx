@@ -1,4 +1,5 @@
 import Script from "next/script"
+import { absoluteUrl } from "@/lib/seo"
 
 interface StructuredDataProps {
   data: object
@@ -22,8 +23,8 @@ export function OrganizationSchema() {
     name: "Gladiolus Tours",
     description: "Premier African safari tour operator specializing in Tanzania wildlife adventures",
     url: "https://gladiolustours.com",
-    logo: "https://gladiolustours.com/logo.png",
-    image: "https://gladiolustours.com/og-image.jpg",
+    logo: absoluteUrl("/logo-no-bg.png"),
+    image: absoluteUrl("/og-image.jpg"),
     telephone: "+255-123-456-789",
     email: "info@gladiolustours.com",
     address: {

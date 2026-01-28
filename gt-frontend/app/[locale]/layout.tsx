@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
+import { absoluteUrl } from "@/lib/seo"
 import "../globals.css"
 
 export const metadata: Metadata = {
@@ -36,22 +37,28 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon.ico",
+        url: absoluteUrl("/favicon.ico"),
+        type: "image/x-icon",
+        sizes: "32x32",
       },
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
+        url: absoluteUrl("/logo-no-bg.png"),
+        type: "image/png",
+        sizes: "512x512",
       },
       {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: absoluteUrl("/logo-002.png"),
+        type: "image/png",
+        sizes: "512x512",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: [
+      {
+        url: absoluteUrl("/logo-no-bg.png"),
+        type: "image/png",
+      },
+    ],
+    shortcut: [absoluteUrl("/logo-no-bg.png")],
   },
   manifest: "/manifest.json",
   openGraph: {
