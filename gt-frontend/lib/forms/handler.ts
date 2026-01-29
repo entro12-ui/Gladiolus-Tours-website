@@ -1,4 +1,5 @@
 import type { ZodType } from "zod"
+import { NextResponse } from "next/server"
 
 import { sendMail, type MailAddress } from "@/lib/forms/mailer"
 import { badRequest, forbidden, ok, serverError } from "@/lib/forms/response"
@@ -33,7 +34,10 @@ export async function handleFormRoute<T extends { turnstileToken: string }>(req:
       }
 
       console.warn("[turnstile] verification failed", { codes: verify.codes })
-      return forbidden("Verification failed")
+      return NextResponse.json(
+        { ok: false, error: "Verification failed", codes: verify.codes ?? [] },
+        { status: 403 }
+      )
     }
 
     const data = opts.schema.safeParse(json)
