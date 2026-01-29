@@ -5,6 +5,8 @@ import { Analytics } from "@vercel/analytics/next"
 import { NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
+import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/sonner"
 import { routing } from "@/i18n/routing"
 import { absoluteUrl } from "@/lib/seo"
 import "../globals.css"
@@ -140,9 +142,12 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={`${headingFont.variable} ${bodyFont.variable} font-sans antialiased`}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+          <Toaster richColors closeButton />
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
