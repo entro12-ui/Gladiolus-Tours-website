@@ -63,6 +63,29 @@ export async function handleFormRoute<T extends { turnstileToken: string }>(req:
     return ok()
   } catch (error) {
     console.error("[form] server error", error)
+
+    const message = error instanceof Error ? error.message : ""
+
+    if (message === "TURNSTILE_SECRET_KEY is not set") {
+      return NextResponse.json(
+        { ok: false, error: "Server misconfiguration", code: "missing_turnstile_secret" },
+        { status: 500 }
+      )
+    }
+
+    if (
+      message === "FASTMAIL_SMTP_HOST is not set" ||
+      message === "FASTMAIL_SMTP_PORT is not set" ||
+      message === "FASTMAIL_SMTP_USER is not set" ||
+      message === "FASTMAIL_SMTP_PASS is not set" ||
+      message === "FASTMAIL_SMTP_PORT must be a number"
+    ) {
+      return NextResponse.json(
+        { ok: false, error: "Server misconfiguration", code: "missing_smtp_config" },
+        { status: 500 }
+      )
+    }
+
     return serverError("Something went wrong. Please try again.")
   }
 }
