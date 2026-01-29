@@ -1,6 +1,8 @@
 import { handleFormRoute } from "@/lib/forms/handler"
 import { NewsletterPayloadSchema, type NewsletterPayload } from "@/lib/forms/schemas"
 
+export const runtime = "nodejs"
+
 function formatNewsletterAdminEmail(data: NewsletterPayload) {
   const lines = [
     "New newsletter subscription.",

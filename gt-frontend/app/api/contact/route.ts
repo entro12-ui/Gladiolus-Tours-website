@@ -1,6 +1,8 @@
 import { handleFormRoute } from "@/lib/forms/handler"
 import { ContactPayloadSchema, type ContactPayload } from "@/lib/forms/schemas"
 
+export const runtime = "nodejs"
+
 function formatContactEmail(data: ContactPayload) {
   const lines = [
     "New contact message received.",

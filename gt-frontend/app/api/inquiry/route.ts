@@ -1,6 +1,8 @@
 import { handleFormRoute } from "@/lib/forms/handler"
 import { InquiryPayloadSchema, type InquiryPayload } from "@/lib/forms/schemas"
 
+export const runtime = "nodejs"
+
 function formatInquiryEmail(data: InquiryPayload) {
   const lines = [
     "New safari inquiry received.",
