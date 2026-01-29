@@ -43,9 +43,8 @@ export function LanguageSwitcher() {
   // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {
     return (
-      <Button variant="ghost" size="sm" className="gap-2">
+      <Button variant="ghost" size="icon" aria-label="Loading language menu">
         <Globe className="h-4 w-4" />
-        <span className="hidden sm:inline font-mono text-xs">Loading...</span>
       </Button>
     )
   }
@@ -53,9 +52,14 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-2" disabled={isPending}>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="rounded-full border border-border/60 bg-background/60"
+          disabled={isPending}
+          aria-label={`Change language from ${currentLocaleName}`}
+        >
           <Globe className="h-4 w-4" />
-          <span className="hidden sm:inline font-mono text-xs">{currentLocaleName}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
