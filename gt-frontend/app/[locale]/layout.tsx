@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Playfair_Display, Lato } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import { NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
@@ -148,7 +147,6 @@ export default async function LocaleLayout({
           </NextIntlClientProvider>
           <Toaster richColors closeButton />
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   )
