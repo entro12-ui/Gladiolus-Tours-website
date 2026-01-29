@@ -1,6 +1,7 @@
 "use client"
 
 import { useParams } from "next/navigation"
+import Image from "next/image"
 import { useRouter, usePathname } from "@/i18n/routing"
 import { useTransition, useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -8,9 +9,9 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Globe } from "lucide-react"
 
 const locales = [
-  { code: "en", name: "English" },
-  { code: "fr", name: "Français" },
-  { code: "es", name: "Español" },
+  { code: "en", name: "English", flagSrc: "/flags/en.svg", flagAlt: "United States" },
+  { code: "fr", name: "Français", flagSrc: "/flags/fr.svg", flagAlt: "France" },
+  { code: "es", name: "Español", flagSrc: "/flags/es.svg", flagAlt: "Spain" },
 ] as const
 
 export function LanguageSwitcher() {
@@ -39,6 +40,7 @@ export function LanguageSwitcher() {
   }
 
   const currentLocaleName = locales.find((l) => l.code === currentLocale)?.name || "English"
+  const currentLocaleFlag = locales.find((l) => l.code === currentLocale)
 
   // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {
@@ -59,7 +61,18 @@ export function LanguageSwitcher() {
           disabled={isPending}
           aria-label={`Change language from ${currentLocaleName}`}
         >
-          <Globe className="h-4 w-4" />
+          {currentLocaleFlag ? (
+            <Image
+              src={currentLocaleFlag.flagSrc}
+              alt={currentLocaleFlag.flagAlt}
+              width={18}
+              height={12}
+              className="rounded-sm"
+              priority
+            />
+          ) : (
+            <Globe className="h-4 w-4" />
+          )}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -67,10 +80,19 @@ export function LanguageSwitcher() {
           <DropdownMenuItem
             key={locale.code}
             onClick={() => handleLanguageChange(locale.code)}
-            className="font-mono text-sm"
+            className="text-sm"
             disabled={currentLocale === locale.code}
           >
-            {locale.name}
+            <span className="flex items-center gap-2">
+              <Image
+                src={locale.flagSrc}
+                alt={locale.flagAlt}
+                width={18}
+                height={12}
+                className="rounded-sm"
+              />
+              <span>{locale.name}</span>
+            </span>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
