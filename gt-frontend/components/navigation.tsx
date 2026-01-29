@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { useMemo, useState } from "react"
+import { useMemo, useState, type ElementType } from "react"
 import {
   Menu,
   X,
@@ -99,7 +99,7 @@ type SectionMeta = {
   badge: string
   accentClass: string
   accentText: string
-  icon: React.ElementType
+  icon: ElementType
 }
 
 const SECTION_ORDER = [
@@ -171,7 +171,7 @@ export function Navigation() {
                 {navSections.map((section) =>
                   DROPDOWN_SECTIONS.has(section.key) ? (
                     <NavigationMenuItem key={section.key}>
-                      <NavigationMenuTrigger className="bg-transparent px-3 text-[11px] font-mono tracking-[0.2em] uppercase text-foreground/80 transition-colors hover:text-primary data-[state=open]:text-primary">
+                      <NavigationMenuTrigger className="bg-transparent px-3 text-sm font-medium tracking-wide text-foreground/80 transition-colors hover:text-primary data-[state=open]:text-primary">
                         {section.label}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent className="md:w-[560px] lg:w-[720px]">
@@ -246,7 +246,7 @@ export function Navigation() {
                     </NavigationMenuItem>
                   ) : (
                     <NavigationMenuItem key={section.key}>
-                      <NavigationMenuLink asChild className="bg-transparent px-3 py-2 text-[11px] font-mono tracking-[0.2em] uppercase text-foreground/80 transition-colors hover:text-primary">
+                      <NavigationMenuLink asChild className="bg-transparent px-3 py-2 text-sm font-medium tracking-wide text-foreground/80 transition-colors hover:text-primary">
                         <Link href={section.href}>{section.label}</Link>
                       </NavigationMenuLink>
                     </NavigationMenuItem>
@@ -262,7 +262,7 @@ export function Navigation() {
               asChild
               className="group flex-none rounded-full border border-white/15 bg-gradient-to-r from-primary-alt to-primary px-6 py-3 text-white shadow-xl shadow-primary/30 ring-1 ring-primary/40 transition hover:-translate-y-0.5 hover:shadow-primary/45"
             >
-              <Link href="/contact" className="flex w-max items-center justify-between gap-3">
+              <Link href="/inquiry" className="flex w-max items-center justify-between gap-3">
                 <span className="text-sm font-semibold tracking-wide">{t("nav.bookNow")}</span>
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
                   <ArrowUpRight className="h-4 w-4" />
@@ -352,9 +352,9 @@ export function Navigation() {
               asChild
               className="rounded-2xl border border-white/15 bg-gradient-to-r from-primary-alt to-primary px-6 py-4 text-white shadow-lg shadow-primary/35"
             >
-              <Link href="/contact" onClick={closeMenu} className="flex w-full items-center justify-between gap-4">
+              <Link href="/inquiry" onClick={closeMenu} className="flex w-full items-center justify-between gap-3">
                 <div className="text-left">
-                  <p className="text-base font-semibold">{t("nav.bookNow")}</p>
+                  <p className="text-base font-semibold leading-tight">{t("nav.bookNow")}</p>
                   {conciergeTagline && <p className="text-sm text-white/80">{conciergeTagline}</p>}
                 </div>
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15">
