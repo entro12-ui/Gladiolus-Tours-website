@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { Playfair_Display, Lato } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
@@ -7,6 +8,19 @@ import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
 import { absoluteUrl } from "@/lib/seo"
 import "../globals.css"
+
+const headingFont = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-heading",
+})
+
+const bodyFont = Lato({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  display: "swap",
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.gladiolustours.com"),
@@ -125,7 +139,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className="font-sans antialiased">
+      <body className={`${headingFont.variable} ${bodyFont.variable} font-sans antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

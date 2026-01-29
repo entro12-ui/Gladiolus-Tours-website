@@ -2,7 +2,17 @@
 
 import Image from "next/image"
 import { useMemo, useState } from "react"
-import { Menu, X } from "lucide-react"
+import {
+  Menu,
+  X,
+  ArrowUpRight,
+  Mountain,
+  Compass,
+  Footprints,
+  MapIcon,
+  ImageIcon,
+  Sparkles,
+} from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/routing"
 import { Button } from "@/components/ui/button"
@@ -15,7 +25,14 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 type SectionHighlight = {
   title: string
@@ -29,8 +46,60 @@ type SectionCopy = {
   highlights?: SectionHighlight[]
 }
 
+const SECTION_META: Record<string, SectionMeta> = {
+  treks: {
+    badge: "High Altitude",
+    accentClass: "from-[#182437] via-[#1f2f4a] to-[#243655]",
+    accentText: "text-[#f0f6ff]",
+    icon: Mountain,
+  },
+  safaris: {
+    badge: "Flagship",
+    accentClass: "from-[#2b1b0f] via-[#3e2615] to-[#4a2d19]",
+    accentText: "text-[#ffd6a0]",
+    icon: Footprints,
+  },
+  adventures: {
+    badge: "Signature",
+    accentClass: "from-[#0f1f1f] via-[#1d3730] to-[#24463b]",
+    accentText: "text-[#c0f2da]",
+    icon: Sparkles,
+  },
+  destinations: {
+    badge: "Atlas",
+    accentClass: "from-[#1b1532] via-[#231f41] to-[#2f2a57]",
+    accentText: "text-[#d8c9ff]",
+    icon: MapIcon,
+  },
+  gallery: {
+    badge: "Visual",
+    accentClass: "from-[#1a1a1a] via-[#262626] to-[#333333]",
+    accentText: "text-[#f5f5f5]",
+    icon: ImageIcon,
+  },
+  about: {
+    badge: "Story",
+    accentClass: "from-[#1b2a2f] via-[#253b43] to-[#2f4f59]",
+    accentText: "text-[#d2f0ff]",
+    icon: Compass,
+  },
+  contact: {
+    badge: "Concierge",
+    accentClass: "from-[#2f1b1b] via-[#452525] to-[#5c3030]",
+    accentText: "text-[#ffd6d6]",
+    icon: Sparkles,
+  },
+}
+
 type SectionsDictionary = Record<string, SectionCopy> & {
   defaultCta?: string
+}
+
+type SectionMeta = {
+  badge: string
+  accentClass: string
+  accentText: string
+  icon: React.ElementType
 }
 
 const SECTION_ORDER = [
@@ -43,23 +112,28 @@ const SECTION_ORDER = [
   { key: "contact", href: "/contact" },
 ]
 
+const DROPDOWN_SECTIONS = new Set(["treks", "safaris", "adventures", "destinations"])
+
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const t = useTranslations()
 
   const navDetails = (t.raw("navDetails") ?? {}) as SectionsDictionary
   const defaultCta = navDetails.defaultCta || t("nav.bookNow")
+  const conciergeTagline = t("nav.bookNowTagline")
 
   const navSections = useMemo(
     () =>
       SECTION_ORDER.map((section) => {
         const details = navDetails[section.key] ?? {}
+        const meta = SECTION_META[section.key] ?? SECTION_META.safaris
         return {
           ...section,
           label: t(`nav.${section.key}`),
           description: details.description ?? "",
           cta: details.cta ?? defaultCta,
           highlights: details.highlights ?? [],
+          meta,
         }
       }),
     [navDetails, defaultCta, t],
@@ -94,64 +168,106 @@ export function Navigation() {
           <div className="hidden lg:flex items-center gap-6">
             <NavigationMenu className="flex-1">
               <NavigationMenuList className="gap-1">
-                {navSections.map((section) => (
-                  <NavigationMenuItem key={section.key}>
-                    <NavigationMenuTrigger className="bg-transparent px-3 text-[11px] font-mono tracking-[0.2em] uppercase text-foreground/80 transition-colors hover:text-primary data-[state=open]:text-primary">
-                      {section.label}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent className="w-[420px] md:w-[460px]">
-                      <div className="grid gap-4 rounded-2xl border border-border/70 bg-background/95 p-6 shadow-2xl ring-1 ring-primary/10">
-                        <div className="flex flex-col gap-3">
-                          <p className="text-base font-semibold text-primary">
-                            {section.label}
-                          </p>
-                          {section.description && (
-                            <p className="text-sm text-muted-foreground">
-                              {section.description}
-                            </p>
-                          )}
-                          <Button
-                            asChild
-                            size="sm"
-                            className="w-max rounded-full bg-gradient-to-r from-primary-alt to-primary px-6 py-1.5 text-[11px] font-semibold tracking-[0.2em] text-white shadow-lg shadow-primary/20"
+                {navSections.map((section) =>
+                  DROPDOWN_SECTIONS.has(section.key) ? (
+                    <NavigationMenuItem key={section.key}>
+                      <NavigationMenuTrigger className="bg-transparent px-3 text-[11px] font-mono tracking-[0.2em] uppercase text-foreground/80 transition-colors hover:text-primary data-[state=open]:text-primary">
+                        {section.label}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent className="md:w-[560px] lg:w-[720px]">
+                        <div className="grid gap-6 rounded-[32px] border border-border/70 bg-background/95 p-6 shadow-2xl ring-1 ring-primary/10 md:grid-cols-[240px_minmax(0,1fr)]">
+                          <div
+                            className={`flex h-full flex-col gap-4 rounded-3xl border border-border/50 bg-gradient-to-br ${section.meta.accentClass} p-5 shadow-inner`}
                           >
-                            <Link href={section.href}>{section.cta}</Link>
-                          </Button>
-                        </div>
-                        {section.highlights.length > 0 && (
-                          <div className="grid gap-2">
-                            {section.highlights.map((highlight) => (
-                              <NavigationMenuLink
-                                asChild
-                                key={`${section.key}-${highlight.title}`}
-                                className="rounded-xl border border-border/60 bg-muted/40 p-3 text-left transition hover:border-primary/60 hover:bg-background/80"
-                              >
-                                <Link href={highlight.href}>
-                                  <p className="text-sm font-semibold text-foreground">
-                                    {highlight.title}
-                                  </p>
-                                  <p className="text-xs text-muted-foreground">
-                                    {highlight.description}
-                                  </p>
-                                </Link>
-                              </NavigationMenuLink>
-                            ))}
+                            <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold tracking-[0.25em] uppercase text-foreground shadow-sm">
+                              <section.meta.icon className={`h-4 w-4 ${section.meta.accentText}`} />
+                              <span className={`${section.meta.accentText}`}>{section.meta.badge}</span>
+                            </div>
+                            <div className="space-y-2">
+                              <p className="text-xs font-mono uppercase tracking-[0.3em] text-primary/70">
+                                Gladiolus Signature
+                              </p>
+                              <p className="text-2xl font-serif text-primary">{section.label}</p>
+                            </div>
+                            {section.description && (
+                              <p className="text-sm leading-relaxed text-foreground/80">{section.description}</p>
+                            )}
+                            <Button
+                              asChild
+                              size="sm"
+                              className="mt-auto flex items-center rounded-2xl border border-white/20 bg-gradient-to-r from-primary-alt to-primary px-5 py-4 text-white shadow-lg shadow-primary/30 transition hover:shadow-primary/45"
+                            >
+                              <Link href={section.href} className="flex w-full items-center justify-between gap-4">
+                                <div className="text-left">
+                                  <p className="text-base font-semibold leading-tight">{section.cta}</p>
+                                  {conciergeTagline && <p className="text-sm text-white/85">{conciergeTagline}</p>}
+                                </div>
+                                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15">
+                                  <ArrowUpRight className="h-5 w-5" />
+                                </span>
+                              </Link>
+                            </Button>
                           </div>
-                        )}
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                ))}
+                          <div className="space-y-4">
+                            <div className="flex items-center justify-between">
+                              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted-foreground">
+                                Highlights
+                              </p>
+                              <span className="text-xs font-mono text-muted-foreground/70">
+                                {section.highlights.length.toString().padStart(2, "0")}
+                              </span>
+                            </div>
+                            <div className="grid gap-4 sm:grid-cols-2">
+                              {section.highlights.length > 0 ? (
+                                section.highlights.map((highlight) => (
+                                  <NavigationMenuLink
+                                    asChild
+                                    key={`${section.key}-${highlight.title}`}
+                                    className="group rounded-2xl border border-border/60 bg-muted/30 p-4 text-left transition hover:-translate-y-0.5 hover:border-primary/60 hover:bg-background/90"
+                                  >
+                                    <Link href={highlight.href} className="flex flex-col gap-2">
+                                      <div className="flex items-center justify-between">
+                                        <p className="text-sm font-semibold text-foreground">{highlight.title}</p>
+                                        <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground group-hover:text-primary" />
+                                      </div>
+                                      <p className="text-xs text-muted-foreground">{highlight.description}</p>
+                                    </Link>
+                                  </NavigationMenuLink>
+                                ))
+                              ) : (
+                                <div className="rounded-2xl border border-dashed border-border/50 p-4 text-sm text-muted-foreground">
+                                  {t("nav.bookNow")}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  ) : (
+                    <NavigationMenuItem key={section.key}>
+                      <NavigationMenuLink asChild className="bg-transparent px-3 py-2 text-[11px] font-mono tracking-[0.2em] uppercase text-foreground/80 transition-colors hover:text-primary">
+                        <Link href={section.href}>{section.label}</Link>
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                  ),
+                )}
               </NavigationMenuList>
               <NavigationMenuIndicator />
+              <NavigationMenuViewport />
             </NavigationMenu>
 
             <LanguageSwitcher />
             <Button
               asChild
-              className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 transition-transform hover:-translate-y-0.5 hover:from-primary-alt/90 hover:to-primary/90"
+              className="group flex-none rounded-full border border-white/15 bg-gradient-to-r from-primary-alt to-primary px-6 py-3 text-white shadow-xl shadow-primary/30 ring-1 ring-primary/40 transition hover:-translate-y-0.5 hover:shadow-primary/45"
             >
-              <Link href="/contact">{t("nav.bookNow")}</Link>
+              <Link href="/contact" className="flex w-max items-center justify-between gap-3">
+                <span className="text-sm font-semibold tracking-wide">{t("nav.bookNow")}</span>
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
+                  <ArrowUpRight className="h-4 w-4" />
+                </span>
+              </Link>
             </Button>
           </div>
 
@@ -168,64 +284,84 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-border/60">
-            <div className="flex flex-col gap-4">
+            <Accordion type="single" collapsible className="space-y-3">
               {navSections.map((section) => (
-                <div
+                <AccordionItem
                   key={section.key}
-                  className="rounded-2xl border border-border/60 bg-background/80 p-4 shadow-lg shadow-primary/5"
+                  value={section.key}
+                  className="rounded-2xl border border-border/60 bg-background/80 px-4 shadow-lg shadow-primary/5"
                 >
-                  <div className="flex items-start justify-between gap-4">
+                  <AccordionTrigger className="text-left text-base font-semibold text-foreground transition data-[state=open]:bg-muted/40 data-[state=open]:text-primary">
                     <div>
-                      <p className="text-base font-semibold text-foreground">
-                        {section.label}
-                      </p>
+                      <p>{section.label}</p>
                       {section.description && (
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-xs font-normal text-muted-foreground">
                           {section.description}
                         </p>
                       )}
                     </div>
-                    <Button
-                      asChild
-                      size="sm"
-                      className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-4 text-[11px] font-semibold tracking-[0.16em]"
-                    >
-                      <Link href={section.href} onClick={closeMenu}>
-                        {section.cta}
-                      </Link>
-                    </Button>
-                  </div>
-                  {section.highlights.length > 0 && (
-                    <div className="mt-3 grid gap-2">
-                      {section.highlights.map((highlight) => (
-                        <Link
-                          key={`${section.key}-mobile-${highlight.title}`}
-                          href={highlight.href}
-                          onClick={closeMenu}
-                          className="rounded-xl border border-dashed border-border/60 p-3 text-sm text-foreground transition hover:border-primary/70 hover:text-primary"
-                        >
-                          <p className="font-semibold">{highlight.title}</p>
-                          <p className="text-xs text-muted-foreground">
-                            {highlight.description}
-                          </p>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-4">
+                    <div className="flex flex-col gap-4">
+                      <Button
+                        asChild
+                        size="sm"
+                        className="w-full rounded-2xl border border-white/15 bg-gradient-to-r from-primary-alt to-primary px-4 py-3 text-left text-white shadow-lg shadow-primary/25"
+                      >
+                        <Link href={section.href} onClick={closeMenu} className="flex items-center justify-between gap-3">
+                          <div>
+                            <p className="text-base font-semibold leading-tight">
+                              {section.cta}
+                            </p>
+                            {conciergeTagline && (
+                              <p className="text-sm text-white/80">{conciergeTagline}</p>
+                            )}
+                          </div>
+                          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15">
+                            <ArrowUpRight className="h-4 w-4" />
+                          </span>
                         </Link>
-                      ))}
+                      </Button>
+                      {section.highlights.length > 0 && (
+                        <div className="grid gap-2">
+                          {section.highlights.map((highlight) => (
+                            <Link
+                              key={`${section.key}-mobile-${highlight.title}`}
+                              href={highlight.href}
+                              onClick={closeMenu}
+                              className="group rounded-xl border border-dashed border-border/60 p-3 text-sm text-foreground transition hover:border-primary/70 hover:text-primary"
+                            >
+                              <div className="flex items-center justify-between">
+                                <p className="font-semibold">{highlight.title}</p>
+                                <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground group-hover:text-primary" />
+                              </div>
+                              <p className="text-xs text-muted-foreground">{highlight.description}</p>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
+                  </AccordionContent>
+                </AccordionItem>
               ))}
-              <div className="py-2">
-                <LanguageSwitcher />
-              </div>
-              <Button
-                asChild
-                className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-primary/30 ring-1 ring-primary/30 hover:from-primary-alt/90 hover:to-primary/90"
-              >
-                <Link href="/contact" onClick={closeMenu}>
-                  {t("nav.bookNow")}
-                </Link>
-              </Button>
+            </Accordion>
+            <div className="py-2">
+              <LanguageSwitcher />
             </div>
+            <Button
+              asChild
+              className="rounded-2xl border border-white/15 bg-gradient-to-r from-primary-alt to-primary px-6 py-4 text-white shadow-lg shadow-primary/35"
+            >
+              <Link href="/contact" onClick={closeMenu} className="flex w-full items-center justify-between gap-4">
+                <div className="text-left">
+                  <p className="text-base font-semibold">{t("nav.bookNow")}</p>
+                  {conciergeTagline && <p className="text-sm text-white/80">{conciergeTagline}</p>}
+                </div>
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15">
+                  <ArrowUpRight className="h-5 w-5" />
+                </span>
+              </Link>
+            </Button>
           </div>
         )}
       </div>
