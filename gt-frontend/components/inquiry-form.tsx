@@ -65,6 +65,11 @@ export function InquiryForm() {
   const destination = watch("destination")
   const budget = watch("budget")
 
+  const resetTurnstile = () => {
+    setTurnstileToken(null)
+    setTurnstileKey((k) => k + 1)
+  }
+
   const onSubmit = async (values: InquiryValues) => {
     try {
       if (!turnstileToken) {
@@ -85,15 +90,16 @@ export function InquiryForm() {
       if (!res.ok) {
         const data = (await res.json().catch(() => null)) as any
         toast.error(data?.error || "Unable to send your inquiry")
+        resetTurnstile()
         return
       }
 
       toast.success("Inquiry sent. We’ll respond within 24 hours.")
       reset()
-      setTurnstileToken(null)
-      setTurnstileKey((k) => k + 1)
+      resetTurnstile()
     } catch {
       toast.error("Unable to send your inquiry")
+      resetTurnstile()
     }
   }
 

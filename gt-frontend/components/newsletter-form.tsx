@@ -59,6 +59,11 @@ export function NewsletterForm({
 
   const sendConfirmation = watch("sendConfirmation")
 
+  const resetTurnstile = () => {
+    setTurnstileToken(null)
+    setTurnstileKey((k) => k + 1)
+  }
+
   const onSubmit = async (values: NewsletterValues) => {
     try {
       if (!turnstileToken) {
@@ -79,15 +84,16 @@ export function NewsletterForm({
       const data = (await res.json().catch(() => null)) as any
       if (!res.ok) {
         toast.error(data?.error || "Unable to subscribe")
+        resetTurnstile()
         return
       }
 
       toast.success("Subscribed. Welcome to Gladiolus Tours.")
       reset({ email: "", name: "", sendConfirmation })
-      setTurnstileToken(null)
-      setTurnstileKey((k) => k + 1)
+      resetTurnstile()
     } catch {
       toast.error("Unable to subscribe")
+      resetTurnstile()
     }
   }
 

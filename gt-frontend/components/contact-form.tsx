@@ -49,6 +49,11 @@ export function ContactForm() {
     },
   })
 
+  const resetTurnstile = () => {
+    setTurnstileToken(null)
+    setTurnstileKey((k) => k + 1)
+  }
+
   const onSubmit = async (values: ContactValues) => {
     try {
       if (!turnstileToken) {
@@ -69,15 +74,16 @@ export function ContactForm() {
       const data = (await res.json().catch(() => null)) as any
       if (!res.ok) {
         toast.error(data?.error || "Unable to send your message")
+        resetTurnstile()
         return
       }
 
       toast.success("Message sent. We’ll get back to you soon.")
       reset()
-      setTurnstileToken(null)
-      setTurnstileKey((k) => k + 1)
+      resetTurnstile()
     } catch {
       toast.error("Unable to send your message")
+      resetTurnstile()
     }
   }
 
