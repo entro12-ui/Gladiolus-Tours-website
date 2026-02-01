@@ -13,9 +13,14 @@ type HandlerOptions<T extends { turnstileToken: string }> = {
 }
 
 function getAdminTo(): MailAddress {
-  const email = process.env.FASTMAIL_SMTP_USER
-  if (!email) throw new Error("FASTMAIL_SMTP_USER is not set")
-  return { email, name: "Gladiolus Tours" }
+  const overrideEmail = process.env.FORMS_ADMIN_TO?.trim()
+  if (overrideEmail) {
+    return { email: overrideEmail, name: process.env.FORMS_ADMIN_NAME?.trim() || "Gladiolus Tours" }
+  }
+
+  const fallbackEmail = process.env.FASTMAIL_SMTP_USER
+  if (!fallbackEmail) throw new Error("FASTMAIL_SMTP_USER is not set")
+  return { email: fallbackEmail, name: "Gladiolus Tours" }
 }
 
 export async function handleFormRoute<T extends { turnstileToken: string }>(req: Request, opts: HandlerOptions<T>) {
