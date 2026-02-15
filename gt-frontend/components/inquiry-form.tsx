@@ -15,15 +15,21 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
+import { adventures } from "@/lib/adventures-data"
 
 const InquirySchema = z.object({
   firstName: z.string().min(1, "First name is required").max(80),
   lastName: z.string().min(1, "Last name is required").max(80),
   email: z.string().email("Enter a valid email").max(160),
   phone: z.string().max(40).optional(),
+  adventure: z.string().max(160).optional(),
+  packageName: z.string().max(160).optional(),
   destination: z.string().max(120).optional(),
   travelers: z.string().max(40).optional(),
   travelDate: z.string().max(40).optional(),
+  travelStart: z.string().max(40).optional(),
+  travelEnd: z.string().max(40).optional(),
+  guests: z.string().max(40).optional(),
   budget: z.string().max(60).optional(),
   message: z.string().min(10, "Please share a few details").max(4000),
 })
@@ -53,9 +59,14 @@ export function InquiryForm() {
       lastName: "",
       email: "",
       phone: "",
+      adventure: "",
+      packageName: "",
       destination: "",
       travelers: "",
       travelDate: "",
+      travelStart: "",
+      travelEnd: "",
+      guests: "",
       budget: "",
       message: "",
     },
@@ -64,6 +75,11 @@ export function InquiryForm() {
   const travelers = watch("travelers")
   const destination = watch("destination")
   const budget = watch("budget")
+  const adventure = watch("adventure")
+  const packageName = watch("packageName")
+
+  const selectedAdventure = adventures.find((item) => item.title === adventure)
+  const packageOptions = selectedAdventure?.packages ?? []
 
   const resetTurnstile = () => {
     setTurnstileToken(null)
@@ -147,6 +163,46 @@ export function InquiryForm() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
+                <Label>Adventure (optional)</Label>
+                <Select value={adventure} onValueChange={(value) => setValue("adventure", value)}>
+                  <SelectTrigger aria-label="Select adventure">
+                    <SelectValue placeholder="Select an adventure" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {adventures.map((item) => (
+                      <SelectItem key={item.id} value={item.title}>
+                        {item.title}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="space-y-2">
+                <Label>Package (optional)</Label>
+                <Select value={packageName} onValueChange={(value) => setValue("packageName", value)}>
+                  <SelectTrigger aria-label="Select package">
+                    <SelectValue placeholder={adventure ? "Select a package" : "Select an adventure first"} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {packageOptions.length > 0 ? (
+                      packageOptions.map((pkg) => (
+                        <SelectItem key={pkg.name} value={pkg.name}>
+                          {pkg.name} · {pkg.duration} · {pkg.price}
+                        </SelectItem>
+                      ))
+                    ) : (
+                      <SelectItem value="select-adventure" disabled>
+                        Select an adventure first
+                      </SelectItem>
+                    )}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
                 <Label>Destination (optional)</Label>
                 <Select value={destination} onValueChange={(value) => setValue("destination", value)}>
                   <SelectTrigger aria-label="Select destination">
@@ -177,6 +233,23 @@ export function InquiryForm() {
                     <SelectItem value="9+">9+</SelectItem>
                   </SelectContent>
                 </Select>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="travelStart">Start date (optional)</Label>
+                <Input id="travelStart" type="date" {...register("travelStart")} />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="travelEnd">End date (optional)</Label>
+                <Input id="travelEnd" type="date" {...register("travelEnd")} />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="guests">Guests (optional)</Label>
+                <Input id="guests" type="number" min={1} placeholder="2" {...register("guests")} />
               </div>
             </div>
 
