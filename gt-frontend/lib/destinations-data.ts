@@ -3,7 +3,7 @@ export interface Destination {
   slug: string
   title: string
   location: string
-  circuit: "northern" | "southern" | "eastern" | "western" | "islands" | "mountain"
+  circuit: "northern" | "southern" | "eastern" | "western" | "coastal"
   duration: string
   price: string
   priceValue: number
@@ -228,7 +228,7 @@ export const destinations: Destination[] = [
     slug: "mount-kilimanjaro-trek",
     title: "Mount Kilimanjaro Trek",
     location: "Tanzania",
-    circuit: "mountain",
+    circuit: "northern",
     duration: "8 Days",
     price: "From $4,500",
     priceValue: 4500,
@@ -397,7 +397,7 @@ export const destinations: Destination[] = [
     slug: "zanzibar-island-escape",
     title: "Zanzibar Island Escape",
     location: "Tanzania",
-    circuit: "islands",
+    circuit: "coastal",
     duration: "4 Days",
     price: "From $1,300",
     priceValue: 1300,
