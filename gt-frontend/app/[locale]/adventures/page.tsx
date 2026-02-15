@@ -6,60 +6,11 @@ import { BreadcrumbSchema } from "@/components/structured-data"
 import { absoluteUrl } from "@/lib/seo"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { Link } from "@/i18n/routing"
 import { assetUrl } from "@/lib/assets"
-
-const adventureCategories = [
-  {
-    id: 1,
-    title: "9 Days Kilimanjaro Trek via Northern Route",
-    category: "Mountain Climbing",
-    overview:
-      "The Northern Circuit route is the newest route up Mount Kilimanjaro and arguably the best—combining beautiful scenery, solitude, a healthy challenge, and excellent acclimatization for a high summit success rate.",
-    image: "/about-us/team.webp",
-  },
-  {
-    id: 2,
-    title: "Walking Safaris & Indigenous Guide Encounters",
-    category: "Walking Safaris",
-    overview:
-      "Slow down to feel Tanzania beyond the vehicle. Track wildlife on foot with specialist guides, learn bushcraft and ecology, and reconnect with place through mindful pacing.",
-    image: "/gallery/tour-guide.webp",
-  },
-  {
-    id: 3,
-    title: "Zanzibar Coast & Spice Culture",
-    category: "Beach Holiday",
-    overview:
-      "Pair your safari with salt-air decompression—Stone Town stories, spice experiences, dhow sailing, and beach days curated for rest and romance.",
-    image: "/hero/hero-02.webp",
-  },
-  {
-    id: 4,
-    title: "Adventure Safaris Across the Northern Circuit",
-    category: "Adventure Safaris",
-    overview:
-      "Combine classic game drives with active add-ons—canoeing, cycling, crater rim walks, and photography-focused days tuned to the season’s best light and wildlife behaviour.",
-    image: "/gallery/gt-tourist-vehicle-01.webp",
-  },
-  {
-    id: 5,
-    title: "Tourist Attractions & Heritage Stops",
-    category: "Tourist Attraction",
-    overview:
-      "Add depth to your journey with Olduvai Gorge, craft markets, and heritage-rich detours that frame Tanzania’s landscapes with human story and history.",
-    image: "/gallery/Olduvai-Gorge-01.webp",
-  },
-  {
-    id: 6,
-    title: "Wildlife + Adventure Photo Days",
-    category: "Adventure Safaris",
-    overview:
-      "Cinematic golden-hour drives, curated vantage points, and gentle pacing for travellers who want both adrenaline and heirloom images from the field.",
-    image: "/gallery/photo-00.webp",
-  },
-]
+import { AdventureBookingForm } from "@/components/adventure-booking-form"
+import { adventures } from "@/lib/adventures-data"
 
 export const metadata: Metadata = {
   title: "Tanzania Adventure Experiences | Gladiolus Tours",
@@ -148,40 +99,100 @@ export default function AdventuresPage() {
         </div>
       </section>
 
-      {/* Collections */}
+      {/* Adventures */}
       <section id="collections" className="py-24 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {adventureCategories.map((item) => (
-              <Link key={item.id} href="/contact" className="group block">
-                <Card className="overflow-hidden rounded-3xl border-border/40 bg-background py-0 gap-0 transition hover:-translate-y-1 hover:shadow-xl">
-                  <div className="relative h-60 overflow-hidden">
-                    <Image
-                      src={assetUrl(item.image)}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
-                    <div className="absolute bottom-5 left-5 right-5 text-white space-y-2">
-                      <p className="inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-mono uppercase tracking-[0.3em] text-white/90">
-                        {item.category}
-                      </p>
-                      <h3 className="text-2xl font-serif leading-tight">{item.title}</h3>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12 space-y-16">
+          {adventures.map((adventure) => (
+            <div key={adventure.id} className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+              <Card className="overflow-hidden rounded-[32px] border-border/40 bg-card/90 shadow-lg shadow-primary/10">
+                <div className="relative h-72">
+                  <Image
+                    src={assetUrl(adventure.image)}
+                    alt={adventure.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white space-y-3">
+                    <p className="inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-mono uppercase tracking-[0.3em]">
+                      {adventure.category}
+                    </p>
+                    <h2 className="text-3xl font-serif text-balance">{adventure.title}</h2>
+                  </div>
+                </div>
+                <CardContent className="p-8 space-y-6">
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-serif text-foreground">Overview</h3>
+                    <p className="text-sm font-mono text-muted-foreground leading-relaxed">
+                      {adventure.description}
+                    </p>
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-serif text-foreground">Highlights</h3>
+                    <ul className="grid gap-3 sm:grid-cols-2">
+                      {adventure.highlights.map((highlight) => (
+                        <li key={highlight} className="flex items-start gap-2 text-sm font-mono text-muted-foreground">
+                          <CheckCircle2 className="h-4 w-4 text-primary mt-0.5" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-serif text-foreground">Day-by-day itinerary</h3>
+                    <div className="space-y-4">
+                      {adventure.itinerary.map((day) => (
+                        <div key={`${adventure.id}-${day.day}`} className="rounded-2xl border border-border/40 bg-muted/30 p-4">
+                          <div className="flex items-start gap-4">
+                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground font-serif">
+                              {day.day}
+                            </div>
+                            <div>
+                              <h4 className="text-base font-semibold text-foreground">{day.title}</h4>
+                              <p className="text-sm text-muted-foreground leading-relaxed">{day.description}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                  <CardContent className="p-6">
-                    <p className="font-mono text-sm text-muted-foreground leading-relaxed h-24 overflow-hidden">
-                      {item.overview.length > 160 ? `${item.overview.slice(0, 160)}...` : item.overview}
-                    </p>
-                    <div className="mt-6 w-full rounded-full bg-gradient-to-r from-primary-alt to-primary px-4 py-2 text-center text-sm font-medium text-white">
-                      Enquire about this adventure
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-serif text-foreground">Available packages</h3>
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      {adventure.packages.map((pkg) => (
+                        <Card key={`${adventure.id}-${pkg.name}`} className="rounded-2xl border-border/40">
+                          <CardContent className="p-4 space-y-3">
+                            <div className="space-y-1">
+                              <p className="text-xs font-mono uppercase tracking-[0.3em] text-muted-foreground">{pkg.duration}</p>
+                              <h4 className="text-lg font-serif text-foreground">{pkg.name}</h4>
+                              <p className="text-sm font-mono text-primary">{pkg.price}</p>
+                            </div>
+                            <p className="text-xs text-muted-foreground leading-relaxed">{pkg.description}</p>
+                            <ul className="space-y-1 text-xs text-muted-foreground">
+                              {pkg.includes.map((item) => (
+                                <li key={item} className="flex items-start gap-2">
+                                  <span className="text-primary">•</span>
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </CardContent>
+                        </Card>
+                      ))}
                     </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <AdventureBookingForm
+                adventureTitle={adventure.title}
+                packages={adventure.packages.map((pkg) => ({
+                  name: pkg.name,
+                  duration: pkg.duration,
+                  price: pkg.price,
+                }))}
+              />
+            </div>
+          ))}
         </div>
       </section>
 
