@@ -6,89 +6,10 @@ import { BreadcrumbSchema } from "@/components/structured-data"
 import { absoluteUrl } from "@/lib/seo"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { Link } from "@/i18n/routing"
 import { assetUrl } from "@/lib/assets"
-
-const safariCategories = [
-  {
-    id: 1,
-    name: "Wildlife Safaris",
-    description:
-      "Explore Tanzania's iconic parks with expert guides, comfortable vehicles, and wildlife-first routing for photographers and families alike.",
-    image: "/gallery/lion-00.webp",
-  },
-  {
-    id: 2,
-    name: "Adventure Safaris",
-    description:
-      "Layer in rafting, cycling, canoeing, and off-the-beaten-track park combos for travellers who want motion and adrenaline with their game drives.",
-    image: "/gallery/zebra-00.webp",
-  },
-  {
-    id: 3,
-    name: "Group & Incentive Travel",
-    description:
-      "For teams and celebrations: coordinated logistics, private departures, and hand-picked lodges with space for shared moments and privacy.",
-    image: "/gallery/sunday-with-tourists.webp",
-  },
-  {
-    id: 4,
-    name: "Camping Safaris",
-    description:
-      "From classic mobile camping to comfortable tented setups—sleep closer to the sounds of the bush without compromising on care and safety.",
-    image: "/gallery/sunset.webp",
-  },
-  {
-    id: 5,
-    name: "Beach Holidays",
-    description:
-      "Decompress after the dust: barefoot stays, snorkeling, and dhow cruises on Zanzibar's coastline and nearby islands.",
-    image: "/gallery/beer.webp",
-  },
-  {
-    id: 6,
-    name: "Mountain Climbing & Trekking",
-    description:
-      "Kilimanjaro ascents, Mount Meru, and multi-day treks guided by trusted mountain teams with strong safety protocols and pacing.",
-    image: "/about-us/team.webp",
-  },
-  {
-    id: 7,
-    name: "Cultural Tours",
-    description:
-      "Meet Maasai communities, visit markets and artisan workshops, and add meaningful cultural encounters that respect place and people.",
-    image: "/gallery/tour-guide.webp",
-  },
-  {
-    id: 8,
-    name: "Historical Tours",
-    description:
-      "Discover Stone Town, Olduvai Gorge, and heritage-rich stops that put Tanzania's story in context alongside its landscapes.",
-    image: "/gallery/Olduvai-Gorge-00.webp",
-  },
-  {
-    id: 9,
-    name: "Zanzibar & Beach Holidays",
-    description:
-      "Pair the bush with the coast—spice tours, ocean villas, and soft-sand days designed as a natural finale to your safari.",
-    image: "/hero/hero-02.webp",
-  },
-  {
-    id: 10,
-    name: "Walking Safari",
-    description:
-      "Slow the pace with guided walks and ranger-led tracking experiences—feel the ecosystem with all senses, not just through the vehicle window.",
-    image: "/gallery/gt-tourist-vehicle-00.webp",
-  },
-  {
-    id: 11,
-    name: "Balloon Safaris",
-    description:
-      "Sunrise hot air balloon flights over Serengeti and Tarangire—followed by bush breakfasts and cinematic aerial views.",
-    image: "/gallery/serengeti-balloon.webp",
-  },
-]
+import { safariPackages } from "@/lib/safaris-data"
 
 export const metadata: Metadata = {
   title: "Signature Tanzania Safaris | Gladiolus Tours",
@@ -165,50 +86,128 @@ export default function SafarisPage() {
         </div>
       </section>
 
-      {/* Experience Pillars */}
+      {/* Overview */}
       <section className="border-y border-border/70 bg-muted py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="max-w-3xl space-y-6">
-            <p className="text-xs font-mono uppercase tracking-[0.35em] text-muted-foreground">Our Safaris</p>
-            <h2 className="text-4xl md:text-5xl font-serif text-balance">Explore Tanzania with our tailor-made tours.</h2>
+            <p className="text-xs font-mono uppercase tracking-[0.35em] text-muted-foreground">Signature Safaris</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-balance">Curated safari journeys with clear pacing and lodge standards.</h2>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Choose a safari style as a starting point. Then we tailor the route, lodge selection, pacing, and special moments around your travel window.
+              Each package below includes a full itinerary, private guiding, and handpicked stays. Use these as a base—we tailor every route to your season, wildlife priorities, and preferred pace.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Collections */}
+      {/* Safari Packages */}
       <section id="collections" className="py-24 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {safariCategories.map((safari) => (
-              <Link key={safari.id} href="/contact" className="group block">
-                <Card className="overflow-hidden rounded-3xl border-border/40 bg-background py-0 gap-0 transition hover:-translate-y-1 hover:shadow-xl">
-                  <div className="relative h-60 overflow-hidden">
-                    <Image
-                      src={assetUrl(safari.image)}
-                      alt={safari.name}
-                      fill
-                      className="object-cover transition duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
-                    <div className="absolute bottom-5 left-5 right-5 text-white">
-                      <h3 className="text-2xl font-serif leading-tight">{safari.name}</h3>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12 space-y-16">
+          {safariPackages.map((pkg) => (
+            <div key={pkg.id} className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+              <Card className="overflow-hidden rounded-[32px] border-border/40 bg-card/90 shadow-lg shadow-primary/10">
+                <div className="relative h-72">
+                  <Image
+                    src={assetUrl(pkg.image)}
+                    alt={pkg.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white space-y-3">
+                    <p className="inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-mono uppercase tracking-[0.3em]">
+                      {pkg.region} Region
+                    </p>
+                    <h2 className="text-3xl font-serif text-balance">{pkg.title}</h2>
+                    <p className="text-sm font-mono text-white/80">{pkg.duration} · {pkg.price}</p>
+                  </div>
+                </div>
+                <CardContent className="p-8 space-y-6">
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-serif text-foreground">Overview</h3>
+                    <p className="text-sm font-mono text-muted-foreground leading-relaxed">{pkg.description}</p>
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-serif text-foreground">Highlights</h3>
+                    <ul className="grid gap-3 sm:grid-cols-2">
+                      {pkg.highlights.map((highlight) => (
+                        <li key={highlight} className="flex items-start gap-2 text-sm font-mono text-muted-foreground">
+                          <CheckCircle2 className="h-4 w-4 text-primary mt-0.5" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-serif text-foreground">Day-by-day itinerary</h3>
+                    <div className="space-y-4">
+                      {pkg.itinerary.map((day) => (
+                        <div key={`${pkg.id}-${day.day}`} className="rounded-2xl border border-border/40 bg-muted/30 p-4">
+                          <div className="flex items-start gap-4">
+                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground font-serif">
+                              {day.day}
+                            </div>
+                            <div>
+                              <h4 className="text-base font-semibold text-foreground">{day.title}</h4>
+                              <p className="text-sm text-muted-foreground leading-relaxed">{day.description}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                  <CardContent className="p-6">
-                    <p className="font-mono text-sm text-muted-foreground leading-relaxed h-20 overflow-hidden">{safari.description}</p>
-                    <div className="mt-6">
-                      <div className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary px-4 py-2 text-center text-sm font-medium text-white">
-                        Enquire about this safari type
-                      </div>
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-serif text-foreground">Included</h3>
+                    <ul className="grid gap-2 sm:grid-cols-2">
+                      {pkg.includes.map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-sm font-mono text-muted-foreground">
+                          <span className="text-primary">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="rounded-[32px] border-border/40 bg-card/90 shadow-lg shadow-primary/10 h-fit">
+                <CardContent className="p-8 space-y-6">
+                  <div className="space-y-2">
+                    <p className="text-xs font-mono uppercase tracking-[0.35em] text-muted-foreground">Plan this safari</p>
+                    <h3 className="text-2xl font-serif text-foreground">{pkg.title}</h3>
+                    <p className="text-sm text-muted-foreground">Share your dates and guest count. We’ll tailor it and confirm availability within 24 hours.</p>
+                  </div>
+                  <div className="space-y-3 text-sm font-mono text-muted-foreground">
+                    <div className="flex items-center justify-between">
+                      <span>Duration</span>
+                      <span className="text-foreground">{pkg.duration}</span>
                     </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
+                    <div className="flex items-center justify-between">
+                      <span>Region</span>
+                      <span className="text-foreground">{pkg.region}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>Starting from</span>
+                      <span className="text-foreground">{pkg.price}</span>
+                    </div>
+                  </div>
+                  <Button
+                    asChild
+                    className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-md shadow-primary/25 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
+                  >
+                    <Link href={`/inquiry?adventure=${encodeURIComponent(pkg.title)}`}>
+                      Book this safari <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full rounded-full border-primary/30 bg-white/70 py-3 text-sm font-semibold text-primary"
+                  >
+                    <Link href="/inquiry">Request custom itinerary</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          ))}
         </div>
       </section>
 
