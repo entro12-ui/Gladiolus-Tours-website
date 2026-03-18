@@ -1,5 +1,0 @@
-aws:
-  ses:
-    sourceEmail: ${AWS_SES_SOURCE_EMAIL}
-    destinationEmail: ${AWS_SES_DESTINATION_EMAIL}
-    configSet: ${AWS_SES_CONFIG_SET}
