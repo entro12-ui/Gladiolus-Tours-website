@@ -46,6 +46,22 @@
         }
       ]
     },
+    "dayTrips": {
+      "description": "Quick escapes from Arusha to hot springs, crater lakes, and cultural sites.",
+      "cta": "View Day Trips",
+      "highlights": [
+        {
+          "title": "Chemka Hot Springs",
+          "description": "Swim in crystal-clear natural hot springs surrounded by nature.",
+          "href": "/day-trips"
+        },
+        {
+          "title": "Lake Duluti",
+          "description": "Canoe ride and forest walk around a scenic crater lake.",
+          "href": "/day-trips"
+        }
+      ]
+    },
     "adventures": {
       "description": "Immersive cultural journeys, hot-air balloons, and coastal escapes.",
       "cta": "Discover Adventures",

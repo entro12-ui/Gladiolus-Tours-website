@@ -46,6 +46,22 @@
         }
       ]
     },
+    "dayTrips": {
+      "description": "Escapades depuis Arusha vers sources chaudes, lacs de cratère et sites culturels.",
+      "cta": "Voir les Excursions",
+      "highlights": [
+        {
+          "title": "Sources Chaudes de Chemka",
+          "description": "Baignez-vous dans les eaux cristallines des sources naturelles.",
+          "href": "/day-trips"
+        },
+        {
+          "title": "Lac Duluti",
+          "description": "Balade en canoe autour d'un lac de cratère pittoresque.",
+          "href": "/day-trips"
+        }
+      ]
+    },
     "adventures": {
       "description": "Immersions culturelles, montgolfières et escapades côtières.",
       "cta": "Découvrir les Aventures",

@@ -13,6 +13,7 @@ import {
   MapIcon,
   ImageIcon,
   Sparkles,
+  Sun,
 } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/routing"
@@ -52,6 +53,12 @@ const SECTION_META: Record<string, SectionMeta> = {
     accentClass: "from-[#2b1b0f] via-[#3e2615] to-[#4a2d19]",
     accentText: "text-[#ffd6a0]",
     icon: Footprints,
+  },
+  dayTrips: {
+    badge: "Quick Escape",
+    accentClass: "from-[#1a2f1a] via-[#234523] to-[#2d5a2d]",
+    accentText: "text-[#c0f2c0]",
+    icon: Sun,
   },
   adventures: {
     badge: "Signature",

@@ -46,6 +46,22 @@
         }
       ]
     },
+    "dayTrips": {
+      "description": "Escapadas desde Arusha a fuentes termales, lagos de cráter y sitios culturales.",
+      "cta": "Ver Excursiones",
+      "highlights": [
+        {
+          "title": "Fuentes Termales de Chemka",
+          "description": "Nada en las aguas cristalinas de las fuentes naturales.",
+          "href": "/day-trips"
+        },
+        {
+          "title": "Lago Duluti",
+          "description": "Paseo en canoa alrededor de un lago de cráter pintoresco.",
+          "href": "/day-trips"
+        }
+      ]
+    },
     "adventures": {
       "description": "Viajes culturales, globos aerostáticos y escapadas costeras.",
       "cta": "Descubrir Aventuras",
