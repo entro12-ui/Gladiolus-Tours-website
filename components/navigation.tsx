@@ -166,6 +166,35 @@ const SECTION_CONTENT_DEFAULTS: SectionsDictionary = {
       },
     ],
   },
+  dayTrips: {
+    description: "Quick escapes from Arusha to hot springs, crater lakes, and cultural sites.",
+    cta: "View Day Trips",
+    badge: "Quick Escape",
+    highlights: [
+      {
+        title: "Chemka Hot Springs",
+        description: "Swim in crystal-clear natural hot springs surrounded by nature.",
+        href: "/day-trips",
+      },
+      {
+        title: "Lake Duluti",
+        description: "Canoe ride and forest walk around a scenic crater lake.",
+        href: "/day-trips",
+      },
+    ],
+    quickLinks: [
+      {
+        title: "Chemka Hot Springs",
+        description: "Full Day | From $60/person",
+        href: "/day-trips",
+      },
+      {
+        title: "Lake Duluti",
+        description: "Half Day | From $72/person",
+        href: "/day-trips",
+      },
+    ],
+  },
   adventures: {
     description: "Immersive cultural journeys, hot-air balloons, and coastal escapes.",
     cta: "Discover Adventures",
@@ -331,6 +360,7 @@ const SECTION_CONTENT_DEFAULTS: SectionsDictionary = {
 const SECTION_ORDER = [
   { key: "treks", href: "/treks" },
   { key: "safaris", href: "/safaris" },
+  { key: "dayTrips", href: "/day-trips" },
   { key: "adventures", href: "/adventures" },
   { key: "destinations", href: "/destinations" },
   { key: "gallery", href: "/gallery" },
@@ -338,7 +368,7 @@ const SECTION_ORDER = [
   { key: "contact", href: "/contact" },
 ]
 
-const DROPDOWN_SECTIONS = new Set(["treks", "safaris", "adventures", "destinations"])
+const DROPDOWN_SECTIONS = new Set(["treks", "safaris", "dayTrips", "adventures", "destinations"])
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
