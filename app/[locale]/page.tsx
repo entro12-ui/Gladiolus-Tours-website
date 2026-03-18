@@ -11,6 +11,7 @@ import { absoluteUrl } from "@/lib/seo"
 import { assetUrl } from "@/lib/assets"
 import { HeroSlideshow } from "@/components/home/hero-slideshow"
 import { majorMountainTreks } from "@/lib/treks-data"
+import { ScrollAnimation } from "@/components/scroll-animation"
 
 export const metadata: Metadata = {
   title: "Luxury African Safari Tours & Tailor-Made Travel Packages",
@@ -177,39 +178,41 @@ export default function HomePage() {
       {/* Signature Collections */}
       <section id="signature-collections" className="py-24 bg-[#050b0d] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="mb-12 max-w-3xl">
+          <ScrollAnimation className="mb-12 max-w-3xl">
             <p className="text-xs font-mono uppercase tracking-[0.35em] text-white/60">Collections</p>
             <h2 className="mt-4 text-4xl md:text-5xl font-serif text-balance">Three ways to traverse Tanzania with Gladiolus creative directors.</h2>
             <p className="mt-4 font-mono text-sm text-white/75">
               Choose a starting canvas—then we layer in lodges, aircraft, private guides, and special access based on your pace and passions.
             </p>
-          </div>
+          </ScrollAnimation>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {signatureCollections.map((collection) => (
-              <Card key={collection.name} className="group border-white/10 bg-white/5 backdrop-blur rounded-3xl overflow-hidden">
-                <div className="relative h-64">
-                  <Image
-                    src={assetUrl(collection.image)}
-                    alt={collection.name}
-                    fill
-                    className="object-cover transition duration-[2500ms] ease-out group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <p className="text-xs font-mono uppercase tracking-[0.3em]">{collection.route}</p>
-                    <p className="text-2xl font-serif">{collection.name}</p>
+            {signatureCollections.map((collection, index) => (
+              <ScrollAnimation key={collection.name} animation="fade-up" delay={index * 150}>
+                <Card className="group border-white/10 bg-white/5 backdrop-blur rounded-3xl overflow-hidden hover-lift">
+                  <div className="relative h-64">
+                    <Image
+                      src={assetUrl(collection.image)}
+                      alt={collection.name}
+                      fill
+                      className="object-cover transition duration-[2500ms] ease-out group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-white">
+                      <p className="text-xs font-mono uppercase tracking-[0.3em]">{collection.route}</p>
+                      <p className="text-2xl font-serif">{collection.name}</p>
+                    </div>
                   </div>
-                </div>
-                <CardContent className="p-6 space-y-4 text-white/80">
-                  <p className="font-mono text-sm leading-relaxed">{collection.description}</p>
-                  <div className="flex items-center gap-2 text-xs font-mono tracking-[0.3em] uppercase">
-                    <Calendar className="h-4 w-4" /> {collection.duration}
-                  </div>
-                  <Button asChild className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary">
-                    <Link href="/contact">Customize Journey</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+                  <CardContent className="p-6 space-y-4 text-white/80">
+                    <p className="font-mono text-sm leading-relaxed">{collection.description}</p>
+                    <div className="flex items-center gap-2 text-xs font-mono tracking-[0.3em] uppercase">
+                      <Calendar className="h-4 w-4" /> {collection.duration}
+                    </div>
+                    <Button asChild className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary">
+                      <Link href="/contact">Customize Journey</Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
             ))}
           </div>
         </div>
@@ -219,13 +222,13 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.10),_rgba(4,8,12,0.92))]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-12">
           <div className="mb-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-            <div className="space-y-5">
+            <ScrollAnimation className="space-y-5">
               <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-2 font-mono text-xs uppercase tracking-[0.35em] text-white/80">
                 Treks
               </span>
               <h2 className="text-4xl md:text-5xl font-serif text-balance">High-altitude summits and volcanic ridgelines.</h2>
               <p className="font-mono text-sm text-white/75 leading-relaxed max-w-2xl">
-                Compare Tanzania’s most iconic routes—from Kilimanjaro to Meru—and continue onward into safari circuits or Zanzibar recovery days.
+                Compare Tanzania's most iconic routes—from Kilimanjaro to Meru—and continue onward into safari circuits or Zanzibar recovery days.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-[11px] font-mono uppercase tracking-[0.25em] text-white/70">
@@ -238,9 +241,9 @@ export default function HomePage() {
                   Summit + safari combos
                 </span>
               </div>
-            </div>
+            </ScrollAnimation>
 
-            <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+            <ScrollAnimation delay={200} className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Button
                 asChild
                 size="lg"
@@ -256,67 +259,68 @@ export default function HomePage() {
               >
                 <Link href="/contact">Plan a trek</Link>
               </Button>
-            </div>
+            </ScrollAnimation>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {trekHighlights.map((trek) => {
+            {trekHighlights.map((trek, index) => {
               if (!trek) return null
 
               return (
-                <Card
-                  key={trek.id}
-                  className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-black/30 text-white shadow-[0_30px_80px_rgba(2,6,23,0.55)]"
-                >
-                  <div className="absolute inset-0">
-                    <Image
-                      src={assetUrl(trek.image)}
-                      alt={trek.title}
-                      fill
-                      unoptimized
-                      className="object-cover brightness-[0.85] transition duration-[2000ms] ease-out group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
-                  </div>
-
-                  <Link href={`/treks/${trek.slug}`} className="absolute inset-0 z-10" aria-label={`View trek details for ${trek.title}`}>
-                    <span className="sr-only">View trek details</span>
-                  </Link>
-
-                  <CardContent className="relative z-20 flex min-h-[360px] flex-col justify-end p-6">
-                    <div className="rounded-3xl border border-white/15 bg-black/40 p-5 backdrop-blur">
-                      <div className="space-y-2">
-                        <p className="text-[11px] font-mono uppercase tracking-[0.35em] text-white/70 flex items-center gap-2">
-                          <MapPin className="h-3.5 w-3.5" /> {trek.location}
-                        </p>
-                        <h3 className="text-2xl font-serif leading-tight text-balance">{trek.title}</h3>
-                      </div>
-
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
-                          <Calendar className="h-4 w-4" /> {trek.duration}
-                        </span>
-                        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
-                          <Mountain className="h-4 w-4" /> {trek.elevation}
-                        </span>
-                        <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
-                          {trek.difficulty}
-                        </span>
-                      </div>
-
-                      <div className="mt-5">
-                        <Button
-                          asChild
-                          className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-md shadow-primary/20 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
-                        >
-                          <Link href={`/treks/${trek.slug}`}>
-                            View trek details <ArrowRight className="ml-2 h-4 w-4" />
-                          </Link>
-                        </Button>
-                      </div>
+                <ScrollAnimation key={trek.id} animation="fade-up" delay={index * 150}>
+                  <Card
+                    className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-black/30 text-white shadow-[0_30px_80px_rgba(2,6,23,0.55)] hover-lift"
+                  >
+                    <div className="absolute inset-0">
+                      <Image
+                        src={assetUrl(trek.image)}
+                        alt={trek.title}
+                        fill
+                        unoptimized
+                        className="object-cover brightness-[0.85] transition duration-[2000ms] ease-out group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
                     </div>
-                  </CardContent>
-                </Card>
+
+                    <Link href={`/treks/${trek.slug}`} className="absolute inset-0 z-10" aria-label={`View trek details for ${trek.title}`}>
+                      <span className="sr-only">View trek details</span>
+                    </Link>
+
+                    <CardContent className="relative z-20 flex min-h-[360px] flex-col justify-end p-6">
+                      <div className="rounded-3xl border border-white/15 bg-black/40 p-5 backdrop-blur">
+                        <div className="space-y-2">
+                          <p className="text-[11px] font-mono uppercase tracking-[0.35em] text-white/70 flex items-center gap-2">
+                            <MapPin className="h-3.5 w-3.5" /> {trek.location}
+                          </p>
+                          <h3 className="text-2xl font-serif leading-tight text-balance">{trek.title}</h3>
+                        </div>
+
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
+                            <Calendar className="h-4 w-4" /> {trek.duration}
+                          </span>
+                          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
+                            <Mountain className="h-4 w-4" /> {trek.elevation}
+                          </span>
+                          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
+                            {trek.difficulty}
+                          </span>
+                        </div>
+
+                        <div className="mt-5">
+                          <Button
+                            asChild
+                            className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-md shadow-primary/20 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
+                          >
+                            <Link href={`/treks/${trek.slug}`}>
+                              View trek details <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </ScrollAnimation>
               )
             })}
           </div>
