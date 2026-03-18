@@ -484,16 +484,14 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6">
-            <div
-              className="relative flex-1"
-            >
-              <div className="flex justify-center gap-1">
+          <div className="hidden xl:flex items-center gap-3">
+            <div className="relative flex items-center gap-0.5">
+              <div className="flex items-center gap-0.5">
                 {navSections.map((section) =>
                   DROPDOWN_SECTIONS.has(section.key) ? (
                     <button
                       key={section.key}
-                      className={`px-4 py-2 text-sm font-semibold tracking-wide rounded-lg transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                      className={`px-2.5 py-1.5 text-xs font-semibold tracking-wide rounded-lg transition-all duration-200 whitespace-nowrap ${
                         activeDropdown === section.key || isActivePath(section.href)
                           ? "bg-muted/60 text-primary"
                           : "text-foreground/80 hover:text-primary hover:bg-muted/40"
@@ -510,7 +508,7 @@ export function Navigation() {
                     <Link
                       key={section.key}
                       href={section.href}
-                      className={`px-4 py-2 text-sm font-semibold tracking-wide rounded-lg transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                      className={`px-2.5 py-1.5 text-xs font-semibold tracking-wide rounded-lg transition-all duration-200 whitespace-nowrap ${
                         isActivePath(section.href)
                           ? "bg-muted/60 text-primary"
                           : "text-foreground/80 hover:text-primary hover:bg-muted/40"
