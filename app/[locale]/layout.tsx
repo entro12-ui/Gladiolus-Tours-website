@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Playfair_Display, Lato } from "next/font/google"
+import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google"
 import { NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
@@ -16,9 +16,8 @@ const headingFont = Playfair_Display({
   variable: "--font-heading",
 })
 
-const bodyFont = Lato({
+const bodyFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
   display: "swap",
   variable: "--font-sans",
 })

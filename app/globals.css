@@ -120,11 +120,15 @@
   body {
     --theme-font-sans: var(--font-sans);
     --theme-font-heading: var(--font-heading);
+    font-family: var(--font-sans);
     min-height: 100vh;
     background: radial-gradient(circle at top left, var(--glow-start), transparent 55%),
       radial-gradient(circle at bottom right, var(--glow-end), transparent 60%),
       linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 247, 245, 0.98));
     color: var(--foreground);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   h1,
   h2,
@@ -133,10 +137,27 @@
   h5,
   h6 {
     font-family: var(--font-heading);
-    letter-spacing: -0.01em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: 3rem;
+    letter-spacing: -0.03em;
+  }
+  h2 {
+    font-size: 2.25rem;
+    letter-spacing: -0.025em;
+  }
+  h3 {
+    font-size: 1.75rem;
   }
   p {
     text-wrap: pretty;
+    line-height: 1.7;
+  }
+  a {
+    transition: color 0.2s ease, opacity 0.2s ease;
   }
 }
 
@@ -237,4 +258,60 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.text-display {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.text-lead {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+}
+
+.text-body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--foreground);
+}
+
+.text-caption {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.text-heading-lg {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.text-heading-md {
+  font-family: var(--font-heading);
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.text-heading-sm {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
 }
