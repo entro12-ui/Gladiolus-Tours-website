@@ -114,7 +114,7 @@ export default async function DestinationsPage({ searchParams }: Props) {
             </span>
             <h1 className="text-4xl md:text-6xl font-serif text-balance">Tanzania destinations for iconic wildlife, culture, and landscapes.</h1>
             <p className="text-lg md:text-xl font-mono text-white/80 leading-relaxed">
-              From Serengeti plains to Ngorongoro's crater floor—browse the places we build into tailor-made routes.
+              From Serengeti plains to Ngorongoro's crater floor, browse the places we build into tailor-made routes.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button
