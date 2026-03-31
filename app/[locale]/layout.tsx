@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google"
+import { Inter } from "next/font/google"
 import { NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
@@ -10,13 +10,7 @@ import { routing } from "@/i18n/routing"
 import { absoluteUrl } from "@/lib/seo"
 import "../globals.css"
 
-const headingFont = Playfair_Display({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-heading",
-})
-
-const bodyFont = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
@@ -139,7 +133,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${headingFont.variable} ${bodyFont.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
