@@ -492,7 +492,7 @@ export const destinations: Destination[] = [
     priceValue: 3400,
     image: "/gallery/Olduvai-Gorge-01.webp",
     description:
-      "Venture to Lake Tanganyika for chimpanzee trekking in Mahale—one of Tanzania's most rewarding and remote primate experiences.",
+      "Venture to Lake Tanganyika for chimpanzee trekking in Mahale-one of Tanzania's most rewarding and remote primate experiences.",
     highlights: [
       "Chimpanzee trekking",
       "Lake Tanganyika scenery",
