@@ -145,7 +145,7 @@ export default function TreksPage() {
             <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-2 font-mono text-xs uppercase tracking-[0.35em]">
               Treks
             </span>
-            <h1 className="text-4xl md:text-6xl font-serif text-balance">Tanzania treks—from summit pushes to rainforest walks.</h1>
+            <h1 className="text-4xl md:text-6xl font-serif text-balance">Tanzania treks from summit pushes to rainforest walks.</h1>
             <p className="text-lg md:text-xl font-mono text-white/80 leading-relaxed">
               Mount Kilimanjaro dominates, but Tanzania also offers Mount Meru, Ol Doinyo Lengai, the Usambaras, Udzungwa, and volcanic highlands.
             </p>
@@ -217,7 +217,7 @@ export default function TreksPage() {
               <p className="text-xs font-mono uppercase tracking-[0.35em] text-muted-foreground">Planning your trek</p>
               <h2 className="text-4xl md:text-5xl font-serif text-balance">How to pick the right trek for your travel window.</h2>
               <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-                June to October is ideal for cooler days and clearer views, but nights can be cold—especially on Kilimanjaro and Meru.
+                June to October is ideal for cooler days and clearer views, but nights can be cold, especially on Kilimanjaro and Meru.
               </p>
             </div>
 
