@@ -111,13 +111,13 @@ const experiencePillars = [
 const testimonials = [
   {
     quote:
-      "Sunday from Gladiolus Tours made my stay at Msuti Hut and safari in Arusha National Park unforgettable—kind, professional, and so passionate about culture and nature.",
+      "Sunday from Gladiolus Tours made my stay at Msuti Hut and safari in Arusha National Park unforgettable. Kind, professional, and so passionate about culture and nature.",
     name: "Lærke Skye",
     detail: "Google Review • February 2024",
   },
   {
     quote:
-      "Unbelievable experience! We summited Kilimanjaro via Marangu in five days and every detail was perfectly organised by the Gladiolus team—we felt supported every step.",
+      "Unbelievable experience! We summited Kilimanjaro via Marangu in five days and every detail was perfectly organised by the Gladiolus team. We felt supported every step.",
     name: "Maite Gonzalo",
     detail: "Google Review • January 2024",
   },
@@ -226,9 +226,9 @@ export default function HomePage() {
               <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-2 font-mono text-xs uppercase tracking-[0.35em] text-white/80">
                 Treks
               </span>
-              <h2 className="text-4xl md:text-5xl font-serif text-balance">High-altitude summits and volcanic ridgelines.</h2>
+              <h2 className="text-4xl md:text-5xl font-serif text-balance">High altitude summits and volcanic ridgelines.</h2>
               <p className="font-mono text-sm text-white/75 leading-relaxed max-w-2xl">
-                Compare Tanzania's most iconic routes—from Kilimanjaro to Meru—and continue onward into safari circuits or Zanzibar recovery days.
+                Compare Tanzania's most iconic routes from Kilimanjaro to Meru and continue onward into safari circuits or Zanzibar recovery days.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-[11px] font-mono uppercase tracking-[0.25em] text-white/70">
@@ -334,7 +334,7 @@ export default function HomePage() {
             <p className="text-xs font-mono uppercase tracking-[0.35em] text-muted-foreground">Our Method</p>
             <h2 className="text-4xl md:text-5xl font-serif text-foreground text-balance">Creative direction meets expedition-grade planning.</h2>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              We storyboard each day with a balance of thrill and restoration—sunrise hot air balloons, crater floor lunches, spice market tastings, and ocean breeze decompressions.
+              We storyboard each day with a balance of thrill and restoration. Sunrise hot air balloons, crater floor lunches, spice market tastings, and ocean breeze decompressions.
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {experiencePillars.map((pillar) => (
