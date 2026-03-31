@@ -15,7 +15,7 @@ import { adventures } from "@/lib/adventures-data"
 export const metadata: Metadata = {
   title: "Tanzania Adventure Experiences | Gladiolus Tours",
   description:
-    "Design active Tanzania adventures—Kilimanjaro treks, walking safaris, coastal expeditions, and cultural immersions curated by Gladiolus Tours.",
+    "Design active Tanzania adventures. Kilimanjaro treks, walking safaris, coastal expeditions, and cultural immersions curated by Gladiolus Tours.",
   alternates: {
     canonical: "/adventures",
   },
@@ -61,7 +61,7 @@ export default function AdventuresPage() {
             </span>
             <h1 className="text-4xl md:text-6xl font-serif text-balance">Discover your next adventure with Gladiolus Tours</h1>
             <p className="text-lg md:text-xl font-mono text-white/80 leading-relaxed">
-              Climb Kilimanjaro, walk with specialist guides, explore heritage sites, and end on the spice coast—crafted end-to-end with Tanzanian experts.
+              Climb Kilimanjaro, walk with specialist guides, explore heritage sites, and end on the spice coast, crafted end-to-end with Tanzanian experts.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button
@@ -201,7 +201,7 @@ export default function AdventuresPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <h2 className="text-4xl font-serif text-balance">Ready for Your Next Tanzanian Thrill?</h2>
           <p className="text-lg font-mono text-primary-foreground/90 max-w-3xl mx-auto">
-            Tell us what challenges excite you most—we'll build a safe, soulful, and breathtaking adventure across Tanzania.
+            Tell us what challenges excite you most, we'll build a safe, soulful, and breathtaking adventure across Tanzania.
           </p>
           <Button
             asChild
