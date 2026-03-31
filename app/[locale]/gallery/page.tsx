@@ -205,7 +205,7 @@ const galleryImages: GalleryImage[] = [
 export const metadata: Metadata = {
   title: "Safari Gallery | Gladiolus Tours",
   description:
-    "Immerse yourself in Gladiolus Tours' visual diary—wildlife portraits, cinematic landscapes, and bespoke experiences across Tanzania.",
+    "Immerse yourself in Gladiolus Tours' visual diary. Wildlife portraits, cinematic landscapes, and bespoke experiences across Tanzania.",
   alternates: {
     canonical: "/gallery",
   },
@@ -255,7 +255,7 @@ export default function GalleryPage() {
               Our cameras never stop rolling across Tanzania's wild frontiers.
             </h1>
             <p className="text-lg md:text-xl font-mono text-white/80">
-              Drift through migration flyovers, Maasai ceremonies, and lantern-lit dinners—each frame captured on recent departures.
+              Drift through migration flyovers, Maasai ceremonies, and lantern-lit dinners, each frame captured on recent departures.
             </p>
             <div className="flex flex-wrap gap-6">
               {heroStats.map((stat) => (
@@ -279,7 +279,7 @@ export default function GalleryPage() {
               A living moodboard of wildlife, culture, and design inspiration.
             </h2>
             <p className="font-mono text-sm text-muted-foreground">
-              Every departure travels with hybrid storytellers—cinematographers, fine-art photographers, and field recordists—so you can relive
+              Every departure travels with hybrid storytellers, cinematographers, fine-art photographers, and field recordists, so you can relive
               each day long after the dust settles.
             </p>
             <div className="grid gap-6 md:grid-cols-3">
