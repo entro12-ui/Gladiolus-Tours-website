@@ -93,7 +93,7 @@ export default function SafarisPage() {
             <p className="text-xs font-mono uppercase tracking-[0.35em] text-muted-foreground">Signature Safaris</p>
             <h2 className="text-4xl md:text-5xl font-serif text-balance">Curated safari journeys with clear pacing and lodge standards.</h2>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Each package below includes a full itinerary, private guiding, and handpicked stays. Use these as a base—we tailor every route to your season, wildlife priorities, and preferred pace.
+              Each package below includes a full itinerary, private guiding, and handpicked stays. Use these as a base, we tailor every route to your season, wildlife priorities, and preferred pace.
             </p>
           </div>
         </div>
