@@ -20,7 +20,7 @@ export const majorMountainTreks: Trek[] = [
   {
     id: "kili-machame",
     slug: "kilimanjaro-machame-route",
-    title: "Mount Kilimanjaro — Machame Route",
+    title: "Mount Kilimanjaro - Machame Route",
     location: "Kilimanjaro National Park",
     region: "northern",
     duration: "7 Days",
@@ -42,7 +42,7 @@ export const majorMountainTreks: Trek[] = [
   {
     id: "kili-lemosho",
     slug: "kilimanjaro-lemosho-route",
-    title: "Mount Kilimanjaro — Lemosho Route",
+    title: "Mount Kilimanjaro - Lemosho Route",
     location: "Kilimanjaro National Park",
     region: "northern",
     duration: "8 Days",
@@ -64,7 +64,7 @@ export const majorMountainTreks: Trek[] = [
   {
     id: "kili-marangu",
     slug: "kilimanjaro-marangu-route",
-    title: "Mount Kilimanjaro — Marangu Route",
+    title: "Mount Kilimanjaro - Marangu Route",
     location: "Kilimanjaro National Park",
     region: "northern",
     duration: "6 Days",
@@ -143,7 +143,7 @@ export const otherNotableHikes: Trek[] = [
     permits: "Park fees and ranger/guide required",
     image: "/gallery/gt-tourist-vehicle-00.webp",
     description:
-      "A tropical rainforest escape known as the 'Galápagos of Africa'—rich biodiversity, steep forest trails, and dramatic waterfalls.",
+      "A tropical rainforest escape known as the 'Galapagos of Africa'. Rich biodiversity, steep forest trails, and dramatic waterfalls.",
     highlights: [
       "Rainforest hiking",
       "Waterfall viewpoints",
@@ -165,7 +165,7 @@ export const otherNotableHikes: Trek[] = [
     permits: "Local guide recommended",
     image: "/gallery/beer.webp",
     description:
-      "Green, cool highlands with village-to-village trails, viewpoints, and cultural encounters—perfect for relaxed hiking and photography.",
+      "Green, cool highlands with village-to-village trails, viewpoints, and cultural encounters. Perfect for relaxed hiking and photography.",
     highlights: [
       "Village trails and local culture",
       "Panoramic viewpoints",
@@ -177,7 +177,7 @@ export const otherNotableHikes: Trek[] = [
   {
     id: "empakaai",
     slug: "ngorongoro-highlands-empakaai-crater-trek",
-    title: "Ngorongoro Highlands — Empakaai Crater Trek",
+    title: "Ngorongoro Highlands - Empakaai Crater Trek",
     location: "Ngorongoro Highlands",
     region: "northern",
     duration: "1-2 Days",
@@ -187,7 +187,7 @@ export const otherNotableHikes: Trek[] = [
     permits: "Conservation fees and guide required",
     image: "/gallery/lunch-00.webp",
     description:
-      "Walk through dramatic volcanic landscapes and Maasai lands to Empakaai’s crater lake—often paired with Olmoti crater walks.",
+      "Walk through dramatic volcanic landscapes and Maasai lands to Empakaai’s crater lake, often paired with Olmoti crater walks.",
     highlights: [
       "Volcanic crater viewpoints",
       "Maasai cultural landscapes",
