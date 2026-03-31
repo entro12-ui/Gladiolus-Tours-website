@@ -101,7 +101,7 @@ export default function AboutPage() {
       icon: Coffee,
       title: "Time to Unwind",
       description:
-        "Every itinerary balances thrill with restorative pauses—sunset picnics, bush brunches, and ocean breezes included.",
+        "Every itinerary balances thrill with restorative pauses. Sunset picnics, bush brunches, and ocean breezes included.",
     },
   ]
 
@@ -194,7 +194,7 @@ export default function AboutPage() {
             We design soulful Tanzania journeys that connect you to wild spaces, local culture, and the people you travel with.
           </p>
           <p className="text-base md:text-lg font-mono text-white/80">
-            Think Kilimanjaro sunrises, crater lunches, and Zanzibar breezes—crafted to spark curiosity, reflection, and joy.
+            Think Kilimanjaro sunrises, crater lunches, and Zanzibar breezes, crafted to spark curiosity, reflection, and joy.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white">
@@ -232,7 +232,7 @@ export default function AboutPage() {
                   "Join us in exploring the beauty of our planet while creating meaningful connections with fellow travelers.
                   Every journey is an opportunity for personal growth, cultural exchange, and unforgettable moments."
                 </p>
-                <p className="mt-3 font-mono text-sm uppercase tracking-[0.3em] text-primary">— Gladiolus Tours Team</p>
+                <p className="mt-3 font-mono text-sm uppercase tracking-[0.3em] text-primary">Gladiolus Tours Team</p>
               </div>
             </div>
             <div className="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
@@ -259,7 +259,7 @@ export default function AboutPage() {
               Guiding Every Journey with Integrity
             </h2>
             <p className="text-lg font-mono text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              These six pillars mirror the promises of our legacy site—balancing excellence, empathy, and sustainability across every safari.
+              These six pillars mirror the promises of our legacy site, balancing excellence, empathy, and sustainability across every safari.
             </p>
           </div>
 
