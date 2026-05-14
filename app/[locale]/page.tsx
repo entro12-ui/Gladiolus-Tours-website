@@ -3,455 +3,688 @@ import Image from "next/image"
 import { Link } from "@/i18n/routing"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { BreadcrumbSchema, OrganizationSchema } from "@/components/structured-data"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, ArrowDown, MapPin, Calendar, Users, Compass, Camera, Sparkles, Star, Mountain } from "lucide-react"
-import { absoluteUrl } from "@/lib/seo"
-import { assetUrl } from "@/lib/assets"
+import {
+  OrganizationSchema,
+  BreadcrumbSchema,
+} from "@/components/structured-data"
 import { HeroSlideshow } from "@/components/home/hero-slideshow"
-import { majorMountainTreks } from "@/lib/treks-data"
-import { ScrollAnimation } from "@/components/scroll-animation"
+import { absoluteUrl } from "@/lib/seo"
+import TestimonialSlider from "@/components/home/TestimonialSlider"
 
 export const metadata: Metadata = {
-  title: "Luxury African Safari Tours & Tailor-Made Travel Packages",
+  title: "Tanzania Safaris & Tours | Serengeti, Kilimanjaro & Zanzibar | Gladiolus Tours",
   description:
-    "Plan an unforgettable Tanzania safari with Gladiolus Tours. Discover luxury safari packages, expert guides, and tailor-made itineraries across Tanzania.",
+    "Gladiolus Tours offers Tanzania safari packages for every budget — from budget group safaris to premium private tours. Explore Serengeti, Ngorongoro, Kilimanjaro, Tarangire & Zanzibar with trusted local experts.",
+  keywords: [
+    "Tanzania Safari Packages",
+    "Affordable Tanzania Safaris",
+    "Budget Safari Tanzania",
+    "Serengeti Safari",
+    "Tanzania Family Safari",
+    "Private Tanzania Safari",
+    "Luxury African Safari",
+    "Mount Kilimanjaro Trekking",
+    "Ngorongoro Crater Tours",
+    "Arusha Safari Company",
+    "Great Migration Safari",
+    "Zanzibar Beach Holidays",
+    "Tanzania Travel Experts",
+    "Group Safari Tanzania",
+    "Mid-Range Tanzania Safari",
+  ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Gladiolus Tours | Luxury African Safari Packages",
+    title: "Tanzania Safari Packages for Every Traveler | Gladiolus Tours",
     description:
-      "Experience bespoke African safaris with award-winning guides, luxury lodges, and carefully curated itineraries across East Africa.",
+      "From budget adventures to premium private safaris — explore Serengeti, Ngorongoro, Kilimanjaro, Tarangire & Zanzibar with Gladiolus Tours.",
     url: absoluteUrl(),
+    siteName: "Gladiolus Tours",
+    locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: absoluteUrl("/gallery/zebra-00.webp"),
         width: 1200,
         height: 630,
-        alt: "Gladiolus Tours Luxury African Safari",
+        alt: "Tanzania Safari by Gladiolus Tours — All Budgets Welcome",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gladiolus Tours | Luxury African Safari Packages",
+    title: "Tanzania Safaris for Every Budget | Gladiolus Tours",
     description:
-      "Book tailor-made luxury safaris with Gladiolus Tours. Premium accommodations, expert guides, and unforgettable wildlife encounters.",
-    images: [absoluteUrl("/og-image.jpg")],
+      "Budget to premium Tanzania safaris — Serengeti, Kilimanjaro & Zanzibar packages tailored to you.",
+    images: [absoluteUrl("/gallery/zebra-00.webp")],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "travel",
+  metadataBase: new URL("https://www.gladiolustours.com"),
 }
 
-const signatureCollections = [
+// ─── Data ────────────────────────────────────────────────────────────────────
+
+const safariPackages = [
   {
-    name: "Northern Frontiers",
-    description: "Follow the Migration, picnic on the Ngorongoro rim, and sleep beneath thousands of desert stars.",
-    route: "Serengeti • Ngorongoro • Tarangire",
-    duration: "9 days",
-    image: "/gallery/zebra-00.webp",
+    title: "7-Day Serengeti Safari",
+    duration: "7 DAYS",
+    badge: "MOST POPULAR",
+    priceFrom: "From $1,450",
+    image: "/gallery/safari4.jpeg",
+    link: "/safaris/great-migration",
+    description:
+      "Classic Serengeti game drives with flexible lodge or tented camp options to suit your budget.",
   },
   {
-    name: "Kilimanjaro Peak + Crater",
-    description: "Summit via Lemosho, recover in crater villas, and track tree-climbing lions at Lake Manyara.",
-    route: "Kilimanjaro • Manyara • Crater",
-    duration: "12 days",
-    image: "/placeholder.svg",
+    title: "Ngorongoro & Tarangire Explorer",
+    duration: "5 DAYS",
+    badge: "FAMILY FAVORITE",
+    priceFrom: "From $980",
+    image: "/gallery/ballon.jpeg",
+    link: "/destinations/ngorongoro-crater",
+    description:
+      "Perfect for families and first-time safari travelers — incredible wildlife, great value.",
   },
   {
-    name: "Southern Solitude",
-    description: "Fly into Ruaha and Nyerere for walking safaris, boating on the Rufiji, and sleep-outs on raised decks.",
-    route: "Ruaha • Nyerere",
-    duration: "8 days",
-    image: "/placeholder.svg",
+    title: "Kilimanjaro & Zanzibar Combo",
+    duration: "10 DAYS",
+    badge: "ADVENTURE",
+    priceFrom: "From $2,200",
+    image: "/gallery/kik1.jpeg",
+    link: "/treks",
+    description:
+      "Summit Africa's highest peak then unwind on Zanzibar's pristine white-sand beaches.",
   },
 ]
 
-const destinationHighlights = [
+const experienceHighlights = [
   {
-    slug: "serengeti-national-park",
-    title: "Serengeti National Park",
-    location: "Tanzania",
-    duration: "5 days",
-    image: "/gallery/zebra-00.webp",
+    icon: "🚙",
+    title: "Private 4×4 Land Cruisers",
+    desc: "Dedicated safari vehicles for small groups, families, and solo travelers.",
   },
   {
-    slug: "ngorongoro-crater",
-    title: "Ngorongoro Crater",
-    location: "Tanzania",
-    duration: "4 days",
-    image: "/gallery/lunch-00.webp",
+    icon: "🏕️",
+    title: "Flexible Accommodations",
+    desc: "Budget tented camps, comfortable lodges, and premium private suites available.",
+  },
+  {
+    icon: "🧭",
+    title: "Expert Local Guides",
+    desc: "Certified, passionate guides with deep knowledge of Tanzania's ecosystems.",
+  },
+  {
+    icon: "✈️",
+    title: "Airport Transfers",
+    desc: "Seamless pickups from Kilimanjaro and Arusha airports, 24/7.",
+  },
+  {
+    icon: "🛩️",
+    title: "Fly-In Safaris",
+    desc: "Charter flights to remote parks for those short on time or craving comfort.",
+  },
+  {
+    icon: "💑",
+    title: "Honeymoon Safaris",
+    desc: "Romantic bush experiences tailored for couples — intimate and unforgettable.",
+  },
+  {
+    icon: "👨‍👩‍👧‍👦",
+    title: "Family Adventures",
+    desc: "Kid-friendly itineraries designed for safe, fun, and enriching family travel.",
+  },
+  {
+    icon: "📷",
+    title: "Photography Expeditions",
+    desc: "Specialist photography safaris with optimal positioning and lighting guidance.",
   },
 ]
 
-const trekHighlightIds = ["kili-lemosho", "kili-machame", "meru"] as const
-const trekHighlights = trekHighlightIds
-  .map((id) => majorMountainTreks.find((trek) => trek.id === id))
-  .filter((trek) => Boolean(trek))
-
-const experiencePillars = [
-  {
-    title: "Soulful storytelling",
-    copy: "Itineraries are paced like narratives—quiet dawns, cinematic wildlife arcs, and celebratory finales.",
-    icon: Sparkles,
-  },
-  {
-    title: "Design-first logistics",
-    copy: "Private charters, on-call concierges, and seamless handovers between bush, coast, and summit.",
-    icon: Compass,
-  },
-  {
-    title: "Creative documentation",
-    copy: "Photography coaches and in-field editors craft heirloom albums while you stay present in the moment.",
-    icon: Camera,
-  },
-]
-
-const testimonials = [
-  {
-    quote:
-      "Sunday from Gladiolus Tours made my stay at Msuti Hut and safari in Arusha National Park unforgettable. Kind, professional, and so passionate about culture and nature.",
-    name: "Lærke Skye",
-    detail: "Google Review • February 2024",
-  },
-  {
-    quote:
-      "Unbelievable experience! We summited Kilimanjaro via Marangu in five days and every detail was perfectly organised by the Gladiolus team. We felt supported every step.",
-    name: "Maite Gonzalo",
-    detail: "Google Review • January 2024",
-  },
-]
+// ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen">
+    <div className="bg-[#FAFBF8] text-[#243526] min-h-screen overflow-hidden font-sans">
       <OrganizationSchema />
-      <BreadcrumbSchema
-        items={[{ name: "Home", url: absoluteUrl("/") }]}
-      />
-      <Navigation />
+      <BreadcrumbSchema items={[{ name: "Home", url: absoluteUrl("/") }]} />
 
-      {/* Hero */}
-      <section className="relative isolate flex min-h-screen items-center overflow-hidden text-white">
-        <HeroSlideshow />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 py-28">
-          <div className="space-y-6 max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-2 font-mono text-xs uppercase tracking-[0.35em] text-white/80">
-              Gladiolus Signature Journeys
-            </span>
-            <h1 className="text-4xl md:text-6xl font-serif text-balance">
-              Safari design that feels cinematic, soulful, and deeply personal.
-            </h1>
-            <p className="text-lg md:text-xl font-mono text-white/85 leading-relaxed">
-              From Migration fly-ins to spice coast slowdowns, we blueprint every handover, picnic, and sundowner with a director’s eye for pacing and detail.
-            </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full bg-white px-8 text-base font-semibold text-primary shadow-lg shadow-black/30 hover:bg-white/90"
-              >
-                <Link href="/safaris">Browse Signature Safaris</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="rounded-full border-white/50 bg-white/10 px-8 text-base font-semibold text-white hover:bg-white/20"
-              >
-                <Link href="/contact">Start a Custom Map</Link>
-              </Button>
-            </div>
-          </div>
+      {/* ── HEADER ── */}
+      <div className="sticky top-0 z-50 bg-[#F4F7F2]/95 backdrop-blur-2xl border-b border-[#D0DBCC]/60">
+        <Navigation />
+      </div>
+
+      {/* ══════════════════════════════════════════════════════════
+    HERO — Light, Airy, Split Layout · Image Fully Visible
+══════════════════════════════════════════════════════════ */}
+<section className="relative isolate overflow-hidden bg-white">
+
+  {/* Subtle ambient glows for premium feel */}
+  <div
+    aria-hidden
+    className="pointer-events-none absolute -top-32 -left-20 w-[500px] h-[500px] bg-[#D8CC72]/10 blur-[140px] rounded-full"
+  />
+  <div
+    aria-hidden
+    className="pointer-events-none absolute -bottom-32 left-1/3 w-[400px] h-[400px] bg-[#9CCB9A]/10 blur-[120px] rounded-full"
+  />
+
+  <div className="relative container mx-auto px-5 sm:px-8 lg:px-14">
+    <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center min-h-[calc(100vh-5rem)] py-16 lg:py-20">
+
+      {/* ─────────────────────────────────────────────────
+          LEFT: TEXT CONTENT (white background, dark text)
+      ───────────────────────────────────────────────── */}
+      <div className="lg:col-span-6 xl:col-span-7 relative z-10">
+
+        {/* Eyebrow badge */}
+        <div className="inline-flex items-center gap-2.5 rounded-full bg-[#F4F7F2] border border-[#D0DBCC] px-5 py-2.5 animate-fade-in-up">
+          <span
+            className="w-2 h-2 bg-[#C2B44A] rounded-full animate-pulse"
+            aria-hidden
+          />
+          <span className="text-[11px] md:text-[12px] font-semibold tracking-[0.18em] uppercase text-[#2D4A30]">
+            Tanzania · Kilimanjaro · Zanzibar · All Budgets
+          </span>
         </div>
-        <a
-          href="#signature-collections"
-          className="absolute bottom-10 left-1/2 z-10 inline-flex -translate-x-1/2 items-center gap-3 rounded-full border border-white/20 bg-white/10 px-5 py-3 text-xs font-mono uppercase tracking-[0.3em] text-white/80 backdrop-blur transition hover:border-white/40"
-          aria-label="Scroll to signature collections"
+
+        {/* Headline — dark text on white */}
+        <h1
+          className="mt-7 font-serif font-medium leading-[1.05] tracking-[-0.025em] text-[#1B2D1D] animate-fade-in-up delay-100"
+          style={{ fontSize: "clamp(2.4rem, 5.5vw, 4.8rem)" }}
         >
-          Scroll to explore
-          <ArrowDown className="h-4 w-4 animate-bounce" />
-        </a>
-      </section>
+          Your Tanzania Adventure,
+          <span
+            className="block mt-1.5 bg-gradient-to-r from-[#B8A840] via-[#A8B545] to-[#8E9A35] bg-clip-text text-transparent"
+          >
+            Tailored To You
+          </span>
+        </h1>
 
-      {/* Signature Collections */}
-      <section id="signature-collections" className="py-24 bg-[#050b0d] text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-          <ScrollAnimation className="mb-12 max-w-3xl">
-            <p className="text-xs font-mono uppercase tracking-[0.35em] text-white/60">Collections</p>
-            <h2 className="mt-4 text-4xl md:text-5xl font-serif text-balance">Three ways to traverse Tanzania with Gladiolus creative directors.</h2>
-            <p className="mt-4 font-mono text-sm text-white/75">
-              Choose a starting canvas—then we layer in lodges, aircraft, private guides, and special access based on your pace and passions.
-            </p>
-          </ScrollAnimation>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {signatureCollections.map((collection, index) => (
-              <ScrollAnimation key={collection.name} animation="fade-up" delay={index * 150}>
-                <Card className="group border-white/10 bg-white/5 backdrop-blur rounded-3xl overflow-hidden hover-lift">
-                  <div className="relative h-64">
-                    <Image
-                      src={assetUrl(collection.image)}
-                      alt={collection.name}
-                      fill
-                      className="object-cover transition duration-[2500ms] ease-out group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <p className="text-xs font-mono uppercase tracking-[0.3em]">{collection.route}</p>
-                      <p className="text-2xl font-serif">{collection.name}</p>
-                    </div>
-                  </div>
-                  <CardContent className="p-6 space-y-4 text-white/80">
-                    <p className="font-mono text-sm leading-relaxed">{collection.description}</p>
-                    <div className="flex items-center gap-2 text-xs font-mono tracking-[0.3em] uppercase">
-                      <Calendar className="h-4 w-4" /> {collection.duration}
-                    </div>
-                    <Button asChild className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary">
-                      <Link href="/contact">Customize Journey</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-            ))}
-          </div>
-        </div>
-      </section>
+        {/* Description — dark gray on white, no overlay needed */}
+        <p className="mt-7 text-[16px] md:text-[18px] text-[#4A5A4C] leading-[1.85] font-light max-w-2xl animate-fade-in-up delay-200">
+          Explore Tanzania with flexible packages designed for{" "}
+          <strong className="font-semibold text-[#1B2D1D]">every traveler and budget</strong>
+          {" "}— from budget-friendly group safaris and mid-range family adventures to
+          premium private experiences across Serengeti, Ngorongoro, Kilimanjaro,
+          Tarangire, and Zanzibar.
+        </p>
 
-      <section className="relative overflow-hidden bg-[#04080c] py-24 text-white">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.10),_rgba(4,8,12,0.92))]" />
-        <div className="container relative mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="mb-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-            <ScrollAnimation className="space-y-5">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-2 font-mono text-xs uppercase tracking-[0.35em] text-white/80">
-                Treks
-              </span>
-              <h2 className="text-4xl md:text-5xl font-serif text-balance">High altitude summits and volcanic ridgelines.</h2>
-              <p className="font-mono text-sm text-white/75 leading-relaxed max-w-2xl">
-                Compare Tanzania's most iconic routes from Kilimanjaro to Meru and continue onward into safari circuits or Zanzibar recovery days.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-[11px] font-mono uppercase tracking-[0.25em] text-white/70">
-                  Guided routes
-                </span>
-                <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-[11px] font-mono uppercase tracking-[0.25em] text-white/70">
-                  Acclimatization-first pacing
-                </span>
-                <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-[11px] font-mono uppercase tracking-[0.25em] text-white/70">
-                  Summit + safari combos
-                </span>
-              </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation delay={200} className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full border border-white/30 bg-white px-8 text-base font-semibold text-primary shadow-[0_18px_45px_rgba(255,255,255,0.15)] transition hover:-translate-y-0.5 hover:bg-white/90"
-              >
-                <Link href="/treks">Browse all treks</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="rounded-full border-white/60 bg-white/5 px-8 text-base font-semibold text-white transition hover:bg-white/15"
-              >
-                <Link href="/contact">Plan a trek</Link>
-              </Button>
-            </ScrollAnimation>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {trekHighlights.map((trek, index) => {
-              if (!trek) return null
-
-              return (
-                <ScrollAnimation key={trek.id} animation="fade-up" delay={index * 150}>
-                  <Card
-                    className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-black/30 text-white shadow-[0_30px_80px_rgba(2,6,23,0.55)] hover-lift"
-                  >
-                    <div className="absolute inset-0">
-                      <Image
-                        src={assetUrl(trek.image)}
-                        alt={trek.title}
-                        fill
-                        unoptimized
-                        className="object-cover brightness-[0.85] transition duration-[2000ms] ease-out group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
-                    </div>
-
-                    <Link href={`/treks/${trek.slug}`} className="absolute inset-0 z-10" aria-label={`View trek details for ${trek.title}`}>
-                      <span className="sr-only">View trek details</span>
-                    </Link>
-
-                    <CardContent className="relative z-20 flex min-h-[360px] flex-col justify-end p-6">
-                      <div className="rounded-3xl border border-white/15 bg-black/40 p-5 backdrop-blur">
-                        <div className="space-y-2">
-                          <p className="text-[11px] font-mono uppercase tracking-[0.35em] text-white/70 flex items-center gap-2">
-                            <MapPin className="h-3.5 w-3.5" /> {trek.location}
-                          </p>
-                          <h3 className="text-2xl font-serif leading-tight text-balance">{trek.title}</h3>
-                        </div>
-
-                        <div className="mt-4 flex flex-wrap gap-2">
-                          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
-                            <Calendar className="h-4 w-4" /> {trek.duration}
-                          </span>
-                          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
-                            <Mountain className="h-4 w-4" /> {trek.elevation}
-                          </span>
-                          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.25em] text-white/75">
-                            {trek.difficulty}
-                          </span>
-                        </div>
-
-                        <div className="mt-5">
-                          <Button
-                            asChild
-                            className="w-full rounded-full bg-gradient-to-r from-primary-alt to-primary py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-md shadow-primary/20 ring-1 ring-primary/25 hover:from-primary-alt/90 hover:to-primary/90"
-                          >
-                            <Link href={`/treks/${trek.slug}`}>
-                              View trek details <ArrowRight className="ml-2 h-4 w-4" />
-                            </Link>
-                          </Button>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </ScrollAnimation>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Experience */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
-          <div className="space-y-6">
-            <p className="text-xs font-mono uppercase tracking-[0.35em] text-muted-foreground">Our Method</p>
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground text-balance">Creative direction meets expedition-grade planning.</h2>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              We storyboard each day with a balance of thrill and restoration. Sunrise hot air balloons, crater floor lunches, spice market tastings, and ocean breeze decompressions.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {experiencePillars.map((pillar) => (
-                <Card key={pillar.title} className="border-border/40">
-                  <CardContent className="p-5 space-y-3">
-                    <pillar.icon className="h-8 w-8 text-primary" />
-                    <h3 className="text-xl font-serif text-foreground">{pillar.title}</h3>
-                    <p className="font-mono text-sm text-muted-foreground">{pillar.copy}</p>
-                  </CardContent>
-                </Card>
+        {/* Trust signals row */}
+        <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 animate-fade-in-up delay-200">
+          {/* Star rating */}
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-0.5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <svg
+                  key={i}
+                  className="w-4 h-4 text-[#D8B43A]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
               ))}
             </div>
+            <span className="text-[13px] font-semibold text-[#1B2D1D]">4.9/5</span>
+            <span className="text-[12px] text-[#6B7B6D]">· 2,800+ guests</span>
           </div>
-          <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/10">
-            <Image src={assetUrl("/about-us/team.webp")} alt="Gladiolus concierge team planning routes" fill className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-            <p className="absolute bottom-6 left-6 text-xs font-mono uppercase tracking-[0.4em] text-white/80">
-              On-ground concierge desk • Arusha HQ
+
+          <div className="h-4 w-px bg-[#D0DBCC]" aria-hidden />
+
+          <div className="flex items-center gap-2">
+            <svg
+              className="w-4 h-4 text-[#2D4A30]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+              aria-hidden
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span className="text-[12px] font-medium text-[#3A4B3C]">22 Years Experience</span>
+          </div>
+        </div>
+
+        {/* CTAs */}
+        <div className="mt-9 flex flex-wrap gap-4 animate-fade-in-up delay-300">
+          <Link
+            href="/contact"
+            className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-[#C2B44A] via-[#B8A840] to-[#A8B545] hover:from-[#B0A040] hover:to-[#8E9A35] px-7 py-3.5 text-white text-sm md:text-[15px] font-semibold tracking-[0.02em] transition-all duration-400 hover:-translate-y-0.5 shadow-[0_12px_32px_rgba(184,168,64,0.30)] hover:shadow-[0_18px_48px_rgba(184,168,64,0.42)]"
+          >
+            Plan Your Adventure
+            <svg
+              className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+              aria-hidden
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+
+          <a
+            href="https://wa.me/255789736559"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 rounded-full bg-white border border-[#D0DBCC] hover:border-[#C2B44A] px-7 py-3.5 text-[#1B2D1D] text-sm md:text-[15px] font-medium tracking-[0.02em] transition-all duration-400 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+          >
+            <svg
+              className="w-5 h-5 text-[#25D366] flex-shrink-0"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden
+            >
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" />
+            </svg>
+            Quick WhatsApp Quote
+          </a>
+        </div>
+
+        {/* Stats bar */}
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 animate-fade-in-up delay-400">
+          {[
+            { value: "2,800+", label: "Happy Guests" },
+            { value: "22", label: "Years Experience" },
+            { value: "All", label: "Budgets Welcome" },
+            { value: "100%", label: "Custom Plans" },
+          ].map((stat, i) => (
+            <div
+              key={i}
+              className="bg-[#F8FAF7] border border-[#E2EAE0] rounded-2xl px-3 py-4 text-center hover:border-[#C2B44A]/40 hover:bg-white hover:shadow-[0_6px_20px_rgba(0,0,0,0.04)] transition-all duration-400"
+            >
+              <div className="text-[#1B2D1D] font-bold font-serif text-lg md:text-xl leading-tight">
+                {stat.value}
+              </div>
+              <div className="text-[#6B7B6D] text-[10px] md:text-[11px] mt-1 tracking-wide font-medium">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+
+      {/* ─────────────────────────────────────────────────
+          RIGHT: HERO IMAGE (crisp, fully visible, no overlay)
+      ───────────────────────────────────────────────── */}
+      <div className="lg:col-span-6 xl:col-span-5 relative animate-fade-in delay-200">
+
+        {/* Image container with elegant rounded corners */}
+        <div className="relative aspect-[4/5] lg:aspect-[3/4] xl:aspect-[4/5] rounded-[32px] overflow-hidden shadow-[0_30px_80px_rgba(28,43,30,0.20)]">
+
+          {/* The slideshow renders here — fully crisp, NO overlay */}
+          <HeroSlideshow />
+
+          {/* Subtle inner border for premium feel */}
+          <div
+            aria-hidden
+            className="absolute inset-0 rounded-[32px] ring-1 ring-inset ring-white/40 pointer-events-none"
+          />
+
+          {/* Floating "Verified Local Experts" badge — bottom-left of image */}
+          <div className="absolute bottom-5 left-5 right-5 z-10">
+            <div className="bg-white/95 backdrop-blur-md rounded-2xl px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.12)] border border-white/80 flex items-center gap-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-[#C2B44A] to-[#A8B545] flex items-center justify-center">
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-[#7C8B61] font-semibold">
+                  Trusted Local Experts
+                </p>
+                <p className="text-[13px] font-semibold text-[#1B2D1D] leading-tight mt-0.5 truncate">
+                  Based in Arusha, Tanzania
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Floating decorative card — top-right of image (desktop only) */}
+        <div className="hidden xl:block absolute -top-6 -right-6 z-20 animate-fade-in delay-500">
+          <div className="bg-white rounded-2xl px-5 py-4 shadow-[0_16px_40px_rgba(28,43,30,0.12)] border border-[#E2EAE0] max-w-[200px]">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="flex items-center gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-3 h-3 text-[#D8B43A]"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    aria-hidden
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="text-[11px] font-bold text-[#1B2D1D]">4.9</span>
+            </div>
+            <p className="text-[11px] text-[#4A5A4C] leading-relaxed font-light">
+              <em>&ldquo;Best safari company in Tanzania!&rdquo;</em>
+            </p>
+            <p className="text-[10px] text-[#7C8B61] mt-1.5 font-medium">
+              — Verified Tripadvisor Review
             </p>
           </div>
         </div>
-      </section>
 
-      {/* Destinations */}
-      <section className="py-24 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground">Destination tableaus to inspire your canvas.</h2>
-            <p className="mt-4 font-mono text-sm text-muted-foreground">Hover for a glimpse, click to draft a full route with our team.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {destinationHighlights.map((destination) => (
-              <Card key={destination.slug} className="group overflow-hidden rounded-3xl border-border/40 bg-background">
-                <div className="relative h-64 overflow-hidden">
-                  <Image src={assetUrl(destination.image)} alt={destination.title} fill className="object-cover transition duration-500 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-white space-y-1">
-                    <p className="text-xs font-mono tracking-[0.4em] uppercase flex items-center gap-2">
-                      <MapPin className="h-3.5 w-3.5" /> {destination.location}
-                    </p>
-                    <p className="text-2xl font-serif">{destination.title}</p>
-                  </div>
-                </div>
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex items-center gap-2 text-sm font-mono text-muted-foreground">
-                    <Calendar className="h-4 w-4" /> {destination.duration}
-                  </div>
-                  <Button asChild className="rounded-full bg-gradient-to-r from-primary-alt to-primary w-full">
-                    <Link href={`/destinations/${destination.slug}`}>
-                      Explore Destination <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
 
-      {/* Testimonials */}
-      <section className="relative overflow-hidden bg-[#04080c] py-24 text-white">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_rgba(4,8,12,0.9))]" />
-        <div className="container relative mx-auto grid gap-16 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-12">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <p className="text-xs font-mono uppercase tracking-[0.35em] text-white/70">Google Reviews</p>
-              <h2 className="text-4xl md:text-5xl font-serif text-balance">Our travellers keep the stories alive long after wheels-up.</h2>
-              <p className="font-mono text-sm text-white/75">
-                Every itinerary is followed by handwritten field notes from guests. Here are a few recent love letters captured straight from our
-                Google profile.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-6">
-              <div className="flex-1 min-w-[220px] rounded-3xl border border-white/15 bg-white/5 p-6">
-                <div className="flex items-center gap-2 text-amber-300">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <Star key={index} className="h-5 w-5 fill-current" />
-                  ))}
-                </div>
-                <p className="mt-4 text-4xl font-serif">5.0</p>
-                <p className="text-xs font-mono uppercase tracking-[0.3em] text-white/70">Average on Google</p>
-                <p className="mt-2 text-sm font-mono text-white/70">36+ verified reviews across Kilimanjaro ascents, migrations, and spice coast escapes.</p>
-              </div>
-              <div className="flex-1 min-w-[220px] rounded-3xl border border-white/10 bg-gradient-to-br from-primary/20 to-primary-alt/10 p-6">
-                <p className="text-xs font-mono uppercase tracking-[0.3em] text-white/80">Featured Guides</p>
-                <p className="mt-3 text-2xl font-serif">Sunday & Clever</p>
-                <p className="text-sm font-mono text-white/75">Lead concierge duo mentioned in 80% of 5★ reviews for their storytelling and care.</p>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full border border-white/30 bg-white px-9 text-base font-semibold text-primary shadow-[0_15px_35px_rgba(255,255,255,0.15)] transition hover:-translate-y-0.5"
-              >
-                <Link href="/contact">Plan with our team</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="rounded-full border-white/70 bg-white/5 px-9 text-base font-semibold text-white transition hover:bg-white/15"
-              >
-                <Link href="/gallery">Browse journey gallery</Link>
-              </Button>
-            </div>
-          </div>
-          <div className="grid gap-8">
-            {testimonials.map((testimonial) => (
+    </div>
+  </div>
+
+  {/* Scroll indicator */}
+  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden lg:flex flex-col items-center gap-2 animate-bounce opacity-60">
+    <span className="text-[#6B7B6D] text-[10px] tracking-[0.25em] uppercase font-semibold">
+      Scroll
+    </span>
+    <svg
+      className="w-5 h-5 text-[#6B7B6D]"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      aria-hidden
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+</section>
+
+      {/* ══════════════════════════════════════════════════════════
+          INTRODUCTION
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute top-0 right-0 w-[360px] h-[360px] bg-[#D8CC72]/8 blur-[100px] rounded-full pointer-events-none"
+        />
+        <div
+          aria-hidden
+          className="absolute bottom-0 left-0 w-[280px] h-[280px] bg-[#9CCB9A]/8 blur-[80px] rounded-full pointer-events-none"
+        />
+
+        <div className="container relative mx-auto px-5 sm:px-8 lg:px-14 max-w-5xl text-center">
+          <div className="w-14 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
+          <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
+            Welcome To Gladiolus Tours
+          </span>
+
+          <h2 className="mt-5 font-serif text-[#1B2D1D] leading-tight"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}
+          >
+            Authentic Tanzania Experiences
+            <br className="hidden md:block" /> For Every Traveler
+          </h2>
+
+          <p className="mt-7 text-[16px] md:text-[18px] leading-[1.95] text-[#556458] font-light max-w-3xl mx-auto">
+            At Gladiolus Tours, we believe unforgettable Tanzania experiences should be
+            accessible to <em>every</em> traveler. Whether you are planning a{" "}
+            <strong className="text-[#2D4A30] font-semibold">budget safari</strong>,
+            a comfortable{" "}
+            <strong className="text-[#2D4A30] font-semibold">mid-range family escape</strong>,
+            a romantic honeymoon, or a{" "}
+            <strong className="text-[#2D4A30] font-semibold">premium private adventure</strong> —
+            our local team crafts journeys tailored to your style and budget.
+          </p>
+
+          {/* Budget tiers visual indicator */}
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-3">
+            {[
+              { tier: "Budget", color: "bg-[#8DAE6F]", label: "Group & Shared Safaris" },
+              { tier: "Mid-Range", color: "bg-[#B8A840]", label: "Comfortable & Flexible" },
+              { tier: "Premium", color: "bg-[#2D4A30]", label: "Private & Exclusive" },
+            ].map((t) => (
               <div
-                key={testimonial.name}
-                className="rounded-[32px] border border-white/15 bg-black/40 p-8 shadow-[0_25px_70px_rgba(2,6,23,0.4)] backdrop-blur"
+                key={t.tier}
+                className="flex items-center gap-3 bg-[#F4F7F2] border border-[#E2EAE0] rounded-2xl px-5 py-3"
               >
-                <p className="text-lg font-serif leading-relaxed text-white">“{testimonial.quote}”</p>
-                <div className="mt-6">
-                  <p className="text-base font-semibold text-white">{testimonial.name}</p>
-                  <p className="text-xs font-mono uppercase tracking-[0.3em] text-white/60">{testimonial.detail}</p>
+                <span className={`w-3 h-3 rounded-full ${t.color} flex-shrink-0`} aria-hidden />
+                <span className="text-[13px] font-semibold text-[#1B2D1D]">{t.tier}</span>
+                <span className="text-[12px] text-[#6B7B6D]">· {t.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          TRUSTED PARTNERS
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-20 bg-[#F8FAF7] border-y border-[#E2EAE0]/60 relative overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(194,180,74,0.06),transparent_30%)] pointer-events-none"
+        />
+
+        <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 text-center">
+          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-5" />
+          <p className="uppercase tracking-[0.4em] text-[11px] text-[#B8A840] font-semibold">
+            Trusted Worldwide
+          </p>
+          <h2 className="font-serif mt-4 text-[#1B2D1D] leading-snug"
+            style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)" }}
+          >
+            Recommended By Leading Travel Platforms
+          </h2>
+          <p className="mt-4 max-w-xl mx-auto text-[#556458] leading-[1.85] text-[14px] md:text-[15px] font-light">
+            Recognized by international safari travelers and leading travel authorities across Africa and the globe.
+          </p>
+
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-5">
+            {[
+              "/partners/safaribookings.jpeg",
+              "/partners/safarigo.png",
+              "/partners/tato.png",
+              "/partners/tripadvisor.png",
+            ].map((logo, i) => (
+              <div
+                key={i}
+                className="group relative overflow-hidden bg-white border border-[#E2EAE0]/80 rounded-[24px] p-7 hover:shadow-[0_16px_48px_rgba(0,0,0,0.07)] transition-all duration-500 hover:-translate-y-1"
+              >
+                <div
+                  aria-hidden
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_top_right,rgba(194,180,74,0.07),transparent_35%)] pointer-events-none"
+                />
+                <Image
+                  src={logo}
+                  alt="Travel Partner"
+                  width={160}
+                  height={60}
+                  className="relative mx-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          SAFARI PACKAGES — Repositioned as "all-budget"
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-28 bg-white relative overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute right-0 top-0 w-[420px] h-[420px] bg-[#B8A840]/5 blur-[100px] rounded-full pointer-events-none"
+        />
+
+        <div className="container relative mx-auto px-5 sm:px-8 lg:px-14">
+
+          <div className="text-center mb-16">
+            <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
+            <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
+              Safari Packages · All Budgets
+            </span>
+            <h2 className="font-serif mt-5 text-[#1B2D1D] leading-[1.1] tracking-[-0.025em]"
+              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+            >
+              Handcrafted Tanzania Safari Packages
+            </h2>
+            <p className="mt-5 max-w-2xl mx-auto text-[15px] md:text-[17px] text-[#556458] leading-[1.9] font-light">
+              Whether you are traveling solo on a budget, with family on a mid-range package,
+              or seeking an exclusive private experience — we have a safari crafted for you.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-7">
+            {safariPackages.map((pkg, index) => (
+              <Link key={index} href={pkg.link} className="group block">
+                <article className="rounded-[28px] overflow-hidden border border-[#E2EAE0]/70 bg-white hover:shadow-[0_24px_72px_rgba(0,0,0,0.09)] transition-all duration-600 hover:-translate-y-2 h-full flex flex-col">
+
+                  {/* Image */}
+                  <div className="relative h-64 overflow-hidden flex-shrink-0">
+                    <Image
+                      src={pkg.image}
+                      alt={pkg.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-[1400ms] ease-out"
+                    />
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 bg-gradient-to-t from-[#0C140E]/50 via-transparent to-transparent"
+                    />
+                    {/* Badge */}
+                    <div className="absolute top-4 left-4 bg-gradient-to-r from-[#D0C05A] to-[#A8B545] text-white px-4 py-1.5 rounded-full text-[10px] tracking-[0.22em] font-semibold shadow-lg">
+                      {pkg.badge}
+                    </div>
+                    {/* Price from */}
+                    <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm text-[#2D4A30] px-3 py-1.5 rounded-full text-[11px] font-semibold shadow">
+                      {pkg.priceFrom}
+                    </div>
+                  </div>
+
+                  {/* Body */}
+                  <div className="p-7 flex flex-col flex-1">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-[11px] tracking-[0.22em] text-[#94872E] font-semibold">
+                        {pkg.duration}
+                      </span>
+                      <span className="text-[11px] text-[#6B7B6D] tracking-[0.1em] uppercase">
+                        Flexible Options
+                      </span>
+                    </div>
+
+                    <h3 className="text-[1.55rem] font-serif text-[#1B2D1D] leading-snug tracking-[-0.02em]">
+                      {pkg.title}
+                    </h3>
+
+                    <p className="mt-3 text-[14px] text-[#556458] leading-[1.85] font-light flex-1">
+                      {pkg.description}
+                    </p>
+
+                    <div className="mt-6">
+                      <span className="rounded-full bg-[#2D4A30] text-white px-6 py-2.5 inline-flex items-center gap-2 text-[13px] font-medium tracking-wide group-hover:bg-gradient-to-r group-hover:from-[#D0C05A] group-hover:to-[#A8B545] transition-all duration-400 shadow-md">
+                        View Itinerary
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+
+                </article>
+              </Link>
+            ))}
+          </div>
+
+          {/* View all CTA */}
+          <div className="text-center mt-12">
+            <Link
+              href="/safaris"
+              className="inline-flex items-center gap-2 text-[#2D4A30] font-semibold text-[15px] border-b-2 border-[#C2B44A]/50 hover:border-[#C2B44A] pb-0.5 transition-colors duration-300"
+            >
+              View All Safari Packages
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          FOUNDERS
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-28 bg-[#F8FAF7]">
+        <div className="container mx-auto px-5 sm:px-8 lg:px-14 max-w-5xl">
+
+          <div className="text-center mb-16">
+            <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-5" />
+            <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
+              Leadership
+            </span>
+            <h2 className="font-serif mt-4 text-[#1B2D1D] leading-tight"
+              style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}
+            >
+              Meet the Founders
+            </h2>
+            <p className="mt-5 max-w-xl mx-auto text-[#4A5A4C] leading-[1.85] font-light text-[15px]">
+              Passionate Tanzania travel professionals dedicated to delivering authentic,
+              world-class safari experiences with genuine local expertise.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                name: "Sunday Mtui",
+                role: "Co-Founder & Lead Safari Specialist",
+                image: "/team/sunday-mtui.jpg",
+                bio: "With over two decades of safari leadership across Serengeti, Ngorongoro, and Mount Kilimanjaro — Sunday brings unmatched local knowledge and warm, personalized guiding.",
+              },
+              {
+                name: "Francois Martin",
+                role: "Co-Founder & International Travel Consultant",
+                image: "/team/francois-martin.jpg",
+                bio: "Specializing in international safari planning and cross-budget lodge partnerships — Francois ensures every traveler finds the perfect match for their style and spend.",
+              },
+            ].map((founder) => (
+              <div
+                key={founder.name}
+                className="bg-white rounded-[26px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_64px_rgba(0,0,0,0.09)] transition-all duration-500 hover:-translate-y-1"
+              >
+                <div className="relative h-72">
+                  <Image
+                    src={founder.image}
+                    alt={`${founder.name} — ${founder.role}`}
+                    fill
+                    className="object-cover"
+                  />
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-gradient-to-t from-[#0C140E]/30 to-transparent"
+                  />
+                </div>
+                <div className="p-7">
+                  <h3 className="text-[1.4rem] font-serif text-[#1B2D1D]">{founder.name}</h3>
+                  <p className="text-[#C2B44A] font-medium text-[13px] mt-1">{founder.role}</p>
+                  <p className="mt-4 text-[14px] text-[#4A5A4C] leading-[1.85] font-light">{founder.bio}</p>
                 </div>
               </div>
             ))}
@@ -459,32 +692,394 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="rounded-[40px] border border-border/40 bg-gradient-to-r from-primary to-primary-alt px-6 py-16 text-center text-primary-foreground shadow-2xl shadow-primary/30">
-            <h2 className="text-4xl md:text-5xl font-serif text-balance">Ready to storyboard your Tanzanian odyssey?</h2>
-            <p className="mt-4 text-lg font-mono text-primary-foreground/90 max-w-2xl mx-auto">
-              Tell us your travel window, altitude comfort, and dream wildlife moments. We’ll reply within 48 hours with two cinematic drafts.
+      {/* ══════════════════════════════════════════════════════════
+          EXPERIENCE HIGHLIGHTS — Refreshed for all-budget
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-28 bg-white relative overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute left-0 bottom-0 w-[400px] h-[400px] bg-[#C2B44A]/5 blur-[100px] rounded-full pointer-events-none"
+        />
+
+        <div className="container relative mx-auto px-5 sm:px-8 lg:px-14">
+          <div className="text-center mb-16">
+            <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
+            <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
+              What We Offer
+            </span>
+            <h2 className="font-serif mt-5 text-[#1B2D1D] leading-[1.1] tracking-[-0.025em]"
+              style={{ fontSize: "clamp(1.8rem, 4.5vw, 3rem)" }}
+            >
+              Safari Experiences Designed Around You
+            </h2>
+            <p className="mt-5 max-w-2xl mx-auto text-[15px] md:text-[17px] text-[#556458] leading-[1.9] font-light">
+              Every experience is crafted with care, local knowledge, and flexibility
+              — from affordable adventures to bespoke private journeys.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="rounded-full border border-white/40 bg-white px-10 text-primary shadow-lg shadow-black/20">
-                <Link href="/contact">
-                  Speak to a Safari Designer <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="rounded-full border-white/80 bg-white/5 px-10 text-white transition hover:bg-white/15"
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {experienceHighlights.map((item, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden bg-gradient-to-br from-[#F8FAF7] to-white rounded-[26px] p-7 border border-[#E2EAE0]/80 hover:border-[#C2B44A]/30 hover:shadow-[0_20px_56px_rgba(0,0,0,0.07)] transition-all duration-500 hover:-translate-y-1.5"
               >
-                <Link href="/adventures">View Adventure Concepts</Link>
-              </Button>
-            </div>
+                <div
+                  aria-hidden
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_top_right,rgba(194,180,74,0.07),transparent_40%)] pointer-events-none"
+                />
+
+                <div className="relative">
+                  <div className="text-3xl mb-5" role="img" aria-label={item.title}>
+                    {item.icon}
+                  </div>
+                  <h3 className="text-[1.1rem] font-semibold text-[#1B2D1D] leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-[13px] text-[#5A6A5C] leading-[1.85] font-light">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          TESTIMONIALS
+      ══════════════════════════════════════════════════════════ */}
+      <section className="relative py-28 bg-[#F5F1EB] overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute -top-40 -left-32 w-[480px] h-[480px] bg-[#C2B44A]/6 blur-[120px] rounded-full pointer-events-none"
+        />
+        <div
+          aria-hidden
+          className="absolute -bottom-40 -right-32 w-[480px] h-[480px] bg-[#B8A840]/5 blur-[100px] rounded-full pointer-events-none"
+        />
+
+        <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 max-w-5xl text-center">
+          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
+          <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
+            Guest Reviews
+          </span>
+          <h2 className="font-serif mt-5 text-[#1B2D1D] leading-tight"
+            style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}
+          >
+            What Our Tanzania Safari Guests Say
+          </h2>
+          <p className="mt-5 max-w-xl mx-auto text-[#4A5A4C] leading-[1.85] font-light text-[14px] md:text-[15px]">
+            Trusted by travelers of all budgets — from first-time safari adventurers
+            to seasoned Africa explorers visiting Serengeti, Ngorongoro, Kilimanjaro, and Zanzibar.
+          </p>
+          <div className="mt-14">
+            <TestimonialSlider />
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          GREAT MIGRATION CTA
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-24 relative overflow-hidden bg-gradient-to-br from-[#EEF3EB] via-[#E8EDE4] to-[#D8E2D4]">
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.05] bg-[url('/gallery/zebra-00.webp')] bg-cover bg-center pointer-events-none"
+        />
+
+        <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 max-w-3xl text-center">
+          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
+          <span className="uppercase tracking-[0.4em] text-[#94872E] text-[11px] font-semibold">
+            Limited Availability
+          </span>
+          <h2 className="font-serif mt-5 text-[#1B2D1D] leading-[1.1]"
+            style={{ fontSize: "clamp(1.8rem, 5vw, 3.2rem)" }}
+          >
+            Serengeti Great Migration 2026
+          </h2>
+          <p className="mt-5 text-[15px] md:text-[17px] text-[#4A5A4C] leading-[1.9] font-light max-w-xl mx-auto">
+            Witness one of nature's greatest spectacles — wildebeest river crossings in northern Serengeti.
+            Available across budget, mid-range, and premium packages.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/safaris/great-migration"
+              className="rounded-full bg-gradient-to-r from-[#C2B44A] to-[#A8B545] px-8 py-3.5 text-white text-[14px] font-semibold tracking-wide hover:from-[#A09838] hover:to-[#8E9A35] transition-all duration-400 hover:-translate-y-0.5 shadow-[0_12px_40px_rgba(168,181,69,0.28)]"
+            >
+              Explore Migration Safaris
+            </Link>
+            <a
+              href="https://wa.me/255789736559"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-[#D0DBCC] bg-white/85 backdrop-blur-2xl px-8 py-3.5 text-[#1B2D1D] text-[14px] font-medium tracking-wide hover:border-[#B8A840] hover:bg-white transition-all duration-400 hover:-translate-y-0.5"
+            >
+              Quick WhatsApp Quote
+            </a>
+          </div>
+          <p className="mt-5 text-[12px] text-[#7A8A7C] tracking-wide">
+            Peak Season: July – September 2026 · Book Early To Secure Your Dates
+          </p>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          FAQ
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-28 bg-[#F5F1EB] relative overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute -top-24 -left-24 w-[360px] h-[360px] bg-[#C2B44A]/6 blur-[90px] rounded-full pointer-events-none"
+        />
+
+        <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 max-w-3xl">
+          <div className="text-center mb-16">
+            <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
+            <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
+              Tanzania Safari Guide
+            </span>
+            <h2 className="font-serif mt-4 text-[#1B2D1D] leading-tight"
+              style={{ fontSize: "clamp(1.7rem, 4vw, 2.7rem)" }}
+            >
+              Frequently Asked Questions
+            </h2>
+            <p className="mt-5 max-w-xl mx-auto text-[#4A5A4C] leading-[1.85] font-light text-[14px] md:text-[15px]">
+              Planning a Tanzania safari from Arusha? Here are answers to common questions
+              about safaris, Kilimanjaro, and Zanzibar holidays.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "What is the best time for a Serengeti safari?",
+                a: "June to October offers excellent dry-season wildlife viewing. July to September is peak Great Migration river crossing season in northern Serengeti. December to March is ideal for calving season in the southern Serengeti — a great option for budget travelers.",
+              },
+              {
+                q: "How many days do I need for a Tanzania safari?",
+                a: "Most Tanzania safari packages range from 5 to 10 days, combining Serengeti, Ngorongoro Conservation Area, Tarangire, and optionally Zanzibar. Shorter 3-4 day packages are also available for budget travelers.",
+              },
+              {
+                q: "Is Mount Kilimanjaro trekking suitable for beginners?",
+                a: "Yes — Kilimanjaro is suitable for first-time climbers when choosing acclimatization-friendly routes such as Lemosho or Machame. Our Arusha-based guides ensure safe, gradual summit attempts for all fitness levels.",
+              },
+              {
+                q: "Do you offer safaris for all budgets?",
+                a: "Absolutely. Gladiolus Tours offers budget group safaris, comfortable mid-range packages, and fully private premium tours. All include professional local guides and 4x4 safari vehicles — only lodge category and group size vary.",
+              },
+            ].map((faq, index) => (
+              <details
+                key={index}
+                className="group bg-white rounded-[22px] p-6 border border-[#E2EAE0]/80 hover:border-[#C2B44A]/40 hover:shadow-[0_12px_40px_rgba(0,0,0,0.05)] transition-all duration-400"
+              >
+                <summary className="cursor-pointer font-semibold text-[15px] md:text-[16px] flex justify-between items-center text-[#1B2D1D] gap-4 leading-[1.6] list-none">
+                  {faq.q}
+                  <span
+                    className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C2B44A]/12 flex items-center justify-center text-[#C2B44A] group-open:rotate-45 transition-transform duration-300"
+                    aria-hidden
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                  </span>
+                </summary>
+                <div className="mt-5">
+                  <p className="text-[14px] md:text-[15px] text-[#4A5A4C] leading-[1.9] font-light">
+                    {faq.a}
+                  </p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          FINAL CTA
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-24 bg-gradient-to-br from-[#F7F5EF] via-[#F3F1EA] to-[#ECE8DE] text-center relative overflow-hidden border-t border-[#E4DED2]">
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(194,180,74,0.09),transparent_35%)] pointer-events-none"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(168,181,69,0.07),transparent_35%)] pointer-events-none"
+        />
+
+        <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 max-w-2xl">
+          <div className="w-10 h-[2px] bg-gradient-to-r from-transparent via-[#B8A840] to-transparent mx-auto mb-8" />
+          <h2 className="font-serif leading-tight text-[#1B2D1D]"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}
+          >
+            Ready To Explore Tanzania, Your Way?
+          </h2>
+          <p className="mt-5 text-[15px] md:text-[17px] text-[#4A5A4C] leading-[1.9] font-light">
+            From affordable group safaris to exclusive private tours — our Arusha-based
+            team builds the perfect Tanzania itinerary for your budget and travel style.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="rounded-full bg-gradient-to-r from-[#C2B44A] to-[#A8B545] px-8 py-3.5 text-white text-[14px] font-semibold tracking-wide hover:from-[#A09838] hover:to-[#8E9A35] transition-all duration-400 hover:-translate-y-0.5 shadow-[0_12px_40px_rgba(168,181,69,0.25)]"
+            >
+              Get Your Custom Safari Plan
+            </Link>
+            <a
+              href="https://wa.me/255789736559"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-[#D0DBCC] bg-white/90 backdrop-blur-2xl px-8 py-3.5 text-[#1B2D1D] text-[14px] font-medium tracking-wide hover:border-[#B8A840] hover:bg-white transition-all duration-400 hover:-translate-y-0.5"
+            >
+              WhatsApp Us For Fast Assistance
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          SEO INTERNAL LINKS
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute -top-24 -right-24 w-[360px] h-[360px] bg-[#C2B44A]/5 blur-[80px] rounded-full pointer-events-none"
+        />
+        <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 max-w-4xl text-center">
+          <div className="w-10 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-7" />
+          <h2 className="font-serif text-[#1B2D1D] leading-tight"
+            style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)" }}
+          >
+            Explore Tanzania With Local Safari Experts
+          </h2>
+          <p className="mt-5 text-[14px] md:text-[15px] text-[#4A5A4C] leading-[1.95] font-light max-w-3xl mx-auto">
+            Discover unforgettable safari adventures in{" "}
+            <Link href="/destinations/serengeti-national-park" className="text-[#B8A840] underline underline-offset-4 decoration-[#B8A840]/40 hover:text-[#2D4A30] hover:decoration-[#2D4A30]/50 transition-colors duration-300 font-medium">Serengeti National Park</Link>{", "}
+            <Link href="/destinations/ngorongoro-crater" className="text-[#B8A840] underline underline-offset-4 decoration-[#B8A840]/40 hover:text-[#2D4A30] hover:decoration-[#2D4A30]/50 transition-colors duration-300 font-medium">Ngorongoro Crater</Link>{", "}
+            <Link href="/treks" className="text-[#B8A840] underline underline-offset-4 decoration-[#B8A840]/40 hover:text-[#2D4A30] hover:decoration-[#2D4A30]/50 transition-colors duration-300 font-medium">Mount Kilimanjaro</Link>{", "}
+            <Link href="/destinations/zanzibar" className="text-[#B8A840] underline underline-offset-4 decoration-[#B8A840]/40 hover:text-[#2D4A30] hover:decoration-[#2D4A30]/50 transition-colors duration-300 font-medium">Zanzibar Island</Link>{", and "}
+            <Link href="/destinations/tarangire-national-park" className="text-[#B8A840] underline underline-offset-4 decoration-[#B8A840]/40 hover:text-[#2D4A30] hover:decoration-[#2D4A30]/50 transition-colors duration-300 font-medium">Tarangire National Park</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          GEO REINFORCEMENT
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 bg-[#F6F8F3] relative overflow-hidden border-t border-[#E2EAE0]/60">
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(194,180,74,0.05),transparent_35%)] pointer-events-none"
+        />
+        <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 max-w-3xl text-center">
+          <h2 className="font-serif text-[#1B2D1D] leading-tight text-[1.4rem] md:text-[1.7rem]">
+            Tanzania Safaris Departing From Arusha
+          </h2>
+          <p className="mt-5 text-[14px] md:text-[15px] text-[#4A5A4C] leading-[1.9] font-light max-w-2xl mx-auto">
+            Gladiolus Tours operates from Usa River, Arusha — the gateway to Serengeti National Park,
+            Ngorongoro Conservation Area, Tarangire National Park, Lake Manyara,
+            Mount Kilimanjaro, and Zanzibar. All budgets welcome — group, mid-range, and private safaris available year-round.
+          </p>
+        </div>
+      </section>
+
+      {/* ── MOBILE STICKY CTA ── */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white/97 backdrop-blur-2xl border-t border-[#D0DBCC]/60 py-3 px-5 flex justify-between items-center z-50 md:hidden shadow-[0_-6px_24px_rgba(0,0,0,0.05)]">
+        <span className="text-[12px] font-medium text-[#1B2D1D] tracking-wide">
+          Tanzania Tours · All Budgets
+        </span>
+        <Link
+          href="/contact"
+          className="bg-gradient-to-r from-[#C2B44A] to-[#A8B545] hover:from-[#A09838] hover:to-[#8E9A35] px-5 py-2.5 rounded-full text-[12px] font-semibold text-white transition-all duration-300 tracking-wide shadow-md"
+        >
+          Plan My Safari
+        </Link>
+      </div>
+
+      {/* ── STRUCTURED DATA ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            name: "Gladiolus Tours",
+            url: absoluteUrl(),
+            logo: absoluteUrl("/logo.png"),
+            image: [
+              absoluteUrl("/gallery/zebra-00.webp"),
+              absoluteUrl("/gallery/kili-00.webp"),
+            ],
+            description:
+              "Gladiolus Tours — Tanzania safari company based in Usa River, Arusha offering budget, mid-range, and premium private safari packages across Serengeti, Ngorongoro, Kilimanjaro, Tarangire, and Zanzibar.",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Usa River",
+              addressRegion: "Arusha",
+              addressCountry: "Tanzania",
+            },
+            areaServed: [
+              "Serengeti National Park",
+              "Ngorongoro Crater",
+              "Tarangire National Park",
+              "Mount Kilimanjaro",
+              "Zanzibar",
+            ],
+            telephone: "+255789736559",
+            priceRange: "$$–$$$$",
+            sameAs: [
+              "https://www.facebook.com/GladiolusTours",
+              "https://www.instagram.com/gladiolus_tours/",
+            ],
+          }),
+        }}
+      />
+
+    
+
+{/* ══════════════════════════════════════════════════════════
+    FLOATING SOCIAL LINKS — Desktop only, NO WhatsApp here
+══════════════════════════════════════════════════════════ */}
+<div
+  className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-2.5"
+  aria-label="Social media links"
+>
+  {[
+    {
+      href: "https://www.instagram.com/gladiolus_tours/",
+      icon: "/social/instagram.jpeg",
+      alt: "Instagram",
+    },
+    {
+      href: "https://web.facebook.com/GladiolusTours",
+      icon: "/social/facebook.png",
+      alt: "Facebook",
+    },
+    {
+      href: "https://www.tiktok.com/@gladiolus.tours.l",
+      icon: "/social/TikTok.png",
+      alt: "TikTok",
+    },
+  ].map((item) => (
+    <a
+      key={item.alt}
+      href={item.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={item.alt}
+      className="bg-white/92 backdrop-blur-xl border border-[#E2EAE0] shadow-md rounded-2xl p-2.5 hover:scale-110 hover:shadow-xl hover:border-[#C2B44A]/40 transition-all duration-300"
+    >
+      <Image
+        src={item.icon}
+        alt={item.alt}
+        width={20}
+        height={20}
+        className="object-contain"
+      />
+    </a>
+  ))}
+</div>
 
       <Footer />
     </div>

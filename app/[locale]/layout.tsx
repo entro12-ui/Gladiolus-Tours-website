@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import Script from "next/script"
 import { Inter } from "next/font/google"
 import { NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
@@ -37,11 +38,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Gladiolus Tours" }],
   creator: "Gladiolus Tours",
   publisher: "Gladiolus Tours",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   icons: {
     icon: [
       {
@@ -50,32 +46,18 @@ export const metadata: Metadata = {
         sizes: "32x32",
       },
       {
-        url: absoluteUrl("/logo-no-bg.png"),
-        type: "image/png",
-        sizes: "512x512",
-      },
-      {
-        url: absoluteUrl("/logo-002.png"),
+        url: absoluteUrl("/logo.png"),
         type: "image/png",
         sizes: "512x512",
       },
     ],
-    apple: [
-      {
-        url: absoluteUrl("/logo-no-bg.png"),
-        type: "image/png",
-      },
-    ],
-    shortcut: [absoluteUrl("/logo-no-bg.png")],
   },
-  manifest: "/manifest.json",
   openGraph: {
     type: "website",
-    locale: "en_US",
-    alternateLocale: ["fr_FR", "es_ES"],
     url: "https://www.gladiolustours.com",
     title: "Gladiolus Tours - Unforgettable African Safari Adventures",
-    description: "Experience the wonder of Africa with Gladiolus Tours",
+    description:
+      "Experience the wonder of Tanzania with Gladiolus Tours.",
     siteName: "Gladiolus Tours",
     images: [
       {
@@ -89,29 +71,21 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Gladiolus Tours - Unforgettable African Safari Adventures",
-    description: "Experience the wonder of Africa with Gladiolus Tours",
+    description:
+      "Experience the wonder of Tanzania with Gladiolus Tours.",
     images: ["/og-image.jpg"],
-    creator: "@gladiolustours",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
   },
 }
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
+}
+
+/* ✅ TypeScript global gtag declaration */
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
 }
 
 export default async function LocaleLayout({
@@ -134,12 +108,30 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
+
+        {/* ✅ Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GKEVH487ZQ', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
           </NextIntlClientProvider>
           <Toaster richColors closeButton />
         </ThemeProvider>
+
       </body>
     </html>
   )

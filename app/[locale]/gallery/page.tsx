@@ -4,30 +4,56 @@ import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { BreadcrumbSchema } from "@/components/structured-data"
+import { BreadcrumbSchema, StructuredData } from "@/components/structured-data"
 import { GalleryGrid, type GalleryImage } from "@/components/gallery/gallery-grid"
 import { absoluteUrl } from "@/lib/seo"
 import { assetUrl } from "@/lib/assets"
 import { Link } from "@/i18n/routing"
+import {
+  Camera,
+  Globe2,
+  Mountain,
+  Sparkles,
+  ArrowRight,
+  Images,
+} from "lucide-react"
 
 const heroStats = [
-  { label: "Images captured", value: "2,000+", detail: "Field diaries since 2015" },
-  { label: "Featured regions", value: "12", detail: "From Serengeti to Zanzibar" },
-  { label: "Creative partners", value: "18", detail: "Photographers & filmmakers" },
+  {
+    label: "Safari Moments",
+    value: "2,000+",
+    detail: "Captured across Tanzania",
+  },
+  {
+    label: "Destinations",
+    value: "12+",
+    detail: "From Serengeti to Zanzibar",
+  },
+  {
+    label: "Travel Stories",
+    value: "500+",
+    detail: "Luxury journeys documented",
+  },
 ]
 
 const storyHighlights = [
   {
-    title: "Wildlife vignettes",
-    copy: "Big cat pursuits, river crossings, and tender moments between elephant herds filmed at golden hour.",
+    icon: Camera,
+    title: "Wildlife Photography",
+    copy:
+      "Experience cinematic wildlife moments including lions, elephants, cheetahs, zebras, and the Great Migration.",
   },
   {
-    title: "Human stories",
-    copy: "Maasai ceremonies, private bush breakfasts, and artisan workshops that anchor every itinerary in place.",
+    icon: Mountain,
+    title: "Luxury Safari Experiences",
+    copy:
+      "Explore elegant safari lodges, bush dining, cultural encounters, and handcrafted Tanzania journeys.",
   },
   {
-    title: "Design details",
-    copy: "Interiors, table settings, and campfire lounges curated to feel both luxurious and deeply rooted in East Africa.",
+    icon: Globe2,
+    title: "Authentic Tanzania",
+    copy:
+      "Discover Serengeti, Ngorongoro, Tarangire, Zanzibar, and hidden landscapes through real travel stories.",
   },
 ]
 
@@ -35,295 +61,335 @@ const galleryImages: GalleryImage[] = [
   {
     id: 1,
     src: assetUrl("/gallery/Olduvai-Gorge-00.webp"),
-    alt: "Hikers overlooking the layers of Olduvai Gorge",
+    alt: "Travelers exploring Olduvai Gorge in Tanzania",
     category: "Landscapes",
     location: "Olduvai Gorge",
   },
   {
     id: 2,
-    src: assetUrl("/gallery/Olduvai-Gorge-01.webp"),
-    alt: "Midday light pouring over Olduvai Gorge rock formations",
-    category: "Landscapes",
-    location: "Olduvai Gorge",
-  },
-  {
-    id: 3,
     src: assetUrl("/gallery/serengeti-balloon.webp"),
-    alt: "Safari balloons floating above the Serengeti",
+    alt: "Luxury hot air balloon safari over Serengeti National Park",
     category: "Experiences",
     location: "Serengeti National Park",
   },
   {
-    id: 4,
-    src: assetUrl("/gallery/sunday-in-serengeti-00.webp"),
-    alt: "Guides and guests sharing stories in the Serengeti",
-    category: "People",
-    location: "Serengeti National Park",
-  },
-  {
-    id: 5,
-    src: assetUrl("/gallery/sunday-in-serengeti-01.webp"),
-    alt: "Warm afternoon light across the Serengeti plains",
-    category: "Landscapes",
-    location: "Serengeti National Park",
-  },
-  {
-    id: 6,
-    src: assetUrl("/gallery/sunday-with-tourists.webp"),
-    alt: "Travelers sharing a laugh with their safari guide",
-    category: "People",
-    location: "Ngorongoro Conservation Area",
-  },
-  {
-    id: 7,
-    src: assetUrl("/gallery/gt-tourist-vehicle-00.webp"),
-    alt: "Gladiolus safari vehicle cruising past acacia trees",
-    category: "Logistics",
-    location: "Tarangire National Park",
-  },
-  {
-    id: 8,
-    src: assetUrl("/gallery/gt-tourist-vehicle-01.webp"),
-    alt: "Private cruiser waiting for guests at an airstrip",
-    category: "Logistics",
-    location: "Ruaha National Park",
-  },
-  {
-    id: 9,
+    id: 3,
     src: assetUrl("/gallery/lion-00.webp"),
-    alt: "Lioness scanning the Savannah just after sunrise",
+    alt: "Lioness during sunrise safari game drive in Serengeti",
     category: "Wildlife",
     location: "Central Serengeti",
   },
   {
-    id: 10,
+    id: 4,
     src: assetUrl("/gallery/cheater-00.webp"),
-    alt: "Cheetah perched on a termite mound looking for prey",
+    alt: "Cheetah standing on a mound in Serengeti Tanzania",
     category: "Wildlife",
     location: "Eastern Serengeti",
   },
   {
-    id: 11,
-    src: assetUrl("/gallery/cheater-01.webp"),
-    alt: "Cheetah sprint captured mid-stride",
-    category: "Wildlife",
-    location: "Serengeti Short Grass Plains",
-  },
-  {
-    id: 12,
-    src: assetUrl("/gallery/cheater-02.webp"),
-    alt: "Resting cheetah framed by tall golden grass",
-    category: "Wildlife",
-    location: "Ndutu",
-  },
-  {
-    id: 13,
+    id: 5,
     src: assetUrl("/gallery/elephant.webp"),
-    alt: "Close portrait of a matriarch elephant",
+    alt: "African elephant portrait in Tarangire National Park",
     category: "Wildlife",
     location: "Tarangire National Park",
   },
   {
-    id: 14,
-    src: assetUrl("/gallery/elephant-00.webp"),
-    alt: "Elephant herd trekking past a baobab tree",
-    category: "Wildlife",
-    location: "Tarangire National Park",
-  },
-  {
-    id: 15,
+    id: 6,
     src: assetUrl("/gallery/zebra-00.webp"),
-    alt: "Zebra family aligned across the Serengeti horizon",
+    alt: "Zebras crossing the Serengeti plains",
     category: "Wildlife",
     location: "Serengeti National Park",
   },
   {
-    id: 16,
-    src: assetUrl("/gallery/zebra-01.webp"),
-    alt: "Striped patterns layered in soft afternoon light",
-    category: "Wildlife",
-    location: "Serengeti National Park",
-  },
-  {
-    id: 17,
+    id: 7,
     src: assetUrl("/gallery/sunset.webp"),
-    alt: "Fiery Serengeti sunset silhouettes grazing wildlife",
+    alt: "Golden Tanzania safari sunset landscape",
     category: "Landscapes",
     location: "Western Corridor",
   },
   {
-    id: 18,
-    src: assetUrl("/gallery/tour-guide.webp"),
-    alt: "Expert guide sharing stories beside the vehicle",
-    category: "People",
-    location: "Manyara Escarpment",
-  },
-  {
-    id: 19,
+    id: 8,
     src: assetUrl("/gallery/lunch-00.webp"),
-    alt: "Bush lunch elegantly laid under shade",
+    alt: "Luxury bush lunch experience during Tanzania safari",
     category: "Experiences",
     location: "Ngorongoro Conservation Area",
   },
   {
-    id: 20,
-    src: assetUrl("/gallery/lunch-01.webp"),
-    alt: "Chef plating Swahili-inspired dishes on safari",
-    category: "Cuisine",
-    location: "Private Crater Rim Camp",
-  },
-  {
-    id: 21,
-    src: assetUrl("/gallery/lunch-02.webp"),
-    alt: "Family toasting during an outdoor crater lunch",
-    category: "Experiences",
-    location: "Ngorongoro Conservation Area",
-  },
-  {
-    id: 22,
-    src: assetUrl("/gallery/photo-00.webp"),
-    alt: "Photographer lining up a shot with long lens",
-    category: "Activities",
-    location: "Serengeti National Park",
-  },
-  {
-    id: 23,
+    id: 9,
     src: assetUrl("/gallery/beer.webp"),
-    alt: "Craft cocktails prepared for sunset hour",
+    alt: "Luxury safari sunset drinks in Zanzibar",
     category: "Experiences",
     location: "Zanzibar Coast",
-  },
-  {
-    id: 24,
-    src: assetUrl("/gallery/tour-guide.webp"),
-    alt: "Lead guide presenting the day's route",
-    category: "People",
-    location: "Arusha Briefing Studio",
   },
 ]
 
 export const metadata: Metadata = {
-  title: "Safari Gallery | Gladiolus Tours",
+  title:
+    "Tanzania Safari Gallery | Serengeti, Ngorongoro & Zanzibar Experiences",
   description:
-    "Immerse yourself in Gladiolus Tours' visual diary. Wildlife portraits, cinematic landscapes, and bespoke experiences across Tanzania.",
+    "Explore the Gladiolus Tours luxury safari gallery featuring Serengeti wildlife, Ngorongoro Crater adventures, Zanzibar escapes, Tanzania landscapes, and unforgettable travel moments.",
+
+  keywords: [
+    "Tanzania safari gallery",
+    "Serengeti safari photos",
+    "Luxury Tanzania tours",
+    "Ngorongoro safari experiences",
+    "Zanzibar travel gallery",
+    "Wildlife photography Tanzania",
+    "Gladiolus Tours",
+    "African safari experiences",
+  ],
+
   alternates: {
     canonical: "/gallery",
   },
+
   openGraph: {
-    title: "Safari Gallery | Gladiolus Tours",
+    title: "Luxury Tanzania Safari Gallery | Gladiolus Tours",
     description:
-      "Browse signature moments from Gladiolus Tours safaris: migration crossings, Maasai cultural encounters, and designer camp life.",
+      "Browse cinematic safari moments, wildlife photography, luxury camps, and unforgettable Tanzania travel experiences.",
     url: absoluteUrl("/gallery"),
     type: "website",
-    images: [{ url: absoluteUrl("/og-image.jpg"), width: 1200, height: 630, alt: "Gladiolus Tours Safari Gallery" }],
+    images: [
+      {
+        url: absoluteUrl("/og-image.jpg"),
+        width: 1200,
+        height: 630,
+        alt: "Gladiolus Tours Tanzania Safari Gallery",
+      },
+    ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Safari Gallery | Gladiolus Tours",
-    description: "See the cinematic safari moments we curate across Tanzania.",
+    title: "Luxury Tanzania Safari Gallery",
+    description:
+      "Discover unforgettable safari photography and Tanzania travel experiences with Gladiolus Tours.",
     images: [absoluteUrl("/og-image.jpg")],
   },
 }
 
 export default function GalleryPage() {
+  const gallerySchema = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: "Gladiolus Tours Tanzania Safari Gallery",
+    description:
+      "Luxury Tanzania safari gallery featuring Serengeti wildlife, Ngorongoro Crater, Tarangire elephants, Zanzibar experiences, and cinematic landscapes.",
+    url: absoluteUrl("/gallery"),
+    publisher: {
+      "@type": "TravelAgency",
+      name: "Gladiolus Tours",
+      url: absoluteUrl("/"),
+    },
+  }
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#f8f5ef]">
+      <StructuredData id="gallery-schema" data={gallerySchema} />
+
       <BreadcrumbSchema
         items={[
           { name: "Home", url: absoluteUrl("/") },
           { name: "Gallery", url: absoluteUrl("/gallery") },
         ]}
       />
+
       <Navigation />
 
-      {/* Hero */}
-      <section className="relative mt-20 flex min-h-[80vh] items-end overflow-hidden">
-        <Image
-          src={assetUrl("/hero/hero-02.webp")}
-          alt="Immersive safari gallery background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black/80" />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 pb-24">
-          <div className="max-w-3xl space-y-6 text-white">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-2 font-mono text-xs uppercase tracking-[0.35em]">
-              Field Journal
+      {/* HERO */}
+      <section className="relative overflow-hidden pt-32 pb-24">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f6f0e7] via-[#f8f5ef] to-white" />
+
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* LEFT */}
+            <div className="space-y-8">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#c8a46a]/20 bg-[#c8a46a]/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-[#b88a44]">
+                <Sparkles className="h-4 w-4" />
+                Tanzania Safari Gallery
+              </span>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.05] tracking-tight text-[#1f1720]">
+                  Explore Tanzania Through Our Safari Stories
+                </h1>
+
+                <p className="max-w-2xl text-xl leading-relaxed text-[#5c524d]">
+                  Discover luxury safari experiences, iconic wildlife,
+                  breathtaking landscapes, and authentic cultural encounters
+                  captured across Serengeti, Ngorongoro, Tarangire, Kilimanjaro,
+                  and Zanzibar.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="rounded-full bg-gradient-to-r from-[#c79a5b] to-[#b88447] px-8 py-6 text-base font-semibold text-white shadow-xl shadow-[#c79a5b]/20 transition-all hover:scale-[1.02]"
+                >
+                  <Link href="#gallery-grid">
+                    Explore Gallery
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full border-[#c79a5b]/30 bg-white/70 px-8 py-6 text-base text-[#1f1720] hover:bg-[#f4ede3]"
+                >
+                  <Link href="/contact">Plan Your Safari</Link>
+                </Button>
+              </div>
+
+              {/* STATS */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                {heroStats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="rounded-[28px] border border-[#eadfce] bg-white/90 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.04)]"
+                  >
+                    <h3 className="text-4xl font-serif text-[#1f1720]">
+                      {stat.value}
+                    </h3>
+
+                    <p className="mt-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#b88a44]">
+                      {stat.label}
+                    </p>
+
+                    <p className="mt-2 text-sm leading-relaxed text-[#6c625d]">
+                      {stat.detail}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="relative">
+              <div className="absolute -top-10 -right-10 h-44 w-44 rounded-full bg-[#c79a5b]/10 blur-3xl" />
+
+              <div className="relative overflow-hidden rounded-[40px] border border-[#eadfce] bg-white shadow-[0_25px_90px_rgba(0,0,0,0.08)]">
+                <Image
+                  src={assetUrl("/hero/hero-02.webp")}
+                  alt="Luxury Tanzania safari experience"
+                  width={900}
+                  height={1000}
+                  priority
+                  className="h-[720px] w-full object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1f1720]/40 via-transparent to-transparent" />
+
+                <div className="absolute bottom-8 left-8 right-8">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/95 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#b88447] shadow-lg">
+                    <Images className="h-4 w-4" />
+                    Real Safari Moments
+                  </div>
+
+                  <h2 className="mt-5 text-4xl font-serif leading-tight text-white">
+                    Luxury experiences crafted across Tanzania
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* STORY SECTION */}
+      <section className="border-y border-[#eadfce] bg-white py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="text-sm font-semibold uppercase tracking-[0.35em] text-[#b88a44]">
+              Curated Safari Experiences
             </span>
-            <h1 className="text-4xl md:text-6xl font-serif text-balance">
-              Our cameras never stop rolling across Tanzania's wild frontiers.
-            </h1>
-            <p className="text-lg md:text-xl font-mono text-white/80">
-              Drift through migration flyovers, Maasai ceremonies, and lantern-lit dinners, each frame captured on recent departures.
-            </p>
-            <div className="flex flex-wrap gap-6">
-              {heroStats.map((stat) => (
-                <div key={stat.label} className="min-w-[160px] rounded-3xl border border-white/15 bg-white/5 px-5 py-4">
-                  <p className="text-3xl font-serif">{stat.value}</p>
-                  <p className="text-xs font-mono uppercase tracking-[0.35em] text-white/70">{stat.label}</p>
-                  <p className="text-sm font-mono text-white/70">{stat.detail}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Highlights */}
-      <section className="border-y border-border/70 bg-muted py-20">
-        <div className="container mx-auto grid gap-8 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-12">
-          <div className="space-y-6">
-            <p className="text-xs font-mono uppercase tracking-[0.35em] text-muted-foreground">What you'll see</p>
-            <h2 className="text-4xl md:text-5xl font-serif text-balance">
-              A living moodboard of wildlife, culture, and design inspiration.
+            <h2 className="mt-5 text-5xl font-serif leading-tight text-[#1f1720]">
+              Wildlife, landscapes, culture, and unforgettable journeys
             </h2>
-            <p className="font-mono text-sm text-muted-foreground">
-              Every departure travels with hybrid storytellers, cinematographers, fine-art photographers, and field recordists, so you can relive
-              each day long after the dust settles.
+
+            <p className="mt-6 text-xl leading-relaxed text-[#6c625d]">
+              Every photograph tells a story of Tanzania’s beauty — from Great
+              Migration crossings in Serengeti to elegant bush dinners beneath
+              African sunsets.
             </p>
-            <div className="grid gap-6 md:grid-cols-3">
-              {storyHighlights.map((highlight) => (
-                <div key={highlight.title} className="rounded-3xl border border-border/60 bg-background p-6 shadow-[0_15px_45px_rgba(3,7,18,0.06)]">
-                  <h3 className="text-xl font-serif text-foreground">{highlight.title}</h3>
-                  <p className="mt-3 font-mono text-sm text-muted-foreground">{highlight.copy}</p>
-                </div>
-              ))}
-            </div>
           </div>
-          <div className="relative h-[420px] overflow-hidden rounded-[32px] border border-border/70">
-            <Image
-              src={assetUrl("/about-us/team.webp")}
-              alt="In-field content team"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 text-white">
-              <p className="text-xs font-mono uppercase tracking-[0.35em] text-white/70">On-location editors</p>
-              <p className="mt-2 text-2xl font-serif">Story artisans embedded with every journey.</p>
-            </div>
+
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            {storyHighlights.map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-[32px] border border-[#eadfce] bg-[#fcfaf7] p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(199,154,91,0.12)]"
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#c79a5b]/10">
+                  <item.icon className="h-6 w-6 text-[#b88447]" />
+                </div>
+
+                <h3 className="mt-6 text-2xl font-serif text-[#1f1720]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 text-base leading-relaxed text-[#6c625d]">
+                  {item.copy}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <GalleryGrid images={galleryImages} />
+      {/* GALLERY */}
+      <section
+        id="gallery-grid"
+        className="bg-gradient-to-b from-[#f8f5ef] to-white py-24"
+      >
+        <GalleryGrid images={galleryImages} />
+      </section>
 
       {/* CTA */}
-      <section className="py-20">
-        <div className="container mx-auto rounded-[40px] border border-border/70 bg-gradient-to-r from-primary to-primary-alt px-6 py-16 text-center text-primary-foreground shadow-[0_30px_80px_rgba(2,6,23,0.18)] sm:px-10 lg:px-16">
-          <p className="text-xs font-mono uppercase tracking-[0.35em] text-primary-foreground/80">Ready to film your chapter?</p>
-          <h2 className="mt-4 text-4xl md:text-5xl font-serif text-balance">Let’s storyboard your safari with our creative directors.</h2>
-          <p className="mt-4 text-lg font-mono text-primary-foreground/90">
-            Share your travel window and wish list—we’ll reply within 48 hours with two bespoke visual narratives.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="rounded-full bg-white px-8 text-base font-semibold text-primary">
-              <Link href="/contact">Speak to a Safari Designer</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="rounded-full border-white text-white">
-              <Link href="/destinations">Browse Destinations</Link>
-            </Button>
+      <section className="py-24 bg-[#f8f5ef]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="rounded-[40px] border border-[#eadfce] bg-gradient-to-r from-[#c79a5b] to-[#b88447] px-8 py-20 text-center shadow-[0_25px_80px_rgba(199,154,91,0.2)] sm:px-14">
+            <span className="inline-flex items-center rounded-full bg-white/15 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white">
+              Start Your Journey
+            </span>
+
+            <h2 className="mx-auto mt-6 max-w-4xl text-5xl font-serif leading-tight text-white">
+              Ready to experience Tanzania beyond the ordinary?
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-xl leading-relaxed text-white/90">
+              Let Gladiolus Tours design a personalized luxury safari experience
+              tailored around your travel style, wildlife interests, and dream
+              destinations.
+            </p>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-5">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full bg-white px-8 py-6 text-base font-semibold text-[#b88447] hover:bg-[#f4ede3]"
+              >
+                <Link href="/contact">
+                  Speak to a Safari Specialist
+                </Link>
+              </Button>
+
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full border-white bg-transparent px-8 py-6 text-base font-semibold text-white hover:bg-white/10"
+              >
+                <Link href="/destinations">
+                  Explore Destinations
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
