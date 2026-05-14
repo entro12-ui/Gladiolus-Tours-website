@@ -1,40 +1,69 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import { Link } from "@/i18n/routing"
-import { Star, Users, TrendingUp, Smile, Leaf, Coffee } from "lucide-react"
+import {
+  Star,
+  Users,
+  Globe,
+  ShieldCheck,
+  Leaf,
+  Compass,
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react"
+
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { BreadcrumbSchema, StructuredData, OrganizationSchema } from "@/components/structured-data"
+import {
+  BreadcrumbSchema,
+  StructuredData,
+  OrganizationSchema,
+} from "@/components/structured-data"
+
 import { absoluteUrl } from "@/lib/seo"
 import { assetUrl, hasAssetBase } from "@/lib/assets"
 
 export const metadata: Metadata = {
-  title: "About Us - Gladiolus Tours",
+  title:
+    "About Gladiolus Tours | Luxury Tanzania Safari Experts Based in Arusha",
   description:
-    "Learn about Gladiolus Tours, our mission, values, and the passionate team behind your African safari adventures.",
+    "Learn about Gladiolus Tours, a trusted luxury Tanzania safari company based in Arusha. Meet our local safari experts and discover our mission, values, and personalized travel experiences across Serengeti, Ngorongoro, Kilimanjaro, and Zanzibar.",
+  keywords: [
+    "About Gladiolus Tours",
+    "Tanzania Safari Company",
+    "Luxury Tanzania Safaris",
+    "Arusha Safari Experts",
+    "Serengeti Safari Specialists",
+    "Kilimanjaro Tour Experts",
+    "Private Tanzania Tours",
+    "Local Safari Guides Tanzania",
+    "Safari Company Arusha",
+  ],
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Gladiolus Tours | Trusted African Safari Experts",
-    description: "Meet the Gladiolus Tours team delivering authentic African safari experiences across Tanzania.",
+    title: "About Gladiolus Tours | Trusted Tanzania Safari Experts",
+    description:
+      "Meet the local team behind Gladiolus Tours and discover our passion for luxury Tanzania safaris and unforgettable African adventures.",
     url: absoluteUrl("/about"),
     images: [
       {
-        url: absoluteUrl("/og-image.jpg"),
+        url: absoluteUrl("/gallery/zebra-00.webp"),
         width: 1200,
         height: 630,
-        alt: "Gladiolus Tours team on safari",
+        alt: "Gladiolus Tours Tanzania Safari Team",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "About Gladiolus Tours",
-    description: "Discover the mission, values, and experts behind Gladiolus Tours' luxury African safaris.",
-    images: [absoluteUrl("/og-image.jpg")],
+    description:
+      "Luxury Tanzania safari specialists creating unforgettable journeys across Serengeti, Zanzibar, and Kilimanjaro.",
+    images: [absoluteUrl("/gallery/zebra-00.webp")],
   },
 }
 
@@ -42,239 +71,300 @@ export default function AboutPage() {
   const teamMembers = [
     {
       name: "Sunday Mtui",
-      role: "Co-Founder",
-      image: hasAssetBase ? assetUrl("/team/Sunday-Mtui.webp") : "/team/sunday-mtui.jpg",
-      bio: "Visionary co-founder with decades of experience crafting bespoke safaris.",
+      role: "Co-Founder & Safari Specialist",
+      image: hasAssetBase
+        ? assetUrl("/team/Sunday-Mtui.webp")
+        : "/team/sunday-mtui.jpg",
+      bio: "Over 20 years of experience guiding travelers through Tanzania’s iconic wildlife destinations and luxury safari experiences.",
     },
     {
       name: "Francois Martin",
-      role: "Co-Founder",
-      image: hasAssetBase ? assetUrl("/team/Francois-Martin.webp") : "/team/francois-martin.jpg",
-      bio: "Co-founder focused on strategic partnerships and unique guest experiences.",
+      role: "Co-Founder & International Consultant",
+      image: hasAssetBase
+        ? assetUrl("/team/Francois-Martin.webp")
+        : "/team/francois-martin.jpg",
+      bio: "Focused on premium guest experiences, strategic safari planning, and personalized luxury travel services.",
     },
     {
       name: "Claire Matemba",
-      role: "Director",
-      image: hasAssetBase ? assetUrl("/team/Claire-Matemba.webp") : "/team/Claire-Matemba.jpg",
-      bio: "Director ensuring day-to-day operations deliver premium service.",
+      role: "Operations Director",
+      image: hasAssetBase
+        ? assetUrl("/team/Claire-Matemba.webp")
+        : "/team/Claire-Matemba.jpg",
+      bio: "Ensuring every safari operates smoothly with exceptional customer care and professional coordination.",
     },
   ]
 
-  const impactStats = [
-    { label: "Tours conducted annually", value: "50+" },
-    { label: "Destinations covered", value: "5" },
-    { label: "Guest satisfaction", value: "95%" },
+  const stats = [
+    {
+      value: "20+",
+      label: "Years Safari Experience",
+    },
+    {
+      value: "2,800+",
+      label: "Happy Travelers",
+    },
+    {
+      value: "95%",
+      label: "Guest Satisfaction",
+    },
+    {
+      value: "24/7",
+      label: "Traveler Support",
+    },
   ]
 
   const values = [
     {
       icon: Star,
-      title: "Excellence in Service",
+      title: "Luxury Experiences",
       description:
-        "World-class safari planning with obsessive attention to detail and personalized touches for every traveler.",
+        "Private safaris designed with premium lodges, personalized service, and unforgettable moments.",
     },
     {
       icon: Users,
-      title: "Expert Tour Guides",
+      title: "Local Safari Experts",
       description:
-        "Seasoned guides and on-the-ground hosts who share deep knowledge of Tanzania's wildlife, cultures, and landscapes.",
+        "Experienced Tanzania guides with deep wildlife, culture, and destination knowledge.",
     },
     {
-      icon: TrendingUp,
-      title: "Continuous Improvement",
+      icon: ShieldCheck,
+      title: "Trusted Service",
       description:
-        "We iterate on every itinerary and partnership to raise the bar for responsible, guest-centric expeditions.",
-    },
-    {
-      icon: Smile,
-      title: "Customer Happiness",
-      description:
-        "From first call to farewell dinner, we prioritize ease, warmth, and memorable shared moments.",
+        "Transparent planning, reliable communication, and dedicated support before and during your safari.",
     },
     {
       icon: Leaf,
       title: "Responsible Tourism",
       description:
-        "Our journeys honor communities and ecosystems through conservation contributions and ethical partner sourcing.",
+        "Supporting conservation, local communities, and sustainable safari experiences.",
     },
     {
-      icon: Coffee,
-      title: "Time to Unwind",
+      icon: Globe,
+      title: "Global Travelers",
       description:
-        "Every itinerary balances thrill with restorative pauses. Sunset picnics, bush brunches, and ocean breezes included.",
-    },
-  ]
-
-  const partners = [
-    {
-      name: "SafariBookings",
-      description: "Largest online marketplace for African safaris with trusted reviews and operators.",
-      logo: assetUrl("/about-us/safari-booking.webp"),
-      url: "https://www.safaribookings.com/",
+        "Welcoming guests from around the world for authentic East African adventures.",
     },
     {
-      name: "SafariGo",
-      description: "Premier platform connecting travelers with curated East African safari experiences.",
-      logo: assetUrl("/about-us/safari-go.webp"),
-      url: "https://safarigo.com",
+      icon: Compass,
+      title: "Tailor-Made Journeys",
+      description:
+        "Every itinerary is customized around your travel style, dates, and safari goals.",
     },
   ]
-
-  const founder =
-    teamMembers.find((member) => member.role.toLowerCase().includes("founder")) ?? teamMembers[0] ?? null
 
   const aboutPageSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     name: "About Gladiolus Tours",
     description:
-      "Learn about Gladiolus Tours, our mission, values, and the passionate team behind your African safari adventures.",
+      "Luxury Tanzania safari company based in Arusha offering private safaris, Kilimanjaro trekking, and Zanzibar holidays.",
     url: absoluteUrl("/about"),
     mainEntity: {
       "@type": "Organization",
       name: "Gladiolus Tours",
-      description:
-        "Premier safari tour operator specializing in tailor-made experiences across Tanzania.",
+      url: absoluteUrl("/"),
       foundingDate: "2010",
-      founder: founder
-        ? {
-            "@type": "Person",
-            name: founder.name,
-            jobTitle: founder.role,
-            description: founder.bio,
-            image: absoluteUrl(founder.image ?? "/placeholder.svg"),
-          }
-        : undefined,
-      employee: teamMembers.map((member) => ({
-        "@type": "Person",
-        name: member.name,
-        jobTitle: member.role,
-        description: member.bio,
-        image: absoluteUrl(member.image ?? "/placeholder.svg"),
-      })),
+      areaServed: "Tanzania",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Arusha",
+        addressCountry: "TZ",
+      },
       sameAs: [
         "https://facebook.com/GladiolusTours",
         "https://instagram.com/gladiolus_tours",
       ],
     },
-    mainEntityOfPage: absoluteUrl("/about"),
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#FAF8F5] text-[#1E1E1E]">
       <OrganizationSchema />
+
       <StructuredData id="about-page-schema" data={aboutPageSchema} />
+
       <BreadcrumbSchema
         items={[
           { name: "Home", url: absoluteUrl("/") },
           { name: "About", url: absoluteUrl("/about") },
         ]}
       />
+
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative h-[65vh] flex items-center justify-center overflow-hidden mt-20">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={assetUrl("/about-us/team-work.webp")}
-            alt="Gladiolus Tours operations team collaborating in Arusha"
-            fill
-            className="object-cover brightness-[0.55]"
-            priority
-          />
-        </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-6">
-          <span className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-5 py-1 text-xs font-mono uppercase tracking-[0.4em] text-white/90">
-            Gladiolus Tours
-          </span>
-          <h1 className="text-4xl md:text-6xl font-serif text-white text-balance">
-            Transforming Connections, One Journey at a Time
-          </h1>
-          <p className="text-lg md:text-xl font-mono text-white/85 leading-relaxed">
-            We design soulful Tanzania journeys that connect you to wild spaces, local culture, and the people you travel with.
-          </p>
-          <p className="text-base md:text-lg font-mono text-white/80">
-            Think Kilimanjaro sunrises, crater lunches, and Zanzibar breezes, crafted to spark curiosity, reflection, and joy.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white">
-              <Link href="#our-values">Discover Our Values</Link>
-            </Button>
-            <Button asChild variant="outline" className="rounded-full border-white/70 text-white">
-              <Link href="/contact">Plan a Journey</Link>
-            </Button>
+      {/* HERO */}
+      <section className="relative min-h-[75vh] overflow-hidden flex items-center justify-center mt-20">
+        <Image
+          src={assetUrl("/about-us/team-work.webp")}
+          alt="Gladiolus Tours Tanzania safari team"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/55" />
+
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 text-center text-white">
+          <div className="max-w-4xl mx-auto">
+            <span className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-5 py-2 text-xs uppercase tracking-[0.35em] backdrop-blur">
+              About Gladiolus Tours
+            </span>
+
+            <h1 className="mt-8 text-5xl md:text-7xl font-serif leading-tight">
+              Luxury Tanzania Safaris Designed By Local Experts
+            </h1>
+
+            <p className="mt-8 text-lg md:text-2xl text-white/85 leading-relaxed max-w-3xl mx-auto">
+              Based in Arusha, Gladiolus Tours creates private Tanzania safari
+              experiences across Serengeti, Ngorongoro Crater, Mount
+              Kilimanjaro, Tarangire, and Zanzibar.
+            </p>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-5">
+              <Button
+                asChild
+                className="rounded-full bg-[#C69252] hover:bg-[#A46A3D] px-8 py-6 text-white font-semibold"
+              >
+                <Link href="/contact">
+                  Plan Your Safari
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+
+              <Button
+                asChild
+                variant="outline"
+                className="rounded-full border-white/40 bg-white/10 text-white hover:bg-white/20"
+              >
+                <Link href="#our-story">Learn More</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.9fr)] gap-12 items-center">
-            <div className="space-y-6">
-              <div>
-                <p className="text-sm font-mono uppercase tracking-[0.35em] text-primary">Our Commitment to Excellence</p>
-                <h2 className="text-4xl md:text-5xl font-serif text-foreground text-balance">
-                  Curating journeys that inspire, connect, and give back
+      {/* STATS */}
+      <section className="py-16 bg-white border-y border-[#EFE4D8]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {stats.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-[#EFE4D8] bg-[#FAF8F5] p-8 text-center"
+              >
+                <h2 className="text-4xl font-serif text-[#C69252]">
+                  {item.value}
                 </h2>
-              </div>
-              <p className="font-mono text-base text-muted-foreground leading-relaxed">
-                We believe in the transformative power of travel. Every Gladiolus itinerary is designed to spark wonder,
-                champion responsible tourism, and celebrate Tanzania's diverse communities from Serengeti plains to
-                Zanzibar shores.
-              </p>
-              <p className="font-mono text-base text-muted-foreground leading-relaxed">
-                As proud members of SafariBookings and SafariGo, we uphold stringent service standards while uplifting
-                local partners, guides, and conservation projects. Your safari dollars fuel meaningful impact.
-              </p>
-              <div className="rounded-3xl border border-primary/20 bg-primary/5 p-6">
-                <p className="text-lg font-serif text-foreground italic">
-                  "Join us in exploring the beauty of our planet while creating meaningful connections with fellow travelers.
-                  Every journey is an opportunity for personal growth, cultural exchange, and unforgettable moments."
+
+                <p className="mt-3 text-sm uppercase tracking-[0.2em] text-[#6B6B6B]">
+                  {item.label}
                 </p>
-                <p className="mt-3 font-mono text-sm uppercase tracking-[0.3em] text-primary">Gladiolus Tours Team</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OUR STORY */}
+      <section
+        id="our-story"
+        className="py-24 bg-[#FAF8F5]"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
+            <div>
+              <span className="uppercase tracking-[0.35em] text-sm text-[#C69252] font-semibold">
+                Our Story
+              </span>
+
+              <h2 className="mt-5 text-4xl md:text-6xl font-serif leading-tight">
+                Authentic Tanzania Safari Experiences
+              </h2>
+
+              <p className="mt-8 text-lg text-[#5A5A5A] leading-relaxed">
+                Gladiolus Tours was founded with a simple vision — creating
+                unforgettable Tanzania safaris led by passionate local experts
+                who understand the beauty, wildlife, and culture of East Africa.
+              </p>
+
+              <p className="mt-6 text-lg text-[#5A5A5A] leading-relaxed">
+                From luxury Serengeti safaris to Kilimanjaro trekking and
+                Zanzibar beach holidays, every itinerary is designed around
+                comfort, authenticity, and personalized service.
+              </p>
+
+              <div className="mt-8 space-y-4">
+                {[
+                  "Private luxury safaris",
+                  "Professional local safari guides",
+                  "Tailor-made itineraries",
+                  "24/7 guest support",
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-3"
+                  >
+                    <CheckCircle2 className="h-5 w-5 text-[#C69252]" />
+
+                    <span className="text-[#4F4F4F]">
+                      {item}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
+
+            <div className="relative h-[550px] rounded-[40px] overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.08)]">
               <Image
                 src={assetUrl("/about-us/team.webp")}
-                alt="Gladiolus Tours operations team planning bespoke journeys"
+                alt="Luxury Tanzania safari planning team"
                 fill
                 className="object-cover"
               />
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-sm font-mono uppercase tracking-[0.3em] text-white/80">
-                On the ground in Tanzania
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section id="our-values" className="py-20 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-4 text-balance">
-              Guiding Every Journey with Integrity
+      {/* VALUES */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="uppercase tracking-[0.35em] text-sm text-[#C69252] font-semibold">
+              Why Travelers Choose Us
+            </span>
+
+            <h2 className="mt-5 text-4xl md:text-6xl font-serif">
+              Built Around Service, Trust & Experience
             </h2>
-            <p className="text-lg font-mono text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              These six pillars mirror the promises of our legacy site, balancing excellence, empathy, and sustainability across every safari.
+
+            <p className="mt-6 text-lg text-[#5A5A5A] leading-relaxed">
+              We combine local expertise, luxury safari planning, and genuine
+              hospitality to create unforgettable Tanzania adventures.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <Card key={value.title} className="border border-border/40 bg-background">
-                <CardContent className="p-6 space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
-                      <value.icon className="h-5 w-5" />
-                    </div>
-                    <span className="font-mono text-sm text-muted-foreground">{String(index + 1).padStart(2, "0")}</span>
+              <Card
+                key={index}
+                className="rounded-[32px] border border-[#EFE4D8] bg-[#FAF8F5] shadow-none hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1"
+              >
+                <CardContent className="p-8">
+                  <div className="w-14 h-14 rounded-2xl bg-[#355C4D] text-white flex items-center justify-center mb-6">
+                    <value.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl font-serif text-foreground">{value.title}</h3>
-                  <p className="font-mono text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+
+                  <h3 className="text-2xl font-serif text-[#1E1E1E]">
+                    {value.title}
+                  </h3>
+
+                  <p className="mt-4 text-[#5A5A5A] leading-relaxed">
+                    {value.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -282,62 +372,90 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-4 text-balance">Trusted by Global Marketplaces</h2>
-            <p className="text-lg font-mono text-muted-foreground max-w-2xl mx-auto">
-              Our presence on respected safari platforms reinforces our commitment to transparency and excellence.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {partners.map((partner) => (
-              <Card key={partner.name} className="border border-border/40 bg-card/80 backdrop-blur">
-                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    width={160}
-                    height={64}
-                    className="h-12 w-auto"
-                    unoptimized
-                  />
-                  <h3 className="text-2xl font-serif text-foreground">{partner.name}</h3>
-                  <p className="font-mono text-sm text-muted-foreground leading-relaxed">{partner.description}</p>
-                  <Button asChild variant="outline" className="rounded-full">
-                    <Link href={partner.url} target="_blank" rel="noopener noreferrer">
-                      Visit Website
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* TEAM */}
+      <section className="py-24 bg-[#F8F3EC]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="uppercase tracking-[0.35em] text-sm text-[#C69252] font-semibold">
+              Meet The Team
+            </span>
 
-      {/* Team Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-4 text-balance">Meet Our Team</h2>
-            <p className="text-lg font-mono text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Passionate professionals dedicated to your safari experience
+            <h2 className="mt-5 text-4xl md:text-6xl font-serif">
+              The People Behind Your Safari
+            </h2>
+
+            <p className="mt-6 text-lg text-[#5A5A5A] leading-relaxed">
+              Experienced safari professionals dedicated to creating seamless
+              and memorable Tanzania travel experiences.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {teamMembers.map((member, index) => (
-              <div key={index} className="text-center max-w-xs">
-                <div className="relative h-64 w-64 mx-auto mb-4 rounded-2xl overflow-hidden">
-                  <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+              <div
+                key={index}
+                className="bg-white rounded-[36px] overflow-hidden border border-[#EFE4D8] shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition-all duration-500"
+              >
+                <div className="relative h-[380px]">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <h3 className="text-xl font-serif text-foreground mb-1">{member.name}</h3>
-                <p className="font-mono text-sm text-primary mb-2">{member.role}</p>
-                <p className="font-mono text-sm text-muted-foreground">{member.bio}</p>
+
+                <div className="p-8">
+                  <p className="uppercase tracking-[0.25em] text-xs text-[#C69252] font-semibold">
+                    {member.role}
+                  </p>
+
+                  <h3 className="mt-3 text-3xl font-serif text-[#1E1E1E]">
+                    {member.name}
+                  </h3>
+
+                  <p className="mt-5 text-[#5A5A5A] leading-relaxed">
+                    {member.bio}
+                  </p>
+                </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-gradient-to-r from-[#355C4D] via-[#486B5C] to-[#6F8A72] text-white text-center relative overflow-hidden">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-12 max-w-4xl">
+          <h2 className="text-5xl md:text-6xl font-serif">
+            Start Planning Your Tanzania Safari
+          </h2>
+
+          <p className="mt-8 text-xl text-white/85 leading-relaxed">
+            Speak with our Arusha-based safari specialists and receive a
+            personalized Tanzania safari itinerary tailored to your travel
+            style.
+          </p>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-5">
+            <Button
+              asChild
+              className="rounded-full bg-[#C69252] hover:bg-[#A46A3D] px-10 py-6 text-white font-semibold"
+            >
+              <Link href="/contact">
+                Contact Our Team
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-full border-white/30 bg-white/10 text-white hover:bg-white/20"
+            >
+              <Link href="/safaris">
+                Explore Safaris
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

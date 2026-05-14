@@ -315,3 +315,49 @@
   letter-spacing: -0.015em;
   line-height: 1.3;
 }
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #b89a45 0%,
+    #d7c57a 50%,
+    #b89a45 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-divider {
+  width: 90px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(191, 161, 74, 0.9),
+    transparent
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fafbf8;
+}
+
+/* ──────────────────────────────────────────
+   Hero slideshow — cinematic Ken Burns zoom
+   ────────────────────────────────────────── */
+@keyframes hero-zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.animate-hero-zoom {
+  animation: hero-zoom 8s ease-out forwards;
+  will-change: transform;
+}
