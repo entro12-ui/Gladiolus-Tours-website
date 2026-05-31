@@ -1,38 +1,52 @@
 import type { Metadata } from "next"
 
+import { getPageUi } from "@/content/pages"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { InquiryForm } from "@/components/inquiry-form"
 import { BreadcrumbSchema, OrganizationSchema, StructuredData } from "@/components/structured-data"
 import { absoluteUrl } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Inquiry - Gladiolus Tours",
-  description: "Tell us about your dream safari and our private concierge will design a tailor-made itinerary within 24 hours.",
-  alternates: {
-    canonical: "/inquiry",
-  },
-  openGraph: {
-    title: "Design My Safari | Gladiolus Tours",
-    description: "Share a few details and we’ll craft a tailor-made safari itinerary for you.",
-    url: absoluteUrl("/inquiry"),
-    images: [
-      {
-        url: absoluteUrl("/og-image.jpg"),
-        width: 1200,
-        height: 630,
-        alt: "Gladiolus Tours safari inquiry",
-      },
-    ],
-  },
+type Props = {
+  params: Promise<{ locale: string }>
 }
 
-export default function InquiryPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const page = getPageUi(locale).inquiry
+
+  return {
+    title: page.metadata.title,
+    description: page.metadata.description,
+    alternates: {
+      canonical: "/inquiry",
+    },
+    openGraph: {
+      title: page.metadata.openGraphTitle ?? page.metadata.title,
+      description: page.metadata.openGraphDescription ?? page.metadata.description,
+      url: absoluteUrl("/inquiry"),
+      images: [
+        {
+          url: absoluteUrl("/og-image.jpg"),
+          width: 1200,
+          height: 630,
+          alt: page.heroTitle,
+        },
+      ],
+    },
+  }
+}
+
+export default async function InquiryPage({ params }: Props) {
+  const { locale } = await params
+  const ui = getPageUi(locale)
+  const page = ui.inquiry
+
   const inquiryPageSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     name: "Gladiolus Tours Inquiry",
-    description: "Lead capture inquiry form for tailor-made safari planning.",
+    description: page.metadata.description,
     url: absoluteUrl("/inquiry"),
     mainEntityOfPage: absoluteUrl("/inquiry"),
   }
@@ -43,8 +57,8 @@ export default function InquiryPage() {
       <StructuredData id="inquiry-page-schema" data={inquiryPageSchema} />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: absoluteUrl("/") },
-          { name: "Inquiry", url: absoluteUrl("/inquiry") },
+          { name: ui.common.homeBreadcrumb, url: absoluteUrl("/") },
+          { name: page.pageLabel, url: absoluteUrl("/inquiry") },
         ]}
       />
       <Navigation />
@@ -52,10 +66,8 @@ export default function InquiryPage() {
       <section className="relative mt-20 bg-muted py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-5xl md:text-6xl text-foreground mb-5 text-balance">Design My Safari</h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Private concierge planning. Share a few details and we’ll respond within 24 hours.
-            </p>
+            <h1 className="text-5xl md:text-6xl text-foreground mb-5 text-balance">{page.heroTitle}</h1>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">{page.heroDescription}</p>
           </div>
         </div>
       </section>
@@ -65,21 +77,17 @@ export default function InquiryPage() {
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 lg:grid-cols-[1fr_420px]">
             <div className="space-y-6">
               <div className="rounded-3xl border border-border/60 bg-background/70 p-8 shadow-sm">
-                <h2 className="text-2xl text-foreground mb-3">What you’ll receive</h2>
+                <h2 className="text-2xl text-foreground mb-3">{page.receiveTitle}</h2>
                 <ul className="space-y-3 text-muted-foreground leading-relaxed">
-                  <li>Personalized itinerary recommendations based on your travel style.</li>
-                  <li>Best seasonal timing for wildlife moments (migration, calving, predator action).</li>
-                  <li>Lodge and camp shortlist aligned with your comfort and budget.</li>
-                  <li>Clear next steps and optional call scheduling.</li>
+                  {page.receiveItems.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
               <div className="rounded-3xl border border-border/60 bg-background/70 p-8 shadow-sm">
-                <h2 className="text-2xl text-foreground mb-3">Prefer a quick question?</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  If you’re not ready for planning details, you can still reach us via the Contact page for general
-                  questions.
-                </p>
+                <h2 className="text-2xl text-foreground mb-3">{page.quickQuestionTitle}</h2>
+                <p className="text-muted-foreground leading-relaxed">{page.quickQuestionDescription}</p>
               </div>
             </div>
 

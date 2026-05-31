@@ -64,8 +64,8 @@ export function NotFoundView({ copy }: { copy: NotFoundCopy }) {
       <main className="relative isolate overflow-hidden pt-28 pb-24">
         <div className="absolute inset-0 -z-10">
           <Image
-            src={assetUrl("/gallery/skyline-00.webp")}
-            alt="Tanzania skyline"
+            src={assetUrl("/gallery/sunset.webp")}
+            alt="Tanzania safari landscape"
             fill
             unoptimized
             priority

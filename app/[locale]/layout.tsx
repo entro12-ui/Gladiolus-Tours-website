@@ -3,10 +3,11 @@ import type { Metadata } from "next"
 import Script from "next/script"
 import { Inter } from "next/font/google"
 import { NextIntlClientProvider } from "next-intl"
-import { setRequestLocale } from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
-import { ThemeProvider } from "@/components/theme-provider"
+import { LanguageProvider } from "@/components/language-provider"
 import { Toaster } from "@/components/ui/sonner"
+import GlobalWhatsApp from "@/components/GlobalWhatsApp"
 import { routing } from "@/i18n/routing"
 import { absoluteUrl } from "@/lib/seo"
 import "../globals.css"
@@ -103,11 +104,11 @@ export default async function LocaleLayout({
     notFound()
   }
 
-  const messages = (await import(`@/messages/${locale}.json`)).default
+  const messages = await getMessages()
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
 
         {/* ✅ Google Analytics 4 */}
         <Script
@@ -125,13 +126,13 @@ export default async function LocaleLayout({
           `}
         </Script>
 
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <LanguageProvider>
             {children}
-          </NextIntlClientProvider>
-          <Toaster richColors closeButton />
-        </ThemeProvider>
-
+          </LanguageProvider>
+        </NextIntlClientProvider>
+        <Toaster richColors closeButton />
+        <GlobalWhatsApp />
       </body>
     </html>
   )

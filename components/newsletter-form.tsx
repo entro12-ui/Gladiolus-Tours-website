@@ -5,6 +5,7 @@ import { useMemo, useState } from "react"
 import { Turnstile } from "@marsidev/react-turnstile"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
+import { useTranslations } from "next-intl"
 import { toast } from "sonner"
 import { z } from "zod"
 
@@ -12,13 +13,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-const NewsletterSchema = z.object({
-  email: z.string().email("Enter a valid email").max(160),
-  name: z.string().max(120).optional(),
-  sendConfirmation: z.boolean().optional(),
-})
-
-type NewsletterValues = z.infer<typeof NewsletterSchema>
+type NewsletterValues = {
+  email: string
+  name?: string
+  sendConfirmation?: boolean
+}
 
 type NewsletterFormProps = {
   sendConfirmationDefault?: boolean
@@ -36,10 +35,21 @@ export function NewsletterForm({
   mutedTextClassName,
 }: NewsletterFormProps) {
   const pathname = usePathname()
+  const t = useTranslations("forms.newsletter")
+  const tCommon = useTranslations("forms.common")
 
   const siteKey = useMemo(() => process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY, [])
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
   const [turnstileKey, setTurnstileKey] = useState(0)
+  const newsletterSchema = useMemo(
+    () =>
+      z.object({
+        email: z.string().email(t("errors.email")).max(160),
+        name: z.string().max(120).optional(),
+        sendConfirmation: z.boolean().optional(),
+      }),
+    [t]
+  )
 
   const {
     register,
@@ -49,7 +59,7 @@ export function NewsletterForm({
     setValue,
     watch,
   } = useForm<NewsletterValues>({
-    resolver: zodResolver(NewsletterSchema),
+    resolver: zodResolver(newsletterSchema),
     defaultValues: {
       email: "",
       name: "",
@@ -67,7 +77,7 @@ export function NewsletterForm({
   const onSubmit = async (values: NewsletterValues) => {
     try {
       if (!turnstileToken) {
-        toast.error("Please complete the verification.")
+        toast.error(t("toasts.completeVerification"))
         return
       }
 
@@ -83,16 +93,16 @@ export function NewsletterForm({
 
       const data = (await res.json().catch(() => null)) as any
       if (!res.ok) {
-        toast.error(data?.error || "Unable to subscribe")
+        toast.error(data?.error || t("toasts.subscribeError"))
         resetTurnstile()
         return
       }
 
-      toast.success("Subscribed. Welcome to Gladiolus Tours.")
+      toast.success(t("toasts.subscribeSuccess"))
       reset({ email: "", name: "", sendConfirmation })
       resetTurnstile()
     } catch {
-      toast.error("Unable to subscribe")
+      toast.error(t("toasts.subscribeError"))
       resetTurnstile()
     }
   }
@@ -102,13 +112,14 @@ export function NewsletterForm({
       <div className="grid grid-cols-1 gap-3">
         <div className="space-y-2">
           <Label htmlFor="newsletterEmail" className={labelClassName}>
-            Email
+            {t("labels.email")}
           </Label>
           <Input
             id="newsletterEmail"
             type="email"
             autoComplete="email"
             className={inputClassName}
+            placeholder={t("placeholders.email")}
             {...register("email")}
           />
           {errors.email && <p className="text-sm text-destructive">{errors.email.message}</p>}
@@ -116,9 +127,9 @@ export function NewsletterForm({
 
         <div className="space-y-2">
           <Label htmlFor="newsletterName" className={labelClassName}>
-            Name (optional)
+            {t("labels.name")}
           </Label>
-          <Input id="newsletterName" autoComplete="name" className={inputClassName} {...register("name")} />
+          <Input id="newsletterName" autoComplete="name" className={inputClassName} placeholder={t("placeholders.name")} {...register("name")} />
         </div>
 
         <label className={`flex items-center gap-2 text-sm ${mutedTextClassName ?? "text-muted-foreground"}`}
@@ -129,14 +140,14 @@ export function NewsletterForm({
             onChange={(e) => setValue("sendConfirmation", e.target.checked)}
             className="h-4 w-4"
           />
-          Send me a confirmation email
+          {t("labels.sendConfirmation")}
         </label>
       </div>
 
       <div className="space-y-3">
-        <p className="text-sm font-medium text-foreground">Verification</p>
+        <p className="text-sm font-medium text-foreground">{tCommon("verification")}</p>
         {!siteKey ? (
-          <p className="text-sm text-destructive">Turnstile is not configured.</p>
+          <p className="text-sm text-destructive">{tCommon("turnstileNotConfigured")}</p>
         ) : (
           <Turnstile
             key={turnstileKey}
@@ -153,7 +164,7 @@ export function NewsletterForm({
         disabled={isSubmitting || !turnstileToken || !siteKey}
         className={buttonClassName}
       >
-        {isSubmitting ? "Submitting…" : "Subscribe"}
+        {isSubmitting ? t("buttons.submitting") : t("buttons.submit")}
       </Button>
     </form>
   )

@@ -1,6 +1,12 @@
-const DEFAULT_ASSET_BASE_URL = "https://assets.gladiolustours.com"
+import { resolveGalleryImage } from "./gallery-images"
 
-const rawAssetBase = (process.env.NEXT_PUBLIC_ASSET_BASE_URL || process.env.ASSET_BASE_URL || DEFAULT_ASSET_BASE_URL).trim()
+const DEFAULT_ASSET_BASE_URL = ""
+
+const rawAssetBase = (
+  process.env.NEXT_PUBLIC_ASSET_BASE_URL ||
+  process.env.ASSET_BASE_URL ||
+  DEFAULT_ASSET_BASE_URL
+).trim()
 const assetBase = rawAssetBase ? rawAssetBase.replace(/\/$/, "") : ""
 
 export const hasAssetBase = Boolean(assetBase)
@@ -11,10 +17,13 @@ export function assetUrl(path: string) {
     return path
   }
 
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`
+  const resolvedPath = resolveGalleryImage(normalizedPath)
+  const encodedPath = encodeURI(resolvedPath)
+
   if (!assetBase) {
-    return path
+    return encodedPath
   }
 
-  const normalizedPath = path.startsWith("/") ? path : `/${path}`
-  return `${assetBase}${normalizedPath}`
+  return `${assetBase}${encodedPath}`
 }

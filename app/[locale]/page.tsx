@@ -1,165 +1,80 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import { Link } from "@/i18n/routing"
+import { getHomeContent } from "@/content/home"
+import { assetUrl } from "@/lib/assets"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import {
   OrganizationSchema,
-  BreadcrumbSchema,
+  BreadcrumbSchema
 } from "@/components/structured-data"
 import { HeroSlideshow } from "@/components/home/hero-slideshow"
 import { absoluteUrl } from "@/lib/seo"
 import TestimonialSlider from "@/components/home/TestimonialSlider"
+import { ArrowRight } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Tanzania Safaris & Tours | Serengeti, Kilimanjaro & Zanzibar | Gladiolus Tours",
-  description:
-    "Gladiolus Tours offers Tanzania safari packages for every budget — from budget group safaris to premium private tours. Explore Serengeti, Ngorongoro, Kilimanjaro, Tarangire & Zanzibar with trusted local experts.",
-  keywords: [
-    "Tanzania Safari Packages",
-    "Affordable Tanzania Safaris",
-    "Budget Safari Tanzania",
-    "Serengeti Safari",
-    "Tanzania Family Safari",
-    "Private Tanzania Safari",
-    "Luxury African Safari",
-    "Mount Kilimanjaro Trekking",
-    "Ngorongoro Crater Tours",
-    "Arusha Safari Company",
-    "Great Migration Safari",
-    "Zanzibar Beach Holidays",
-    "Tanzania Travel Experts",
-    "Group Safari Tanzania",
-    "Mid-Range Tanzania Safari",
-  ],
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "Tanzania Safari Packages for Every Traveler | Gladiolus Tours",
-    description:
-      "From budget adventures to premium private safaris — explore Serengeti, Ngorongoro, Kilimanjaro, Tarangire & Zanzibar with Gladiolus Tours.",
-    url: absoluteUrl(),
-    siteName: "Gladiolus Tours",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: absoluteUrl("/gallery/zebra-00.webp"),
-        width: 1200,
-        height: 630,
-        alt: "Tanzania Safari by Gladiolus Tours — All Budgets Welcome",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Tanzania Safaris for Every Budget | Gladiolus Tours",
-    description:
-      "Budget to premium Tanzania safaris — Serengeti, Kilimanjaro & Zanzibar packages tailored to you.",
-    images: [absoluteUrl("/gallery/zebra-00.webp")],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  category: "travel",
-  metadataBase: new URL("https://www.gladiolustours.com"),
+type HomePageProps = {
+  params: Promise<{ locale: string }>
 }
 
-// ─── Data ────────────────────────────────────────────────────────────────────
+export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
+  const { locale } = await params
+  const meta = getHomeContent(locale).metadata
 
-const safariPackages = [
-  {
-    title: "7-Day Serengeti Safari",
-    duration: "7 DAYS",
-    badge: "MOST POPULAR",
-    priceFrom: "From $1,450",
-    image: "/gallery/safari4.jpeg",
-    link: "/safaris/great-migration",
-    description:
-      "Classic Serengeti game drives with flexible lodge or tented camp options to suit your budget.",
-  },
-  {
-    title: "Ngorongoro & Tarangire Explorer",
-    duration: "5 DAYS",
-    badge: "FAMILY FAVORITE",
-    priceFrom: "From $980",
-    image: "/gallery/ballon.jpeg",
-    link: "/destinations/ngorongoro-crater",
-    description:
-      "Perfect for families and first-time safari travelers — incredible wildlife, great value.",
-  },
-  {
-    title: "Kilimanjaro & Zanzibar Combo",
-    duration: "10 DAYS",
-    badge: "ADVENTURE",
-    priceFrom: "From $2,200",
-    image: "/gallery/kik1.jpeg",
-    link: "/treks",
-    description:
-      "Summit Africa's highest peak then unwind on Zanzibar's pristine white-sand beaches.",
-  },
-]
+  return {
+    title: meta.title,
+    description: meta.description,
+    keywords: meta.keywords,
+    alternates: {
+      canonical: "/",
+    },
+    openGraph: {
+      title: meta.openGraphTitle,
+      description: meta.openGraphDescription,
+      url: absoluteUrl(),
+      siteName: "Gladiolus Tours",
+      locale: meta.openGraphLocale,
+      type: "website",
+      images: [
+        {
+          url: absoluteUrl("/gallery/zebra.jpeg"),
+          width: 1200,
+          height: 630,
+          alt: meta.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.twitterTitle,
+      description: meta.twitterDescription,
+      images: [absoluteUrl("/gallery/zebra.jpeg")],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    category: "travel",
+    metadataBase: new URL("https://www.gladiolustours.com"),
+  }
+}
 
-const experienceHighlights = [
-  {
-    icon: "🚙",
-    title: "Private 4×4 Land Cruisers",
-    desc: "Dedicated safari vehicles for small groups, families, and solo travelers.",
-  },
-  {
-    icon: "🏕️",
-    title: "Flexible Accommodations",
-    desc: "Budget tented camps, comfortable lodges, and premium private suites available.",
-  },
-  {
-    icon: "🧭",
-    title: "Expert Local Guides",
-    desc: "Certified, passionate guides with deep knowledge of Tanzania's ecosystems.",
-  },
-  {
-    icon: "✈️",
-    title: "Airport Transfers",
-    desc: "Seamless pickups from Kilimanjaro and Arusha airports, 24/7.",
-  },
-  {
-    icon: "🛩️",
-    title: "Fly-In Safaris",
-    desc: "Charter flights to remote parks for those short on time or craving comfort.",
-  },
-  {
-    icon: "💑",
-    title: "Honeymoon Safaris",
-    desc: "Romantic bush experiences tailored for couples — intimate and unforgettable.",
-  },
-  {
-    icon: "👨‍👩‍👧‍👦",
-    title: "Family Adventures",
-    desc: "Kid-friendly itineraries designed for safe, fun, and enriching family travel.",
-  },
-  {
-    icon: "📷",
-    title: "Photography Expeditions",
-    desc: "Specialist photography safaris with optimal positioning and lighting guidance.",
-  },
-]
+export default async function HomePage({ params }: HomePageProps) {
+  const { locale } = await params
+  const c = getHomeContent(locale)
 
-// ─── Page ─────────────────────────────────────────────────────────────────────
-
-export default function HomePage() {
   return (
     <div className="bg-[#FAFBF8] text-[#243526] min-h-screen overflow-hidden font-sans">
       <OrganizationSchema />
-      <BreadcrumbSchema items={[{ name: "Home", url: absoluteUrl("/") }]} />
-
+<BreadcrumbSchema items={[{ name: c.breadcrumbHome, url: absoluteUrl("/") }]} />
       {/* ── HEADER ── */}
       <div className="sticky top-0 z-50 bg-[#F4F7F2]/95 backdrop-blur-2xl border-b border-[#D0DBCC]/60">
         <Navigation />
@@ -195,7 +110,7 @@ export default function HomePage() {
             aria-hidden
           />
           <span className="text-[11px] md:text-[12px] font-semibold tracking-[0.18em] uppercase text-[#2D4A30]">
-            Tanzania · Kilimanjaro · Zanzibar · All Budgets
+            {c.hero.badge}
           </span>
         </div>
 
@@ -204,21 +119,17 @@ export default function HomePage() {
           className="mt-7 font-serif font-medium leading-[1.05] tracking-[-0.025em] text-[#1B2D1D] animate-fade-in-up delay-100"
           style={{ fontSize: "clamp(2.4rem, 5.5vw, 4.8rem)" }}
         >
-          Your Tanzania Adventure,
-          <span
-            className="block mt-1.5 bg-gradient-to-r from-[#B8A840] via-[#A8B545] to-[#8E9A35] bg-clip-text text-transparent"
-          >
-            Tailored To You
-          </span>
+          {c.hero.title}
+<span className="block mt-1.5 bg-gradient-to-r from-[#B8A840] via-[#A8B545] to-[#8E9A35] bg-clip-text text-transparent">
+{c.hero.titleHighlight}
+</span>
         </h1>
 
         {/* Description — dark gray on white, no overlay needed */}
         <p className="mt-7 text-[16px] md:text-[18px] text-[#4A5A4C] leading-[1.85] font-light max-w-2xl animate-fade-in-up delay-200">
-          Explore Tanzania with flexible packages designed for{" "}
-          <strong className="font-semibold text-[#1B2D1D]">every traveler and budget</strong>
-          {" "}— from budget-friendly group safaris and mid-range family adventures to
-          premium private experiences across Serengeti, Ngorongoro, Kilimanjaro,
-          Tarangire, and Zanzibar.
+          {c.hero.description.split(c.hero.descriptionBold)[0]}
+          <strong className="font-semibold text-[#1B2D1D]">{c.hero.descriptionBold}</strong>
+          {c.hero.description.split(c.hero.descriptionBold)[1]}
         </p>
 
         {/* Trust signals row */}
@@ -238,8 +149,8 @@ export default function HomePage() {
                 </svg>
               ))}
             </div>
-            <span className="text-[13px] font-semibold text-[#1B2D1D]">4.9/5</span>
-            <span className="text-[12px] text-[#6B7B6D]">· 2,800+ guests</span>
+            <span className="text-[13px] font-semibold text-[#1B2D1D]">{c.hero.rating}</span>
+            <span className="text-[12px] text-[#6B7B6D]">· {c.hero.guests}</span>
           </div>
 
           <div className="h-4 w-px bg-[#D0DBCC]" aria-hidden />
@@ -255,7 +166,7 @@ export default function HomePage() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
-            <span className="text-[12px] font-medium text-[#3A4B3C]">22 Years Experience</span>
+            <span className="text-[12px] font-medium text-[#3A4B3C]">{c.hero.experience}</span>
           </div>
         </div>
 
@@ -265,7 +176,7 @@ export default function HomePage() {
             href="/contact"
             className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-[#C2B44A] via-[#B8A840] to-[#A8B545] hover:from-[#B0A040] hover:to-[#8E9A35] px-7 py-3.5 text-white text-sm md:text-[15px] font-semibold tracking-[0.02em] transition-all duration-400 hover:-translate-y-0.5 shadow-[0_12px_32px_rgba(184,168,64,0.30)] hover:shadow-[0_18px_48px_rgba(184,168,64,0.42)]"
           >
-            Plan Your Adventure
+            {c.hero.planAdventure}
             <svg
               className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
               fill="none"
@@ -292,18 +203,13 @@ export default function HomePage() {
             >
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" />
             </svg>
-            Quick WhatsApp Quote
+            {c.hero.whatsappQuote}
           </a>
         </div>
 
         {/* Stats bar */}
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 animate-fade-in-up delay-400">
-          {[
-            { value: "2,800+", label: "Happy Guests" },
-            { value: "22", label: "Years Experience" },
-            { value: "All", label: "Budgets Welcome" },
-            { value: "100%", label: "Custom Plans" },
-          ].map((stat, i) => (
+          {c.hero.stats.map((stat, i) => (
             <div
               key={i}
               className="bg-[#F8FAF7] border border-[#E2EAE0] rounded-2xl px-3 py-4 text-center hover:border-[#C2B44A]/40 hover:bg-white hover:shadow-[0_6px_20px_rgba(0,0,0,0.04)] transition-all duration-400"
@@ -354,10 +260,10 @@ export default function HomePage() {
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-[#7C8B61] font-semibold">
-                  Trusted Local Experts
+                  {c.hero.trustedExperts}
                 </p>
                 <p className="text-[13px] font-semibold text-[#1B2D1D] leading-tight mt-0.5 truncate">
-                  Based in Arusha, Tanzania
+                  {c.hero.trustedSubtext}
                 </p>
               </div>
             </div>
@@ -401,7 +307,7 @@ export default function HomePage() {
   {/* Scroll indicator */}
   <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden lg:flex flex-col items-center gap-2 animate-bounce opacity-60">
     <span className="text-[#6B7B6D] text-[10px] tracking-[0.25em] uppercase font-semibold">
-      Scroll
+      {c.hero.scroll}
     </span>
     <svg
       className="w-5 h-5 text-[#6B7B6D]"
@@ -432,34 +338,23 @@ export default function HomePage() {
         <div className="container relative mx-auto px-5 sm:px-8 lg:px-14 max-w-5xl text-center">
           <div className="w-14 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
           <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
-            Welcome To Gladiolus Tours
+            {c.intro.eyebrow}
           </span>
 
           <h2 className="mt-5 font-serif text-[#1B2D1D] leading-tight"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}
           >
-            Authentic Tanzania Experiences
-            <br className="hidden md:block" /> For Every Traveler
+            {c.intro.title}
+            <br className="hidden md:block" /> {c.intro.titleLine2}
           </h2>
 
           <p className="mt-7 text-[16px] md:text-[18px] leading-[1.95] text-[#556458] font-light max-w-3xl mx-auto">
-            At Gladiolus Tours, we believe unforgettable Tanzania experiences should be
-            accessible to <em>every</em> traveler. Whether you are planning a{" "}
-            <strong className="text-[#2D4A30] font-semibold">budget safari</strong>,
-            a comfortable{" "}
-            <strong className="text-[#2D4A30] font-semibold">mid-range family escape</strong>,
-            a romantic honeymoon, or a{" "}
-            <strong className="text-[#2D4A30] font-semibold">premium private adventure</strong> —
-            our local team crafts journeys tailored to your style and budget.
+            {c.intro.description}
           </p>
 
           {/* Budget tiers visual indicator */}
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-3">
-            {[
-              { tier: "Budget", color: "bg-[#8DAE6F]", label: "Group & Shared Safaris" },
-              { tier: "Mid-Range", color: "bg-[#B8A840]", label: "Comfortable & Flexible" },
-              { tier: "Premium", color: "bg-[#2D4A30]", label: "Private & Exclusive" },
-            ].map((t) => (
+            {c.intro.tiers.map((t) => (
               <div
                 key={t.tier}
                 className="flex items-center gap-3 bg-[#F4F7F2] border border-[#E2EAE0] rounded-2xl px-5 py-3"
@@ -473,161 +368,215 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════════
-          TRUSTED PARTNERS
-      ══════════════════════════════════════════════════════════ */}
-      <section className="py-20 bg-[#F8FAF7] border-y border-[#E2EAE0]/60 relative overflow-hidden">
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(194,180,74,0.06),transparent_30%)] pointer-events-none"
-        />
+  
+    {/* ══════════════════════════════════════════════════════════
+     SAFARI PACKAGES — Updated with Short Itinerary + Expandable
+══════════════════════════════════════════════════════════ */}
+<section className="py-28 bg-white relative overflow-hidden">
+  <div
+    aria-hidden
+    className="absolute right-0 top-0 w-[420px] h-[420px] bg-[#B8A840]/5 blur-[100px] rounded-full pointer-events-none"
+  />
 
-        <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 text-center">
-          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-5" />
-          <p className="uppercase tracking-[0.4em] text-[11px] text-[#B8A840] font-semibold">
-            Trusted Worldwide
-          </p>
-          <h2 className="font-serif mt-4 text-[#1B2D1D] leading-snug"
-            style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)" }}
-          >
-            Recommended By Leading Travel Platforms
-          </h2>
-          <p className="mt-4 max-w-xl mx-auto text-[#556458] leading-[1.85] text-[14px] md:text-[15px] font-light">
-            Recognized by international safari travelers and leading travel authorities across Africa and the globe.
-          </p>
+  <div className="container relative mx-auto px-5 sm:px-8 lg:px-14">
 
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-5">
-            {[
-              "/partners/safaribookings.jpeg",
-              "/partners/safarigo.png",
-              "/partners/tato.png",
-              "/partners/tripadvisor.png",
-            ].map((logo, i) => (
-              <div
-                key={i}
-                className="group relative overflow-hidden bg-white border border-[#E2EAE0]/80 rounded-[24px] p-7 hover:shadow-[0_16px_48px_rgba(0,0,0,0.07)] transition-all duration-500 hover:-translate-y-1"
-              >
-                <div
-                  aria-hidden
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_top_right,rgba(194,180,74,0.07),transparent_35%)] pointer-events-none"
-                />
-                <Image
-                  src={logo}
-                  alt="Travel Partner"
-                  width={160}
-                  height={60}
-                  className="relative mx-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
-                />
-              </div>
-            ))}
+    <div className="text-center mb-16">
+      <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
+      <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
+        {c.safariPackages.eyebrow}
+      </span>
+      <h2 className="font-serif mt-5 text-[#1B2D1D] leading-[1.1] tracking-[-0.025em]"
+        style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+      >
+        {c.safariPackages.title}
+      </h2>
+      <p className="mt-5 max-w-2xl mx-auto text-[15px] md:text-[17px] text-[#556458] leading-[1.9] font-light">
+        {c.safariPackages.subtitle}
+      </p>
+    </div>
+
+    <div className="grid lg:grid-cols-3 gap-8">
+      {c.safariPackages.packages.map((pkg, index) => (
+        <div key={index} className="group bg-white rounded-[28px] overflow-hidden border border-[#E2EAE0]/70 hover:shadow-[0_24px_72px_rgba(0,0,0,0.09)] transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+
+          {/* Image */}
+          <div className="relative h-64 overflow-hidden flex-shrink-0">
+            <Image
+              src={assetUrl(pkg.image)}
+              alt={pkg.title}
+              fill
+              unoptimized
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            
+            <div className="absolute top-4 left-4 bg-gradient-to-r from-[#D0C05A] to-[#A8B545] text-white px-4 py-1.5 rounded-full text-[10px] tracking-[0.22em] font-semibold shadow-lg">
+              {pkg.badge}
+            </div>
+
+            <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm text-[#2D4A30] px-4 py-1.5 rounded-full text-sm font-semibold shadow">
+              {pkg.priceFrom}
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* ══════════════════════════════════════════════════════════
-          SAFARI PACKAGES — Repositioned as "all-budget"
-      ══════════════════════════════════════════════════════════ */}
-      <section className="py-28 bg-white relative overflow-hidden">
-        <div
-          aria-hidden
-          className="absolute right-0 top-0 w-[420px] h-[420px] bg-[#B8A840]/5 blur-[100px] rounded-full pointer-events-none"
-        />
+          {/* Body */}
+          <div className="p-7 flex flex-col flex-1">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-[11px] tracking-[0.22em] text-[#94872E] font-semibold">
+                {pkg.duration}
+              </span>
+              <span className="text-[11px] text-[#6B7B6D] uppercase">
+                Min {pkg.minPax} pax
+              </span>
+            </div>
 
-        <div className="container relative mx-auto px-5 sm:px-8 lg:px-14">
+            <h3 className="text-[1.45rem] font-serif text-[#1B2D1D] leading-snug">
+              {pkg.title}
+            </h3>
 
-          <div className="text-center mb-16">
-            <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
-            <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
-              Safari Packages · All Budgets
-            </span>
-            <h2 className="font-serif mt-5 text-[#1B2D1D] leading-[1.1] tracking-[-0.025em]"
-              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
-            >
-              Handcrafted Tanzania Safari Packages
-            </h2>
-            <p className="mt-5 max-w-2xl mx-auto text-[15px] md:text-[17px] text-[#556458] leading-[1.9] font-light">
-              Whether you are traveling solo on a budget, with family on a mid-range package,
-              or seeking an exclusive private experience — we have a safari crafted for you.
+            <p className="mt-3 text-[14px] text-[#556458] leading-relaxed flex-1">
+              {pkg.description}
             </p>
-          </div>
 
-          <div className="grid lg:grid-cols-3 gap-7">
-            {safariPackages.map((pkg, index) => (
-              <Link key={index} href={pkg.link} className="group block">
-                <article className="rounded-[28px] overflow-hidden border border-[#E2EAE0]/70 bg-white hover:shadow-[0_24px_72px_rgba(0,0,0,0.09)] transition-all duration-600 hover:-translate-y-2 h-full flex flex-col">
+            {/* Short Itinerary Preview */}
+            <div className="mt-6 text-sm">
+              <p className="font-medium text-[#2D4A30] mb-2">{c.safariPackages.sampleItinerary}</p>
+              <ul className="text-[#556458] text-[13px] space-y-1">
+                {pkg.shortItinerary.map((day, i) => (
+                  <li key={i}>• {day}</li>
+                ))}
+              </ul>
+            </div>
 
-                  {/* Image */}
-                  <div className="relative h-64 overflow-hidden flex-shrink-0">
-                    <Image
-                      src={pkg.image}
-                      alt={pkg.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-[1400ms] ease-out"
-                    />
-                    <div
-                      aria-hidden
-                      className="absolute inset-0 bg-gradient-to-t from-[#0C140E]/50 via-transparent to-transparent"
-                    />
-                    {/* Badge */}
-                    <div className="absolute top-4 left-4 bg-gradient-to-r from-[#D0C05A] to-[#A8B545] text-white px-4 py-1.5 rounded-full text-[10px] tracking-[0.22em] font-semibold shadow-lg">
-                      {pkg.badge}
-                    </div>
-                    {/* Price from */}
-                    <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm text-[#2D4A30] px-3 py-1.5 rounded-full text-[11px] font-semibold shadow">
-                      {pkg.priceFrom}
-                    </div>
+            {/* Expandable Full Itinerary */}
+            <details className="mt-6 group/details">
+              <summary className="cursor-pointer rounded-full bg-[#2D4A30] text-white px-6 py-3 inline-flex items-center justify-center gap-2 text-[13px] font-medium tracking-wide hover:bg-gradient-to-r hover:from-[#C2B44A] hover:to-[#A8B545] transition-all duration-300 list-none">
+                {c.safariPackages.viewFullItinerary}
+                <svg className="w-4 h-4 group-open/details:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+
+              <div className="mt-5 space-y-4 text-[14px] text-[#4A5A4C] border-l-2 border-[#C2B44A] pl-5">
+                {pkg.fullItinerary.map((item, i) => (
+                  <div key={i}>
+                    <strong>{item.day}:</strong> {item.activity}
                   </div>
+                ))}
+              </div>
+            </details>
 
-                  {/* Body */}
-                  <div className="p-7 flex flex-col flex-1">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-[11px] tracking-[0.22em] text-[#94872E] font-semibold">
-                        {pkg.duration}
-                      </span>
-                      <span className="text-[11px] text-[#6B7B6D] tracking-[0.1em] uppercase">
-                        Flexible Options
-                      </span>
-                    </div>
-
-                    <h3 className="text-[1.55rem] font-serif text-[#1B2D1D] leading-snug tracking-[-0.02em]">
-                      {pkg.title}
-                    </h3>
-
-                    <p className="mt-3 text-[14px] text-[#556458] leading-[1.85] font-light flex-1">
-                      {pkg.description}
-                    </p>
-
-                    <div className="mt-6">
-                      <span className="rounded-full bg-[#2D4A30] text-white px-6 py-2.5 inline-flex items-center gap-2 text-[13px] font-medium tracking-wide group-hover:bg-gradient-to-r group-hover:from-[#D0C05A] group-hover:to-[#A8B545] transition-all duration-400 shadow-md">
-                        View Itinerary
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-
-                </article>
+            <div className="mt-8">
+              <Link
+                href={pkg.link}
+                className="block text-center rounded-full bg-gradient-to-r from-[#C2B44A] to-[#A8B545] py-3.5 text-white font-semibold text-sm tracking-wider hover:brightness-110 transition"
+              >
+                {c.safariPackages.bookSafari}
               </Link>
-            ))}
+            </div>
           </div>
-
-          {/* View all CTA */}
-          <div className="text-center mt-12">
-            <Link
-              href="/safaris"
-              className="inline-flex items-center gap-2 text-[#2D4A30] font-semibold text-[15px] border-b-2 border-[#C2B44A]/50 hover:border-[#C2B44A] pb-0.5 transition-colors duration-300"
-            >
-              View All Safari Packages
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-
         </div>
-      </section>
+      ))}
+    </div>
 
+    {/* View all CTA */}
+    <div className="text-center mt-16">
+      <Link
+        href="/safaris"
+        className="inline-flex items-center gap-2 text-[#2D4A30] font-semibold text-[15px] border-b-2 border-[#C2B44A]/50 hover:border-[#C2B44A] pb-0.5 transition-colors duration-300"
+      >
+        {c.safariPackages.viewAll}
+        <ArrowRight className="w-4 h-4" />
+      </Link>
+    </div>
+
+  </div>
+</section>
+{/* ─────────────────────────────────────────────
+   KILIMANJARO & MERU TREKS
+───────────────────────────────────────────── */}
+<section className="py-28 bg-[#F8FAF7] relative overflow-hidden">
+  <div className="container mx-auto px-5 sm:px-8 lg:px-14">
+
+    <div className="text-center mb-16">
+      <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
+        {c.treks.eyebrow}
+      </span>
+      <h2 className="font-serif mt-5 text-[#1B2D1D]"
+        style={{ fontSize: "clamp(2rem, 5vw, 3rem)" }}
+      >
+        {c.treks.title}
+      </h2>
+      <p className="mt-5 max-w-2xl mx-auto text-[#556458] leading-[1.9] font-light">
+        {c.treks.subtitle}
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+      {c.treks.routes.map((route, index) => (
+        <div
+          key={index}
+          className="group bg-white rounded-[28px] overflow-hidden border border-[#E2EAE0] hover:shadow-[0_24px_72px_rgba(0,0,0,0.09)] transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
+        >
+          <Link href={route.link} className="block flex flex-col flex-1">
+            <span className="relative block h-64 overflow-hidden">
+              <Image
+                src={assetUrl(route.image)}
+                alt={route.title}
+                width={800}
+                height={640}
+                unoptimized
+                className="h-64 w-full object-cover group-hover:scale-105 transition-transform duration-1000"
+              />
+              <span className="absolute top-4 left-4 bg-[#2D4A30] text-white text-[10px] px-3 py-1 rounded-full tracking-wider">
+                {route.highlight}
+              </span>
+              <span className="absolute bottom-4 right-4 bg-white/95 px-3 py-1 rounded-full text-[11px] font-semibold text-[#1B2D1D]">
+                {route.price}
+              </span>
+            </span>
+
+            <span className="p-7 flex flex-col flex-1 block">
+              <span className="flex justify-between mb-3">
+                <span className="text-[11px] tracking-[0.2em] text-[#94872E] font-semibold">
+                  {route.duration}
+                </span>
+                <span className="text-[11px] text-[#6B7B6D] uppercase">
+                  {c.treks.guidedTrek}
+                </span>
+              </span>
+
+              <span className="block font-serif text-[1.3rem] text-[#1B2D1D]">
+                {route.title}
+              </span>
+
+              <span className="mt-3 block text-[14px] text-[#556458] leading-[1.8] flex-1">
+                {route.description}
+              </span>
+            </span>
+          </Link>
+
+          <div className="mt-auto px-7 pb-7 flex gap-3">
+            <Link
+              href={route.link}
+              className="flex-1 text-center bg-[#2D4A30] text-white py-2.5 rounded-full text-[13px] font-medium group-hover:bg-gradient-to-r group-hover:from-[#C2B44A] group-hover:to-[#A8B545] transition-all duration-400"
+            >
+              {c.treks.viewRoute}
+            </Link>
+            <a
+              href="https://wa.me/255789736559"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center border border-[#D0DBCC] py-2.5 rounded-full text-[13px] font-medium hover:border-[#C2B44A]"
+            >
+              {c.treks.quickQuote}
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       {/* ══════════════════════════════════════════════════════════
           FOUNDERS
       ══════════════════════════════════════════════════════════ */}
@@ -637,43 +586,30 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-5" />
             <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
-              Leadership
+              {c.founders.eyebrow}
             </span>
             <h2 className="font-serif mt-4 text-[#1B2D1D] leading-tight"
               style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}
             >
-              Meet the Founders
+              {c.founders.title}
             </h2>
             <p className="mt-5 max-w-xl mx-auto text-[#4A5A4C] leading-[1.85] font-light text-[15px]">
-              Passionate Tanzania travel professionals dedicated to delivering authentic,
-              world-class safari experiences with genuine local expertise.
+              {c.founders.subtitle}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                name: "Sunday Mtui",
-                role: "Co-Founder & Lead Safari Specialist",
-                image: "/team/sunday-mtui.jpg",
-                bio: "With over two decades of safari leadership across Serengeti, Ngorongoro, and Mount Kilimanjaro — Sunday brings unmatched local knowledge and warm, personalized guiding.",
-              },
-              {
-                name: "Francois Martin",
-                role: "Co-Founder & International Travel Consultant",
-                image: "/team/francois-martin.jpg",
-                bio: "Specializing in international safari planning and cross-budget lodge partnerships — Francois ensures every traveler finds the perfect match for their style and spend.",
-              },
-            ].map((founder) => (
+            {c.founders.people.map((founder) => (
               <div
                 key={founder.name}
                 className="bg-white rounded-[26px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_64px_rgba(0,0,0,0.09)] transition-all duration-500 hover:-translate-y-1"
               >
                 <div className="relative h-72">
                   <Image
-                    src={founder.image}
+                    src={assetUrl(founder.image)}
                     alt={`${founder.name} — ${founder.role}`}
                     fill
+                    unoptimized
                     className="object-cover"
                   />
                   <div
@@ -705,21 +641,20 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
             <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
-              What We Offer
+              {c.highlights.eyebrow}
             </span>
             <h2 className="font-serif mt-5 text-[#1B2D1D] leading-[1.1] tracking-[-0.025em]"
               style={{ fontSize: "clamp(1.8rem, 4.5vw, 3rem)" }}
             >
-              Safari Experiences Designed Around You
+              {c.highlights.title}
             </h2>
             <p className="mt-5 max-w-2xl mx-auto text-[15px] md:text-[17px] text-[#556458] leading-[1.9] font-light">
-              Every experience is crafted with care, local knowledge, and flexibility
-              — from affordable adventures to bespoke private journeys.
+              {c.highlights.subtitle}
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {experienceHighlights.map((item, index) => (
+            {c.highlights.items.map((item, index) => (
               <div
                 key={index}
                 className="group relative overflow-hidden bg-gradient-to-br from-[#F8FAF7] to-white rounded-[26px] p-7 border border-[#E2EAE0]/80 hover:border-[#C2B44A]/30 hover:shadow-[0_20px_56px_rgba(0,0,0,0.07)] transition-all duration-500 hover:-translate-y-1.5"
@@ -745,39 +680,128 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ══════════════════════════════════════════════════════════
-          TESTIMONIALS
+   {/* ══════════════════════════════════════════════════════════
+          TRUSTED PARTNERS
       ══════════════════════════════════════════════════════════ */}
-      <section className="relative py-28 bg-[#F5F1EB] overflow-hidden">
+      <section className="py-20 bg-[#F8FAF7] border-y border-[#E2EAE0]/60 relative overflow-hidden">
         <div
           aria-hidden
-          className="absolute -top-40 -left-32 w-[480px] h-[480px] bg-[#C2B44A]/6 blur-[120px] rounded-full pointer-events-none"
-        />
-        <div
-          aria-hidden
-          className="absolute -bottom-40 -right-32 w-[480px] h-[480px] bg-[#B8A840]/5 blur-[100px] rounded-full pointer-events-none"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(194,180,74,0.06),transparent_30%)] pointer-events-none"
         />
 
-        <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 max-w-5xl text-center">
-          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
-          <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
-            Guest Reviews
-          </span>
-          <h2 className="font-serif mt-5 text-[#1B2D1D] leading-tight"
-            style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}
-          >
-            What Our Tanzania Safari Guests Say
-          </h2>
-          <p className="mt-5 max-w-xl mx-auto text-[#4A5A4C] leading-[1.85] font-light text-[14px] md:text-[15px]">
-            Trusted by travelers of all budgets — from first-time safari adventurers
-            to seasoned Africa explorers visiting Serengeti, Ngorongoro, Kilimanjaro, and Zanzibar.
+        <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 text-center">
+          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-5" />
+          <p className="uppercase tracking-[0.4em] text-[11px] text-[#B8A840] font-semibold">
+            {c.partners.eyebrow}
           </p>
-          <div className="mt-14">
-            <TestimonialSlider />
+          <h2 className="font-serif mt-4 text-[#1B2D1D] leading-snug"
+            style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)" }}
+          >
+            {c.partners.title}
+          </h2>
+          <p className="mt-4 max-w-xl mx-auto text-[#556458] leading-[1.85] text-[14px] md:text-[15px] font-light">
+            {c.partners.subtitle}
+          </p>
+
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-5">
+            {[
+              "/partners/safaribookings.jpeg",
+              "/partners/safarigo.png",
+              "/partners/tato.png",
+              "/partners/tripadvisor.png",
+            ].map((logo, i) => (
+              <div
+                key={i}
+                className="group relative overflow-hidden bg-white border border-[#E2EAE0]/80 rounded-[24px] p-7 hover:shadow-[0_16px_48px_rgba(0,0,0,0.07)] transition-all duration-500 hover:-translate-y-1"
+              >
+                <div
+                  aria-hidden
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_top_right,rgba(194,180,74,0.07),transparent_35%)] pointer-events-none"
+                />
+                <Image
+                  src={logo}
+                  alt={c.partners.alt}
+                  width={160}
+                  height={60}
+                  className="relative mx-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+ {/* ══════════════════════════════════════════════════════════
+   TESTIMONIALS — SEO & GEO Optimized
+══════════════════════════════════════════════════════════ */}
+<section className="py-28 bg-white relative overflow-hidden border-y border-[#E2EAE0]/60">
+  <div className="container mx-auto px-5 sm:px-8 lg:px-14 max-w-6xl">
+
+    <div className="text-center mb-16">
+      <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
+      <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
+        {c.testimonials.eyebrow}
+      </span>
+
+      <h2 className="font-serif mt-5 text-[#1B2D1D] leading-tight"
+        style={{ fontSize: "clamp(1.9rem, 4vw, 2.8rem)" }}
+      >
+        {c.testimonials.title}
+      </h2>
+
+      <p className="mt-6 max-w-3xl mx-auto text-[15px] md:text-[17px] text-[#556458] leading-[1.9] font-light">
+        {c.testimonials.subtitle}
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {c.testimonials.items.map((item, index) => (
+        <div
+          key={index}
+          className="bg-[#F8FAF7] border border-[#E2EAE0] rounded-[28px] p-8 hover:shadow-[0_18px_50px_rgba(0,0,0,0.06)] transition-all duration-500"
+        >
+          {/* Stars */}
+          <div className="flex items-center gap-1 mb-4">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <svg
+                key={i}
+                className="w-4 h-4 text-[#D8B43A]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                aria-hidden
+              >
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+
+          <p className="text-[14px] md:text-[15px] text-[#4A5A4C] leading-[1.9] font-light mb-6">
+            “{item.review}”
+          </p>
+
+          <div className="border-t border-[#E2EAE0] pt-4">
+            <p className="font-semibold text-[#1B2D1D] text-[14px]">
+              {item.name}
+            </p>
+            <p className="text-[12px] text-[#7C8B61] mt-1">
+              {item.location}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* Trust Badge Row */}
+    <div className="mt-16 text-center">
+      <p className="text-[13px] text-[#556458]">
+        {c.testimonials.trustBadge}
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
       {/* ══════════════════════════════════════════════════════════
           GREAT MIGRATION CTA
@@ -785,29 +809,28 @@ export default function HomePage() {
       <section className="py-24 relative overflow-hidden bg-gradient-to-br from-[#EEF3EB] via-[#E8EDE4] to-[#D8E2D4]">
         <div
           aria-hidden
-          className="absolute inset-0 opacity-[0.05] bg-[url('/gallery/zebra-00.webp')] bg-cover bg-center pointer-events-none"
+          className="absolute inset-0 opacity-[0.05] bg-[url('/gallery/zebra.jpeg')] bg-cover bg-center pointer-events-none"
         />
 
         <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 max-w-3xl text-center">
           <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
           <span className="uppercase tracking-[0.4em] text-[#94872E] text-[11px] font-semibold">
-            Limited Availability
+            {c.migration.eyebrow}
           </span>
           <h2 className="font-serif mt-5 text-[#1B2D1D] leading-[1.1]"
             style={{ fontSize: "clamp(1.8rem, 5vw, 3.2rem)" }}
           >
-            Serengeti Great Migration 2026
+            {c.migration.title}
           </h2>
           <p className="mt-5 text-[15px] md:text-[17px] text-[#4A5A4C] leading-[1.9] font-light max-w-xl mx-auto">
-            Witness one of nature's greatest spectacles — wildebeest river crossings in northern Serengeti.
-            Available across budget, mid-range, and premium packages.
+            {c.migration.subtitle}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
-              href="/safaris/great-migration"
+              href="/safaris/great-migration-safari"
               className="rounded-full bg-gradient-to-r from-[#C2B44A] to-[#A8B545] px-8 py-3.5 text-white text-[14px] font-semibold tracking-wide hover:from-[#A09838] hover:to-[#8E9A35] transition-all duration-400 hover:-translate-y-0.5 shadow-[0_12px_40px_rgba(168,181,69,0.28)]"
             >
-              Explore Migration Safaris
+              {c.migration.explore}
             </Link>
             <a
               href="https://wa.me/255789736559"
@@ -815,11 +838,11 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="rounded-full border border-[#D0DBCC] bg-white/85 backdrop-blur-2xl px-8 py-3.5 text-[#1B2D1D] text-[14px] font-medium tracking-wide hover:border-[#B8A840] hover:bg-white transition-all duration-400 hover:-translate-y-0.5"
             >
-              Quick WhatsApp Quote
+              {c.migration.whatsapp}
             </a>
           </div>
           <p className="mt-5 text-[12px] text-[#7A8A7C] tracking-wide">
-            Peak Season: July – September 2026 · Book Early To Secure Your Dates
+            {c.migration.season}
           </p>
         </div>
       </section>
@@ -837,38 +860,20 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
             <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
-              Tanzania Safari Guide
+              {c.faq.eyebrow}
             </span>
             <h2 className="font-serif mt-4 text-[#1B2D1D] leading-tight"
               style={{ fontSize: "clamp(1.7rem, 4vw, 2.7rem)" }}
             >
-              Frequently Asked Questions
+              {c.faq.title}
             </h2>
             <p className="mt-5 max-w-xl mx-auto text-[#4A5A4C] leading-[1.85] font-light text-[14px] md:text-[15px]">
-              Planning a Tanzania safari from Arusha? Here are answers to common questions
-              about safaris, Kilimanjaro, and Zanzibar holidays.
+              {c.faq.subtitle}
             </p>
           </div>
 
           <div className="space-y-4">
-            {[
-              {
-                q: "What is the best time for a Serengeti safari?",
-                a: "June to October offers excellent dry-season wildlife viewing. July to September is peak Great Migration river crossing season in northern Serengeti. December to March is ideal for calving season in the southern Serengeti — a great option for budget travelers.",
-              },
-              {
-                q: "How many days do I need for a Tanzania safari?",
-                a: "Most Tanzania safari packages range from 5 to 10 days, combining Serengeti, Ngorongoro Conservation Area, Tarangire, and optionally Zanzibar. Shorter 3-4 day packages are also available for budget travelers.",
-              },
-              {
-                q: "Is Mount Kilimanjaro trekking suitable for beginners?",
-                a: "Yes — Kilimanjaro is suitable for first-time climbers when choosing acclimatization-friendly routes such as Lemosho or Machame. Our Arusha-based guides ensure safe, gradual summit attempts for all fitness levels.",
-              },
-              {
-                q: "Do you offer safaris for all budgets?",
-                a: "Absolutely. Gladiolus Tours offers budget group safaris, comfortable mid-range packages, and fully private premium tours. All include professional local guides and 4x4 safari vehicles — only lodge category and group size vary.",
-              },
-            ].map((faq, index) => (
+            {c.faq.items.map((faq, index) => (
               <details
                 key={index}
                 className="group bg-white rounded-[22px] p-6 border border-[#E2EAE0]/80 hover:border-[#C2B44A]/40 hover:shadow-[0_12px_40px_rgba(0,0,0,0.05)] transition-all duration-400"
@@ -913,18 +918,17 @@ export default function HomePage() {
           <h2 className="font-serif leading-tight text-[#1B2D1D]"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}
           >
-            Ready To Explore Tanzania, Your Way?
+            {c.finalCta.title}
           </h2>
           <p className="mt-5 text-[15px] md:text-[17px] text-[#4A5A4C] leading-[1.9] font-light">
-            From affordable group safaris to exclusive private tours — our Arusha-based
-            team builds the perfect Tanzania itinerary for your budget and travel style.
+            {c.finalCta.subtitle}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
               className="rounded-full bg-gradient-to-r from-[#C2B44A] to-[#A8B545] px-8 py-3.5 text-white text-[14px] font-semibold tracking-wide hover:from-[#A09838] hover:to-[#8E9A35] transition-all duration-400 hover:-translate-y-0.5 shadow-[0_12px_40px_rgba(168,181,69,0.25)]"
             >
-              Get Your Custom Safari Plan
+              {c.finalCta.primary}
             </Link>
             <a
               href="https://wa.me/255789736559"
@@ -932,7 +936,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="rounded-full border border-[#D0DBCC] bg-white/90 backdrop-blur-2xl px-8 py-3.5 text-[#1B2D1D] text-[14px] font-medium tracking-wide hover:border-[#B8A840] hover:bg-white transition-all duration-400 hover:-translate-y-0.5"
             >
-              WhatsApp Us For Fast Assistance
+              {c.finalCta.whatsapp}
             </a>
           </div>
         </div>
@@ -951,14 +955,14 @@ export default function HomePage() {
           <h2 className="font-serif text-[#1B2D1D] leading-tight"
             style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)" }}
           >
-            Explore Tanzania With Local Safari Experts
+            {c.seoLinks.title}
           </h2>
           <p className="mt-5 text-[14px] md:text-[15px] text-[#4A5A4C] leading-[1.95] font-light max-w-3xl mx-auto">
-            Discover unforgettable safari adventures in{" "}
+            {c.seoLinks.beforeSerengeti}{" "}
             <Link href="/destinations/serengeti-national-park" className="text-[#B8A840] underline underline-offset-4 decoration-[#B8A840]/40 hover:text-[#2D4A30] hover:decoration-[#2D4A30]/50 transition-colors duration-300 font-medium">Serengeti National Park</Link>{", "}
             <Link href="/destinations/ngorongoro-crater" className="text-[#B8A840] underline underline-offset-4 decoration-[#B8A840]/40 hover:text-[#2D4A30] hover:decoration-[#2D4A30]/50 transition-colors duration-300 font-medium">Ngorongoro Crater</Link>{", "}
             <Link href="/treks" className="text-[#B8A840] underline underline-offset-4 decoration-[#B8A840]/40 hover:text-[#2D4A30] hover:decoration-[#2D4A30]/50 transition-colors duration-300 font-medium">Mount Kilimanjaro</Link>{", "}
-            <Link href="/destinations/zanzibar" className="text-[#B8A840] underline underline-offset-4 decoration-[#B8A840]/40 hover:text-[#2D4A30] hover:decoration-[#2D4A30]/50 transition-colors duration-300 font-medium">Zanzibar Island</Link>{", and "}
+            <Link href="/destinations/zanzibar-island-escape" className="text-[#B8A840] underline underline-offset-4 decoration-[#B8A840]/40 hover:text-[#2D4A30] hover:decoration-[#2D4A30]/50 transition-colors duration-300 font-medium">Zanzibar Island</Link>{c.seoLinks.beforeTarangire}
             <Link href="/destinations/tarangire-national-park" className="text-[#B8A840] underline underline-offset-4 decoration-[#B8A840]/40 hover:text-[#2D4A30] hover:decoration-[#2D4A30]/50 transition-colors duration-300 font-medium">Tarangire National Park</Link>.
           </p>
         </div>
@@ -974,12 +978,10 @@ export default function HomePage() {
         />
         <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 max-w-3xl text-center">
           <h2 className="font-serif text-[#1B2D1D] leading-tight text-[1.4rem] md:text-[1.7rem]">
-            Tanzania Safaris Departing From Arusha
+            {c.geo.title}
           </h2>
           <p className="mt-5 text-[14px] md:text-[15px] text-[#4A5A4C] leading-[1.9] font-light max-w-2xl mx-auto">
-            Gladiolus Tours operates from Usa River, Arusha — the gateway to Serengeti National Park,
-            Ngorongoro Conservation Area, Tarangire National Park, Lake Manyara,
-            Mount Kilimanjaro, and Zanzibar. All budgets welcome — group, mid-range, and private safaris available year-round.
+            {c.geo.description}
           </p>
         </div>
       </section>
@@ -987,13 +989,13 @@ export default function HomePage() {
       {/* ── MOBILE STICKY CTA ── */}
       <div className="fixed bottom-0 left-0 right-0 bg-white/97 backdrop-blur-2xl border-t border-[#D0DBCC]/60 py-3 px-5 flex justify-between items-center z-50 md:hidden shadow-[0_-6px_24px_rgba(0,0,0,0.05)]">
         <span className="text-[12px] font-medium text-[#1B2D1D] tracking-wide">
-          Tanzania Tours · All Budgets
+          {c.mobileCta.label}
         </span>
         <Link
           href="/contact"
           className="bg-gradient-to-r from-[#C2B44A] to-[#A8B545] hover:from-[#A09838] hover:to-[#8E9A35] px-5 py-2.5 rounded-full text-[12px] font-semibold text-white transition-all duration-300 tracking-wide shadow-md"
         >
-          Plan My Safari
+          {c.mobileCta.button}
         </Link>
       </div>
 
@@ -1009,7 +1011,7 @@ export default function HomePage() {
             logo: absoluteUrl("/logo.png"),
             image: [
               absoluteUrl("/gallery/zebra-00.webp"),
-              absoluteUrl("/gallery/kili-00.webp"),
+              absoluteUrl("/gallery/kili1.jpeg"),
             ],
             description:
               "Gladiolus Tours — Tanzania safari company based in Usa River, Arusha offering budget, mid-range, and premium private safari packages across Serengeti, Ngorongoro, Kilimanjaro, Tarangire, and Zanzibar.",

@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import { getPageUi } from "@/content/pages"
+import { getLocalizedAdventures } from "@/content/localized"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { BreadcrumbSchema } from "@/components/structured-data"
@@ -16,39 +18,50 @@ import {
 import { Link } from "@/i18n/routing"
 import { assetUrl } from "@/lib/assets"
 import { AdventureBookingForm } from "@/components/adventure-booking-form"
-import { adventures } from "@/lib/adventures-data"
 
-export const metadata: Metadata = {
-  title: "Tanzania Adventure Experiences | Gladiolus Tours",
-  description:
-    "Luxury Tanzania adventures including Kilimanjaro trekking, walking safaris, cultural tours, and Zanzibar escapes.",
-  alternates: {
-    canonical: "/adventures",
-  },
-  openGraph: {
-    title: "Tanzania Adventure Experiences | Gladiolus Tours",
-    description:
-      "Discover handcrafted Tanzania adventure experiences with Gladiolus Tours.",
-    url: absoluteUrl("/adventures"),
-    images: [
-      {
-        url: absoluteUrl("/og-image.jpg"),
-        width: 1200,
-        height: 630,
-        alt: "Tanzania Adventure Experiences",
-      },
-    ],
-  },
+type Props = {
+  params: Promise<{ locale: string }>
 }
 
-export default function AdventuresPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const page = getPageUi(locale).adventures
+
+  return {
+    title: page.metadata.title,
+    description: page.metadata.description,
+    alternates: {
+      canonical: "/adventures",
+    },
+    openGraph: {
+      title: page.metadata.openGraphTitle ?? page.metadata.title,
+      description: page.metadata.openGraphDescription ?? page.metadata.description,
+      url: absoluteUrl("/adventures"),
+      images: [
+        {
+          url: absoluteUrl("/og-image.jpg"),
+          width: 1200,
+          height: 630,
+          alt: page.heroBadge,
+        },
+      ],
+    },
+  }
+}
+
+export default async function AdventuresPage({ params }: Props) {
+  const { locale } = await params
+  const ui = getPageUi(locale)
+  const page = ui.adventures
+  const adventures = getLocalizedAdventures(locale)
+
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#1E1E1E] overflow-hidden">
 
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: absoluteUrl("/") },
-          { name: "Adventures", url: absoluteUrl("/adventures") },
+          { name: ui.common.homeBreadcrumb, url: absoluteUrl("/") },
+          { name: page.pageLabel, url: absoluteUrl("/adventures") },
         ]}
       />
 
@@ -62,10 +75,11 @@ export default function AdventuresPage() {
 
         <div className="absolute inset-0">
           <Image
-            src={assetUrl("/hero/hero-02.webp")}
-            alt="Luxury Tanzania Adventure"
+            src={assetUrl("/gallery/This is Serengeti national park.jpeg")}
+            alt={page.heroBadge}
             fill
             priority
+            unoptimized
             className="object-cover opacity-20"
           />
         </div>
@@ -80,21 +94,19 @@ export default function AdventuresPage() {
               <Mountain className="h-4 w-4 text-[#C69252]" />
 
               <span className="text-sm font-semibold text-[#355C4D]">
-                Tanzania Adventure Experiences
+                {page.heroBadge}
               </span>
             </div>
 
             <h1 className="mt-8 text-5xl md:text-7xl font-serif leading-tight text-[#1E1E1E]">
-              Explore Tanzania Beyond
+              {page.heroTitle}
               <span className="text-[#C69252]">
-                {" "}Traditional Safaris
+                {" "}{page.heroTitleAccent}
               </span>
             </h1>
 
             <p className="mt-8 text-lg md:text-2xl text-[#5A5A5A] leading-relaxed max-w-3xl mx-auto">
-              Climb Mount Kilimanjaro, experience walking safaris,
-              cultural adventures, and Zanzibar escapes designed by
-              local experts in Tanzania.
+              {page.heroDescription}
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-5">
@@ -104,7 +116,7 @@ export default function AdventuresPage() {
                 className="rounded-full bg-[#C69252] hover:bg-[#A46A3D] px-10 py-6 text-white font-semibold shadow-[0_12px_30px_rgba(198,146,82,0.35)] transition-all duration-300 hover:-translate-y-1"
               >
                 <Link href="/contact">
-                  Plan Your Adventure
+                  {page.heroPrimary}
                 </Link>
               </Button>
 
@@ -114,7 +126,7 @@ export default function AdventuresPage() {
                 className="rounded-full border-[#D9C2AE] bg-white hover:bg-[#FFFDFB] px-10 py-6 text-[#1E1E1E] font-semibold"
               >
                 <Link href="#experiences">
-                  Explore Experiences
+                  {page.heroSecondary}
                 </Link>
               </Button>
 
@@ -123,12 +135,7 @@ export default function AdventuresPage() {
             {/* QUICK HIGHLIGHTS */}
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-5">
 
-              {[
-                "Kilimanjaro Treks",
-                "Walking Safaris",
-                "Cultural Tours",
-                "Zanzibar Escapes",
-              ].map((item, index) => (
+              {page.heroQuickHighlights.map((item, index) => (
                 <div
                   key={index}
                   className="rounded-3xl bg-white border border-[#EFE4D8] p-5 shadow-sm"
@@ -153,18 +160,15 @@ export default function AdventuresPage() {
           <div className="max-w-4xl mx-auto text-center">
 
             <p className="uppercase tracking-[0.35em] text-sm text-[#C69252] font-semibold">
-              Adventure Experiences
+              {page.introEyebrow}
             </p>
 
             <h2 className="mt-5 text-4xl md:text-6xl font-serif text-[#1E1E1E] leading-tight">
-              Active Journeys Crafted Around You
+              {page.introTitle}
             </h2>
 
             <p className="mt-6 text-lg text-[#5A5A5A] leading-relaxed">
-              Whether you want challenging mountain climbs, wildlife
-              walks, or cultural immersion, our Tanzania adventure
-              experiences are designed for comfort, authenticity,
-              and unforgettable memories.
+              {page.introDescription}
             </p>
 
           </div>
@@ -195,6 +199,7 @@ export default function AdventuresPage() {
                     src={assetUrl(adventure.image)}
                     alt={adventure.title}
                     fill
+                    unoptimized
                     className="object-cover hover:scale-105 transition duration-700"
                   />
 
@@ -220,7 +225,7 @@ export default function AdventuresPage() {
                   <div>
 
                     <h3 className="text-2xl font-serif text-[#1E1E1E]">
-                      Overview
+                      {page.overviewHeading}
                     </h3>
 
                     <p className="mt-4 text-[#5A5A5A] leading-relaxed">
@@ -233,7 +238,7 @@ export default function AdventuresPage() {
                   <div className="mt-10">
 
                     <h3 className="text-2xl font-serif text-[#1E1E1E]">
-                      Experience Highlights
+                      {page.highlightsHeading}
                     </h3>
 
                     <div className="mt-5 grid md:grid-cols-2 gap-4">
@@ -261,7 +266,7 @@ export default function AdventuresPage() {
                   <div className="mt-12">
 
                     <h3 className="text-2xl font-serif text-[#1E1E1E]">
-                      Adventure Itinerary
+                      {page.itineraryHeading}
                     </h3>
 
                     <div className="mt-6 space-y-5">
@@ -303,7 +308,7 @@ export default function AdventuresPage() {
                   <div className="mt-12">
 
                     <h3 className="text-2xl font-serif text-[#1E1E1E]">
-                      Available Packages
+                      {page.packagesHeading}
                     </h3>
 
                     <div className="mt-6 grid md:grid-cols-2 gap-5">
@@ -390,13 +395,11 @@ export default function AdventuresPage() {
             <Compass className="h-14 w-14 mx-auto text-[#F4D2A7]" />
 
             <h2 className="mt-6 text-4xl md:text-6xl font-serif leading-tight">
-              Ready For Your Tanzania Adventure?
+              {page.ctaTitle}
             </h2>
 
             <p className="mt-6 text-lg text-[#F5F1EB] leading-relaxed max-w-2xl mx-auto">
-              Let our Tanzania adventure specialists create a
-              personalized experience designed around your goals,
-              comfort level, and travel style.
+              {page.ctaDescription}
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-5">
@@ -406,7 +409,7 @@ export default function AdventuresPage() {
                 className="rounded-full bg-[#C69252] hover:bg-[#A46A3D] px-10 py-6 text-white font-semibold transition-all duration-300"
               >
                 <Link href="/contact">
-                  Talk To Adventure Experts
+                  {page.ctaPrimary}
                 </Link>
               </Button>
 
@@ -416,7 +419,7 @@ export default function AdventuresPage() {
                 className="rounded-full border-white/30 bg-white/10 hover:bg-white/20 px-10 py-6 text-white"
               >
                 <Link href="/destinations">
-                  Explore Destinations
+                  {page.ctaSecondary}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

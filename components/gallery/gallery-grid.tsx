@@ -5,6 +5,7 @@ import Image from "next/image"
 import { X } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { assetUrl } from "@/lib/assets"
 
 export type GalleryImage = {
   id: number
@@ -70,9 +71,10 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
                   onClick={() => setLightboxImage(image)}
                 >
                   <Image
-                    src={image.src}
+                    src={assetUrl(image.src)}
                     alt={image.alt}
                     fill
+                    unoptimized
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     className="object-cover transition-transform duration-[1400ms] group-hover:scale-110"
                   />
@@ -99,9 +101,10 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
           </button>
           <div className="relative h-full w-full max-h-[90vh] max-w-6xl overflow-hidden rounded-3xl border border-white/20 bg-black/60 p-4">
             <Image
-              src={lightboxImage.src}
+              src={assetUrl(lightboxImage.src)}
               alt={lightboxImage.alt}
               fill
+              unoptimized
               sizes="100vw"
               className="object-contain"
             />

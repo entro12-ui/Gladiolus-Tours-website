@@ -1,3 +1,5 @@
+import { resolveDestinationSlug } from "./route-aliases"
+
 export interface Destination {
   id: string
   slug: string
@@ -32,7 +34,7 @@ export const destinations: Destination[] = [
     duration: "5 Days",
     price: "From $2,500",
     priceValue: 2500,
-    image: "/gallery/zebra-00.webp",
+    image: "/gallery/This is Serengeti national park.jpeg",
     description:
       "Experience the world-famous Serengeti ecosystem, home to the Great Migration and an abundance of wildlife including lions, leopards, elephants, and cheetahs.",
     highlights: [
@@ -99,7 +101,7 @@ export const destinations: Destination[] = [
     duration: "4 Days",
     price: "From $2,000",
     priceValue: 2000,
-    image: "/gallery/lunch-00.webp",
+    image: "/gallery/Ngorongoro.jpeg",
     description:
       "Explore the world's largest intact volcanic caldera, a natural sanctuary with the highest density of wildlife in Africa.",
     highlights: [
@@ -232,7 +234,7 @@ export const destinations: Destination[] = [
     duration: "8 Days",
     price: "From $4,500",
     priceValue: 4500,
-    image: "/gallery/tour-guide.webp",
+    image: "/gallery/Lemosho Route.jpeg",
     description:
       "Summit Africa's highest peak via the scenic Lemosho Route, offering the best acclimatization and success rates.",
     highlights: [
@@ -401,7 +403,7 @@ export const destinations: Destination[] = [
     duration: "4 Days",
     price: "From $1,300",
     priceValue: 1300,
-    image: "/gallery/beer.webp",
+    image: "/gallery/sunset.webp",
     description:
       "Finish your safari with warm ocean breezes, dhow cruises, and slow mornings on Zanzibar's white-sand coastline.",
     highlights: [
@@ -533,4 +535,78 @@ export const destinations: Destination[] = [
     bestTime: "June to October",
     groupSize: "2-6 people",
   },
+  {
+    id: "12",
+    slug: "lake-natron",
+    title: "Lake Natron",
+    location: "Tanzania",
+    circuit: "northern",
+    duration: "2 Days",
+    price: "From $750",
+    priceValue: 750,
+    image: "/gallery/sunset.webp",
+    description:
+      "Visit one of East Africa's most dramatic landscapes — flamingo-filled alkaline waters, volcanic scenery, and the gateway to Ol Doinyo Lengai.",
+    highlights: [
+      "Lesser flamingo colonies",
+      "Volcanic landscapes",
+      "Waterfalls and Maasai culture",
+      "Off-the-beaten-path Northern Circuit",
+      "Photography opportunities",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arusha to Lake Natron",
+        description: "Scenic drive via Maasai villages with stops at waterfalls and viewpoints.",
+      },
+      {
+        day: 2,
+        title: "Lake Shore & Return",
+        description: "Morning at the lake shore for flamingos and landscapes, then return to Arusha.",
+      },
+    ],
+    included: ["Transport", "Accommodation", "Meals", "Guide services", "Conservation fees"],
+    excluded: ["Flights", "Travel insurance", "Personal expenses", "Tips"],
+    difficulty: "Easy",
+    bestTime: "June to October",
+    groupSize: "2-6 people",
+  },
+  {
+    id: "13",
+    slug: "arusha-national-park",
+    title: "Arusha National Park",
+    location: "Tanzania",
+    circuit: "northern",
+    duration: "1 Day",
+    price: "From $350",
+    priceValue: 350,
+    image: "/gallery/Mount meru, Arusha national park.jpeg",
+    description:
+      "A compact gem at the foot of Mount Meru — giraffe, buffalo, colobus monkeys, and crater lakes just minutes from Arusha town.",
+    highlights: [
+      "Mount Meru backdrop",
+      "Ngurdoto Crater viewpoints",
+      "Momella Lakes birdlife",
+      "Walking safaris available",
+      "Ideal pre-Kilimanjaro acclimatization",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Full Day Game Drive",
+        description: "Morning pick-up, game drive through forest and lakes, picnic lunch, afternoon wildlife viewing, return to Arusha.",
+      },
+    ],
+    included: ["Park fees", "Private 4x4 vehicle", "Professional guide", "Picnic lunch", "Hotel transfers"],
+    excluded: ["Flights", "Travel insurance", "Personal expenses", "Tips"],
+    difficulty: "Easy",
+    bestTime: "Year-round",
+    groupSize: "2-6 people",
+  },
 ]
+
+export function getDestinationBySlug(identifier: string): Destination | undefined {
+  const slug = resolveDestinationSlug(identifier)
+  return destinations.find((destination) => destination.slug === slug || destination.id === slug)
+}

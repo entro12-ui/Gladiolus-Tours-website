@@ -2,84 +2,20 @@
 
 import Image from "next/image"
 import { useEffect, useState } from "react"
+import { assetUrl } from "@/lib/assets"
 
 const SLIDE_INTERVAL = 6000
 const FADE_DURATION = 1800
 
-/**
- * ───────────────────────────────────────────────────────────────
- * HERO SLIDESHOW IMAGES
- * ───────────────────────────────────────────────────────────────
- * ⚠️ IMPORTANT: Match the EXACT file extension of your images
- *
- * Files location: /public/hero/
- *
- * If your files are .jpg → use .jpg below
- * If your files are .jpeg → use .jpeg below
- * If your files are .webp → use .webp below
- * ───────────────────────────────────────────────────────────────
- */
 const heroSlides = [
-  {
-    src: "/hero/image-1.jpeg",
-    alt: "Giraffe walking across the Tanzania savanna",
-  },
-  {
-    src: "/hero/image-2.jpeg",
-    alt: "Wildlife in Serengeti National Park",
-  },
-  {
-    src: "/hero/image-3.jpeg",
-    alt: "Tanzania landscape and safari views",
-  },
-  {
-    src: "/hero/image-4.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
-   {
-    src: "/hero/image-5.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
-   {
-    src: "/hero/image-6.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
-   {
-    src: "/hero/image-7.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
-   {
-    src: "/hero/image-8.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
-  {
-    src: "/hero/image-9.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
-  {
-    src: "/hero/image-10.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
-  {
-    src: "/hero/image-11.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
-  {
-    src: "/hero/image-12.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
-  {
-    src: "/hero/image-13.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
-  {
-    src: "/hero/image-14.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
-  {
-    src: "/hero/image-15.jpeg",
-    alt: "Safari adventure in Tanzania",
-  },
+  { src: "/gallery/zebra-00.webp", alt: "Zebras in the Serengeti" },
+  { src: "/gallery/This is Serengeti national park.jpeg", alt: "Serengeti National Park" },
+  { src: "/gallery/elephant-00.webp", alt: "Elephants on safari" },
+  { src: "/gallery/lion-00.webp", alt: "Lion in Tanzania" },
+  { src: "/gallery/kili1.jpeg", alt: "Mount Kilimanjaro" },
+  { src: "/gallery/Ngorongoro.jpeg", alt: "Ngorongoro Crater" },
+  { src: "/gallery/sunset.webp", alt: "Tanzania sunset" },
+  { src: "/gallery/chemka.jpeg", alt: "Chemka Hot Springs" },
 ]
 
 export function HeroSlideshow({
@@ -101,8 +37,6 @@ export function HeroSlideshow({
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-
-      {/* ── SLIDES ── */}
       {heroSlides.map((slide, index) => (
         <div
           key={slide.src}
@@ -113,11 +47,12 @@ export function HeroSlideshow({
           aria-hidden={index !== activeIndex}
         >
           <Image
-            src={slide.src}
+            src={assetUrl(slide.src)}
             alt={slide.alt}
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             priority={index === 0}
+            unoptimized
             quality={92}
             className={`object-cover object-center ${
               index === activeIndex ? "animate-hero-zoom" : ""
@@ -126,7 +61,6 @@ export function HeroSlideshow({
         </div>
       ))}
 
-      {/* ── SLIDE INDICATORS ── */}
       <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 pointer-events-auto">
         {heroSlides.map((_, index) => (
           <button

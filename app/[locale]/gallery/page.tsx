@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-
+import { getPageUi } from "@/content/pages"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -17,45 +17,6 @@ import {
   ArrowRight,
   Images,
 } from "lucide-react"
-
-const heroStats = [
-  {
-    label: "Safari Moments",
-    value: "2,000+",
-    detail: "Captured across Tanzania",
-  },
-  {
-    label: "Destinations",
-    value: "12+",
-    detail: "From Serengeti to Zanzibar",
-  },
-  {
-    label: "Travel Stories",
-    value: "500+",
-    detail: "Luxury journeys documented",
-  },
-]
-
-const storyHighlights = [
-  {
-    icon: Camera,
-    title: "Wildlife Photography",
-    copy:
-      "Experience cinematic wildlife moments including lions, elephants, cheetahs, zebras, and the Great Migration.",
-  },
-  {
-    icon: Mountain,
-    title: "Luxury Safari Experiences",
-    copy:
-      "Explore elegant safari lodges, bush dining, cultural encounters, and handcrafted Tanzania journeys.",
-  },
-  {
-    icon: Globe2,
-    title: "Authentic Tanzania",
-    copy:
-      "Discover Serengeti, Ngorongoro, Tarangire, Zanzibar, and hidden landscapes through real travel stories.",
-  },
-]
 
 const galleryImages: GalleryImage[] = [
   {
@@ -123,59 +84,58 @@ const galleryImages: GalleryImage[] = [
   },
 ]
 
-export const metadata: Metadata = {
-  title:
-    "Tanzania Safari Gallery | Serengeti, Ngorongoro & Zanzibar Experiences",
-  description:
-    "Explore the Gladiolus Tours luxury safari gallery featuring Serengeti wildlife, Ngorongoro Crater adventures, Zanzibar escapes, Tanzania landscapes, and unforgettable travel moments.",
-
-  keywords: [
-    "Tanzania safari gallery",
-    "Serengeti safari photos",
-    "Luxury Tanzania tours",
-    "Ngorongoro safari experiences",
-    "Zanzibar travel gallery",
-    "Wildlife photography Tanzania",
-    "Gladiolus Tours",
-    "African safari experiences",
-  ],
-
-  alternates: {
-    canonical: "/gallery",
-  },
-
-  openGraph: {
-    title: "Luxury Tanzania Safari Gallery | Gladiolus Tours",
-    description:
-      "Browse cinematic safari moments, wildlife photography, luxury camps, and unforgettable Tanzania travel experiences.",
-    url: absoluteUrl("/gallery"),
-    type: "website",
-    images: [
-      {
-        url: absoluteUrl("/og-image.jpg"),
-        width: 1200,
-        height: 630,
-        alt: "Gladiolus Tours Tanzania Safari Gallery",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Luxury Tanzania Safari Gallery",
-    description:
-      "Discover unforgettable safari photography and Tanzania travel experiences with Gladiolus Tours.",
-    images: [absoluteUrl("/og-image.jpg")],
-  },
+type Props = {
+  params: Promise<{ locale: string }>
 }
 
-export default function GalleryPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const page = getPageUi(locale).gallery
+
+  return {
+    title: page.metadata.title,
+    description: page.metadata.description,
+    keywords: page.metadata.keywords,
+    alternates: {
+      canonical: "/gallery",
+    },
+    openGraph: {
+      title: page.metadata.openGraphTitle ?? page.metadata.title,
+      description: page.metadata.openGraphDescription ?? page.metadata.description,
+      url: absoluteUrl("/gallery"),
+      type: "website",
+      images: [
+        {
+          url: absoluteUrl("/og-image.jpg"),
+          width: 1200,
+          height: 630,
+          alt: page.schemaName,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.metadata.twitterTitle ?? page.metadata.title,
+      description: page.metadata.twitterDescription ?? page.metadata.description,
+      images: [absoluteUrl("/og-image.jpg")],
+    },
+  }
+}
+
+export default async function GalleryPage({ params }: Props) {
+  const { locale } = await params
+  const ui = getPageUi(locale)
+  const page = ui.gallery
+  const storyHighlights = [
+    { icon: Camera, title: page.storyHighlights[0].title, copy: page.storyHighlights[0].text },
+    { icon: Mountain, title: page.storyHighlights[1].title, copy: page.storyHighlights[1].text },
+    { icon: Globe2, title: page.storyHighlights[2].title, copy: page.storyHighlights[2].text },
+  ]
   const gallerySchema = {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
-    name: "Gladiolus Tours Tanzania Safari Gallery",
-    description:
-      "Luxury Tanzania safari gallery featuring Serengeti wildlife, Ngorongoro Crater, Tarangire elephants, Zanzibar experiences, and cinematic landscapes.",
+    name: page.schemaName,
+    description: page.schemaDescription,
     url: absoluteUrl("/gallery"),
     publisher: {
       "@type": "TravelAgency",
@@ -190,8 +150,8 @@ export default function GalleryPage() {
 
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: absoluteUrl("/") },
-          { name: "Gallery", url: absoluteUrl("/gallery") },
+          { name: ui.common.homeBreadcrumb, url: absoluteUrl("/") },
+          { name: page.pageLabel, url: absoluteUrl("/gallery") },
         ]}
       />
 
@@ -207,19 +167,16 @@ export default function GalleryPage() {
             <div className="space-y-8">
               <span className="inline-flex items-center gap-2 rounded-full border border-[#c8a46a]/20 bg-[#c8a46a]/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-[#b88a44]">
                 <Sparkles className="h-4 w-4" />
-                Tanzania Safari Gallery
+                {page.heroBadge}
               </span>
 
               <div className="space-y-6">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.05] tracking-tight text-[#1f1720]">
-                  Explore Tanzania Through Our Safari Stories
+                  {page.heroTitle}
                 </h1>
 
                 <p className="max-w-2xl text-xl leading-relaxed text-[#5c524d]">
-                  Discover luxury safari experiences, iconic wildlife,
-                  breathtaking landscapes, and authentic cultural encounters
-                  captured across Serengeti, Ngorongoro, Tarangire, Kilimanjaro,
-                  and Zanzibar.
+                  {page.heroDescription}
                 </p>
               </div>
 
@@ -230,7 +187,7 @@ export default function GalleryPage() {
                   className="rounded-full bg-gradient-to-r from-[#c79a5b] to-[#b88447] px-8 py-6 text-base font-semibold text-white shadow-xl shadow-[#c79a5b]/20 transition-all hover:scale-[1.02]"
                 >
                   <Link href="#gallery-grid">
-                    Explore Gallery
+                    {page.heroPrimary}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -241,13 +198,13 @@ export default function GalleryPage() {
                   variant="outline"
                   className="rounded-full border-[#c79a5b]/30 bg-white/70 px-8 py-6 text-base text-[#1f1720] hover:bg-[#f4ede3]"
                 >
-                  <Link href="/contact">Plan Your Safari</Link>
+                  <Link href="/contact">{page.heroSecondary}</Link>
                 </Button>
               </div>
 
               {/* STATS */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
-                {heroStats.map((stat) => (
+                {page.heroStats.map((stat) => (
                   <div
                     key={stat.label}
                     className="rounded-[28px] border border-[#eadfce] bg-white/90 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.04)]"
@@ -274,11 +231,12 @@ export default function GalleryPage() {
 
               <div className="relative overflow-hidden rounded-[40px] border border-[#eadfce] bg-white shadow-[0_25px_90px_rgba(0,0,0,0.08)]">
                 <Image
-                  src={assetUrl("/hero/hero-02.webp")}
-                  alt="Luxury Tanzania safari experience"
+                  src={assetUrl("/gallery/This is Serengeti national park.jpeg")}
+                  alt={page.featureImageAlt}
                   width={900}
                   height={1000}
                   priority
+                  unoptimized
                   className="h-[720px] w-full object-cover"
                 />
 
@@ -287,11 +245,11 @@ export default function GalleryPage() {
                 <div className="absolute bottom-8 left-8 right-8">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white/95 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#b88447] shadow-lg">
                     <Images className="h-4 w-4" />
-                    Real Safari Moments
+                    {page.featureBadge}
                   </div>
 
                   <h2 className="mt-5 text-4xl font-serif leading-tight text-white">
-                    Luxury experiences crafted across Tanzania
+                    {page.featureTitle}
                   </h2>
                 </div>
               </div>
@@ -305,17 +263,15 @@ export default function GalleryPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.35em] text-[#b88a44]">
-              Curated Safari Experiences
+              {page.storyEyebrow}
             </span>
 
             <h2 className="mt-5 text-5xl font-serif leading-tight text-[#1f1720]">
-              Wildlife, landscapes, culture, and unforgettable journeys
+              {page.storyTitle}
             </h2>
 
             <p className="mt-6 text-xl leading-relaxed text-[#6c625d]">
-              Every photograph tells a story of Tanzania’s beauty — from Great
-              Migration crossings in Serengeti to elegant bush dinners beneath
-              African sunsets.
+              {page.storyDescription}
             </p>
           </div>
 
@@ -355,17 +311,15 @@ export default function GalleryPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="rounded-[40px] border border-[#eadfce] bg-gradient-to-r from-[#c79a5b] to-[#b88447] px-8 py-20 text-center shadow-[0_25px_80px_rgba(199,154,91,0.2)] sm:px-14">
             <span className="inline-flex items-center rounded-full bg-white/15 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white">
-              Start Your Journey
+              {page.ctaBadge}
             </span>
 
             <h2 className="mx-auto mt-6 max-w-4xl text-5xl font-serif leading-tight text-white">
-              Ready to experience Tanzania beyond the ordinary?
+              {page.ctaTitle}
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-xl leading-relaxed text-white/90">
-              Let Gladiolus Tours design a personalized luxury safari experience
-              tailored around your travel style, wildlife interests, and dream
-              destinations.
+              {page.ctaDescription}
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-5">
@@ -375,7 +329,7 @@ export default function GalleryPage() {
                 className="rounded-full bg-white px-8 py-6 text-base font-semibold text-[#b88447] hover:bg-[#f4ede3]"
               >
                 <Link href="/contact">
-                  Speak to a Safari Specialist
+                  {page.ctaPrimary}
                 </Link>
               </Button>
 
@@ -386,7 +340,7 @@ export default function GalleryPage() {
                 className="rounded-full border-white bg-transparent px-8 py-6 text-base font-semibold text-white hover:bg-white/10"
               >
                 <Link href="/destinations">
-                  Explore Destinations
+                  {page.ctaSecondary}
                 </Link>
               </Button>
             </div>

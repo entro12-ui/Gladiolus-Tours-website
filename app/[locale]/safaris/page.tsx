@@ -1,11 +1,10 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import { getPageUi } from "@/content/pages"
+import { getLocalizedSafaris } from "@/content/localized"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import {
-  BreadcrumbSchema,
-  StructuredData,
-} from "@/components/structured-data"
+import { BreadcrumbSchema, StructuredData } from "@/components/structured-data"
 import { absoluteUrl } from "@/lib/seo"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -20,84 +19,56 @@ import {
 } from "lucide-react"
 import { Link } from "@/i18n/routing"
 import { assetUrl } from "@/lib/assets"
-import { safariPackages } from "@/lib/safaris-data"
 
-export const metadata: Metadata = {
-  title:
-    "Luxury Tanzania Safaris | Serengeti, Ngorongoro & Zanzibar Tours",
-  description:
-    "Explore luxury Tanzania safaris with Gladiolus Tours. Discover Serengeti wildlife safaris, Ngorongoro Crater tours, Kilimanjaro adventures, Zanzibar beach escapes, and tailor-made private safari experiences.",
-
-  keywords: [
-    "Luxury Tanzania safari",
-    "Serengeti safari tours",
-    "Ngorongoro Crater safari",
-    "Tanzania safari packages",
-    "Private Tanzania safari",
-    "Zanzibar safari holidays",
-    "Best Tanzania safari company",
-    "African safari packages",
-    "Gladiolus Tours",
-  ],
-
-  alternates: {
-    canonical: "/safaris",
-  },
-
-  openGraph: {
-    title: "Luxury Tanzania Safari Packages | Gladiolus Tours",
-    description:
-      "Tailor-made Tanzania safari experiences including Serengeti, Ngorongoro, Tarangire, Kilimanjaro, and Zanzibar.",
-    url: absoluteUrl("/safaris"),
-    images: [
-      {
-        url: absoluteUrl("/og-image.jpg"),
-        width: 1200,
-        height: 630,
-        alt: "Luxury Tanzania Safari Experience",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Luxury Tanzania Safaris",
-    description:
-      "Private guided Tanzania safaris designed by local safari experts.",
-    images: [absoluteUrl("/og-image.jpg")],
-  },
+type Props = {
+  params: Promise<{ locale: string }>
 }
 
-const safariHighlights = [
-  {
-    icon: Compass,
-    title: "Tailor-Made Routes",
-    text: "Every safari is customized around your travel style and pace.",
-  },
-  {
-    icon: Camera,
-    title: "Wildlife Encounters",
-    text: "Experience the Big Five and the Great Migration up close.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Trusted Local Experts",
-    text: "Professional guides and seamless logistics across Tanzania.",
-  },
-  {
-    icon: Sparkles,
-    title: "Luxury Experiences",
-    text: "Handpicked lodges, private vehicles, and premium comfort.",
-  },
-]
+const safariHighlightIcons = [Compass, Camera, ShieldCheck, Sparkles]
 
-export default function SafarisPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const page = getPageUi(locale).safaris
+
+  return {
+    title: page.metadata.title,
+    description: page.metadata.description,
+    keywords: page.metadata.keywords,
+    alternates: {
+      canonical: "/safaris",
+    },
+    openGraph: {
+      title: page.metadata.openGraphTitle ?? page.metadata.title,
+      description: page.metadata.openGraphDescription ?? page.metadata.description,
+      url: absoluteUrl("/safaris"),
+      images: [
+        {
+          url: absoluteUrl("/og-image.jpg"),
+          width: 1200,
+          height: 630,
+          alt: page.heroImageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.metadata.twitterTitle ?? page.metadata.title,
+      description: page.metadata.twitterDescription ?? page.metadata.description,
+      images: [absoluteUrl("/og-image.jpg")],
+    },
+  }
+}
+
+export default async function SafarisPage({ params }: Props) {
+  const { locale } = await params
+  const ui = getPageUi(locale)
+  const page = ui.safaris
+  const safaris = getLocalizedSafaris(locale)
   const safariSchema = {
     "@context": "https://schema.org",
     "@type": "TouristTrip",
-    name: "Luxury Tanzania Safaris",
-    description:
-      "Private guided Tanzania safari experiences by Gladiolus Tours.",
+    name: page.schemaName,
+    description: page.schemaDescription,
     provider: {
       "@type": "TravelAgency",
       name: "Gladiolus Tours",
@@ -111,8 +82,8 @@ export default function SafarisPage() {
 
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: absoluteUrl("/") },
-          { name: "Safaris", url: absoluteUrl("/safaris") },
+          { name: ui.common.homeBreadcrumb, url: absoluteUrl("/") },
+          { name: page.pageLabel, url: absoluteUrl("/safaris") },
         ]}
       />
 
@@ -123,9 +94,10 @@ export default function SafarisPage() {
         <div className="absolute inset-0">
           <Image
             src={assetUrl("/gallery/zebra-00.webp")}
-            alt="Luxury Tanzania safari experience"
+            alt={page.heroImageAlt}
             fill
             priority
+            unoptimized
             className="object-cover"
           />
 
@@ -137,18 +109,16 @@ export default function SafarisPage() {
           <div className="max-w-4xl space-y-8">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/80 px-6 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-primary shadow-sm backdrop-blur">
               <Sparkles className="h-4 w-4" />
-              Luxury Tanzania Safaris
+              {page.heroBadge}
             </span>
 
             <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.1] text-slate-900 text-balance">
-                Explore Tanzania Through Extraordinary Safari Journeys
+                {page.heroTitle}
               </h1>
 
               <p className="max-w-3xl text-xl md:text-2xl leading-relaxed text-slate-700">
-                Discover Serengeti wildlife safaris, Ngorongoro Crater tours,
-                Kilimanjaro adventures, and Zanzibar beach escapes crafted by
-                trusted local safari experts.
+                {page.heroDescription}
               </p>
             </div>
 
@@ -159,7 +129,7 @@ export default function SafarisPage() {
                 className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-7 text-base font-semibold text-white shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all"
               >
                 <Link href="#collections">
-                  Explore Safari Packages
+                  {page.heroPrimaryCta}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -171,19 +141,22 @@ export default function SafarisPage() {
                 className="rounded-full border-primary/20 bg-white/80 px-8 py-7 text-base text-primary hover:bg-primary/5"
               >
                 <Link href="/contact">
-                  Plan Custom Safari
+                  {page.heroSecondaryCta}
                 </Link>
               </Button>
             </div>
 
             {/* QUICK FEATURES */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
-              {safariHighlights.map((item) => (
+              {page.highlightCards.map((item, index) => {
+                const Icon = safariHighlightIcons[index] ?? Sparkles
+
+                return (
                 <div
                   key={item.title}
                   className="rounded-3xl border border-primary/10 bg-white/80 p-5 shadow-sm backdrop-blur hover:shadow-xl hover:shadow-primary/5 transition-all"
                 >
-                  <item.icon className="h-6 w-6 text-primary mb-4" />
+                  <Icon className="h-6 w-6 text-primary mb-4" />
 
                   <h3 className="text-base font-semibold text-slate-900 mb-2">
                     {item.title}
@@ -193,7 +166,8 @@ export default function SafarisPage() {
                     {item.text}
                   </p>
                 </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </div>
@@ -204,17 +178,15 @@ export default function SafarisPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <span className="text-sm uppercase tracking-[0.35em] text-primary font-semibold">
-              Signature Safari Collections
+              {page.introEyebrow}
             </span>
 
             <h2 className="text-4xl md:text-6xl font-serif leading-tight text-slate-900 text-balance">
-              Luxury safaris designed around wildlife, comfort, and unforgettable moments
+              {page.introTitle}
             </h2>
 
             <p className="text-xl leading-relaxed text-slate-600">
-              Every safari package includes private guiding, premium lodges,
-              personalized pacing, and immersive wildlife experiences across
-              Tanzania’s most iconic destinations.
+              {page.introDescription}
             </p>
           </div>
         </div>
@@ -226,7 +198,7 @@ export default function SafarisPage() {
         className="py-24 bg-gradient-to-b from-[#f8f5ef] to-[#fcfaf7]"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 space-y-20">
-          {safariPackages.map((pkg) => (
+          {safaris.map((pkg) => (
             <div
               key={pkg.id}
               className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]"
@@ -239,6 +211,7 @@ export default function SafarisPage() {
                     src={assetUrl(pkg.image)}
                     alt={pkg.title}
                     fill
+                    unoptimized
                     className="object-cover transition-transform duration-700 hover:scale-105"
                   />
 
@@ -246,7 +219,7 @@ export default function SafarisPage() {
 
                   <div className="absolute top-6 left-6">
                     <span className="rounded-full bg-white/95 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-primary shadow-lg">
-                      {pkg.region} Circuit
+                      {pkg.region} {page.imageRegionSuffix}
                     </span>
                   </div>
 
@@ -258,7 +231,7 @@ export default function SafarisPage() {
                     <div className="mt-3 flex flex-wrap items-center gap-4 text-white/90">
                       <span className="inline-flex items-center gap-2 text-sm">
                         <MapPin className="h-4 w-4" />
-                        Tanzania
+                        {page.detail.locationText}
                       </span>
 
                       <span className="text-sm">
@@ -277,7 +250,7 @@ export default function SafarisPage() {
                   {/* OVERVIEW */}
                   <div className="space-y-4">
                     <h3 className="text-3xl font-serif text-slate-900">
-                      Safari Overview
+                      {page.overviewHeading}
                     </h3>
 
                     <p className="text-lg leading-relaxed text-slate-600">
@@ -288,7 +261,7 @@ export default function SafarisPage() {
                   {/* HIGHLIGHTS */}
                   <div className="space-y-5">
                     <h3 className="text-2xl font-serif text-slate-900">
-                      Experience Highlights
+                      {page.highlightsHeading}
                     </h3>
 
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -310,7 +283,7 @@ export default function SafarisPage() {
                   {/* ITINERARY */}
                   <div className="space-y-5">
                     <h3 className="text-2xl font-serif text-slate-900">
-                      Safari Itinerary
+                      {page.itineraryHeading}
                     </h3>
 
                     <div className="space-y-4">
@@ -342,7 +315,7 @@ export default function SafarisPage() {
                   {/* INCLUDED */}
                   <div className="space-y-5">
                     <h3 className="text-2xl font-serif text-slate-900">
-                      What's Included
+                      {page.includedHeading}
                     </h3>
 
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -368,7 +341,7 @@ export default function SafarisPage() {
                 <CardContent className="p-8 space-y-8">
                   <div className="space-y-4">
                     <span className="text-xs uppercase tracking-[0.35em] text-primary font-semibold">
-                      Plan This Safari
+                      {page.sidebarEyebrow}
                     </span>
 
                     <h3 className="text-3xl font-serif text-slate-900 leading-tight">
@@ -376,14 +349,13 @@ export default function SafarisPage() {
                     </h3>
 
                     <p className="text-base leading-relaxed text-slate-600">
-                      Share your travel dates, guest count, and preferences.
-                      We’ll craft a personalized Tanzania safari itinerary.
+                      {page.sidebarDescription}
                     </p>
                   </div>
 
                   <div className="space-y-5 rounded-3xl border border-primary/10 bg-[#fcfaf7] p-6">
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-500">Duration</span>
+                      <span className="text-slate-500">{page.sidebarDurationLabel}</span>
 
                       <span className="font-semibold text-slate-900">
                         {pkg.duration}
@@ -391,7 +363,7 @@ export default function SafarisPage() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-500">Region</span>
+                      <span className="text-slate-500">{page.sidebarRegionLabel}</span>
 
                       <span className="font-semibold text-slate-900">
                         {pkg.region}
@@ -399,7 +371,7 @@ export default function SafarisPage() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-500">Starting From</span>
+                      <span className="text-slate-500">{page.sidebarPriceLabel}</span>
 
                       <span className="font-semibold text-primary">
                         {pkg.price}
@@ -417,7 +389,7 @@ export default function SafarisPage() {
                           pkg.title
                         )}`}
                       >
-                        Book This Safari
+                        {page.bookButton}
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Link>
                     </Button>
@@ -428,7 +400,7 @@ export default function SafarisPage() {
                       className="w-full rounded-full border-primary/20 bg-white py-7 text-base font-semibold text-primary hover:bg-primary/5"
                     >
                       <Link href="/inquiry">
-                        Request Custom Safari
+                        {page.customButton}
                       </Link>
                     </Button>
                   </div>
@@ -444,17 +416,15 @@ export default function SafarisPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
             <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-6 py-3 text-sm uppercase tracking-[0.35em] text-primary font-semibold">
-              Start Planning
+              {page.ctaBadge}
             </span>
 
             <h2 className="text-4xl md:text-6xl font-serif text-slate-900 leading-tight text-balance">
-              Ready to Experience Tanzania?
+              {page.ctaTitle}
             </h2>
 
             <p className="text-xl leading-relaxed text-slate-600">
-              From Serengeti wildlife safaris to Zanzibar beach escapes, our
-              safari specialists will craft a seamless and unforgettable journey
-              tailored around your travel goals.
+              {page.ctaDescription}
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -464,7 +434,7 @@ export default function SafarisPage() {
                 className="rounded-full bg-gradient-to-r from-primary-alt to-primary px-8 py-7 text-base font-semibold text-white shadow-xl shadow-primary/20"
               >
                 <Link href="/contact">
-                  Speak to a Safari Expert
+                  {page.ctaPrimary}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -476,7 +446,7 @@ export default function SafarisPage() {
                 className="rounded-full border-primary/20 bg-white px-8 py-7 text-base font-semibold text-primary hover:bg-primary/5"
               >
                 <Link href="/destinations">
-                  Explore Destinations
+                  {page.ctaSecondary}
                 </Link>
               </Button>
             </div>

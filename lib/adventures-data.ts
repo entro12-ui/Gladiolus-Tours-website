@@ -32,7 +32,7 @@ export const adventures: Adventure[] = [
     category: "Mountain Climbing",
     description:
       "The Northern Circuit is Kilimanjaro's most scenic trail with generous acclimatization. Expect remote alpine ridges, glacier views, and unhurried summit pacing.",
-    image: "/about-us/team.webp",
+    image: "/gallery/kili1.jpeg",
     highlights: [
       "Longest acclimatization window for higher summit success",
       "Northern slopes with fewer climbers",
@@ -168,7 +168,7 @@ export const adventures: Adventure[] = [
     category: "Beach Holiday",
     description:
       "Wind down on the spice coast with curated Stone Town walks, dhow cruises, and boutique beach stays that blend culture with restoration.",
-    image: "/hero/hero-02.webp",
+    image: "/gallery/sunset.webp",
     highlights: [
       "Stone Town heritage walks",
       "Private spice farm tour",

@@ -4,6 +4,7 @@
     "safaris": "Safaris",
     "treks": "Trekking",
     "dayTrips": "Excursiones",
+    "zanzibar": "Zanzibar",
     "adventures": "Aventuras",
     "destinations": "Destinos",
     "gallery": "Galería",
@@ -208,7 +209,27 @@
   "footer": {
     "copyright": "Todos los derechos reservados.",
     "quickLinks": "Enlaces Rápidos",
-    "contactInfo": "Contáctanos"
+    "contactInfo": "Contáctanos",
+    "tagline": "Tu puerta de entrada a Tanzania",
+    "taglineSub": "Paquetes de safari en Tanzania para cada viajero: desde aventuras en grupo económicas hasta tours privados exclusivos.",
+    "exploreSafaris": "Explorar safaris",
+    "contactSunday": "Contactar a Sunday directamente",
+    "onlineNow": "Sunday está en línea ahora",
+    "whatsappChat": "Chatear con Sunday en WhatsApp",
+    "getUpdates": "Recibir novedades de safari",
+    "updatesDesc": "Recibe ofertas exclusivas de safari y actualizaciones de viaje en Tanzania.",
+    "faq": "FAQ",
+    "planSafari": "Planifica tu safari",
+    "rightsReserved": "Todos los derechos reservados.",
+    "quickLinksItems": {
+      "aboutUs": "Acerca de nosotros",
+      "destinations": "Destinos",
+      "safariPackages": "Paquetes de safari",
+      "kilimanjaroTreks": "Treks Kilimanjaro",
+      "adventureTours": "Tours de aventura",
+      "safariGallery": "Galería de safari",
+      "planYourSafari": "Planifica tu safari"
+    }
   },
   "notFound": {
     "title": "No encontramos esa página, pero el viaje continúa.",
@@ -224,5 +245,229 @@
     "suggestionDestinations": "Destinos",
     "suggestionDestinationsDesc": "Descubre Serengeti, Ngorongoro, Zanzíbar y otros paisajes icónicos.",
     "exploreLink": "Explorar"
+  },
+  "common": {
+    "planYourTrip": "Planifica tu viaje",
+    "home": "Inicio"
+  },
+  "navMenu": {
+    "treks": {
+      "kilimanjaroOverview": "Resumen del Kilimanjaro",
+      "kilimanjaroRoutes": {
+        "label": "Rutas del Kilimanjaro",
+        "machameRoute": "Ruta Machame",
+        "lemoshoRoute": "Ruta Lemosho",
+        "maranguRoute": "Ruta Marangu",
+        "rongaiRoute": "Ruta Rongai",
+        "umbweRoute": "Ruta Umbwe",
+        "shiraRoute": "Ruta Shira"
+      },
+      "mountMeruTrek": "Trek del Monte Meru",
+      "trekkingPreparation": {
+        "label": "Preparación para el trekking",
+        "packingList": "Lista de equipaje",
+        "altitudeAcclimatization": "Altitud y aclimatación",
+        "bestTimeToClimb": "Mejor época para escalar",
+        "climbingFaqs": "Preguntas frecuentes de ascenso"
+      },
+      "privateGroupClimbs": "Ascensos privados y en grupo"
+    },
+    "safaris": {
+      "tanzaniaNationalParks": {
+        "label": "Parques nacionales de Tanzania",
+        "serengeti": "Serengeti",
+        "tarangire": "Tarangire",
+        "manyara": "Manyara",
+        "ngorongoro": "Ngorongoro",
+        "lakeNatron": "Lago Natron",
+        "arushaNationalPark": "Parque Nacional de Arusha"
+      },
+      "itineraries": {
+        "label": "Itinerarios",
+        "greatMigration": "Gran Migración",
+        "privateTours": "Tours privados",
+        "familyTours": "Tours familiares",
+        "photographicTours": "Tours fotográficos"
+      },
+      "packingList": "Lista de equipaje",
+      "safariVehicle": "Vehículo de safari",
+      "highlights": "Destacados",
+      "honeymoonSafari": "Safari de luna de miel"
+    },
+    "dayTrips": {
+      "naturalHotSpring": "Fuente termal natural",
+      "natureAndLandscapes": "Naturaleza y paisajes",
+      "kilimanjaroHiking": "Senderismo en Kilimanjaro",
+      "townTour": {
+        "label": "Tour por la ciudad",
+        "curiosAndGiftShops": "Tiendas de recuerdos y regalos",
+        "localMarkets": "Mercados locales"
+      }
+    },
+    "zanzibar": {
+      "spiceTours": "Tours de especias",
+      "culturalTour": "Tour cultural",
+      "divingSnorkeling": "Buceo y snorkel",
+      "transfers": "Traslados"
+    },
+    "gallery": {
+      "pictures": "Fotos",
+      "videos": "Videos"
+    },
+    "about": {
+      "aboutGladiolusTours": "Acerca de Gladiolus Tours",
+      "testimonials": "Testimonios",
+      "faq": "FAQ",
+      "blog": "Blog"
+    }
+  },
+  "forms": {
+    "common": {
+      "verification": "Verificación",
+      "turnstileNotConfigured": "Turnstile no está configurado."
+    },
+    "contact": {
+      "title": "Envíanos un mensaje",
+      "description": "Preguntas, solicitudes personalizadas o ayuda rápida para planificar: estamos aquí.",
+      "labels": {
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo electrónico",
+        "phone": "Teléfono (opcional)",
+        "subject": "Asunto",
+        "message": "Mensaje"
+      },
+      "placeholders": {
+        "firstName": "María",
+        "lastName": "García",
+        "email": "maria@example.com",
+        "phone": "+34 612 345 678",
+        "subject": "Ayuda para planificar un safari",
+        "message": "Cuéntanos qué estás planificando y cómo podemos ayudarte."
+      },
+      "errors": {
+        "firstName": "El nombre es obligatorio",
+        "lastName": "El apellido es obligatorio",
+        "email": "Introduce un correo electrónico válido",
+        "subject": "El asunto es obligatorio",
+        "message": "Por favor incluye un mensaje breve"
+      },
+      "buttons": {
+        "submit": "Enviar mensaje",
+        "submitting": "Enviando..."
+      },
+      "toasts": {
+        "completeVerification": "Por favor completa la verificación.",
+        "sendError": "No se pudo enviar tu mensaje",
+        "sendSuccess": "Mensaje enviado. Te responderemos pronto."
+      }
+    },
+    "inquiry": {
+      "title": "Cuéntanos sobre tu viaje",
+      "description": "Comparte algunos detalles y diseñaremos un itinerario a medida con respuesta en 24 horas.",
+      "sections": {
+        "details": "Tus datos",
+        "preferences": "Preferencias del viaje",
+        "vision": "Tu visión"
+      },
+      "labels": {
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo electrónico",
+        "phone": "Teléfono (opcional)",
+        "adventure": "Aventura (opcional)",
+        "packageName": "Paquete (opcional)",
+        "destination": "Destino (opcional)",
+        "travelers": "Viajeros (opcional)",
+        "travelStart": "Fecha de inicio (opcional)",
+        "travelEnd": "Fecha de fin (opcional)",
+        "guests": "Huéspedes (opcional)",
+        "travelDate": "Fecha de viaje preferida (opcional)",
+        "budget": "Presupuesto (opcional)",
+        "message": "Mensaje"
+      },
+      "placeholders": {
+        "firstName": "María",
+        "lastName": "García",
+        "email": "maria@example.com",
+        "phone": "+34 612 345 678",
+        "adventure": "Selecciona una aventura",
+        "packageName": "Selecciona un paquete",
+        "packageNameDisabled": "Selecciona primero una aventura",
+        "destination": "Selecciona un destino",
+        "select": "Seleccionar",
+        "guests": "2",
+        "message": "Ejemplo: safari privado de 7-9 días, enfoque en la gran migración, mediados de julio, 2 adultos, lodges de lujo..."
+      },
+      "aria": {
+        "selectAdventure": "Seleccionar aventura",
+        "selectPackage": "Seleccionar paquete",
+        "selectDestination": "Seleccionar destino",
+        "selectTravelers": "Seleccionar número de viajeros",
+        "selectBudget": "Seleccionar rango de presupuesto"
+      },
+      "options": {
+        "destinations": {
+          "serengeti": "Serengeti",
+          "ngorongoro": "Cráter del Ngorongoro",
+          "tarangire": "Tarangire",
+          "kilimanjaro": "Kilimanjaro + safari",
+          "zanzibar": "Extensión a Zanzíbar",
+          "custom": "Aún no lo sé"
+        },
+        "travelers": {
+          "one": "1",
+          "two": "2",
+          "threeToFour": "3-4",
+          "fiveToEight": "5-8",
+          "ninePlus": "9+"
+        },
+        "budget": {
+          "mid": "Gama media",
+          "luxury": "Lujo",
+          "ultra": "Ultra lujo",
+          "notSure": "No estoy seguro"
+        }
+      },
+      "errors": {
+        "firstName": "El nombre es obligatorio",
+        "lastName": "El apellido es obligatorio",
+        "email": "Introduce un correo electrónico válido",
+        "message": "Por favor comparte algunos detalles"
+      },
+      "buttons": {
+        "submit": "Diseñar mi safari",
+        "submitting": "Enviando..."
+      },
+      "helper": "Conserjería privada • respuesta en 24 h",
+      "toasts": {
+        "completeVerification": "Por favor completa la verificación.",
+        "sendError": "No se pudo enviar tu consulta",
+        "sendSuccess": "Consulta enviada. Responderemos en 24 horas."
+      }
+    },
+    "newsletter": {
+      "labels": {
+        "email": "Correo electrónico",
+        "name": "Nombre (opcional)",
+        "sendConfirmation": "Enviarme un correo de confirmación"
+      },
+      "placeholders": {
+        "email": "maria@example.com",
+        "name": "María García"
+      },
+      "errors": {
+        "email": "Introduce un correo electrónico válido"
+      },
+      "buttons": {
+        "submit": "Suscribirse",
+        "submitting": "Enviando..."
+      },
+      "toasts": {
+        "completeVerification": "Por favor completa la verificación.",
+        "subscribeError": "No se pudo completar la suscripción",
+        "subscribeSuccess": "Suscripción confirmada. Bienvenido a Gladiolus Tours."
+      }
+    }
   }
 }

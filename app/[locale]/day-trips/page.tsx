@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import { getPageUi } from "@/content/pages"
+import { getLocalizedDayTrips } from "@/content/localized"
 import { Link } from "@/i18n/routing"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -20,85 +22,57 @@ import {
 import { BreadcrumbSchema, StructuredData } from "@/components/structured-data"
 import { absoluteUrl } from "@/lib/seo"
 import { assetUrl } from "@/lib/assets"
-import { dayTrips } from "@/lib/day-trips-data"
 
-export const metadata: Metadata = {
-  title: "Luxury Day Trips from Arusha, Tanzania | Gladiolus Tours",
-  description:
-    "Discover luxury day trips from Arusha including Chemka Hot Springs, Lake Duluti, waterfalls, coffee tours, cultural experiences, and private Tanzania excursions with Gladiolus Tours.",
-
-  keywords: [
-    "Luxury Day Trips Tanzania",
-    "Arusha Day Tours",
-    "Chemka Hot Springs Tour",
-    "Lake Duluti Tour",
-    "Best Tanzania Excursions",
-    "Private Day Trips Tanzania",
-    "Tanzania Cultural Tours",
-    "Gladiolus Tours",
-  ],
-
-  alternates: {
-    canonical: "/day-trips",
-  },
-
-  openGraph: {
-    title: "Luxury Tanzania Day Trips | Gladiolus Tours",
-    description:
-      "Explore premium Tanzania day trips crafted by local experts in Arusha.",
-    url: absoluteUrl("/day-trips"),
-    type: "website",
-    images: [
-      {
-        url: absoluteUrl("/og-image.jpg"),
-        width: 1200,
-        height: 630,
-        alt: "Luxury Tanzania Day Trips",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Luxury Day Trips from Arusha",
-    description:
-      "Private Tanzania day experiences designed for comfort, culture, and adventure.",
-    images: [absoluteUrl("/og-image.jpg")],
-  },
+type Props = {
+  params: Promise<{ locale: string }>
 }
 
-const pricingTiers = ["1 Person", "2 People", "3 People", "4+ People"]
+const highlightIcons = [Waves, Trees, Camera, Star]
 
-const highlights = [
-  {
-    icon: Waves,
-    title: "Natural Hot Springs",
-    text: "Relax in crystal-clear turquoise waters surrounded by tropical scenery.",
-  },
-  {
-    icon: Trees,
-    title: "Nature & Landscapes",
-    text: "Explore crater lakes, waterfalls, forests, and scenic Tanzania viewpoints.",
-  },
-  {
-    icon: Camera,
-    title: "Photography Experiences",
-    text: "Capture unforgettable travel moments with breathtaking backdrops.",
-  },
-  {
-    icon: Star,
-    title: "Private Guided Tours",
-    text: "Flexible luxury experiences designed around your schedule and style.",
-  },
-]
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const page = getPageUi(locale).dayTrips
 
-export default function DayTripsPage() {
+  return {
+    title: page.metadata.title,
+    description: page.metadata.description,
+    keywords: page.metadata.keywords,
+    alternates: {
+      canonical: "/day-trips",
+    },
+    openGraph: {
+      title: page.metadata.openGraphTitle ?? page.metadata.title,
+      description: page.metadata.openGraphDescription ?? page.metadata.description,
+      url: absoluteUrl("/day-trips"),
+      type: "website",
+      images: [
+        {
+          url: absoluteUrl("/og-image.jpg"),
+          width: 1200,
+          height: 630,
+          alt: page.featureImageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.metadata.twitterTitle ?? page.metadata.title,
+      description: page.metadata.twitterDescription ?? page.metadata.description,
+      images: [absoluteUrl("/og-image.jpg")],
+    },
+  }
+}
+
+export default async function DayTripsPage({ params }: Props) {
+  const { locale } = await params
+  const ui = getPageUi(locale)
+  const page = ui.dayTrips
+  const dayTrips = getLocalizedDayTrips(locale)
   const dayTripsSchema = {
     "@context": "https://schema.org",
     "@type": "TouristTrip",
-    name: "Luxury Day Trips from Arusha",
-    description:
-      "Private Tanzania day trips and excursions curated by Gladiolus Tours.",
+    name: page.schemaName,
+    description: page.schemaDescription,
     provider: {
       "@type": "TravelAgency",
       name: "Gladiolus Tours",
@@ -112,8 +86,8 @@ export default function DayTripsPage() {
 
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: absoluteUrl("/") },
-          { name: "Day Trips", url: absoluteUrl("/day-trips") },
+          { name: ui.common.homeBreadcrumb, url: absoluteUrl("/") },
+          { name: page.pageLabel, url: absoluteUrl("/day-trips") },
         ]}
       />
 
@@ -129,21 +103,19 @@ export default function DayTripsPage() {
             <ScrollAnimation className="space-y-8">
               <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-primary">
                 <Sparkles className="h-4 w-4" />
-                Explore Tanzania
+                {page.heroBadge}
               </span>
 
               <div className="space-y-6">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#161616] leading-[1.05] tracking-tight text-balance">
-                  Luxury Day Trips
+                  {page.heroTitle}
                   <span className="block text-primary mt-2">
-                    from Arusha
+                    {page.heroTitleAccent}
                   </span>
                 </h1>
 
                 <p className="text-xl md:text-2xl leading-relaxed text-[#555] max-w-2xl">
-                  Discover waterfalls, crater lakes, hot springs, coffee farms,
-                  and cultural experiences crafted for travelers seeking comfort,
-                  beauty, and unforgettable memories in Tanzania.
+                  {page.heroDescription}
                 </p>
               </div>
 
@@ -154,7 +126,7 @@ export default function DayTripsPage() {
                   className="rounded-full px-8 py-7 text-base font-semibold bg-gradient-to-r from-primary-alt to-primary text-white shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all"
                 >
                   <Link href="#day-trips">
-                    Explore Experiences
+                    {page.heroPrimary}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -166,20 +138,23 @@ export default function DayTripsPage() {
                   className="rounded-full px-8 py-7 text-base border-primary/20 bg-white/70 hover:bg-primary/5"
                 >
                   <Link href="/contact">
-                    Customize Your Trip
+                    {page.heroSecondary}
                   </Link>
                 </Button>
               </div>
 
               {/* QUICK FEATURES */}
               <div className="grid grid-cols-2 gap-4 pt-4">
-                {highlights.map((item) => (
+                {page.heroCards.map((item, index) => {
+                  const Icon = highlightIcons[index] ?? Star
+
+                  return (
                   <div
                     key={item.title}
                     className="rounded-3xl bg-white border border-[#eee] p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                   >
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 mb-4">
-                      <item.icon className="h-6 w-6 text-primary" />
+                      <Icon className="h-6 w-6 text-primary" />
                     </div>
 
                     <h3 className="text-lg font-semibold text-[#111] mb-2">
@@ -190,7 +165,8 @@ export default function DayTripsPage() {
                       {item.text}
                     </p>
                   </div>
-                ))}
+                  )
+                })}
               </div>
             </ScrollAnimation>
 
@@ -202,11 +178,12 @@ export default function DayTripsPage() {
 
                 <div className="relative overflow-hidden rounded-[36px] border border-white/50 shadow-2xl">
                   <Image
-                    src={assetUrl("/gallery/sunset.webp")}
-                    alt="Luxury Tanzania day trip"
+                    src={assetUrl("/gallery/chemka-00.webp")}
+                    alt={page.featureImageAlt}
                     width={900}
                     height={1000}
                     priority
+                    unoptimized
                     className="h-[680px] w-full object-cover"
                   />
 
@@ -214,15 +191,15 @@ export default function DayTripsPage() {
 
                   <div className="absolute bottom-10 left-8 right-8">
                     <div className="inline-flex items-center rounded-full bg-white/95 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-primary shadow-lg">
-                      Premium Tanzania Experiences
+                      {page.featureBadge}
                     </div>
 
                     <h2 className="mt-5 text-4xl font-serif leading-tight text-white">
-                      Explore beyond the safari
+                      {page.featureTitle}
                     </h2>
 
                     <p className="mt-3 text-lg text-white/90 leading-relaxed">
-                      Curated private adventures designed for modern luxury travelers.
+                      {page.featureDescription}
                     </p>
                   </div>
                 </div>
@@ -237,20 +214,18 @@ export default function DayTripsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <ScrollAnimation className="max-w-4xl mx-auto text-center space-y-8">
             <span className="text-sm uppercase tracking-[0.35em] text-primary font-semibold">
-              Curated Tanzania Experiences
+              {page.introEyebrow}
             </span>
 
             <h2 className="text-5xl md:text-6xl font-serif text-[#111] leading-tight text-balance">
-              Perfect Day Adventures
+              {page.introTitle}
               <span className="block text-primary">
-                for Every Traveler
+                {page.introTitleAccent}
               </span>
             </h2>
 
             <p className="text-xl leading-relaxed text-[#666]">
-              Whether you’re visiting Tanzania before a safari, after climbing
-              Kilimanjaro, or simply exploring Arusha, our luxury day trips are
-              crafted for comfort, flexibility, and unforgettable moments.
+              {page.introDescription}
             </p>
           </ScrollAnimation>
         </div>
@@ -276,6 +251,7 @@ export default function DayTripsPage() {
                       src={assetUrl(trip.image)}
                       alt={trip.title}
                       fill
+                      unoptimized
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
 
@@ -283,7 +259,7 @@ export default function DayTripsPage() {
 
                     <div className="absolute top-6 left-6">
                       <span className="rounded-full bg-[#d49a4a] px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-white shadow-lg">
-                        Premium Experience
+                        {page.cardBadge}
                       </span>
                     </div>
 
@@ -308,7 +284,7 @@ export default function DayTripsPage() {
                     {/* HIGHLIGHTS */}
                     <div className="space-y-4">
                       <h4 className="text-2xl font-serif text-[#111]">
-                        Experience Highlights
+                        {page.cardHighlightsHeading}
                       </h4>
 
                       <div className="flex flex-wrap gap-3">
@@ -329,16 +305,16 @@ export default function DayTripsPage() {
                       <div className="flex items-center justify-between mb-6">
                         <div>
                           <p className="text-xs uppercase tracking-[0.3em] text-[#888]">
-                            Pricing
+                            {page.pricingEyebrow}
                           </p>
 
                           <h4 className="text-3xl font-serif text-[#111]">
-                            Per Person
+                            {page.pricingTitle}
                           </h4>
                         </div>
 
                         <div className="rounded-full bg-primary/10 px-5 py-2 text-xs font-semibold text-primary">
-                          Flexible Groups
+                          {page.pricingGroupBadge}
                         </div>
                       </div>
 
@@ -353,7 +329,7 @@ export default function DayTripsPage() {
                             </p>
 
                             <p className="mt-2 text-xs uppercase tracking-[0.15em] text-[#777]">
-                              {pricingTiers[idx]}
+                              {page.pricingTiers[idx]}
                             </p>
                           </div>
                         ))}
@@ -372,7 +348,7 @@ export default function DayTripsPage() {
                         className="rounded-full px-7 py-6 text-base font-semibold bg-gradient-to-r from-primary-alt to-primary text-white shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all"
                       >
                         <Link href={`/day-trips/${trip.slug}`}>
-                          View Full Experience
+                          {page.viewExperience}
                           <ArrowRight className="ml-2 h-5 w-5" />
                         </Link>
                       </Button>
@@ -391,30 +367,23 @@ export default function DayTripsPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
               <span className="text-sm uppercase tracking-[0.35em] text-primary font-semibold">
-                Why Travelers Choose Us
+                {page.whyEyebrow}
               </span>
 
               <h2 className="text-5xl md:text-6xl font-serif text-[#111] leading-tight text-balance">
-                Personalized Tanzania
+                {page.whyTitle}
                 <span className="block text-primary">
-                  experiences
+                  {page.whyTitleAccent}
                 </span>
               </h2>
 
               <p className="text-xl leading-relaxed text-[#666]">
-                Our Arusha day trips are designed for modern travelers seeking
-                authentic experiences, private comfort, and meaningful moments
-                across Tanzania.
+                {page.whyDescription}
               </p>
             </div>
 
             <div className="grid gap-5">
-              {[
-                "Private transportation with trusted local guides",
-                "Flexible schedules and personalized itineraries",
-                "Perfect before or after safari adventures",
-                "Comfortable luxury experiences for families and couples",
-              ].map((item) => (
+              {page.whyItems.map((item) => (
                 <div
                   key={item}
                   className="flex items-start gap-5 rounded-[28px] border border-[#eee] bg-[#faf7f2] p-7 hover:shadow-lg transition-all"
@@ -438,19 +407,18 @@ export default function DayTripsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <ScrollAnimation className="max-w-4xl mx-auto space-y-8">
             <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-6 py-3 text-sm uppercase tracking-[0.35em] text-primary font-semibold">
-              Start Planning
+              {page.ctaBadge}
             </span>
 
             <h2 className="text-5xl md:text-6xl font-serif text-[#111] leading-tight text-balance">
-              Ready for Your
+              {page.ctaTitle}
               <span className="block text-primary">
-                Tanzania Day Adventure?
+                {page.ctaTitleAccent}
               </span>
             </h2>
 
             <p className="text-xl leading-relaxed text-[#666]">
-              Book a private day trip from Arusha or let our travel experts
-              design a custom Tanzania experience tailored to your style.
+              {page.ctaDescription}
             </p>
 
             <div className="flex flex-wrap justify-center gap-5">
@@ -460,7 +428,7 @@ export default function DayTripsPage() {
                 className="rounded-full px-8 py-7 text-base font-semibold bg-gradient-to-r from-primary-alt to-primary text-white shadow-xl shadow-primary/20"
               >
                 <Link href="/contact">
-                  Book Your Experience
+                  {page.ctaPrimary}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -472,7 +440,7 @@ export default function DayTripsPage() {
                 className="rounded-full px-8 py-7 text-base border-primary/20 bg-white/80 hover:bg-primary/5"
               >
                 <Link href="/contact">
-                  Custom Request
+                  {page.ctaSecondary}
                 </Link>
               </Button>
             </div>

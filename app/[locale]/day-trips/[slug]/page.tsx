@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import { notFound } from "next/navigation"
+import { getPageUi } from "@/content/pages"
+import { getLocalizedDayTrips, getDayTripBySlug } from "@/content/localized"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -9,25 +11,26 @@ import { ScrollAnimation } from "@/components/scroll-animation"
 import { ArrowRight, MapPin, Clock, Check } from "lucide-react"
 import { absoluteUrl } from "@/lib/seo"
 import { assetUrl } from "@/lib/assets"
-import { getDayTripBySlug, dayTrips } from "@/lib/day-trips-data"
+import { Link } from "@/i18n/routing"
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>
 }
 
 export async function generateStaticParams() {
-  return dayTrips.map((trip) => ({
+  return getLocalizedDayTrips("en").map((trip) => ({
     slug: trip.slug,
   }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
-  const trip = getDayTripBySlug(slug)
+  const { slug, locale } = await params
+  const ui = getPageUi(locale)
+  const trip = getDayTripBySlug(slug, locale)
   
   if (!trip) {
     return {
-      title: "Day Trip Not Found",
+      title: ui.dayTrips.detail.notFoundTitle,
     }
   }
 
@@ -55,14 +58,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function DayTripPage({ params }: Props) {
-  const { slug } = await params
-  const trip = getDayTripBySlug(slug)
+  const { slug, locale } = await params
+  const ui = getPageUi(locale)
+  const page = ui.dayTrips
+  const detail = page.detail
+  const trip = getDayTripBySlug(slug, locale)
 
   if (!trip) {
     notFound()
   }
-
-  const pricingTiers = ["1 Person", "2 People", "3 People", "4+ People"]
 
   return (
     <div className="min-h-screen">
@@ -75,6 +79,7 @@ export default async function DayTripPage({ params }: Props) {
             src={assetUrl(trip.image)}
             alt={trip.title}
             fill
+            unoptimized
             className="object-cover"
             priority
           />
@@ -109,7 +114,7 @@ export default async function DayTripPage({ params }: Props) {
             {/* Highlights */}
             <div className="lg:col-span-2">
               <ScrollAnimation>
-                <h2 className="text-2xl font-serif mb-6">Trip Highlights</h2>
+                <h2 className="text-2xl font-serif mb-6">{detail.highlightsHeading}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {trip.highlights.map((highlight, idx) => (
                     <div
@@ -127,7 +132,7 @@ export default async function DayTripPage({ params }: Props) {
 
               {/* Itinerary */}
               <ScrollAnimation delay={200} className="mt-12">
-                <h2 className="text-2xl font-serif mb-6">Itinerary</h2>
+                <h2 className="text-2xl font-serif mb-6">{ui.common.itinerary}</h2>
                 <div className="space-y-4">
                   {trip.itinerary.map((item, idx) => (
                     <div
@@ -151,7 +156,7 @@ export default async function DayTripPage({ params }: Props) {
                   <CardContent className="p-6 space-y-6">
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground mb-3">
-                        Pricing per person
+                        {detail.pricingHeading}
                       </p>
                       <div className="space-y-2">
                         {trip.pricePerPerson.map((price, idx) => (
@@ -160,7 +165,7 @@ export default async function DayTripPage({ params }: Props) {
                             className="flex items-center justify-between p-3 rounded-xl bg-muted/50"
                           >
                             <span className="text-sm text-muted-foreground">
-                              {pricingTiers[idx]}
+                              {page.pricingTiers[idx]}
                             </span>
                             <span className="text-lg font-bold text-primary">
                               ${price}
@@ -172,7 +177,7 @@ export default async function DayTripPage({ params }: Props) {
 
                     <div className="space-y-3">
                       <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-                        What's included
+                        {detail.includedHeading}
                       </p>
                       {trip.included.map((item, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm">
@@ -183,9 +188,9 @@ export default async function DayTripPage({ params }: Props) {
                     </div>
 
                     <Button asChild className="w-full rounded-full size-lg">
-                      <a href="/contact">
-                        Book This Trip <ArrowRight className="ml-2 h-4 w-4" />
-                      </a>
+                      <Link href="/contact">
+                        {detail.bookButton} <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -198,7 +203,7 @@ export default async function DayTripPage({ params }: Props) {
       {/* Gallery */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-serif mb-8 text-center">Photo Gallery</h2>
+          <h2 className="text-2xl font-serif mb-8 text-center">{detail.galleryHeading}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {trip.gallery.map((image, idx) => (
               <div key={idx} className="relative h-64 rounded-2xl overflow-hidden">
@@ -206,6 +211,7 @@ export default async function DayTripPage({ params }: Props) {
                   src={assetUrl(image)}
                   alt={`${trip.title} gallery ${idx + 1}`}
                   fill
+                  unoptimized
                   className="object-cover hover:scale-105 transition duration-500"
                 />
               </div>
@@ -218,15 +224,13 @@ export default async function DayTripPage({ params }: Props) {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-serif mb-4">
-            Have Questions About This Trip?
+            {detail.questionsTitle}
           </h2>
           <p className="text-muted-foreground mb-8">
-            Our team is ready to help you plan your perfect day trip.
+            {detail.questionsDescription}
           </p>
           <Button asChild size="lg" className="rounded-full px-8">
-            <a href="/contact">
-              Contact Us
-            </a>
+            <Link href="/contact">{detail.contactButton}</Link>
           </Button>
         </div>
       </section>

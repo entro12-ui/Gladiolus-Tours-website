@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { getPageUi } from "@/content/pages"
 import {
   Phone,
   Mail,
@@ -21,64 +22,57 @@ import { absoluteUrl } from "@/lib/seo"
 import { Card, CardContent } from "@/components/ui/card"
 import { Link } from "@/i18n/routing"
 
-export const metadata: Metadata = {
-  title:
-    "Contact Gladiolus Tours | Plan Your Tanzania Safari",
-  description:
-    "Contact Gladiolus Tours in Arusha, Tanzania for luxury Serengeti safaris, Kilimanjaro trekking, Ngorongoro Crater tours, and Zanzibar holidays.",
-
-  keywords: [
-    "Contact Tanzania Safari Company",
-    "Gladiolus Tours Contact",
-    "Arusha Safari Experts",
-    "Luxury Tanzania Safari Planner",
-    "Serengeti Safari Contact",
-    "Kilimanjaro Trekking Experts",
-  ],
-
-  alternates: {
-    canonical: "/contact",
-  },
-
-  openGraph: {
-    title:
-      "Contact Gladiolus Tours | Luxury Tanzania Safari Experts",
-    description:
-      "Speak with our Arusha-based safari specialists to plan your custom Tanzania safari adventure.",
-    url: absoluteUrl("/contact"),
-    siteName: "Gladiolus Tours",
-    locale: "en_US",
-    type: "website",
-
-    images: [
-      {
-        url: absoluteUrl("/gallery/zebra-00.webp"),
-        width: 1200,
-        height: 630,
-        alt: "Luxury Tanzania Safari Planning",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact Gladiolus Tours",
-    description:
-      "Talk with our Tanzania safari specialists today.",
-    images: [absoluteUrl("/gallery/zebra-00.webp")],
-  },
+type Props = {
+  params: Promise<{ locale: string }>
 }
 
-export default function ContactPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const page = getPageUi(locale).contact
+
+  return {
+    title: page.metadata.title,
+    description: page.metadata.description,
+    keywords: page.metadata.keywords,
+    alternates: {
+      canonical: "/contact",
+    },
+    openGraph: {
+      title: page.metadata.openGraphTitle ?? page.metadata.title,
+      description: page.metadata.openGraphDescription ?? page.metadata.description,
+      url: absoluteUrl("/contact"),
+      siteName: "Gladiolus Tours",
+      type: "website",
+      images: [
+        {
+          url: absoluteUrl("/gallery/zebra-00.webp"),
+          width: 1200,
+          height: 630,
+          alt: page.formTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.metadata.twitterTitle ?? page.metadata.title,
+      description: page.metadata.twitterDescription ?? page.metadata.description,
+      images: [absoluteUrl("/gallery/zebra-00.webp")],
+    },
+  }
+}
+
+export default async function ContactPage({ params }: Props) {
+  const { locale } = await params
+  const ui = getPageUi(locale)
+  const page = ui.contact
 
   const contactPageSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
 
-    name: "Contact Gladiolus Tours",
+    name: page.pageLabel,
 
-    description:
-      "Contact Gladiolus Tours safari specialists in Arusha, Tanzania.",
+    description: page.metadata.description,
 
     url: absoluteUrl("/contact"),
 
@@ -135,8 +129,8 @@ export default function ContactPage() {
 
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: absoluteUrl("/") },
-          { name: "Contact", url: absoluteUrl("/contact") },
+          { name: ui.common.homeBreadcrumb, url: absoluteUrl("/") },
+          { name: page.pageLabel, url: absoluteUrl("/contact") },
         ]}
       />
 
@@ -159,25 +153,23 @@ export default function ContactPage() {
               <span className="h-2 w-2 rounded-full bg-[#6F8A72]" />
 
               <span className="text-sm font-medium text-[#355C4D]">
-                Tanzania Safari Experts
+                {page.heroBadge}
               </span>
 
             </div>
 
             <h1 className="mt-8 text-5xl md:text-7xl font-serif leading-[1.05] text-[#1E1E1E]">
 
-              Let’s Plan Your
+              {page.heroTitle}
               <span className="block text-[#C69252]">
-                Tanzania Adventure
+                {page.heroTitleAccent}
               </span>
 
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg md:text-2xl leading-relaxed text-[#5B5B5B]">
 
-              Speak with our Arusha-based safari specialists
-              about Serengeti safaris, Kilimanjaro trekking,
-              Ngorongoro Crater tours, and Zanzibar holidays.
+              {page.heroDescription}
 
             </p>
 
@@ -190,14 +182,14 @@ export default function ContactPage() {
                 className="inline-flex items-center gap-2 rounded-full bg-[#C69252] px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#A46A3D] shadow-[0_12px_30px_rgba(198,146,82,0.28)]"
               >
                 <MessageCircle className="h-5 w-5" />
-                WhatsApp Us
+                {page.heroPrimary}
               </a>
 
               <Link
                 href="#contact-form"
                 className="inline-flex items-center gap-2 rounded-full border border-[#E8DDD0] bg-white/80 px-8 py-4 text-base font-semibold text-[#1E1E1E] transition-all duration-300 hover:border-[#C69252] hover:bg-white"
               >
-                Send Inquiry
+                {page.heroSecondary}
                 <ArrowRight className="h-4 w-4" />
               </Link>
 
@@ -226,17 +218,15 @@ export default function ContactPage() {
                 <div className="mb-8">
 
                   <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#C69252]">
-                    Safari Inquiry
+                    {page.formEyebrow}
                   </p>
 
                   <h2 className="mt-4 text-4xl md:text-5xl font-serif text-[#1E1E1E]">
-                    Start Planning Your Trip
+                    {page.formTitle}
                   </h2>
 
                   <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#5B5B5B]">
-                    Tell us your travel dates, safari interests,
-                    and preferred experiences. Our team will
-                    create a personalized Tanzania itinerary.
+                    {page.formDescription}
                   </p>
 
                 </div>
@@ -256,7 +246,7 @@ export default function ContactPage() {
                 <CardContent className="p-8">
 
                   <h3 className="text-2xl font-serif text-[#1E1E1E]">
-                    Contact Information
+                    {page.infoTitle}
                   </h3>
 
                   <div className="mt-8 space-y-7">
@@ -269,15 +259,15 @@ export default function ContactPage() {
 
                       <div>
                         <p className="text-sm font-semibold uppercase tracking-wide text-[#A46A3D]">
-                          Phone
+                          {page.infoItems[0].label}
                         </p>
 
                         <p className="mt-1 text-[#555555]">
-                          +255 (789) 736-559
+                          {page.infoItems[0].values[0]}
                         </p>
 
                         <p className="text-[#555555]">
-                          +1 (401) 500-6480
+                          {page.infoItems[0].values[1]}
                         </p>
                       </div>
 
@@ -291,11 +281,11 @@ export default function ContactPage() {
 
                       <div>
                         <p className="text-sm font-semibold uppercase tracking-wide text-[#A46A3D]">
-                          Email
+                          {page.infoItems[1].label}
                         </p>
 
                         <p className="mt-1 text-[#555555] break-all">
-                          info@gladiolustours.com
+                          {page.infoItems[1].values[0]}
                         </p>
                       </div>
 
@@ -309,15 +299,15 @@ export default function ContactPage() {
 
                       <div>
                         <p className="text-sm font-semibold uppercase tracking-wide text-[#A46A3D]">
-                          Location
+                          {page.infoItems[2].label}
                         </p>
 
                         <p className="mt-1 text-[#555555]">
-                          Usa River, Arusha
+                          {page.infoItems[2].values[0]}
                         </p>
 
                         <p className="text-[#555555]">
-                          Tanzania
+                          {page.infoItems[2].values[1]}
                         </p>
                       </div>
 
@@ -331,11 +321,11 @@ export default function ContactPage() {
 
                       <div>
                         <p className="text-sm font-semibold uppercase tracking-wide text-[#A46A3D]">
-                          Availability
+                          {page.infoItems[3].label}
                         </p>
 
                         <p className="mt-1 text-[#555555]">
-                          24/7 Safari Support
+                          {page.infoItems[3].values[0]}
                         </p>
                       </div>
 
@@ -353,17 +343,12 @@ export default function ContactPage() {
                 <CardContent className="p-8">
 
                   <h3 className="text-2xl font-serif">
-                    Why Travel With Us?
+                    {page.whyTitle}
                   </h3>
 
                   <ul className="mt-6 space-y-4 text-white/90">
 
-                    {[
-                      "Private custom safari itineraries",
-                      "Professional local safari guides",
-                      "Luxury lodges and camps",
-                      "Fast response within 24 hours",
-                    ].map((item, index) => (
+                    {page.whyItems.map((item, index) => (
                       <li
                         key={index}
                         className="flex items-start gap-3"
@@ -400,17 +385,15 @@ export default function ContactPage() {
           <div className="mb-12 text-center">
 
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#C69252]">
-              Visit Us
+              {page.mapEyebrow}
             </p>
 
             <h2 className="mt-5 text-4xl md:text-5xl font-serif text-[#1E1E1E]">
-              Located In Arusha, Tanzania
+              {page.mapTitle}
             </h2>
 
             <p className="mt-5 text-lg leading-relaxed text-[#5B5B5B]">
-              Based near Tanzania’s top safari destinations
-              including Serengeti, Ngorongoro, Tarangire,
-              and Mount Kilimanjaro.
+              {page.mapDescription}
             </p>
 
           </div>

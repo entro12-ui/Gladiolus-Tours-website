@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import { getPageUi } from "@/content/pages"
 import { Link } from "@/i18n/routing"
 import {
   Star,
@@ -23,142 +24,98 @@ import {
 } from "@/components/structured-data"
 
 import { absoluteUrl } from "@/lib/seo"
-import { assetUrl, hasAssetBase } from "@/lib/assets"
+import { assetUrl } from "@/lib/assets"
 
-export const metadata: Metadata = {
-  title:
-    "About Gladiolus Tours | Luxury Tanzania Safari Experts Based in Arusha",
-  description:
-    "Learn about Gladiolus Tours, a trusted luxury Tanzania safari company based in Arusha. Meet our local safari experts and discover our mission, values, and personalized travel experiences across Serengeti, Ngorongoro, Kilimanjaro, and Zanzibar.",
-  keywords: [
-    "About Gladiolus Tours",
-    "Tanzania Safari Company",
-    "Luxury Tanzania Safaris",
-    "Arusha Safari Experts",
-    "Serengeti Safari Specialists",
-    "Kilimanjaro Tour Experts",
-    "Private Tanzania Tours",
-    "Local Safari Guides Tanzania",
-    "Safari Company Arusha",
-  ],
-  alternates: {
-    canonical: "/about",
-  },
-  openGraph: {
-    title: "About Gladiolus Tours | Trusted Tanzania Safari Experts",
-    description:
-      "Meet the local team behind Gladiolus Tours and discover our passion for luxury Tanzania safaris and unforgettable African adventures.",
-    url: absoluteUrl("/about"),
-    images: [
-      {
-        url: absoluteUrl("/gallery/zebra-00.webp"),
-        width: 1200,
-        height: 630,
-        alt: "Gladiolus Tours Tanzania Safari Team",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Gladiolus Tours",
-    description:
-      "Luxury Tanzania safari specialists creating unforgettable journeys across Serengeti, Zanzibar, and Kilimanjaro.",
-    images: [absoluteUrl("/gallery/zebra-00.webp")],
-  },
+type Props = {
+  params: Promise<{ locale: string }>
 }
 
-export default function AboutPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const page = getPageUi(locale).about
+
+  return {
+    title: page.metadata.title,
+    description: page.metadata.description,
+    keywords: page.metadata.keywords,
+    alternates: {
+      canonical: "/about",
+    },
+    openGraph: {
+      title: page.metadata.openGraphTitle ?? page.metadata.title,
+      description: page.metadata.openGraphDescription ?? page.metadata.description,
+      url: absoluteUrl("/about"),
+      images: [
+        {
+          url: absoluteUrl("/gallery/zebra-00.webp"),
+          width: 1200,
+          height: 630,
+          alt: page.heroImageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.metadata.twitterTitle ?? page.metadata.title,
+      description: page.metadata.twitterDescription ?? page.metadata.description,
+      images: [absoluteUrl("/gallery/zebra-00.webp")],
+    },
+  }
+}
+
+export default async function AboutPage({ params }: Props) {
+  const { locale } = await params
+  const ui = getPageUi(locale)
+  const page = ui.about
   const teamMembers = [
     {
-      name: "Sunday Mtui",
-      role: "Co-Founder & Safari Specialist",
-      image: hasAssetBase
-        ? assetUrl("/team/Sunday-Mtui.webp")
-        : "/team/sunday-mtui.jpg",
-      bio: "Over 20 years of experience guiding travelers through Tanzania’s iconic wildlife destinations and luxury safari experiences.",
+      ...page.teamMembers[0],
+      image: assetUrl("/about-us/team.webp"),
     },
     {
-      name: "Francois Martin",
-      role: "Co-Founder & International Consultant",
-      image: hasAssetBase
-        ? assetUrl("/team/Francois-Martin.webp")
-        : "/team/francois-martin.jpg",
-      bio: "Focused on premium guest experiences, strategic safari planning, and personalized luxury travel services.",
+      ...page.teamMembers[1],
+      image: assetUrl("/about-us/safari-go.webp"),
     },
     {
-      name: "Claire Matemba",
-      role: "Operations Director",
-      image: hasAssetBase
-        ? assetUrl("/team/Claire-Matemba.webp")
-        : "/team/Claire-Matemba.jpg",
-      bio: "Ensuring every safari operates smoothly with exceptional customer care and professional coordination.",
+      ...page.teamMembers[2],
+      image: assetUrl("/about-us/safari-booking.webp"),
     },
   ]
 
-  const stats = [
-    {
-      value: "20+",
-      label: "Years Safari Experience",
-    },
-    {
-      value: "2,800+",
-      label: "Happy Travelers",
-    },
-    {
-      value: "95%",
-      label: "Guest Satisfaction",
-    },
-    {
-      value: "24/7",
-      label: "Traveler Support",
-    },
-  ]
+  const stats = page.stats
 
   const values = [
     {
       icon: Star,
-      title: "Luxury Experiences",
-      description:
-        "Private safaris designed with premium lodges, personalized service, and unforgettable moments.",
+      ...page.values[0],
     },
     {
       icon: Users,
-      title: "Local Safari Experts",
-      description:
-        "Experienced Tanzania guides with deep wildlife, culture, and destination knowledge.",
+      ...page.values[1],
     },
     {
       icon: ShieldCheck,
-      title: "Trusted Service",
-      description:
-        "Transparent planning, reliable communication, and dedicated support before and during your safari.",
+      ...page.values[2],
     },
     {
       icon: Leaf,
-      title: "Responsible Tourism",
-      description:
-        "Supporting conservation, local communities, and sustainable safari experiences.",
+      ...page.values[3],
     },
     {
       icon: Globe,
-      title: "Global Travelers",
-      description:
-        "Welcoming guests from around the world for authentic East African adventures.",
+      ...page.values[4],
     },
     {
       icon: Compass,
-      title: "Tailor-Made Journeys",
-      description:
-        "Every itinerary is customized around your travel style, dates, and safari goals.",
+      ...page.values[5],
     },
   ]
 
   const aboutPageSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    name: "About Gladiolus Tours",
-    description:
-      "Luxury Tanzania safari company based in Arusha offering private safaris, Kilimanjaro trekking, and Zanzibar holidays.",
+    name: page.pageLabel,
+    description: page.metadata.description,
     url: absoluteUrl("/about"),
     mainEntity: {
       "@type": "Organization",
@@ -186,8 +143,8 @@ export default function AboutPage() {
 
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: absoluteUrl("/") },
-          { name: "About", url: absoluteUrl("/about") },
+          { name: ui.common.homeBreadcrumb, url: absoluteUrl("/") },
+          { name: page.pageLabel, url: absoluteUrl("/about") },
         ]}
       />
 
@@ -197,9 +154,10 @@ export default function AboutPage() {
       <section className="relative min-h-[75vh] overflow-hidden flex items-center justify-center mt-20">
         <Image
           src={assetUrl("/about-us/team-work.webp")}
-          alt="Gladiolus Tours Tanzania safari team"
+          alt={page.heroImageAlt}
           fill
           priority
+          unoptimized
           className="object-cover"
         />
 
@@ -208,17 +166,15 @@ export default function AboutPage() {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 text-center text-white">
           <div className="max-w-4xl mx-auto">
             <span className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-5 py-2 text-xs uppercase tracking-[0.35em] backdrop-blur">
-              About Gladiolus Tours
+              {page.heroBadge}
             </span>
 
             <h1 className="mt-8 text-5xl md:text-7xl font-serif leading-tight">
-              Luxury Tanzania Safaris Designed By Local Experts
+              {page.heroTitle}
             </h1>
 
             <p className="mt-8 text-lg md:text-2xl text-white/85 leading-relaxed max-w-3xl mx-auto">
-              Based in Arusha, Gladiolus Tours creates private Tanzania safari
-              experiences across Serengeti, Ngorongoro Crater, Mount
-              Kilimanjaro, Tarangire, and Zanzibar.
+              {page.heroDescription}
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-5">
@@ -227,7 +183,7 @@ export default function AboutPage() {
                 className="rounded-full bg-[#C69252] hover:bg-[#A46A3D] px-8 py-6 text-white font-semibold"
               >
                 <Link href="/contact">
-                  Plan Your Safari
+                  {page.heroPrimary}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -237,7 +193,7 @@ export default function AboutPage() {
                 variant="outline"
                 className="rounded-full border-white/40 bg-white/10 text-white hover:bg-white/20"
               >
-                <Link href="#our-story">Learn More</Link>
+                <Link href="#our-story">{page.heroSecondary}</Link>
               </Button>
             </div>
           </div>
@@ -275,32 +231,23 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <span className="uppercase tracking-[0.35em] text-sm text-[#C69252] font-semibold">
-                Our Story
+                {page.storyEyebrow}
               </span>
 
               <h2 className="mt-5 text-4xl md:text-6xl font-serif leading-tight">
-                Authentic Tanzania Safari Experiences
+                {page.storyTitle}
               </h2>
 
               <p className="mt-8 text-lg text-[#5A5A5A] leading-relaxed">
-                Gladiolus Tours was founded with a simple vision — creating
-                unforgettable Tanzania safaris led by passionate local experts
-                who understand the beauty, wildlife, and culture of East Africa.
+                {page.storyParagraphs[0]}
               </p>
 
               <p className="mt-6 text-lg text-[#5A5A5A] leading-relaxed">
-                From luxury Serengeti safaris to Kilimanjaro trekking and
-                Zanzibar beach holidays, every itinerary is designed around
-                comfort, authenticity, and personalized service.
+                {page.storyParagraphs[1]}
               </p>
 
               <div className="mt-8 space-y-4">
-                {[
-                  "Private luxury safaris",
-                  "Professional local safari guides",
-                  "Tailor-made itineraries",
-                  "24/7 guest support",
-                ].map((item, i) => (
+                {page.storyChecklist.map((item, i) => (
                   <div
                     key={i}
                     className="flex items-center gap-3"
@@ -318,8 +265,9 @@ export default function AboutPage() {
             <div className="relative h-[550px] rounded-[40px] overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.08)]">
               <Image
                 src={assetUrl("/about-us/team.webp")}
-                alt="Luxury Tanzania safari planning team"
+                alt={page.storyImageAlt}
                 fill
+                unoptimized
                 className="object-cover"
               />
 
@@ -334,16 +282,15 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="uppercase tracking-[0.35em] text-sm text-[#C69252] font-semibold">
-              Why Travelers Choose Us
+              {page.valuesEyebrow}
             </span>
 
             <h2 className="mt-5 text-4xl md:text-6xl font-serif">
-              Built Around Service, Trust & Experience
+              {page.valuesTitle}
             </h2>
 
             <p className="mt-6 text-lg text-[#5A5A5A] leading-relaxed">
-              We combine local expertise, luxury safari planning, and genuine
-              hospitality to create unforgettable Tanzania adventures.
+              {page.valuesDescription}
             </p>
           </div>
 
@@ -363,7 +310,7 @@ export default function AboutPage() {
                   </h3>
 
                   <p className="mt-4 text-[#5A5A5A] leading-relaxed">
-                    {value.description}
+                    {value.text}
                   </p>
                 </CardContent>
               </Card>
@@ -377,16 +324,15 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="uppercase tracking-[0.35em] text-sm text-[#C69252] font-semibold">
-              Meet The Team
+              {page.teamEyebrow}
             </span>
 
             <h2 className="mt-5 text-4xl md:text-6xl font-serif">
-              The People Behind Your Safari
+              {page.teamTitle}
             </h2>
 
             <p className="mt-6 text-lg text-[#5A5A5A] leading-relaxed">
-              Experienced safari professionals dedicated to creating seamless
-              and memorable Tanzania travel experiences.
+              {page.teamDescription}
             </p>
           </div>
 
@@ -401,6 +347,7 @@ export default function AboutPage() {
                     src={member.image}
                     alt={member.name}
                     fill
+                    unoptimized
                     className="object-cover"
                   />
                 </div>
@@ -428,13 +375,11 @@ export default function AboutPage() {
       <section className="py-24 bg-gradient-to-r from-[#355C4D] via-[#486B5C] to-[#6F8A72] text-white text-center relative overflow-hidden">
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-12 max-w-4xl">
           <h2 className="text-5xl md:text-6xl font-serif">
-            Start Planning Your Tanzania Safari
+            {page.ctaTitle}
           </h2>
 
           <p className="mt-8 text-xl text-white/85 leading-relaxed">
-            Speak with our Arusha-based safari specialists and receive a
-            personalized Tanzania safari itinerary tailored to your travel
-            style.
+            {page.ctaDescription}
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-5">
@@ -443,7 +388,7 @@ export default function AboutPage() {
               className="rounded-full bg-[#C69252] hover:bg-[#A46A3D] px-10 py-6 text-white font-semibold"
             >
               <Link href="/contact">
-                Contact Our Team
+                {page.ctaPrimary}
               </Link>
             </Button>
 
@@ -453,7 +398,7 @@ export default function AboutPage() {
               className="rounded-full border-white/30 bg-white/10 text-white hover:bg-white/20"
             >
               <Link href="/safaris">
-                Explore Safaris
+                {page.ctaSecondary}
               </Link>
             </Button>
           </div>

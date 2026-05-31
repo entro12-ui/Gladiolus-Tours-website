@@ -289,3 +289,40 @@ export function FAQSchema({ url, title, description, faqs }: FAQSchemaProps) {
 
   return <StructuredData id="faq-schema" data={schema} />
 }
+export function ReviewSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    name: "Gladiolus Tours",
+    url: "https://www.gladiolustours.com",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "2800"
+    }
+  }
+
+  return <StructuredData id="review-schema" data={schema} />
+}
+
+export function TripAdvisorSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: {
+      "@type": "TravelAgency",
+      name: "Gladiolus Tours"
+    },
+    author: {
+      "@type": "Organization",
+      name: "TripAdvisor"
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "4.9",
+      bestRating: "5"
+    }
+  }
+
+  return <StructuredData id="tripadvisor-schema" data={schema} />
+}
