@@ -42,7 +42,7 @@ export const majorMountainTreks: Trek[] = [
     difficulty: "Moderate",
     bestTime: "June – October & January – March",
     permits: "Kilimanjaro National Park permits required",
-    image: "/gallery/Marangu Route.jpeg",
+    image: "/gallery/marangu-hero.jpg",
     description:
       "The only Kilimanjaro route with hut accommodation. Known as the Coca-Cola Route, it is ideal for beginners seeking comfort and a shorter summit itinerary.",
     overview:
@@ -107,7 +107,7 @@ export const majorMountainTreks: Trek[] = [
     difficulty: "Challenging",
     bestTime: "June – October & January – March",
     permits: "Kilimanjaro National Park permits required",
-    image: "/gallery/Machame Route.jpeg",
+    image: "/gallery/kiliman1.jpeg",
     description:
       "The most popular Kilimanjaro trekking route, offering dramatic scenery and excellent acclimatization via the climb-high, sleep-low principle.",
     overview:
@@ -184,7 +184,7 @@ export const majorMountainTreks: Trek[] = [
     difficulty: "Challenging",
     bestTime: "June – October & January – March",
     permits: "Kilimanjaro National Park permits required",
-    image: "/gallery/Lemosho Route.jpeg",
+    image: "/gallery/Lemoshoroute.jpeg",
     description:
       "One of the most scenic Kilimanjaro routes with lower crowds, remote wilderness start, and the highest summit success rates.",
     overview:
@@ -267,7 +267,7 @@ export const majorMountainTreks: Trek[] = [
     difficulty: "Challenging",
     bestTime: "June – October & January – March",
     permits: "Kilimanjaro National Park permits required",
-    image: "/gallery/Rongai Route.jpeg",
+    image: "/gallery/kiliman3.jpeg",
     description:
       "The only Kilimanjaro route approaching from the north near Kenya. Quiet, dry, and offers a unique wilderness experience.",
     overview:
@@ -409,7 +409,7 @@ export const majorMountainTreks: Trek[] = [
     difficulty: "Challenging",
     bestTime: "June – October & January – March",
     permits: "Kilimanjaro National Park permits required",
-    image: "/gallery/Lemosho Route.jpeg",
+    image: "/gallery/Lemoshoroute.jpeg",
     description:
       "A scenic western approach starting high on the Shira Plateau. Offers excellent landscapes and strong acclimatization.",
     overview:
@@ -486,7 +486,7 @@ export const majorMountainTreks: Trek[] = [
     difficulty: "Challenging",
     bestTime: "June – October & January – February",
     permits: "Park fees and armed ranger required",
-    image: "/gallery/Mount meru, Arusha national park.jpeg",
+    image: "/gallery/Mountmeruroute.jpeg",
     description:
       "Tanzania's second-highest peak and an excellent acclimatization climb before Kilimanjaro.",
     overview:
@@ -571,7 +571,7 @@ export const majorMountainTreks: Trek[] = [
   difficulty: "Moderate",
   bestTime: "Year-round",
   permits: "No permit required for guide",
-  image: "/gallery/kili5.jpeg",
+  image: "/gallery/kiliman6.jpeg",
   description:
     "Complete gear checklist for climbing Mount Kilimanjaro safely and comfortably.",
   overview:
@@ -597,7 +597,7 @@ export const majorMountainTreks: Trek[] = [
   difficulty: "Moderate",
   bestTime: "Year-round",
   permits: "No permit required",
-  image: "/gallery/kili6.jpeg",
+  image: "/gallery/kiliman7.jpeg",
   description:
     "Learn how acclimatization improves your chances of reaching Uhuru Peak safely.",
   overview:
@@ -622,7 +622,7 @@ export const majorMountainTreks: Trek[] = [
   difficulty: "Easy",
   bestTime: "January–March & June–October",
   permits: "No permit required",
-  image: "/gallery/kili7.jpeg",
+  image: "/gallery/kiliman8.jpeg",
   description:
     "Seasonal breakdown of Kilimanjaro weather patterns and summit conditions.",
   overview:
@@ -647,7 +647,7 @@ export const majorMountainTreks: Trek[] = [
   difficulty: "Easy",
   bestTime: "Year-round",
   permits: "No permit required",
-  image: "/gallery/kili1.jpeg",
+  image: "/gallery/kiliman9.jpeg",
   description:
     "Common questions about climbing Kilimanjaro answered by our mountain experts.",
   overview:

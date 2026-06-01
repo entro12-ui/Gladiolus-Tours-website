@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { Link } from "@/i18n/routing"
 import { getHomeContent } from "@/content/home"
+import { getPageUi } from "@/content/pages"
 import { assetUrl } from "@/lib/assets"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -11,7 +12,8 @@ import {
 } from "@/components/structured-data"
 import { HeroSlideshow } from "@/components/home/hero-slideshow"
 import { absoluteUrl } from "@/lib/seo"
-import TestimonialSlider from "@/components/home/TestimonialSlider"
+import { FaqSection } from "@/components/sections/faq-section"
+import { TestimonialsSection } from "@/components/sections/testimonials-section"
 import { ArrowRight } from "lucide-react"
 
 type HomePageProps = {
@@ -70,6 +72,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params
   const c = getHomeContent(locale)
+  const ui = getPageUi(locale)
 
   return (
     <div className="bg-[#FAFBF8] text-[#243526] min-h-screen overflow-hidden font-sans">
@@ -731,76 +734,7 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
- {/* ══════════════════════════════════════════════════════════
-   TESTIMONIALS — SEO & GEO Optimized
-══════════════════════════════════════════════════════════ */}
-<section className="py-28 bg-white relative overflow-hidden border-y border-[#E2EAE0]/60">
-  <div className="container mx-auto px-5 sm:px-8 lg:px-14 max-w-6xl">
-
-    <div className="text-center mb-16">
-      <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
-      <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
-        {c.testimonials.eyebrow}
-      </span>
-
-      <h2 className="font-serif mt-5 text-[#1B2D1D] leading-tight"
-        style={{ fontSize: "clamp(1.9rem, 4vw, 2.8rem)" }}
-      >
-        {c.testimonials.title}
-      </h2>
-
-      <p className="mt-6 max-w-3xl mx-auto text-[15px] md:text-[17px] text-[#556458] leading-[1.9] font-light">
-        {c.testimonials.subtitle}
-      </p>
-    </div>
-
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      {c.testimonials.items.map((item, index) => (
-        <div
-          key={index}
-          className="bg-[#F8FAF7] border border-[#E2EAE0] rounded-[28px] p-8 hover:shadow-[0_18px_50px_rgba(0,0,0,0.06)] transition-all duration-500"
-        >
-          {/* Stars */}
-          <div className="flex items-center gap-1 mb-4">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <svg
-                key={i}
-                className="w-4 h-4 text-[#D8B43A]"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                aria-hidden
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-          </div>
-
-          <p className="text-[14px] md:text-[15px] text-[#4A5A4C] leading-[1.9] font-light mb-6">
-            “{item.review}”
-          </p>
-
-          <div className="border-t border-[#E2EAE0] pt-4">
-            <p className="font-semibold text-[#1B2D1D] text-[14px]">
-              {item.name}
-            </p>
-            <p className="text-[12px] text-[#7C8B61] mt-1">
-              {item.location}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    {/* Trust Badge Row */}
-    <div className="mt-16 text-center">
-      <p className="text-[13px] text-[#556458]">
-        {c.testimonials.trustBadge}
-      </p>
-    </div>
-
-  </div>
-</section>
+      <TestimonialsSection content={c.testimonials} />
 
 
       {/* ══════════════════════════════════════════════════════════
@@ -847,58 +781,11 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════════
-          FAQ
-      ══════════════════════════════════════════════════════════ */}
-      <section className="py-28 bg-[#F5F1EB] relative overflow-hidden">
-        <div
-          aria-hidden
-          className="absolute -top-24 -left-24 w-[360px] h-[360px] bg-[#C2B44A]/6 blur-[90px] rounded-full pointer-events-none"
-        />
-
-        <div className="relative container mx-auto px-5 sm:px-8 lg:px-14 max-w-3xl">
-          <div className="text-center mb-16">
-            <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C2B44A] to-transparent mx-auto mb-6" />
-            <span className="uppercase tracking-[0.4em] text-[#B8A840] text-[11px] font-semibold">
-              {c.faq.eyebrow}
-            </span>
-            <h2 className="font-serif mt-4 text-[#1B2D1D] leading-tight"
-              style={{ fontSize: "clamp(1.7rem, 4vw, 2.7rem)" }}
-            >
-              {c.faq.title}
-            </h2>
-            <p className="mt-5 max-w-xl mx-auto text-[#4A5A4C] leading-[1.85] font-light text-[14px] md:text-[15px]">
-              {c.faq.subtitle}
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {c.faq.items.map((faq, index) => (
-              <details
-                key={index}
-                className="group bg-white rounded-[22px] p-6 border border-[#E2EAE0]/80 hover:border-[#C2B44A]/40 hover:shadow-[0_12px_40px_rgba(0,0,0,0.05)] transition-all duration-400"
-              >
-                <summary className="cursor-pointer font-semibold text-[15px] md:text-[16px] flex justify-between items-center text-[#1B2D1D] gap-4 leading-[1.6] list-none">
-                  {faq.q}
-                  <span
-                    className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C2B44A]/12 flex items-center justify-center text-[#C2B44A] group-open:rotate-45 transition-transform duration-300"
-                    aria-hidden
-                  >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </span>
-                </summary>
-                <div className="mt-5">
-                  <p className="text-[14px] md:text-[15px] text-[#4A5A4C] leading-[1.9] font-light">
-                    {faq.a}
-                  </p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqSection
+        content={c.faq}
+        viewAllLabel={ui.common.viewAllFaqs}
+        viewAllHref="/faq"
+      />
 
       {/* ══════════════════════════════════════════════════════════
           FINAL CTA

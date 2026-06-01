@@ -14,6 +14,16 @@ export const esPageUi: PageUi = {
     price: "Precio",
     startingFrom: "Desde",
     viewDetails: "Ver detalles",
+    viewAllFaqs: "Ver todas las preguntas frecuentes",
+    included: "Qué está incluido",
+    excluded: "Qué no está incluido",
+    accommodation: "Alojamiento",
+    bestTimeTravel: "Mejor época para viajar",
+    bookingCtaTitle: "¿Listo para reservar su aventura?",
+    bookingCtaDescription:
+      "Indíquenos fechas y preferencias — nuestro equipo en Arusha enviará un presupuesto personalizado en 24 horas.",
+    requestQuote: "Solicitar presupuesto",
+    planWithExpert: "Consulta gratuita con un especialista local en safaris y trekking.",
   },
   safaris: {
     pageLabel: "Safaris",

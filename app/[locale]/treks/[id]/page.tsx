@@ -12,8 +12,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
 import { Link } from "@/i18n/routing"
+import { TourBookingSections } from "@/components/landing/tour-booking-sections"
 import { absoluteUrl } from "@/lib/seo"
 import { assetUrl } from "@/lib/assets"
+import {
+  DEFAULT_TREK_ACCOMMODATION,
+  DEFAULT_TREK_EXCLUDED,
+  DEFAULT_TREK_INCLUDED,
+} from "@/lib/tour-defaults"
 
 type Props = {
   params: Promise<{ id: string; locale: string }>
@@ -215,6 +221,24 @@ export default async function TrekDetailPage({ params }: Props) {
                   </div>
                 </div>
               ) : null}
+
+              <TourBookingSections
+                labels={{
+                  included: ui.common.included,
+                  excluded: ui.common.excluded,
+                  accommodation: ui.common.accommodation,
+                  bestTime: ui.common.bestTimeTravel,
+                  bookingCtaTitle: ui.common.bookingCtaTitle,
+                  bookingCtaDescription: ui.common.bookingCtaDescription,
+                  inquireNow: detail.enquireNow,
+                  requestQuote: ui.common.requestQuote,
+                  planWithExpert: ui.common.planWithExpert,
+                }}
+                included={DEFAULT_TREK_INCLUDED}
+                excluded={DEFAULT_TREK_EXCLUDED}
+                accommodation={DEFAULT_TREK_ACCOMMODATION}
+                bestTime={trek.bestTime}
+              />
 
               <div className="rounded-3xl border border-border/40 bg-card/80 backdrop-blur p-6 md:p-8 space-y-6">
                 <h2 className="text-3xl font-serif text-foreground">{detail.planningNotesHeading}</h2>

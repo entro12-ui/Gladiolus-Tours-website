@@ -14,6 +14,16 @@ export const dePageUi: PageUi = {
     price: "Preis",
     startingFrom: "Ab",
     viewDetails: "Details ansehen",
+    viewAllFaqs: "Alle FAQs ansehen",
+    included: "Inklusive",
+    excluded: "Nicht inklusive",
+    accommodation: "Unterkunft",
+    bestTimeTravel: "Beste Reisezeit",
+    bookingCtaTitle: "Bereit, Ihr Abenteuer zu buchen?",
+    bookingCtaDescription:
+      "Teilen Sie uns Reisedaten und Wünsche mit — unser Team in Arusha sendet innerhalb von 24 Stunden ein individuelles Angebot.",
+    requestQuote: "Angebot anfordern",
+    planWithExpert: "Kostenlose Beratung mit lokalem Safari- und Trekking-Spezialisten.",
   },
   safaris: {
     pageLabel: "Safaris",

@@ -118,7 +118,7 @@
         {
           "title": "Gästebewertungen",
           "description": "Erfahrungen von Reisenden, die mit uns unterwegs waren.",
-          "href": "/about"
+          "href": "/about#testimonials"
         }
       ]
     },
@@ -221,6 +221,7 @@
     "faq": "FAQ",
     "planSafari": "Safari planen",
     "rightsReserved": "Alle Rechte vorbehalten.",
+    "doneBy": "Erstellt von Entro Ethiopia Software and Hardware PLC",
     "quickLinksItems": {
       "aboutUs": "Über uns",
       "destinations": "Reiseziele",

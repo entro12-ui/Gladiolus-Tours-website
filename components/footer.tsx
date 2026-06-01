@@ -210,29 +210,44 @@ export async function Footer() {
 
         </div>
 
-        <div className="mt-20 border-t border-white/15 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+        <div className="mt-20 border-t border-white/15 pt-8 space-y-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+            <p className="text-white/60">
+              © {new Date().getFullYear()}{" "}
+              <span className="text-white/85 font-medium">Gladiolus Tours</span>.{" "}
+              {t("rightsReserved")}
+            </p>
 
-          <p className="text-white/60">
-            © {new Date().getFullYear()}{" "}
-            <span className="text-white/85 font-medium">Gladiolus Tours</span>.{" "}
-            {t("rightsReserved")}
-          </p>
-
-          <div className="flex gap-6">
-            <Link
-              href="/faq"
-              className="text-white/70 hover:text-[#D8CC72] transition-colors duration-300"
-            >
-              {t("faq")}
-            </Link>
-            <Link
-              href="/contact"
-              className="text-white/70 hover:text-[#D8CC72] transition-colors duration-300"
-            >
-              {t("planSafari")}
-            </Link>
+            <div className="flex gap-6">
+              <Link
+                href="/faq"
+                className="text-white/70 hover:text-[#D8CC72] transition-colors duration-300"
+              >
+                {t("faq")}
+              </Link>
+              <Link
+                href="/contact"
+                className="text-white/70 hover:text-[#D8CC72] transition-colors duration-300"
+              >
+                {t("planSafari")}
+              </Link>
+            </div>
           </div>
 
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 border-t border-white/10">
+            <div className="relative h-10 w-10 shrink-0 rounded-lg overflow-hidden bg-white/10 border border-white/15">
+              <Image
+                src="/entroethiopia.jpeg"
+                alt="Entro Ethiopia Software and Hardware PLC"
+                fill
+                unoptimized
+                className="object-contain p-0.5"
+              />
+            </div>
+            <p className="text-white/55 text-xs sm:text-sm text-center sm:text-left">
+              {t("doneBy")}
+            </p>
+          </div>
         </div>
 
       </div>

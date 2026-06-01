@@ -118,7 +118,7 @@
         {
           "title": "Avis des Voyageurs",
           "description": "Retours d’expérience des explorateurs que nous avons guidés.",
-          "href": "/about"
+          "href": "/about#testimonials"
         }
       ]
     },
@@ -221,6 +221,7 @@
     "faq": "FAQ",
     "planSafari": "Planifier votre safari",
     "rightsReserved": "Tous droits réservés.",
+    "doneBy": "Réalisé par Entro Ethiopia Software and Hardware PLC",
     "quickLinksItems": {
       "aboutUs": "À propos",
       "destinations": "Destinations",

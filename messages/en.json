@@ -118,7 +118,7 @@
         {
           "title": "Guest Reviews",
           "description": "Hear from travelers who trekked and explored with us.",
-          "href": "/about"
+          "href": "/about#testimonials"
         }
       ]
     },
@@ -221,6 +221,7 @@
     "faq": "FAQ",
     "planSafari": "Plan Your Safari",
     "rightsReserved": "All rights reserved.",
+    "doneBy": "Done by Entro Ethiopia Software and Hardware PLC",
     "quickLinksItems": {
       "aboutUs": "About Us",
       "destinations": "Destinations",

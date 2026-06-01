@@ -30,7 +30,7 @@ export const safariPackages: SafariPackage[] = [
     duration: "3 Days",
     price: "From $1,200",
     description: "Perfect short safari for first-time visitors wanting to see the Big Five in Tarangire and Lake Manyara.",
-    image: "/gallery/safari1.jpeg",
+    image: "/gallery/saf1.jpeg",
     category: "itinerary",
     highlights: ["Big Five wildlife", "Tarangire elephants", "Lake Manyara scenery", "Private 4x4 vehicle", "Budget-friendly"],
     itinerary: [
@@ -48,7 +48,7 @@ export const safariPackages: SafariPackage[] = [
     duration: "3 Days",
     price: "From $1,200",
     description: "Intensive 3-day safari focusing on the Big Five in Tarangire and Lake Manyara.",
-    image: "/gallery/safari5.jpeg",
+    image: "/gallery/saf3.jpeg",
     category: "itinerary",
     highlights: ["Compact itinerary", "Big Five focus", "Ideal for short stays", "Private vehicle", "Expert guide"],
     itinerary: [
@@ -66,7 +66,7 @@ export const safariPackages: SafariPackage[] = [
     duration: "6 Days",
     price: "From $2,800",
     description: "Comprehensive safari covering Tarangire, Serengeti, and Ngorongoro Crater.",
-    image: "/gallery/safari2.jpeg",
+    image: "/gallery/saf2.jpeg",
     category: "itinerary",
     highlights: ["Serengeti plains", "Ngorongoro Crater", "Tarangire elephants", "Mid-range lodges", "Balanced pacing"],
     itinerary: [
@@ -85,7 +85,7 @@ export const safariPackages: SafariPackage[] = [
     duration: "8 Days",
     price: "From $5,400",
     description: "Combine luxury safari in Serengeti and Ngorongoro with relaxation on Zanzibar beaches.",
-    image: "/gallery/safari4.jpeg",
+    image: "/gallery/saff.jpeg",
     category: "itinerary",
     highlights: ["Northern Circuit safari", "Zanzibar beach extension", "Stone Town visit", "Luxury lodges", "Private transfers"],
     itinerary: [
@@ -104,7 +104,7 @@ export const safariPackages: SafariPackage[] = [
     duration: "8 Days",
     price: "From $4,600",
     description: "Witness the world's most dramatic wildlife spectacle: the Great Wildebeest Migration.",
-    image: "/gallery/zebra-00.webp",
+    image: "/gallery/saf6.jpeg",
     category: "itinerary",
     highlights: ["Mara River Crossings", "Big Five Sightings", "Private 4x4 Vehicle", "Luxury Tented Camps"],
     itinerary: [
@@ -124,7 +124,7 @@ export const safariPackages: SafariPackage[] = [
     duration: "Custom",
     price: "Custom Pricing",
     description: "Exclusively designed itineraries for couples, families, or small groups seeking total flexibility.",
-    image: "/gallery/safari1.jpeg",
+    image: "/gallery/privatesafar.jpeg",
     category: "itinerary",
     highlights: ["Dedicated Private Guide", "Custom Daily Schedule", "Handpicked Lodges", "Private 4x4 Cruiser"],
     itinerary: [
@@ -140,7 +140,7 @@ export const safariPackages: SafariPackage[] = [
     duration: "Tech Specs",
     price: "Included in Tours",
     description: "Our fleet consists of specially modified 4x4 Land Cruisers designed for the rugged Tanzanian terrain.",
-    image: "/gallery/safari5.jpeg",
+    image: "/gallery/safariM.jpeg",
     category: "info",
     highlights: ["Pop-up Roof for 360° Viewing", "In-car Charging Points", "Fridge for Cold Drinks", "Long-range Radio"],
     itinerary: [
@@ -157,7 +157,7 @@ export const safariPackages: SafariPackage[] = [
     duration: "Checklist",
     price: "Expert Guide",
     description: "Ensure you have everything you need for a comfortable and safe adventure in the bush.",
-    image: "/gallery/lunch-00.webp",
+    image: "/gallery/saf7.jpeg",
     category: "info",
     highlights: ["Neutral Colored Clothing", "Sun Protection", "Quality Binoculars", "Anti-Malaria Meds"],
     itinerary: [
@@ -174,7 +174,7 @@ export const safariPackages: SafariPackage[] = [
     duration: "7-12 Days",
     price: "From $5,200",
     description: "Combine the thrill of the wild with intimate luxury in Africa's most romantic settings.",
-    image: "/gallery/sunset.webp",
+    image: "/gallery/bandsafari.jpeg",
     category: "itinerary",
     highlights: ["Private Bush Dinners", "Star-bed Stays", "Zanzibar Extensions", "Hot Air Balloon Safari"],
     itinerary: [

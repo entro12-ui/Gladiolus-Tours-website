@@ -49,6 +49,15 @@ export type PageUi = {
     price: string
     startingFrom: string
     viewDetails: string
+    viewAllFaqs: string
+    included: string
+    excluded: string
+    accommodation: string
+    bestTimeTravel: string
+    bookingCtaTitle: string
+    bookingCtaDescription: string
+    requestQuote: string
+    planWithExpert: string
   }
   safaris: {
     pageLabel: string

@@ -14,6 +14,16 @@ export const frPageUi: PageUi = {
     price: "Prix",
     startingFrom: "A partir de",
     viewDetails: "Voir les détails",
+    viewAllFaqs: "Voir toutes les FAQ",
+    included: "Inclus",
+    excluded: "Non inclus",
+    accommodation: "Hébergement",
+    bestTimeTravel: "Meilleure période",
+    bookingCtaTitle: "Prêt à réserver votre aventure ?",
+    bookingCtaDescription:
+      "Indiquez vos dates et préférences — notre équipe d'Arusha vous envoie un devis personnalisé sous 24 h.",
+    requestQuote: "Demander un devis",
+    planWithExpert: "Consultation gratuite avec un spécialiste safari local.",
   },
   safaris: {
     pageLabel: "Safaris",

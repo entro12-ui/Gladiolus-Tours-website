@@ -34,7 +34,7 @@ export const destinations: Destination[] = [
     duration: "5 Days",
     price: "From $2,500",
     priceValue: 2500,
-    image: "/gallery/This is Serengeti national park.jpeg",
+    image: "/gallery/saf6.jpeg",
     description:
       "Experience the world-famous Serengeti ecosystem, home to the Great Migration and an abundance of wildlife including lions, leopards, elephants, and cheetahs.",
     highlights: [
@@ -101,7 +101,7 @@ export const destinations: Destination[] = [
     duration: "4 Days",
     price: "From $2,000",
     priceValue: 2000,
-    image: "/gallery/Ngorongoro.jpeg",
+    image: "/gallery/Nogrogo.jpeg",
     description:
       "Explore the world's largest intact volcanic caldera, a natural sanctuary with the highest density of wildlife in Africa.",
     highlights: [

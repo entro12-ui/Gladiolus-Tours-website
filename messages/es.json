@@ -118,7 +118,7 @@
         {
           "title": "Opiniones de Viajeros",
           "description": "Testimonios de quienes viajaron con nosotros.",
-          "href": "/about"
+          "href": "/about#testimonials"
         }
       ]
     },
@@ -221,6 +221,7 @@
     "faq": "FAQ",
     "planSafari": "Planifica tu safari",
     "rightsReserved": "Todos los derechos reservados.",
+    "doneBy": "Desarrollado por Entro Ethiopia Software and Hardware PLC",
     "quickLinksItems": {
       "aboutUs": "Acerca de nosotros",
       "destinations": "Destinos",

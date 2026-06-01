@@ -3,60 +3,61 @@ import { resolveGalleryImage } from "./gallery-images"
 /** Preview image for each nav dropdown link (href without locale prefix). */
 export const NAV_LINK_IMAGES: Record<string, string> = {
   // Treks
-  "/treks": "/gallery/kili1.jpeg",
-  "/treks/kilimanjaro-machame-route": "/gallery/Machame Route.jpeg",
-  "/treks/kilimanjaro-lemosho-route": "/gallery/Lemosho Route.jpeg",
-  "/treks/kilimanjaro-marangu-route": "/gallery/Marangu Route.jpeg",
-  "/treks/kilimanjaro-rongai-route": "/gallery/Rongai Route.jpeg",
-  "/treks/umbwe-route": "/gallery/kili2.jpeg",
-  "/treks/shira-route": "/gallery/kili3.jpeg",
-  "/treks/mount-meru-trek": "/gallery/Mount meru, Arusha national park.jpeg",
-  "/treks/packing-list": "/gallery/kili4.jpeg",
-  "/treks/altitude-acclimatization": "/gallery/kili5.jpeg",
-  "/treks/best-time-to-climb": "/gallery/kili6.jpeg",
-  "/treks/climbing-faqs": "/gallery/kili7.jpeg",
+  "/treks": "/gallery/kiliman.jpeg",
+  "/treks/kilimanjaro-machame-route": "/gallery/kiliman1.jpeg",
+  "/treks/kilimanjaro-lemosho-route": "/gallery/Lemoshoroute.jpeg",
+  "/treks/kilimanjaro-marangu-route": "/gallery/marangu-hero.jpg",
+  "/treks/kilimanjaro-rongai-route": "/gallery/kiliman3.jpeg",
+  "/treks/umbwe-route": "/gallery/kiliman4.jpeg",
+  "/treks/shira-route": "/gallery/kiliman5.jpeg",
+  "/treks/mount-meru-trek": "/gallery/Mountmeru.jpeg",
+  "/treks/packing-list": "/gallery/kiliman6.jpeg",
+  "/treks/altitude-acclimatization": "/gallery/kiliman7.jpeg",
+  "/treks/best-time-to-climb": "/gallery/kiliman8.jpeg",
+  "/treks/climbing-faqs": "/gallery/kiliman9.jpeg",
 
   // Safaris — national parks
-  "/destinations": "/gallery/This is Serengeti national park.jpeg",
-  "/destinations/serengeti-national-park": "/gallery/This is Serengeti national park.jpeg",
-  "/destinations/tarangire-national-park": "/gallery/elephant.jpeg",
-  "/destinations/lake-manyara-national-park": "/gallery/lion-00.jpeg",
-  "/destinations/ngorongoro-crater": "/gallery/Ngorongoro.jpeg",
-  "/destinations/lake-natron": "/gallery/kik1.jpeg",
-  "/destinations/arusha-national-park": "/gallery/Mount meru, Arusha national park.jpeg",
+  "/destinations": "/gallery/saf6.jpeg",
+  "/destinations/serengeti-national-park": "/gallery/saf6.jpeg",
+  "/destinations/tarangire-national-park": "/gallery/saf1.jpeg",
+  "/destinations/lake-manyara-national-park": "/gallery/saf2.jpeg",
+  "/destinations/ngorongoro-crater": "/gallery/Nogrogo.jpeg",
+  "/destinations/lake-natron": "/gallery/Nogrogo7.jpeg",
+  "/destinations/arusha-national-park": "/gallery/Mountmeru.jpeg",
 
   // Safaris — itineraries & info
-  "/safaris": "/gallery/safari2.jpeg",
-  "/safaris/great-migration-safari": "/gallery/zebra.jpeg",
-  "/safaris/private-tours": "/gallery/safari1.jpeg",
-  "/safaris/packing-list": "/gallery/pkok.jpeg",
-  "/safaris/safari-vehicles": "/gallery/car.jpeg",
-  "/safaris/honeymoon-safari": "/gallery/sunday.jpeg",
+  "/safaris": "/gallery/saf2.jpeg",
+  "/safaris/great-migration-safari": "/gallery/saf6.jpeg",
+  "/safaris/private-tours": "/gallery/privatesafar.jpeg",
+  "/safaris/packing-list": "/gallery/saf7.jpeg",
+  "/safaris/safari-vehicles": "/gallery/safariM.jpeg",
+  "/safaris/honeymoon-safari": "/gallery/bandsafari.jpeg",
 
   // Day trips
   "/day-trips": "/gallery/chemka.jpeg",
   "/day-trips/chemka-hot-springs": "/gallery/chemka.jpeg",
-  "/day-trips/lake-duluti": "/gallery/kik1.jpeg",
+  "/day-trips/lake-duluti": "/gallery/duluti-00.webp",
   "/day-trips/arusha-town-tour": "/gallery/sunday.jpeg",
-  "/day-trips/curios-gift-shops": "/gallery/car.jpeg",
-  "/day-trips/local-markets": "/gallery/sunday.jpeg",
+  "/day-trips/curios-gift-shops": "/gallery/saf8.jpeg",
+  "/day-trips/local-markets": "/gallery/saf4.jpeg",
 
   // Zanzibar
   "/zanzibar": "/gallery/chemka2.jpeg",
   "/zanzibar/spice-tours": "/gallery/chemka2.jpeg",
   "/zanzibar/cultural-tour": "/gallery/sunday.jpeg",
-  "/zanzibar/diving-snorkeling": "/gallery/ballon.jpeg",
+  "/zanzibar/diving-snorkeling": "/gallery/chemka1.jpeg",
   "/zanzibar/transfers": "/gallery/car.jpeg",
 
   // Gallery & about
-  "/gallery": "/gallery/This is Serengeti national park.jpeg",
-  "/gallery/videos": "/gallery/safarphoto.jpeg",
-  "/about": "/gallery/sunday.jpeg",
-  "/#testimonials": "/gallery/safarphoto.jpeg",
-  "/#faq": "/gallery/safari1.jpeg",
+  "/gallery": "/gallery/saf6.jpeg",
+  "/gallery/videos": "/gallery/safariM.jpeg",
+  "/about": "/gallery/sunday-with-tourists.webp",
+  "/testimonials": "/gallery/safarphoto.jpeg",
+  "/faq": "/gallery/saf1.jpeg",
   "/blog": "/gallery/sunday.jpeg",
 }
 
 export function getNavLinkImage(href: string): string {
-  return resolveGalleryImage(NAV_LINK_IMAGES[href] ?? "/gallery/safari1.jpeg")
+  const path = href.split("#")[0]
+  return resolveGalleryImage(NAV_LINK_IMAGES[path] ?? "/gallery/safariM.jpeg")
 }

@@ -70,15 +70,15 @@ export default async function AboutPage({ params }: Props) {
   const teamMembers = [
     {
       ...page.teamMembers[0],
-      image: assetUrl("/about-us/team.webp"),
+      image: assetUrl("/gallery/Sunday-Mtui.webp"),
     },
     {
       ...page.teamMembers[1],
-      image: assetUrl("/about-us/safari-go.webp"),
+      image: assetUrl("/gallery/Francois-Martin.webp"),
     },
     {
       ...page.teamMembers[2],
-      image: assetUrl("/about-us/safari-booking.webp"),
+      image: assetUrl("/gallery/Claire-Matemba.webp"),
     },
   ]
 
@@ -153,7 +153,7 @@ export default async function AboutPage({ params }: Props) {
       {/* HERO */}
       <section className="relative min-h-[75vh] overflow-hidden flex items-center justify-center mt-20">
         <Image
-          src={assetUrl("/about-us/team-work.webp")}
+          src={assetUrl("/gallery/safariM.jpeg")}
           alt={page.heroImageAlt}
           fill
           priority
@@ -264,7 +264,7 @@ export default async function AboutPage({ params }: Props) {
 
             <div className="relative h-[550px] rounded-[40px] overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.08)]">
               <Image
-                src={assetUrl("/about-us/team.webp")}
+                src={assetUrl("/gallery/sunday-with-tourists.webp")}
                 alt={page.storyImageAlt}
                 fill
                 unoptimized
@@ -367,6 +367,44 @@ export default async function AboutPage({ params }: Props) {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Explore more */}
+      <section className="py-20 bg-white border-t border-[#EFE4D8]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Link
+              href="/testimonials"
+              className="group rounded-[32px] border border-[#EFE4D8] bg-[#FAF8F5] p-10 hover:shadow-lg transition-all hover:-translate-y-1"
+            >
+              <span className="text-xs uppercase tracking-[0.3em] text-[#C69252] font-semibold">
+                Guest Reviews
+              </span>
+              <h3 className="mt-4 text-2xl font-serif">Testimonials</h3>
+              <p className="mt-3 text-[#5A5A5A] leading-relaxed">
+                Read verified reviews from safari, Kilimanjaro, and Zanzibar guests worldwide.
+              </p>
+              <span className="mt-6 inline-flex items-center text-[#C69252] font-semibold group-hover:gap-2 transition-all">
+                View testimonials <ArrowRight className="ml-2 h-4 w-4" />
+              </span>
+            </Link>
+            <Link
+              href="/faq"
+              className="group rounded-[32px] border border-[#EFE4D8] bg-[#FAF8F5] p-10 hover:shadow-lg transition-all hover:-translate-y-1"
+            >
+              <span className="text-xs uppercase tracking-[0.3em] text-[#C69252] font-semibold">
+                Planning Help
+              </span>
+              <h3 className="mt-4 text-2xl font-serif">FAQ</h3>
+              <p className="mt-3 text-[#5A5A5A] leading-relaxed">
+                Comprehensive answers about safaris, treks, Zanzibar, visas, packing, and bookings.
+              </p>
+              <span className="mt-6 inline-flex items-center text-[#C69252] font-semibold group-hover:gap-2 transition-all">
+                {ui.common.viewAllFaqs} <ArrowRight className="ml-2 h-4 w-4" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>

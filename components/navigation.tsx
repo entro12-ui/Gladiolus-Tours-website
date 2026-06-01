@@ -149,8 +149,8 @@ const GALLERY_DROPDOWN_ITEMS: NavMenuItemDef[] = [
 
 const ABOUT_DROPDOWN_ITEMS: NavMenuItemDef[] = [
   { labelKey: "about.aboutGladiolusTours", href: "/about" },
-  { labelKey: "about.testimonials", href: "/#testimonials" },
-  { labelKey: "about.faq", href: "/#faq" },
+  { labelKey: "about.testimonials", href: "/testimonials" },
+  { labelKey: "about.faq", href: "/faq" },
   { labelKey: "about.blog", href: "/blog" },
 ]
 

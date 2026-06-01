@@ -9,8 +9,13 @@ import { Footer } from "@/components/footer"
 import { BreadcrumbSchema } from "@/components/structured-data"
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/routing"
+import { TourBookingSections } from "@/components/landing/tour-booking-sections"
 import { absoluteUrl } from "@/lib/seo"
 import { assetUrl } from "@/lib/assets"
+import {
+  DEFAULT_SAFARI_ACCOMMODATION,
+  DEFAULT_SAFARI_EXCLUDED,
+} from "@/lib/tour-defaults"
 
 type Props = {
   params: Promise<{ slug: string; locale: string }>
@@ -97,6 +102,24 @@ export default async function SafariDetailPage({ params }: Props) {
                 </div>
               </div>
             )}
+
+            <TourBookingSections
+              labels={{
+                included: ui.common.included,
+                excluded: ui.common.excluded,
+                accommodation: ui.common.accommodation,
+                bestTime: ui.common.bestTimeTravel,
+                bookingCtaTitle: ui.common.bookingCtaTitle,
+                bookingCtaDescription: ui.common.bookingCtaDescription,
+                inquireNow: detail.inquireNow,
+                requestQuote: ui.common.requestQuote,
+                planWithExpert: ui.common.planWithExpert,
+              }}
+              included={pkg.includes.length > 0 ? pkg.includes : ["Professional safari guide", "4x4 safari vehicle", "Park fees (as per itinerary)", "Accommodation & meals on safari"]}
+              excluded={DEFAULT_SAFARI_EXCLUDED}
+              accommodation={DEFAULT_SAFARI_ACCOMMODATION}
+              bestTime="June–October for dry-season game viewing; July–September for Great Migration river crossings; December–March for calving season in southern Serengeti."
+            />
           </div>
 
           <div className="h-fit sticky top-28 p-8 bg-white border rounded-[40px] shadow-sm text-center">
