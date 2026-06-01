@@ -1,0 +1,475 @@
+{
+  "nav": {
+    "home": "Home",
+    "safaris": "Safaris",
+    "treks": "Treks",
+    "dayTrips": "Day Trips",
+    "zanzibar": "Zanzibar",
+    "adventures": "Adventures",
+    "destinations": "Destinations",
+    "gallery": "Gallery",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "bookNow": "Design My Safari",
+    "bookNowTagline": "Private concierge • 24h response"
+  },
+  "navDetails": {
+    "defaultCta": "Explore",
+    "treks": {
+      "description": "Expertly guided treks across Kilimanjaro, Meru, and the volcanic highlands.",
+      "cta": "Plan a Trek",
+      "highlights": [
+        {
+          "title": "Kilimanjaro Routes",
+          "description": "Compare Machame, Lemosho, and Rongai itineraries with altitude profiles.",
+          "href": "/treks"
+        },
+        {
+          "title": "Mount Meru Ascents",
+          "description": "Shorter acclimatization climbs with crater rim sunrises.",
+          "href": "/treks"
+        }
+      ]
+    },
+    "safaris": {
+      "description": "Tailor-made safaris across Northern, Southern, and coastal Tanzania.",
+      "cta": "View Safaris",
+      "highlights": [
+        {
+          "title": "Great Migration",
+          "description": "Track river crossings with mobile camps in the Serengeti.",
+          "href": "/safaris"
+        },
+        {
+          "title": "Family Safaris",
+          "description": "Flexible pacing, kid-friendly guides, and private vehicles.",
+          "href": "/safaris"
+        }
+      ]
+    },
+    "dayTrips": {
+      "description": "Quick escapes from Arusha to hot springs, crater lakes, and cultural sites.",
+      "cta": "View Day Trips",
+      "highlights": [
+        {
+          "title": "Chemka Hot Springs",
+          "description": "Swim in crystal-clear natural hot springs surrounded by nature.",
+          "href": "/day-trips"
+        },
+        {
+          "title": "Lake Duluti",
+          "description": "Canoe ride and forest walk around a scenic crater lake.",
+          "href": "/day-trips"
+        }
+      ]
+    },
+    "adventures": {
+      "description": "Immersive cultural journeys, hot-air balloons, and coastal escapes.",
+      "cta": "Discover Adventures",
+      "highlights": [
+        {
+          "title": "Cultural Encounters",
+          "description": "Visit Maasai communities and ancient trade towns.",
+          "href": "/adventures"
+        },
+        {
+          "title": "Zanzibar Extensions",
+          "description": "Pair safaris with spice tours and dhow sunsets.",
+          "href": "/adventures"
+        }
+      ]
+    },
+    "destinations": {
+      "description": "Handpicked parks and circuits spanning Serengeti to Ruaha.",
+      "cta": "Browse Destinations",
+      "highlights": [
+        {
+          "title": "Northern Circuit",
+          "description": "Serengeti, Ngorongoro, Tarangire, and Lake Manyara.",
+          "href": "/destinations"
+        },
+        {
+          "title": "Southern Wilderness",
+          "description": "Selous waterways and Ruaha baobab valleys.",
+          "href": "/destinations"
+        }
+      ]
+    },
+    "gallery": {
+      "description": "Visual stories from summit bids and safari game drives.",
+      "cta": "View Gallery",
+      "highlights": [
+        {
+          "title": "Photo Essays",
+          "description": "Migration crossings, crater vistas, and lodge life.",
+          "href": "/gallery"
+        }
+      ]
+    },
+    "about": {
+      "description": "A Tanzanian-owned outfitter with 10+ years of guiding expertise.",
+      "cta": "Meet the Team",
+      "highlights": [
+        {
+          "title": "Our Story",
+          "description": "How Gladiolus Tours began and what drives us today.",
+          "href": "/about"
+        },
+        {
+          "title": "Guest Reviews",
+          "description": "Hear from travelers who trekked and explored with us.",
+          "href": "/about#testimonials"
+        }
+      ]
+    },
+    "contact": {
+      "description": "Dedicated planners ready to craft your itinerary in 24 hours.",
+      "cta": "Contact Experts",
+      "highlights": [
+        {
+          "title": "Plan a Call",
+          "description": "Schedule a planning session with our safari designers.",
+          "href": "/contact"
+        }
+      ]
+    }
+  },
+  "home": {
+    "heroBadge": "Tailor-made Luxury Safaris",
+    "heroTitle": "Luxury African Safaris Crafted by Local Experts",
+    "heroSubtitle": "Experience tailor-made safari adventures across Tanzania with expert guides, premium lodges, and unforgettable wildlife encounters",
+    "exploreSafaris": "Explore Safaris",
+    "planYourTrip": "Plan Your Trip",
+    "featuredDestinations": "Signature Adventures",
+    "featuredDestinationsDesc": "Discover immersive Tanzanian adventures curated for every travel style",
+    "whyChooseUs": "Why Choose Gladiolus Tours",
+    "whyChooseUsDesc": "We create exceptional safari experiences that connect you with Africa's natural wonders",
+    "expertGuides": "Expert Guides",
+    "expertGuidesDesc": "Our experienced guides bring decades of wildlife knowledge and passion for conservation",
+    "premiumLocations": "Premium Locations",
+    "premiumLocationsDesc": "Access to exclusive safari areas and luxury lodges in the heart of the wilderness",
+    "tailoredExperiences": "Tailored Experiences",
+    "tailoredExperiencesDesc": "Every safari is customized to match your interests, pace, and adventure style",
+    "readyForAdventure": "Ready for Your African Adventure?",
+    "readyForAdventureDesc": "Contact us today and let's start planning your dream safari experience",
+    "getStarted": "Get Started",
+    "viewAllDestinations": "View All Destinations",
+    "learnMore": "Learn More",
+    "circuitsBadge": "Safari Circuits",
+    "circuitsTitle": "Iconic Circuits Across Tanzania",
+    "circuitsSubtitle": "Combine our signature Tanzanian destinations into seamless journeys designed around migration, landscapes, and your travel style",
+    "circuitNorthernLabel": "NORTHERN TANZANIA",
+    "circuitNorthernTitle": "Classic Northern Circuit",
+    "circuitNorthernDesc": "Tarangire, Serengeti, and Ngorongoro in one balanced itinerary ideal for first-time safari guests.",
+    "circuitMigrationLabel": "MIGRATION FOCUS",
+    "circuitMigrationTitle": "Great Migration Trail",
+    "circuitMigrationDesc": "Follow the wildebeest across the Serengeti ecosystem with front-row viewing of river crossings in northern Tanzania.",
+    "circuitKiliLabel": "SUMMIT & SAFARI",
+    "circuitKiliTitle": "Kilimanjaro & Crater Explorer",
+    "circuitKiliDesc": "Combine a Kilimanjaro trek with restorative days in Ngorongoro and nearby parks.",
+    "circuitDuration": "{value} day circuit",
+    "circuitRouteNorthern": "Route: Arusha • Tarangire • Serengeti • Ngorongoro",
+    "circuitRouteMigration": "Route: Central Serengeti • Grumeti • Northern Serengeti",
+    "circuitRouteKili": "Route: Kilimanjaro • Ngorongoro • Manyara / Tarangire",
+    "packagesTitle": "Safari Packages by Travel Style",
+    "packagesSubtitle": "Choose a starting point that matches the way you like to travel, then we'll tailor every detail for you.",
+    "packageFamilyTitle": "Family & Multi-Generational Safaris",
+    "packageFamilyDesc": "Flexible pacing, child-friendly lodges, and guides experienced in hosting curious young explorers.",
+    "packageHoneymoonTitle": "Honeymoon & Romance",
+    "packageHoneymoonDesc": "Secluded camps, private bush dinners, and sunset experiences crafted for two.",
+    "packagePhotoTitle": "Photographic Safaris",
+    "packagePhotoDesc": "Itineraries timed for golden light, patient guiding, and vehicles adapted for serious photography.",
+    "packagePrivateTitle": "Private & Tailor-Made Journeys",
+    "packagePrivateDesc": "Chartered flights, exclusive-use camps, and fully bespoke routes for discerning travelers."
+  },
+  "about": {
+    "title": "About Us",
+    "ourStory": "Our Story",
+    "mission": "Creating Unforgettable Safari Experiences",
+    "values": "Our Values",
+    "team": "Meet Our Team",
+    "stats": "Years Experience"
+  },
+  "destinations": {
+    "title": "Safari Destinations",
+    "subtitle": "Explore our handpicked selection of African safari destinations"
+  },
+  "accommodation": {
+    "title": "Accommodation",
+    "subtitle": "Choose from luxury lodges to authentic tented camps"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Stunning moments from our safaris"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our safari experts"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Us",
+    "tagline": "Your Gateway To Tanzania",
+    "taglineSub": "Tanzania safari packages for every traveler - from budget group adventures to exclusive private tours.",
+    "exploreSafaris": "Explore Safaris",
+    "contactSunday": "Contact Sunday Directly",
+    "onlineNow": "Sunday is Online Now",
+    "whatsappChat": "Chat with Sunday on WhatsApp",
+    "getUpdates": "Get Safari Updates",
+    "updatesDesc": "Receive exclusive safari offers and Tanzania travel updates.",
+    "faq": "FAQ",
+    "planSafari": "Plan Your Safari",
+    "rightsReserved": "All rights reserved.",
+    "developedBy": "Website developed by",
+    "entroCompany": "Entro Ethiopia Software and Hardware Development PLC",
+    "quickLinksItems": {
+      "aboutUs": "About Us",
+      "destinations": "Destinations",
+      "safariPackages": "Safari Packages",
+      "kilimanjaroTreks": "Kilimanjaro Treks",
+      "adventureTours": "Adventure Tours",
+      "safariGallery": "Safari Gallery",
+      "planYourSafari": "Plan Your Safari"
+    }
+  },
+  "notFound": {
+    "title": "We can’t find that page, but the journey continues.",
+    "description": "The link you followed may have moved or never existed. Let’s guide you toward the right circuit, trek, or itinerary.",
+    "ctaPrimary": "Return Home",
+    "ctaSecondary": "Contact Our Team",
+    "suggestedHeading": "Popular sections to explore",
+    "suggestedSubheading": "Start with one of these signature experiences while we help map the rest.",
+    "suggestionSafaris": "Signature Safaris",
+    "suggestionSafarisDesc": "Browse cinematic safari circuits crafted around Tanzania’s epic wildlife moments.",
+    "suggestionTreks": "Tanzania Treks",
+    "suggestionTreksDesc": "Compare Kilimanjaro routes, Mount Meru ascents, and highland walks.",
+    "suggestionDestinations": "Destinations",
+    "suggestionDestinationsDesc": "Dive into Serengeti, Ngorongoro, Zanzibar, and more iconic landscapes.",
+    "exploreLink": "Explore"
+  },
+  "common": {
+    "planYourTrip": "Plan Your Trip",
+    "home": "Home"
+  },
+  "navMenu": {
+    "treks": {
+      "kilimanjaroOverview": "Kilimanjaro Overview",
+      "kilimanjaroRoutes": {
+        "label": "Kilimanjaro Routes",
+        "machameRoute": "Machame Route",
+        "lemoshoRoute": "Lemosho Route",
+        "maranguRoute": "Marangu Route",
+        "rongaiRoute": "Rongai Route",
+        "umbweRoute": "Umbwe Route",
+        "shiraRoute": "Shira Route"
+      },
+      "mountMeruTrek": "Mount Meru Trek",
+      "trekkingPreparation": {
+        "label": "Trekking Preparation",
+        "packingList": "Packing List",
+        "altitudeAcclimatization": "Altitude & Acclimatization",
+        "bestTimeToClimb": "Best Time to Climb",
+        "climbingFaqs": "Climbing FAQs"
+      },
+      "privateGroupClimbs": "Private & Group Climbs"
+    },
+    "safaris": {
+      "tanzaniaNationalParks": {
+        "label": "Tanzania National Parks",
+        "serengeti": "Serengeti",
+        "tarangire": "Tarangire",
+        "manyara": "Manyara",
+        "ngorongoro": "Ngorongoro",
+        "lakeNatron": "Lake Natron",
+        "arushaNationalPark": "Arusha National Park"
+      },
+      "itineraries": {
+        "label": "Itineraries",
+        "greatMigration": "Great Migration",
+        "privateTours": "Private Tours",
+        "familyTours": "Family Tours",
+        "photographicTours": "Photographic Tours"
+      },
+      "packingList": "Packing List",
+      "safariVehicle": "Safari Vehicle",
+      "highlights": "Highlights",
+      "honeymoonSafari": "Honeymoon Safari"
+    },
+    "dayTrips": {
+      "naturalHotSpring": "Natural Hot Spring",
+      "natureAndLandscapes": "Nature and Landscapes",
+      "kilimanjaroHiking": "Kilimanjaro Hiking",
+      "townTour": {
+        "label": "Town Tour",
+        "curiosAndGiftShops": "Curios and Gift Shops",
+        "localMarkets": "Local Markets"
+      }
+    },
+    "zanzibar": {
+      "spiceTours": "Spice Tours",
+      "culturalTour": "Cultural Tour",
+      "divingSnorkeling": "Diving & Snorkeling",
+      "transfers": "Transfers"
+    },
+    "gallery": {
+      "pictures": "Pictures",
+      "videos": "Videos"
+    },
+    "about": {
+      "aboutGladiolusTours": "About Gladiolus Tours",
+      "testimonials": "Testimonials",
+      "faq": "FAQ",
+      "blog": "Blog"
+    }
+  },
+  "forms": {
+    "common": {
+      "verification": "Verification",
+      "turnstileNotConfigured": "Turnstile is not configured."
+    },
+    "contact": {
+      "title": "Send us a message",
+      "description": "Questions, custom requests, or quick planning help - we're here.",
+      "labels": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "placeholders": {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@example.com",
+        "phone": "+1 555 123 4567",
+        "subject": "Safari planning help",
+        "message": "Tell us what you're planning and how we can help."
+      },
+      "errors": {
+        "firstName": "First name is required",
+        "lastName": "Last name is required",
+        "email": "Enter a valid email",
+        "subject": "Subject is required",
+        "message": "Please include a short message"
+      },
+      "buttons": {
+        "submit": "Send message",
+        "submitting": "Sending..."
+      },
+      "toasts": {
+        "completeVerification": "Please complete the verification.",
+        "sendError": "Unable to send your message",
+        "sendSuccess": "Message sent. We'll get back to you soon."
+      }
+    },
+    "inquiry": {
+      "title": "Tell us about your trip",
+      "description": "Share a few details and we'll design a tailor-made itinerary and get back to you within 24 hours.",
+      "sections": {
+        "details": "Your details",
+        "preferences": "Trip preferences",
+        "vision": "Your vision"
+      },
+      "labels": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "adventure": "Adventure (optional)",
+        "packageName": "Package (optional)",
+        "destination": "Destination (optional)",
+        "travelers": "Travelers (optional)",
+        "travelStart": "Start date (optional)",
+        "travelEnd": "End date (optional)",
+        "guests": "Guests (optional)",
+        "travelDate": "Preferred travel date (optional)",
+        "budget": "Budget (optional)",
+        "message": "Message"
+      },
+      "placeholders": {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@example.com",
+        "phone": "+1 555 123 4567",
+        "adventure": "Select an adventure",
+        "packageName": "Select a package",
+        "packageNameDisabled": "Select an adventure first",
+        "destination": "Select a destination",
+        "select": "Select",
+        "guests": "2",
+        "message": "Example: 7-9 day private safari, great migration focus, mid-July, 2 adults, luxury lodges..."
+      },
+      "aria": {
+        "selectAdventure": "Select adventure",
+        "selectPackage": "Select package",
+        "selectDestination": "Select destination",
+        "selectTravelers": "Select number of travelers",
+        "selectBudget": "Select budget range"
+      },
+      "options": {
+        "destinations": {
+          "serengeti": "Serengeti",
+          "ngorongoro": "Ngorongoro Crater",
+          "tarangire": "Tarangire",
+          "kilimanjaro": "Kilimanjaro + safari",
+          "zanzibar": "Zanzibar extension",
+          "custom": "Not sure yet"
+        },
+        "travelers": {
+          "one": "1",
+          "two": "2",
+          "threeToFour": "3-4",
+          "fiveToEight": "5-8",
+          "ninePlus": "9+"
+        },
+        "budget": {
+          "mid": "Mid-range",
+          "luxury": "Luxury",
+          "ultra": "Ultra-luxury",
+          "notSure": "Not sure"
+        }
+      },
+      "errors": {
+        "firstName": "First name is required",
+        "lastName": "Last name is required",
+        "email": "Enter a valid email",
+        "message": "Please share a few details"
+      },
+      "buttons": {
+        "submit": "Design My Safari",
+        "submitting": "Sending..."
+      },
+      "helper": "Private concierge • 24h response",
+      "toasts": {
+        "completeVerification": "Please complete the verification.",
+        "sendError": "Unable to send your inquiry",
+        "sendSuccess": "Inquiry sent. We'll respond within 24 hours."
+      }
+    },
+    "newsletter": {
+      "labels": {
+        "email": "Email",
+        "name": "Name (optional)",
+        "sendConfirmation": "Send me a confirmation email"
+      },
+      "placeholders": {
+        "email": "jane@example.com",
+        "name": "Jane Doe"
+      },
+      "errors": {
+        "email": "Enter a valid email"
+      },
+      "buttons": {
+        "submit": "Subscribe",
+        "submitting": "Submitting..."
+      },
+      "toasts": {
+        "completeVerification": "Please complete the verification.",
+        "subscribeError": "Unable to subscribe",
+        "subscribeSuccess": "Subscribed. Welcome to Gladiolus Tours."
+      }
+    }
+  }
+}
